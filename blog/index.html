@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellness Blog – Daily Wellness Tools</title>
+  <meta name="description" content="Evidence-based articles on nutrition, fitness, sleep, and everyday wellness. Simple, honest health advice backed by science.">
+  <link rel="canonical" href="https://dailywellnesstools.com/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--sage-dark);}
+    .page-hero{padding:4rem 2rem 3rem;max-width:800px;margin:0 auto;text-align:center;}
+    h1{font-family:'Fraunces',serif;font-size:3rem;font-weight:300;letter-spacing:-.03em;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-hero p{color:var(--mid);font-size:1rem;font-weight:300;}
+    .blog-wrap{max-width:900px;margin:0 auto;padding:2rem;}
+    .featured-post{background:white;border:1px solid var(--border);border-radius:20px;padding:2.5rem;margin-bottom:2rem;text-decoration:none;color:inherit;display:block;transition:transform .2s,box-shadow .2s;}
+    .featured-post:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);}
+    .featured-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    .featured-post h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:.75rem;line-height:1.2;}
+    .featured-post p{color:var(--mid);font-size:.95rem;line-height:1.7;margin-bottom:1rem;}
+    .post-meta{font-size:.8rem;color:var(--light);}
+    .posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+    .post-card{background:white;border:1px solid var(--border);border-radius:16px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;}
+    .post-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);}
+    .post-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:.75rem;}
+    .post-card h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;line-height:1.3;margin-bottom:.5rem;}
+    .post-card p{font-size:.85rem;color:var(--mid);line-height:1.5;}
+    .post-card .post-meta{margin-top:.75rem;}
+    .ad-banner{background:var(--cream);border:1px dashed var(--border);border-radius:8px;height:90px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin:2rem auto;max-width:728px;}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.nav-links{display:none}.posts-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">Daily<span>Wellness</span>Tools</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="./" class="active">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>Wellness <em>Blog</em></h1>
+  <p>Evidence-based articles on nutrition, fitness, sleep, and everyday health. No hype — just clear, practical information.</p>
+</div>
+
+<div class="ad-banner">Advertisement · Google AdSense</div>
+
+<div class="blog-wrap">
+  <!-- Featured -->
+  <a href="intermittent-fasting-beginners.html" class="featured-post">
+    <span class="featured-tag">⭐ Featured</span>
+    <h2>Intermittent Fasting for Beginners: A No-Hype Guide</h2>
+    <p>The 16:8 method explained simply — what actually happens in your body during a fast, who it's for, common mistakes beginners make, and how to start without disrupting your life.</p>
+    <div class="post-meta">7 min read · Fasting · June 2025</div>
+  </a>
+
+  <div class="posts-grid">
+    <a href="what-is-a-healthy-bmi.html" class="post-card">
+      <span class="post-tag">Nutrition</span>
+      <h3>What Does a Healthy BMI Actually Mean?</h3>
+      <p>BMI is widely used but often misunderstood. Here's what your number really tells you — and what it doesn't.</p>
+      <div class="post-meta">5 min read · June 2025</div>
+    </a>
+    <a href="how-much-water-per-day.html" class="post-card">
+      <span class="post-tag">Hydration</span>
+      <h3>How Much Water Do You Really Need Per Day?</h3>
+      <p>The "8 glasses a day" rule isn't one-size-fits-all. Here's the science behind personalised hydration.</p>
+      <div class="post-meta">4 min read · June 2025</div>
+    </a>
+    <a href="sleep-cycles-explained.html" class="post-card">
+      <span class="post-tag">Sleep</span>
+      <h3>Sleep Cycles Explained: Why You Wake Up Tired</h3>
+      <p>You might be sleeping 8 hours and still feeling exhausted. Here's the science of sleep stages and how to fix it.</p>
+      <div class="post-meta">6 min read · June 2025</div>
+    </a>
+    <a href="protein-how-much-do-you-need.html" class="post-card">
+      <span class="post-tag">Fitness</span>
+      <h3>How Much Protein Do You Actually Need?</h3>
+      <p>From the RDA to athlete recommendations — what the research actually says about daily protein intake.</p>
+      <div class="post-meta">5 min read · June 2025</div>
+    </a>
+    <a href="tdee-vs-bmr.html" class="post-card">
+      <span class="post-tag">Nutrition</span>
+      <h3>TDEE vs BMR: What's the Difference?</h3>
+      <p>Two important numbers for understanding your calorie needs — and how to use them for weight management.</p>
+      <div class="post-meta">4 min read · June 2025</div>
+    </a>
+    <a href="signs-of-dehydration.html" class="post-card">
+      <span class="post-tag">Hydration</span>
+      <h3>7 Signs You're Dehydrated (And What to Do)</h3>
+      <p>Most people are mildly dehydrated most of the time. Here's how to tell — and how to fix it quickly.</p>
+      <div class="post-meta">3 min read · June 2025</div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">DailyWellnessTools</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="./">Blog</a></div>
+    <p class="footer-copy">© 2025 DailyWellnessTools.com · Not medical advice</p>
+  </div>
+</footer>
+</body>
+</html>

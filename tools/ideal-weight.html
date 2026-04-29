@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideal Body Weight Calculator – Daily Wellness Tools</title>
+  <meta name="description" content="Free ideal body weight calculator. Find your healthy weight range based on height using four established medical formulas: Devine, Robinson, Miller, and Hamwi.">
+  <link rel="canonical" href="https://dailywellnesstools.com/tools/ideal-weight.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .nav-back{font-size:.875rem;color:var(--mid);text-decoration:none;}
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-flex;background:#fdf5e0;color:#b8860b;font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;font-weight:300;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+    .calc-form{padding:2rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.8rem;font-weight:500;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .input-wrap{position:relative;}
+    .input-wrap input{width:100%;padding:.875rem 3rem .875rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--charcoal);background:var(--warm-white);transition:border-color .2s;}
+    .input-wrap input:focus{outline:none;border-color:var(--sage);background:white;}
+    .input-unit{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--light);font-weight:500;pointer-events:none;}
+    .gender-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+    .gender-btn{padding:.875rem;border:1.5px solid var(--border);border-radius:10px;background:var(--warm-white);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--mid);font-weight:500;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.5rem;}
+    .gender-btn.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-section{display:none;padding:2rem;border-top:1px solid var(--border);animation:fadeUp .4s ease;}
+    .result-section.visible{display:block;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .result-headline{font-size:.875rem;color:var(--mid);margin-bottom:1rem;}
+    .range-bar-wrap{background:var(--cream);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;text-align:center;}
+    .range-num{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:600;color:var(--sage-dark);}
+    .range-label{font-size:.875rem;color:var(--mid);margin-top:.25rem;}
+    .formula-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .formula-card{background:var(--cream);border-radius:12px;padding:1rem;}
+    .formula-name{font-size:.75rem;font-weight:600;color:var(--light);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem;}
+    .formula-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--charcoal);}
+    .formula-unit{font-size:.75rem;color:var(--light);}
+    .current-weight-bar{margin:1rem 0;}
+    .cw-label{font-size:.8rem;color:var(--mid);margin-bottom:.5rem;}
+    .bar-outer{height:10px;background:var(--border);border-radius:100px;position:relative;overflow:visible;}
+    .bar-range{position:absolute;top:0;height:100%;background:var(--sage-light);border-radius:100px;}
+    .bar-pointer{position:absolute;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:var(--accent);border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+    .result-tip{background:var(--cream);border-radius:12px;padding:1.25rem;font-size:.875rem;color:var(--mid);line-height:1.6;margin-top:1rem;}
+    .result-tip strong{color:var(--charcoal);}
+    .affiliate-card{border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;margin-top:1rem;}
+    .affiliate-card:hover{border-color:var(--sage-light);transform:translateY(-1px);}
+    .aff-icon{font-size:2rem;flex-shrink:0;}
+    .aff-text strong{display:block;font-size:.9rem;color:var(--charcoal);}
+    .aff-text span{font-size:.8rem;color:var(--mid);}
+    .aff-badge{margin-left:auto;flex-shrink:0;background:var(--accent-light);color:var(--accent);font-size:.7rem;font-weight:600;padding:.25rem .6rem;border-radius:100px;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;}
+    .related-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .related-list a{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;background:white;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:border-color .2s,transform .2s;}
+    .related-list a:hover{border-color:var(--sage-light);transform:translateX(3px);}
+    .article-section{margin-top:3rem;}
+    .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
+    .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.nav-links{display:none}.formula-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">Daily<span>Wellness</span>Tools</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../" class="nav-back">← All tools</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Ideal Body Weight</div>
+    <div class="page-header">
+      <span class="tool-label">🎯 Free Tool</span>
+      <h1>Ideal Body <em>Weight</em> Calculator</h1>
+      <p>Find your healthy weight range using four established medical formulas — and see how your current weight compares.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-form">
+        <div class="form-group">
+          <label>Sex</label>
+          <div class="gender-row">
+            <button class="gender-btn active" id="btn-male" onclick="setGender('male')">♂ Male</button>
+            <button class="gender-btn" id="btn-female" onclick="setGender('female')">♀ Female</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Height</label>
+          <div class="input-wrap"><input type="number" id="height" placeholder="175" min="100" max="250"><span class="input-unit">cm</span></div>
+        </div>
+        <div class="form-group">
+          <label>Current weight <span style="font-weight:400;font-size:.75rem;text-transform:none;letter-spacing:0">(optional, for comparison)</span></label>
+          <div class="input-wrap"><input type="number" id="current-weight" placeholder="75" min="20" max="300"><span class="input-unit">kg</span></div>
+        </div>
+        <button class="calc-btn" onclick="calculate()">Find my ideal weight →</button>
+      </div>
+
+      <div class="result-section" id="result">
+        <p class="result-headline">Your ideal weight range (average across formulas):</p>
+        <div class="range-bar-wrap">
+          <div class="range-num" id="range-display">— – — kg</div>
+          <div class="range-label">Healthy weight range based on your height</div>
+        </div>
+
+        <p style="font-size:.8rem;color:var(--light);margin-bottom:.75rem;">Results by formula:</p>
+        <div class="formula-grid">
+          <div class="formula-card"><div class="formula-name">Devine (1974)</div><div class="formula-val" id="f-devine">—</div><div class="formula-unit">kg</div></div>
+          <div class="formula-card"><div class="formula-name">Robinson (1983)</div><div class="formula-val" id="f-robinson">—</div><div class="formula-unit">kg</div></div>
+          <div class="formula-card"><div class="formula-name">Miller (1983)</div><div class="formula-val" id="f-miller">—</div><div class="formula-unit">kg</div></div>
+          <div class="formula-card"><div class="formula-name">Hamwi (1964)</div><div class="formula-val" id="f-hamwi">—</div><div class="formula-unit">kg</div></div>
+        </div>
+
+        <div id="comparison-section" style="display:none;">
+          <p style="font-size:.8rem;color:var(--light);margin-bottom:.5rem;">Your current weight vs. range:</p>
+          <div class="current-weight-bar">
+            <div class="bar-outer">
+              <div class="bar-range" id="bar-range"></div>
+              <div class="bar-pointer" id="bar-pointer"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:.4rem;font-size:.7rem;color:var(--light)">
+              <span id="bar-low">—</span><span id="bar-high">—</span>
+            </div>
+          </div>
+          <p id="comparison-text" style="font-size:.875rem;color:var(--mid);text-align:center;margin-bottom:1rem;"></p>
+        </div>
+
+        <div class="result-tip" id="result-tip"></div>
+        <a href="bmi-calculator.html" class="affiliate-card" style="border-color:var(--sage-light);">
+          <div class="aff-icon">⚖️</div>
+          <div class="aff-text">
+            <strong>Also check your BMI</strong>
+            <span>BMI gives a complementary view of healthy weight range</span>
+          </div>
+          <span style="margin-left:auto;font-size:.8rem;color:var(--sage-dark);font-weight:500;">Try it →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <h2>About ideal body weight formulas</h2>
+      <p>No single formula definitively defines an "ideal" weight — these are statistical estimates developed for clinical use (particularly for medication dosing). Each was derived from different populations, which is why they give slightly different results.</p>
+      <p>The average of multiple formulas gives a more reliable range than any single estimate. Your healthy weight also depends on muscle mass, bone density, and individual health history — which no formula can capture.</p>
+      <div class="disclaimer"><strong>Not medical advice.</strong> Ideal weight calculations are general estimates. Consult a healthcare provider for personalised weight management guidance.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="body-fat-calculator.html">📏 Body Fat %</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">DailyWellnessTools</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="../blog/">Blog</a></div>
+    <p class="footer-copy">© 2025 DailyWellnessTools.com · Not medical advice</p>
+  </div>
+</footer>
+
+<script>
+  let gender='male';
+  function setGender(g){gender=g;document.getElementById('btn-male').classList.toggle('active',g==='male');document.getElementById('btn-female').classList.toggle('active',g==='female');}
+  function calculate(){
+    const h=parseFloat(document.getElementById('height').value);
+    if(!h||h<100){alert('Please enter a valid height.');return;}
+    const inchesOver5ft=(h/2.54)-60;
+    const m=gender==='male';
+    const devine=m?50+2.3*inchesOver5ft:45.5+2.3*inchesOver5ft;
+    const robinson=m?52+1.9*inchesOver5ft:49+1.7*inchesOver5ft;
+    const miller=m?56.2+1.41*inchesOver5ft:53.1+1.36*inchesOver5ft;
+    const hamwi=m?48+2.7*inchesOver5ft:45.4+2.27*inchesOver5ft;
+    const vals=[devine,robinson,miller,hamwi].map(v=>Math.round(v*10)/10);
+    const avg=vals.reduce((a,b)=>a+b)/4;
+    const rangeMin=Math.round(Math.min(...vals)*10)/10;
+    const rangeMax=Math.round(Math.max(...vals)*10)/10;
+    document.getElementById('range-display').textContent=`${rangeMin} – ${rangeMax} kg`;
+    document.getElementById('f-devine').textContent=vals[0];
+    document.getElementById('f-robinson').textContent=vals[1];
+    document.getElementById('f-miller').textContent=vals[2];
+    document.getElementById('f-hamwi').textContent=vals[3];
+    const cw=parseFloat(document.getElementById('current-weight').value);
+    if(cw){
+      document.getElementById('comparison-section').style.display='block';
+      const barMin=rangeMin*0.8,barMax=rangeMax*1.2;
+      const rangePctStart=(rangeMin-barMin)/(barMax-barMin)*100;
+      const rangePctEnd=(rangeMax-barMin)/(barMax-barMin)*100;
+      const cwPct=Math.min(Math.max((cw-barMin)/(barMax-barMin)*100,0),100);
+      document.getElementById('bar-range').style.left=rangePctStart+'%';
+      document.getElementById('bar-range').style.width=(rangePctEnd-rangePctStart)+'%';
+      document.getElementById('bar-pointer').style.left=cwPct+'%';
+      document.getElementById('bar-low').textContent=rangeMin+' kg';
+      document.getElementById('bar-high').textContent=rangeMax+' kg';
+      let compText='';
+      if(cw<rangeMin)compText=`You are ${(rangeMin-cw).toFixed(1)} kg below the ideal range.`;
+      else if(cw>rangeMax)compText=`You are ${(cw-rangeMax).toFixed(1)} kg above the ideal range.`;
+      else compText=`✓ Your current weight is within the ideal range.`;
+      document.getElementById('comparison-text').textContent=compText;
+    } else {
+      document.getElementById('comparison-section').style.display='none';
+    }
+    document.getElementById('result-tip').innerHTML=`<strong>How to use this:</strong> Different formulas give slightly different results because they were developed for different populations. The range of ${rangeMin}–${rangeMax} kg represents the span across all four established formulas for your height. This is a starting point — not a prescription. Body composition (muscle vs. fat) matters more than a specific number on the scale.`;
+    document.getElementById('result').classList.add('visible');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+</script>
+</body>
+</html>

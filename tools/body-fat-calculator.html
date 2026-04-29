@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Fat Percentage Calculator – Daily Wellness Tools</title>
+  <meta name="description" content="Free body fat percentage calculator using the U.S. Navy method. Estimate your body fat % with just a tape measure — no calipers needed.">
+  <link rel="canonical" href="https://dailywellnesstools.com/tools/body-fat-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .nav-back{font-size:.875rem;color:var(--mid);text-decoration:none;}
+    .nav-back:hover{color:var(--sage-dark);}
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-flex;background:#fdf0e5;color:var(--accent);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--accent);}
+    .page-header p{color:var(--mid);font-size:1rem;font-weight:300;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+    .calc-form{padding:2rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.8rem;font-weight:500;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .form-group .hint{font-size:.75rem;color:var(--light);margin-top:.3rem;}
+    .input-wrap{position:relative;}
+    .input-wrap input{width:100%;padding:.875rem 3rem .875rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--charcoal);background:var(--warm-white);transition:border-color .2s;}
+    .input-wrap input:focus{outline:none;border-color:var(--accent);background:white;}
+    .input-unit{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--light);font-weight:500;pointer-events:none;}
+    .gender-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+    .gender-btn{padding:.875rem;border:1.5px solid var(--border);border-radius:10px;background:var(--warm-white);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--mid);font-weight:500;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.5rem;}
+    .gender-btn.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+    .calc-btn:hover{background:var(--sage);}
+    .female-only{display:none;}
+    .result-section{display:none;padding:2rem;border-top:1px solid var(--border);animation:fadeUp .4s ease;}
+    .result-section.visible{display:block;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .result-big{display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;}
+    .bf-circle{width:90px;height:90px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;}
+    .bf-num{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:600;line-height:1;}
+    .bf-pct{font-size:.8rem;opacity:.7;}
+    .bf-category{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;}
+    .bf-desc{font-size:.875rem;color:var(--mid);margin-top:.25rem;}
+    .ranges-table{width:100%;border-collapse:collapse;margin:1rem 0;}
+    .ranges-table td{padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .ranges-table tr:last-child td{border-bottom:none;}
+    .ranges-table .range-name{color:var(--mid);}
+    .ranges-table .range-val{text-align:right;font-weight:500;}
+    .range-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.5rem;}
+    .range-current{background:var(--cream);border-radius:6px;}
+    .range-current td{font-weight:600;color:var(--charcoal);}
+    .result-tip{background:var(--cream);border-radius:12px;padding:1.25rem;font-size:.875rem;color:var(--mid);line-height:1.6;margin-top:1rem;}
+    .result-tip strong{color:var(--charcoal);}
+    .affiliate-card{border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;margin-top:1rem;}
+    .affiliate-card:hover{border-color:var(--sage-light);transform:translateY(-1px);}
+    .aff-icon{font-size:2rem;flex-shrink:0;}
+    .aff-text strong{display:block;font-size:.9rem;color:var(--charcoal);}
+    .aff-text span{font-size:.8rem;color:var(--mid);}
+    .aff-badge{margin-left:auto;flex-shrink:0;background:var(--accent-light);color:var(--accent);font-size:.7rem;font-weight:600;padding:.25rem .6rem;border-radius:100px;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;}
+    .related-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .related-list a{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;background:white;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:border-color .2s,transform .2s;}
+    .related-list a:hover{border-color:var(--sage-light);transform:translateX(3px);}
+    .article-section{margin-top:3rem;}
+    .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
+    .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
+    .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.nav-links{display:none}.form-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">Daily<span>Wellness</span>Tools</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../" class="nav-back">← All tools</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Body Fat Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">📏 Free Tool</span>
+      <h1>Body Fat <em>%</em> Estimator</h1>
+      <p>Estimate your body fat percentage using the U.S. Navy method — just a tape measure and your height. No gym equipment needed.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-form">
+        <div class="form-group">
+          <label>Sex</label>
+          <div class="gender-row">
+            <button class="gender-btn active" id="btn-male" onclick="setGender('male')">♂ Male</button>
+            <button class="gender-btn" id="btn-female" onclick="setGender('female')">♀ Female</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Height</label>
+          <div class="input-wrap"><input type="number" id="height" placeholder="175" min="100" max="250"><span class="input-unit">cm</span></div>
+        </div>
+        <div class="form-group">
+          <label>Waist circumference</label>
+          <div class="input-wrap"><input type="number" id="waist" placeholder="82" min="40" max="200"><span class="input-unit">cm</span></div>
+          <p class="hint">Measure at the narrowest point (around the navel for men, smallest point for women)</p>
+        </div>
+        <div class="form-group">
+          <label>Neck circumference</label>
+          <div class="input-wrap"><input type="number" id="neck" placeholder="38" min="20" max="80"><span class="input-unit">cm</span></div>
+          <p class="hint">Measure just below the larynx (Adam's apple)</p>
+        </div>
+        <div class="form-group female-only">
+          <label>Hip circumference</label>
+          <div class="input-wrap"><input type="number" id="hip" placeholder="95" min="40" max="200"><span class="input-unit">cm</span></div>
+          <p class="hint">Measure at the widest point of your hips/buttocks</p>
+        </div>
+        <button class="calc-btn" onclick="calculate()">Estimate my body fat →</button>
+      </div>
+
+      <div class="result-section" id="result">
+        <div class="result-big">
+          <div class="bf-circle" id="bf-circle">
+            <span class="bf-num" id="bf-num">—</span>
+            <span class="bf-pct">% body fat</span>
+          </div>
+          <div>
+            <div class="bf-category" id="bf-category">—</div>
+            <div class="bf-desc" id="bf-desc">—</div>
+          </div>
+        </div>
+
+        <table class="ranges-table" id="ranges-table-m">
+          <tr id="rm-ef"><td class="range-name"><span class="range-dot" style="background:#6aadcf"></span>Essential fat</td><td class="range-val">2–5%</td></tr>
+          <tr id="rm-ath"><td class="range-name"><span class="range-dot" style="background:#7a9e7e"></span>Athletes</td><td class="range-val">6–13%</td></tr>
+          <tr id="rm-fit"><td class="range-name"><span class="range-dot" style="background:#a8c5ac"></span>Fitness</td><td class="range-val">14–17%</td></tr>
+          <tr id="rm-avg"><td class="range-name"><span class="range-dot" style="background:#e8b84b"></span>Average</td><td class="range-val">18–24%</td></tr>
+          <tr id="rm-ob"><td class="range-name"><span class="range-dot" style="background:#d4845a"></span>Obese</td><td class="range-val">25%+</td></tr>
+        </table>
+        <table class="ranges-table" id="ranges-table-f" style="display:none">
+          <tr id="rf-ef"><td class="range-name"><span class="range-dot" style="background:#6aadcf"></span>Essential fat</td><td class="range-val">10–13%</td></tr>
+          <tr id="rf-ath"><td class="range-name"><span class="range-dot" style="background:#7a9e7e"></span>Athletes</td><td class="range-val">14–20%</td></tr>
+          <tr id="rf-fit"><td class="range-name"><span class="range-dot" style="background:#a8c5ac"></span>Fitness</td><td class="range-val">21–24%</td></tr>
+          <tr id="rf-avg"><td class="range-name"><span class="range-dot" style="background:#e8b84b"></span>Average</td><td class="range-val">25–31%</td></tr>
+          <tr id="rf-ob"><td class="range-name"><span class="range-dot" style="background:#d4845a"></span>Obese</td><td class="range-val">32%+</td></tr>
+        </table>
+
+        <div class="result-tip" id="result-tip"></div>
+        <a href="https://iherb.com/?rcode=YOUR_CODE" class="affiliate-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-icon">💪</div>
+          <div class="aff-text">
+            <strong>Body composition supplements on iHerb</strong>
+            <span>Protein, CLA, L-carnitine, and more</span>
+          </div>
+          <span class="aff-badge">Partner</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <h2>How is body fat % calculated?</h2>
+      <p>This calculator uses the <strong>U.S. Navy circumference method</strong>, developed for fitness assessment in the armed forces. It estimates body fat from simple body measurements rather than requiring expensive equipment.</p>
+      <h3>The formula</h3>
+      <p><strong>Men:</strong> %BF = 495 / (1.0324 − 0.19077 × log10(waist − neck) + 0.15456 × log10(height)) − 450</p>
+      <p><strong>Women:</strong> %BF = 495 / (1.29579 − 0.35004 × log10(waist + hip − neck) + 0.22100 × log10(height)) − 450</p>
+      <h3>Accuracy</h3>
+      <p>The Navy method has a margin of error of approximately ±3–4%. It's a useful tracker for progress over time, but for precise body composition assessment, DEXA scan or hydrostatic weighing are more accurate.</p>
+      <div class="disclaimer"><strong>Not medical advice.</strong> Body fat estimates are approximations. Consult a healthcare provider for clinical assessment.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">DailyWellnessTools</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="../blog/">Blog</a></div>
+    <p class="footer-copy">© 2025 DailyWellnessTools.com · Not medical advice</p>
+  </div>
+</footer>
+
+<script>
+  let gender='male';
+  function setGender(g){
+    gender=g;
+    document.getElementById('btn-male').classList.toggle('active',g==='male');
+    document.getElementById('btn-female').classList.toggle('active',g==='female');
+    document.querySelectorAll('.female-only').forEach(el=>el.style.display=g==='female'?'block':'none');
+    document.getElementById('ranges-table-m').style.display=g==='male'?'table':'none';
+    document.getElementById('ranges-table-f').style.display=g==='female'?'table':'none';
+  }
+  function calculate(){
+    const h=parseFloat(document.getElementById('height').value);
+    const waist=parseFloat(document.getElementById('waist').value);
+    const neck=parseFloat(document.getElementById('neck').value);
+    if(!h||!waist||!neck){alert('Please fill in all required measurements.');return;}
+    let bf;
+    if(gender==='male'){
+      bf=495/(1.0324-0.19077*Math.log10(waist-neck)+0.15456*Math.log10(h))-450;
+    } else {
+      const hip=parseFloat(document.getElementById('hip').value);
+      if(!hip){alert('Please enter your hip measurement.');return;}
+      bf=495/(1.29579-0.35004*Math.log10(waist+hip-neck)+0.22100*Math.log10(h))-450;
+    }
+    if(bf<2||bf>70){alert('Please check your measurements — the result seems outside a realistic range.');return;}
+    bf=Math.round(bf*10)/10;
+    document.getElementById('bf-num').textContent=bf;
+    let cat,color,bg,tip,rowId;
+    if(gender==='male'){
+      if(bf<6){cat='Essential Fat';color='#6aadcf';bg='#e8f4fb';tip='<strong>Essential fat level:</strong> This is below typical athletic range. Essential fat is required for basic physiological function. Levels this low outside elite sport may warrant a conversation with your doctor.';rowId='rm-ef';}
+      else if(bf<14){cat='Athlete';color='#7a9e7e';bg='#edf4ee';tip='<strong>Athletic range:</strong> This body fat level is typical of dedicated athletes and those with consistent resistance and cardiovascular training. Maintaining this requires disciplined nutrition and exercise.';rowId='rm-ath';}
+      else if(bf<18){cat='Fitness';color='#a8c5ac';bg='#f0f6f0';tip='<strong>Fitness range:</strong> A healthy, fit body composition. Associated with good metabolic health and physical performance. Most active adults fall here.';rowId='rm-fit';}
+      else if(bf<25){cat='Average';color='#e8b84b';bg='#fdf9e8';tip='<strong>Average range:</strong> Within normal range for adult men, but the higher end may be associated with increased cardiovascular and metabolic risk. Regular exercise and a balanced diet can help reduce body fat.';rowId='rm-avg';}
+      else{cat='Obese';color='#d4845a';bg='#fdf0e5';tip='<strong>Elevated body fat:</strong> This level is associated with increased risk of type 2 diabetes, cardiovascular disease, and joint problems. A combination of resistance training and dietary changes is most effective for reducing body fat.';rowId='rm-ob';}
+      ['rm-ef','rm-ath','rm-fit','rm-avg','rm-ob'].forEach(id=>document.getElementById(id).classList.remove('range-current'));
+    } else {
+      if(bf<14){cat='Essential Fat';color='#6aadcf';bg='#e8f4fb';tip='<strong>Essential fat level:</strong> Female essential fat is higher than male due to hormonal and reproductive functions. Levels this low may affect menstrual regularity and bone density.';rowId='rf-ef';}
+      else if(bf<21){cat='Athlete';color='#7a9e7e';bg='#edf4ee';tip='<strong>Athletic range:</strong> Typical of female athletes with high training volumes. Associated with excellent fitness and cardiovascular health.';rowId='rf-ath';}
+      else if(bf<25){cat='Fitness';color='#a8c5ac';bg='#f0f6f0';tip='<strong>Fitness range:</strong> A healthy, active body composition for women. Associated with good health outcomes and physical performance.';rowId='rf-fit';}
+      else if(bf<32){cat='Average';color='#e8b84b';bg='#fdf9e8';tip='<strong>Average range:</strong> Normal for adult women. A healthy diet and regular physical activity can help maintain or improve body composition.';rowId='rf-avg';}
+      else{cat='Obese';color='#d4845a';bg='#fdf0e5';tip='<strong>Elevated body fat:</strong> Associated with increased health risk. Gradual, sustainable lifestyle changes are more effective than rapid weight loss programs.';rowId='rf-ob';}
+      ['rf-ef','rf-ath','rf-fit','rf-avg','rf-ob'].forEach(id=>document.getElementById(id).classList.remove('range-current'));
+    }
+    const circle=document.getElementById('bf-circle');
+    circle.style.background=bg;circle.style.color=color;
+    document.getElementById('bf-category').textContent=cat;
+    document.getElementById('bf-category').style.color=color;
+    document.getElementById('bf-desc').textContent=bf+'% body fat';
+    document.getElementById('result-tip').innerHTML=tip;
+    if(rowId)document.getElementById(rowId).classList.add('range-current');
+    document.getElementById('result').classList.add('visible');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+</script>
+</body>
+</html>

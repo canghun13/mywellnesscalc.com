@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Cycle Calculator – Daily Wellness Tools</title>
+  <meta name="description" content="Find the best bedtime or wake-up time to wake up refreshed. Our sleep cycle calculator aligns your alarm with natural 90-minute sleep cycles.">
+  <link rel="canonical" href="https://dailywellnesstools.com/tools/sleep-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;--sleep:#8b7fb8;--sleep-light:#e8e4f4;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .nav-back{font-size:.875rem;color:var(--mid);text-decoration:none;}
+    .nav-back:hover{color:var(--sage-dark);}
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-flex;align-items:center;background:var(--sleep-light);color:var(--sleep);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sleep);}
+    .page-header p{color:var(--mid);font-size:1rem;font-weight:300;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+    .tab-row{display:flex;border-bottom:1px solid var(--border);}
+    .tab-btn{flex:1;padding:1rem;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;color:var(--light);cursor:pointer;transition:all .2s;position:relative;}
+    .tab-btn.active{color:var(--sleep);background:var(--sleep-light);}
+    .tab-btn.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--sleep);}
+    .calc-form{padding:2rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.8rem;font-weight:500;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .time-input{width:100%;padding:.875rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1.25rem;color:var(--charcoal);background:var(--warm-white);transition:border-color .2s;text-align:center;}
+    .time-input:focus{outline:none;border-color:var(--sleep);background:white;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sleep);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+    .calc-btn:hover{background:#7a6fa8;}
+    .result-section{display:none;padding:2rem;border-top:1px solid var(--border);animation:fadeUp .4s ease;}
+    .result-section.visible{display:block;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .result-headline{font-size:.875rem;color:var(--mid);margin-bottom:1.25rem;}
+    .times-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .time-card{background:var(--cream);border-radius:12px;padding:1.25rem;text-align:center;cursor:pointer;transition:all .2s;border:2px solid transparent;}
+    .time-card:hover{border-color:var(--sleep-light);}
+    .time-card.best{background:var(--sleep);color:white;}
+    .time-card.best .cycle-label{color:rgba(255,255,255,.6);}
+    .time-card.best .cycle-time{color:white;}
+    .cycle-label{font-size:.7rem;color:var(--light);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem;}
+    .cycle-time{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--charcoal);}
+    .cycle-cycles{font-size:.75rem;color:var(--light);margin-top:.15rem;}
+    .result-tip{background:var(--sleep-light);border-radius:12px;padding:1.25rem;font-size:.875rem;color:var(--mid);line-height:1.6;}
+    .result-tip strong{color:var(--charcoal);}
+    .affiliate-card{border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;margin-top:1rem;}
+    .affiliate-card:hover{border-color:var(--sleep-light);transform:translateY(-1px);}
+    .aff-icon{font-size:2rem;flex-shrink:0;}
+    .aff-text strong{display:block;font-size:.9rem;color:var(--charcoal);}
+    .aff-text span{font-size:.8rem;color:var(--mid);}
+    .aff-badge{margin-left:auto;flex-shrink:0;background:var(--accent-light);color:var(--accent);font-size:.7rem;font-weight:600;padding:.25rem .6rem;border-radius:100px;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;}
+    .related-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .related-list a{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;background:white;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:border-color .2s,transform .2s;}
+    .related-list a:hover{border-color:var(--sage-light);transform:translateX(3px);}
+    .article-section{margin-top:3rem;}
+    .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
+    .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
+    .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sleep-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.nav-links{display:none}.times-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">Daily<span>Wellness</span>Tools</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../" class="nav-back">← All tools</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Sleep Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">😴 Free Tool</span>
+      <h1>Sleep <em>Cycle</em> Calculator</h1>
+      <p>Wake up refreshed. Calculate ideal bedtimes or wake-up times aligned with your natural 90-minute sleep cycles.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="tab-row">
+        <button class="tab-btn active" id="tab-wake" onclick="setTab('wake')">I want to wake up at…</button>
+        <button class="tab-btn" id="tab-sleep" onclick="setTab('sleep')">I want to go to sleep at…</button>
+      </div>
+      <div class="calc-form">
+        <div class="form-group" id="group-wake">
+          <label>Wake-up time</label>
+          <input type="time" id="wake-time" class="time-input" value="07:00">
+        </div>
+        <div class="form-group" id="group-sleep" style="display:none;">
+          <label>Bedtime</label>
+          <input type="time" id="sleep-time" class="time-input" value="23:00">
+        </div>
+        <button class="calc-btn" onclick="calculate()">Show me my sleep times →</button>
+      </div>
+
+      <div class="result-section" id="result">
+        <p class="result-headline" id="result-headline">Best times to go to sleep:</p>
+        <div class="times-grid" id="times-grid"></div>
+        <div class="result-tip">
+          <strong>How this works:</strong> Each sleep cycle lasts approximately 90 minutes, moving through light sleep, deep sleep, and REM. Waking at the end of a cycle (rather than in the middle of deep sleep) leaves you feeling more refreshed. This calculator also accounts for ~14 minutes to fall asleep.
+        </div>
+        <a href="https://iherb.com/?rcode=YOUR_CODE" class="affiliate-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-icon">🌙</div>
+          <div class="aff-text">
+            <strong>Sleep &amp; relaxation supplements</strong>
+            <span>Melatonin, magnesium, and more on iHerb</span>
+          </div>
+          <span class="aff-badge">Partner</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <h2>Why sleep cycles matter</h2>
+      <p>Sleep isn't one long state — it's a series of repeating cycles, each lasting about 90 minutes. Each cycle includes four stages: N1 (light sleep), N2 (consolidated sleep), N3 (deep/slow-wave sleep), and REM (rapid eye movement sleep, associated with dreaming and memory consolidation).</p>
+      <h3>Why you feel groggy in the morning</h3>
+      <p>If your alarm goes off during deep sleep (N3), you experience <em>sleep inertia</em> — that foggy, disoriented feeling that can last 30–60 minutes. Waking at the end of a sleep cycle, when you're in lighter sleep, dramatically reduces this effect.</p>
+      <h3>How many cycles do you need?</h3>
+      <p>Most adults need 5–6 complete cycles per night (7.5–9 hours). Teenagers and older adults have slightly different needs. Quality matters as much as quantity — consistent sleep and wake times, a dark room, and limiting screens before bed all improve cycle quality.</p>
+      <div class="disclaimer"><strong>Not medical advice.</strong> If you regularly struggle with sleep, speak to a healthcare provider. This tool is for informational purposes only.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="water-intake.html">💧 Water Intake</a></li>
+        <li><a href="if-calculator.html">⏱️ Intermittent Fasting</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">DailyWellnessTools</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="../blog/">Blog</a></div>
+    <p class="footer-copy">© 2025 DailyWellnessTools.com · Not medical advice</p>
+  </div>
+</footer>
+
+<script>
+  let mode='wake';
+  function setTab(t){
+    mode=t;
+    document.getElementById('tab-wake').classList.toggle('active',t==='wake');
+    document.getElementById('tab-sleep').classList.toggle('active',t==='sleep');
+    document.getElementById('group-wake').style.display=t==='wake'?'block':'none';
+    document.getElementById('group-sleep').style.display=t==='sleep'?'block':'none';
+    document.getElementById('result').classList.remove('visible');
+  }
+  function addMinutes(timeStr,mins){
+    const[h,m]=timeStr.split(':').map(Number);
+    const d=new Date(2000,0,1,h,m);
+    d.setMinutes(d.getMinutes()+mins);
+    return d.getHours().toString().padStart(2,'0')+':'+d.getMinutes().toString().padStart(2,'0');
+  }
+  function subMinutes(timeStr,mins){
+    const[h,m]=timeStr.split(':').map(Number);
+    const d=new Date(2000,0,1,h,m);
+    d.setMinutes(d.getMinutes()-mins);
+    return d.getHours().toString().padStart(2,'0')+':'+d.getMinutes().toString().padStart(2,'0');
+  }
+  function to12(t){
+    const[h,m]=t.split(':').map(Number);
+    const ampm=h>=12?'PM':'AM';
+    const h12=h%12||12;
+    return h12+':'+(m+'').padStart(2,'0')+' '+ampm;
+  }
+  function calculate(){
+    const grid=document.getElementById('times-grid');
+    grid.innerHTML='';
+    const fallAsleep=14; // avg minutes to fall asleep
+    if(mode==='wake'){
+      const wakeTime=document.getElementById('wake-time').value;
+      document.getElementById('result-headline').textContent='Best times to go to sleep (for '+to12(wakeTime)+' wake-up):';
+      const cycles=[6,5,4,3,2];
+      cycles.forEach((c,i)=>{
+        const bedtime=subMinutes(wakeTime,c*90+fallAsleep);
+        const card=document.createElement('div');
+        card.className='time-card'+(c===6||c===5?' best':'');
+        card.innerHTML=`<div class="cycle-label">${c} cycles</div><div class="cycle-time">${to12(bedtime)}</div><div class="cycle-cycles">${c*1.5} hrs sleep</div>`;
+        grid.appendChild(card);
+      });
+    } else {
+      const sleepTime=document.getElementById('sleep-time').value;
+      document.getElementById('result-headline').textContent='Best times to wake up (from '+to12(sleepTime)+' bedtime):';
+      const cycles=[4,5,6,3,2];
+      cycles.forEach((c)=>{
+        const wakeup=addMinutes(sleepTime,c*90+fallAsleep);
+        const card=document.createElement('div');
+        card.className='time-card'+(c===5||c===6?' best':'');
+        card.innerHTML=`<div class="cycle-label">${c} cycles</div><div class="cycle-time">${to12(wakeup)}</div><div class="cycle-cycles">${c*1.5} hrs sleep</div>`;
+        grid.appendChild(card);
+      });
+    }
+    document.getElementById('result').classList.add('visible');
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+</script>
+</body>
+</html>

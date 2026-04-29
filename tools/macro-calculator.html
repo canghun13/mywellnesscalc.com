@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macro Calculator – Daily Wellness Tools</title>
+  <meta name="description" content="Free macro calculator. Find your ideal daily protein, carbohydrate, and fat targets based on your calories, body weight, and fitness goals.">
+  <link rel="canonical" href="https://dailywellnesstools.com/tools/macro-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;--protein:#7a9e7e;--carb:#e8b84b;--fat:#d4845a;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .nav-back{font-size:.875rem;color:var(--mid);text-decoration:none;}
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-flex;background:#edf4ee;color:var(--sage-dark);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;font-weight:300;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+    .calc-form{padding:2rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.8rem;font-weight:500;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .input-wrap{position:relative;}
+    .input-wrap input,.input-wrap select{width:100%;padding:.875rem 3rem .875rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--charcoal);background:var(--warm-white);transition:border-color .2s;appearance:none;}
+    .input-wrap input:focus,.input-wrap select:focus{outline:none;border-color:var(--sage);background:white;}
+    .input-unit{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--light);font-weight:500;pointer-events:none;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-section{display:none;padding:2rem;border-top:1px solid var(--border);animation:fadeUp .4s ease;}
+    .result-section.visible{display:block;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .total-cal{font-size:.875rem;color:var(--mid);margin-bottom:1.25rem;}
+    .total-cal span{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--charcoal);}
+    .macro-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .macro-card{border-radius:14px;padding:1.5rem;text-align:center;}
+    .macro-card.protein{background:#edf4ee;border:1px solid var(--sage-light);}
+    .macro-card.carb{background:#fdf9e8;border:1px solid #f0d98a;}
+    .macro-card.fat{background:#fdf0e5;border:1px solid #f5c49e;}
+    .macro-icon{font-size:1.5rem;margin-bottom:.5rem;}
+    .macro-grams{font-family:'Fraunces',serif;font-size:2.25rem;font-weight:600;line-height:1;}
+    .macro-card.protein .macro-grams{color:var(--protein);}
+    .macro-card.carb .macro-grams{color:var(--carb);}
+    .macro-card.fat .macro-grams{color:var(--fat);}
+    .macro-unit{font-size:.75rem;color:var(--light);}
+    .macro-name{font-size:.8rem;font-weight:500;color:var(--mid);margin-top:.25rem;}
+    .macro-cal-sub{font-size:.7rem;color:var(--light);margin-top:.1rem;}
+    /* Donut chart */
+    .chart-wrap{display:flex;align-items:center;gap:1.5rem;margin:1rem 0;}
+    .donut-svg{flex-shrink:0;}
+    .donut-legend{display:flex;flex-direction:column;gap:.5rem;}
+    .legend-item{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--mid);}
+    .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+    .result-tip{background:var(--cream);border-radius:12px;padding:1.25rem;font-size:.875rem;color:var(--mid);line-height:1.6;}
+    .result-tip strong{color:var(--charcoal);}
+    .affiliate-card{border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;margin-top:1rem;}
+    .affiliate-card:hover{border-color:var(--sage-light);transform:translateY(-1px);}
+    .aff-icon{font-size:2rem;flex-shrink:0;}
+    .aff-text strong{display:block;font-size:.9rem;color:var(--charcoal);}
+    .aff-text span{font-size:.8rem;color:var(--mid);}
+    .aff-badge{margin-left:auto;flex-shrink:0;background:var(--accent-light);color:var(--accent);font-size:.7rem;font-weight:600;padding:.25rem .6rem;border-radius:100px;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;}
+    .related-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .related-list a{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;background:white;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:border-color .2s,transform .2s;}
+    .related-list a:hover{border-color:var(--sage-light);transform:translateX(3px);}
+    .article-section{margin-top:3rem;}
+    .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
+    .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
+    .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.nav-links{display:none}.form-row{grid-template-columns:1fr}.macro-cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">Daily<span>Wellness</span>Tools</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../" class="nav-back">← All tools</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Macro Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">🥗 Free Tool</span>
+      <h1><em>Macro</em> Calculator</h1>
+      <p>Calculate your ideal daily protein, carbohydrate, and fat targets — personalized to your calorie goal and fitness objective.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-form">
+        <div class="form-group">
+          <label>Daily Calorie Target</label>
+          <div class="input-wrap"><input type="number" id="calories" placeholder="2000" min="800" max="6000"><span class="input-unit">kcal</span></div>
+          <p style="font-size:.75rem;color:var(--light);margin-top:.4rem;">Don't know your calories? <a href="calorie-calculator.html" style="color:var(--sage-dark)">Use our Calorie Calculator →</a></p>
+        </div>
+        <div class="form-group">
+          <label>Primary Goal</label>
+          <div class="input-wrap">
+            <select id="goal">
+              <option value="lose">Lose fat (higher protein)</option>
+              <option value="maintain" selected>Balanced maintenance</option>
+              <option value="gain">Build muscle (high protein)</option>
+              <option value="endurance">Endurance performance (higher carbs)</option>
+              <option value="keto">Ketogenic (very low carb)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Body Weight</label>
+            <div class="input-wrap"><input type="number" id="weight" placeholder="70" min="30" max="300"><span class="input-unit">kg</span></div>
+          </div>
+          <div class="form-group" style="display:flex;flex-direction:column;justify-content:flex-end;">
+            <button class="calc-btn" onclick="calculate()">Calculate macros →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-section" id="result">
+        <div class="total-cal">Daily target: <span id="cal-display">—</span> kcal</div>
+        <div class="macro-cards">
+          <div class="macro-card protein">
+            <div class="macro-icon">🥩</div>
+            <div class="macro-grams" id="p-grams">—</div>
+            <div class="macro-unit">grams/day</div>
+            <div class="macro-name">Protein</div>
+            <div class="macro-cal-sub" id="p-cal">— kcal</div>
+          </div>
+          <div class="macro-card carb">
+            <div class="macro-icon">🌾</div>
+            <div class="macro-grams" id="c-grams">—</div>
+            <div class="macro-unit">grams/day</div>
+            <div class="macro-name">Carbohydrates</div>
+            <div class="macro-cal-sub" id="c-cal">— kcal</div>
+          </div>
+          <div class="macro-card fat">
+            <div class="macro-icon">🥑</div>
+            <div class="macro-grams" id="f-grams">—</div>
+            <div class="macro-unit">grams/day</div>
+            <div class="macro-name">Fat</div>
+            <div class="macro-cal-sub" id="f-cal">— kcal</div>
+          </div>
+        </div>
+
+        <!-- Donut -->
+        <div class="chart-wrap">
+          <svg class="donut-svg" viewBox="0 0 100 100" width="100" height="100">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#e8e2da" stroke-width="18"/>
+            <circle id="donut-protein" cx="50" cy="50" r="40" fill="none" stroke="#7a9e7e" stroke-width="18" stroke-dasharray="0 251.2" stroke-dashoffset="62.8" style="transition:stroke-dasharray .6s ease"/>
+            <circle id="donut-carb" cx="50" cy="50" r="40" fill="none" stroke="#e8b84b" stroke-width="18" stroke-dasharray="0 251.2" stroke-dashoffset="62.8" style="transition:stroke-dasharray .6s ease .15s"/>
+            <circle id="donut-fat" cx="50" cy="50" r="40" fill="none" stroke="#d4845a" stroke-width="18" stroke-dasharray="0 251.2" stroke-dashoffset="62.8" style="transition:stroke-dasharray .6s ease .3s"/>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#7a9e7e"></span><span id="legend-p">Protein — %</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#e8b84b"></span><span id="legend-c">Carbs — %</span></div>
+            <div class="legend-item"><span class="legend-dot" style="background:#d4845a"></span><span id="legend-f">Fat — %</span></div>
+          </div>
+        </div>
+
+        <div class="result-tip" id="result-tip"></div>
+        <a href="https://iherb.com/?rcode=YOUR_CODE" class="affiliate-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-icon">💪</div>
+          <div class="aff-text">
+            <strong>Protein supplements &amp; sports nutrition</strong>
+            <span>Shop whey, plant protein, and more on iHerb</span>
+          </div>
+          <span class="aff-badge">Partner</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <h2>Understanding macronutrients</h2>
+      <p>Macronutrients — protein, carbohydrates, and fat — are the three main sources of energy in food. Each plays a distinct role in the body, and getting the right balance for your goals can significantly affect your performance, body composition, and energy levels.</p>
+      <h3>Protein (4 kcal/g)</h3>
+      <p>Protein is essential for building and repairing muscle tissue, supporting immune function, and producing enzymes and hormones. For most active adults, a target of <strong>1.6–2.2g per kg of body weight</strong> is sufficient for muscle building or preservation.</p>
+      <h3>Carbohydrates (4 kcal/g)</h3>
+      <p>Carbohydrates are the body's preferred fuel source, especially for high-intensity exercise. Not all carbs are equal — fiber-rich whole grains, vegetables, and legumes are far preferable to refined sugars and processed starches.</p>
+      <h3>Fat (9 kcal/g)</h3>
+      <p>Dietary fat is essential for hormone production, vitamin absorption (A, D, E, K), and brain health. The focus should be on unsaturated fats (olive oil, nuts, avocado) while minimizing trans fats.</p>
+      <div class="disclaimer"><strong>Individual needs vary significantly.</strong> These are evidence-based starting points. A registered dietitian can provide a truly personalized macro plan.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="calorie-calculator.html">🔥 Calorie Calculator</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
+        <li><a href="if-calculator.html">⏱️ Intermittent Fasting</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">DailyWellnessTools</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="../blog/">Blog</a></div>
+    <p class="footer-copy">© 2025 DailyWellnessTools.com · Not medical advice</p>
+  </div>
+</footer>
+
+<script>
+function calculate(){
+  const cal=parseFloat(document.getElementById('calories').value);
+  const goal=document.getElementById('goal').value;
+  const w=parseFloat(document.getElementById('weight').value)||70;
+  if(!cal||cal<800){alert('Please enter a valid calorie target.');return;}
+  const ratios={lose:{p:.35,c:.35,f:.3},maintain:{p:.3,c:.4,f:.3},gain:{p:.35,c:.4,f:.25},endurance:{p:.2,c:.55,f:.25},keto:{p:.25,c:.05,f:.7}};
+  const r=ratios[goal];
+  const pCal=Math.round(cal*r.p),cCal=Math.round(cal*r.c),fCal=Math.round(cal*r.f);
+  const pG=Math.round(pCal/4),cG=Math.round(cCal/4),fG=Math.round(fCal/9);
+  document.getElementById('cal-display').textContent=Math.round(cal).toLocaleString();
+  document.getElementById('p-grams').textContent=pG;document.getElementById('p-cal').textContent=pCal+' kcal';
+  document.getElementById('c-grams').textContent=cG;document.getElementById('c-cal').textContent=cCal+' kcal';
+  document.getElementById('f-grams').textContent=fG;document.getElementById('f-cal').textContent=fCal+' kcal';
+  document.getElementById('legend-p').textContent=`Protein — ${Math.round(r.p*100)}%`;
+  document.getElementById('legend-c').textContent=`Carbs — ${Math.round(r.c*100)}%`;
+  document.getElementById('legend-f').textContent=`Fat — ${Math.round(r.f*100)}%`;
+  const circ=251.2;
+  const pDash=circ*r.p,cDash=circ*r.c,fDash=circ*r.f;
+  const offset=62.8;
+  document.getElementById('donut-protein').setAttribute('stroke-dasharray',`${pDash} ${circ-pDash}`);
+  document.getElementById('donut-protein').setAttribute('stroke-dashoffset',offset);
+  document.getElementById('donut-carb').setAttribute('stroke-dasharray',`${cDash} ${circ-cDash}`);
+  document.getElementById('donut-carb').setAttribute('stroke-dashoffset',offset-pDash);
+  document.getElementById('donut-fat').setAttribute('stroke-dasharray',`${fDash} ${circ-fDash}`);
+  document.getElementById('donut-fat').setAttribute('stroke-dashoffset',offset-pDash-cDash);
+  const tips={lose:`<strong>Fat loss focus:</strong> Higher protein (${pG}g) protects muscle mass during a calorie deficit. Prioritize lean sources: chicken breast, Greek yogurt, legumes, egg whites. Track your intake for at least 2 weeks to establish baseline habits.`,
+  maintain:`<strong>Balanced approach:</strong> A 30/40/30 split is a solid maintenance starting point. Focus on food quality — whole grains, lean proteins, healthy fats — rather than obsessing over exact numbers.`,
+  gain:`<strong>Muscle building:</strong> Your protein target of ${pG}g/day (≈${(pG/w).toFixed(1)}g/kg) supports muscle protein synthesis. Spread protein across 4–5 meals for optimal absorption. Time a protein-rich meal within 2 hours post-workout.`,
+  endurance:`<strong>Endurance performance:</strong> Higher carbohydrate intake (${cG}g) fuels prolonged aerobic activity. Focus on complex carbs before training and fast-absorbing carbs during/after long sessions.`,
+  keto:`<strong>Ketogenic approach:</strong> Net carbs should stay under ${Math.round(cG*0.7)}g/day to maintain ketosis (accounting for fiber). Fat is your primary fuel — focus on quality sources like olive oil, nuts, avocado, and fatty fish.`};
+  document.getElementById('result-tip').innerHTML=tips[goal];
+  document.getElementById('result').classList.add('visible');
+  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>

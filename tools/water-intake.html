@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Intake Calculator – Daily Wellness Tools</title>
+  <meta name="description" content="How much water should you drink per day? Get a personalized daily water intake recommendation based on your weight, activity level, and climate.">
+  <link rel="canonical" href="https://dailywellnesstools.com/tools/water-intake.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;--water:#6aadcf;--water-light:#d0eaf5;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .nav-back{font-size:.875rem;color:var(--mid);text-decoration:none;}
+    .nav-back:hover{color:var(--sage-dark);}
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-flex;align-items:center;background:var(--water-light);color:var(--water);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--water);}
+    .page-header p{color:var(--mid);font-size:1rem;font-weight:300;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+    .calc-form{padding:2rem;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.8rem;font-weight:500;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .input-wrap{position:relative;}
+    .input-wrap input,.input-wrap select{width:100%;padding:.875rem 3rem .875rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--charcoal);background:var(--warm-white);transition:border-color .2s;appearance:none;}
+    .input-wrap input:focus,.input-wrap select:focus{outline:none;border-color:var(--water);background:white;}
+    .input-unit{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--light);font-weight:500;pointer-events:none;}
+    .calc-btn{width:100%;padding:1rem;background:var(--water);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+    .calc-btn:hover{background:#5a9dbf;}
+    .result-section{display:none;padding:2rem;border-top:1px solid var(--border);animation:fadeUp .4s ease;}
+    .result-section.visible{display:block;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .water-visual{text-align:center;margin-bottom:1.5rem;}
+    .water-amount{font-family:'Fraunces',serif;font-size:4rem;font-weight:600;color:var(--water);line-height:1;}
+    .water-unit-label{font-size:1rem;color:var(--mid);margin-top:.25rem;}
+    .water-glasses{font-size:.9rem;color:var(--light);margin-top:.25rem;}
+    .glass-row{display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem;margin:1.25rem 0;}
+    .glass-icon{font-size:1.4rem;transition:transform .3s;}
+    .breakdown-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin:1rem 0;}
+    .breakdown-item{background:var(--cream);border-radius:12px;padding:1rem;text-align:center;}
+    .breakdown-num{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--water);}
+    .breakdown-label{font-size:.7rem;color:var(--light);margin-top:.2rem;text-transform:uppercase;letter-spacing:.05em;}
+    .result-tip{background:var(--water-light);border-radius:12px;padding:1.25rem;font-size:.875rem;color:var(--mid);line-height:1.6;margin-top:1rem;}
+    .result-tip strong{color:var(--charcoal);}
+    .affiliate-card{border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s;margin-top:1rem;}
+    .affiliate-card:hover{border-color:var(--water-light);transform:translateY(-1px);}
+    .aff-icon{font-size:2rem;flex-shrink:0;}
+    .aff-text strong{display:block;font-size:.9rem;color:var(--charcoal);}
+    .aff-text span{font-size:.8rem;color:var(--mid);}
+    .aff-badge{margin-left:auto;flex-shrink:0;background:var(--accent-light);color:var(--accent);font-size:.7rem;font-weight:600;padding:.25rem .6rem;border-radius:100px;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;}
+    .related-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .related-list a{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;background:white;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:border-color .2s,transform .2s;}
+    .related-list a:hover{border-color:var(--sage-light);transform:translateX(3px);}
+    .article-section{margin-top:3rem;}
+    .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
+    .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
+    .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--water-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.nav-links{display:none}.form-row{grid-template-columns:1fr}.breakdown-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">Daily<span>Wellness</span>Tools</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <a href="../" class="nav-back">← All tools</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Water Intake Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">💧 Free Tool</span>
+      <h1>Water <em>Intake</em> Calculator</h1>
+      <p>Get your personalized daily water intake recommendation based on your body weight, activity level, and climate.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-form">
+        <div class="form-group">
+          <label>Weight</label>
+          <div class="input-wrap"><input type="number" id="weight" placeholder="70" min="20" max="300"><span class="input-unit">kg</span></div>
+        </div>
+        <div class="form-group">
+          <label>Activity Level</label>
+          <div class="input-wrap">
+            <select id="activity">
+              <option value="0">Sedentary (mostly sitting)</option>
+              <option value="1" selected>Lightly active (some walking)</option>
+              <option value="2">Moderately active (exercise 3–5x/week)</option>
+              <option value="3">Very active (intense exercise daily)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Climate</label>
+          <div class="input-wrap">
+            <select id="climate">
+              <option value="0" selected>Temperate (mild)</option>
+              <option value="1">Warm / humid</option>
+              <option value="2">Hot / tropical</option>
+            </select>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calculate()">Calculate my water intake →</button>
+      </div>
+
+      <div class="result-section" id="result">
+        <div class="water-visual">
+          <div class="water-amount" id="water-liters">—</div>
+          <div class="water-unit-label">liters per day</div>
+          <div class="water-glasses" id="water-glasses-text">—</div>
+        </div>
+        <div class="glass-row" id="glass-row"></div>
+        <div class="breakdown-grid">
+          <div class="breakdown-item"><div class="breakdown-num" id="b-base">—</div><div class="breakdown-label">Base (L)</div></div>
+          <div class="breakdown-item"><div class="breakdown-num" id="b-activity">—</div><div class="breakdown-label">Activity (L)</div></div>
+          <div class="breakdown-item"><div class="breakdown-num" id="b-climate">—</div><div class="breakdown-label">Climate (L)</div></div>
+        </div>
+        <div class="result-tip" id="result-tip"></div>
+        <a href="https://iherb.com/?rcode=YOUR_CODE" class="affiliate-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-icon">🫙</div>
+          <div class="aff-text">
+            <strong>Electrolytes &amp; hydration supplements</strong>
+            <span>Stay hydrated smarter — shop on iHerb</span>
+          </div>
+          <span class="aff-badge">Partner</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <h2>How much water do you really need?</h2>
+      <p>The common advice of "8 glasses a day" is a rough guideline, not a universal prescription. Your actual needs depend on your body size, how active you are, where you live, and other factors like diet and health conditions.</p>
+      <h3>The formula used</h3>
+      <p>This calculator starts with a base of <strong>35 ml per kg of body weight</strong>, then adds estimated losses from physical activity and heat exposure. This approach is consistent with recommendations from the European Food Safety Authority (EFSA).</p>
+      <h3>Tips to stay hydrated</h3>
+      <p>Keep a water bottle visible on your desk. Drink a glass before each meal. Eat water-rich foods like cucumber, watermelon, and soup. Urine color is the best free hydration monitor — pale yellow means you're well-hydrated.</p>
+      <div class="disclaimer"><strong>Individual needs vary.</strong> These figures are estimates. Health conditions, pregnancy, medications, and other factors affect hydration needs.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie Calculator</a></li>
+        <li><a href="sleep-calculator.html">😴 Sleep Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="if-calculator.html">⏱️ Intermittent Fasting</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">DailyWellnessTools</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="../blog/">Blog</a></div>
+    <p class="footer-copy">© 2025 DailyWellnessTools.com · Not medical advice</p>
+  </div>
+</footer>
+
+<script>
+function calculate(){
+  const w=parseFloat(document.getElementById('weight').value);
+  const act=parseInt(document.getElementById('activity').value);
+  const climate=parseInt(document.getElementById('climate').value);
+  if(!w||w<20){alert('Please enter a valid weight.');return;}
+  const base=w*0.035;
+  const actAdd=[0,0.35,0.6,0.9][act];
+  const climateAdd=[0,0.3,0.6][climate];
+  const total=base+actAdd+climateAdd;
+  const glasses=Math.round(total/0.25);
+  document.getElementById('water-liters').textContent=total.toFixed(1);
+  document.getElementById('water-glasses-text').textContent=`≈ ${glasses} glasses of 250 ml`;
+  document.getElementById('b-base').textContent=base.toFixed(1);
+  document.getElementById('b-activity').textContent=(actAdd).toFixed(1);
+  document.getElementById('b-climate').textContent=(climateAdd).toFixed(1);
+  const row=document.getElementById('glass-row');
+  row.innerHTML='';
+  const filled=Math.min(glasses,16);
+  for(let i=0;i<filled;i++){const s=document.createElement('span');s.className='glass-icon';s.textContent='🥛';s.style.animationDelay=(i*0.05)+'s';row.appendChild(s);}
+  if(glasses>16){const m=document.createElement('span');m.style.fontSize='.8rem';m.style.color='var(--light)';m.textContent=`+${glasses-16} more`;row.appendChild(m);}
+  const tips=['<strong>Hydration tip:</strong> Even at a sedentary lifestyle, your body loses water through breathing and basic metabolic processes. Spread your intake throughout the day rather than drinking large amounts at once.',
+  '<strong>Hydration tip:</strong> During exercise, aim to drink 150–250 ml every 20 minutes. After a workout, replenish with at least 500 ml to recover fluid losses.',
+  '<strong>Hot climate tip:</strong> Heat and humidity significantly increase sweat loss. Electrolytes (sodium, potassium) are important alongside water — consider adding a pinch of salt or electrolyte supplement after intense sweating.'];
+  document.getElementById('result-tip').innerHTML=tips[Math.min(act,2)];
+  document.getElementById('result').classList.add('visible');
+  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>
