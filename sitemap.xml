@@ -3,106 +3,106 @@
 
   <!-- Core pages -->
   <url>
-    <loc>https://dailywellnesstools.com/</loc>
+    <loc>https://mywellnesscalc.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/about.html</loc>
+    <loc>https://mywellnesscalc.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/privacy-policy.html</loc>
+    <loc>https://mywellnesscalc.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Tools -->
   <url>
-    <loc>https://dailywellnesstools.com/tools/bmi-calculator.html</loc>
+    <loc>https://mywellnesscalc.com/tools/bmi-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/calorie-calculator.html</loc>
+    <loc>https://mywellnesscalc.com/tools/calorie-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/water-intake.html</loc>
+    <loc>https://mywellnesscalc.com/tools/water-intake.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/sleep-calculator.html</loc>
+    <loc>https://mywellnesscalc.com/tools/sleep-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/if-calculator.html</loc>
+    <loc>https://mywellnesscalc.com/tools/if-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/macro-calculator.html</loc>
+    <loc>https://mywellnesscalc.com/tools/macro-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/body-fat-calculator.html</loc>
+    <loc>https://mywellnesscalc.com/tools/body-fat-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/ideal-weight.html</loc>
+    <loc>https://mywellnesscalc.com/tools/ideal-weight.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/tools/running-pace.html</loc>
+    <loc>https://mywellnesscalc.com/tools/running-pace.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Blog -->
   <url>
-    <loc>https://dailywellnesstools.com/blog/</loc>
+    <loc>https://mywellnesscalc.com/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/blog/intermittent-fasting-beginners.html</loc>
+    <loc>https://mywellnesscalc.com/blog/intermittent-fasting-beginners.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/blog/what-is-a-healthy-bmi.html</loc>
+    <loc>https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/blog/how-much-water-per-day.html</loc>
+    <loc>https://mywellnesscalc.com/blog/how-much-water-per-day.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/blog/sleep-cycles-explained.html</loc>
+    <loc>https://mywellnesscalc.com/blog/sleep-cycles-explained.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/blog/protein-how-much-do-you-need.html</loc>
+    <loc>https://mywellnesscalc.com/blog/protein-how-much-do-you-need.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/blog/tdee-vs-bmr.html</loc>
+    <loc>https://mywellnesscalc.com/blog/tdee-vs-bmr.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dailywellnesstools.com/blog/signs-of-dehydration.html</loc>
+    <loc>https://mywellnesscalc.com/blog/signs-of-dehydration.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

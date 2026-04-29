@@ -1,4 +1,4 @@
-# DailyWellnessTools.com
+# mywellnesscalc.com
 
 Free, science-backed health calculators. Built as a static site for GitHub Pages deployment.
 
@@ -34,7 +34,7 @@ Free, science-backed health calculators. Built as a static site for GitHub Pages
 
 ### 1. Create GitHub Repository
 ```bash
-# Create a new repo named: dailywellnesstools.com (or any name)
+# Create a new repo named: mywellnesscalc.com (or any name)
 # Go to github.com → New repository → Public
 ```
 
@@ -44,7 +44,7 @@ git init
 git add .
 git commit -m "Initial site launch"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/dailywellnesstools.com.git
+git remote add origin https://github.com/YOUR_USERNAME/mywellnesscalc.com.git
 git push -u origin main
 ```
 
@@ -52,11 +52,11 @@ git push -u origin main
 - Go to your repo → Settings → Pages
 - Source: Deploy from a branch
 - Branch: `main` / `root`
-- Save → site will be live at `https://YOUR_USERNAME.github.io/dailywellnesstools.com`
+- Save → site will be live at `https://YOUR_USERNAME.github.io/mywellnesscalc.com`
 
 ### 4. Connect Custom Domain
 - Buy domain (Namecheap / Cloudflare recommended)
-- In GitHub Pages settings: enter `dailywellnesstools.com` as custom domain
+- In GitHub Pages settings: enter `mywellnesscalc.com` as custom domain
 - In your DNS provider, add:
   ```
   Type: A     Name: @    Value: 185.199.108.153
@@ -112,7 +112,7 @@ git push -u origin main
 - [x] Schema markup: Add JSON-LD to tool pages (optional but helpful)
 - [ ] Google Search Console: Submit sitemap after launch
   - https://search.google.com/search-console
-  - Add property → submit `https://dailywellnesstools.com/sitemap.xml`
+  - Add property → submit `https://mywellnesscalc.com/sitemap.xml`
 - [ ] Google Analytics: Add GA4 tracking code to all pages
 
 ### Google Analytics (GA4) — add to every page `<head>`:

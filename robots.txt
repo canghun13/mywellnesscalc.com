@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dailywellnesstools.com/sitemap.xml
+Sitemap: https://mywellnesscalc.com/sitemap.xml
