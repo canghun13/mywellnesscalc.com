@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Much Water Should You Drink Per Day? – My Wellness Calc</title>
+  <meta name="description" content="The '8 glasses a day' rule is outdated. Here's what the science actually says about daily water intake — and how to find your personal target.">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/how-much-water-per-day.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .article-main{}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.15rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul,.article-body ol{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.25rem;}
+    .article-body strong{color:var(--charcoal);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:0;}
+    .urine-chart{display:grid;gap:.5rem;margin:1.5rem 0;}
+    .urine-row{display:flex;align-items:center;gap:1rem;padding:.625rem 1rem;border-radius:8px;font-size:.875rem;}
+    .urine-row .swatch{width:32px;height:32px;border-radius:6px;flex-shrink:0;}
+    .urine-row .label{color:var(--charcoal);font-weight:500;}
+    .urine-row .note{color:var(--mid);font-size:.8rem;}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;transition:opacity .2s;}
+    .cta-link:hover{opacity:.9;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .article-sidebar{}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .toc a:hover{color:var(--sage-dark);}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:color .2s;}
+    .tool-link:last-child{border-bottom:none;padding-bottom:0;}
+    .tool-link:hover{color:var(--sage-dark);}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="./">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › How Much Water Per Day?</div>
+    <span class="article-tag">Hydration</span>
+    <h1>How Much Water Should You Drink Per Day?</h1>
+    <div class="article-meta">
+      <span>📖 5 min read</span>
+      <span>June 2025</span>
+      <span>Reviewed for accuracy</span>
+    </div>
+    <p class="article-intro">You've heard "drink 8 glasses a day" your whole life. It's memorable, but it's not science. Your actual water needs depend on your body size, activity level, climate, and diet — and there's a much better way to figure out your personal target.</p>
+
+    <div class="article-body">
+      <h2 id="the-real-guidelines">What the guidelines actually say</h2>
+      <p>The "8 glasses" rule (about 2 liters) has no strong scientific backing — it was a rough population estimate that turned into folk wisdom. The actual recommendations from health authorities are somewhat higher and more nuanced:</p>
+      <ul>
+        <li><strong>Men:</strong> About 3.7 liters (125 oz) of total water per day</li>
+        <li><strong>Women:</strong> About 2.7 liters (91 oz) of total water per day</li>
+      </ul>
+      <p>Crucially, <em>total water</em> includes water from all sources — beverages and food. About 20% of daily water intake typically comes from food, particularly fruits and vegetables. So for most people, the actual drinking target is somewhat lower than these headline numbers.</p>
+
+      <div class="highlight-box">
+        <h4>💡 The 35 ml/kg rule</h4>
+        <p>A practical formula: multiply your body weight in kg by 35 ml. A 70 kg person would aim for roughly 2,450 ml (about 2.5 liters) from beverages per day as a baseline — before adjusting for exercise or heat.</p>
+      </div>
+
+      <h2 id="factors">What affects how much you need</h2>
+      <p>Daily water needs are highly individual. Key factors include:</p>
+      <ul>
+        <li><strong>Body size:</strong> Larger bodies have greater fluid volume to maintain. Heavier people need more water.</li>
+        <li><strong>Exercise:</strong> You lose roughly 0.5–1 liter of water per hour of moderate exercise through sweat. Intense or prolonged exercise in heat increases this significantly.</li>
+        <li><strong>Climate and temperature:</strong> Hot or humid environments increase sweat loss even at rest. High altitude also increases fluid loss through respiration.</li>
+        <li><strong>Diet:</strong> Eating lots of fruits, vegetables, soups, and other water-rich foods reduces how much you need to drink. A diet heavy in processed, salty, or protein-dense foods increases needs.</li>
+        <li><strong>Health conditions:</strong> Fever, vomiting, diarrhea, and certain medications (like diuretics) all increase fluid needs. Kidney stones increase the need for high fluid intake. Heart failure and some kidney diseases may require fluid restriction.</li>
+        <li><strong>Pregnancy and breastfeeding:</strong> Needs increase — roughly +0.3 liters during pregnancy and +0.7 liters while breastfeeding.</li>
+      </ul>
+
+      <h2 id="urine-color">The simplest real-time indicator: urine color</h2>
+      <p>No formula is more accurate than paying attention to your own body. Urine color is a reliable, free, always-available hydration gauge:</p>
+
+      <div class="urine-chart">
+        <div class="urine-row" style="background:#fffde7;">
+          <div class="swatch" style="background:#fff9c4;border:1px solid #e8e2da;"></div>
+          <div>
+            <div class="label">Very pale yellow</div>
+            <div class="note">Well hydrated — you may even be slightly over-hydrated</div>
+          </div>
+        </div>
+        <div class="urine-row" style="background:#f9f7e8;">
+          <div class="swatch" style="background:#f9f176;border:1px solid #e8e2da;"></div>
+          <div>
+            <div class="label">Light yellow</div>
+            <div class="note">Ideal — this is your target zone</div>
+          </div>
+        </div>
+        <div class="urine-row" style="background:#fef9e7;">
+          <div class="swatch" style="background:#f7c948;border:1px solid #e8e2da;"></div>
+          <div>
+            <div class="label">Dark yellow</div>
+            <div class="note">Mildly dehydrated — drink some water soon</div>
+          </div>
+        </div>
+        <div class="urine-row" style="background:#fdf3e3;">
+          <div class="swatch" style="background:#e8a020;border:1px solid #e8e2da;"></div>
+          <div>
+            <div class="label">Amber or honey</div>
+            <div class="note">Dehydrated — drink water now</div>
+          </div>
+        </div>
+        <div class="urine-row" style="background:#fdf0e0;">
+          <div class="swatch" style="background:#c0601a;border:1px solid #e8e2da;"></div>
+          <div>
+            <div class="label">Brown or dark orange</div>
+            <div class="note">Severely dehydrated or potential medical issue — seek help</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Note: B vitamins (especially B2/riboflavin) can turn urine bright yellow regardless of hydration. Beets can turn it pink or red. These are harmless.</p>
+
+      <h2 id="myths">Common hydration myths</h2>
+      <ul>
+        <li><strong>"Coffee dehydrates you."</strong> Mild diuretic effect, yes — but the fluid in coffee still contributes net positive hydration for regular drinkers. Coffee counts toward your daily total.</li>
+        <li><strong>"You should drink before you're thirsty."</strong> For healthy adults in normal conditions, thirst is a reliable signal. You don't need to preemptively chug water all day. The exception: athletes exercising in heat, where thirst may lag behind actual losses.</li>
+        <li><strong>"More water means better skin."</strong> There's little evidence that drinking extra water beyond adequate hydration improves skin appearance in healthy people.</li>
+        <li><strong>"You need electrolyte drinks for everyday hydration."</strong> Unless you're sweating heavily for extended periods, plain water is perfectly fine. Sports drinks are largely unnecessary for regular activity.</li>
+      </ul>
+
+      <h2 id="tips">Practical tips to hit your target</h2>
+      <ol>
+        <li><strong>Start the morning with water.</strong> A glass of water when you wake up is an easy habit that offsets overnight fluid loss.</li>
+        <li><strong>Keep a water bottle visible.</strong> Out of sight, out of mind. A bottle on your desk is a constant reminder.</li>
+        <li><strong>Eat water-rich foods.</strong> Cucumber, watermelon, strawberries, celery, and lettuce are all over 90% water by weight.</li>
+        <li><strong>Drink before and after exercise</strong> — and during if it lasts more than 45–60 minutes.</li>
+        <li><strong>Check your urine in the morning.</strong> Dark first-morning urine is normal. After that, aim for light yellow throughout the day.</li>
+      </ol>
+
+      <div class="cta-box">
+        <p>Want a personalized daily water target based on your weight, activity, and climate? Try our free Water Intake Calculator.</p>
+        <a href="../tools/water-intake.html" class="cta-link">Calculate my target →</a>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. People with kidney disease, heart failure, or other conditions affecting fluid balance should follow the guidance of their healthcare provider.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#the-real-guidelines">What the guidelines say</a></li>
+        <li><a href="#factors">What affects your needs</a></li>
+        <li><a href="#urine-color">Urine color guide</a></li>
+        <li><a href="#myths">Hydration myths</a></li>
+        <li><a href="#tips">Practical tips</a></li>
+      </ol>
+    </div>
+
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+
+    <div class="related-tools">
+      <h4>Helpful tools</h4>
+      <a href="../tools/water-intake.html" class="tool-link">💧 Water Intake Calculator</a>
+      <a href="../tools/calorie-calculator.html" class="tool-link">🔥 Calorie Calculator</a>
+      <a href="../tools/bmi-calculator.html" class="tool-link">⚖️ BMI Calculator</a>
+      <a href="../tools/macro-calculator.html" class="tool-link">🥗 Macro Calculator</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="./">Blog</a></div>
+    <p class="footer-copy">© 2025 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
+</body>
+</html>

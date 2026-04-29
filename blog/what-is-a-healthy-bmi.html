@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is a Healthy BMI? Understanding Your Number – My Wellness Calc</title>
+  <meta name="description" content="What does your BMI actually mean? Learn what a healthy BMI range is, what the number tells you (and doesn't), and how to use it wisely.">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .article-main{}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.15rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul,.article-body ol{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.25rem;}
+    .article-body strong{color:var(--charcoal);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:0;}
+    .bmi-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .bmi-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
+    .bmi-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .bmi-table tr:last-child td{border-bottom:none;}
+    .bmi-table tr:nth-child(even) td{background:var(--cream);}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;transition:opacity .2s;}
+    .cta-link:hover{opacity:.9;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .article-sidebar{}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .toc a:hover{color:var(--sage-dark);}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:color .2s;}
+    .tool-link:last-child{border-bottom:none;padding-bottom:0;}
+    .tool-link:hover{color:var(--sage-dark);}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="./">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › What Is a Healthy BMI?</div>
+    <span class="article-tag">Body Composition</span>
+    <h1>What Is a Healthy BMI? Understanding Your Number</h1>
+    <div class="article-meta">
+      <span>📖 6 min read</span>
+      <span>June 2025</span>
+      <span>Reviewed for accuracy</span>
+    </div>
+    <p class="article-intro">BMI is one of the most widely used health metrics in the world — and one of the most misunderstood. Your number alone doesn't tell the full story, but knowing what it means and how to interpret it is a genuinely useful starting point.</p>
+
+    <div class="article-body">
+      <h2 id="what-is-bmi">What is BMI?</h2>
+      <p>Body Mass Index (BMI) is a simple calculation that uses your height and weight to estimate whether you're in a healthy weight range. The formula is:</p>
+      <p><strong>BMI = weight (kg) ÷ height (m)²</strong></p>
+      <p>For example, someone who weighs 70 kg and is 1.75 m tall has a BMI of 70 ÷ (1.75 × 1.75) = 22.9.</p>
+      <p>It was originally developed in the 19th century by Belgian statistician Adolphe Quetelet — not as a clinical tool, but as a population-level statistical measure. It was later adopted by health organizations because it's cheap, quick, and requires no equipment.</p>
+
+      <h2 id="bmi-ranges">BMI ranges: what the numbers mean</h2>
+      <p>The World Health Organization defines the following categories for adults:</p>
+      <table class="bmi-table">
+        <thead>
+          <tr><th>BMI Range</th><th>Category</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Below 18.5</td><td>Underweight</td></tr>
+          <tr><td>18.5 – 24.9</td><td>Normal weight</td></tr>
+          <tr><td>25.0 – 29.9</td><td>Overweight</td></tr>
+          <tr><td>30.0 – 34.9</td><td>Obese (Class I)</td></tr>
+          <tr><td>35.0 – 39.9</td><td>Obese (Class II)</td></tr>
+          <tr><td>40.0 and above</td><td>Obese (Class III)</td></tr>
+        </tbody>
+      </table>
+      <p>So a "healthy BMI" is generally considered to be between <strong>18.5 and 24.9</strong>. This range is associated with lower risk of weight-related health conditions like type 2 diabetes, cardiovascular disease, and hypertension.</p>
+
+      <div class="highlight-box">
+        <h4>📏 Note on ethnicity</h4>
+        <p>Some health organizations use adjusted BMI thresholds for people of Asian descent — a BMI of 23 or above may indicate increased health risk, rather than the standard 25 cutoff. If you're of Asian heritage, speak with your doctor about the appropriate range for you.</p>
+      </div>
+
+      <h2 id="what-bmi-misses">What BMI doesn't tell you</h2>
+      <p>Here's the honest limitation of BMI: it measures weight relative to height, but it cannot distinguish between fat and muscle. This creates real blind spots:</p>
+      <ul>
+        <li><strong>Muscular athletes</strong> often have a BMI in the "overweight" or even "obese" range despite having very low body fat.</li>
+        <li><strong>Older adults</strong> may have a "normal" BMI while carrying a high proportion of body fat due to age-related muscle loss (sarcopenia).</li>
+        <li><strong>Fat distribution matters.</strong> Visceral fat (fat around the organs) is more metabolically harmful than subcutaneous fat, but BMI doesn't capture where fat is stored. Waist circumference is often more predictive of metabolic risk.</li>
+        <li><strong>BMI doesn't account for sex.</strong> Women naturally carry more body fat than men at the same BMI, yet the same thresholds apply to both.</li>
+      </ul>
+      <p>None of this means BMI is useless — it just means it's a screening tool, not a diagnosis. A high BMI is a signal worth investigating further, not a verdict on your health.</p>
+
+      <h2 id="better-measures">What to use alongside BMI</h2>
+      <p>If you want a more complete picture of your health, these metrics complement BMI well:</p>
+      <ul>
+        <li><strong>Waist circumference:</strong> A waist over 88 cm (35 in) for women or 102 cm (40 in) for men is associated with increased metabolic risk, regardless of BMI.</li>
+        <li><strong>Waist-to-height ratio:</strong> A ratio under 0.5 is generally considered healthy. Simply divide your waist circumference by your height — both in the same unit.</li>
+        <li><strong>Body fat percentage:</strong> More direct than BMI. Healthy ranges are roughly 21–33% for women and 8–20% for men (varies by age).</li>
+        <li><strong>Blood markers:</strong> Fasting glucose, HbA1c, lipid panels, and blood pressure give a far more clinically meaningful picture than any single body measurement.</li>
+      </ul>
+
+      <h2 id="bmi-for-children">BMI for children and teens</h2>
+      <p>Standard BMI categories don't apply to people under 18. For children and adolescents, BMI is plotted on age- and sex-specific growth charts, and expressed as a percentile rather than an absolute number. This accounts for the fact that healthy weight ranges change significantly during development.</p>
+      <ul>
+        <li>Below 5th percentile: Underweight</li>
+        <li>5th to 85th percentile: Healthy weight</li>
+        <li>85th to 95th percentile: Overweight</li>
+        <li>95th percentile and above: Obese</li>
+      </ul>
+
+      <div class="cta-box">
+        <p>Want to calculate your BMI right now? Use our free BMI calculator — it also shows your healthy weight range for your height.</p>
+        <a href="../tools/bmi-calculator.html" class="cta-link">Calculate my BMI →</a>
+      </div>
+
+      <h2 id="takeaway">The bottom line</h2>
+      <p>A healthy BMI is between 18.5 and 24.9 for most adults. If your BMI falls outside this range, it's worth paying attention to — but it's not the only thing that matters. Body composition, where you carry fat, your fitness level, and your blood markers all tell a fuller story than a single number can.</p>
+      <p>Use BMI as a starting point, not a final answer.</p>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Consult a qualified healthcare professional for personalized health guidance.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#what-is-bmi">What is BMI?</a></li>
+        <li><a href="#bmi-ranges">BMI ranges</a></li>
+        <li><a href="#what-bmi-misses">What BMI doesn't tell you</a></li>
+        <li><a href="#better-measures">What to use alongside BMI</a></li>
+        <li><a href="#bmi-for-children">BMI for children</a></li>
+        <li><a href="#takeaway">The bottom line</a></li>
+      </ol>
+    </div>
+
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+
+    <div class="related-tools">
+      <h4>Helpful tools</h4>
+      <a href="../tools/bmi-calculator.html" class="tool-link">⚖️ BMI Calculator</a>
+      <a href="../tools/ideal-weight.html" class="tool-link">🎯 Ideal Weight</a>
+      <a href="../tools/body-fat-calculator.html" class="tool-link">📊 Body Fat Calculator</a>
+      <a href="../tools/calorie-calculator.html" class="tool-link">🔥 Calorie Calculator</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="./">Blog</a></div>
+    <p class="footer-copy">© 2025 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
+</body>
+</html>

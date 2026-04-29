@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Much Protein Do You Actually Need Per Day? – My Wellness Calc</title>
+  <meta name="description" content="The RDA for protein is a minimum, not a target. Learn how much protein you actually need based on your goals, body weight, and activity level.">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/protein-how-much-do-you-need.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    :root{--sage:#7a9e7e;--sage-light:#a8c5ac;--sage-dark:#4a6b4e;--cream:#f7f3ee;--warm-white:#fdfaf6;--charcoal:#2a2a2a;--mid:#5a5a5a;--light:#9a9a9a;--border:#e8e2da;--accent:#d4845a;--accent-light:#f0c5a8;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--charcoal);line-height:1.6;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(253,250,246,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);text-decoration:none;}
+    .logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s;}
+    .nav-links a:hover{color:var(--sage-dark);}
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.15rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul,.article-body ol{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.25rem;}
+    .article-body strong{color:var(--charcoal);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:0;}
+    .protein-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .protein-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
+    .protein-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .protein-table tr:last-child td{border-bottom:none;}
+    .protein-table tr:nth-child(even) td{background:var(--cream);}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;transition:opacity .2s;}
+    .cta-link:hover{opacity:.9;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .toc a:hover{color:var(--sage-dark);}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:color .2s;}
+    .tool-link:last-child{border-bottom:none;padding-bottom:0;}
+    .tool-link:hover{color:var(--sage-dark);}
+    footer{background:var(--charcoal);color:rgba(255,255,255,.6);padding:2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;color:white;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;transition:color .2s;}
+    .footer-links a:hover{color:white;}
+    .footer-copy{font-size:.8rem;}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+  <ul class="nav-links">
+    <li><a href="../#tools">Calculators</a></li>
+    <li><a href="./">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › How Much Protein Do You Need?</div>
+    <span class="article-tag">Nutrition</span>
+    <h1>How Much Protein Do You Actually Need Per Day?</h1>
+    <div class="article-meta">
+      <span>📖 6 min read</span>
+      <span>June 2025</span>
+      <span>Reviewed for accuracy</span>
+    </div>
+    <p class="article-intro">The official RDA for protein is 0.8 g per kg of body weight. But that number is designed to prevent deficiency — not to support muscle, healthy aging, or active living. If you have any real health or fitness goal, you almost certainly need more.</p>
+
+    <div class="article-body">
+      <h2 id="rda-vs-optimal">The RDA vs. your actual needs</h2>
+      <p>The Recommended Dietary Allowance (RDA) for protein — 0.8 g per kg of body weight — represents the <em>minimum</em> needed to avoid a deficiency in a sedentary adult. For a 70 kg person, that's just 56 g of protein per day.</p>
+      <p>This is not a target. It's a floor. For anyone who exercises, is trying to lose weight, is over 50, or simply wants to maintain muscle mass over time, the research consistently points to higher intakes being optimal.</p>
+
+      <div class="highlight-box">
+        <h4>📊 Quick reference by goal</h4>
+        <p>Sedentary adult (maintenance): 0.8–1.0 g/kg · Active adults: 1.2–1.6 g/kg · Muscle building: 1.6–2.2 g/kg · Weight loss (muscle preservation): 1.8–2.4 g/kg · Older adults (50+): 1.2–1.6 g/kg</p>
+      </div>
+
+      <h2 id="by-goal">Protein needs by goal</h2>
+
+      <h3>For general health and maintenance</h3>
+      <p>If you're lightly active and not pursuing specific body composition goals, 1.0–1.2 g per kg of body weight is a reasonable target — modestly above the RDA and sufficient to support basic muscle maintenance, immune function, and satiety.</p>
+
+      <h3>For fat loss</h3>
+      <p>During a calorie deficit, higher protein is particularly important. Muscle tissue is metabolically costly to maintain, and the body can break it down for energy when calories are restricted. Research consistently shows that intakes of <strong>1.8–2.4 g/kg</strong> help preserve lean mass during weight loss while also increasing satiety — meaning you feel fuller on fewer calories.</p>
+
+      <h3>For muscle building</h3>
+      <p>The research on muscle protein synthesis suggests a range of <strong>1.6–2.2 g/kg</strong> is sufficient for most people engaged in resistance training. Going above 2.2 g/kg provides diminishing returns for muscle gain specifically, though it's generally safe and may help during aggressive cuts.</p>
+
+      <h3>For older adults (50+)</h3>
+      <p>Age-related muscle loss (sarcopenia) begins in your 30s and accelerates after 60. Older adults also experience "anabolic resistance" — the body responds less efficiently to protein, meaning you need more of it to achieve the same muscle protein synthesis as a younger person. Most sports nutrition researchers recommend <strong>1.2–1.6 g/kg</strong> for older adults, with some going as high as 2.0 g/kg for those over 70.</p>
+
+      <h2 id="reference-table">Protein targets by body weight</h2>
+      <table class="protein-table">
+        <thead>
+          <tr><th>Body Weight</th><th>Sedentary (0.8 g/kg)</th><th>Active (1.4 g/kg)</th><th>Muscle Building (2.0 g/kg)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>55 kg (121 lb)</td><td>44 g</td><td>77 g</td><td>110 g</td></tr>
+          <tr><td>65 kg (143 lb)</td><td>52 g</td><td>91 g</td><td>130 g</td></tr>
+          <tr><td>75 kg (165 lb)</td><td>60 g</td><td>105 g</td><td>150 g</td></tr>
+          <tr><td>85 kg (187 lb)</td><td>68 g</td><td>119 g</td><td>170 g</td></tr>
+          <tr><td>100 kg (220 lb)</td><td>80 g</td><td>140 g</td><td>200 g</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="distribution">Does meal timing and distribution matter?</h2>
+      <p>Yes — to a degree. The body can only use roughly <strong>20–40 g of protein per meal</strong> for muscle protein synthesis (the upper limit varies by body size and training status). Consuming 150 g of protein in a single meal doesn't provide 3× the benefit of 50 g.</p>
+      <p>Research supports spreading protein intake across 3–4 meals, with each meal containing a meaningful dose (roughly 20–40 g). This pattern maximizes muscle protein synthesis throughout the day, which matters more for older adults and those building muscle than for the average person.</p>
+
+      <h2 id="sources">Best protein sources</h2>
+      <ul>
+        <li><strong>Animal sources (complete proteins):</strong> Chicken breast (~31 g/100 g), canned tuna (~25 g/100 g), eggs (~6 g/egg), Greek yogurt (~10 g/100 g), cottage cheese (~11 g/100 g), salmon (~25 g/100 g)</li>
+        <li><strong>Plant sources:</strong> Lentils (~9 g/100 g cooked), edamame (~11 g/100 g), tofu (~8 g/100 g), tempeh (~19 g/100 g), chickpeas (~9 g/100 g cooked)</li>
+        <li><strong>Plant protein note:</strong> Most plant proteins are "incomplete" — they lack one or more essential amino acids. Eating a variety of plant protein sources across the day addresses this effectively. Leucine content (key for muscle protein synthesis) is generally lower in plant proteins, which may mean slightly higher total intakes are optimal for plant-based eaters.</li>
+      </ul>
+
+      <h2 id="too-much">Can you eat too much protein?</h2>
+      <p>For healthy adults, high protein intakes (up to 3.0 g/kg and beyond) appear safe in multiple studies. The concern about protein "damaging kidneys" applies to people with pre-existing kidney disease, not healthy individuals. Extra protein that exceeds what the body uses is simply converted to energy or excreted.</p>
+      <p>The main practical downside of very high protein intake is displacement — if protein takes up a large share of your calories, there may be less room for carbohydrates and fats that also serve important functions.</p>
+
+      <div class="cta-box">
+        <p>Want to see your exact daily protein, carb, and fat targets? Our Macro Calculator breaks it all down based on your goals.</p>
+        <a href="../tools/macro-calculator.html" class="cta-link">Calculate my macros →</a>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. People with kidney disease or other medical conditions should follow the guidance of their healthcare provider regarding protein intake.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#rda-vs-optimal">RDA vs. optimal needs</a></li>
+        <li><a href="#by-goal">Needs by goal</a></li>
+        <li><a href="#reference-table">Targets by body weight</a></li>
+        <li><a href="#distribution">Meal timing</a></li>
+        <li><a href="#sources">Best protein sources</a></li>
+        <li><a href="#too-much">Can you eat too much?</a></li>
+      </ol>
+    </div>
+
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+
+    <div class="related-tools">
+      <h4>Helpful tools</h4>
+      <a href="../tools/macro-calculator.html" class="tool-link">🥗 Macro Calculator</a>
+      <a href="../tools/calorie-calculator.html" class="tool-link">🔥 Calorie Calculator</a>
+      <a href="../tools/bmi-calculator.html" class="tool-link">⚖️ BMI Calculator</a>
+      <a href="../tools/ideal-weight.html" class="tool-link">🎯 Ideal Weight</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links"><a href="../about.html">About</a><a href="../privacy-policy.html">Privacy</a><a href="./">Blog</a></div>
+    <p class="footer-copy">© 2025 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
+</body>
+</html>
