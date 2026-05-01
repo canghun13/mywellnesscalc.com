@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitamin D Calculator – Daily Intake & Deficiency Risk | My Wellness Calc</title>
+  <meta name="description" content="Free Vitamin D calculator. Find out how much Vitamin D you need daily based on your age, sun exposure, skin tone, and lifestyle. Instant results.">
+  <meta property="og:title" content="Vitamin D Calculator – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/vitamin-d-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group select,.form-group input{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group select:focus,.form-group input:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;background:var(--cream);border-radius:16px;padding:1.75rem;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .result-main{text-align:center;margin-bottom:1.5rem;}
+    .result-iu{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:var(--sage-dark);line-height:1;}
+    .result-unit{font-size:1rem;color:var(--mid);margin-top:.25rem;}
+    .result-label{font-size:.85rem;color:var(--mid);margin-top:.5rem;}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;}
+    .result-item{background:white;border-radius:12px;padding:1rem;text-align:center;}
+    .result-item-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;color:var(--charcoal);}
+    .result-item-label{font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .risk-badge{display:inline-block;padding:.35rem 1rem;border-radius:100px;font-size:.8rem;font-weight:600;margin-top:.75rem;}
+    .risk-low{background:#d4edda;color:#155724;}
+    .risk-medium{background:#fff3cd;color:#856404;}
+    .risk-high{background:#f8d7da;color:#721c24;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Vitamin D Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">☀️ Free Tool</span>
+      <h1>Vitamin D <em>Calculator</em></h1>
+      <p>Find out how much Vitamin D you need daily based on your age, sun exposure, skin tone, and where you live.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" id="age" placeholder="e.g. 35" min="1" max="100">
+        </div>
+        <div class="form-group">
+          <label>Sex</label>
+          <select id="sex">
+            <option value="any">Prefer not to say</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Skin tone</label>
+        <select id="skin">
+          <option value="light">Light (burns easily)</option>
+          <option value="medium" selected>Medium (sometimes burns)</option>
+          <option value="dark">Dark (rarely burns)</option>
+          <option value="very-dark">Very dark</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Daily sun exposure</label>
+        <select id="sun">
+          <option value="none">None (indoors all day)</option>
+          <option value="low">Low (< 15 min/day)</option>
+          <option value="moderate" selected>Moderate (15–30 min/day)</option>
+          <option value="high">High (30–60 min/day)</option>
+          <option value="very-high">Very high (outdoor worker)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Where do you live?</label>
+        <select id="latitude">
+          <option value="tropical">Tropical / near equator</option>
+          <option value="subtropical">Subtropical (e.g. Florida, Spain)</option>
+          <option value="temperate" selected>Temperate (e.g. UK, Germany, most of US)</option>
+          <option value="northern">Northern (e.g. Canada, Scandinavia)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Are you pregnant or breastfeeding?</label>
+        <select id="pregnant">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Do you have any of the following?</label>
+        <select id="condition">
+          <option value="none">None</option>
+          <option value="obese">Obesity (BMI > 30)</option>
+          <option value="malabsorption">Malabsorption condition (Crohn's, celiac)</option>
+          <option value="dark-indoor">Dark skin + limited sun</option>
+        </select>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate my Vitamin D needs →</button>
+
+      <div class="result-box" id="result">
+        <div class="result-main">
+          <div class="result-iu" id="res-iu">—</div>
+          <div class="result-unit">IU per day</div>
+          <div class="result-label" id="res-ug">— μg per day</div>
+          <div id="res-risk"></div>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="result-item-val" id="res-rda">—</div>
+            <div class="result-item-label">Official RDA (IU)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-val" id="res-ul">4,000</div>
+            <div class="result-item-label">Safe upper limit (IU)</div>
+          </div>
+        </div>
+        <p style="font-size:.8rem;color:var(--mid);margin-top:1rem;text-align:center;" id="res-note"></p>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>What is Vitamin D and why does it matter?</h2>
+      <p>Vitamin D is a fat-soluble vitamin that your body produces when skin is exposed to UVB sunlight. It plays a critical role in calcium absorption, bone health, immune function, and muscle strength. Unlike most vitamins, you can get a significant portion of your needs from sun exposure alone — but most people in modern life don't get enough.</p>
+      <p>Vitamin D deficiency is one of the most common nutritional deficiencies worldwide, affecting an estimated 1 billion people. Risk is highest in people who spend most of their time indoors, live at high latitudes, or have darker skin tones that require more sun exposure to synthesize adequate amounts.</p>
+
+      <h3>Recommended daily intake by age group</h3>
+      <table class="info-table">
+        <thead><tr><th>Age group</th><th>RDA (IU)</th><th>RDA (μg)</th><th>Upper limit</th></tr></thead>
+        <tbody>
+          <tr><td>Infants 0–12 months</td><td>400 IU</td><td>10 μg</td><td>1,000 IU</td></tr>
+          <tr><td>Children 1–13 years</td><td>600 IU</td><td>15 μg</td><td>2,500–3,000 IU</td></tr>
+          <tr><td>Teens 14–18 years</td><td>600 IU</td><td>15 μg</td><td>4,000 IU</td></tr>
+          <tr><td>Adults 19–70 years</td><td>600 IU</td><td>15 μg</td><td>4,000 IU</td></tr>
+          <tr><td>Adults 71+ years</td><td>800 IU</td><td>20 μg</td><td>4,000 IU</td></tr>
+          <tr><td>Pregnant / breastfeeding</td><td>600 IU</td><td>15 μg</td><td>4,000 IU</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Signs of Vitamin D deficiency</h3>
+      <ul>
+        <li>Fatigue and low energy that doesn't improve with rest</li>
+        <li>Frequent infections or getting sick often</li>
+        <li>Bone pain or lower back pain</li>
+        <li>Muscle weakness or aches</li>
+        <li>Low mood or depression, especially in winter</li>
+        <li>Slow wound healing</li>
+        <li>Hair loss (in severe cases)</li>
+      </ul>
+      <p>The only way to confirm deficiency is a blood test measuring 25-hydroxyvitamin D (25(OH)D). Levels below 20 ng/mL are generally considered deficient; 20–29 ng/mL is insufficient; 30–100 ng/mL is sufficient for most people.</p>
+
+      <h3>Best food sources of Vitamin D</h3>
+      <ul>
+        <li><strong>Fatty fish:</strong> Salmon (~570 IU/100g), mackerel (~360 IU/100g), sardines (~270 IU/100g)</li>
+        <li><strong>Fortified foods:</strong> Milk (~120 IU/cup), orange juice (~140 IU/cup), cereal (~40–100 IU/serving)</li>
+        <li><strong>Egg yolks:</strong> ~40 IU per egg</li>
+        <li><strong>Beef liver:</strong> ~50 IU/100g</li>
+        <li><strong>UV-exposed mushrooms:</strong> Variable, can be high if sun-dried</li>
+      </ul>
+      <p>Food alone is rarely sufficient to meet Vitamin D needs. Supplementation is often recommended for people with limited sun exposure, especially in winter months above 35° latitude.</p>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> This calculator provides general guidance based on population-level recommendations. Blood testing is the only way to accurately assess your Vitamin D status. Consult a healthcare professional before starting supplementation.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="body-fat-calculator.html">📏 Body Fat % Estimator</a></li>
+        <li><a href="water-intake.html">💧 Water Intake Calculator</a></li>
+      </ul>
+    </div>
+    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+function calculate() {
+  const age = parseInt(document.getElementById('age').value);
+  const skin = document.getElementById('skin').value;
+  const sun = document.getElementById('sun').value;
+  const lat = document.getElementById('latitude').value;
+  const pregnant = document.getElementById('pregnant').value;
+  const condition = document.getElementById('condition').value;
+
+  if (!age || age < 1 || age > 120) {
+    alert('Please enter a valid age.');
+    return;
+  }
+
+  // Base RDA
+  let rda = 600;
+  if (age > 70) rda = 800;
+  if (age < 1) rda = 400;
+
+  // Start from RDA, adjust up for risk factors
+  let recommended = rda;
+
+  // Sun exposure reduction
+  const sunFactor = {none: 1.5, low: 1.3, moderate: 1.0, high: 0.8, 'very-high': 0.6};
+  recommended *= sunFactor[sun];
+
+  // Skin tone (darker = less synthesis)
+  if (skin === 'dark') recommended *= 1.15;
+  if (skin === 'very-dark') recommended *= 1.3;
+
+  // Latitude (less UVB at higher latitudes)
+  if (lat === 'northern') recommended *= 1.3;
+  else if (lat === 'temperate') recommended *= 1.1;
+
+  // Conditions
+  if (condition === 'obese') recommended *= 1.5;
+  if (condition === 'malabsorption') recommended *= 1.5;
+  if (condition === 'dark-indoor') recommended *= 1.6;
+
+  // Pregnant
+  if (pregnant === 'yes') recommended = Math.max(recommended, 800);
+
+  // Cap at safe upper limit
+  recommended = Math.min(Math.round(recommended / 50) * 50, 4000);
+  recommended = Math.max(recommended, rda);
+
+  // Risk level
+  let risk, riskClass, note;
+  if (sun === 'none' || sun === 'low' || lat === 'northern' || condition !== 'none' || skin === 'very-dark') {
+    risk = 'Higher deficiency risk'; riskClass = 'risk-high';
+    note = 'Based on your profile, you have multiple risk factors for Vitamin D deficiency. Consider getting your levels tested and discuss supplementation with your doctor.';
+  } else if (sun === 'moderate' || lat === 'temperate' || skin === 'dark') {
+    risk = 'Moderate deficiency risk'; riskClass = 'risk-medium';
+    note = 'Your sun exposure and lifestyle suggest moderate risk. A daily supplement of 1,000–2,000 IU is a reasonable precaution, especially in winter.';
+  } else {
+    risk = 'Lower deficiency risk'; riskClass = 'risk-low';
+    note = 'Your sun exposure appears sufficient. Focus on maintaining consistent outdoor time and a varied diet. Monitor in winter months.';
+  }
+
+  document.getElementById('res-iu').textContent = recommended.toLocaleString();
+  document.getElementById('res-ug').textContent = (recommended / 40).toFixed(0) + ' μg per day';
+  document.getElementById('res-rda').textContent = rda.toLocaleString();
+  document.getElementById('res-risk').innerHTML = `<span class="risk-badge ${riskClass}">${risk}</span>`;
+  document.getElementById('res-note').textContent = note;
+
+  const box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
