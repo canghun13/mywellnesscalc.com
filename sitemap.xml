@@ -1,110 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core pages -->
-  <url>
-    <loc>https://mywellnesscalc.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/privacy-policy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <!-- Root pages -->
+  <url><loc>https://mywellnesscalc.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mywellnesscalc.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mywellnesscalc.com/privacy-policy.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 
   <!-- Tools -->
-  <url>
-    <loc>https://mywellnesscalc.com/tools/bmi-calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/calorie-calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/water-intake.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/sleep-calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/if-calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/macro-calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/body-fat-calculator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/ideal-weight.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/tools/running-pace.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://mywellnesscalc.com/tools/bmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/calorie-calculator.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/water-intake.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/sleep-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/if-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/macro-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/body-fat-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/ideal-weight.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/running-pace.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/vitamin-d-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/protein-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/one-rep-max.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/heart-rate-zone.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Blog -->
-  <url>
-    <loc>https://mywellnesscalc.com/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/blog/intermittent-fasting-beginners.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/blog/how-much-water-per-day.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/blog/sleep-cycles-explained.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/blog/protein-how-much-do-you-need.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/blog/tdee-vs-bmr.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mywellnesscalc.com/blog/signs-of-dehydration.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- Blog index -->
+  <url><loc>https://mywellnesscalc.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://mywellnesscalc.com/blog/intermittent-fasting-beginners.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-much-water-per-day.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/sleep-cycles-explained.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/protein-how-much-do-you-need.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/tdee-vs-bmr.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/signs-of-dehydration.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/calorie-deficit-for-weight-loss.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/healthy-body-fat-percentage.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/calories-burned-walking.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/vitamin-d-deficiency.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/build-muscle-after-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/10000-steps-a-day.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/weight-loss-plateau.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/creatine-do-you-need-it.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
