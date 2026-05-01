@@ -1,11 +1,59 @@
 <nav>
   <a href="{{BASE}}" class="logo">My<span>Wellness</span>Calc</a>
+
   <ul class="nav-links" id="nav-links">
-    <li><a href="{{BASE}}#tools">Calculators</a></li>
+    <li class="nav-has-dropdown">
+      <button onclick="toggleDropdown(this)">Calculators</button>
+      <div class="nav-dropdown">
+        <div class="nav-dropdown-section">
+          <div class="nav-dropdown-label">Body & Weight</div>
+          <a href="{{BASE}}tools/bmi-calculator.html">⚖️ BMI Calculator</a>
+          <a href="{{BASE}}tools/body-fat-calculator.html">📏 Body Fat % Estimator</a>
+          <a href="{{BASE}}tools/ideal-weight.html">🎯 Ideal Body Weight</a>
+        </div>
+        <div class="nav-dropdown-section">
+          <div class="nav-dropdown-label">Nutrition</div>
+          <a href="{{BASE}}tools/calorie-calculator.html">🔥 Calorie & TDEE</a>
+          <a href="{{BASE}}tools/macro-calculator.html">🥗 Macro Calculator</a>
+          <a href="{{BASE}}tools/protein-calculator.html">🥩 Protein Calculator</a>
+          <a href="{{BASE}}tools/vitamin-d-calculator.html">☀️ Vitamin D Calculator</a>
+        </div>
+        <div class="nav-dropdown-section">
+          <div class="nav-dropdown-label">Fitness</div>
+          <a href="{{BASE}}tools/one-rep-max.html">🏋️ One Rep Max</a>
+          <a href="{{BASE}}tools/heart-rate-zone.html">❤️ Heart Rate Zones</a>
+          <a href="{{BASE}}tools/running-pace.html">🏃 Running Pace</a>
+        </div>
+        <div class="nav-dropdown-section">
+          <div class="nav-dropdown-label">Lifestyle</div>
+          <a href="{{BASE}}tools/water-intake.html">💧 Water Intake</a>
+          <a href="{{BASE}}tools/sleep-calculator.html">😴 Sleep Calculator</a>
+          <a href="{{BASE}}tools/if-calculator.html">⏱️ Fasting Planner</a>
+        </div>
+      </div>
+    </li>
     <li><a href="{{BASE}}blog/">Blog</a></li>
     <li><a href="{{BASE}}about.html">About</a></li>
   </ul>
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="document.getElementById('nav-links').classList.toggle('open');this.classList.toggle('open');">
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"
+    onclick="document.getElementById('nav-links').classList.toggle('open');this.classList.toggle('open');">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<script>
+function toggleDropdown(btn) {
+  var li = btn.parentElement;
+  var isOpen = li.classList.contains('open');
+  // close all
+  document.querySelectorAll('.nav-has-dropdown').forEach(function(el){ el.classList.remove('open'); });
+  if (!isOpen) li.classList.add('open');
+}
+// close on outside click
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-has-dropdown')) {
+    document.querySelectorAll('.nav-has-dropdown').forEach(function(el){ el.classList.remove('open'); });
+  }
+});
+</script>
