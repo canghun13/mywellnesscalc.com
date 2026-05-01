@@ -1,8 +1,11 @@
 <nav>
   <a href="{{BASE}}" class="logo">My<span>Wellness</span>Calc</a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="{{BASE}}#tools">Calculators</a></li>
     <li><a href="{{BASE}}blog/">Blog</a></li>
     <li><a href="{{BASE}}about.html">About</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="document.getElementById('nav-links').classList.toggle('open');this.classList.toggle('open');">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
