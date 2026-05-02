@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Much Sleep Do You Actually Need? – My Wellness Calc</title>
+  <meta name="description" content="Is 8 hours of sleep really necessary? Here's what the research says about optimal sleep duration by age, sleep debt, and how to tell if you're getting enough.">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/how-much-sleep-do-you-need.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <style>
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.15rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.25rem;}
+    .article-body strong{color:var(--charcoal);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
+    .highlight-box p{margin-bottom:0;}
+    .data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
+    .data-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table tr:nth-child(even) td{background:var(--cream);}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .toc a:hover{color:var(--sage-dark);}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:color .2s;}
+    .tool-link:last-child{border-bottom:none;padding-bottom:0;}
+    .tool-link:hover{color:var(--sage-dark);}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › How Much Sleep Do You Need?</div>
+    <span class="article-tag">Sleep</span>
+    <h1>How Much Sleep Do You Actually Need?</h1>
+    <div class="article-meta"><span>📖 6 min read</span><span>May 2025</span><span>Reviewed for accuracy</span></div>
+    <p class="article-intro">The "8 hours" rule is so ingrained that most people accept it without question. But sleep needs vary significantly by age, genetics, and individual biology — and getting too much sleep carries its own risks.</p>
+
+    <div class="article-body">
+      <h2 id="recommendations">Recommended sleep by age</h2>
+      <p>The National Sleep Foundation and the American Academy of Sleep Medicine publish consensus recommendations based on large-scale research. Sleep needs decrease significantly from infancy through adulthood:</p>
+
+      <table class="data-table">
+        <thead><tr><th>Age group</th><th>Recommended hours</th></tr></thead>
+        <tbody>
+          <tr><td>Newborns (0–3 months)</td><td>14–17 hours</td></tr>
+          <tr><td>Infants (4–11 months)</td><td>12–15 hours</td></tr>
+          <tr><td>Toddlers (1–2 years)</td><td>11–14 hours</td></tr>
+          <tr><td>Pre-school (3–5 years)</td><td>10–13 hours</td></tr>
+          <tr><td>School age (6–13 years)</td><td>9–11 hours</td></tr>
+          <tr><td>Teenagers (14–17 years)</td><td>8–10 hours</td></tr>
+          <tr><td>Adults (18–64 years)</td><td>7–9 hours</td></tr>
+          <tr><td>Older adults (65+)</td><td>7–8 hours</td></tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box">
+        <h4>🧬 Genetic short sleepers</h4>
+        <p>A small percentage of the population (estimated at 1–3%) carry gene variants that allow them to function optimally on 6 hours or less without health consequences. This is distinct from simply tolerating sleep deprivation — true short sleepers feel fully rested on less sleep. If you need an alarm to wake up and feel groggy without coffee, you're not one of them.</p>
+      </div>
+
+      <h2 id="signs">Signs you're not getting enough sleep</h2>
+      <ul>
+        <li>Needing an alarm clock to wake up at a normal time</li>
+        <li>Feeling groggy or unrested after waking</li>
+        <li>Falling asleep within minutes of lying down (normal is 10–20 minutes)</li>
+        <li>Difficulty concentrating or making decisions in the afternoon</li>
+        <li>Increased hunger, particularly for carbohydrates and high-fat foods</li>
+        <li>Feeling irritable or emotionally reactive over minor things</li>
+        <li>Needing caffeine to function through the day</li>
+      </ul>
+
+      <h2 id="effects">What happens when you're sleep deprived</h2>
+      <p>Sleep deprivation affects almost every system in the body. Even modest restriction — 6 hours instead of 8 — has measurable effects within days:</p>
+      <ul>
+        <li><strong>Cognitive function:</strong> Reaction time, memory consolidation, decision-making, and creativity all decline with sleep loss</li>
+        <li><strong>Metabolism:</strong> Sleep deprivation increases ghrelin (hunger hormone) and decreases leptin (satiety), leading to increased calorie intake — often 300–500 kcal/day extra</li>
+        <li><strong>Fat storage:</strong> Insufficient sleep promotes fat accumulation, particularly visceral fat, through elevated cortisol and insulin resistance</li>
+        <li><strong>Muscle recovery:</strong> Growth hormone is primarily released during deep sleep — inadequate sleep directly impairs muscle repair and growth</li>
+        <li><strong>Immune function:</strong> Even one night of poor sleep reduces natural killer cell activity by 70% in some studies</li>
+        <li><strong>Cardiovascular risk:</strong> Chronic sleep deprivation is associated with elevated blood pressure, inflammation markers, and increased risk of heart disease</li>
+      </ul>
+
+      <h2 id="debt">Sleep debt: can you catch up?</h2>
+      <p>Sleep debt refers to the cumulative effect of insufficient sleep over time. Research suggests you can partially recover from short-term sleep debt with extended sleep over a few days. However, chronic sleep deprivation appears to have lasting effects on cognitive function and metabolic health that aren't fully reversed by a weekend of extra sleep.</p>
+      <p>The practical implication: don't rely on weekend catch-up as a strategy. Consistent adequate sleep throughout the week is far more effective than cycling between deprivation and recovery.</p>
+
+      <h2 id="quality">Sleep quality vs. quantity</h2>
+      <p>Eight hours of fragmented, light sleep is not equivalent to eight hours of consolidated, deep sleep. Sleep quality matters as much as duration. Key factors that affect sleep quality include sleep environment (temperature, light, noise), sleep timing consistency, alcohol consumption (which suppresses REM sleep), and underlying conditions like sleep apnea.</p>
+      <p>If you're spending adequate time in bed but waking unrefreshed, addressing sleep quality — not just duration — should be the focus.</p>
+
+      <div class="cta-box">
+        <p>Find the optimal bedtime or wake-up time based on 90-minute sleep cycles.</p>
+        <a href="../tools/sleep-calculator.html" class="cta-link">Calculate my sleep time →</a>
+      </div>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Is 6 hours of sleep enough?</div>
+          <div class="faq-a">For most adults, no. Research consistently shows that 6 hours produces measurable impairments in cognitive function, metabolism, and immune function — even when people feel adapted to it. Most people who believe they function well on 6 hours are chronically sleep deprived and have lost the ability to accurately assess their own impairment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you sleep too much?</div>
+          <div class="faq-a">Regularly sleeping more than 9–10 hours is associated with increased risk of certain health conditions. However, this is often a case of reverse causality — underlying illness or depression causes both increased sleep need and the health outcomes. Occasional long sleep after sleep debt is normal and beneficial.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do naps count toward your daily sleep total?</div>
+          <div class="faq-a">Partially. A 20–30 minute nap improves alertness and performance without causing grogginess. Longer naps (60–90 minutes) allow for deeper sleep stages and may compensate more fully for nighttime sleep loss. Avoid napping after 3pm if nighttime sleep is a concern.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> If you consistently struggle with sleep despite good sleep hygiene, consult a healthcare provider to rule out sleep disorders like insomnia or sleep apnea.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#recommendations">Recommended by age</a></li>
+        <li><a href="#signs">Signs of sleep deprivation</a></li>
+        <li><a href="#effects">Effects of poor sleep</a></li>
+        <li><a href="#debt">Sleep debt</a></li>
+        <li><a href="#quality">Quality vs quantity</a></li>
+      </ol>
+    </div>
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h4>Helpful tools</h4>
+      <a href="../tools/sleep-calculator.html" class="tool-link">😴 Sleep Cycle Calculator</a>
+      <a href="../tools/calorie-calculator.html" class="tool-link">🔥 Calorie & TDEE Calculator</a>
+      <a href="../tools/bmi-calculator.html" class="tool-link">⚖️ BMI Calculator</a>
+      <a href="../tools/water-intake.html" class="tool-link">💧 Water Intake Calculator</a>
+    </div>
+  </aside>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>
