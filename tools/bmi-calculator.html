@@ -323,6 +323,16 @@
       .page-wrap { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
     }
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -482,6 +492,27 @@
       <h3>What should I do with my result?</h3>
       <p>Use your BMI as a starting point for a conversation with your healthcare provider, not as a definitive diagnosis. If your BMI falls outside the normal range, consider also tracking waist circumference, reviewing your eating patterns, and consulting a registered dietitian or doctor for personalized guidance.</p>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is a healthy BMI for adults?</div>
+          <div class="faq-a">A healthy BMI for most adults is between 18.5 and 24.9. Below 18.5 is considered underweight, 25–29.9 is overweight, and 30 or above is classified as obese. These ranges apply to adults 18 and over.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is BMI accurate for athletes and muscular people?</div>
+          <div class="faq-a">No. BMI cannot distinguish between fat and muscle. Muscular athletes often fall in the "overweight" or "obese" BMI range despite having very low body fat. For muscular individuals, body fat percentage is a more accurate health indicator.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I calculate BMI manually?</div>
+          <div class="faq-a">Divide your weight in kilograms by your height in metres squared. For example: 70 kg ÷ (1.75 × 1.75) = BMI of 22.9. In imperial units: multiply weight in pounds by 703, then divide by height in inches squared.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does BMI differ for different ethnicities?</div>
+          <div class="faq-a">Yes. People of Asian descent may face increased health risks at lower BMI thresholds. Some health organisations recommend that a BMI of 23 or above (rather than 25) may indicate increased risk for people of Asian heritage.</div>
+        </div>
+      </div>
+
       <div class="disclaimer">
         <strong>Not medical advice.</strong> This calculator is for informational purposes only and does not constitute medical advice. Consult a qualified healthcare professional before making decisions about your diet, exercise, or health.
       </div>
@@ -632,6 +663,14 @@
     document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

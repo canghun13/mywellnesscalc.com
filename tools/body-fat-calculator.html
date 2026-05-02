@@ -77,6 +77,16 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -169,6 +179,27 @@
       <p><strong>Women:</strong> %BF = 495 / (1.29579 − 0.35004 × log10(waist + hip − neck) + 0.22100 × log10(height)) − 450</p>
       <h3>Accuracy</h3>
       <p>The Navy method has a margin of error of approximately ±3–4%. It's a useful tracker for progress over time, but for precise body composition assessment, DEXA scan or hydrostatic weighing are more accurate.</p>
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is a healthy body fat percentage?</div>
+          <div class="faq-a">Healthy ranges differ by sex: for women, 21–33% is generally considered healthy (14–20% is athletic). For men, 18–24% is healthy (6–13% is athletic). These ranges shift upward slightly with age. Body fat below essential fat levels (10–13% for women, 2–5% for men) is dangerous.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How accurate is the Navy method for body fat?</div>
+          <div class="faq-a">The US Navy circumference method is accurate to within approximately ±3–4% for most people. It's less accurate for very lean or very obese individuals. DEXA scanning is the gold standard (±1–2% accuracy) if you need a precise measurement.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can body fat percentage be too low?</div>
+          <div class="faq-a">Yes. Extremely low body fat — below essential fat levels — impairs organ function, hormone production, immune function, and bone health. In women, very low body fat causes hormonal disruption and loss of menstrual function. Sustainable athletic body fat (14–20% for women, 6–13% for men) is very different from dangerously low levels.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is body fat or BMI a better health indicator?</div>
+          <div class="faq-a">Body fat percentage is generally more informative than BMI because it directly measures fat vs lean mass. BMI can misclassify muscular people as overweight and people who've lost muscle (sarcopenic obesity) as healthy. However, waist circumference — which reflects visceral fat — is often the most clinically useful single measurement.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Body fat estimates are approximations. Consult a healthcare provider for clinical assessment.</div>
     </div>
   </div>
@@ -242,6 +273,14 @@
     document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

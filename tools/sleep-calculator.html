@@ -69,6 +69,16 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sleep-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.times-grid{grid-template-columns:1fr 1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -124,6 +134,27 @@
       <p>If your alarm goes off during deep sleep (N3), you experience <em>sleep inertia</em> — that foggy, disoriented feeling that can last 30–60 minutes. Waking at the end of a sleep cycle, when you're in lighter sleep, dramatically reduces this effect.</p>
       <h3>How many cycles do you need?</h3>
       <p>Most adults need 5–6 complete cycles per night (7.5–9 hours). Teenagers and older adults have slightly different needs. Quality matters as much as quantity — consistent sleep and wake times, a dark room, and limiting screens before bed all improve cycle quality.</p>
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How long is a sleep cycle?</div>
+          <div class="faq-a">A typical sleep cycle lasts approximately 90 minutes and includes light sleep, deep sleep, and REM sleep stages. Most adults complete 4–6 cycles per night. Waking up naturally at the end of a cycle — rather than in the middle of deep sleep — helps you feel more refreshed.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How many hours of sleep do adults need?</div>
+          <div class="faq-a">Most adults need 7–9 hours of sleep per night. Teenagers need 8–10 hours, and older adults generally need 7–8 hours. Consistently sleeping less than 7 hours is associated with increased risk of weight gain, impaired immune function, and cardiovascular issues.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it better to wake up at a specific time or after a set number of hours?</div>
+          <div class="faq-a">Both matter. Waking at a consistent time strengthens your circadian rhythm, which improves sleep quality over time. Using this calculator to time your wake-up to the end of a 90-minute cycle also reduces the likelihood of waking during deep sleep and feeling groggy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why do I still feel tired after 8 hours of sleep?</div>
+          <div class="faq-a">Several factors can cause this: waking mid-cycle (try adjusting bedtime by 15–20 minutes), poor sleep quality from alcohol or screen light before bed, sleep apnea (especially if you snore), or accumulated sleep debt. Consistent sleep and wake times are the most effective first step.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> If you regularly struggle with sleep, speak to a healthcare provider. This tool is for informational purposes only.</div>
     </div>
   </div>
@@ -203,6 +234,14 @@
     document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

@@ -65,6 +65,16 @@
     .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
     .related-list a:hover{color:var(--sage-dark);}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -134,6 +144,27 @@
       <h3>How to measure your resting heart rate</h3>
       <p>Measure first thing in the morning before getting out of bed. Count your pulse for 60 seconds (or 30 seconds × 2). A typical resting HR is 60–80 bpm; well-trained athletes often see 40–55 bpm. Wearables like Garmin or Whoop can track this automatically overnight.</p>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How do I find my max heart rate?</div>
+          <div class="faq-a">The most common formula is 220 minus your age. This is an estimate — actual maximum heart rate varies by ±10–20 bpm between individuals. The most accurate method is a maximal effort test (a full sprint to exhaustion), but this should only be done by those in good cardiovascular health.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What heart rate zone burns the most fat?</div>
+          <div class="faq-a">Zone 2 (60–70% of max HR) has the highest proportion of fat burned per calorie, which is why it's called the "fat burning zone." However, higher-intensity zones burn more total calories per minute — so total fat loss depends on total calorie expenditure, not just the percentage from fat.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I measure heart rate during exercise?</div>
+          <div class="faq-a">A chest strap monitor is most accurate. Optical wrist-based monitors (like those in smartwatches) are convenient and reasonably accurate for steady-state cardio but less reliable during high-intensity intervals due to wrist movement. For Zone 2 training where precision matters, a chest strap is worth using.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should most of my training be in Zone 2?</div>
+          <div class="faq-a">For endurance athletes, yes — 80% of training volume in Zone 2 with 20% in higher zones is a well-supported approach. For general fitness, a mix of Zone 2 (aerobic base), Zone 3–4 (cardio fitness), and occasional Zone 5 (peak effort) produces well-rounded cardiovascular fitness.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Heart rate zone calculations are estimates based on population averages. If you have any cardiovascular condition or are new to exercise, consult a doctor before beginning a training program. Stop exercise immediately if you experience chest pain, dizziness, or shortness of breath.</div>
     </div>
   </div>
@@ -155,6 +186,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 <script>
 const ZONES = [

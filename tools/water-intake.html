@@ -68,6 +68,16 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--water-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.breakdown-grid{grid-template-columns:1fr 1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -143,6 +153,27 @@
       <p>This calculator starts with a base of <strong>35 ml per kg of body weight</strong>, then adds estimated losses from physical activity and heat exposure. This approach is consistent with recommendations from the European Food Safety Authority (EFSA).</p>
       <h3>Tips to stay hydrated</h3>
       <p>Keep a water bottle visible on your desk. Drink a glass before each meal. Eat water-rich foods like cucumber, watermelon, and soup. Urine color is the best free hydration monitor — pale yellow means you're well-hydrated.</p>
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How much water should I drink per day?</div>
+          <div class="faq-a">General guidelines suggest 2–3.5 litres per day for most adults, but needs vary significantly based on body weight, activity level, climate, and diet. A practical indicator: if your urine is pale yellow, you're adequately hydrated.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does coffee and tea count toward daily water intake?</div>
+          <div class="faq-a">Yes. Despite being mild diuretics, caffeinated drinks like coffee and tea contribute to overall hydration. Research shows their net fluid contribution is positive. However, water and low-calorie drinks are preferable as primary sources of hydration.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you drink too much water?</div>
+          <div class="faq-a">Yes, though rare. Overhydration (hyponatremia) occurs when excessive water intake dilutes sodium levels in the blood. This is most common in endurance athletes drinking large amounts without replacing electrolytes. For most people, drinking to thirst is safe.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does drinking more water help with weight loss?</div>
+          <div class="faq-a">Indirectly. Drinking water before meals can reduce calorie intake. Replacing sugary drinks with water removes a significant source of excess calories. Water itself doesn't burn fat, but it supports the overall habits that lead to fat loss.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Individual needs vary.</strong> These figures are estimates. Health conditions, pregnancy, medications, and other factors affect hydration needs.</div>
     </div>
   </div>
@@ -193,6 +224,14 @@ function calculate(){
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

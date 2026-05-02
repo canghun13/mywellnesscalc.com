@@ -79,6 +79,16 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.macro-cards{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -185,6 +195,27 @@
       <p>Carbohydrates are the body's preferred fuel source, especially for high-intensity exercise. Not all carbs are equal — fiber-rich whole grains, vegetables, and legumes are far preferable to refined sugars and processed starches.</p>
       <h3>Fat (9 kcal/g)</h3>
       <p>Dietary fat is essential for hormone production, vitamin absorption (A, D, E, K), and brain health. The focus should be on unsaturated fats (olive oil, nuts, avocado) while minimizing trans fats.</p>
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What are macros and why do they matter?</div>
+          <div class="faq-a">Macros (macronutrients) are the three main nutrient categories: protein, carbohydrates, and fat. Protein provides 4 kcal/g, carbohydrates 4 kcal/g, and fat 9 kcal/g. Tracking macros gives you more control over body composition than tracking calories alone — ensuring you get enough protein to preserve muscle during fat loss.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How much protein do I need per day?</div>
+          <div class="faq-a">For general health: 1.0–1.2g per kg of body weight. For fat loss or muscle building: 1.6–2.2g per kg. The official RDA of 0.8g/kg is the minimum to prevent deficiency — not an optimal target for anyone with health or fitness goals.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I count calories or macros?</div>
+          <div class="faq-a">For general weight management, calorie tracking is sufficient. For body composition goals — gaining muscle while minimising fat, or losing fat while preserving muscle — macro tracking provides more precision. Tracking protein specifically is the most impactful single change most people can make.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I adjust macros for muscle building?</div>
+          <div class="faq-a">For muscle building, prioritise protein at 1.6–2.2g/kg and eat in a slight calorie surplus (200–300 kcal above TDEE). Carbohydrates should make up the majority of the remaining calories to fuel training performance and recovery. Fat at 0.8–1.0g/kg is a reasonable minimum.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Individual needs vary significantly.</strong> These are evidence-based starting points. A registered dietitian can provide a truly personalized macro plan.</div>
     </div>
   </div>
@@ -241,6 +272,14 @@ function calculate(){
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

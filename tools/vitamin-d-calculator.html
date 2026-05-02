@@ -70,6 +70,16 @@
     .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
     .related-list a:hover{color:var(--sage-dark);}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -212,6 +222,27 @@
       </ul>
       <p>Food alone is rarely sufficient to meet Vitamin D needs. Supplementation is often recommended for people with limited sun exposure, especially in winter months above 35° latitude.</p>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How do I know if I'm Vitamin D deficient?</div>
+          <div class="faq-a">The only definitive way is a blood test measuring 25-hydroxyvitamin D (25(OH)D). Levels below 20 ng/mL (50 nmol/L) are deficient; 20–29 ng/mL is insufficient; 30–100 ng/mL is considered optimal by most experts. Symptoms like fatigue, bone pain, and frequent illness can suggest deficiency but aren't specific enough to diagnose it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the difference between Vitamin D2 and D3?</div>
+          <div class="faq-a">Vitamin D3 (cholecalciferol) is the form produced by skin when exposed to sunlight and found in animal-based foods. Vitamin D2 (ergocalciferol) is found in plants and fungi. D3 is more effective at raising and maintaining blood levels — always choose D3 when supplementing.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you get too much Vitamin D from supplements?</div>
+          <div class="faq-a">Yes, though toxicity from supplementation is rare. The safe upper limit is 4,000 IU/day for adults. Toxicity generally only occurs at very high doses (above 10,000 IU/day) sustained over weeks or months. You cannot overdose on Vitamin D from sun exposure — the skin self-regulates production.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I take Vitamin D with food?</div>
+          <div class="faq-a">Yes. Vitamin D is fat-soluble, so taking it with a meal containing fat significantly improves absorption. Taking it with your largest meal of the day is a practical approach.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This calculator provides general guidance based on population-level recommendations. Blood testing is the only way to accurately assess your Vitamin D status. Consult a healthcare professional before starting supplementation.</div>
     </div>
   </div>
@@ -233,6 +264,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 <script>
 function calculate() {

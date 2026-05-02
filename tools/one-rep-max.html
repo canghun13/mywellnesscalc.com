@@ -70,6 +70,16 @@
     .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
     .related-list a:hover{color:var(--sage-dark);}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -166,6 +176,27 @@
       </div>
       <p>For best accuracy, use a weight you can lift for 3–8 reps with good form. Estimates become less reliable above 10 reps.</p>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How accurate is a 1RM calculator?</div>
+          <div class="faq-a">1RM estimates are generally accurate to within 5–10% when based on a set of 3–8 reps with good form. Accuracy decreases above 10 reps as fatigue and muscle endurance become more significant factors. Use multiple formulas and take the average for a more reliable estimate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I test my actual 1RM?</div>
+          <div class="faq-a">True 1RM testing carries injury risk, particularly for beginners or with compound lifts. Estimation from a submaximal set is safer and accurate enough for programming purposes. If you do test your 1RM, always use a spotter, warm up thoroughly, and have several months of consistent training behind you.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What percentage of 1RM should I use for hypertrophy?</div>
+          <div class="faq-a">Research supports a range of 60–85% of 1RM for hypertrophy (muscle building), typically performed for 6–15 reps per set. This covers the full spectrum from moderate loads with higher reps to heavier loads with lower reps — both produce similar muscle growth when taken close to failure.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How often should I test my 1RM?</div>
+          <div class="faq-a">Strength increases fastest with beginners, so recalculating every 4–6 weeks is reasonable. Intermediate lifters might reassess every 8–12 weeks. A practical approach is to recalculate whenever a set feels significantly easier than expected at a given weight — this often signals a strength improvement.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> One Rep Max testing and heavy lifting carries injury risk. Always warm up properly, use a spotter for compound lifts, and prioritize form over weight. Consult a fitness professional if you're new to strength training.</div>
     </div>
   </div>
@@ -187,6 +218,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 <script>
 let currentUnit = 'kg';

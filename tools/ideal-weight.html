@@ -73,6 +73,16 @@
     .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.formula-grid{grid-template-columns:1fr 1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -152,6 +162,23 @@
       <h2>About ideal body weight formulas</h2>
       <p>No single formula definitively defines an "ideal" weight — these are statistical estimates developed for clinical use (particularly for medication dosing). Each was derived from different populations, which is why they give slightly different results.</p>
       <p>The average of multiple formulas gives a more reliable range than any single estimate. Your healthy weight also depends on muscle mass, bone density, and individual health history — which no formula can capture.</p>
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is ideal body weight based on?</div>
+          <div class="faq-a">Ideal body weight formulas (Devine, Hamwi, Robinson, Miller) were originally developed for medical dosing calculations, not aesthetic targets. They estimate a "reference weight" for a given height. Different formulas give slightly different results — this calculator shows all of them so you can see the range.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is ideal body weight the same as healthy weight?</div>
+          <div class="faq-a">Not exactly. Ideal body weight formulas don't account for body composition, muscle mass, or individual variation. Two people of the same height and weight can have very different body compositions and health profiles. Use ideal weight as a general reference, not a precise target.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How is ideal weight different from BMI?</div>
+          <div class="faq-a">BMI gives you a number that categorises your current weight. Ideal weight formulas give you a target weight range for your height. They're complementary tools — neither accounts for body composition, which is ultimately more important than weight alone.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Ideal weight calculations are general estimates. Consult a healthcare provider for personalised weight management guidance.</div>
     </div>
   </div>
@@ -218,6 +245,14 @@
     document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

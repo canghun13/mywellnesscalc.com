@@ -77,6 +77,16 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid #f5c49e;padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.protocol-grid{grid-template-columns:repeat(2,1fr)}.window-blocks{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -151,6 +161,27 @@
       <p>Water, black coffee, and plain tea are generally considered acceptable during a fast as they contain no (or negligible) calories and don't significantly raise insulin levels. Adding milk, sugar, or cream would technically break the fast.</p>
       <h3>Is intermittent fasting right for you?</h3>
       <p>IF is not appropriate for everyone. Pregnant or breastfeeding women, people with a history of eating disorders, those with type 1 diabetes, and children should avoid fasting without medical supervision. Always consult a healthcare professional before starting any fasting protocol.</p>
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is intermittent fasting?</div>
+          <div class="faq-a">Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't specify which foods to eat — only when to eat them. Common protocols include 16:8 (16-hour fast, 8-hour eating window), 18:6, and 5:2 (eating normally 5 days, restricting calories 2 days).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does intermittent fasting actually work for weight loss?</div>
+          <div class="faq-a">Yes, primarily because it reduces total calorie intake by limiting eating hours. Research shows it produces similar weight loss to continuous calorie restriction when calories are matched. Some people find it easier to maintain than traditional dieting. It does not have unique metabolic benefits beyond calorie reduction.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I drink anything during the fasting window?</div>
+          <div class="faq-a">Water, black coffee, and plain tea contain essentially no calories and do not break a fast. Anything with calories — including milk in coffee, bulletproof coffee with butter, or bone broth — technically breaks the fast, though the practical impact depends on quantity.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is intermittent fasting safe for everyone?</div>
+          <div class="faq-a">Intermittent fasting is not recommended for pregnant or breastfeeding women, people with a history of eating disorders, those who are underweight, or people with certain medical conditions including type 1 diabetes. Always consult a healthcare provider before starting if you have any health concerns.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Intermittent fasting is not suitable for everyone. Consult a doctor before starting.</div>
     </div>
   </div>
@@ -208,6 +239,14 @@
     document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

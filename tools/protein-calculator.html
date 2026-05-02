@@ -72,6 +72,16 @@
     .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
     .related-list a:hover{color:var(--sage-dark);}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -183,6 +193,27 @@
       <h3>Is high protein safe?</h3>
       <p>For healthy adults, intakes up to 2.5–3.0 g/kg are well-tolerated and safe according to multiple studies. The concern about protein "damaging kidneys" applies to people with pre-existing kidney disease, not healthy individuals. Extra protein is simply converted to energy or excreted.</p>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How much protein do I need to build muscle?</div>
+          <div class="faq-a">Research consistently supports 1.6–2.2g of protein per kg of body weight for muscle building. Going above 2.2g/kg provides diminishing returns for muscle gain specifically, though it remains safe and may help during aggressive calorie deficits.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does protein timing matter?</div>
+          <div class="faq-a">To a degree. Distributing protein across 3–4 meals of 25–40g each maximises muscle protein synthesis throughout the day. A post-workout protein source within a few hours of training is beneficial but not critical if total daily intake is adequate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is high protein intake safe for kidneys?</div>
+          <div class="faq-a">For healthy adults, high protein intake (up to 3g/kg) is safe according to multiple studies. The concern about kidney damage applies specifically to people with pre-existing kidney disease — not healthy individuals. If you have kidney disease, consult your doctor about appropriate protein intake.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I get enough protein on a plant-based diet?</div>
+          <div class="faq-a">Yes, with planning. Tempeh (~19g/100g), seitan (~25g/100g), edamame (~11g/100g), and lentils (~9g/100g) are strong plant sources. Plant-based eaters may benefit from slightly higher total protein targets due to lower digestibility and leucine content compared to animal proteins.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Protein recommendations vary based on individual health status. People with kidney disease or other medical conditions should follow their healthcare provider's guidance regarding protein intake.</div>
     </div>
   </div>
@@ -204,6 +235,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 <script>
 let currentUnit = 'kg';

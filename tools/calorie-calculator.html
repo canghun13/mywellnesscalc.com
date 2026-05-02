@@ -82,6 +82,16 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.goals-grid{grid-template-columns:1fr 1fr}.macro-row{grid-template-columns:1fr 1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -196,6 +206,27 @@
       <strong>Women:</strong> BMR = (10 × weight kg) + (6.25 × height cm) − (5 × age) − 161</p>
       <h3>What about macros?</h3>
       <p>Macro targets are estimated using common evidence-based ratios: roughly 30% of calories from protein, 40% from carbohydrates, and 30% from fat. Individual needs vary — a registered dietitian can provide a personalized plan.</p>
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is TDEE and why does it matter?</div>
+          <div class="faq-a">TDEE (Total Daily Energy Expenditure) is the total number of calories your body burns in a day — including your resting metabolism, digestion, and all activity. Eating at your TDEE maintains your current weight. Eating below it causes fat loss; above it causes weight gain.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How many calories should I eat to lose weight?</div>
+          <div class="faq-a">A deficit of 400–500 calories below your TDEE is a sustainable starting point, producing roughly 0.5 kg of fat loss per week. Larger deficits accelerate muscle loss and are harder to maintain. Ensure protein intake stays at 1.6–2.2g per kg of body weight.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the difference between BMR and TDEE?</div>
+          <div class="faq-a">BMR (Basal Metabolic Rate) is the calories your body burns at complete rest — just to keep organs functioning. TDEE is your BMR multiplied by an activity factor to account for all daily movement, exercise, and the energy cost of digesting food.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How accurate are calorie calculators?</div>
+          <div class="faq-a">Calorie calculators provide estimates based on population averages — they're typically accurate to within 10–15%. Use the result as a starting point, then adjust based on real-world results after 2–3 weeks of tracking.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Consult a healthcare provider before making significant dietary changes.</div>
     </div>
   </div>
@@ -252,6 +283,14 @@
     document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
 </script>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>
