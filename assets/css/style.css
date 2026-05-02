@@ -91,7 +91,7 @@ nav {
 /* Calculators: 왼쪽 정렬 */
 .nav-has-dropdown:nth-child(1) .nav-dropdown { left: 0; }
 /* Blog: 오른쪽 정렬 — 화면 밖으로 안 나가게 */
-.nav-has-dropdown:nth-child(2) .nav-dropdown { right: -80px; left: auto; }
+.nav-has-dropdown:nth-child(2) .nav-dropdown { right: -80px; left: auto; max-height: 70vh; overflow-y: auto; }
 
 .nav-links > li.open .nav-dropdown { display: block; }
 
