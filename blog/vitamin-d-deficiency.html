@@ -52,6 +52,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -120,6 +130,23 @@
         <a href="../tools/vitamin-d-calculator.html" class="cta-link">Calculate my Vitamin D needs →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How much Vitamin D should I take daily?</div>
+          <div class="faq-a">The official RDA is 600 IU/day for adults under 70 and 800 IU/day for those 70+. Many researchers consider 1,000–2,000 IU/day a safer practical target, particularly for people with limited sun exposure. The safe upper limit is 4,000 IU/day. Always choose Vitamin D3 (cholecalciferol) over D2.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What foods are high in Vitamin D?</div>
+          <div class="faq-a">Fatty fish are the richest food sources: salmon (~570 IU/100g), mackerel (~360 IU/100g), sardines (~270 IU/100g). Fortified foods like milk (~120 IU/cup) and orange juice (~140 IU/cup) contribute meaningfully. Egg yolks provide ~40 IU each. Food alone rarely meets full needs without supplementation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does it take to correct Vitamin D deficiency?</div>
+          <div class="faq-a">With supplementation at therapeutic doses (typically 2,000–4,000 IU/day), blood levels usually reach optimal range within 2–3 months. Severe deficiency may take longer. A follow-up blood test at 3 months allows dose adjustment. Maintenance supplementation is often needed ongoing, especially in low-sun environments.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> If you suspect Vitamin D deficiency, get a blood test before supplementing at high doses. Very high intakes can cause toxicity. Consult your healthcare provider for personalised advice.</div>
     </div>
   </article>
@@ -146,6 +173,14 @@
   </aside>
 </div>
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 </body>
 </html>

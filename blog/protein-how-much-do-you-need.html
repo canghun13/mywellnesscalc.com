@@ -58,6 +58,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -133,6 +143,23 @@
         <a href="../tools/macro-calculator.html" class="cta-link">Calculate my macros →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What happens if you don't eat enough protein?</div>
+          <div class="faq-a">Insufficient protein causes muscle loss (the body breaks down muscle tissue for amino acids), weakened immune function, slow wound healing, hair thinning, and persistent hunger. During a calorie deficit, inadequate protein dramatically increases the proportion of weight lost from muscle rather than fat.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it possible to eat too much protein?</div>
+          <div class="faq-a">For healthy adults, high protein intakes (up to 3g/kg) are well-tolerated and safe. The main practical downside is caloric displacement — very high protein intake leaves less room for carbohydrates and fats. The kidney damage concern applies to people with pre-existing kidney disease only.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What are the best high-protein foods?</div>
+          <div class="faq-a">Top animal sources: chicken breast (~31g/100g), canned tuna (~25g/100g), salmon (~25g/100g), eggs (~6g each), Greek yogurt (~10g/100g). Top plant sources: tempeh (~19g/100g), edamame (~11g/100g), lentils (~9g/100g), tofu (~8–12g/100g).</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. People with kidney disease or other medical conditions should follow the guidance of their healthcare provider regarding protein intake.</div>
     </div>
   </article>
@@ -163,6 +190,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

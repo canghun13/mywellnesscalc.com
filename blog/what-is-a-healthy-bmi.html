@@ -60,6 +60,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -143,6 +153,23 @@
       <p>A healthy BMI is between 18.5 and 24.9 for most adults. If your BMI falls outside this range, it's worth paying attention to — but it's not the only thing that matters. Body composition, where you carry fat, your fitness level, and your blood markers all tell a fuller story than a single number can.</p>
       <p>Use BMI as a starting point, not a final answer.</p>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What BMI is considered healthy?</div>
+          <div class="faq-a">The WHO defines a healthy BMI as 18.5–24.9 for most adults. Below 18.5 is underweight; 25–29.9 is overweight; 30 and above is obese. These are population-level thresholds — individual health depends on many factors beyond BMI.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you be healthy with a high BMI?</div>
+          <div class="faq-a">Yes. Muscular people often have a high BMI with low body fat. Research shows that fitness level, metabolic markers (blood pressure, glucose, cholesterol), and waist circumference are better predictors of health outcomes than BMI alone. A high BMI is a signal to investigate further — not a diagnosis.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is BMI different for men and women?</div>
+          <div class="faq-a">The same BMI thresholds are applied to both men and women, despite women naturally carrying more body fat at equivalent BMI values. Some researchers argue for sex-specific thresholds, but current WHO and clinical guidelines use unified ranges. Body fat percentage measurement is more meaningful for sex-specific assessments.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Consult a qualified healthcare professional for personalized health guidance.</div>
     </div>
   </article>
@@ -173,6 +200,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

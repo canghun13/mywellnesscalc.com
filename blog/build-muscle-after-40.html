@@ -47,6 +47,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -113,6 +123,23 @@
         <a href="../tools/protein-calculator.html" class="cta-link">Calculate my protein needs →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How long does it take to build muscle after 40?</div>
+          <div class="faq-a">Beginners can gain 0.5–1 kg of muscle per month in the first year of consistent training. After 40, this is closer to 0.3–0.7 kg/month due to anabolic resistance and hormonal changes. Progress is real and meaningful — just slower than in younger years. Consistency over 6–12 months produces significant visible change.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should older adults lift heavy weights?</div>
+          <div class="faq-a">Yes — with appropriate form and programming. Heavy compound lifts (squats, deadlifts, presses) are safe and effective for adults 40+. Moderate loads (65–80% of 1RM) at higher reps (8–15) produce similar muscle growth to very heavy loads while reducing joint stress. Start lighter and build gradually.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does testosterone affect muscle building after 40?</div>
+          <div class="faq-a">Testosterone declines gradually from the mid-30s, which reduces the anabolic response to training. However, it doesn't eliminate muscle growth — resistance training still produces meaningful gains. The response to training stimulus is reduced but not absent. Sleep, protein, and recovery become more important to optimise.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Before starting a new resistance training programme, particularly if you have existing joint issues, cardiovascular conditions, or haven't exercised regularly, consult a healthcare provider or qualified fitness professional.</div>
     </div>
   </article>
@@ -138,6 +165,14 @@
   </aside>
 </div>
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 </body>
 </html>

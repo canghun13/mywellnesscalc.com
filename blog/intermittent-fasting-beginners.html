@@ -57,6 +57,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -148,6 +158,27 @@
         <li><strong>Eating poorly during the eating window.</strong> IF doesn't compensate for a poor diet.</li>
       </ul>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Can I drink coffee while intermittent fasting?</div>
+          <div class="faq-a">Black coffee contains essentially no calories and does not meaningfully break a fast. It may actually enhance fat oxidation during the fasting window. Adding milk, sugar, or cream does break the fast. Plain tea is also fine.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does it take to see results from intermittent fasting?</div>
+          <div class="faq-a">Most people notice changes in hunger levels and energy within 1–2 weeks as the body adapts. Visible weight loss typically follows within 2–4 weeks if a calorie deficit is maintained. Results depend primarily on total calorie intake, not the fasting protocol itself.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What should I eat during my eating window?</div>
+          <div class="faq-a">Intermittent fasting doesn't restrict food types — only timing. For best results, focus on whole foods, adequate protein (1.6–2.0g/kg body weight), vegetables, and minimal processed foods. Eating nutrient-dense foods during your window makes the calorie deficit easier to maintain.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is intermittent fasting safe for women?</div>
+          <div class="faq-a">Most healthy women can safely practice intermittent fasting. However, some women report disrupted menstrual cycles with strict fasting, particularly when combined with intense exercise or large calorie deficits. Pregnant or breastfeeding women should not fast. If you notice hormonal changes, consider a less restrictive protocol (14:10 instead of 16:8).</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Consult a qualified healthcare professional before starting any fasting protocol, especially if you have underlying health conditions.</div>
     </div>
   </article>
@@ -179,6 +210,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

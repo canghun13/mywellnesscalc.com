@@ -53,6 +53,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -128,6 +138,23 @@
       <p>Weight loss plateaus happen to almost everyone. Your body adapts to a lower calorie intake by reducing NEAT (non-exercise activity thermogenesis) — unconscious movement like fidgeting, posture shifts, and walking pace. This is called metabolic adaptation.</p>
       <p>Options when you plateau: take a 1–2 week "diet break" at maintenance calories (which partially reverses adaptation), slightly reduce calories by 100–150 kcal, or increase activity rather than cutting more food.</p>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How many calories should I cut to lose 1kg per week?</div>
+          <div class="faq-a">Approximately 7,700 calories per week (1,100 kcal/day deficit) would theoretically produce 1kg of fat loss weekly. In practice, this is aggressive and difficult to sustain. A 500–750 kcal/day deficit producing 0.5–0.75 kg/week is more sustainable and better preserves muscle mass.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the minimum calories I should eat per day?</div>
+          <div class="faq-a">Eating below 1,200 kcal/day for women or 1,500 kcal/day for men is generally not recommended without medical supervision, as it becomes difficult to meet nutritional needs and is strongly associated with muscle loss and metabolic adaptation. A moderate deficit from your TDEE is safer and more effective long-term.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I eat back exercise calories?</div>
+          <div class="faq-a">Partially. Most people overestimate calorie burn from exercise by 50–100%. If your TDEE calculation already includes your activity level, you don't need to eat back exercise calories. If you calculated based on sedentary activity and then exercised heavily, eating back 50% of estimated burn is a reasonable approach.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. If you have a history of disordered eating or any medical condition, consult a healthcare professional before changing your diet.</div>
     </div>
   </article>
@@ -154,6 +181,14 @@
   </aside>
 </div>
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 </body>
 </html>

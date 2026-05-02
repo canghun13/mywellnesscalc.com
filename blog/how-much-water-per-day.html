@@ -60,6 +60,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -167,6 +177,23 @@
         <a href="../tools/water-intake.html" class="cta-link">Calculate my target →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Where does the "8 glasses a day" rule come from?</div>
+          <div class="faq-a">It likely originated from a 1945 US Food and Nutrition Board recommendation of 2.5 litres per day — which included water from food. The "8 glasses" interpretation spread as a simplification, but it was never based on rigorous clinical research. Individual needs vary substantially.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How can I tell if I'm drinking enough water?</div>
+          <div class="faq-a">Urine colour is the most practical indicator. Pale yellow (straw colour) indicates good hydration. Dark yellow or amber suggests you need more water. Clear urine can indicate overhydration. Thirst is also a reliable signal for most healthy adults — drinking to thirst is a valid hydration strategy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does food count toward daily water intake?</div>
+          <div class="faq-a">Yes — about 20–30% of daily water intake typically comes from food. Fruits and vegetables are particularly high in water (cucumbers, watermelon, and lettuce are 90–96% water). People who eat a diet rich in fruits and vegetables need somewhat less fluid from drinks.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. People with kidney disease, heart failure, or other conditions affecting fluid balance should follow the guidance of their healthcare provider.</div>
     </div>
   </article>
@@ -196,6 +223,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

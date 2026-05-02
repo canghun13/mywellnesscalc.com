@@ -47,6 +47,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -104,6 +114,23 @@
         <a href="../tools/macro-calculator.html" class="cta-link">Calculate my macros →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">When should I take creatine?</div>
+          <div class="faq-a">Timing has minimal impact on outcomes. Post-workout with protein and carbohydrates may offer a slight advantage, but total daily intake matters more than timing. The most important thing is taking it consistently every day — including rest days — to maintain saturated muscle stores.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need to load creatine?</div>
+          <div class="faq-a">No. A loading phase (20g/day for 5–7 days) saturates muscle stores faster, but the same saturation is achieved within 3–4 weeks at the standard 3–5g/day maintenance dose. Loading is optional — useful if you want faster results, but causes more GI discomfort in some people.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does creatine cause hair loss?</div>
+          <div class="faq-a">The evidence is not conclusive. One small study found creatine increased DHT (a hormone linked to hair loss) by 56%, but this was in a specific population and hasn't been replicated consistently. If you have a strong family history of male pattern baldness and are concerned, this is worth discussing with a doctor.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> While creatine is safe for most healthy adults, consult a healthcare provider if you have kidney disease or any other medical condition before starting supplementation.</div>
     </div>
   </article>
@@ -129,6 +156,14 @@
   </aside>
 </div>
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 </body>
 </html>

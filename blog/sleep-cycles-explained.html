@@ -58,6 +58,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -148,6 +158,23 @@
         <a href="../tools/sleep-calculator.html" class="cta-link">Calculate my sleep times →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What happens during REM sleep?</div>
+          <div class="faq-a">REM (Rapid Eye Movement) sleep is when most dreaming occurs. The brain is highly active, processing emotions and consolidating memories. The body is temporarily paralysed to prevent acting out dreams. REM sleep is essential for emotional regulation, learning, and creativity. It makes up about 20–25% of total sleep time.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why do I feel worse after 9 hours than 7 hours of sleep?</div>
+          <div class="faq-a">Waking in the middle of a deep sleep stage causes "sleep inertia" — grogginess that can last 30–60 minutes. Nine hours may end mid-cycle for your individual sleep rhythm. Using a sleep cycle calculator to target wake times at 7.5 or 9 hours (5 or 6 complete cycles) can help reduce this.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does alcohol affect sleep cycles?</div>
+          <div class="faq-a">Yes, significantly. Alcohol helps you fall asleep faster but suppresses REM sleep in the first half of the night. As alcohol is metabolised in the second half, sleep becomes lighter and more fragmented. The result is less restorative sleep even if total hours look adequate.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. If you're experiencing persistent sleep problems, consult a healthcare professional or sleep specialist.</div>
     </div>
   </article>
@@ -177,6 +204,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

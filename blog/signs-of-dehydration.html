@@ -66,6 +66,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -164,6 +174,23 @@
         <a href="../tools/water-intake.html" class="cta-link">Calculate my water target →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How quickly can dehydration affect performance?</div>
+          <div class="faq-a">Even mild dehydration of 1–2% of body weight reduces cognitive performance, mood, and endurance. At 2% body weight lost through sweat, physical performance begins to decline measurably. At 3–4%, the impairment is significant. For a 70 kg person, just 700ml–1.4L of fluid loss causes noticeable effects.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is thirst a reliable indicator of hydration?</div>
+          <div class="faq-a">For most healthy adults, yes. Drinking to thirst is adequate for maintaining hydration under normal conditions. However, thirst sensation diminishes with age and during intense exercise — older adults and athletes should drink on a schedule rather than relying solely on thirst.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's the fastest way to rehydrate?</div>
+          <div class="faq-a">For mild dehydration: water with a small amount of sodium (electrolyte drinks, broth, or water with a pinch of salt) rehydrates faster than plain water. For severe dehydration or after intense exercise lasting over 90 minutes, electrolyte replacement is important. In extreme cases, seek medical attention.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Severe dehydration is a medical emergency — seek professional care if symptoms are serious.</div>
     </div>
   </article>
@@ -194,6 +221,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>

@@ -47,6 +47,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -99,6 +109,23 @@
         <a href="../tools/calorie-calculator.html" class="cta-link">Calculate my TDEE →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Is 10,000 steps a day enough exercise?</div>
+          <div class="faq-a">For general health maintenance, 7,000–10,000 daily steps covers most of the mortality risk reduction from physical activity. However, it doesn't replace resistance training, which is needed for muscle and bone health. Steps are a useful metric for daily movement, not a substitute for structured exercise.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does it take to walk 10,000 steps?</div>
+          <div class="faq-a">At a moderate pace (5–6 km/h), 10,000 steps takes approximately 75–90 minutes. Most people average 1,000–1,500 steps per 10 minutes of walking. If you're starting from a low baseline, breaking it into multiple shorter walks throughout the day is equally effective.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if I can't reach 10,000 steps?</div>
+          <div class="faq-a">Any increase from your current baseline is beneficial. Research shows that moving from 2,000 to 5,000 steps/day produces greater health improvements than moving from 8,000 to 11,000. Start with a realistic target — 500–1,000 steps above your current average — and build gradually.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Individual health needs vary — consult a healthcare provider for personalised activity recommendations.</div>
     </div>
   </article>
@@ -124,6 +151,14 @@
   </aside>
 </div>
 <div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
 <script src="../assets/js/components.js"></script>
 </body>
 </html>

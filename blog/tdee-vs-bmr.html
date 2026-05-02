@@ -62,6 +62,16 @@
     .tool-link:last-child{border-bottom:none;padding-bottom:0;}
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}.comparison-grid{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
   </style>
 </head>
 <body>
@@ -153,6 +163,23 @@
         <a href="../tools/calorie-calculator.html" class="cta-link">Calculate my TDEE →</a>
       </div>
 
+      
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is the difference between BMR and TDEE?</div>
+          <div class="faq-a">BMR (Basal Metabolic Rate) is the calories your body burns at complete rest — just to sustain organ function. TDEE (Total Daily Energy Expenditure) adds the calories burned through all activity, exercise, and digestion to your BMR. TDEE is your true daily calorie requirement.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I use my TDEE to lose weight?</div>
+          <div class="faq-a">Eat 400–500 calories below your TDEE to create a sustainable deficit. For example, if your TDEE is 2,400 kcal, target 1,900–2,000 kcal/day. Recalculate your TDEE every 4–6 weeks as you lose weight, since a lighter body burns fewer calories.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why does my TDEE change over time?</div>
+          <div class="faq-a">TDEE changes as your body weight changes (lighter body = lower TDEE), as you gain or lose muscle mass, and through metabolic adaptation during dieting (the body reduces NEAT and metabolic rate in response to calorie restriction). This is why recalculating regularly matters.</div>
+        </div>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Consult a healthcare professional or registered dietitian for personalized nutrition guidance.</div>
     </div>
   </article>
@@ -183,6 +210,14 @@
 </div>
 
 <div id="footer-placeholder"></div>
-  <script src="../assets/js/components.js"></script>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
 </body>
 </html>
