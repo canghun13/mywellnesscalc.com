@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zone 2 Heart Rate Calculator – Find Your Zone 2 Training Range | My Wellness Calc</title>
+  <meta name="description" content="Free Zone 2 heart rate calculator. Enter your age and resting heart rate to find your exact Zone 2 training range for fat burning and aerobic base building.">
+  <meta property="og:title" content="Zone 2 Heart Rate Calculator – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/zone-2-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group input,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .zone2-hero{background:linear-gradient(135deg,#e3f2fd,#bbdefb);border:1px solid #64b5f6;border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .zone2-label{font-size:.8rem;font-weight:600;color:#1565c0;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .zone2-range{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:#1565c0;line-height:1;}
+    .zone2-unit{font-size:1rem;color:#1976d2;margin-top:.25rem;}
+    .zone2-desc{font-size:.85rem;color:#1976d2;margin-top:.75rem;}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .stat-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .stat-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--charcoal);}
+    .stat-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .talk-test{background:var(--cream);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .talk-test h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem;}
+    .talk-test p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Zone 2 Heart Rate Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">❤️ Free Tool</span>
+      <h1>Zone 2 Heart Rate <em>Calculator</em></h1>
+      <p>Find your exact Zone 2 training range — the fat-burning, aerobic base-building sweet spot — based on your age and resting heart rate.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" id="age" placeholder="e.g. 35" min="10" max="100">
+        </div>
+        <div class="form-group">
+          <label>Resting Heart Rate <span>(optional)</span></label>
+          <input type="number" id="rhr" placeholder="e.g. 60 bpm" min="30" max="100">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Calculation Method</label>
+        <select id="method">
+          <option value="karvonen">Karvonen (Heart Rate Reserve) — more accurate</option>
+          <option value="maxhr">% of Max HR — simpler</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calculate()">Find my Zone 2 →</button>
+
+      <div class="result-box" id="result">
+        <div class="zone2-hero">
+          <div class="zone2-label">Your Zone 2 Range</div>
+          <div class="zone2-range" id="res-range">— – —</div>
+          <div class="zone2-unit">bpm</div>
+          <div class="zone2-desc" id="res-desc"></div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val" id="res-maxhr">—</div>
+            <div class="stat-label">Max Heart Rate (bpm)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-rhr">—</div>
+            <div class="stat-label">Resting HR Used (bpm)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-hrr">—</div>
+            <div class="stat-label">Heart Rate Reserve</div>
+          </div>
+        </div>
+        <div class="talk-test">
+          <h4>💬 The Talk Test for Zone 2</h4>
+          <p>In Zone 2, you should be able to hold a full conversation without gasping. If you can only say a few words, you're in Zone 3 or higher. If you could easily sing, you're probably in Zone 1. Adjust your pace until you can talk comfortably but not effortlessly.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>What is Zone 2 training?</h2>
+      <p>Zone 2 is the second of five heart rate training zones, sitting at 60–70% of your maximum heart rate (or 60–70% of your Heart Rate Reserve using the Karvonen method). It feels like a comfortable, sustainable effort — you can breathe through your nose and hold a conversation.</p>
+      <p>Despite feeling easy, Zone 2 is one of the most powerful training zones for long-term health and athletic performance. It targets the aerobic energy system directly, training your body to burn fat as its primary fuel source.</p>
+
+      <h3>Why Zone 2 matters so much</h3>
+      <p>Zone 2 training has gained enormous attention in endurance sports and longevity research. Here's why:</p>
+      <ul>
+        <li><strong>Builds mitochondrial density:</strong> Zone 2 increases the number and efficiency of mitochondria in your muscle cells — the engines that produce energy aerobically.</li>
+        <li><strong>Improves fat oxidation:</strong> Your body becomes better at burning fat for fuel, which matters both for endurance performance and body composition.</li>
+        <li><strong>Enhances cardiovascular efficiency:</strong> Stroke volume (how much blood your heart pumps per beat) increases, meaning your heart gets stronger with less stress.</li>
+        <li><strong>Supports recovery:</strong> Low enough intensity to promote blood flow and recovery without adding training stress.</li>
+        <li><strong>Longevity benefits:</strong> VO2 max — heavily influenced by Zone 2 training — is one of the strongest predictors of long-term health outcomes.</li>
+      </ul>
+
+      <h3>How much Zone 2 should you do?</h3>
+      <p>For recreational fitness, aim for 150–180 minutes of Zone 2 per week. Elite endurance athletes often do 80% of their total training volume in Zone 2 — the so-called "80/20 rule." Even 3 sessions of 45–60 minutes per week will produce meaningful aerobic adaptations over time.</p>
+
+      <h3>Best activities for Zone 2</h3>
+      <p>Any aerobic activity works — the key is keeping your heart rate in range. Running, cycling, rowing, swimming, and brisk walking are all effective. Cycling and rowing are especially useful because they're lower impact and easier to stay in Zone 2 without accidentally spiking into Zone 3.</p>
+
+      <h3>Karvonen vs. % of Max HR</h3>
+      <p>The <strong>Karvonen method</strong> accounts for your resting heart rate, making zones more personalised. It's particularly useful for people with a low or high resting HR. The <strong>% of Max HR method</strong> is simpler and works well for most people as a starting point.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How do I know if I'm in Zone 2?</div>
+          <div class="faq-a">Use the talk test: you should be able to speak full sentences without gasping. If you have a heart rate monitor, aim for the bpm range this calculator gives you. Many people are surprised how slow they need to go to stay in Zone 2 — especially beginners. It should feel almost too easy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is Zone 2 the same as the "fat burning zone"?</div>
+          <div class="faq-a">Largely yes. Zone 2 corresponds to what's often called the fat burning zone because fat oxidation is highest at this intensity. However, "fat burning" doesn't directly equal fat loss — total calorie balance matters more. Zone 2's real value is in building the aerobic engine that makes you fitter and healthier long-term.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I do Zone 2 every day?</div>
+          <div class="faq-a">Yes — Zone 2 is low enough intensity that most people can do it daily without excessive fatigue. That said, listen to your body. Most training plans suggest 3–5 Zone 2 sessions per week with rest or strength training on other days.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why is my Zone 2 pace so slow?</div>
+          <div class="faq-a">This is extremely common, especially for beginners. As aerobic fitness improves, you'll be able to run faster at the same heart rate. Many people need to walk or jog very slowly at first to stay in Zone 2. Don't be discouraged — this is normal and it gets better within weeks of consistent training.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's the difference between Zone 2 and Zone 3?</div>
+          <div class="faq-a">Zone 3 (70–80% max HR) starts to feel moderately hard — you can still talk but in shorter sentences. Zone 3 is aerobically beneficial but accumulates more fatigue than Zone 2. One of the most common training mistakes is doing most cardio in Zone 3 (too hard to be true Zone 2, too easy to be truly intense) — sometimes called "grey zone" training.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Heart rate zones are estimates based on population averages. Actual zones vary between individuals. If you have a cardiovascular condition or are new to exercise, consult a doctor before starting a training program.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="heart-rate-zone.html">❤️ Full Heart Rate Zone Calculator</a></li>
+        <li><a href="running-pace.html">🏃 Running Pace Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="one-rep-max.html">🏋️ One Rep Max Calculator</a></li>
+        <li><a href="protein-calculator.html">🥩 Protein Calculator</a></li>
+      </ul>
+    </div>
+    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+<script>
+function calculate() {
+  const age = parseInt(document.getElementById('age').value);
+  const rhrVal = parseInt(document.getElementById('rhr').value);
+  const method = document.getElementById('method').value;
+
+  if (!age || age < 10 || age > 100) { alert('Please enter a valid age.'); return; }
+
+  const maxHR = 220 - age;
+  const rhr = (!isNaN(rhrVal) && rhrVal >= 30 && rhrVal <= 100) ? rhrVal : 60;
+  const hrr = maxHR - rhr;
+
+  let lo, hi;
+  if (method === 'karvonen') {
+    lo = Math.round(rhr + hrr * 0.60);
+    hi = Math.round(rhr + hrr * 0.70);
+  } else {
+    lo = Math.round(maxHR * 0.60);
+    hi = Math.round(maxHR * 0.70);
+  }
+
+  document.getElementById('res-range').textContent = lo + ' – ' + hi;
+  document.getElementById('res-maxhr').textContent = maxHR;
+  document.getElementById('res-rhr').textContent = rhr;
+  document.getElementById('res-hrr').textContent = hrr;
+  document.getElementById('res-desc').textContent = 'Aerobic base building · Fat oxidation · Conversational pace';
+
+  const box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Calculator for Women Over 40 – Daily Protein Needs | My Wellness Calc</title>
+  <meta name="description" content="Free protein calculator designed for women over 40. Get your personalised daily protein target based on weight, activity level, and goals — muscle, fat loss, or healthy aging.">
+  <meta property="og:title" content="Protein Calculator for Women Over 40 – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/protein-calculator-women-over-40.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .unit-toggle{display:flex;gap:.5rem;margin-bottom:1.5rem;}
+    .unit-btn{flex:1;padding:.625rem;border:1.5px solid var(--border);border-radius:8px;background:white;font-size:.875rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+    .unit-btn.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group select,.form-group input{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group select:focus,.form-group input:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;background:var(--cream);border-radius:16px;padding:1.75rem;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .result-main{text-align:center;margin-bottom:1.5rem;}
+    .result-range{font-family:'Fraunces',serif;font-size:3rem;font-weight:300;color:var(--sage-dark);line-height:1;}
+    .result-unit{font-size:1rem;color:var(--mid);margin-top:.25rem;}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1rem;}
+    .result-item{background:white;border-radius:12px;padding:.875rem;text-align:center;}
+    .result-item-val{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:400;color:var(--charcoal);}
+    .result-item-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .menopause-note{background:white;border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-top:1rem;}
+    .menopause-note h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.4rem;}
+    .menopause-note p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.25rem 1.5rem;margin:1.25rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.4rem;}
+    .highlight-box p{font-size:.875rem;color:var(--mid);margin:0;line-height:1.6;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Protein Calculator for Women Over 40</div>
+    <div class="page-header">
+      <span class="tool-label">🥩 Free Tool</span>
+      <h1>Protein Calculator for <em>Women Over 40</em></h1>
+      <p>Get your personalised daily protein target — adjusted for the hormonal and metabolic changes that happen after 40, whether your goal is building muscle, losing fat, or healthy aging.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="unit-toggle">
+        <button class="unit-btn active" id="btn-metric" onclick="setUnit('metric')">Metric (kg / cm)</button>
+        <button class="unit-btn" id="btn-imperial" onclick="setUnit('imperial')">Imperial (lb / in)</button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Weight</label>
+          <input type="number" id="weight" placeholder="e.g. 65" min="30" max="300">
+        </div>
+        <div class="form-group" id="height-group">
+          <label>Height <span style="font-weight:400;color:var(--light);font-size:.8rem;">(optional)</span></label>
+          <input type="number" id="height" placeholder="e.g. 165" min="100" max="220">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age</label>
+          <select id="age-group">
+            <option value="40">40–49</option>
+            <option value="50">50–59</option>
+            <option value="60">60–69</option>
+            <option value="70">70+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Activity Level</label>
+          <select id="activity">
+            <option value="1.2">Sedentary (desk job, little exercise)</option>
+            <option value="1.375">Lightly active (1–3 days/week)</option>
+            <option value="1.55" selected>Moderately active (3–5 days/week)</option>
+            <option value="1.725">Very active (6–7 days/week)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Primary Goal</label>
+        <select id="goal">
+          <option value="maintain">Healthy aging / Maintenance</option>
+          <option value="muscle">Build or preserve muscle</option>
+          <option value="loss">Fat loss while keeping muscle</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Menopausal Status</label>
+        <select id="meno">
+          <option value="pre">Pre-menopausal</option>
+          <option value="peri">Peri-menopausal</option>
+          <option value="post">Post-menopausal</option>
+        </select>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate my protein needs →</button>
+
+      <div class="result-box" id="result">
+        <div class="result-main">
+          <div style="font-size:.8rem;font-weight:600;color:var(--sage-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;">Your Daily Protein Target</div>
+          <div class="result-range" id="res-range">— – —</div>
+          <div class="result-unit">grams per day</div>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="result-item-val" id="res-per-kg">—</div>
+            <div class="result-item-label">g per kg body weight</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-val" id="res-per-meal">—</div>
+            <div class="result-item-label">g per meal (3 meals)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-val" id="res-cal">—</div>
+            <div class="result-item-label">calories from protein</div>
+          </div>
+        </div>
+        <div class="menopause-note" id="meno-note">
+          <h4 id="meno-title">💡 Note for your life stage</h4>
+          <p id="meno-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>Why protein needs increase after 40</h2>
+      <p>After 40, several physiological shifts make protein more critical — and most women don't get enough. Understanding these changes explains why the standard RDA of 0.8g/kg is widely considered inadequate for this age group.</p>
+
+      <h3>Sarcopenia: muscle loss with age</h3>
+      <p>Starting in your 30s, muscle mass naturally declines at a rate of 3–8% per decade, accelerating after 60. This process — sarcopenia — directly affects metabolism, strength, and independence. Higher protein intake (combined with resistance training) is the single most effective way to slow it.</p>
+
+      <h3>Anabolic resistance</h3>
+      <p>Older muscles are less responsive to protein signals — a phenomenon called anabolic resistance. This means you need a higher dose of protein per meal (typically 30–40g rather than 20–25g) to trigger the same muscle-building response that younger people get from less.</p>
+
+      <h3>Hormonal changes and menopause</h3>
+      <p>The decline in estrogen during perimenopause and menopause accelerates muscle loss and makes it easier to gain body fat. Post-menopausal women have a particularly high need for dietary protein to counteract these hormonal effects on muscle tissue.</p>
+
+      <div class="highlight-box">
+        <h4>Recommended protein intake for women over 40</h4>
+        <p>Most sports nutrition and gerontology research now recommends 1.2–1.6g of protein per kg of body weight for active women over 40, with some researchers suggesting up to 1.8–2.0g/kg for those doing regular resistance training or in post-menopause.</p>
+      </div>
+
+      <h3>Spreading protein across the day</h3>
+      <p>Due to anabolic resistance, women over 40 benefit from distributing protein evenly across 3–4 meals rather than eating most of it in one sitting. Aim for at least 30g per meal to maximise muscle protein synthesis at each eating occasion.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Is 100g of protein a day enough for a woman over 40?</div>
+          <div class="faq-a">It depends on your weight and activity level. For a 65kg moderately active woman over 40, 100g/day (about 1.5g/kg) is a reasonable target. For heavier or more active women, or those focused on preserving muscle, 120–140g may be more appropriate. This calculator gives you a personalised estimate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I eat more protein after menopause?</div>
+          <div class="faq-a">Yes. Post-menopausal women experience accelerated muscle loss due to the drop in estrogen, and research suggests protein needs increase further at this stage. Aiming for the higher end of the recommended range (1.5–2.0g/kg) is a well-supported approach for post-menopausal women, especially those doing resistance training.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can too much protein damage kidneys?</div>
+          <div class="faq-a">For healthy women without pre-existing kidney disease, higher protein intakes (up to 2g/kg/day) are considered safe. The kidney concern largely applies to people with chronic kidney disease. If you have any kidney condition, consult your doctor before significantly increasing protein intake.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What are the best protein sources for women over 40?</div>
+          <div class="faq-a">Lean animal proteins (chicken, turkey, fish, eggs, Greek yogurt) provide complete amino acid profiles and are most efficiently used by muscle tissue. Plant proteins like legumes, tofu, and tempeh are also valuable but should be combined across the day to ensure all essential amino acids are covered. Prioritising leucine-rich sources (meat, dairy, eggs) supports muscle protein synthesis particularly well.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does protein help with menopause weight gain?</div>
+          <div class="faq-a">Yes — higher protein intake supports fat loss during menopause through several mechanisms: it increases satiety (keeping you fuller longer), preserves muscle mass during a calorie deficit (muscle burns more calories at rest), and has a higher thermic effect than carbs or fat (meaning more calories are burned digesting it). Combined with resistance training, adequate protein is the most evidence-based approach to managing body composition changes during menopause.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Protein recommendations are based on population-level research. Individual needs vary. If you have kidney disease, liver conditions, or other medical concerns, consult a healthcare professional before significantly changing your protein intake.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="protein-calculator.html">🥩 General Protein Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
+        <li><a href="body-fat-calculator.html">📏 Body Fat % Estimator</a></li>
+      </ul>
+    </div>
+    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+<script>
+let unit = 'metric';
+
+function setUnit(u) {
+  unit = u;
+  document.getElementById('btn-metric').classList.toggle('active', u === 'metric');
+  document.getElementById('btn-imperial').classList.toggle('active', u === 'imperial');
+  const wInput = document.getElementById('weight');
+  const hInput = document.getElementById('height');
+  if (u === 'metric') {
+    wInput.placeholder = 'e.g. 65 kg';
+    hInput.placeholder = 'e.g. 165 cm';
+  } else {
+    wInput.placeholder = 'e.g. 143 lb';
+    hInput.placeholder = 'e.g. 65 in';
+  }
+}
+
+function calculate() {
+  let weightRaw = parseFloat(document.getElementById('weight').value);
+  const ageGroup = document.getElementById('age-group').value;
+  const activity = parseFloat(document.getElementById('activity').value);
+  const goal = document.getElementById('goal').value;
+  const meno = document.getElementById('meno').value;
+
+  if (!weightRaw || weightRaw <= 0) { alert('Please enter your weight.'); return; }
+
+  let weightKg = unit === 'metric' ? weightRaw : weightRaw * 0.453592;
+
+  // Base multipliers by goal and age
+  let loMultiplier, hiMultiplier;
+  if (goal === 'maintain') {
+    loMultiplier = 1.0; hiMultiplier = 1.3;
+  } else if (goal === 'muscle') {
+    loMultiplier = 1.4; hiMultiplier = 1.8;
+  } else { // fat loss
+    loMultiplier = 1.2; hiMultiplier = 1.6;
+  }
+
+  // Boost for post-menopause and older age
+  if (meno === 'post') { loMultiplier += 0.1; hiMultiplier += 0.1; }
+  if (ageGroup === '60' || ageGroup === '70') { loMultiplier += 0.1; hiMultiplier += 0.1; }
+
+  // Activity boost
+  if (activity >= 1.725) { loMultiplier += 0.1; hiMultiplier += 0.1; }
+
+  const lo = Math.round(weightKg * loMultiplier);
+  const hi = Math.round(weightKg * hiMultiplier);
+  const mid = Math.round((lo + hi) / 2);
+  const perKg = (((loMultiplier + hiMultiplier) / 2)).toFixed(1);
+  const perMeal = Math.round(mid / 3);
+  const cal = Math.round(mid * 4);
+
+  document.getElementById('res-range').textContent = lo + ' – ' + hi;
+  document.getElementById('res-per-kg').textContent = perKg + 'g';
+  document.getElementById('res-per-meal').textContent = perMeal + 'g';
+  document.getElementById('res-cal').textContent = cal;
+
+  // Menopause note
+  const notes = {
+    pre: { title: '💡 Pre-menopausal note', text: 'In the pre-menopausal years, consistent protein intake helps maintain muscle mass and supports a healthy metabolism as estrogen levels begin to fluctuate. Resistance training alongside adequate protein is highly recommended.' },
+    peri: { title: '💡 Peri-menopausal note', text: 'During perimenopause, estrogen fluctuations accelerate muscle loss. This is a critical window to increase protein intake and begin or maintain resistance training. Prioritise 30g+ per meal to maximise muscle protein synthesis.' },
+    post: { title: '💡 Post-menopausal note', text: 'Post-menopausal women have significantly higher protein needs due to the loss of estrogen\'s muscle-protective effects. Research suggests 1.5–2.0g/kg is beneficial at this stage. Pair higher protein intake with regular strength training for the best outcomes.' }
+  };
+  document.getElementById('meno-title').textContent = notes[meno].title;
+  document.getElementById('meno-text').textContent = notes[meno].text;
+
+  const box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
