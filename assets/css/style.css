@@ -123,8 +123,8 @@ img { max-width: 100%; display: block; }
 }
 
 #nav-blog .dropdown-menu {
-  max-height: 80vh;
-  overflow-y: auto;
+  right: 0;
+  left: auto;
 }
 
 .dropdown.active .dropdown-menu { display: block; }
@@ -556,15 +556,15 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    position: absolute;
+    position: fixed;
     top: 64px;
     left: 0;
     right: 0;
+    bottom: 0;
     background: #fff;
     border-bottom: 1px solid var(--border);
     padding: 12px 20px 20px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    max-height: calc(100vh - 64px);
     overflow-y: auto;
   }
 
