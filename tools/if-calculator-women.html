@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intermittent Fasting Calculator for Women – Fasting Window Planner | My Wellness Calc</title>
+  <meta name="description" content="Free intermittent fasting calculator designed for women. Get your personalised fasting window based on your lifestyle, hormonal phase, and goals — 16:8, 14:10, 5:2 and more.">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/if-calculator-women.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <style>
+    :root{--fast:#d4845a;--fast-light:#fdf0e8;--eat-light:#f0f7f1;}
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-block;background:var(--fast-light);color:var(--fast);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--fast);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group select,.form-group input{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group select:focus,.form-group input:focus{outline:none;border-color:var(--fast);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .protocol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-bottom:1.25rem;}
+    .proto-btn{padding:.75rem .5rem;border:1.5px solid var(--border);border-radius:10px;background:var(--warm-white);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.8rem;color:var(--mid);font-weight:500;transition:all .2s;text-align:center;}
+    .proto-btn.active{background:var(--fast);color:white;border-color:var(--fast);}
+    .proto-btn .proto-name{font-size:1rem;font-weight:600;display:block;}
+    .calc-btn{width:100%;padding:1rem;background:var(--fast);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{opacity:.9;}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .window-blocks{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.25rem;}
+    .window-block{border-radius:14px;padding:1.25rem;}
+    .window-block.fasting{background:var(--fast-light);border:1px solid #f5d4b8;}
+    .window-block.eating{background:var(--eat-light);border:1px solid var(--sage-light);}
+    .window-icon{font-size:1.5rem;margin-bottom:.5rem;}
+    .window-type{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--light);margin-bottom:.25rem;}
+    .window-time{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:300;color:var(--charcoal);line-height:1.1;}
+    .window-label{font-size:.8rem;color:var(--mid);margin-top:.25rem;}
+    .rec-box{background:var(--cream);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .rec-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.4rem;}
+    .rec-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--fast-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--fast);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.protocol-grid{grid-template-columns:repeat(2,1fr)}.window-blocks{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Intermittent Fasting Calculator for Women</div>
+    <div class="page-header">
+      <span class="tool-label">⏱️ Free Tool</span>
+      <h1>Intermittent Fasting Calculator <em>for Women</em></h1>
+      <p>Get your personalised fasting window based on your lifestyle, hormonal phase, and goals. Women's bodies respond differently to fasting — this calculator accounts for that.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-group">
+        <label>Choose your fasting protocol</label>
+        <div class="protocol-grid">
+          <button class="proto-btn active" onclick="setProtocol(this,14,10)"><span class="proto-name">14:10</span>Beginner</button>
+          <button class="proto-btn" onclick="setProtocol(this,16,8)"><span class="proto-name">16:8</span>Popular</button>
+          <button class="proto-btn" onclick="setProtocol(this,18,6)"><span class="proto-name">18:6</span>Advanced</button>
+          <button class="proto-btn" onclick="setProtocol(this,20,4)"><span class="proto-name">20:4</span>Intensive</button>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>I usually wake up at</label>
+          <input type="time" id="wake-time" value="07:00">
+        </div>
+        <div class="form-group">
+          <label>Life stage</label>
+          <select id="life-stage">
+            <option value="regular">Regular cycle</option>
+            <option value="peri">Perimenopause</option>
+            <option value="post">Post-menopause</option>
+            <option value="pregnant">Pregnant / Breastfeeding</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Primary goal</label>
+        <select id="goal">
+          <option value="loss">Fat loss</option>
+          <option value="maintain">Maintenance / Health</option>
+          <option value="energy">Better energy & focus</option>
+          <option value="gut">Gut health & digestion</option>
+        </select>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Plan my fasting window →</button>
+
+      <div class="result-box" id="result">
+        <div class="window-blocks">
+          <div class="window-block fasting">
+            <div class="window-icon">🌙</div>
+            <div class="window-type">Fasting window</div>
+            <div class="window-time" id="res-fast-time">—</div>
+            <div class="window-label" id="res-fast-hours">— hours</div>
+          </div>
+          <div class="window-block eating">
+            <div class="window-icon">🥗</div>
+            <div class="window-type">Eating window</div>
+            <div class="window-time" id="res-eat-time">—</div>
+            <div class="window-label" id="res-eat-hours">— hours</div>
+          </div>
+        </div>
+        <div class="rec-box" id="rec-box">
+          <h4 id="rec-title">💡 Recommendation for you</h4>
+          <p id="rec-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>Why intermittent fasting is different for women</h2>
+      <p>Most intermittent fasting research has been conducted on men. Women's hormonal cycles — estrogen, progesterone, cortisol — respond differently to extended fasting, and what works brilliantly for a man can sometimes backfire for a woman. This doesn't mean fasting doesn't work for women — it very much does — but the approach often needs adjusting.</p>
+
+      <h3>The hormonal factor</h3>
+      <p>Women are more sensitive to caloric restriction signals. Extended fasting can trigger a stress response that elevates cortisol, which can disrupt the menstrual cycle, affect sleep, and in some cases slow metabolism. This is why many women do better with slightly shorter fasting windows (14:10 rather than 16:8) or with cycle-syncing their fasting protocol.</p>
+
+      <h3>Which protocol is right for women?</h3>
+      <ul>
+        <li><strong>14:10 (recommended starting point):</strong> Fast for 14 hours, eat within a 10-hour window. Gentler on hormones, easier to sustain, and still delivers meaningful metabolic benefits. Best for beginners and those with regular cycles.</li>
+        <li><strong>16:8:</strong> The most popular protocol. Works well for many women, particularly post-menopausal women where hormonal sensitivity is lower. May need adjusting during the luteal phase of the cycle.</li>
+        <li><strong>18:6 / 20:4:</strong> More intensive protocols. Generally better suited to experienced fasters. Not recommended during the week before menstruation or during perimenopause without professional guidance.</li>
+        <li><strong>5:2:</strong> Two non-consecutive days of very low calorie intake per week. Some women find this easier than daily time-restricted eating.</li>
+      </ul>
+
+      <h3>Cycle syncing your fast</h3>
+      <p>For women with regular cycles, adapting fasting intensity across the month can improve results and reduce side effects. During the follicular phase (days 1–14), estrogen is higher and women tend to tolerate longer fasts well. During the luteal phase (days 15–28), progesterone rises, hunger increases, and shorter fasting windows are often more sustainable and beneficial.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Is intermittent fasting safe for women?</div>
+          <div class="faq-a">For most healthy women, yes — especially shorter protocols like 14:10 or 16:8. However, intermittent fasting is not recommended during pregnancy or breastfeeding, and women with a history of disordered eating should approach it cautiously and ideally with professional support. Some women also find that extended fasting disrupts their menstrual cycle, which is a signal to shorten the fasting window.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should women fast differently to men?</div>
+          <div class="faq-a">Generally, yes. Women often do better with shorter fasting windows, particularly during the luteal phase of their cycle, and are more likely to experience hormonal disruption from aggressive fasting protocols. Starting conservatively (14:10) and adjusting based on how you feel is the most sensible approach.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I drink coffee or tea while fasting?</div>
+          <div class="faq-a">Black coffee, plain tea, and water are fine during the fasting window — they contain negligible calories and don't significantly break a fast. Adding milk, sweeteners, or cream will break the fast. Some people find that coffee helps manage hunger during fasting hours.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What should I eat during my eating window?</div>
+          <div class="faq-a">Intermittent fasting works best when combined with a nutritious diet — not as a licence to eat whatever you want. Prioritise protein (especially important for women over 40), vegetables, healthy fats, and complex carbohydrates. Breaking your fast with a protein-rich meal helps manage hunger for the rest of the eating window.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does it take to see results?</div>
+          <div class="faq-a">Most people notice improved energy and reduced bloating within 1–2 weeks. Weight loss results, if that's the goal, typically become visible after 4–8 weeks of consistent practice. Results vary significantly based on what you eat during the eating window, activity level, sleep, and individual metabolism.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Intermittent fasting is not appropriate for everyone. If you are pregnant, breastfeeding, have a history of eating disorders, or have a metabolic condition, consult a doctor before starting. Stop if you experience dizziness, extreme fatigue, or hormonal disruption.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="if-calculator.html">⏱️ General IF Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="protein-calculator-women-over-40.html">🥩 Protein (Women 40+)</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="water-intake.html">💧 Water Intake Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="footer-placeholder"></div>
+<script>
+var fastHours = 14, eatHours = 10;
+function setProtocol(btn, f, e) {
+  document.querySelectorAll('.proto-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  fastHours = f; eatHours = e;
+}
+function formatTime(h, m) {
+  var suffix = h >= 12 ? 'PM' : 'AM';
+  var h12 = h % 12 || 12;
+  return h12 + ':' + (m < 10 ? '0' : '') + m + ' ' + suffix;
+}
+function addMinutes(h, m, mins) {
+  var total = h * 60 + m + mins;
+  return { h: Math.floor(total / 60) % 24, m: total % 60 };
+}
+function calculate() {
+  var wakeVal = document.getElementById('wake-time').value;
+  var lifeStage = document.getElementById('life-stage').value;
+  var goal = document.getElementById('goal').value;
+  if (!wakeVal) { alert('Please enter your wake time.'); return; }
+  if (lifeStage === 'pregnant') {
+    document.getElementById('rec-title').textContent = '⚠️ Not recommended';
+    document.getElementById('rec-text').textContent = 'Intermittent fasting is not recommended during pregnancy or breastfeeding. Please consult your healthcare provider for appropriate nutrition guidance.';
+    document.getElementById('res-fast-time').textContent = '—';
+    document.getElementById('res-eat-time').textContent = '—';
+    document.getElementById('res-fast-hours').textContent = '—';
+    document.getElementById('res-eat-hours').textContent = '—';
+    document.getElementById('result').classList.add('show');
+    return;
+  }
+  var parts = wakeVal.split(':');
+  var wh = parseInt(parts[0]), wm = parseInt(parts[1]);
+  // Eating window starts 1hr after wake
+  var eatStart = addMinutes(wh, wm, 60);
+  var eatEnd = addMinutes(eatStart.h, eatStart.m, eatHours * 60);
+  var fastStart = eatEnd;
+  var fastEnd = addMinutes(fastStart.h, fastStart.m, fastHours * 60);
+  document.getElementById('res-eat-time').textContent = formatTime(eatStart.h, eatStart.m) + ' – ' + formatTime(eatEnd.h, eatEnd.m);
+  document.getElementById('res-eat-hours').textContent = eatHours + ' hours eating';
+  document.getElementById('res-fast-time').textContent = formatTime(fastStart.h, fastStart.m) + ' – ' + formatTime(fastEnd.h, fastEnd.m);
+  document.getElementById('res-fast-hours').textContent = fastHours + ' hours fasting';
+  // Recommendations
+  var recs = {
+    regular: { loss: 'For fat loss on a regular cycle, 14:10 or 16:8 works well. Consider shortening your window to 14:10 during the week before your period when hunger naturally increases.', maintain: '14:10 is a sustainable daily practice for general health maintenance. It aligns well with natural overnight fasting and doesn\'t stress the hormonal system.', energy: 'For better energy, try ending your eating window 3 hours before bed. This gives your digestive system time to rest overnight and often improves sleep quality and morning energy.', gut: 'A 14:10 window gives your gut 14 hours of rest, which supports the migrating motor complex — the self-cleaning mechanism of the digestive system. Consistent meal timing also helps regulate the gut microbiome.' },
+    peri: { loss: 'During perimenopause, cortisol sensitivity is higher. Start with 14:10 and only progress to 16:8 if you feel well. Avoid fasting on high-stress days.', maintain: '14:10 is ideal during perimenopause — long enough for metabolic benefits but gentle enough to avoid cortisol spikes that can disrupt sleep and hormones.', energy: 'Perimenopause often disrupts energy. A consistent 14:10 window with protein-rich meals at the start of your eating window can help stabilise blood sugar and energy levels.', gut: 'Gut changes are common during perimenopause. A regular 14-hour overnight fast supports gut health without adding hormonal stress.' },
+    post: { loss: 'Post-menopausal women often tolerate 16:8 well, as hormonal fluctuations are more stable. Combined with resistance training and adequate protein, this can be effective for fat loss.', maintain: '16:8 is a practical daily structure for post-menopausal women. Pairing it with high protein intake helps preserve muscle mass.', energy: 'Many post-menopausal women report improved energy and mental clarity with 16:8. Breaking the fast with protein and healthy fats tends to produce more stable energy than carbohydrate-heavy first meals.', gut: 'A consistent fasting window supports gut microbiome diversity and reduces inflammation — both relevant concerns post-menopause.' }
+  };
+  var stage = lifeStage === 'post' ? 'post' : lifeStage === 'peri' ? 'peri' : 'regular';
+  document.getElementById('rec-title').textContent = '💡 Recommendation for you';
+  document.getElementById('rec-text').textContent = recs[stage][goal];
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+</script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>
