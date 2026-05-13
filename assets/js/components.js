@@ -31,8 +31,8 @@
       if (a.href === window.location.href) a.classList.add('active');
     });
 
-    // Add "← All tools" back link for tool pages
-    if (isToolPage) {
+    // Add "← All tools" back link for tool pages (desktop only)
+    if (isToolPage && window.innerWidth > 768) {
       var nav = document.querySelector('nav');
       if (nav && !nav.querySelector('.nav-back')) {
         var back = document.createElement('a');
