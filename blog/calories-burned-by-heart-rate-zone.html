@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Many Calories Do You Burn by Heart Rate Zone? – My Wellness Calc</title>
+  <meta name="description" content="Wondering how many calories each heart rate zone actually burns? Here's a clear, honest breakdown with real numbers — and why zone matters less than you think.">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/calories-burned-by-heart-rate-zone.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <style>
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.15rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul,.article-body ol{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.25rem;}
+    .article-body strong{color:var(--charcoal);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:0;}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;}
+    .zone-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
+    .zone-table th{text-align:left;padding:.75rem 1rem;background:var(--cream);font-weight:600;font-size:.8rem;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;border-bottom:2px solid var(--border);}
+    .zone-table td{padding:.75rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);vertical-align:middle;}
+    .zone-table tr:last-child td{border-bottom:none;}
+    .zone-badge{display:inline-block;padding:.2rem .6rem;border-radius:100px;font-size:.75rem;font-weight:600;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;}
+    .tool-link:last-child{border-bottom:none;}
+    .tool-link:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › Calories Burned by Heart Rate Zone</div>
+    <span class="article-tag">Fitness</span>
+    <h1>How Many Calories Do You Burn by Heart Rate Zone?</h1>
+    <div class="article-meta">
+      <span>📅 May 2026</span>
+      <span>⏱️ 6 min read</span>
+      <span>🔥 Fitness</span>
+    </div>
+    <p class="article-intro">Your heart rate zone tells you how hard your body is working — and that directly determines how many calories you burn. But the relationship isn't as simple as "higher zone = better." Here's what the numbers actually look like, and how to use them for your goals.</p>
+
+    <div class="article-body">
+
+      <h2>Calories burned per zone: what the numbers look like</h2>
+      <p>The table below shows estimated calorie burn per 45-minute session for a 35-year-old, 70 kg (154 lb) person using the Keytel formula — one of the most validated heart-rate-based calorie estimation methods available.</p>
+
+      <table class="zone-table">
+        <thead>
+          <tr>
+            <th>Zone</th>
+            <th>% Max HR</th>
+            <th>Approx. HR</th>
+            <th>Cal/min</th>
+            <th>45 min total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="zone-badge" style="background:#e8f5e9;color:#388e3c;">Zone 1</span> Recovery</td>
+            <td>50–60%</td>
+            <td>~93–111 bpm</td>
+            <td>~5</td>
+            <td>~220 kcal</td>
+          </tr>
+          <tr>
+            <td><span class="zone-badge" style="background:#e3f2fd;color:#1976d2;">Zone 2</span> Aerobic Base</td>
+            <td>60–70%</td>
+            <td>~111–130 bpm</td>
+            <td>~7</td>
+            <td>~315 kcal</td>
+          </tr>
+          <tr>
+            <td><span class="zone-badge" style="background:#fff9c4;color:#f57f17;">Zone 3</span> Aerobic</td>
+            <td>70–80%</td>
+            <td>~130–148 bpm</td>
+            <td>~9</td>
+            <td>~405 kcal</td>
+          </tr>
+          <tr>
+            <td><span class="zone-badge" style="background:#ffe0b2;color:#e65100;">Zone 4</span> Threshold</td>
+            <td>80–90%</td>
+            <td>~148–167 bpm</td>
+            <td>~11</td>
+            <td>~495 kcal</td>
+          </tr>
+          <tr>
+            <td><span class="zone-badge" style="background:#fce4ec;color:#c62828;">Zone 5</span> VO2 Max</td>
+            <td>90–100%</td>
+            <td>~167–185 bpm</td>
+            <td>~13</td>
+            <td>~585 kcal</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>These are estimates for one specific profile. Your numbers will be different based on your age, weight, sex, and fitness level. Use the calculator below for a personalised result.</p>
+
+      <div class="cta-box">
+        <p>Get your personal calorie burn based on your actual heart rate and workout data.</p>
+        <a href="../tools/calories-burned-by-heart-rate.html" class="cta-link">Calories Burned Calculator →</a>
+      </div>
+
+      <h2>Why higher zones burn more — but it's not the whole story</h2>
+      <p>More intensity means more oxygen consumption, which means more energy (calories) burned per minute. This is straightforward physiology. But there are two important caveats that most people overlook.</p>
+
+      <h3>1. Duration makes the difference</h3>
+      <p>Zone 5 burns roughly 2.5× more calories per minute than Zone 1 — but you can't stay in Zone 5 for more than a few minutes before having to stop or drop intensity. A 45-minute Zone 2 session will almost always burn more total calories than a 10-minute Zone 5 effort, even though Zone 5's per-minute rate is higher.</p>
+
+      <h3>2. Afterburn is real but often overstated</h3>
+      <p>High-intensity exercise triggers excess post-exercise oxygen consumption (EPOC) — your body continues burning elevated calories for hours after the session. This is real. But research consistently shows EPOC adds roughly 6–15% on top of the calories burned during the workout itself — not the dramatic "48 hours of extra burn" sometimes advertised.</p>
+
+      <div class="highlight-box">
+        <h4>The practical bottom line</h4>
+        <p>For pure calorie burn in a single session, higher zones win — if you can sustain them for the full duration. For total weekly calorie burn, Zone 2 often comes out ahead because it can be done more frequently and for longer without accumulating excessive fatigue.</p>
+      </div>
+
+      <h2>Zone 2 and fat burning: what's actually happening</h2>
+      <p>Zone 2 has a specific advantage that the calorie numbers above don't capture: at this intensity, your body preferentially uses fat as fuel rather than carbohydrates. This matters for two reasons.</p>
+      <p>First, you're drawing down fat stores directly during the workout. Second, consistent Zone 2 training improves your body's ability to oxidize fat at all intensities — meaning over weeks and months, you become more metabolically efficient at using fat even during higher-intensity exercise.</p>
+      <p>This is why endurance athletes and longevity researchers like Dr. Peter Attia emphasize Zone 2 heavily — not just for the calories burned in the session, but for the metabolic adaptations it drives over time.</p>
+
+      <h2>Which zone should you train in for your goal?</h2>
+
+      <h3>For weight loss</h3>
+      <p>Total weekly calorie deficit is what drives fat loss, not the zone you train in. A mix of Zone 2 (sustainable, high frequency) and Zone 3–4 (higher intensity, lower frequency) tends to produce the best overall calorie expenditure while remaining sustainable long-term.</p>
+
+      <h3>For aerobic fitness and endurance</h3>
+      <p>Zone 2 should make up the majority of your training — roughly 80% by volume. This builds your aerobic base, improves mitochondrial function, and creates the foundation that makes higher-intensity efforts more effective.</p>
+
+      <h3>For cardiovascular health</h3>
+      <p>Any consistent aerobic exercise in Zones 1–4 improves cardiovascular markers. Zone 2 is often the most sustainable entry point, especially for those returning to exercise or managing cardiovascular risk factors.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Does Zone 2 burn more fat than Zone 4?</div>
+          <div class="faq-a">Zone 2 burns a higher proportion of fat per calorie — around 50–65% of calories from fat versus 30–40% in Zone 4. But Zone 4 burns more total calories per minute, which means total fat burned (not just the percentage) can be similar or higher in shorter high-intensity sessions. For fat loss, total calorie balance matters most. For metabolic health and fat oxidation capacity, Zone 2 offers unique long-term benefits.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How accurate are heart rate calorie estimates?</div>
+          <div class="faq-a">Research-based formulas like the Keytel method typically estimate within ±15% of actual calorie burn measured in a lab. Consumer fitness trackers vary widely — studies have found errors of 20–90% depending on the device and exercise type. Heart-rate-based formulas are more reliable than accelerometer-only estimates, especially for steady-state cardio.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does body weight affect how many calories you burn?</div>
+          <div class="faq-a">Yes, significantly. A heavier person burns more calories at the same heart rate because their body has more mass to move and their cardiovascular system works harder to support it. This is why the calculator asks for your weight — it's one of the most important variables in calorie estimation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I train in a higher zone to burn more calories?</div>
+          <div class="faq-a">Only if you can sustain it for a meaningful duration and recover adequately between sessions. Consistently training in Zone 4–5 without sufficient Zone 2 base work leads to excessive fatigue, higher injury risk, and diminishing returns. The most effective long-term approach is building a solid Zone 2 base, then layering in higher-intensity sessions strategically.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Calorie estimates are approximations based on validated research formulas. Individual results vary based on fitness level, body composition, and other physiological factors. Consult a healthcare provider before starting a new exercise program.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#">Calories by zone: the numbers</a></li>
+        <li><a href="#">Why higher zones aren't everything</a></li>
+        <li><a href="#">Zone 2 and fat burning</a></li>
+        <li><a href="#">Which zone for your goal?</a></li>
+      </ol>
+    </div>
+    <div class="related-tools">
+      <h4>Related tools</h4>
+      <a href="../tools/calories-burned-by-heart-rate.html" class="tool-link">🔥 Calories Burned by Heart Rate</a>
+      <a href="../tools/heart-rate-zone.html" class="tool-link">❤️ Heart Rate Zone Calculator</a>
+      <a href="../tools/zone-2-calculator.html" class="tool-link">💙 Zone 2 Calculator</a>
+      <a href="../tools/calorie-calculator.html" class="tool-link">📊 Calorie & TDEE Calculator</a>
+    </div>
+  </aside>
+</div>
+<div id="footer-placeholder"></div>
+<script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

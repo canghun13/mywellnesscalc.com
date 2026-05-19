@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calories Burned by Heart Rate Calculator – My Wellness Calc</title>
+  <meta name="description" content="Calculate how many calories you burn based on your heart rate, age, weight, and workout duration. See results by heart rate zone.">
+  <meta property="og:title" content="Calories Burned by Heart Rate Calculator – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/calories-burned-by-heart-rate.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group select,.form-group input{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group select:focus,.form-group input:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .result-hero{background:var(--sage-dark);border-radius:16px;padding:1.5rem 1.75rem;color:white;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;}
+    .result-hero-val{font-family:'Fraunces',serif;font-size:3rem;font-weight:300;line-height:1;}
+    .result-hero-label{font-size:.85rem;color:rgba(255,255,255,.7);margin-top:.25rem;}
+    .result-hero-sub{text-align:right;}
+    .result-hero-sub-val{font-family:'Fraunces',serif;font-size:1.5rem;}
+    .zones-breakdown{margin-top:1rem;}
+    .zones-breakdown h4{font-size:.8rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.75rem;}
+    .zone-cal-row{border-radius:12px;padding:.875rem 1.25rem;display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;margin-bottom:.5rem;}
+    .zone-cal-num{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;min-width:24px;}
+    .zone-cal-info .zone-name{font-weight:500;font-size:.875rem;}
+    .zone-cal-info .zone-bpm{font-size:.78rem;color:var(--mid);margin-top:.1rem;}
+    .zone-cal-kcal{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;white-space:nowrap;text-align:right;}
+    .zone-cal-kcal-label{font-size:.7rem;color:var(--light);text-align:right;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-hero{flex-direction:column}.result-hero-sub{text-align:left;}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Calories Burned by Heart Rate</div>
+    <div class="page-header">
+      <span class="tool-label">🔥 Free Tool</span>
+      <h1>Calories Burned by <em>Heart Rate</em></h1>
+      <p>Enter your heart rate, age, weight, and workout duration to see how many calories you burned — with a full breakdown by training zone.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" id="age" placeholder="e.g. 35" min="10" max="100">
+        </div>
+        <div class="form-group">
+          <label>Sex</label>
+          <select id="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Weight</label>
+          <input type="number" id="weight" placeholder="e.g. 70" min="30" max="250">
+        </div>
+        <div class="form-group">
+          <label>Unit</label>
+          <select id="unit">
+            <option value="kg">kg</option>
+            <option value="lbs">lbs</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Average heart rate <span>(bpm)</span></label>
+          <input type="number" id="hr" placeholder="e.g. 140" min="50" max="220">
+        </div>
+        <div class="form-group">
+          <label>Duration <span>(minutes)</span></label>
+          <input type="number" id="duration" placeholder="e.g. 45" min="1" max="600">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calculate()">Calculate calories burned →</button>
+
+      <div class="result-box" id="result">
+        <div class="result-hero">
+          <div>
+            <div class="result-hero-val" id="res-kcal">—</div>
+            <div class="result-hero-label">Calories burned</div>
+          </div>
+          <div class="result-hero-sub">
+            <div class="result-hero-sub-val" id="res-zone">—</div>
+            <div class="result-hero-label">Training zone</div>
+          </div>
+        </div>
+        <div class="zones-breakdown">
+          <h4>Calories burned if you had trained in each zone (same duration)</h4>
+          <div id="zone-rows"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>How calories burned by heart rate is calculated</h2>
+      <p>This calculator uses a validated formula derived from research by Keytel et al. (2005) published in the Journal of Sports Sciences. It estimates calorie burn based on heart rate, age, sex, and weight — all variables that significantly affect energy expenditure during exercise.</p>
+
+      <h3>The formula</h3>
+      <p>For men: Calories/min = (−55.0969 + 0.6309 × HR + 0.1988 × weight(kg) + 0.2017 × age) / 4.184</p>
+      <p>For women: Calories/min = (−20.4022 + 0.4472 × HR − 0.1263 × weight(kg) + 0.074 × age) / 4.184</p>
+      <p>This is significantly more accurate than MET-based estimates because it accounts for individual physiological differences through heart rate — your body's real-time signal of exercise intensity.</p>
+
+      <h3>Why heart rate predicts calorie burn</h3>
+      <p>Heart rate reflects oxygen consumption, which directly correlates with energy expenditure. As your heart rate rises, your muscles demand more oxygen to produce ATP — and that oxygen demand is what burns calories. This is why a 140 bpm workout burns more calories per minute for a deconditioned person than a fit athlete: their hearts are working harder relative to their capacity.</p>
+
+      <h3>Limitations to know</h3>
+      <ul>
+        <li><strong>Accuracy range:</strong> Formula-based estimates typically fall within ±15% of actual calorie burn. Lab testing (indirect calorimetry) is the only truly accurate method.</li>
+        <li><strong>Steady-state only:</strong> The formula is validated for steady-state cardio. It's less accurate for HIIT, weight training, or sport where heart rate fluctuates rapidly.</li>
+        <li><strong>Fitness level matters:</strong> Two people with the same heart rate may have different oxygen consumption levels depending on cardiovascular fitness — a factor this formula partially accounts for through the age variable.</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Which heart rate zone burns the most calories?</div>
+          <div class="faq-a">Higher heart rate zones burn more calories per minute. Zone 4–5 (80–100% of max HR) burns the most calories in a given time period. However, Zone 2 (60–70%) allows much longer sessions, so total calorie burn over a workout can be comparable or greater. For weight loss, total calories burned across the week matters more than burn rate per minute.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is heart rate the best way to measure calorie burn?</div>
+          <div class="faq-a">It's one of the best non-laboratory methods available. Chest-strap heart rate monitors paired with a formula like Keytel's are generally more accurate than fitness tracker estimates based on steps or motion alone. Optical wrist monitors are less accurate during high-intensity efforts. Lab-based indirect calorimetry remains the gold standard.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why do I burn fewer calories than my fitness tracker says?</div>
+          <div class="faq-a">Most consumer fitness trackers overestimate calorie burn by 20–50%, according to multiple validation studies. They often use simplified algorithms that don't account for individual variation. This calculator uses a more rigorous formula, so results may be lower than what your watch displays — but likely more accurate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does a higher heart rate always mean more calories burned?</div>
+          <div class="faq-a">Generally yes, but with caveats. If your heart rate is elevated by stress, caffeine, heat, or dehydration rather than actual muscle work, calorie burn may not match what the formula predicts. The formula is most accurate during genuine aerobic exercise where heart rate reflects true physical effort.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Calorie estimates are based on validated research formulas but are approximations. Individual calorie burn varies based on fitness level, body composition, and other factors. Consult a healthcare provider before starting a new exercise program.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="heart-rate-zone.html">❤️ Heart Rate Zone Calculator</a></li>
+        <li><a href="zone-2-calculator.html">💙 Zone 2 Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="running-pace.html">🏃 Running Pace Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="body-fat-calculator.html">📊 Body Fat Calculator</a></li>
+      </ul>
+    </div>
+    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+<script>
+const ZONES = [
+  {num:1, name:'Zone 1 – Recovery',     bpmLabel:'50–60% max HR', color:'#e8f5e9', border:'#81c784', lo:0.50, hi:0.60},
+  {num:2, name:'Zone 2 – Aerobic Base', bpmLabel:'60–70% max HR', color:'#e3f2fd', border:'#64b5f6', lo:0.60, hi:0.70},
+  {num:3, name:'Zone 3 – Aerobic',      bpmLabel:'70–80% max HR', color:'#fff9c4', border:'#ffd54f', lo:0.70, hi:0.80},
+  {num:4, name:'Zone 4 – Threshold',    bpmLabel:'80–90% max HR', color:'#ffe0b2', border:'#ffb74d', lo:0.80, hi:0.90},
+  {num:5, name:'Zone 5 – VO2 Max',      bpmLabel:'90–100% max HR',color:'#fce4ec', border:'#f48fb1', lo:0.90, hi:1.00},
+];
+
+function keytel(hr, weightKg, age, sex) {
+  let calPerMin;
+  if (sex === 'male') {
+    calPerMin = (-55.0969 + 0.6309 * hr + 0.1988 * weightKg + 0.2017 * age) / 4.184;
+  } else {
+    calPerMin = (-20.4022 + 0.4472 * hr - 0.1263 * weightKg + 0.074 * age) / 4.184;
+  }
+  return Math.max(0, calPerMin);
+}
+
+function getZone(hr, maxHR) {
+  const pct = hr / maxHR;
+  if (pct < 0.60) return 1;
+  if (pct < 0.70) return 2;
+  if (pct < 0.80) return 3;
+  if (pct < 0.90) return 4;
+  return 5;
+}
+
+function calculate() {
+  const age = parseInt(document.getElementById('age').value);
+  const sex = document.getElementById('sex').value;
+  const weightRaw = parseFloat(document.getElementById('weight').value);
+  const unit = document.getElementById('unit').value;
+  const hr = parseInt(document.getElementById('hr').value);
+  const duration = parseInt(document.getElementById('duration').value);
+
+  if (!age || age < 10 || age > 100) { alert('Please enter a valid age.'); return; }
+  if (!weightRaw || weightRaw <= 0) { alert('Please enter a valid weight.'); return; }
+  if (!hr || hr < 50 || hr > 220) { alert('Please enter a valid heart rate (50–220 bpm).'); return; }
+  if (!duration || duration < 1) { alert('Please enter a valid duration.'); return; }
+
+  const weightKg = unit === 'lbs' ? weightRaw * 0.453592 : weightRaw;
+  const maxHR = 220 - age;
+  const calPerMin = keytel(hr, weightKg, age, sex);
+  const totalCal = Math.round(calPerMin * duration);
+  const zone = getZone(hr, maxHR);
+
+  document.getElementById('res-kcal').textContent = totalCal.toLocaleString() + ' kcal';
+  document.getElementById('res-zone').textContent = 'Zone ' + zone;
+
+  // Zone breakdown
+  const rows = document.getElementById('zone-rows');
+  rows.innerHTML = '';
+  ZONES.forEach(z => {
+    const midPct = (z.lo + z.hi) / 2;
+    const zoneHR = Math.round(maxHR * midPct);
+    const zCal = Math.round(keytel(zoneHR, weightKg, age, sex) * duration);
+    const isActive = z.num === zone;
+    rows.innerHTML += `
+      <div class="zone-cal-row" style="background:${z.color};border:1.5px solid ${isActive ? z.border : 'transparent'};">
+        <div class="zone-cal-num" style="color:${z.border};">${z.num}</div>
+        <div class="zone-cal-info">
+          <div class="zone-name">${z.name}${isActive ? ' ← your session' : ''}</div>
+          <div class="zone-bpm">${z.bpmLabel} · ~${zoneHR} bpm</div>
+        </div>
+        <div>
+          <div class="zone-cal-kcal">${zCal.toLocaleString()}</div>
+          <div class="zone-cal-kcal-label">kcal</div>
+        </div>
+      </div>`;
+  });
+
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
