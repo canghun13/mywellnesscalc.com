@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAF Heart Rate Calculator – Maffetone 180 Formula | My Wellness Calc</title>
+  <meta name="description" content="Calculate your MAF heart rate using the Maffetone 180 Formula. Find your personalised maximum aerobic function heart rate for fat-burning, aerobic base training.">
+  <meta property="og:title" content="MAF Heart Rate Calculator – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/maf-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group input,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--sage);}
+    .status-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.25rem;}
+    .status-btn{padding:.875rem 1rem;border:1.5px solid var(--border);border-radius:12px;background:var(--warm-white);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--mid);font-weight:400;transition:all .2s;text-align:left;line-height:1.4;}
+    .status-btn .status-title{font-weight:600;color:var(--charcoal);display:block;margin-bottom:.15rem;font-size:.85rem;}
+    .status-btn.active{background:var(--sage-light);border-color:var(--sage-dark);color:var(--sage-dark);}
+    .status-btn.active .status-title{color:var(--sage-dark);}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .maf-hero{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border:1px solid #a5d6a7;border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .maf-label{font-size:.8rem;font-weight:600;color:#2e7d32;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .maf-value{font-family:'Fraunces',serif;font-size:4rem;font-weight:300;color:#2e7d32;line-height:1;}
+    .maf-unit{font-size:1rem;color:#388e3c;margin-top:.25rem;}
+    .maf-range{font-size:.9rem;color:#388e3c;margin-top:.5rem;font-weight:500;}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .stat-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .stat-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--charcoal);}
+    .stat-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .adj-box{background:var(--cream);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .adj-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.4rem;}
+    .adj-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-section li{margin-bottom:.4rem;}
+    .compare-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;}
+    .compare-table th{background:var(--sage-light);color:var(--sage-dark);font-size:.8rem;font-weight:600;padding:.75rem 1rem;text-align:left;}
+    .compare-table td{font-size:.85rem;color:var(--mid);padding:.75rem 1rem;border-bottom:1px solid var(--border);line-height:1.5;}
+    .compare-table tr:last-child td{border-bottom:none;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.status-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › MAF Heart Rate Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">❤️ Free Tool</span>
+      <h1>MAF Heart Rate <em>Calculator</em></h1>
+      <p>Calculate your Maximum Aerobic Function (MAF) heart rate using Dr. Phil Maffetone's 180 Formula. Find your personalised aerobic training ceiling — the upper limit for fat-burning, low-stress aerobic base work.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" id="age" placeholder="e.g. 38" min="16" max="80">
+      </div>
+
+      <div class="form-group">
+        <label>Your training and health status <span>— select the option that best describes you</span></label>
+        <div class="status-grid">
+          <button class="status-btn" onclick="setStatus(this, -10)" data-adj="-10">
+            <span class="status-title">Injured or ill</span>
+            Recovering from illness, injury, or major health event
+          </button>
+          <button class="status-btn" onclick="setStatus(this, -5)" data-adj="-5">
+            <span class="status-title">Inconsistent training</span>
+            Off and on with exercise; haven't trained regularly in 2+ years
+          </button>
+          <button class="status-btn active" onclick="setStatus(this, 0)" data-adj="0">
+            <span class="status-title">Consistent training</span>
+            Training regularly for at least 2 years with no major issues
+          </button>
+          <button class="status-btn" onclick="setStatus(this, 5)" data-adj="+5">
+            <span class="status-title">Progressing well</span>
+            2+ years of consistent training with clear fitness improvements
+          </button>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate my MAF heart rate →</button>
+
+      <div class="result-box" id="result">
+        <div class="maf-hero">
+          <div class="maf-label">Your MAF Heart Rate</div>
+          <div class="maf-value" id="res-maf">—</div>
+          <div class="maf-unit">bpm (upper limit)</div>
+          <div class="maf-range" id="res-range">Training zone: — – — bpm</div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val" id="res-base">—</div>
+            <div class="stat-label">Base (180 − age)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-adj">—</div>
+            <div class="stat-label">Adjustment applied</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-maf2">—</div>
+            <div class="stat-label">MAF upper limit (bpm)</div>
+          </div>
+        </div>
+        <div class="adj-box">
+          <h4 id="adj-title">💡 What this means</h4>
+          <p id="adj-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>What is the MAF 180 Formula?</h2>
+      <p>The MAF (Maximum Aerobic Function) 180 Formula was developed by Dr. Phil Maffetone in the 1980s after years of working with endurance athletes. The core calculation is simple: <strong>180 minus your age</strong>, adjusted based on your current health and training history. The result is your MAF heart rate — the upper ceiling for aerobic base training.</p>
+      <p>Unlike percentage-based zone calculations (like the standard Zone 2 approach), the MAF formula doesn't rely on estimated maximum heart rate. Instead, it uses age and individual health status to arrive at a personalised number that reflects your body's actual aerobic threshold more accurately for many people.</p>
+      <p>Training at or below your MAF heart rate ensures you're working primarily within the aerobic energy system — burning fat as your main fuel, building mitochondrial density, and developing cardiovascular efficiency without triggering the stress hormones and recovery burden associated with higher-intensity work.</p>
+
+      <h3>The four adjustment categories</h3>
+      <p>Maffetone built adjustment factors into the formula to account for individual variation. These are applied to the base number (180 − age):</p>
+      <ul>
+        <li><strong>−10 bpm:</strong> If you are recovering from a major illness, injury, surgery, or overtraining syndrome. Also applies if you are on regular medication for a chronic condition, or have frequent illness (more than two colds per year).</li>
+        <li><strong>−5 bpm:</strong> If you have been inconsistent with training (more than two years without regular exercise), or if you are just starting out. Also applies if you have noticed regression in your fitness or performance recently.</li>
+        <li><strong>No adjustment (0):</strong> If you have been training consistently for at least two years with no major health issues, injuries, or setbacks.</li>
+        <li><strong>+5 bpm:</strong> If you have trained consistently for two or more years and have been making clear, measurable improvements in fitness and performance without illness or injury setbacks.</li>
+      </ul>
+
+      <h3>Your MAF training zone</h3>
+      <p>Once you have your MAF heart rate (the upper limit), your aerobic training zone extends from <strong>10 bpm below your MAF up to your MAF</strong>. For example, if your MAF is 140 bpm, your training zone is 130–140 bpm. Most of your aerobic base training should be done within this 10-bpm window, with the aim of staying at or below the ceiling rather than always pushing to it.</p>
+
+      <h2>MAF vs Zone 2: what's the difference?</h2>
+      <p>Both MAF training and Zone 2 training target the aerobic energy system, but they arrive at the target heart rate differently. Here's how they compare:</p>
+
+      <table class="compare-table">
+        <tr>
+          <th>Feature</th>
+          <th>MAF (Maffetone)</th>
+          <th>Zone 2 (% of Max HR)</th>
+        </tr>
+        <tr>
+          <td>Calculation basis</td>
+          <td>Age + health/training status</td>
+          <td>Estimated max heart rate</td>
+        </tr>
+        <tr>
+          <td>Accounts for individual health</td>
+          <td>Yes — adjustment factors</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Relies on max HR estimate</td>
+          <td>No</td>
+          <td>Yes (often inaccurate)</td>
+        </tr>
+        <tr>
+          <td>Result</td>
+          <td>Single upper-limit number</td>
+          <td>A range (60–70% max HR)</td>
+        </tr>
+        <tr>
+          <td>Tends to be</td>
+          <td>More conservative</td>
+          <td>Sometimes higher</td>
+        </tr>
+        <tr>
+          <td>Best for</td>
+          <td>Building aerobic base; injury prevention</td>
+          <td>General aerobic fitness guidance</td>
+        </tr>
+      </table>
+
+      <p>For many people, especially those with injury history, inconsistent training, or health conditions, the MAF formula gives a more conservative and therefore safer training ceiling than a standard Zone 2 calculation. If you find MAF and Zone 2 give you very different numbers, it's worth reflecting on which adjustment category applies to you honestly.</p>
+
+      <h3>Why training below your MAF matters</h3>
+      <p>Many people — particularly those coming from high-intensity backgrounds — find MAF training frustratingly slow at first. That's by design. When you consistently exceed your aerobic threshold (your MAF heart rate), you begin recruiting the anaerobic energy system and burning glycogen rather than fat. Over time, this pattern limits aerobic development, increases recovery demands, and can lead to a plateau or regression in performance.</p>
+      <p>By staying strictly below MAF, even when it means slowing to a walk, you allow the aerobic system to develop fully. As aerobic capacity improves, your pace at the same heart rate will increase — meaning you'll be running faster at the same effort over the weeks and months ahead. This is often called the "MAF test": tracking your pace at your MAF heart rate over time is one of the clearest measures of aerobic progress.</p>
+
+      <h3>How long does MAF training take to work?</h3>
+      <p>Most athletes notice measurable aerobic improvement — running or cycling faster at the same MAF heart rate — within 4 to 8 weeks of consistent, disciplined low-HR training. Full aerobic base development, where the gains become significant and sustained, typically takes 3 to 6 months. Maffetone recommends a dedicated base-building phase of at least 3 months before reintroducing any high-intensity work.</p>
+      <p>Consistency matters far more than session length. Three to five sessions per week of 30–60 minutes each, all kept below MAF, will produce better long-term aerobic development than occasional longer efforts that drift above the ceiling.</p>
+
+      <h3>Practical tips for MAF training</h3>
+      <ul>
+        <li><strong>Use a heart rate monitor you trust:</strong> A chest strap is more accurate than a wrist optical sensor, especially during running. You need real-time feedback to stay disciplined about the ceiling.</li>
+        <li><strong>Don't chase the number:</strong> The goal is to stay at or below MAF, not to constantly push up to it. Many of your sessions should be done comfortably below the ceiling.</li>
+        <li><strong>Accept the pace:</strong> Especially in the first few weeks, MAF training will feel very easy — often disconcertingly so. Walking sections are completely normal and expected.</li>
+        <li><strong>Track your MAF test:</strong> Once a month, do a timed 5 km or 30-minute effort at exactly your MAF heart rate. Record your pace. This is your clearest measure of aerobic progress.</li>
+        <li><strong>Avoid intensity for the first phase:</strong> During a dedicated base-building phase (ideally 3 months), eliminate hard intervals and tempo work. All cardio should be aerobic.</li>
+        <li><strong>Reassess your category every 3–6 months:</strong> As fitness improves, you may move into a higher adjustment category. Recalculate accordingly.</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How is MAF different from Zone 2?</div>
+          <div class="faq-a">Both target the aerobic energy system, but the calculation method differs. Zone 2 is typically defined as 60–70% of your estimated maximum heart rate (220 − age). MAF uses 180 − age adjusted for health and training history. MAF doesn't rely on max HR estimation and accounts for individual circumstances. For many people, especially those with injury history or inconsistent training, MAF gives a more conservative (and safer) ceiling than a standard Zone 2 calculation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if MAF gives me a very low number?</div>
+          <div class="faq-a">This is common, especially for older adults or those who apply a negative adjustment. A MAF of 120 bpm or even lower is entirely valid — it may mean brisk walking is your aerobic training pace right now. That's not a problem; it's simply where your aerobic base needs to be built from. As fitness improves, your pace at that heart rate will increase even if the number itself doesn't change much.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I do strength training while doing MAF aerobic base building?</div>
+          <div class="faq-a">Yes — strength training doesn't conflict with MAF base building. The MAF protocol applies to aerobic cardio sessions only. Lifting, bodyweight work, and resistance training can continue normally during a base-building phase. Just keep your aerobic cardio sessions strictly below your MAF ceiling.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is the MAF formula accurate for older athletes?</div>
+          <div class="faq-a">The MAF formula was designed for ages roughly 16–65. For athletes over 65, the resulting number can become quite low (e.g., 180 − 70 = 110 bpm), which may feel extremely conservative. Maffetone acknowledged this and suggested older athletes who are genuinely fit and healthy could apply the +5 adjustment if they meet the criteria. Individual response varies, and working with a coach familiar with MAF training can help calibrate the formula for older athletes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I know which adjustment category to choose?</div>
+          <div class="faq-a">Be honest with yourself. If you've had any illness, injury, or health setback in the past year, apply at least the −5 adjustment. If you're returning after a significant break, use −5 or −10. If you've been training consistently for 2+ years with no problems, use 0. The +5 is reserved for athletes who have genuinely been progressing — not just training, but getting measurably fitter. When in doubt, the more conservative option is safer and still produces excellent results.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How often should I recalculate my MAF heart rate?</div>
+          <div class="faq-a">Your MAF heart rate changes with age (it decreases by 1 bpm per year) and can change if your health or training status category shifts. A practical approach is to recalculate every 6–12 months, or immediately if there's a significant change in your health or training consistency. Even if the number stays the same, the pace you can achieve at that heart rate should increase as fitness improves.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> The MAF 180 Formula is an estimation tool based on population data. Individual aerobic thresholds vary. If you have cardiovascular disease, a heart condition, or other serious health concerns, consult a doctor before beginning any exercise programme. Heart rate zones are starting points — adjust based on how your body responds over time.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="zone-2-calculator.html">❤️ Zone 2 Heart Rate Calculator</a></li>
+        <li><a href="heart-rate-zone.html">❤️ Full Heart Rate Zone Calculator</a></li>
+        <li><a href="calories-burned-by-heart-rate.html">🔥 Calories Burned by Heart Rate</a></li>
+        <li><a href="running-pace.html">🏃 Running Pace Calculator</a></li>
+        <li><a href="protein-calculator.html">🥩 Protein Calculator</a></li>
+      </ul>
+    </div>
+    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+<script>
+var selectedAdj = 0;
+
+function setStatus(btn, adj) {
+  document.querySelectorAll('.status-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  selectedAdj = adj;
+}
+
+function calculate() {
+  var age = parseInt(document.getElementById('age').value);
+  if (!age || age < 16 || age > 80) { alert('Please enter a valid age between 16 and 80.'); return; }
+
+  var base = 180 - age;
+  var maf = base + selectedAdj;
+  var zoneLo = maf - 10;
+
+  document.getElementById('res-maf').textContent = maf;
+  document.getElementById('res-range').textContent = 'Training zone: ' + zoneLo + ' – ' + maf + ' bpm';
+  document.getElementById('res-base').textContent = base;
+  document.getElementById('res-adj').textContent = (selectedAdj >= 0 ? '+' : '') + selectedAdj + ' bpm';
+  document.getElementById('res-maf2').textContent = maf + ' bpm';
+
+  var adjTitle = '💡 What this means for your training';
+  var adjText = '';
+
+  if (selectedAdj === -10) {
+    adjText = 'Your MAF heart rate reflects a recovery or health-limited phase. Training strictly below ' + maf + ' bpm gives your body the low-stress aerobic stimulus it needs while you recover. This may mean walking pace for now — that\'s completely fine and still builds your aerobic base.';
+  } else if (selectedAdj === -5) {
+    adjText = 'Your adjusted MAF reflects a rebuilding phase. Stay disciplined below ' + maf + ' bpm even when it feels very slow. Consistency at this ceiling for 8–12 weeks will build a foundation that makes future training more sustainable and effective.';
+  } else if (selectedAdj === 0) {
+    adjText = 'Your MAF heart rate of ' + maf + ' bpm is the ceiling for all aerobic base training. Aim to keep most of your cardio sessions in the ' + zoneLo + '–' + maf + ' bpm range. Over time, your pace at this heart rate should improve measurably.';
+  } else {
+    adjText = 'Your +5 adjustment reflects consistent progress over two or more years. Your MAF ceiling of ' + maf + ' bpm gives you slightly more aerobic range to work with. Continue tracking your MAF test pace monthly to measure ongoing aerobic improvement.';
+  }
+
+  document.getElementById('adj-title').textContent = adjTitle;
+  document.getElementById('adj-text').textContent = adjText;
+
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
