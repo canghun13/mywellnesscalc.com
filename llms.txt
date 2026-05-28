@@ -1,0 +1,73 @@
+# MyWellnessCalc
+
+> MyWellnessCalc is a free wellness calculator and health information site. It provides accurate, research-backed calculators and articles covering fitness, nutrition, body composition, sleep, and lifestyle health.
+
+## Calculators
+
+### Body & Weight
+- [BMI Calculator](https://mywellnesscalc.com/tools/bmi-calculator.html): Free BMI calculator. Enter height and weight to find Body Mass Index and understand what it means for health.
+- [Body Fat Percentage Calculator](https://mywellnesscalc.com/tools/body-fat-calculator.html): Estimates body fat percentage using the U.S. Navy method with a tape measure — no calipers needed.
+- [Ideal Body Weight Calculator](https://mywellnesscalc.com/tools/ideal-weight.html): Calculates healthy weight range based on height using four medical formulas: Devine, Robinson, Miller, and Hamwi.
+
+### Nutrition
+- [Calorie & TDEE Calculator](https://mywellnesscalc.com/tools/calorie-calculator.html): Calculates Total Daily Energy Expenditure based on age, weight, height, and activity level.
+- [Macro Calculator](https://mywellnesscalc.com/tools/macro-calculator.html): Finds ideal daily protein, carbohydrate, and fat targets based on calories, body weight, and fitness goals.
+- [Protein Intake Calculator](https://mywellnesscalc.com/tools/protein-calculator.html): Calculates optimal daily protein target based on weight, activity level, and goals — muscle building, fat loss, or maintenance.
+- [Protein Calculator for Women Over 40](https://mywellnesscalc.com/tools/protein-calculator-women-over-40.html): Personalised daily protein target for women over 40 based on weight, activity level, and goals.
+- [Vitamin D Calculator](https://mywellnesscalc.com/tools/vitamin-d-calculator.html): Calculates daily Vitamin D needs based on age, sun exposure, skin tone, and lifestyle.
+
+### Fitness & Heart Rate
+- [Heart Rate Zone Calculator](https://mywellnesscalc.com/tools/heart-rate-zone.html): Calculates all 5 training heart rate zones for fat burn, cardio, and peak performance based on age and resting heart rate.
+- [Zone 2 Heart Rate Calculator](https://mywellnesscalc.com/tools/zone-2-calculator.html): Finds exact Zone 2 training range for fat burning and aerobic base building using age and resting heart rate.
+- [MAF Heart Rate Calculator](https://mywellnesscalc.com/tools/maf-calculator.html): Calculates Maximum Aerobic Function heart rate using the Maffetone 180 Formula, adjusted for individual health and training status.
+- [Calories Burned by Heart Rate Calculator](https://mywellnesscalc.com/tools/calories-burned-by-heart-rate.html): Calculates calories burned based on heart rate, age, weight, and workout duration.
+- [One Rep Max Calculator](https://mywellnesscalc.com/tools/one-rep-max.html): Estimates maximum lift (1RM) for bench press, squat, deadlift and more using proven formulas with training percentages.
+- [Running Pace Calculator](https://mywellnesscalc.com/tools/running-pace.html): Calculates finish time, required pace, or distance for any race — 5K, 10K, half marathon, or marathon.
+
+### Lifestyle
+- [Water Intake Calculator](https://mywellnesscalc.com/tools/water-intake.html): Personalised daily water intake recommendation based on weight, activity level, and climate.
+- [Sleep Cycle Calculator](https://mywellnesscalc.com/tools/sleep-calculator.html): Finds the best bedtime or wake-up time aligned with natural 90-minute sleep cycles.
+- [Intermittent Fasting Calculator](https://mywellnesscalc.com/tools/if-calculator.html): Sets fasting protocol (16:8, 18:6, 20:4, 5:2) and calculates exact eat and fast windows for any start time.
+- [Intermittent Fasting Calculator for Women](https://mywellnesscalc.com/tools/if-calculator-women.html): Personalised fasting window for women based on lifestyle, hormonal phase, and goals.
+
+## Articles
+
+### Nutrition
+- [How Much Protein Do You Actually Need Per Day?](https://mywellnesscalc.com/blog/protein-how-much-do-you-need.html): How much protein you actually need based on goals, body weight, and activity level.
+- [How Much Protein Do Women Over 40 Actually Need?](https://mywellnesscalc.com/blog/protein-needs-women-over-40.html): Protein needs after 40, perimenopause, and menopause — what the research says.
+- [High Protein Foods: The Complete List](https://mywellnesscalc.com/blog/high-protein-foods.html): Best high-protein foods with exact protein amounts per serving — animal and plant-based sources.
+- [High Protein Breakfast Ideas for Women Over 40](https://mywellnesscalc.com/blog/high-protein-breakfast-women-over-40.html): Practical breakfasts hitting 30g+ protein to support muscle, metabolism, and hormonal health.
+- [High Protein Lunch Ideas for Women Over 40](https://mywellnesscalc.com/blog/high-protein-lunch-women-over-40.html): Why protein at lunch matters more than most people think, and 10 practical meals delivering 30g+.
+- [How to Calculate Your Ideal Calorie Deficit for Weight Loss](https://mywellnesscalc.com/blog/calorie-deficit-for-weight-loss.html): How to calculate the right calorie deficit for fat loss without losing muscle.
+- [TDEE vs BMR: What's the Difference and Why It Matters](https://mywellnesscalc.com/blog/tdee-vs-bmr.html): How to understand both calorie numbers and use them to reach your goals.
+- [Vitamin D Deficiency: Symptoms, Causes, and How Much You Need](https://mywellnesscalc.com/blog/vitamin-d-deficiency.html): Signs, causes, how much Vitamin D you actually need, and whether to supplement.
+- [What Is Metabolism — And Can You Actually Boost It?](https://mywellnesscalc.com/blog/what-is-metabolism.html): How metabolism works, what affects it, and which metabolism boosters are backed by evidence.
+- [Creatine: Do You Actually Need It?](https://mywellnesscalc.com/blog/creatine-do-you-need-it.html): An honest, research-backed look at what creatine does and who benefits.
+
+### Fitness & Heart Rate
+- [Zone 2 Heart Rate Training for Beginners](https://mywellnesscalc.com/blog/zone-2-heart-rate-training-beginners.html): How to find your Zone 2 range, why it matters, and how to stay in it during workouts.
+- [How to Improve Your Zone 2 Fitness](https://mywellnesscalc.com/blog/how-to-improve-zone-2-fitness.html): Training structure, progress tracking, and how to break through common Zone 2 plateaus.
+- [MAF Training for Beginners](https://mywellnesscalc.com/blog/maf-training-for-beginners.html): Complete guide to MAF training using the Maffetone 180 Formula — how to calculate MAF heart rate and put it into practice.
+- [Zone 2 vs HIIT: Which Is Better for Fat Loss?](https://mywellnesscalc.com/blog/zone-2-vs-hiit-fat-loss.html): What the research says about Zone 2 and HIIT for fat loss, and how to combine them.
+- [Fat Burning Heart Rate Zone: How to Calculate and Use It](https://mywellnesscalc.com/blog/fat-burning-heart-rate-zone.html): What the fat burning heart rate zone is, how to calculate it, and whether it actually helps lose fat.
+- [How Many Calories Do You Burn by Heart Rate Zone?](https://mywellnesscalc.com/blog/calories-burned-by-heart-rate-zone.html): Calories burned in each training zone — and why zone matters less than most people think.
+- [How Many Calories Do You Burn Walking?](https://mywellnesscalc.com/blog/calories-burned-walking.html): What affects calorie burn while walking and how to estimate it accurately.
+- [How to Build Muscle After 40](https://mywellnesscalc.com/blog/build-muscle-after-40.html): What the research says about training, protein, recovery, and hormone changes for building muscle after 40.
+- [Best Time to Exercise: Morning vs Evening](https://mywellnesscalc.com/blog/best-time-to-exercise.html): What the research says about workout timing, fat loss, performance, and consistency.
+- [One Rep Max Calculator Guide](https://mywellnesscalc.com/tools/one-rep-max.html): How to estimate your 1RM and use training percentages effectively.
+- [Is 10,000 Steps a Day Actually Enough?](https://mywellnesscalc.com/blog/10000-steps-a-day.html): Where the 10,000 steps target came from and what the research says about step counts and health.
+- [Running Pace Guide](https://mywellnesscalc.com/tools/running-pace.html): How to calculate and use pace targets for 5K, 10K, half marathon, and marathon training.
+
+### Body & Health
+- [What Is a Healthy BMI?](https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html): What a healthy BMI range is, what the number tells you, and how to use it wisely.
+- [What Is a Healthy Body Fat Percentage?](https://mywellnesscalc.com/blog/healthy-body-fat-percentage.html): Healthy body fat ranges for men and women, and how to measure accurately.
+- [How to Lose Belly Fat: What the Science Actually Says](https://mywellnesscalc.com/blog/how-to-lose-belly-fat.html): What the research says about losing abdominal fat — what works and what doesn't.
+- [How to Break a Weight Loss Plateau](https://mywellnesscalc.com/blog/weight-loss-plateau.html): Why weight loss plateaus happen and evidence-based strategies to start losing again.
+- [Why You Hit a Weight Loss Plateau and How to Break It](https://mywellnesscalc.com/blog/why-weight-loss-plateau-how-to-break-it.html): Why plateaus happen despite eating well and exercising, and how to get moving again.
+
+### Lifestyle
+- [Intermittent Fasting for Beginners: A No-Hype Guide](https://mywellnesscalc.com/blog/intermittent-fasting-beginners.html): How 16:8 works, what happens in your body during fasting, and how to start.
+- [How Much Water Should You Drink Per Day?](https://mywellnesscalc.com/blog/how-much-water-per-day.html): What the science says about daily water intake and how to find your personal target.
+- [Signs of Dehydration You Might Be Ignoring](https://mywellnesscalc.com/blog/signs-of-dehydration.html): Early, subtle signs of dehydration and what to do when you spot them.
+- [Sleep Cycles Explained](https://mywellnesscalc.com/blog/sleep-cycles-explained.html): What happens during each sleep stage and how to time your wake-up for better mornings.
+- [How Much Sleep Do You Actually Need?](https://mywellnesscalc.com/blog/how-much-sleep-do-you-need.html): Optimal sleep duration by age, sleep debt, and how to tell if you're getting enough.
