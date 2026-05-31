@@ -20,6 +20,7 @@
 - [Heart Rate Zone Calculator](https://mywellnesscalc.com/tools/heart-rate-zone.html): Calculates all 5 training heart rate zones for fat burn, cardio, and peak performance based on age and resting heart rate.
 - [Zone 2 Heart Rate Calculator](https://mywellnesscalc.com/tools/zone-2-calculator.html): Finds exact Zone 2 training range for fat burning and aerobic base building using age and resting heart rate.
 - [MAF Heart Rate Calculator](https://mywellnesscalc.com/tools/maf-calculator.html): Calculates Maximum Aerobic Function heart rate using the Maffetone 180 Formula, adjusted for individual health and training status.
+- [Active Recovery Heart Rate Calculator](https://mywellnesscalc.com/tools/active-recovery-calculator.html): Calculates Zone 1 active recovery heart rate range — the low-intensity ceiling for rest-day movement that promotes circulation without adding training stress.
 - [Calories Burned by Heart Rate Calculator](https://mywellnesscalc.com/tools/calories-burned-by-heart-rate.html): Calculates calories burned based on heart rate, age, weight, and workout duration.
 - [One Rep Max Calculator](https://mywellnesscalc.com/tools/one-rep-max.html): Estimates maximum lift (1RM) for bench press, squat, deadlift and more using proven formulas with training percentages.
 - [Running Pace Calculator](https://mywellnesscalc.com/tools/running-pace.html): Calculates finish time, required pace, or distance for any race — 5K, 10K, half marathon, or marathon.
@@ -41,6 +42,7 @@
 - [How to Calculate Your Ideal Calorie Deficit for Weight Loss](https://mywellnesscalc.com/blog/calorie-deficit-for-weight-loss.html): How to calculate the right calorie deficit for fat loss without losing muscle.
 - [TDEE vs BMR: What's the Difference and Why It Matters](https://mywellnesscalc.com/blog/tdee-vs-bmr.html): How to understand both calorie numbers and use them to reach your goals.
 - [Vitamin D Deficiency: Symptoms, Causes, and How Much You Need](https://mywellnesscalc.com/blog/vitamin-d-deficiency.html): Signs, causes, how much Vitamin D you actually need, and whether to supplement.
+- [Vitamin D and Exercise: How It Affects Performance, Recovery, and Muscle Function](https://mywellnesscalc.com/blog/vitamin-d-and-exercise.html): What the research says about vitamin D's role in muscle function, exercise recovery, injury risk, and aerobic capacity.
 - [What Is Metabolism — And Can You Actually Boost It?](https://mywellnesscalc.com/blog/what-is-metabolism.html): How metabolism works, what affects it, and which metabolism boosters are backed by evidence.
 - [Creatine: Do You Actually Need It?](https://mywellnesscalc.com/blog/creatine-do-you-need-it.html): An honest, research-backed look at what creatine does and who benefits.
 
@@ -48,6 +50,8 @@
 - [Zone 2 Heart Rate Training for Beginners](https://mywellnesscalc.com/blog/zone-2-heart-rate-training-beginners.html): How to find your Zone 2 range, why it matters, and how to stay in it during workouts.
 - [How to Improve Your Zone 2 Fitness](https://mywellnesscalc.com/blog/how-to-improve-zone-2-fitness.html): Training structure, progress tracking, and how to break through common Zone 2 plateaus.
 - [MAF Training for Beginners](https://mywellnesscalc.com/blog/maf-training-for-beginners.html): Complete guide to MAF training using the Maffetone 180 Formula — how to calculate MAF heart rate and put it into practice.
+- [Active Recovery: What It Is, Why It Works, and How to Do It Right](https://mywellnesscalc.com/blog/active-recovery-heart-rate.html): Zone 1 training explained — what active recovery does in your body and how to structure a recovery session correctly.
+- [The Fat Burning Zone: Does It Actually Work for Weight Loss?](https://mywellnesscalc.com/blog/fat-burning-zone-explained.html): What the fat burning zone actually means, what the research says about weight loss, and how to use it effectively.
 - [Zone 2 vs HIIT: Which Is Better for Fat Loss?](https://mywellnesscalc.com/blog/zone-2-vs-hiit-fat-loss.html): What the research says about Zone 2 and HIIT for fat loss, and how to combine them.
 - [Fat Burning Heart Rate Zone: How to Calculate and Use It](https://mywellnesscalc.com/blog/fat-burning-heart-rate-zone.html): What the fat burning heart rate zone is, how to calculate it, and whether it actually helps lose fat.
 - [How Many Calories Do You Burn by Heart Rate Zone?](https://mywellnesscalc.com/blog/calories-burned-by-heart-rate-zone.html): Calories burned in each training zone — and why zone matters less than most people think.

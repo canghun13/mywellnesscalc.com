@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Recovery Heart Rate Calculator – Zone 1 Training Range | My Wellness Calc</title>
+  <meta name="description" content="Calculate your Zone 1 active recovery heart rate range. Find the exact bpm ceiling for low-intensity recovery sessions that reduce soreness without adding training stress.">
+  <meta property="og:title" content="Active Recovery Heart Rate Calculator – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/active-recovery-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group input,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .zone1-hero{background:linear-gradient(135deg,#f3e5f5,#e1bee7);border:1px solid #ce93d8;border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .zone1-label{font-size:.8rem;font-weight:600;color:#6a1b9a;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .zone1-range{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:#6a1b9a;line-height:1;}
+    .zone1-unit{font-size:1rem;color:#7b1fa2;margin-top:.25rem;}
+    .zone1-desc{font-size:.85rem;color:#7b1fa2;margin-top:.75rem;}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .stat-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .stat-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--charcoal);}
+    .stat-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .feel-box{background:var(--cream);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .feel-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem;}
+    .feel-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .zone-compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin:1.25rem 0;}
+    .zone-box{border-radius:12px;padding:1rem;text-align:center;}
+    .zone-box.z1{background:#f3e5f5;border:1px solid #ce93d8;}
+    .zone-box.z2{background:#e3f2fd;border:1px solid #64b5f6;}
+    .zone-box.z3{background:#fff3e0;border:1px solid #ffb74d;}
+    .zone-box-label{font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;}
+    .zone-box.z1 .zone-box-label{color:#6a1b9a;}
+    .zone-box.z2 .zone-box-label{color:#1565c0;}
+    .zone-box.z3 .zone-box-label{color:#e65100;}
+    .zone-box-range{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;}
+    .zone-box.z1 .zone-box-range{color:#6a1b9a;}
+    .zone-box.z2 .zone-box-range{color:#1565c0;}
+    .zone-box.z3 .zone-box-range{color:#e65100;}
+    .zone-box-desc{font-size:.72rem;color:var(--mid);margin-top:.2rem;line-height:1.4;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-section li{margin-bottom:.3rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.zone-compare{grid-template-columns:1fr}}
+  </style>
+<!-- SCHEMA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Active Recovery Heart Rate Calculator",
+  "url": "https://mywellnesscalc.com/tools/active-recovery-calculator.html",
+  "description": "Calculate your Zone 1 active recovery heart rate range. Find the exact bpm ceiling for low-intensity recovery sessions that reduce soreness without adding training stress.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyWellnessCalc",
+    "url": "https://mywellnesscalc.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mywellnesscalc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://mywellnesscalc.com/#tools"},
+    {"@type": "ListItem", "position": 3, "name": "Active Recovery Heart Rate Calculator", "item": "https://mywellnesscalc.com/tools/active-recovery-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What heart rate should I stay below for active recovery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zone 1 active recovery is generally defined as 50–60% of your maximum heart rate, or 50–60% of your Heart Rate Reserve using the Karvonen method. For most adults, this falls somewhere between 90–130 bpm depending on age and fitness level. Use this calculator to find your personalised range rather than relying on a generic number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is active recovery better than complete rest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most people, active recovery outperforms complete rest for reducing next-day muscle soreness and maintaining circulation. Light movement increases blood flow to fatigued muscles, accelerating the removal of metabolic waste products and delivering nutrients for repair. However, if you're dealing with injury, illness, or severe fatigue, complete rest is more appropriate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should an active recovery session be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most active recovery sessions are 20–40 minutes. Shorter than 20 minutes provides minimal circulatory benefit; longer than 45–60 minutes at Zone 1 intensity starts to add meaningful training load. The goal is to move blood without adding stress, so keep sessions short and easy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What activities are best for active recovery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best active recovery activities are low-impact and easy to control at low intensity: walking, easy cycling (indoors or out), light swimming, gentle rowing, yoga, or light mobility work. Running is less ideal for active recovery because it's difficult to keep heart rate in Zone 1 — most people spike into Zone 2 or higher within a few minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I do active recovery the day after a hard workout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — the day after a hard session is the ideal time for active recovery. Keeping your heart rate strictly in Zone 1 (below the upper limit this calculator gives you) promotes circulation and recovery without interfering with the adaptations from yesterday's hard session. The key is discipline: if your heart rate creeps into Zone 2, slow down or switch to a lower-impact activity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does active recovery help with DOMS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Active recovery can help reduce the severity and duration of DOMS (delayed onset muscle soreness), primarily by increasing blood flow to the affected muscles. It won't eliminate DOMS entirely, but light movement in Zone 1 is consistently more effective than lying still. Combining active recovery with adequate protein intake, hydration, and sleep provides the most complete recovery environment."
+      }
+    }
+  ]
+}
+</script>
+<!-- SCHEMA_END -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Active Recovery Heart Rate Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">💜 Free Tool</span>
+      <h1>Active Recovery Heart Rate <em>Calculator</em></h1>
+      <p>Find your Zone 1 active recovery range — the low-intensity ceiling for rest-day movement that promotes circulation and reduces soreness without adding training stress.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" id="age" placeholder="e.g. 35" min="10" max="100">
+        </div>
+        <div class="form-group">
+          <label>Resting Heart Rate <span>(optional)</span></label>
+          <input type="number" id="rhr" placeholder="e.g. 60 bpm" min="30" max="100">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Calculation Method</label>
+        <select id="method">
+          <option value="karvonen">Karvonen (Heart Rate Reserve) — more personalised</option>
+          <option value="maxhr">% of Max HR — simpler</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calculate()">Find my recovery zone →</button>
+
+      <div class="result-box" id="result">
+        <div class="zone1-hero">
+          <div class="zone1-label">Your Zone 1 Active Recovery Range</div>
+          <div class="zone1-range" id="res-range">— – —</div>
+          <div class="zone1-unit">bpm</div>
+          <div class="zone1-desc">Stay below <span id="res-ceiling">—</span> bpm for true active recovery</div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val" id="res-maxhr">—</div>
+            <div class="stat-label">Max Heart Rate (bpm)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-rhr">—</div>
+            <div class="stat-label">Resting HR Used (bpm)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-hrr">—</div>
+            <div class="stat-label">Heart Rate Reserve</div>
+          </div>
+        </div>
+        <div class="feel-box">
+          <h4>💬 How Zone 1 should feel</h4>
+          <p>Active recovery feels almost embarrassingly easy — you should be able to hold a full conversation, breathe entirely through your nose, and feel like you could sustain the effort indefinitely. If you're breathing hard or feeling your legs work, you've gone too high. Slow down, switch to walking, or reduce resistance.</p>
+        </div>
+        <div class="zone-compare" id="zone-compare">
+          <div class="zone-box z1">
+            <div class="zone-box-label">Zone 1 — Recovery</div>
+            <div class="zone-box-range" id="z1-range">— – —</div>
+            <div class="zone-box-desc">Active recovery · Warm-up</div>
+          </div>
+          <div class="zone-box z2">
+            <div class="zone-box-label">Zone 2 — Aerobic</div>
+            <div class="zone-box-range" id="z2-range">— – —</div>
+            <div class="zone-box-desc">Fat burning · Base building</div>
+          </div>
+          <div class="zone-box z3">
+            <div class="zone-box-label">Zone 3 — Tempo</div>
+            <div class="zone-box-range" id="z3-range">— – —</div>
+            <div class="zone-box-desc">Moderate effort · Aerobic threshold</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>What is active recovery?</h2>
+      <p>Active recovery refers to low-intensity movement performed on rest days or after hard training sessions — specifically at an intensity low enough that it promotes circulation and recovery without adding meaningful training stress. In heart rate zone terms, this means staying in Zone 1: 50–60% of maximum heart rate, or below the lower boundary of Zone 2.</p>
+      <p>The goal is not fitness — it's circulation. Moving at Zone 1 intensity increases blood flow to fatigued muscles, accelerating the clearance of metabolic waste products (like lactate) and delivering oxygen and nutrients needed for repair. Done correctly, active recovery reduces next-day muscle soreness, maintains mobility, and supports the adaptations triggered by your harder sessions.</p>
+
+      <h3>Zone 1 vs Zone 2: why the distinction matters</h3>
+      <p>Zone 2 (60–70% max HR) is the classic aerobic base-building zone — it's productive training. Zone 1 (50–60% max HR) is below Zone 2 and serves a different purpose entirely: recovery. Confusing the two is one of the most common training mistakes. Many athletes think they're doing "easy" recovery runs or rides but are actually sitting in Zone 2, which means they're adding training load on a day meant for rest.</p>
+      <p>If your active recovery session regularly pushes into Zone 2, it's not truly recovery — it's an additional training stimulus. Over time, this erodes the contrast between hard days and easy days, which is the fundamental structure that allows adaptation to occur. Strict Zone 1 on recovery days makes your Zone 2 and hard training days more effective.</p>
+
+      <h3>What happens in your body during active recovery</h3>
+      <p>When you exercise at Zone 1 intensity, several recovery-supporting processes occur:</p>
+      <ul>
+        <li><strong>Increased blood flow:</strong> Even gentle cardiovascular activity raises cardiac output enough to significantly increase perfusion of peripheral tissues, delivering oxygen and clearing waste products more efficiently than complete rest.</li>
+        <li><strong>Lactate clearance:</strong> Residual lactate from hard training sessions is metabolised more quickly when you're moving at low intensity than when you're sedentary. This is one reason elite cyclists do gentle spins after stages rather than lying down.</li>
+        <li><strong>Reduced muscle stiffness:</strong> Light movement maintains range of motion and reduces the stiffening that occurs in inactive muscles over 24–48 hours post-exercise. This is particularly valuable for managing DOMS (delayed onset muscle soreness).</li>
+        <li><strong>Parasympathetic activation:</strong> Zone 1 activity can support the shift from the sympathetic (fight-or-flight) state triggered by hard training back toward the parasympathetic (rest-and-digest) state needed for adaptation and recovery.</li>
+        <li><strong>Mental benefit:</strong> For many athletes, doing something on a rest day — even if very light — is psychologically preferable to complete inactivity. Zone 1 satisfies the need to move without compromising recovery.</li>
+      </ul>
+
+      <h3>Best activities for Zone 1 active recovery</h3>
+      <p>The best recovery activities are ones where it's easy to keep your heart rate genuinely low. Impact and intensity fluctuation are the enemies of Zone 1:</p>
+      <ul>
+        <li><strong>Easy walking:</strong> The most accessible option. A 30-minute walk at comfortable pace will keep most people in Zone 1 without any effort. Add some gentle hills if you want slightly more benefit without leaving the zone.</li>
+        <li><strong>Light cycling:</strong> Indoor cycling on low resistance is excellent for recovery. Easy outdoor cycling on flat terrain also works well. Cycling is particularly useful after leg-heavy training because it maintains movement without impact loading.</li>
+        <li><strong>Easy swimming:</strong> Very low impact and allows total body blood flow. Gentle laps at conversational pace are ideal. Avoid intervals or drills on recovery days.</li>
+        <li><strong>Light rowing:</strong> Similar to cycling — easy to control intensity and very low impact. Useful for upper body recovery as well as lower body.</li>
+        <li><strong>Yoga or mobility work:</strong> If kept gentle, this can serve a dual recovery and flexibility purpose without significantly elevating heart rate.</li>
+        <li><strong>Running (with caution):</strong> Running is difficult to keep in Zone 1 for most people — even slow jogging pushes many runners into Zone 2. Walk-jog intervals or brisk walking are better options for true Zone 1 recovery on running-specific rest days.</li>
+      </ul>
+
+      <h3>How to structure an active recovery session</h3>
+      <p>An effective active recovery session is short and genuinely easy. Aim for 20–40 minutes of continuous Zone 1 movement. Start with 5 minutes of very light movement to let your heart rate settle, then maintain steady Zone 1 throughout. Finish with 5 minutes of gentle stretching or mobility work if you want additional benefit.</p>
+      <p>The single most important rule: if your heart rate climbs above your Zone 1 ceiling, slow down immediately. This is not a training session — resist the temptation to push slightly harder because it "still feels easy." The physiological purpose of Zone 1 recovery is served only when the intensity stays genuinely below the Zone 2 boundary.</p>
+
+      <h3>How often should you do active recovery?</h3>
+      <p>Most training programmes include one or two dedicated active recovery days per week. For athletes training five or more days per week, one active recovery day between hard sessions helps maintain training quality across the week. For those training three or four days per week, complete rest on off-days is often equally appropriate — there's no rule that says rest days must involve movement.</p>
+      <p>Signs that you may benefit from more active recovery include: persistent muscle soreness that doesn't resolve within 48 hours, noticeably elevated resting heart rate, reduced motivation or performance in training sessions, and disrupted sleep. These signals often indicate accumulated fatigue that can be addressed partly through more deliberate Zone 1 recovery work.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What heart rate should I stay below for active recovery?</div>
+          <div class="faq-a">Zone 1 active recovery is generally defined as 50–60% of your maximum heart rate, or 50–60% of your Heart Rate Reserve using the Karvonen method. For most adults, this falls somewhere between 90–130 bpm depending on age and fitness level. Use this calculator to find your personalised range rather than relying on a generic number.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is active recovery better than complete rest?</div>
+          <div class="faq-a">For most people, active recovery outperforms complete rest for reducing next-day muscle soreness and maintaining circulation. Light movement increases blood flow to fatigued muscles, accelerating the removal of metabolic waste products and delivering nutrients for repair. However, if you're dealing with injury, illness, or severe fatigue, complete rest is more appropriate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long should an active recovery session be?</div>
+          <div class="faq-a">Most active recovery sessions are 20–40 minutes. Shorter than 20 minutes provides minimal circulatory benefit; longer than 45–60 minutes at Zone 1 intensity starts to add meaningful training load. The goal is to move blood without adding stress, so keep sessions short and easy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What activities are best for active recovery?</div>
+          <div class="faq-a">The best active recovery activities are low-impact and easy to control at low intensity: walking, easy cycling (indoors or out), light swimming, gentle rowing, yoga, or light mobility work. Running is less ideal for active recovery because it's difficult to keep heart rate in Zone 1 — most people spike into Zone 2 or higher within a few minutes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I do active recovery the day after a hard workout?</div>
+          <div class="faq-a">Yes — the day after a hard session is the ideal time for active recovery. Keeping your heart rate strictly in Zone 1 (below the upper limit this calculator gives you) promotes circulation and recovery without interfering with the adaptations from yesterday's hard session. The key is discipline: if your heart rate creeps into Zone 2, slow down or switch to a lower-impact activity.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does active recovery help with DOMS?</div>
+          <div class="faq-a">Active recovery can help reduce the severity and duration of DOMS (delayed onset muscle soreness), primarily by increasing blood flow to the affected muscles. It won't eliminate DOMS entirely, but light movement in Zone 1 is consistently more effective than lying still. Combining active recovery with adequate protein intake, hydration, and sleep provides the most complete recovery environment.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Heart rate zones are estimates based on population averages. Individual responses vary. If you have a cardiovascular condition, are recovering from injury, or are new to exercise, consult a healthcare professional before starting any training programme. Stop exercise and seek medical advice if you experience chest pain, dizziness, or shortness of breath.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="zone-2-calculator.html">💙 Zone 2 Heart Rate Calculator</a></li>
+        <li><a href="heart-rate-zone.html">❤️ Full Heart Rate Zone Calculator</a></li>
+        <li><a href="maf-calculator.html">❤️ MAF Heart Rate Calculator</a></li>
+        <li><a href="calories-burned-by-heart-rate.html">🔥 Calories Burned by Heart Rate</a></li>
+        <li><a href="running-pace.html">🏃 Running Pace Calculator</a></li>
+      </ul>
+    </div>
+    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+<script>
+function calculate() {
+  var age = parseInt(document.getElementById('age').value);
+  var rhrVal = parseInt(document.getElementById('rhr').value);
+  var method = document.getElementById('method').value;
+
+  if (!age || age < 10 || age > 100) { alert('Please enter a valid age between 10 and 100.'); return; }
+
+  var maxHR = 220 - age;
+  var rhr = (!isNaN(rhrVal) && rhrVal >= 30 && rhrVal <= 100) ? rhrVal : 60;
+  var hrr = maxHR - rhr;
+
+  var z1lo, z1hi, z2lo, z2hi, z3lo, z3hi;
+  if (method === 'karvonen') {
+    z1lo = Math.round(rhr + hrr * 0.50);
+    z1hi = Math.round(rhr + hrr * 0.60);
+    z2lo = Math.round(rhr + hrr * 0.60);
+    z2hi = Math.round(rhr + hrr * 0.70);
+    z3lo = Math.round(rhr + hrr * 0.70);
+    z3hi = Math.round(rhr + hrr * 0.80);
+  } else {
+    z1lo = Math.round(maxHR * 0.50);
+    z1hi = Math.round(maxHR * 0.60);
+    z2lo = Math.round(maxHR * 0.60);
+    z2hi = Math.round(maxHR * 0.70);
+    z3lo = Math.round(maxHR * 0.70);
+    z3hi = Math.round(maxHR * 0.80);
+  }
+
+  document.getElementById('res-range').textContent = z1lo + ' – ' + z1hi;
+  document.getElementById('res-ceiling').textContent = z1hi;
+  document.getElementById('res-maxhr').textContent = maxHR;
+  document.getElementById('res-rhr').textContent = rhr;
+  document.getElementById('res-hrr').textContent = hrr;
+  document.getElementById('z1-range').textContent = z1lo + ' – ' + z1hi + ' bpm';
+  document.getElementById('z2-range').textContent = z2lo + ' – ' + z2hi + ' bpm';
+  document.getElementById('z3-range').textContent = z3lo + ' – ' + z3hi + ' bpm';
+
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
