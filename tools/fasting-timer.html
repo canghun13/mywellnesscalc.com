@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fasting Timer – Track Your Fast in Real Time | My Wellness Calc</title>
+  <meta name="description" content="Free fasting timer and tracker. Start your fast, track elapsed time, see your progress through fasting stages, and know exactly when your eating window opens.">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/fasting-timer.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-flex;background:var(--fast-light);color:var(--fast);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--fast);}
+    .page-header p{color:var(--mid);font-size:1rem;font-weight:300;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+    .calc-form{padding:2rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.8rem;font-weight:500;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .protocol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;}
+    .proto-btn{padding:.75rem .5rem;border:1.5px solid var(--border);border-radius:10px;background:var(--warm-white);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.8rem;color:var(--mid);font-weight:500;transition:all .2s;text-align:center;}
+    .proto-btn.active{background:var(--fast);color:white;border-color:var(--fast);}
+    .proto-btn .proto-name{font-size:1rem;font-weight:600;display:block;}
+    .input-wrap{position:relative;}
+    .input-wrap input,.input-wrap select{width:100%;padding:.875rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--charcoal);background:var(--warm-white);transition:border-color .2s;appearance:none;}
+    .input-wrap input:focus{outline:none;border-color:var(--fast);background:white;}
+    .btn-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:.5rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--fast);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:#d4845a;}
+    .calc-btn.secondary{background:white;color:var(--fast);border:1.5px solid var(--fast);}
+    .calc-btn.secondary:hover{background:var(--fast-light);}
+    /* Timer display */
+    .timer-section{display:none;padding:2rem;border-top:1px solid var(--border);}
+    .timer-section.visible{display:block;}
+    .timer-display{text-align:center;padding:1.5rem 0;}
+    .timer-clock{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;letter-spacing:-.02em;color:var(--fast);}
+    .timer-label{font-size:.85rem;color:var(--mid);margin-top:.25rem;}
+    /* Progress ring */
+    .progress-ring-wrap{display:flex;justify-content:center;margin:1.5rem 0;}
+    .progress-ring{transform:rotate(-90deg);}
+    .ring-bg{fill:none;stroke:var(--border);stroke-width:8;}
+    .ring-fill{fill:none;stroke:var(--fast);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset .5s ease;}
+    .ring-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+    .ring-wrap{position:relative;width:160px;height:160px;}
+    .ring-pct{font-family:'Fraunces',serif;font-size:2rem;font-weight:400;color:var(--charcoal);}
+    .ring-sublabel{font-size:.7rem;color:var(--mid);margin-top:.1rem;}
+    /* Stage indicators */
+    .stages{margin:1.25rem 0;}
+    .stage-item{display:flex;align-items:center;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--border);}
+    .stage-item:last-child{border-bottom:none;}
+    .stage-icon{font-size:1.25rem;flex-shrink:0;width:2rem;text-align:center;}
+    .stage-info{flex:1;}
+    .stage-name{font-size:.85rem;font-weight:600;color:var(--charcoal);}
+    .stage-time{font-size:.75rem;color:var(--light);}
+    .stage-status{font-size:.75rem;padding:.2rem .6rem;border-radius:100px;font-weight:600;flex-shrink:0;}
+    .stage-status.done{background:#e6f4ea;color:#2d7a47;}
+    .stage-status.active{background:var(--fast-light);color:var(--fast);}
+    .stage-status.upcoming{background:var(--cream);color:var(--light);}
+    /* Window info */
+    .window-info{background:var(--cream);border-radius:14px;padding:1.25rem;margin-top:1.25rem;}
+    .window-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .window-row:last-child{border-bottom:none;}
+    .window-row-label{font-size:.8rem;color:var(--mid);}
+    .window-row-value{font-size:.9rem;font-weight:600;color:var(--charcoal);}
+    .window-row-value.highlight{color:var(--fast);}
+    /* article */
+    .article-section{margin-top:3rem;}
+    .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
+    .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
+    .article-section ul{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-section li{margin-bottom:.25rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid #f5c49e;padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;}
+    .related-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .related-list a{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;background:white;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:border-color .2s,transform .2s;}
+    .related-list a:hover{border-color:var(--sage-light);transform:translateX(3px);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--fast);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.protocol-grid{grid-template-columns:repeat(2,1fr)}.btn-row{grid-template-columns:1fr}.timer-clock{font-size:2.5rem;}}
+  </style>
+<!-- SCHEMA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fasting Timer",
+  "url": "https://mywellnesscalc.com/tools/fasting-timer.html",
+  "description": "Free fasting timer and tracker. Start your fast, track elapsed time, see your progress through fasting stages, and know exactly when your eating window opens.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyWellnessCalc",
+    "url": "https://mywellnesscalc.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem","position": 1,"name": "Home","item": "https://mywellnesscalc.com/"},
+    {"@type": "ListItem","position": 2,"name": "Calculators","item": "https://mywellnesscalc.com/#tools"},
+    {"@type": "ListItem","position": 3,"name": "Fasting Timer","item": "https://mywellnesscalc.com/tools/fasting-timer.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does a fasting timer work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fasting timer tracks the time elapsed since you last ate. You enter your fasting protocol (e.g. 16:8) and when you started fasting. The timer shows how far into your fast you are, your progress as a percentage, which metabolic stage you're currently in, and exactly when your eating window opens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens at different stages of a fast?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main stages are: Fed state (0–4 hrs) where insulin is elevated; post-absorptive (4–8 hrs) where glycogen begins depleting; early fasting (8–12 hrs) where fat oxidation increases; and extended fasting (12+ hrs) where ketone production begins and autophagy becomes active."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the fasting timer save my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The timer runs in your browser and does not require an account or save data to a server. If you close the page, your timer will reset. For ongoing tracking, note your fast start time separately."
+      }
+    }
+  ]
+}
+</script>
+<!-- SCHEMA_END -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Fasting Timer</div>
+    <div class="page-header">
+      <span class="tool-label">⏱️ Free Tool</span>
+      <h1>Fasting <em>Timer</em></h1>
+      <p>Track your fast in real time. See your elapsed time, progress through fasting stages, and exactly when your eating window opens.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-form">
+        <div class="form-group">
+          <label>Fasting Protocol</label>
+          <div class="protocol-grid">
+            <button class="proto-btn active" data-hours="16" onclick="setProto(this)"><span class="proto-name">16:8</span>Popular</button>
+            <button class="proto-btn" data-hours="18" onclick="setProto(this)"><span class="proto-name">18:6</span>Moderate</button>
+            <button class="proto-btn" data-hours="20" onclick="setProto(this)"><span class="proto-name">20:4</span>Advanced</button>
+            <button class="proto-btn" data-hours="23" onclick="setProto(this)"><span class="proto-name">OMAD</span>1 meal/day</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>When did you start fasting?</label>
+          <div class="input-wrap"><input type="datetime-local" id="fast-start"></div>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn" onclick="startTimer()">▶ Start tracking</button>
+          <button class="calc-btn secondary" onclick="resetTimer()">↺ Reset</button>
+        </div>
+      </div>
+
+      <div class="timer-section" id="timer-section">
+        <div class="timer-display">
+          <div class="timer-clock" id="timer-clock">00:00:00</div>
+          <div class="timer-label" id="timer-label">elapsed</div>
+        </div>
+
+        <div class="progress-ring-wrap">
+          <div class="ring-wrap">
+            <svg class="progress-ring" width="160" height="160" viewBox="0 0 160 160">
+              <circle class="ring-bg" cx="80" cy="80" r="68"/>
+              <circle class="ring-fill" id="ring-fill" cx="80" cy="80" r="68"
+                stroke-dasharray="427.26" stroke-dashoffset="427.26"/>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-pct" id="ring-pct">0%</div>
+              <div class="ring-sublabel">complete</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stages" id="stages-list"></div>
+
+        <div class="window-info">
+          <div class="window-row">
+            <span class="window-row-label">Fast started</span>
+            <span class="window-row-value" id="info-start">—</span>
+          </div>
+          <div class="window-row">
+            <span class="window-row-label">Eating window opens</span>
+            <span class="window-row-value highlight" id="info-end">—</span>
+          </div>
+          <div class="window-row">
+            <span class="window-row-label">Time remaining</span>
+            <span class="window-row-value" id="info-remaining">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <h2>What is a fasting timer?</h2>
+      <p>A fasting timer tracks the time elapsed since your last meal, shows your progress through your chosen fasting protocol, and tells you exactly when your eating window opens. Unlike a simple countdown, a fasting tracker also shows which metabolic stage you're currently in — helping you understand what's happening in your body as the fast progresses.</p>
+      <p>Most people practising intermittent fasting benefit from a timer because estimating elapsed time is unreliable, particularly during sleep. Knowing exactly where you are in your fast helps maintain protocol consistency and reduces the temptation to break early.</p>
+
+      <h2>Fasting stages: what happens hour by hour</h2>
+      <h3>0–4 hours: Fed state</h3>
+      <p>After eating, blood glucose and insulin are elevated. Your body is digesting and absorbing nutrients. Fat burning is suppressed while insulin is high. This phase is normal — it's not a problem, just the natural post-meal state.</p>
+
+      <h3>4–8 hours: Post-absorptive state</h3>
+      <p>Digestion is complete and blood glucose begins to fall. Insulin levels drop. Your body starts drawing on liver glycogen (stored glucose) as its primary fuel. You're technically "fasting" in the physiological sense, even though it hasn't been long since you ate.</p>
+
+      <h3>8–12 hours: Early fasting</h3>
+      <p>Liver glycogen stores begin to deplete. Your body increasingly shifts toward fat oxidation. Growth hormone secretion rises — important for muscle preservation. Cellular repair processes (autophagy) begin to activate in some tissues.</p>
+
+      <h3>12–16 hours: Extended fasting</h3>
+      <p>Fat oxidation reaches its peak for time-restricted eating protocols. Ketone production begins as the liver converts fatty acids. Autophagy becomes more active. Insulin reaches its lowest point of the day. This is the metabolic "sweet spot" that most 16:8 practitioners are targeting.</p>
+
+      <h3>16–24 hours: Deep fasting</h3>
+      <p>For protocols like 20:4 or OMAD, the fast continues beyond 16 hours. Ketosis deepens. Autophagy becomes more pronounced. These longer fasts carry greater metabolic benefit but also greater demands on adherence and nutritional planning at the breaking meal.</p>
+
+      <h2>Tips for maintaining your fast</h2>
+      <h3>Stay hydrated</h3>
+      <p>Thirst is frequently mistaken for hunger. Drinking water, black coffee, or plain tea throughout your fasting window helps suppress appetite and maintains energy levels. Aim for at least 2–3 litres of fluids during a 16-hour fast.</p>
+
+      <h3>Keep your fast-start time consistent</h3>
+      <p>The most successful intermittent fasters maintain a consistent start and end time each day. Consistency stabilises hunger hormones — ghrelin (the hunger hormone) follows a circadian rhythm and adapts to your eating schedule within 1–2 weeks.</p>
+
+      <h3>Plan your break-fast meal in advance</h3>
+      <p>Breaking your fast with a high-protein, nutrient-dense meal reduces the risk of overeating. Planning what you'll eat before the fast ends removes decision-making from a moment when hunger is highest.</p>
+
+      <h3>Expect the first 2 weeks to be hardest</h3>
+      <p>Hunger during fasting windows typically peaks in the first 1–2 weeks before the body adapts. The hunger hormone ghrelin resets its pattern to match your new eating schedule. Most people find fasting significantly easier after 2–3 weeks of consistent practice.</p>
+
+      <h2>Who should not fast?</h2>
+      <p>Intermittent fasting is not appropriate for everyone. The following groups should consult a healthcare provider before starting any fasting protocol:</p>
+      <ul>
+        <li>Pregnant or breastfeeding women</li>
+        <li>People with type 1 diabetes or insulin-dependent type 2 diabetes</li>
+        <li>People with a history of eating disorders</li>
+        <li>Children and adolescents</li>
+        <li>People who are underweight (BMI under 18.5)</li>
+        <li>People on medications that require food intake</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Does the fasting timer save my data?</div>
+          <div class="faq-a">The timer runs in your browser and does not require an account or save data to a server. If you close the page, your timer will reset. For ongoing tracking, note your fast start time separately or use the "start fasting" time from your plan each day.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens if I break my fast early?</div>
+          <div class="faq-a">Breaking a fast early occasionally is not a problem. Simply reset and start your next fast from your next meal. Consistency over weeks matters far more than any single day. Don't let one missed day derail your overall practice.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does black coffee break a fast?</div>
+          <div class="faq-a">Black coffee contains essentially zero calories and does not meaningfully raise insulin levels. It is widely considered acceptable during a fast and may actually enhance fat oxidation. Adding milk, cream, sugar, or syrups breaks the fast. Plain water and unsweetened tea are also safe during fasting windows.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I know which fasting protocol is right for me?</div>
+          <div class="faq-a">Start with 16:8. It's the most studied protocol, the easiest to implement, and sufficient for most health and weight management goals. If you've successfully maintained 16:8 for 4–6 weeks and want more structure, try 18:6. Longer protocols (20:4, OMAD) are for experienced fasters with specific goals and are not necessary for most people.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I exercise during a fast?</div>
+          <div class="faq-a">Yes. Fasted exercise — particularly low to moderate intensity cardio — is safe for most healthy adults and may enhance fat oxidation. High-intensity training while fasted is more demanding; some people perform well, others find their performance suffers. Listen to your body, ensure you're well-hydrated, and prioritise post-fast protein intake for recovery if training hard.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the difference between a fasting timer and an IF calculator?</div>
+          <div class="faq-a">An intermittent fasting calculator helps you plan your eating and fasting windows — it shows you when to start and stop eating based on your protocol and preferred meal times. A fasting timer tracks an active fast in real time, showing elapsed time, progress percentage, current metabolic stage, and time remaining until your eating window opens. Both tools are useful: use the IF calculator to plan, and the fasting timer to track.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Intermittent fasting is not suitable for everyone. Consult a healthcare provider before starting if you have diabetes, a history of eating disorders, or any relevant medical condition.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="if-calculator.html">⏱️ IF Planner & Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="water-intake.html">💧 Water Intake Calculator</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  let fastHours = 16;
+  let timerInterval = null;
+  let fastStartTime = null;
+
+  function setProto(btn) {
+    document.querySelectorAll('.proto-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    fastHours = parseInt(btn.dataset.hours);
+    if (fastStartTime) updateTimer();
+  }
+
+  function formatTime(ms) {
+    const totalSec = Math.floor(ms / 1000);
+    const h = Math.floor(totalSec / 3600);
+    const m = Math.floor((totalSec % 3600) / 60);
+    const s = totalSec % 60;
+    return String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+  }
+
+  function formatDateTime(date) {
+    const h = date.getHours();
+    const m = date.getMinutes();
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    const h12 = h % 12 || 12;
+    const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    return days[date.getDay()] + ' ' + h12 + ':' + String(m).padStart(2,'0') + ' ' + ampm;
+  }
+
+  const STAGES = [
+    { icon: '🍽️', name: 'Fed state', start: 0, end: 4, desc: '0–4 hrs' },
+    { icon: '📉', name: 'Insulin dropping', start: 4, end: 8, desc: '4–8 hrs' },
+    { icon: '🔥', name: 'Fat burning begins', start: 8, end: 12, desc: '8–12 hrs' },
+    { icon: '⚡', name: 'Ketosis & autophagy', start: 12, end: 16, desc: '12–16 hrs' },
+    { icon: '🌟', name: 'Deep fasting', start: 16, end: 24, desc: '16–24 hrs' },
+  ];
+
+  function updateTimer() {
+    const now = new Date();
+    const elapsed = now - fastStartTime;
+    const totalMs = fastHours * 3600 * 1000;
+    const remaining = totalMs - elapsed;
+    const elapsedHours = elapsed / 3600000;
+    const pct = Math.min(100, Math.round((elapsed / totalMs) * 100));
+
+    // Clock
+    if (remaining > 0) {
+      document.getElementById('timer-clock').textContent = formatTime(elapsed);
+      document.getElementById('timer-label').textContent = 'elapsed — ' + formatTime(remaining) + ' remaining';
+    } else {
+      document.getElementById('timer-clock').textContent = formatTime(elapsed);
+      document.getElementById('timer-clock').style.color = 'var(--eat)';
+      document.getElementById('timer-label').textContent = '✅ Eating window is open!';
+    }
+
+    // Progress ring
+    const circumference = 427.26;
+    const offset = circumference - (pct / 100) * circumference;
+    document.getElementById('ring-fill').style.strokeDashoffset = offset;
+    document.getElementById('ring-pct').textContent = pct + '%';
+
+    // Stages
+    const stagesList = document.getElementById('stages-list');
+    stagesList.innerHTML = '';
+    STAGES.forEach(stage => {
+      const item = document.createElement('div');
+      item.className = 'stage-item';
+      let status, statusClass;
+      if (elapsedHours >= stage.end) { status = '✓ Done'; statusClass = 'done'; }
+      else if (elapsedHours >= stage.start) { status = 'Active'; statusClass = 'active'; }
+      else { status = 'Upcoming'; statusClass = 'upcoming'; }
+      item.innerHTML = `
+        <div class="stage-icon">${stage.icon}</div>
+        <div class="stage-info">
+          <div class="stage-name">${stage.name}</div>
+          <div class="stage-time">${stage.desc}</div>
+        </div>
+        <div class="stage-status ${statusClass}">${status}</div>`;
+      stagesList.appendChild(item);
+    });
+
+    // Window info
+    const endTime = new Date(fastStartTime.getTime() + totalMs);
+    document.getElementById('info-start').textContent = formatDateTime(fastStartTime);
+    document.getElementById('info-end').textContent = formatDateTime(endTime);
+    document.getElementById('info-remaining').textContent = remaining > 0 ? formatTime(remaining) : 'Window is open';
+  }
+
+  function startTimer() {
+    const input = document.getElementById('fast-start').value;
+    if (!input) { alert('Please select when you started fasting.'); return; }
+    fastStartTime = new Date(input);
+    if (timerInterval) clearInterval(timerInterval);
+    document.getElementById('timer-section').classList.add('visible');
+    updateTimer();
+    timerInterval = setInterval(updateTimer, 1000);
+  }
+
+  function resetTimer() {
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = null;
+    fastStartTime = null;
+    document.getElementById('timer-section').classList.remove('visible');
+    document.getElementById('fast-start').value = '';
+    document.getElementById('timer-clock').style.color = '';
+  }
+
+  // Set default datetime to now
+  (function() {
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.getElementById('fast-start').value = now.toISOString().slice(0,16);
+  })();
+</script>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

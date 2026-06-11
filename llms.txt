@@ -29,6 +29,7 @@
 - [Water Intake Calculator](https://mywellnesscalc.com/tools/water-intake.html): Personalised daily water intake recommendation based on weight, activity level, and climate.
 - [Sleep Cycle Calculator](https://mywellnesscalc.com/tools/sleep-calculator.html): Finds the best bedtime or wake-up time aligned with natural 90-minute sleep cycles.
 - [Intermittent Fasting Calculator](https://mywellnesscalc.com/tools/if-calculator.html): Sets fasting protocol (16:8, 18:6, 20:4, 5:2) and calculates exact eat and fast windows for any start time.
+- [Fasting Timer](https://mywellnesscalc.com/tools/fasting-timer.html): Real-time fasting tracker. Shows elapsed time, progress through fasting stages, and countdown to eating window.
 - [Intermittent Fasting Calculator for Women](https://mywellnesscalc.com/tools/if-calculator-women.html): Personalised fasting window for women based on lifestyle, hormonal phase, and goals.
 
 ## Articles
