@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Protein Intake Calculator – Daily Protein Requirements | My Wellness Calc</title>
-  <meta name="description" content="Free protein intake calculator. Find your optimal daily protein target based on your weight, activity level, and fitness goals — muscle building, fat loss, or maintenance.">
+  <meta name="description" content="Free protein intake calculator. Find your optimal daily protein target based on your weight, activity level, age, and fitness goals — muscle building, fat loss, or maintenance.">
   <meta property="og:title" content="Protein Intake Calculator – My Wellness Calc">
   <link rel="canonical" href="https://mywellnesscalc.com/tools/protein-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +13,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350"
-       crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -56,7 +55,7 @@
     .meal-label{font-size:.72rem;color:var(--light);margin-top:.15rem;}
     .info-section{margin-top:2rem;}
     .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
-    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.5rem 0 .5rem;}
     .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
     .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
     .info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
@@ -64,6 +63,9 @@
     .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .info-table tr:last-child td{border-bottom:none;}
     .info-table tr:nth-child(even) td{background:var(--cream);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.25rem 1.5rem;margin:1.25rem 0;border-left:3px solid var(--sage);}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.4rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:0;font-size:.875rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
     .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
@@ -73,8 +75,6 @@
     .related-list li:last-child{border-bottom:none;}
     .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
     .related-list a:hover{color:var(--sage-dark);}
-    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
-  
     .faq-section{margin-top:2.5rem;}
     .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
     .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
@@ -84,6 +84,7 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -92,7 +93,7 @@
   "@type": "WebApplication",
   "name": "Protein Intake Calculator – Daily Protein Requirements",
   "url": "https://mywellnesscalc.com/tools/protein-calculator.html",
-  "description": "Free protein intake calculator. Find your optimal daily protein target based on your weight, activity level, and fitness goals — muscle building, fat loss, or maintenance.",
+  "description": "Free protein intake calculator. Find your optimal daily protein target based on your weight, activity level, age, and fitness goals — muscle building, fat loss, or maintenance.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "All",
   "offers": {
@@ -112,24 +113,9 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mywellnesscalc.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Calculators",
-      "item": "https://mywellnesscalc.com/#tools"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Protein Intake Calculator – Daily Protein Requirements",
-      "item": "https://mywellnesscalc.com/tools/protein-calculator.html"
-    }
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},
+    {"@type":"ListItem","position":2,"name":"Calculators","item":"https://mywellnesscalc.com/#tools"},
+    {"@type":"ListItem","position":3,"name":"Protein Intake Calculator","item":"https://mywellnesscalc.com/tools/protein-calculator.html"}
   ]
 }
 </script>
@@ -140,10 +126,18 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "How much protein do I need per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your goal and body weight. For general health, 1.0–1.2g per kg of body weight is sufficient. For fat loss, 1.8–2.4g/kg helps preserve muscle. For muscle building, 1.6–2.2g/kg is recommended. For adults over 50, 1.2–1.6g/kg counters age-related muscle loss. The RDA of 0.8g/kg represents a minimum, not an optimal intake."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Can you eat too much protein?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For healthy adults with normal kidney function, research does not support the idea that high protein intakes (up to 3g/kg) cause kidney damage. The concern about protein and kidneys applies to people who already have kidney disease, not healthy individuals. Very high protein diets can cause digestive discomfort and are more expensive, but are not dangerous for most people. People with existing kidney conditions should consult a healthcare provider."
+        "text": "For healthy adults with normal kidney function, research does not support the idea that high protein intakes (up to 3g/kg) cause kidney damage. The concern about protein and kidneys applies to people who already have kidney disease. Very high protein diets can cause digestive discomfort, but are not dangerous for most healthy people."
       }
     },
     {
@@ -151,7 +145,7 @@
       "name": "Is protein powder necessary?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Protein powder is a convenient supplement, not a necessity. Whole food sources provide the same amino acids plus additional nutrients like vitamins and minerals. Powder is useful when hitting a high protein target through food alone becomes impractical — for very active individuals or those who find high-protein foods unappealing. The cheapest effective option is whey protein concentrate."
+        "text": "No. Protein powder is a convenient supplement, not a necessity. Whole food sources provide the same amino acids plus additional nutrients. Powder is useful when hitting a high protein target through food alone becomes impractical. The most cost-effective option is whey protein concentrate."
       }
     },
     {
@@ -159,15 +153,39 @@
       "name": "Does protein timing matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Less than once believed. The \"anabolic window\" immediately post-workout is real but wider than the 30-minute window often cited — research suggests muscle protein synthesis is elevated for several hours after training. Total daily protein intake matters far more than precise timing. That said, having a protein-rich meal within 2 hours of training is a sensible practice."
+        "text": "Less than once believed. The anabolic window post-workout is real but wider than the 30-minute window often cited — muscle protein synthesis is elevated for several hours after training. Total daily protein intake matters far more than precise timing. Having a protein-rich meal within 2 hours of training is a sensible practice."
       }
     },
     {
       "@type": "Question",
-      "name": "How much protein is in a typical meal?",
+      "name": "What are the best high-protein foods?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A 150g chicken breast provides about 45g. Two eggs provide about 12g. 170g Greek yogurt provides about 17g. A 30g scoop of whey protein provides about 24g. A typical Western meal without deliberate protein focus often provides 15–25g — below the threshold that maximally stimulates muscle protein synthesis in older adults."
+        "text": "Animal sources: chicken breast (31g/100g), canned tuna (25g/100g), salmon (25g/100g), eggs (6g each), Greek yogurt (10g/100g), cottage cheese (11g/100g). Plant sources: tempeh (19g/100g), edamame (11g/100g), tofu (8–12g/100g), lentils (9g/100g), chickpeas (9g/100g)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much protein per meal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research suggests 25–40g of protein per meal to reliably stimulate muscle protein synthesis in adults. Older adults (50+) need closer to 30–40g per meal due to anabolic resistance — muscles become less sensitive to protein with age. Spreading total intake across 3–4 meals is more effective than consuming the same total in 1–2 large meals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does protein help with weight loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in several ways. Protein has the highest thermic effect of food — your body burns 20–30% of protein calories during digestion, compared to 5–10% for carbohydrates. Protein increases satiety more than fats or carbohydrates, helping with adherence to a calorie deficit. High protein intake (1.8–2.4g/kg) during fat loss preserves lean muscle mass, maintaining metabolic rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do plant-based eaters need more protein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally yes, by about 10–20%. Plant proteins are typically lower in leucine — the amino acid most responsible for triggering muscle protein synthesis — and some plant proteins are less completely absorbed. Combining protein sources (e.g. legumes with grains) and eating more total protein compensates for this. Soy, edamame, and tempeh are the most complete plant protein sources."
       }
     }
   ]
@@ -184,7 +202,7 @@
     <div class="page-header">
       <span class="tool-label">🥩 Free Tool</span>
       <h1>Protein Intake <em>Calculator</em></h1>
-      <p>Find your optimal daily protein target based on your body weight, activity level, age, and fitness goals.</p>
+      <p>Find your optimal daily protein target based on your body weight, activity level, age, and fitness goals. Results include a per-meal breakdown and food source guide.</p>
     </div>
 
     <div class="calc-card">
@@ -202,6 +220,14 @@
           <label>Age</label>
           <input type="number" id="age" placeholder="e.g. 30" min="15" max="100">
         </div>
+      </div>
+
+      <div class="form-group">
+        <label>Biological sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -226,6 +252,14 @@
         </select>
       </div>
 
+      <div class="form-group">
+        <label>Diet type</label>
+        <select id="diet">
+          <option value="omnivore">Omnivore</option>
+          <option value="plant">Plant-based / vegan</option>
+        </select>
+      </div>
+
       <button class="calc-btn" onclick="calculate()">Calculate my protein needs →</button>
 
       <div class="result-box" id="result">
@@ -247,57 +281,102 @@
             <div class="result-item-label">Upper end<br>(g/day)</div>
           </div>
         </div>
-        <p style="font-size:.8rem;color:var(--mid);margin-top:1rem;text-align:center;">Spread your intake across <strong id="res-meals">3–4 meals</strong>, aiming for <strong id="res-per-meal">—g</strong> per meal.</p>
+        <p style="font-size:.8rem;color:var(--mid);margin-top:1rem;text-align:center;">Spread your intake across <strong>3–4 meals</strong>, aiming for <strong id="res-per-meal">—g</strong> per meal.</p>
         <div class="meal-grid" id="meal-grid"></div>
+        <p id="plant-note" style="display:none;font-size:.8rem;color:var(--mid);margin-top:.75rem;text-align:center;">Plant-based target is 10–15% higher to account for lower leucine content and digestibility of plant proteins.</p>
       </div>
     </div>
 
     <div class="info-section">
       <h2>How much protein do you actually need?</h2>
-      <p>The official RDA for protein is 0.8g per kg of body weight — but this represents the minimum to prevent deficiency in a sedentary adult, not an optimal intake. For anyone who exercises, wants to lose weight, or is over 50, the research consistently points to higher intakes.</p>
+      <p>The official RDA for protein is 0.8g per kg of body weight — but this represents the <em>minimum to prevent deficiency</em> in a sedentary adult, not an optimal intake. For anyone who exercises, wants to lose fat, or is over 50, the research consistently supports higher intakes.</p>
 
       <h3>Protein targets by goal</h3>
-      <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
-        <thead><tr style="background:var(--cream);"><th style="text-align:left;padding:.625rem 1rem;font-size:.75rem;color:var(--mid);text-transform:uppercase;letter-spacing:.04em;">Goal</th><th style="text-align:left;padding:.625rem 1rem;font-size:.75rem;color:var(--mid);text-transform:uppercase;letter-spacing:.04em;">Recommended intake</th><th style="text-align:left;padding:.625rem 1rem;font-size:.75rem;color:var(--mid);text-transform:uppercase;letter-spacing:.04em;">Why</th></tr></thead>
+      <table class="info-table">
+        <thead><tr><th>Goal</th><th>Recommended intake</th><th>Why</th></tr></thead>
         <tbody>
-          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.625rem 1rem;color:var(--mid);">General health</td><td style="padding:.625rem 1rem;color:var(--mid);">1.0–1.2 g/kg</td><td style="padding:.625rem 1rem;color:var(--mid);">Maintains muscle, supports immunity</td></tr>
-          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.625rem 1rem;color:var(--mid);">Fat loss</td><td style="padding:.625rem 1rem;color:var(--mid);">1.8–2.4 g/kg</td><td style="padding:.625rem 1rem;color:var(--mid);">Preserves lean mass during deficit</td></tr>
-          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.625rem 1rem;color:var(--mid);">Muscle building</td><td style="padding:.625rem 1rem;color:var(--mid);">1.6–2.2 g/kg</td><td style="padding:.625rem 1rem;color:var(--mid);">Maximises muscle protein synthesis</td></tr>
-          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.625rem 1rem;color:var(--mid);">Endurance sports</td><td style="padding:.625rem 1rem;color:var(--mid);">1.4–1.7 g/kg</td><td style="padding:.625rem 1rem;color:var(--mid);">Supports recovery and adaptation</td></tr>
-          <tr><td style="padding:.625rem 1rem;color:var(--mid);">Adults 50+</td><td style="padding:.625rem 1rem;color:var(--mid);">1.2–1.6 g/kg</td><td style="padding:.625rem 1rem;color:var(--mid);">Counters age-related muscle loss</td></tr>
+          <tr><td>General health</td><td>1.0–1.2 g/kg</td><td>Maintains muscle, supports immunity</td></tr>
+          <tr><td>Fat loss</td><td>1.8–2.4 g/kg</td><td>Preserves lean mass during calorie deficit</td></tr>
+          <tr><td>Muscle building</td><td>1.6–2.2 g/kg</td><td>Maximises muscle protein synthesis</td></tr>
+          <tr><td>Endurance sports</td><td>1.4–1.7 g/kg</td><td>Supports recovery and aerobic adaptation</td></tr>
+          <tr><td>Adults 50+</td><td>1.2–1.6 g/kg</td><td>Counters age-related muscle loss (sarcopenia)</td></tr>
         </tbody>
       </table>
 
       <h3>Why protein needs are higher during fat loss</h3>
-      <p>When you're in a calorie deficit, your body can use muscle protein as an energy source — a process called gluconeogenesis. Higher protein intake (1.8–2.4g/kg) during fat loss essentially "protects" muscle mass by ensuring there's always abundant amino acids available, reducing the body's need to break down muscle tissue. Studies consistently show that high-protein diets during calorie restriction result in greater fat loss and better lean mass retention compared to lower-protein approaches at the same calorie intake.</p>
+      <p>When you're in a calorie deficit, your body can use muscle protein as an energy source through gluconeogenesis. Higher protein intake during fat loss (1.8–2.4g/kg) provides abundant amino acids, reducing the body's need to break down muscle tissue. Studies consistently show that high-protein diets during calorie restriction result in greater fat loss and better lean mass retention compared to lower-protein approaches at the same calorie intake.</p>
 
       <h3>Why older adults need more protein</h3>
-      <p>Ageing reduces muscle sensitivity to protein — a process called anabolic resistance. Older muscles require a higher dose of protein per meal to trigger the same muscle protein synthesis response that younger muscles achieve with less. Research suggests adults over 50 benefit from a minimum of 30–40g of protein per meal to reliably stimulate muscle maintenance, compared to 20–25g for younger adults. The RDA of 0.8g/kg is particularly inadequate for this group.</p>
+      <p>Ageing reduces muscle sensitivity to protein — a process called anabolic resistance. Older muscles require a higher dose of protein per meal to trigger the same muscle protein synthesis response. Research suggests adults over 50 benefit from 30–40g of protein per meal to reliably stimulate muscle maintenance, compared to 20–25g for younger adults. The RDA of 0.8g/kg is particularly inadequate for this group.</p>
+
+      <div class="highlight-box">
+        <h4>📌 Protein and women's health</h4>
+        <p>Women generally have lower absolute protein needs due to lower body mass, but the g/kg targets are the same. During perimenopause and menopause, oestrogen decline accelerates muscle loss — making adequate protein (1.2–1.6g/kg minimum) especially important. Women over 40 engaged in resistance training benefit most from the higher end of each range.</p>
+      </div>
 
       <h3>Spreading protein throughout the day</h3>
-      <p>Total daily protein matters most, but distribution has a meaningful effect on muscle protein synthesis. Research shows that spreading protein across 3–4 meals of 25–40g each is more effective for muscle building and preservation than consuming the same total in one or two large meals. A protein-rich breakfast is particularly important — most people under-consume protein in the morning and then try to compensate at dinner.</p>
+      <p>Total daily protein matters most, but distribution has a meaningful effect on muscle protein synthesis. Research shows spreading protein across 3–4 meals of 25–40g each is more effective than consuming the same total in one or two large meals. A protein-rich breakfast is particularly important — most people under-consume protein in the morning and overcorrect at dinner.</p>
 
-      <h3>Best protein sources</h3>
-      <p><strong>Animal-based:</strong> Chicken breast (~31g/100g), canned tuna (~25g/100g), salmon (~25g/100g), eggs (~6g each), Greek yogurt (~10g/100g), cottage cheese (~11g/100g), whey protein (~24g/30g scoop).</p>
-      <p><strong>Plant-based:</strong> Tempeh (~19g/100g), edamame (~11g/100g), tofu (~8–12g/100g), lentils (~9g/100g), chickpeas (~9g/100g), pea protein powder (~21g/30g scoop). Plant proteins are generally lower in leucine — the amino acid most responsible for triggering muscle synthesis — so plant-based eaters may benefit from slightly higher total intakes.</p>
+      <h3>Protein quality: complete vs incomplete</h3>
+      <p>Not all protein is equal. <strong>Complete proteins</strong> contain all nine essential amino acids in adequate proportions — these include all animal proteins, plus soy, quinoa, and buckwheat. <strong>Incomplete proteins</strong> are low in one or more essential amino acids. Plant-based eaters can get complete amino acid profiles by combining sources throughout the day (e.g. legumes with grains).</p>
+      <p>Leucine is the amino acid most responsible for triggering muscle protein synthesis. Animal proteins and soy are naturally high in leucine. Other plant proteins are lower, which is why plant-based eaters benefit from slightly higher total protein targets (10–20% more).</p>
+
+      <h3>Best protein sources by category</h3>
+      <table class="info-table">
+        <thead><tr><th>Food</th><th>Protein per 100g</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Chicken breast (cooked)</td><td>31g</td><td>Lean, high leucine</td></tr>
+          <tr><td>Canned tuna</td><td>25g</td><td>Convenient, affordable</td></tr>
+          <tr><td>Salmon</td><td>25g</td><td>High omega-3</td></tr>
+          <tr><td>Eggs</td><td>13g (2 eggs)</td><td>Complete protein, versatile</td></tr>
+          <tr><td>Greek yogurt</td><td>10g</td><td>Also provides calcium</td></tr>
+          <tr><td>Cottage cheese</td><td>11g</td><td>Slow-digesting casein</td></tr>
+          <tr><td>Tempeh</td><td>19g</td><td>Best plant protein, fermented</td></tr>
+          <tr><td>Edamame</td><td>11g</td><td>Complete plant protein</td></tr>
+          <tr><td>Lentils (cooked)</td><td>9g</td><td>Also high in fibre</td></tr>
+          <tr><td>Whey protein</td><td>24g/scoop</td><td>Fast-absorbing, high leucine</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Protein and the thermic effect of food</h3>
+      <p>Protein has the highest thermic effect of any macronutrient — your body burns 20–30% of protein calories during digestion and metabolism, compared to 5–10% for carbohydrates and 0–3% for fats. This means a diet higher in protein naturally creates a small calorie deficit even without reducing portion sizes, contributing to its effectiveness for fat loss.</p>
+
+      <h3>How protein affects hunger and satiety</h3>
+      <p>Protein is the most satiating macronutrient. It reduces levels of the hunger hormone ghrelin and increases satiety hormones including GLP-1 and peptide YY. In practical terms, high-protein meals keep you full longer and reduce total calorie intake at subsequent meals — a significant benefit for anyone managing their weight.</p>
 
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
+          <div class="faq-q">How much protein do I need per day?</div>
+          <div class="faq-a">It depends on your goal. For general health: 1.0–1.2g/kg. For fat loss: 1.8–2.4g/kg. For muscle building: 1.6–2.2g/kg. For adults 50+: 1.2–1.6g/kg. The RDA of 0.8g/kg is a minimum to prevent deficiency — not an optimal target for anyone who exercises.</div>
+        </div>
+        <div class="faq-item">
           <div class="faq-q">Can you eat too much protein?</div>
-          <div class="faq-a">For healthy adults with normal kidney function, research does not support the idea that high protein intakes (up to 3g/kg) cause kidney damage. The concern about protein and kidneys applies to people who already have kidney disease, not healthy individuals. Very high protein diets can cause digestive discomfort and are more expensive, but are not dangerous for most people. People with existing kidney conditions should consult a healthcare provider.</div>
+          <div class="faq-a">For healthy adults with normal kidney function, research does not support the idea that high protein intakes (up to 3g/kg) cause kidney damage. The concern applies to people who already have kidney disease. Very high protein diets can cause digestive discomfort and are more expensive, but are not dangerous for most healthy people.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Is protein powder necessary?</div>
-          <div class="faq-a">No. Protein powder is a convenient supplement, not a necessity. Whole food sources provide the same amino acids plus additional nutrients like vitamins and minerals. Powder is useful when hitting a high protein target through food alone becomes impractical — for very active individuals or those who find high-protein foods unappealing. The cheapest effective option is whey protein concentrate.</div>
+          <div class="faq-a">No. Protein powder is a convenient supplement, not a necessity. Whole food sources provide the same amino acids plus additional nutrients. Powder is useful when hitting a high protein target through food alone becomes impractical — for very active individuals or those with low appetite. The most cost-effective option is whey protein concentrate.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Does protein timing matter?</div>
-          <div class="faq-a">Less than once believed. The "anabolic window" immediately post-workout is real but wider than the 30-minute window often cited — research suggests muscle protein synthesis is elevated for several hours after training. Total daily protein intake matters far more than precise timing. That said, having a protein-rich meal within 2 hours of training is a sensible practice.</div>
+          <div class="faq-a">Less than once believed. The anabolic window post-workout is real but wider than the 30-minute window often cited — muscle protein synthesis is elevated for several hours after training. Total daily protein intake matters far more than precise timing. Having a protein-rich meal within 2 hours of training is a sensible practice, but not critical.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How much protein is in a typical meal?</div>
-          <div class="faq-a">A 150g chicken breast provides about 45g. Two eggs provide about 12g. 170g Greek yogurt provides about 17g. A 30g scoop of whey protein provides about 24g. A typical Western meal without deliberate protein focus often provides 15–25g — below the threshold that maximally stimulates muscle protein synthesis in older adults.</div>
+          <div class="faq-q">How much protein per meal for muscle building?</div>
+          <div class="faq-a">Research suggests 25–40g per meal to reliably stimulate muscle protein synthesis. Younger adults respond to 20–25g; older adults (50+) benefit from 30–40g per meal due to anabolic resistance. Spreading your total intake across 3–4 meals is more effective for muscle building than eating the same total in 1–2 large meals.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does protein help with weight loss?</div>
+          <div class="faq-a">Yes, in several ways. Protein has a high thermic effect — about 25% of protein calories are burned during digestion. It's the most satiating macronutrient, reducing hunger and overall calorie intake. And high protein intake during a calorie deficit preserves muscle mass, keeping your metabolic rate from dropping as you lose weight.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do plant-based eaters need more protein?</div>
+          <div class="faq-a">Generally yes, by 10–20%. Plant proteins are typically lower in leucine and some are less completely absorbed than animal proteins. This is accounted for in this calculator's plant-based results. Combining sources throughout the day (legumes, grains, soy) and eating slightly more total protein compensates effectively.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the best protein source for muscle building?</div>
+          <div class="faq-a">Whey protein has the highest leucine content of any common protein source, making it particularly effective at stimulating muscle protein synthesis. Among whole foods, chicken breast, eggs, Greek yogurt, and cottage cheese are excellent choices. For plant-based eaters, tempeh, edamame, and pea or soy protein powder are most effective.</div>
         </div>
       </div>
 
@@ -347,6 +426,7 @@ function calculate() {
   const age = parseInt(document.getElementById('age').value);
   const activity = document.getElementById('activity').value;
   const goal = document.getElementById('goal').value;
+  const diet = document.getElementById('diet').value;
 
   if (!weight || weight <= 0) { alert('Please enter your body weight.'); return; }
   if (!age || age < 15 || age > 100) { alert('Please enter a valid age.'); return; }
@@ -354,22 +434,23 @@ function calculate() {
   if (currentUnit === 'lbs') weight = weight / 2.2046;
 
   const ranges = {
-    maintain:   {lo: 1.0, mid: 1.1, hi: 1.3},
-    loss:       {lo: 1.8, mid: 2.0, hi: 2.4},
-    muscle:     {lo: 1.6, mid: 1.9, hi: 2.2},
-    endurance:  {lo: 1.4, mid: 1.55, hi: 1.7},
-    senior:     {lo: 1.2, mid: 1.4, hi: 1.6},
+    maintain:  {lo: 1.0, mid: 1.1, hi: 1.3},
+    loss:      {lo: 1.8, mid: 2.0, hi: 2.4},
+    muscle:    {lo: 1.6, mid: 1.9, hi: 2.2},
+    endurance: {lo: 1.4, mid: 1.55, hi: 1.7},
+    senior:    {lo: 1.2, mid: 1.4, hi: 1.6},
   };
 
   let {lo, mid, hi} = ranges[goal];
 
-  // Activity adjustment
   if (activity === 'athlete') { lo += 0.2; mid += 0.2; hi += 0.2; }
   else if (activity === 'active') { lo += 0.1; mid += 0.1; hi += 0.1; }
 
-  const minG = Math.round(lo * weight);
-  const targetG = Math.round(mid * weight);
-  const maxG = Math.round(hi * weight);
+  // Plant-based adjustment: +12%
+  const plantMultiplier = diet === 'plant' ? 1.12 : 1.0;
+  const minG = Math.round(lo * weight * plantMultiplier);
+  const targetG = Math.round(mid * weight * plantMultiplier);
+  const maxG = Math.round(hi * weight * plantMultiplier);
   const perMeal = Math.round(targetG / 4);
 
   document.getElementById('res-range').textContent = minG + '–' + maxG + 'g';
@@ -377,15 +458,26 @@ function calculate() {
   document.getElementById('res-target').textContent = targetG + 'g';
   document.getElementById('res-max').textContent = maxG + 'g';
   document.getElementById('res-per-meal').textContent = perMeal + 'g';
+  document.getElementById('plant-note').style.display = diet === 'plant' ? 'block' : 'none';
 
-  const sources = [
-    {food:'Chicken breast', per100: 31},
-    {food:'Canned tuna',    per100: 25},
-    {food:'Greek yogurt',   per100: 10},
-    {food:'Eggs (each)',    per100: 6},
-    {food:'Lentils (cooked)', per100: 9},
-    {food:'Cottage cheese', per100: 11},
-  ];
+  const sources = diet === 'plant'
+    ? [
+        {food:'Tempeh',          per100: 19},
+        {food:'Edamame',         per100: 11},
+        {food:'Tofu (firm)',     per100: 10},
+        {food:'Lentils (cooked)',per100: 9},
+        {food:'Chickpeas',       per100: 9},
+        {food:'Pea protein',     per100: 21},
+      ]
+    : [
+        {food:'Chicken breast',  per100: 31},
+        {food:'Canned tuna',     per100: 25},
+        {food:'Greek yogurt',    per100: 10},
+        {food:'Eggs (each)',     per100: 6},
+        {food:'Lentils (cooked)',per100: 9},
+        {food:'Cottage cheese',  per100: 11},
+      ];
+
   const grid = document.getElementById('meal-grid');
   grid.innerHTML = '';
   sources.forEach(s => {

@@ -11,6 +11,7 @@
 
 ### Nutrition
 - [Calorie & TDEE Calculator](https://mywellnesscalc.com/tools/calorie-calculator.html): Calculates Total Daily Energy Expenditure based on age, weight, height, and activity level.
+- [Calorie Deficit Calculator](https://mywellnesscalc.com/tools/calorie-deficit-calculator.html): Calculates daily calorie target for fat loss based on TDEE, goal weight, and weekly loss rate — with safety rating and protein target.
 - [Macro Calculator](https://mywellnesscalc.com/tools/macro-calculator.html): Finds ideal daily protein, carbohydrate, and fat targets based on calories, body weight, and fitness goals.
 - [Protein Intake Calculator](https://mywellnesscalc.com/tools/protein-calculator.html): Calculates optimal daily protein target based on weight, activity level, and goals — muscle building, fat loss, or maintenance.
 - [Protein Calculator for Women Over 40](https://mywellnesscalc.com/tools/protein-calculator-women-over-40.html): Personalised daily protein target for women over 40 based on weight, activity level, and goals.
@@ -41,6 +42,8 @@
 - [High Protein Breakfast Ideas for Women Over 40](https://mywellnesscalc.com/blog/high-protein-breakfast-women-over-40.html): Practical breakfasts hitting 30g+ protein to support muscle, metabolism, and hormonal health.
 - [High Protein Lunch Ideas for Women Over 40](https://mywellnesscalc.com/blog/high-protein-lunch-women-over-40.html): Why protein at lunch matters more than most people think, and 10 practical meals delivering 30g+.
 - [How to Calculate Your Ideal Calorie Deficit for Weight Loss](https://mywellnesscalc.com/blog/calorie-deficit-for-weight-loss.html): How to calculate the right calorie deficit for fat loss without losing muscle.
+- [How Long Does It Take to Lose Weight? A Realistic Timeline](https://mywellnesscalc.com/blog/how-long-to-lose-weight.html): Week-by-week expectations, why progress slows, and how to set realistic goals based on deficit size.
+- [Protein vs Carbs vs Fat: Which Macronutrient Should You Prioritise?](https://mywellnesscalc.com/blog/protein-vs-carbs-vs-fat.html): What each macronutrient does, how much you need, and which to set first depending on your goals.
 - [TDEE vs BMR: What's the Difference and Why It Matters](https://mywellnesscalc.com/blog/tdee-vs-bmr.html): How to understand both calorie numbers and use them to reach your goals.
 - [Vitamin D Deficiency: Symptoms, Causes, and How Much You Need](https://mywellnesscalc.com/blog/vitamin-d-deficiency.html): Signs, causes, how much Vitamin D you actually need, and whether to supplement.
 - [How Much Vitamin D Do You Need Per Day? Dosage by Age and Situation](https://mywellnesscalc.com/blog/how-much-vitamin-d-do-you-need-daily.html): Recommended daily intake by age, sun exposure vs supplements, and signs of deficiency.

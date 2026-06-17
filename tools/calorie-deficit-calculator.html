@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Deficit Calculator – How Much to Eat to Lose Weight | My Wellness Calc</title>
+  <meta name="description" content="Free calorie deficit calculator. Find your TDEE, set a deficit for your weight loss goal, and see how long it will take — with a safe rate recommendation.">
+  <meta property="og:title" content="Calorie Deficit Calculator – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/calorie-deficit-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .unit-toggle{display:flex;gap:.5rem;margin-bottom:1.5rem;}
+    .unit-btn{flex:1;padding:.625rem;border:1.5px solid var(--border);border-radius:8px;background:white;font-size:.875rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+    .unit-btn.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group select,.form-group input{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group select:focus,.form-group input:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .result-hero{background:var(--cream);border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .result-label{font-size:.8rem;font-weight:600;color:var(--sage-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .result-calories{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:var(--sage-dark);line-height:1;}
+    .result-unit{font-size:1rem;color:var(--mid);margin-top:.25rem;}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .result-item{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .result-item-val{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:300;color:var(--charcoal);}
+    .result-item-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .pace-box{background:white;border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .pace-box h4{font-size:.85rem;font-weight:600;color:var(--charcoal);margin-bottom:.75rem;}
+    .pace-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.875rem;}
+    .pace-row:last-child{border-bottom:none;}
+    .pace-label{color:var(--mid);}
+    .pace-val{font-weight:500;color:var(--charcoal);}
+    .safety-badge{display:inline-block;padding:.25rem .75rem;border-radius:100px;font-size:.75rem;font-weight:600;}
+    .badge-safe{background:#e8f5e9;color:#2e7d32;}
+    .badge-moderate{background:#fff8e1;color:#f57f17;}
+    .badge-aggressive{background:#fce4ec;color:#c62828;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.5rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.25rem 1.5rem;margin:1.25rem 0;border-left:3px solid var(--sage);}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.4rem;}
+    .highlight-box p{margin-bottom:0;font-size:.875rem;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
+  </style>
+<!-- SCHEMA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calorie Deficit Calculator – How Much to Eat to Lose Weight",
+  "url": "https://mywellnesscalc.com/tools/calorie-deficit-calculator.html",
+  "description": "Free calorie deficit calculator. Find your TDEE, set a deficit for your weight loss goal, and see a realistic timeline.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "publisher": {"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},
+    {"@type":"ListItem","position":2,"name":"Calculators","item":"https://mywellnesscalc.com/#tools"},
+    {"@type":"ListItem","position":3,"name":"Calorie Deficit Calculator","item":"https://mywellnesscalc.com/tools/calorie-deficit-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What calorie deficit is needed to lose 1 pound per week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A deficit of approximately 500 calories per day creates a weekly deficit of 3,500 calories, which corresponds to roughly 1 pound (0.45kg) of fat loss per week. This is widely cited as a safe, sustainable rate. In practice, actual fat loss varies by individual due to metabolic adaptation, water weight fluctuation, and changes in activity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a safe calorie deficit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A deficit of 300–500 kcal per day (losing 0.3–0.5kg per week) is widely recommended as safe and sustainable. Deficits above 750–1000 kcal per day increase the risk of muscle loss, nutritional deficiencies, fatigue, and metabolic adaptation. Most health guidelines advise against consuming fewer than 1200 kcal/day for women or 1500 kcal/day for men."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my calorie deficit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First calculate your TDEE (Total Daily Energy Expenditure) — the calories you burn per day based on your weight, height, age, sex, and activity level. Then subtract your deficit from this number to get your daily calorie target. For example, a TDEE of 2200 kcal with a 500 kcal deficit means eating 1700 kcal per day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a calorie deficit cause muscle loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A moderate deficit (300–500 kcal/day) combined with adequate protein (1.6–2.4g/kg) and resistance training minimises muscle loss. Larger deficits increase muscle loss risk, especially without training. The body preferentially preserves muscle when protein intake is high and resistance training provides a muscle-retention signal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why have I stopped losing weight on a calorie deficit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plateaus have several causes: metabolic adaptation (your TDEE decreases as you lose weight), measurement errors in tracking calories, water retention masking fat loss, or simply having reached a new equilibrium. Recalculate your TDEE based on your current weight, ensure your tracking is accurate, and consider a brief diet break before resuming the deficit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a 1000 calorie deficit too much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most people, a 1000 kcal/day deficit is aggressive and carries elevated risk of muscle loss, micronutrient deficiency, fatigue, and unsustainable hunger. It is only appropriate for people with a high TDEE (2500+ kcal/day) under medical supervision. A 500 kcal deficit is more sustainable and produces similar long-term results with significantly less muscle loss."
+      }
+    }
+  ]
+}
+</script>
+<!-- SCHEMA_END -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../#tools">Calculators</a> › Calorie Deficit Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">🔥 Free Tool</span>
+      <h1>Calorie Deficit <em>Calculator</em></h1>
+      <p>Find your daily calorie target for fat loss — with a safe deficit based on your TDEE, goal weight, and timeline. Includes a muscle-loss risk warning for aggressive deficits.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="unit-toggle">
+        <button class="unit-btn active" id="btn-metric" onclick="setUnit('metric')">Metric (kg/cm)</button>
+        <button class="unit-btn" id="btn-imperial" onclick="setUnit('imperial')">Imperial (lbs/in)</button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label id="weight-label">Current weight (kg)</label>
+          <input type="number" id="weight" placeholder="e.g. 80" min="30">
+        </div>
+        <div class="form-group">
+          <label id="goal-label">Goal weight (kg)</label>
+          <input type="number" id="goal-weight" placeholder="e.g. 72" min="30">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label id="height-label">Height (cm)</label>
+          <input type="number" id="height" placeholder="e.g. 170" min="100">
+        </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" id="age" placeholder="e.g. 30" min="15" max="100">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Biological sex</label>
+        <select id="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Activity level</label>
+        <select id="activity">
+          <option value="1.2">Sedentary (desk job, little exercise)</option>
+          <option value="1.375">Lightly active (1–3 days/week)</option>
+          <option value="1.55" selected>Moderately active (3–5 days/week)</option>
+          <option value="1.725">Very active (6–7 days/week)</option>
+          <option value="1.9">Athlete / twice daily training</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Weekly weight loss goal</label>
+        <select id="rate">
+          <option value="0.25">0.25 kg/week — very gentle (minimal muscle risk)</option>
+          <option value="0.5" selected>0.5 kg/week — recommended</option>
+          <option value="0.75">0.75 kg/week — moderate</option>
+          <option value="1.0">1.0 kg/week — aggressive</option>
+        </select>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate my calorie target →</button>
+
+      <div class="result-box" id="result">
+        <div class="result-hero">
+          <div class="result-label">Daily calorie target</div>
+          <div class="result-calories" id="res-calories">—</div>
+          <div class="result-unit">calories per day</div>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="result-item-val" id="res-tdee">—</div>
+            <div class="result-item-label">Your TDEE<br>(maintenance)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-val" id="res-deficit">—</div>
+            <div class="result-item-label">Daily deficit<br>(kcal)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-val" id="res-weeks">—</div>
+            <div class="result-item-label">Est. weeks<br>to goal</div>
+          </div>
+        </div>
+
+        <div class="pace-box">
+          <h4>Deficit assessment</h4>
+          <div class="pace-row">
+            <span class="pace-label">Safety rating</span>
+            <span class="pace-val" id="res-safety">—</span>
+          </div>
+          <div class="pace-row">
+            <span class="pace-label">Weekly fat loss</span>
+            <span class="pace-val" id="res-weekly">—</span>
+          </div>
+          <div class="pace-row">
+            <span class="pace-label">Minimum recommended intake</span>
+            <span class="pace-val" id="res-minimum">—</span>
+          </div>
+          <div class="pace-row">
+            <span class="pace-label">Protein target (muscle protection)</span>
+            <span class="pace-val" id="res-protein">—</span>
+          </div>
+        </div>
+
+        <p id="res-warning" style="display:none;background:#fff3e0;border-left:3px solid #ff9800;padding:.875rem 1rem;border-radius:0 8px 8px 0;font-size:.85rem;color:#e65100;margin-top:.5rem;"></p>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>What is a calorie deficit and how does it work?</h2>
+      <p>A calorie deficit occurs when you consume fewer calories than your body burns in a day. Your body must then draw on stored energy — primarily body fat — to make up the difference. Over time, this produces fat loss.</p>
+      <p>Your Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns in a day, accounting for your Basal Metabolic Rate (BMR — calories burned at rest) plus all physical activity. Eating below your TDEE creates a deficit; the size of the deficit determines how quickly you lose fat.</p>
+
+      <h3>The 3,500 calorie rule</h3>
+      <p>A commonly cited figure is that 1 pound (0.45kg) of fat contains approximately 3,500 calories. A daily deficit of 500 kcal creates a weekly deficit of 3,500 kcal — roughly 0.45kg of fat loss per week. While useful as a rough guide, actual fat loss is more variable due to metabolic adaptation, water retention, and individual differences.</p>
+
+      <h3>How big should your deficit be?</h3>
+      <table class="info-table">
+        <thead><tr><th>Deficit size</th><th>Weekly loss</th><th>Assessment</th></tr></thead>
+        <tbody>
+          <tr><td>~250 kcal/day</td><td>~0.25 kg</td><td>Very gentle — minimal muscle risk, very sustainable</td></tr>
+          <tr><td>~500 kcal/day</td><td>~0.5 kg</td><td>Recommended — sustainable, low muscle risk</td></tr>
+          <tr><td>~750 kcal/day</td><td>~0.75 kg</td><td>Moderate — requires higher protein to protect muscle</td></tr>
+          <tr><td>~1000 kcal/day</td><td>~1.0 kg</td><td>Aggressive — elevated muscle loss risk, harder to sustain</td></tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box">
+        <h4>📌 Why bigger deficits aren't always better</h4>
+        <p>Larger deficits lose weight faster but increase the proportion coming from muscle rather than fat. Losing muscle reduces your metabolic rate, making future fat loss harder. A moderate deficit with high protein and resistance training produces better long-term body composition than an aggressive deficit without these safeguards.</p>
+      </div>
+
+      <h3>Why protein matters during a deficit</h3>
+      <p>When calories are restricted, your body can use muscle protein as an energy source — particularly if protein intake is low. Eating 1.6–2.4g of protein per kg of body weight during a deficit provides abundant amino acids, significantly reducing muscle breakdown. High protein intake also increases satiety and has a higher thermic effect than carbohydrates or fat — both useful during a deficit.</p>
+
+      <h3>Metabolic adaptation: why deficits work less over time</h3>
+      <p>As you lose weight, your TDEE decreases for two reasons: you are lighter (requiring less energy to move), and your body may reduce metabolic rate as a protective response to calorie restriction. This is why weight loss often slows or stalls after several weeks — the same deficit that worked initially no longer creates the same shortfall.</p>
+      <p>Practical responses include: recalculating your TDEE at your new weight, taking a diet break (eating at maintenance for 1–2 weeks), increasing physical activity, or accepting a slower rate of loss as a sustainable long-term approach.</p>
+
+      <h3>Tracking your intake accurately</h3>
+      <p>Research consistently shows that people underestimate their calorie intake by 20–50%. Common sources of error include not weighing food (using volume measures instead), forgetting oils and cooking fats, not accounting for sauces and condiments, and underreporting snacks. Using a kitchen scale and a calorie tracking app (such as MyFitnessPal or Cronometer) for at least 2–4 weeks gives a much more accurate baseline than estimation alone.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What calorie deficit is needed to lose 1 pound per week?</div>
+          <div class="faq-a">A deficit of approximately 500 calories per day creates a weekly deficit of 3,500 calories — corresponding to roughly 1 pound (0.45kg) of fat loss per week. In practice, actual results vary due to metabolic adaptation, water weight fluctuation, and individual differences in energy expenditure.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is a safe calorie deficit?</div>
+          <div class="faq-a">A deficit of 300–500 kcal per day is widely recommended as safe and sustainable. Deficits above 750–1000 kcal per day increase the risk of muscle loss, nutritional deficiencies, and metabolic adaptation. Most guidelines advise against dropping below 1200 kcal/day for women or 1500 kcal/day for men.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Will a calorie deficit cause muscle loss?</div>
+          <div class="faq-a">A moderate deficit (300–500 kcal/day) with high protein intake (1.6–2.4g/kg) and resistance training minimises muscle loss significantly. Larger deficits without these safeguards carry higher muscle loss risk. The body preferentially preserves muscle when it receives adequate protein and a training signal to maintain it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I calculate my calorie deficit?</div>
+          <div class="faq-a">First calculate your TDEE — the calories you burn per day based on weight, height, age, sex, and activity level. Then subtract your desired daily deficit from this number. For example, a TDEE of 2200 kcal with a 500 kcal deficit means eating 1700 kcal per day.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why have I stopped losing weight on a calorie deficit?</div>
+          <div class="faq-a">Plateaus occur because your TDEE decreases as you lose weight, tracking errors accumulate, water retention masks fat loss, or you've reached a new equilibrium. Recalculate your TDEE at your current weight, review your tracking accuracy, and consider a brief diet break at maintenance before resuming.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is a 1000 calorie deficit too much?</div>
+          <div class="faq-a">For most people, yes. A 1000 kcal/day deficit carries elevated risk of muscle loss, micronutrient deficiency, fatigue, and unsustainable hunger. It is only appropriate for people with a high TDEE (2500+ kcal/day) and ideally under medical supervision. A 500 kcal deficit is more sustainable and produces similar long-term body composition outcomes with much less muscle loss.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I eat back exercise calories?</div>
+          <div class="faq-a">This depends on how your TDEE was calculated. If you used an activity multiplier that already accounts for your exercise (as this calculator does), you should not eat back exercise calories — they are already included. If you used a sedentary TDEE and are adding exercise, eating back 50–75% of estimated exercise calories is a reasonable middle ground, since calorie burn estimates for exercise are often inflated.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Calorie targets are estimates based on population averages. Actual results vary by individual. Consult a healthcare provider before starting a weight loss programme, particularly if you have underlying health conditions.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="protein-calculator.html">🥩 Protein Intake Calculator</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
+        <li><a href="body-fat-calculator.html">📏 Body Fat % Estimator</a></li>
+      </ul>
+    </div>
+    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+<script>
+let currentUnit = 'metric';
+
+function setUnit(unit) {
+  currentUnit = unit;
+  document.getElementById('btn-metric').classList.toggle('active', unit === 'metric');
+  document.getElementById('btn-imperial').classList.toggle('active', unit === 'imperial');
+  document.getElementById('weight-label').textContent = unit === 'metric' ? 'Current weight (kg)' : 'Current weight (lbs)';
+  document.getElementById('goal-label').textContent = unit === 'metric' ? 'Goal weight (kg)' : 'Goal weight (lbs)';
+  document.getElementById('height-label').textContent = unit === 'metric' ? 'Height (cm)' : 'Height (inches)';
+  document.getElementById('weight').placeholder = unit === 'metric' ? 'e.g. 80' : 'e.g. 176';
+  document.getElementById('goal-weight').placeholder = unit === 'metric' ? 'e.g. 72' : 'e.g. 158';
+  document.getElementById('height').placeholder = unit === 'metric' ? 'e.g. 170' : 'e.g. 67';
+}
+
+function calculate() {
+  let weight = parseFloat(document.getElementById('weight').value);
+  let goalWeight = parseFloat(document.getElementById('goal-weight').value);
+  let height = parseFloat(document.getElementById('height').value);
+  const age = parseInt(document.getElementById('age').value);
+  const sex = document.getElementById('sex').value;
+  const activity = parseFloat(document.getElementById('activity').value);
+  const rateKg = parseFloat(document.getElementById('rate').value);
+
+  if (!weight || !goalWeight || !height || !age) { alert('Please fill in all fields.'); return; }
+  if (goalWeight >= weight) { alert('Goal weight should be less than current weight.'); return; }
+
+  if (currentUnit === 'imperial') {
+    weight = weight / 2.2046;
+    goalWeight = goalWeight / 2.2046;
+    height = height * 2.54;
+  }
+
+  // Mifflin-St Jeor BMR
+  let bmr;
+  if (sex === 'male') {
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+  } else {
+    bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+  }
+  const tdee = Math.round(bmr * activity);
+  const dailyDeficit = Math.round(rateKg * 7700 / 7); // 7700 kcal per kg fat
+  const targetCalories = Math.max(tdee - dailyDeficit, sex === 'female' ? 1200 : 1500);
+  const actualDeficit = tdee - targetCalories;
+  const totalLoss = weight - goalWeight;
+  const weeksToGoal = Math.round((totalLoss * 7700) / (actualDeficit * 7));
+  const minCalories = sex === 'female' ? 1200 : 1500;
+  const proteinTarget = Math.round(weight * 2.0);
+
+  document.getElementById('res-calories').textContent = targetCalories.toLocaleString();
+  document.getElementById('res-tdee').textContent = tdee.toLocaleString() + ' kcal';
+  document.getElementById('res-deficit').textContent = actualDeficit + ' kcal';
+  document.getElementById('res-weeks').textContent = weeksToGoal + ' wks';
+  document.getElementById('res-weekly').textContent = rateKg + ' kg/week';
+  document.getElementById('res-minimum').textContent = minCalories.toLocaleString() + ' kcal/day';
+  document.getElementById('res-protein').textContent = proteinTarget + 'g/day';
+
+  let safetyBadge, safetyClass;
+  if (dailyDeficit <= 500) {
+    safetyBadge = '✓ Safe'; safetyClass = 'badge-safe';
+  } else if (dailyDeficit <= 750) {
+    safetyBadge = '⚠ Moderate'; safetyClass = 'badge-moderate';
+  } else {
+    safetyBadge = '⚠ Aggressive'; safetyClass = 'badge-aggressive';
+  }
+  document.getElementById('res-safety').innerHTML = `<span class="safety-badge ${safetyClass}">${safetyBadge}</span>`;
+
+  const warningEl = document.getElementById('res-warning');
+  if (dailyDeficit > 750) {
+    warningEl.style.display = 'block';
+    warningEl.textContent = '⚠ This is an aggressive deficit. To minimise muscle loss, aim for at least ' + proteinTarget + 'g of protein per day and include resistance training 2–3× per week. Consider a more moderate rate (0.5 kg/week) for better long-term results.';
+  } else {
+    warningEl.style.display = 'none';
+  }
+
+  const box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
