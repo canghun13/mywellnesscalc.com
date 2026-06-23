@@ -36,7 +36,7 @@
       var nav = document.querySelector('nav');
       if (nav && !nav.querySelector('.nav-back')) {
         var back = document.createElement('a');
-        back.href = base + '#tools';
+        back.href = base + 'tools/';
         back.className = 'nav-back';
         back.textContent = '← All tools';
         nav.insertBefore(back, nav.querySelector('.nav-hamburger'));

@@ -122,6 +122,17 @@ nav {
   color: var(--sage-dark);
 }
 
+/* ── TOOLS NAV LINK (PC: simple link, mobile: accordion) ── */
+.nav-tools-link > a {
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--mid); text-decoration: none;
+  padding: 0 1rem; height: 100%;
+  display: flex; align-items: center;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-tools-link > a:hover { color: var(--sage-dark); }
+
 /* ── BACK LINK ── */
 .nav-back {
   font-size: 0.875rem; color: var(--mid); text-decoration: none;

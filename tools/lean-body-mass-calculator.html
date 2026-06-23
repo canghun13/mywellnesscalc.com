@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lean Body Mass Calculator – My Wellness Calc</title>
+  <meta name="description" content="Free lean body mass calculator. Find your fat-free mass using the Boer formula — a smarter measure of body composition than weight or BMI alone.">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/lean-body-mass-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .tool-label{display:inline-flex;background:#fdf0e5;color:var(--accent);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--accent);}
+    .page-header p{color:var(--mid);font-size:1rem;font-weight:300;margin-bottom:2rem;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+    .calc-form{padding:2rem;}
+    .unit-toggle{display:flex;background:var(--cream);border-radius:10px;padding:4px;margin-bottom:1.5rem;gap:4px;}
+    .unit-btn{flex:1;padding:.5rem;border:none;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;cursor:pointer;background:transparent;color:var(--mid);transition:all .2s;}
+    .unit-btn.active{background:white;color:var(--charcoal);box-shadow:0 1px 4px rgba(0,0,0,.08);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.8rem;font-weight:500;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.5rem;}
+    .input-wrap{position:relative;}
+    .input-wrap input{width:100%;padding:.875rem 3rem .875rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--charcoal);background:var(--warm-white);transition:border-color .2s;}
+    .input-wrap input:focus{outline:none;border-color:var(--accent);background:white;}
+    .input-unit{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--light);font-weight:500;pointer-events:none;}
+    .gender-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.25rem;}
+    .gender-btn{padding:.875rem;border:1.5px solid var(--border);border-radius:10px;background:var(--warm-white);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--mid);font-weight:500;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.5rem;}
+    .gender-btn.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-section{display:none;padding:2rem;border-top:1px solid var(--border);animation:fadeUp .4s ease;}
+    .result-section.visible{display:block;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+    .result-box{background:var(--cream);border-radius:14px;padding:1.25rem;text-align:center;}
+    .result-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:400;color:var(--sage-dark);line-height:1;}
+    .result-label{font-size:.75rem;color:var(--mid);margin-top:.35rem;font-weight:500;letter-spacing:.03em;}
+    .result-bar{margin:1rem 0;}
+    .bar-wrap{background:var(--border);border-radius:100px;height:10px;overflow:hidden;}
+    .bar-fill{height:100%;background:var(--sage-dark);border-radius:100px;transition:width .6s ease;}
+    .bar-labels{display:flex;justify-content:space-between;font-size:.75rem;color:var(--light);margin-top:.35rem;}
+    .result-tip{background:var(--cream);border-radius:12px;padding:1.25rem;font-size:.875rem;color:var(--mid);line-height:1.6;margin-top:1rem;}
+    .result-tip strong{color:var(--charcoal);}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin-bottom:1rem;}
+    .related-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .related-list a{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;background:white;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:border-color .2s,transform .2s;}
+    .related-list a:hover{border-color:var(--sage-light);transform:translateX(3px);}
+    .article-section{margin-top:3rem;}
+    .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
+    .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
+    .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-section ul{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-section li{margin-bottom:.3rem;}
+    .data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .data-table th{background:var(--cream);padding:.6rem .875rem;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);border-bottom:2px solid var(--border);}
+    .data-table td{padding:.55rem .875rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .data-table tr:last-child td{border-bottom:none;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Lean Body Mass Calculator",
+  "url": "https://mywellnesscalc.com/tools/lean-body-mass-calculator.html",
+  "description": "Free lean body mass calculator using the Boer formula. Find your fat-free mass from height, weight, and gender.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "publisher": {"@type": "Organization", "name": "MyWellnessCalc", "url": "https://mywellnesscalc.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://mywellnesscalc.com/tools/"},
+    {"@type":"ListItem","position":3,"name":"Lean Body Mass Calculator","item":"https://mywellnesscalc.com/tools/lean-body-mass-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is lean body mass?","acceptedAnswer":{"@type":"Answer","text":"Lean body mass (LBM) is the total weight of your body minus fat mass — it includes muscle, bone, organs, water, and connective tissue. It's also called fat-free mass. LBM is a more useful health and fitness metric than total body weight because it reflects the tissues that contribute to strength, metabolism, and function."}},
+    {"@type":"Question","name":"What formula does this calculator use?","acceptedAnswer":{"@type":"Answer","text":"This calculator uses the Boer formula, which is widely considered the most accurate LBM estimation method using only height, weight, and gender. Men: LBM = (0.407 × weight in kg) + (0.267 × height in cm) − 19.2. Women: LBM = (0.252 × weight in kg) + (0.473 × height in cm) − 48.3."}},
+    {"@type":"Question","name":"What is a good lean body mass for my height?","acceptedAnswer":{"@type":"Answer","text":"There is no universal 'ideal' LBM — it depends heavily on height, gender, age, and fitness level. A more useful metric is body fat percentage: the proportion of total weight that is fat versus lean tissue. For men, 10–20% body fat is generally considered healthy; for women, 18–28%. Use your LBM alongside your body fat percentage for a fuller picture."}},
+    {"@type":"Question","name":"How is lean body mass different from muscle mass?","acceptedAnswer":{"@type":"Answer","text":"Lean body mass includes all non-fat tissue: skeletal muscle, smooth muscle, bones, organs, water, blood, and connective tissue. Muscle mass is a subset of LBM — typically around 40–50% of total LBM in healthy adults. Increasing muscle mass raises your LBM; losing muscle mass (sarcopenia) lowers it."}},
+    {"@type":"Question","name":"Why does lean body mass matter?","acceptedAnswer":{"@type":"Answer","text":"LBM is a key determinant of basal metabolic rate — people with more lean mass burn more calories at rest. It also predicts strength, physical function, and metabolic health. Tracking LBM over time is more meaningful than tracking total weight, especially during body recomposition (losing fat while gaining muscle), where total weight may stay the same while body composition improves significantly."}},
+    {"@type":"Question","name":"How can I increase my lean body mass?","acceptedAnswer":{"@type":"Answer","text":"The most effective strategies are resistance training (weight lifting, bodyweight exercise) to stimulate muscle growth, and adequate protein intake (1.6–2.2g per kg of bodyweight) to support muscle protein synthesis. Progressive overload — gradually increasing training difficulty over time — is essential for continued LBM gains. Sleep and recovery also play a significant role, as muscle growth primarily occurs during rest."}},
+    {"@type":"Question","name":"Can I lose fat and gain lean body mass at the same time?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is called body recomposition, and it's possible, particularly for beginners to resistance training, people returning from a break, or those with higher body fat percentages. It requires a combination of resistance training, adequate protein, and a modest calorie deficit (or maintenance calories). Progress is slower than dedicated bulking or cutting phases, but achievable for most people."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="page-wrap">
+  <main>
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Tools</a> › Lean Body Mass Calculator</div>
+    <span class="tool-label">Body & Weight</span>
+    <h1>Lean Body Mass <em>Calculator</em></h1>
+    <p class="page-header p">Find out how much of your weight is lean tissue — muscle, bone, and organs — versus fat. A smarter measure of body composition than the scale alone.</p>
+
+    <div class="calc-card">
+      <div class="calc-form">
+        <div class="unit-toggle">
+          <button class="unit-btn active" id="btnMetric" onclick="setUnit('metric')">Metric (kg / cm)</button>
+          <button class="unit-btn" id="btnImperial" onclick="setUnit('imperial')">Imperial (lbs / in)</button>
+        </div>
+
+        <div class="gender-row">
+          <button class="gender-btn active" id="btnMale" onclick="setGender('male')">♂ Male</button>
+          <button class="gender-btn" id="btnFemale" onclick="setGender('female')">♀ Female</button>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="weight">Weight</label>
+            <div class="input-wrap">
+              <input type="number" id="weight" placeholder="70" min="30" max="300">
+              <span class="input-unit" id="weightUnit">kg</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="height">Height</label>
+            <div class="input-wrap">
+              <input type="number" id="height" placeholder="170" min="100" max="250">
+              <span class="input-unit" id="heightUnit">cm</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="calc-btn" onclick="calculate()">Calculate Lean Body Mass</button>
+      </div>
+
+      <div class="result-section" id="resultSection">
+        <div class="result-grid">
+          <div class="result-box">
+            <div class="result-num" id="lbmResult">—</div>
+            <div class="result-label">Lean Body Mass</div>
+          </div>
+          <div class="result-box">
+            <div class="result-num" id="fatMassResult">—</div>
+            <div class="result-label">Fat Mass</div>
+          </div>
+        </div>
+
+        <div class="result-bar">
+          <div style="display:flex;justify-content:space-between;font-size:.8rem;color:var(--mid);margin-bottom:.4rem;">
+            <span>Body composition</span>
+            <span id="bfPct">—% body fat</span>
+          </div>
+          <div class="bar-wrap">
+            <div class="bar-fill" id="lbmBar" style="width:0%"></div>
+          </div>
+          <div class="bar-labels"><span>Fat</span><span>Lean mass</span></div>
+        </div>
+
+        <div class="result-tip" id="resultTip"></div>
+      </div>
+    </div>
+
+    <div class="article-section">
+      <h2>What is lean body mass?</h2>
+      <p>Lean body mass (LBM) — also called fat-free mass — is the total weight of everything in your body except fat. This includes skeletal muscle, smooth muscle, bone, organs, blood, water, and connective tissue. It's a more informative health metric than total body weight because it reflects the tissues that drive your metabolism, produce strength, and support physical function.</p>
+      <p>Two people can have the same total weight and height but very different body compositions — one with high muscle mass and low body fat, the other the reverse. LBM reveals that difference where a simple scale reading cannot.</p>
+
+      <h2>How lean body mass is calculated (Boer formula)</h2>
+      <p>This calculator uses the <strong>Boer formula</strong>, which is widely regarded as the most accurate LBM estimation method available without body fat measurement equipment:</p>
+      <ul>
+        <li><strong>Men:</strong> LBM = (0.407 × weight in kg) + (0.267 × height in cm) − 19.2</li>
+        <li><strong>Women:</strong> LBM = (0.252 × weight in kg) + (0.473 × height in cm) − 48.3</li>
+      </ul>
+      <p>The Boer formula accounts for both weight and height, which improves accuracy over weight-only methods. Like all estimation formulas, it provides an approximation — the most accurate measurements come from DEXA scans or hydrostatic weighing, but these aren't accessible to most people.</p>
+
+      <h2>Why lean body mass matters</h2>
+      <h3>It determines your metabolic rate</h3>
+      <p>Lean tissue — particularly skeletal muscle — is metabolically active. The more LBM you carry, the more calories your body burns at rest. This is why two people of the same weight can have different caloric needs, and why building muscle is an effective long-term strategy for weight management.</p>
+
+      <h3>It's a better fitness metric than weight</h3>
+      <p>During body recomposition (losing fat while gaining or maintaining muscle), total body weight may barely change while body composition improves significantly. Tracking LBM alongside total weight gives a more complete picture of what's actually happening in your body.</p>
+
+      <h3>It predicts physical function and longevity</h3>
+      <p>Higher LBM — particularly muscle mass — is strongly associated with functional independence, fall prevention, and longevity, especially in adults over 50. Age-related muscle loss (sarcopenia) begins as early as the 30s and accelerates after 60; regular resistance training is the most evidence-backed strategy for maintaining LBM with age.</p>
+
+      <h2>Average lean body mass by age and gender</h2>
+      <table class="data-table">
+        <thead><tr><th>Age range</th><th>Avg LBM — Men</th><th>Avg LBM — Women</th></tr></thead>
+        <tbody>
+          <tr><td>20–29</td><td>61–68 kg (134–150 lb)</td><td>42–48 kg (93–106 lb)</td></tr>
+          <tr><td>30–39</td><td>62–70 kg (137–154 lb)</td><td>43–49 kg (95–108 lb)</td></tr>
+          <tr><td>40–49</td><td>61–69 kg (134–152 lb)</td><td>42–48 kg (93–106 lb)</td></tr>
+          <tr><td>50–59</td><td>59–67 kg (130–148 lb)</td><td>41–47 kg (90–104 lb)</td></tr>
+          <tr><td>60–69</td><td>57–65 kg (126–143 lb)</td><td>40–46 kg (88–101 lb)</td></tr>
+        </tbody>
+      </table>
+      <p>These are estimates based on population averages. Athletic individuals will typically have higher LBM than the averages shown; sedentary individuals may be lower.</p>
+
+      <h2>How to increase lean body mass</h2>
+      <ul>
+        <li><strong>Resistance training:</strong> Progressive overload through weight lifting, bodyweight exercise, or resistance bands is the primary stimulus for muscle growth. Aim for 2–4 sessions per week targeting all major muscle groups.</li>
+        <li><strong>Adequate protein intake:</strong> Muscle protein synthesis requires dietary protein. Research supports 1.6–2.2g per kg of bodyweight per day for muscle growth and preservation.</li>
+        <li><strong>Sufficient sleep:</strong> Growth hormone — which drives muscle repair and synthesis — is predominantly released during deep sleep. 7–9 hours per night optimises recovery.</li>
+        <li><strong>Consistency over time:</strong> Lean mass changes slowly. Expect months, not weeks, to see meaningful changes. Track LBM (not just weight) to see progress during body recomposition.</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is lean body mass?</div>
+          <div class="faq-a">Lean body mass is the total weight of your body minus fat mass. It includes muscle, bone, organs, blood, water, and connective tissue. It's also called fat-free mass. LBM is a useful health metric because it reflects the tissues that drive your metabolism and physical function — unlike total weight, which doesn't tell you anything about body composition.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What formula does this calculator use?</div>
+          <div class="faq-a">This calculator uses the Boer formula: Men: LBM = (0.407 × weight kg) + (0.267 × height cm) − 19.2. Women: LBM = (0.252 × weight kg) + (0.473 × height cm) − 48.3. The Boer formula is considered one of the most accurate estimation methods available without body fat measurement equipment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How is lean body mass different from muscle mass?</div>
+          <div class="faq-a">Lean body mass includes all non-fat tissue: skeletal muscle, smooth muscle, bone, organs, water, and connective tissue. Muscle mass is a subset of LBM — typically around 40–50% of total LBM in healthy adults. You can increase muscle mass (through resistance training) without changing other LBM components significantly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why does lean body mass matter for weight loss?</div>
+          <div class="faq-a">During weight loss, protecting lean body mass is critical. Aggressive calorie restriction without resistance training often leads to significant muscle loss alongside fat loss — reducing metabolic rate and making further fat loss harder. Tracking LBM while dieting helps ensure you're losing fat rather than muscle. Adequate protein intake and resistance training are the two main strategies for preserving LBM during a calorie deficit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I lose fat and gain lean body mass at the same time?</div>
+          <div class="faq-a">Yes — this is called body recomposition. It's particularly achievable for beginners, those returning from a training break, or people with higher body fat percentages. It requires resistance training, adequate protein (1.6–2.2g/kg), and maintenance or slight deficit calories. Progress is slower than dedicated bulking or cutting, but sustainable and achievable for most people.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How accurate is this lean body mass calculator?</div>
+          <div class="faq-a">Formula-based LBM estimates are generally accurate within ±3–5 kg compared to gold-standard methods like DEXA scans. Accuracy varies based on body composition extremes (very high or very low body fat), athletic versus sedentary individuals, and age. For most people, the Boer formula provides a reliable enough estimate to track trends over time, even if the absolute number has some error.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What should I do with my lean body mass result?</div>
+          <div class="faq-a">Use your LBM to: (1) Calculate a more accurate protein target — most recommendations are based on LBM rather than total weight. (2) Track body recomposition — recalculate every 4–8 weeks to see if LBM is changing. (3) Estimate your metabolic rate more accurately. (4) Set realistic fitness goals based on your current muscle and fat distribution rather than just a target weight.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> LBM calculations are estimates based on height, weight, and gender. Individual results vary based on body composition, age, and fitness level. Consult a healthcare provider for clinical body composition assessment.</div>
+    </div>
+  </main>
+
+  <aside>
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="body-fat-calculator.html">📏 Body Fat % Estimator</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
+        <li><a href="protein-calculator.html">🥩 Protein Calculator</a></li>
+        <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="calorie-deficit-calculator.html">📉 Calorie Deficit Calculator</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+<div id="footer-placeholder"></div>
+<script>
+  var unit = 'metric';
+  var gender = 'male';
+
+  function setUnit(u) {
+    unit = u;
+    document.getElementById('btnMetric').classList.toggle('active', u === 'metric');
+    document.getElementById('btnImperial').classList.toggle('active', u === 'imperial');
+    document.getElementById('weightUnit').textContent = u === 'metric' ? 'kg' : 'lbs';
+    document.getElementById('heightUnit').textContent = u === 'metric' ? 'cm' : 'in';
+    document.getElementById('weight').placeholder = u === 'metric' ? '70' : '154';
+    document.getElementById('height').placeholder = u === 'metric' ? '170' : '67';
+    document.getElementById('resultSection').classList.remove('visible');
+  }
+
+  function setGender(g) {
+    gender = g;
+    document.getElementById('btnMale').classList.toggle('active', g === 'male');
+    document.getElementById('btnFemale').classList.toggle('active', g === 'female');
+  }
+
+  function calculate() {
+    var w = parseFloat(document.getElementById('weight').value);
+    var h = parseFloat(document.getElementById('height').value);
+    if (!w || !h || w <= 0 || h <= 0) { alert('Please enter valid weight and height.'); return; }
+
+    // Convert to metric
+    var wKg = unit === 'metric' ? w : w * 0.453592;
+    var hCm = unit === 'metric' ? h : h * 2.54;
+
+    // Boer formula
+    var lbm;
+    if (gender === 'male') {
+      lbm = (0.407 * wKg) + (0.267 * hCm) - 19.2;
+    } else {
+      lbm = (0.252 * wKg) + (0.473 * hCm) - 48.3;
+    }
+    lbm = Math.max(lbm, 0);
+    var fatMass = wKg - lbm;
+    var bfPct = (fatMass / wKg) * 100;
+    var lbmPct = 100 - bfPct;
+
+    var dispLbm, dispFat, dispUnit;
+    if (unit === 'metric') {
+      dispLbm = lbm.toFixed(1) + ' kg';
+      dispFat = Math.max(fatMass, 0).toFixed(1) + ' kg';
+      dispUnit = 'kg';
+    } else {
+      dispLbm = (lbm * 2.20462).toFixed(1) + ' lbs';
+      dispFat = Math.max(fatMass * 2.20462, 0).toFixed(1) + ' lbs';
+      dispUnit = 'lbs';
+    }
+
+    document.getElementById('lbmResult').textContent = dispLbm;
+    document.getElementById('fatMassResult').textContent = dispFat;
+    document.getElementById('bfPct').textContent = bfPct.toFixed(1) + '% body fat';
+    document.getElementById('lbmBar').style.width = Math.min(lbmPct, 100) + '%';
+
+    var tip = '';
+    if (gender === 'male') {
+      if (bfPct < 6) tip = '<strong>Essential fat range.</strong> This is very low body fat — typical of competitive bodybuilders at peak. Not a healthy long-term range for most people.';
+      else if (bfPct < 14) tip = '<strong>Athletic range.</strong> Low body fat with high lean mass. Typical of trained athletes. Excellent body composition.';
+      else if (bfPct < 21) tip = '<strong>Fitness range.</strong> Healthy body composition with good lean mass. This is the target range for most active adults.';
+      else if (bfPct < 25) tip = '<strong>Average range.</strong> Body fat is within normal limits. Reducing body fat while preserving lean mass through resistance training and a modest calorie deficit would improve health markers.';
+      else tip = '<strong>Above average body fat.</strong> Increasing lean body mass through resistance training and adequate protein intake, alongside a calorie deficit, would significantly improve body composition and metabolic health.';
+    } else {
+      if (bfPct < 14) tip = '<strong>Essential fat range.</strong> This is very low body fat — typical of competitive female athletes at peak. Women require higher essential fat than men for hormonal function.';
+      else if (bfPct < 21) tip = '<strong>Athletic range.</strong> Low body fat with high lean mass. Typical of female athletes. Excellent body composition.';
+      else if (bfPct < 25) tip = '<strong>Fitness range.</strong> Healthy body composition. Good lean mass relative to body fat. A common target for active women.';
+      else if (bfPct < 32) tip = '<strong>Average range.</strong> Body fat is within normal range for women. Resistance training to preserve and build lean mass would improve body composition and metabolic health.';
+      else tip = '<strong>Above average body fat.</strong> Resistance training combined with adequate protein and a modest calorie deficit is the most effective strategy to improve body composition and increase lean body mass.';
+    }
+    document.getElementById('resultTip').innerHTML = tip;
+    document.getElementById('resultSection').classList.add('visible');
+  }
+</script>
+<script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

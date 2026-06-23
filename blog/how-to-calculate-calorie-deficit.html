@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate a Calorie Deficit for Weight Loss – My Wellness Calc</title>
+  <meta name="description" content="How to calculate a calorie deficit step by step — find your TDEE, set a safe deficit, and work out your daily calorie target. Includes examples and common mistakes to avoid.">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <style>
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.1rem;font-weight:600;margin:1.5rem 0 .5rem;color:var(--charcoal);}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul,.article-body ol{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.35rem;}
+    .article-body strong{color:var(--charcoal);}
+    .step-box{background:white;border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin:1rem 0;position:relative;padding-left:2.5rem;}
+    .step-num{position:absolute;left:1rem;top:1.5rem;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;color:var(--sage-dark);}
+    .step-title{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;}
+    .step-body{font-size:.875rem;color:var(--mid);line-height:1.7;}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:0;font-size:.9rem;}
+    .example-box{background:#f8fcf8;border:1px solid var(--sage-light);border-radius:14px;padding:1.5rem;margin:1.25rem 0;}
+    .example-box h4{font-size:.9rem;font-weight:600;color:var(--sage-dark);margin-bottom:.75rem;}
+    .example-box p{font-size:.875rem;color:var(--mid);margin-bottom:.35rem;}
+    .example-box p:last-child{margin-bottom:0;}
+    .data-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.875rem;}
+    .data-table th{background:var(--sage-dark);color:white;padding:.7rem 1rem;text-align:left;font-weight:500;font-size:.82rem;}
+    .data-table td{padding:.6rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table tr:nth-child(even) td{background:var(--cream);}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .cta-box p{color:rgba(255,255,255,.85);font-size:.875rem;margin:0;flex:1;min-width:180px;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.82rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .toc a:hover{color:var(--sage-dark);}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-top:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;}
+    .tool-link:last-child{border-bottom:none;}
+    .tool-link:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate a Calorie Deficit for Weight Loss","url":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html","description":"Step-by-step guide to calculating a calorie deficit: find your TDEE, set a safe deficit size, and calculate your daily calorie target.","datePublished":"2026-06-23","dateModified":"2026-06-23","publisher":{"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://mywellnesscalc.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Calculate a Calorie Deficit","item":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a calorie deficit?","acceptedAnswer":{"@type":"Answer","text":"A calorie deficit occurs when you consume fewer calories than your body burns in a day. Your body makes up the energy shortfall by drawing on stored energy — primarily body fat. A deficit of approximately 3,500 calories (7,700 kJ) is commonly cited as equal to roughly 0.5 kg (1 lb) of fat, though actual results vary based on individual metabolism and body composition changes."}},{"@type":"Question","name":"How do I calculate my calorie deficit?","acceptedAnswer":{"@type":"Answer","text":"To calculate your calorie deficit: Step 1 — calculate your TDEE (Total Daily Energy Expenditure) using the Mifflin-St Jeor formula with your age, height, weight, and activity level. Step 2 — choose a deficit size: 250–500 calories per day for a moderate deficit (0.25–0.5 kg loss per week). Step 3 — subtract the deficit from your TDEE to get your daily calorie target."}},{"@type":"Question","name":"How big should my calorie deficit be?","acceptedAnswer":{"@type":"Answer","text":"A sustainable deficit is typically 250–500 calories per day, producing approximately 0.25–0.5 kg (0.5–1 lb) of fat loss per week. Deficits larger than 500–750 calories per day increase the risk of muscle loss, nutritional deficiencies, metabolic adaptation, and difficulty sustaining the approach. Never go below your BMR (basal metabolic rate) without medical supervision."}},{"@type":"Question","name":"Why am I not losing weight in a calorie deficit?","acceptedAnswer":{"@type":"Answer","text":"Common reasons for stalled fat loss despite a calorie deficit include: underestimating calorie intake (not weighing food accurately), overestimating TDEE (especially from exercise), metabolic adaptation (the body lowering TDEE over time), water retention masking fat loss, or the deficit being too small to produce measurable weekly changes. Most people significantly underestimate how many calories they consume. Accurate food tracking for 2 weeks typically reveals the source of the stall."}},{"@type":"Question","name":"What should I eat in a calorie deficit?","acceptedAnswer":{"@type":"Answer","text":"In a calorie deficit, food quality matters more, not less. Prioritise protein (1.6–2.2g per kg of bodyweight) to preserve muscle mass — the single most important dietary factor during fat loss. Fill the remainder of your calories with vegetables, whole grains, legumes, and healthy fats. Avoid highly processed foods that are calorie-dense and low in satiety."}},{"@type":"Question","name":"How long should I be in a calorie deficit?","acceptedAnswer":{"@type":"Answer","text":"Most people do best with structured deficit periods of 8–16 weeks followed by a maintenance phase of 4–8 weeks (sometimes called a 'diet break'). Extended continuous deficits increase the risk of metabolic adaptation, muscle loss, nutrient deficiency, and dietary fatigue. Maintenance breaks allow metabolism to partially recover and make the next deficit phase more effective."}}]}
+</script>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › How to Calculate a Calorie Deficit</div>
+    <span class="article-tag">Nutrition</span>
+    <h1>How to Calculate a Calorie Deficit for Weight Loss</h1>
+    <div class="article-meta">
+      <span>📅 June 2026</span>
+      <span>⏱️ 10 min read</span>
+      <span>🍽️ Nutrition</span>
+    </div>
+    <p class="article-intro">A calorie deficit is the foundation of every fat loss approach — regardless of diet type. Understanding how to calculate yours correctly, and how large to make it, is the difference between sustainable progress and frustrating yo-yo cycles. This guide walks through the process step by step, with worked examples and the most common mistakes people make.</p>
+
+    <div class="article-body">
+
+      <h2>What is a calorie deficit?</h2>
+      <p>A calorie deficit occurs when you consume fewer calories than your body burns in a given period. When this happens, your body meets its energy needs by drawing on stored energy — primarily body fat, but also some muscle mass if protein intake and resistance training are insufficient.</p>
+      <p>The commonly cited estimate is that 1 kg of body fat stores approximately 7,700 calories (3,500 kcal per pound). So a deficit of 500 calories per day would theoretically produce approximately 0.5 kg of fat loss per week. In practice, the relationship is less linear — the body adapts metabolically to sustained deficits — but it's a useful working model for planning.</p>
+
+      <h2>How to calculate your calorie deficit: step by step</h2>
+
+      <div class="step-box">
+        <div class="step-num">1</div>
+        <div class="step-title">Calculate your BMR (Basal Metabolic Rate)</div>
+        <div class="step-body">BMR is the number of calories your body burns at complete rest — just to keep organs functioning. The Mifflin-St Jeor equation is the most accurate widely-used formula:<br><br>
+        <strong>Men:</strong> BMR = (10 × weight kg) + (6.25 × height cm) − (5 × age) + 5<br>
+        <strong>Women:</strong> BMR = (10 × weight kg) + (6.25 × height cm) − (5 × age) − 161</div>
+      </div>
+
+      <div class="step-box">
+        <div class="step-num">2</div>
+        <div class="step-title">Calculate your TDEE (Total Daily Energy Expenditure)</div>
+        <div class="step-body">TDEE = BMR × Activity Multiplier. This accounts for the calories burned through daily movement and exercise:<br><br>
+        Sedentary (desk job, little exercise): × 1.2<br>
+        Lightly active (light exercise 1–3 days/week): × 1.375<br>
+        Moderately active (moderate exercise 3–5 days/week): × 1.55<br>
+        Very active (hard exercise 6–7 days/week): × 1.725<br>
+        Extremely active (very hard exercise + physical job): × 1.9</div>
+      </div>
+
+      <div class="step-box">
+        <div class="step-num">3</div>
+        <div class="step-title">Choose your deficit size</div>
+        <div class="step-body">A sustainable deficit is typically 250–500 calories below TDEE:<br><br>
+        <strong>Mild deficit (250 cal/day):</strong> ~0.25 kg loss per week. Best for people close to goal weight or those who want to minimise muscle loss.<br>
+        <strong>Moderate deficit (500 cal/day):</strong> ~0.5 kg loss per week. The most common recommendation — effective and sustainable for most people.<br>
+        <strong>Larger deficit (750+ cal/day):</strong> Faster loss but higher risk of muscle loss, fatigue, and metabolic adaptation. Not recommended without medical oversight.</div>
+      </div>
+
+      <div class="step-box">
+        <div class="step-num">4</div>
+        <div class="step-title">Calculate your daily calorie target</div>
+        <div class="step-body">Daily calorie target = TDEE − deficit<br><br>
+        Example: TDEE = 2,200 calories. Deficit = 500 calories. Daily target = <strong>1,700 calories</strong>.<br><br>
+        Important: Never eat below your BMR without medical supervision. For most women, a practical floor is 1,200 calories; for most men, 1,500 calories.</div>
+      </div>
+
+      <div class="cta-box">
+        <p>Calculate your exact calorie deficit target — including safe rate and protein needs.</p>
+        <a href="../tools/calorie-deficit-calculator.html" class="cta-link">Calorie Deficit Calculator →</a>
+      </div>
+
+      <h2>Worked example</h2>
+
+      <div class="example-box">
+        <h4>Example: Sarah, 35F, 70kg, 165cm, moderately active</h4>
+        <p><strong>Step 1 — BMR:</strong> (10 × 70) + (6.25 × 165) − (5 × 35) − 161 = 700 + 1031.25 − 175 − 161 = <strong>1,395 calories</strong></p>
+        <p><strong>Step 2 — TDEE:</strong> 1,395 × 1.55 (moderately active) = <strong>2,162 calories</strong></p>
+        <p><strong>Step 3 — Deficit:</strong> 500 calories for ~0.5 kg/week loss</p>
+        <p><strong>Step 4 — Daily target:</strong> 2,162 − 500 = <strong>1,662 calories per day</strong></p>
+        <p><strong>Protein target:</strong> 70 kg × 1.8g = <strong>126g protein per day</strong> to preserve muscle</p>
+      </div>
+
+      <h2>How big should your calorie deficit be?</h2>
+
+      <table class="data-table">
+        <thead><tr><th>Deficit size</th><th>Expected fat loss</th><th>Best for</th></tr></thead>
+        <tbody>
+          <tr><td>250 cal/day</td><td>~0.25 kg/week</td><td>Near goal weight, minimising muscle loss</td></tr>
+          <tr><td>500 cal/day</td><td>~0.5 kg/week</td><td>Most people — best balance of speed and sustainability</td></tr>
+          <tr><td>750 cal/day</td><td>~0.75 kg/week</td><td>Higher starting body fat, short-term aggressive phase</td></tr>
+          <tr><td>1000+ cal/day</td><td>~1 kg/week</td><td>Medical supervision only — high muscle loss risk</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Protein: the most important variable in a deficit</h2>
+      <p>During a calorie deficit, the body needs adequate protein to preserve lean muscle mass. Without sufficient protein, a significant proportion of weight lost comes from muscle rather than fat — worsening body composition even if the scale moves.</p>
+      <p>Target <strong>1.6–2.2g of protein per kg of bodyweight</strong> while in a deficit. For someone weighing 70kg, this means 112–154g of protein per day. This is higher than standard dietary recommendations (0.8g/kg) precisely because of the muscle-protective role of protein during calorie restriction.</p>
+
+      <div class="highlight-box">
+        <h4>Protein keeps you fuller for longer</h4>
+        <p>Protein has a higher thermic effect than fat or carbohydrates (your body burns more calories digesting it), and it is the most satiating macronutrient. High-protein eating in a deficit is associated with greater fat loss, less muscle loss, and better adherence than lower-protein approaches.</p>
+      </div>
+
+      <h2>Common calorie deficit mistakes</h2>
+      <ul>
+        <li><strong>Underestimating calorie intake:</strong> Research consistently shows people underestimate how much they eat by 20–40%. Weighing food with a kitchen scale — rather than estimating portions — typically reveals the source of a stall.</li>
+        <li><strong>Overestimating exercise calories burned:</strong> Fitness trackers and cardio machines notoriously overestimate calorie burn. "Eating back" exercise calories based on these estimates often eliminates the deficit entirely.</li>
+        <li><strong>Setting the deficit too aggressively:</strong> Deficits larger than 500–750 calories per day increase muscle loss, cause fatigue, and are hard to sustain. Slower, consistent progress beats fast starts followed by rebounding.</li>
+        <li><strong>Not adjusting over time:</strong> As you lose weight, your TDEE decreases (a lighter body burns fewer calories). Recalculate your TDEE every 4–6 weeks or when weight loss stalls for 2+ weeks.</li>
+        <li><strong>Insufficient protein:</strong> Low protein intake in a deficit leads to disproportionate muscle loss — making you lighter but not leaner. Prioritise protein at every meal.</li>
+        <li><strong>Ignoring sleep and stress:</strong> Poor sleep and chronic stress elevate cortisol, which promotes muscle breakdown and fat storage — working against the deficit. Fat loss is a whole-body process.</li>
+      </ul>
+
+      <h2>How long to stay in a calorie deficit</h2>
+      <p>Extended continuous calorie restriction leads to metabolic adaptation — the body lowers TDEE in response to sustained undereating, making the same deficit produce less fat loss over time. This is why results often slow after the initial weeks.</p>
+      <p>Most people do best with structured deficit periods of <strong>8–12 weeks</strong>, followed by a maintenance phase of 4–6 weeks at TDEE. This allows metabolic rate to partially recover before the next deficit phase. The total fat loss across alternating deficit and maintenance phases often exceeds what continuous dieting achieves.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">What is a calorie deficit?</div>
+          <div class="faq-a">A calorie deficit occurs when you eat fewer calories than your body burns in a day. Your body meets the energy shortfall by drawing on stored fat (and some muscle, if protein is insufficient). A deficit of approximately 7,700 calories is roughly equivalent to 1 kg of fat loss, though actual results vary with individual metabolism.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How big should my calorie deficit be?</div>
+          <div class="faq-a">For most people, 250–500 calories per day is the sustainable sweet spot. A 250-calorie deficit produces approximately 0.25 kg per week; a 500-calorie deficit produces approximately 0.5 kg per week. Deficits larger than 500–750 calories per day increase risk of muscle loss and are harder to sustain. Never eat below your BMR without medical supervision.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why am I not losing weight in a calorie deficit?</div>
+          <div class="faq-a">The most common reasons: underestimating calorie intake (not weighing food), overestimating calories burned from exercise, metabolic adaptation (body lowering TDEE over time), water retention masking fat loss, or a deficit that's smaller than believed. Start by weighing food with a scale for two weeks — most stalls resolve once accurate tracking reveals the actual intake.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What should I eat in a calorie deficit?</div>
+          <div class="faq-a">Protein first — target 1.6–2.2g per kg of bodyweight to preserve muscle mass. Fill remaining calories with vegetables, whole grains, legumes, and healthy fats. Minimise ultra-processed foods: they're calorie-dense, low in protein, and poor for satiety. High protein + high volume eating (lots of vegetables) makes a deficit far easier to sustain.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I exercise in a calorie deficit?</div>
+          <div class="faq-a">Yes — resistance training during a deficit is the most important thing you can do to preserve lean muscle mass and improve body composition. Zone 2 cardio supports fat oxidation and cardiovascular health without excessive recovery demands. The combination of a modest calorie deficit + adequate protein + resistance training produces better results than calorie restriction alone.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How often should I recalculate my calorie deficit?</div>
+          <div class="faq-a">Recalculate your TDEE every 4–6 weeks or whenever fat loss stalls for 2 or more consecutive weeks. As your body weight decreases, your TDEE decreases too — meaning the same calorie intake that created a deficit initially may no longer produce a deficit once you've lost weight. Most people need to adjust downward by 50–100 calories per 4–5 kg of weight lost.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I lose fat without counting calories?</div>
+          <div class="faq-a">Yes — many people successfully lose fat by focusing on food quality and satiety (high protein, high fibre, minimally processed foods) without tracking numbers. This works because these strategies naturally reduce calorie intake. However, if fat loss stalls, calorie tracking is the most reliable diagnostic tool for finding where the problem is. You don't have to track forever — but tracking for a few weeks builds intuition about portion sizes and calorie density.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Calorie targets are estimates based on population formulas and vary between individuals. If you have health conditions, are pregnant, or have a history of disordered eating, consult a healthcare provider before starting any calorie restriction.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#">What is a calorie deficit?</a></li>
+        <li><a href="#">Step-by-step calculation</a></li>
+        <li><a href="#">Worked example</a></li>
+        <li><a href="#">How big should it be?</a></li>
+        <li><a href="#">Protein in a deficit</a></li>
+        <li><a href="#">Common mistakes</a></li>
+        <li><a href="#">How long to diet</a></li>
+      </ol>
+    </div>
+    <div class="related-tools">
+      <h4>Related tools</h4>
+      <a href="../tools/calorie-deficit-calculator.html" class="tool-link">📉 Calorie Deficit Calculator</a>
+      <a href="../tools/calorie-calculator.html" class="tool-link">🔥 Calorie & TDEE Calculator</a>
+      <a href="../tools/protein-calculator.html" class="tool-link">🥩 Protein Calculator</a>
+      <a href="../tools/macro-calculator.html" class="tool-link">🥗 Macro Calculator</a>
+      <a href="../tools/bmi-calculator.html" class="tool-link">⚖️ BMI Calculator</a>
+    </div>
+  </aside>
+</div>
+<div id="footer-placeholder"></div>
+<script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

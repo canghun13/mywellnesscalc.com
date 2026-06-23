@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Health & Fitness Calculators – My Wellness Calc</title>
+  <meta name="description" content="21+ free health and fitness calculators — BMI, calories, macros, heart rate zones, fasting, protein, and more. Instant results, no sign-up required.">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},
+      {"@type":"ListItem","position":2,"name":"Tools","item":"https://mywellnesscalc.com/tools/"}
+    ]
+  }
+  </script>
+  <style>
+    .page-hero{padding:4rem 2rem 2rem;max-width:800px;margin:0 auto;text-align:center;}
+    h1{font-family:'Fraunces',serif;font-size:3rem;font-weight:300;letter-spacing:-.03em;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-hero p{color:var(--mid);font-size:1rem;font-weight:300;}
+    .search-wrap{max-width:540px;margin:1.5rem auto 0;position:relative;}
+    .search-input{width:100%;padding:.85rem 1.25rem .85rem 3rem;border:1.5px solid var(--border);border-radius:100px;font-size:.95rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);outline:none;transition:border-color .2s;box-sizing:border-box;}
+    .search-input:focus{border-color:var(--sage);}
+    .search-icon{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--light);font-size:1rem;pointer-events:none;}
+    .search-clear{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--light);font-size:1rem;display:none;padding:0;}
+    .no-results{text-align:center;padding:3rem 1rem;color:var(--mid);display:none;}
+    .tools-wrap{max-width:1100px;margin:0 auto;padding:2rem;}
+    .category-label{font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--light);margin:2rem 0 1rem;}
+    .tools-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;}
+    .tool-card{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;display:block;}
+    .tool-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);}
+    .tool-card.hidden{display:none;}
+    .tool-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:.75rem;}
+    .tool-card h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;line-height:1.3;margin-bottom:.4rem;}
+    .tool-card p{font-size:.82rem;color:var(--mid);line-height:1.5;}
+    .new-badge{display:inline-block;background:var(--sage-dark);color:white;font-size:.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.15rem .5rem;border-radius:100px;margin-left:.5rem;vertical-align:middle;}
+    .ad-banner{background:var(--cream);border:1px dashed var(--border);border-radius:8px;height:90px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin:2rem auto;max-width:728px;}
+    @media(max-width:900px){.tools-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.tools-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <h1>Health & Fitness <em>Tools</em></h1>
+  <p>23 free calculators for body composition, nutrition, heart rate training, fasting, and more. Instant results — no sign-up required.</p>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" class="search-input" id="searchInput" placeholder="Search tools…" oninput="filterTools()" autocomplete="off">
+    <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+  </div>
+</div>
+
+<div class="ad-banner">Advertisement · Google AdSense</div>
+
+<div class="tools-wrap">
+  <div class="no-results" id="noResults">
+    No tools found for "<span id="searchTerm"></span>". Try a different keyword.
+  </div>
+
+  <div class="tools-grid" id="toolsGrid">
+
+    <!-- Body & Weight -->
+    <a href="waist-to-hip-ratio-calculator.html" class="tool-card" data-title="Waist-to-Hip Ratio Calculator" data-tags="waist hip ratio body composition health risk">
+      <span class="tool-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>Waist-to-Hip Ratio Calculator</h3>
+      <p>Assess your health risk by calculating your waist-to-hip ratio with guidance on what your result means.</p>
+    </a>
+
+    <a href="lean-body-mass-calculator.html" class="tool-card" data-title="Lean Body Mass Calculator" data-tags="lean body mass muscle fat free mass body composition">
+      <span class="tool-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>Lean Body Mass Calculator</h3>
+      <p>Find out how much of your weight is muscle and lean tissue — a smarter measure than the scale alone.</p>
+    </a>
+
+    <a href="calorie-deficit-calculator.html" class="tool-card" data-title="Calorie Deficit Calculator" data-tags="calorie deficit weight loss calories nutrition">
+      <span class="tool-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>Calorie Deficit Calculator</h3>
+      <p>Find your daily calorie deficit target to hit your weight loss goal at a safe, sustainable pace.</p>
+    </a>
+
+    <a href="bmi-calculator.html" class="tool-card" data-title="BMI Calculator" data-tags="bmi body mass index weight height health">
+      <span class="tool-tag">Body & Weight</span>
+      <h3>BMI Calculator</h3>
+      <p>Calculate your Body Mass Index and understand what it means for your health.</p>
+    </a>
+
+    <a href="body-fat-calculator.html" class="tool-card" data-title="Body Fat % Estimator" data-tags="body fat percentage composition estimator">
+      <span class="tool-tag">Body & Weight</span>
+      <h3>Body Fat % Estimator</h3>
+      <p>Estimate your body fat percentage using measurements — no equipment needed.</p>
+    </a>
+
+    <a href="ideal-weight.html" class="tool-card" data-title="Ideal Body Weight Calculator" data-tags="ideal weight body height goal">
+      <span class="tool-tag">Body & Weight</span>
+      <h3>Ideal Body Weight Calculator</h3>
+      <p>See your ideal weight range based on height, gender, and multiple established formulas.</p>
+    </a>
+
+    <!-- Nutrition -->
+    <a href="calorie-calculator.html" class="tool-card" data-title="Calorie & TDEE Calculator" data-tags="calorie tdee bmr nutrition weight loss gain">
+      <span class="tool-tag">Nutrition</span>
+      <h3>Calorie & TDEE Calculator</h3>
+      <p>Find your daily calorie needs based on your stats and activity level.</p>
+    </a>
+
+    <a href="macro-calculator.html" class="tool-card" data-title="Macro Calculator" data-tags="macros protein carbs fat nutrition diet">
+      <span class="tool-tag">Nutrition</span>
+      <h3>Macro Calculator</h3>
+      <p>Get your personalized protein, carbs, and fat targets for your goal.</p>
+    </a>
+
+    <a href="protein-calculator.html" class="tool-card" data-title="Protein Calculator" data-tags="protein intake daily needs nutrition muscle">
+      <span class="tool-tag">Nutrition</span>
+      <h3>Protein Calculator</h3>
+      <p>Calculate how much protein you need daily based on your weight, goal, and activity.</p>
+    </a>
+
+    <a href="protein-calculator-women-over-40.html" class="tool-card" data-title="Protein Calculator for Women Over 40" data-tags="protein women over 40 menopause nutrition muscle">
+      <span class="tool-tag">Nutrition</span>
+      <h3>Protein Calculator (Women 40+)</h3>
+      <p>Protein needs change after 40. Get a recommendation tailored to your age and stage.</p>
+    </a>
+
+    <a href="vitamin-d-calculator.html" class="tool-card" data-title="Vitamin D Calculator" data-tags="vitamin d supplement dosage sun daily needs">
+      <span class="tool-tag">Nutrition</span>
+      <h3>Vitamin D Calculator</h3>
+      <p>Find out how much vitamin D you need daily based on your age, location, and lifestyle.</p>
+    </a>
+
+    <!-- Fitness -->
+    <a href="heart-rate-zone.html" class="tool-card" data-title="Heart Rate Zone Calculator" data-tags="heart rate zone training cardio fitness">
+      <span class="tool-tag">Fitness</span>
+      <h3>Heart Rate Zone Calculator</h3>
+      <p>Find your 5 heart rate training zones to optimize every workout.</p>
+    </a>
+
+    <a href="zone-2-calculator.html" class="tool-card" data-title="Zone 2 Heart Rate Calculator" data-tags="zone 2 heart rate aerobic fat burning training">
+      <span class="tool-tag">Fitness</span>
+      <h3>Zone 2 Calculator</h3>
+      <p>Calculate your Zone 2 heart rate range for aerobic base building and fat burning.</p>
+    </a>
+
+    <a href="maf-calculator.html" class="tool-card" data-title="MAF Heart Rate Calculator" data-tags="maf heart rate aerobic 180 formula training">
+      <span class="tool-tag">Fitness</span>
+      <h3>MAF Heart Rate Calculator</h3>
+      <p>Use the 180 Formula to find your MAF training heart rate for aerobic development.</p>
+    </a>
+
+    <a href="active-recovery-calculator.html" class="tool-card" data-title="Active Recovery Heart Rate Calculator" data-tags="active recovery zone 1 heart rate rest">
+      <span class="tool-tag">Fitness</span>
+      <h3>Active Recovery Calculator</h3>
+      <p>Find your Zone 1 active recovery heart rate to recover faster between hard sessions.</p>
+    </a>
+
+    <a href="calories-burned-by-heart-rate.html" class="tool-card" data-title="Calories Burned by Heart Rate Calculator" data-tags="calories burned heart rate exercise workout">
+      <span class="tool-tag">Fitness</span>
+      <h3>Calories Burned by Heart Rate</h3>
+      <p>Estimate calories burned during exercise using your heart rate and workout duration.</p>
+    </a>
+
+    <a href="one-rep-max.html" class="tool-card" data-title="One Rep Max Calculator" data-tags="one rep max 1rm strength lifting weightlifting">
+      <span class="tool-tag">Fitness</span>
+      <h3>One Rep Max Calculator</h3>
+      <p>Estimate your 1RM for any lift and calculate training percentages.</p>
+    </a>
+
+    <a href="running-pace.html" class="tool-card" data-title="Running Pace Calculator" data-tags="running pace speed distance time race">
+      <span class="tool-tag">Fitness</span>
+      <h3>Running Pace Calculator</h3>
+      <p>Calculate your running pace, finish time, or target distance for any race.</p>
+    </a>
+
+    <!-- Lifestyle -->
+    <a href="if-calculator.html" class="tool-card" data-title="Intermittent Fasting Planner" data-tags="intermittent fasting 16:8 fasting window planner">
+      <span class="tool-tag">Lifestyle</span>
+      <h3>Intermittent Fasting Planner</h3>
+      <p>Plan your fasting and eating windows for 16:8, 18:6, OMAD, and other IF protocols.</p>
+    </a>
+
+    <a href="if-calculator-women.html" class="tool-card" data-title="IF Calculator for Women" data-tags="intermittent fasting women hormones cycle protocol">
+      <span class="tool-tag">Lifestyle</span>
+      <h3>IF Calculator for Women</h3>
+      <p>A fasting planner tailored for women, accounting for hormonal cycles and specific needs.</p>
+    </a>
+
+    <a href="fasting-timer.html" class="tool-card" data-title="Fasting Timer" data-tags="fasting timer track countdown intermittent">
+      <span class="tool-tag">Lifestyle</span>
+      <h3>Fasting Timer</h3>
+      <p>Track your current fast in real time with a simple countdown timer.</p>
+    </a>
+
+    <a href="water-intake.html" class="tool-card" data-title="Daily Water Intake Calculator" data-tags="water intake hydration daily needs weight activity">
+      <span class="tool-tag">Lifestyle</span>
+      <h3>Water Intake Calculator</h3>
+      <p>Find out how much water you should drink each day based on your weight and activity.</p>
+    </a>
+
+    <a href="sleep-calculator.html" class="tool-card" data-title="Sleep Calculator" data-tags="sleep calculator cycles wake up bedtime rest">
+      <span class="tool-tag">Lifestyle</span>
+      <h3>Sleep Calculator</h3>
+      <p>Find the best bedtime or wake-up time based on sleep cycles for better rest.</p>
+    </a>
+
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+function filterTools() {
+  var query = document.getElementById('searchInput').value.toLowerCase().trim();
+  var cards = document.querySelectorAll('.tool-card');
+  var clearBtn = document.getElementById('searchClear');
+  var visible = 0;
+
+  clearBtn.style.display = query ? 'block' : 'none';
+
+  cards.forEach(function(card) {
+    var title = (card.dataset.title || '').toLowerCase();
+    var tags = (card.dataset.tags || '').toLowerCase();
+    var text = card.innerText.toLowerCase();
+    if (!query || title.includes(query) || tags.includes(query) || text.includes(query)) {
+      card.classList.remove('hidden');
+      visible++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  var noResults = document.getElementById('noResults');
+  document.getElementById('searchTerm').textContent = query;
+  noResults.style.display = (query && visible === 0) ? 'block' : 'none';
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  filterTools();
+  document.getElementById('searchInput').focus();
+}
+</script>
+</body>
+</html>
