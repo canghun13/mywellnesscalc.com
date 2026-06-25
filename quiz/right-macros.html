@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Eating the Right Macros? Quiz | MyWellnessCalc</title>
+  <meta name="description" content="Find out whether your protein, carb, and fat balance fits your current fitness goal — based on established nutritional principles.">
+  <link rel="canonical" href="https://mywellnesscalc.com/quiz/right-macros.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Quizzes","item":"https://mywellnesscalc.com/quiz/"},{"@type":"ListItem","position":3,"name":"Are You Eating the Right Macros?","item":"https://mywellnesscalc.com/quiz/right-macros.html"}]}</script>
+  <style>
+    .quiz-wrap{max-width:680px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .quiz-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--mid);text-decoration:none;margin-bottom:2rem;transition:color .2s;}
+    .quiz-back:hover{color:var(--sage-dark);}
+    .quiz-header{margin-bottom:2.5rem;}
+    .quiz-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:1rem;}
+    .quiz-header h1{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:300;line-height:1.2;margin-bottom:.75rem;}
+    .quiz-header p{color:var(--mid);font-size:.95rem;}
+    .progress-bar{height:4px;background:var(--border);border-radius:100px;margin-bottom:2.5rem;overflow:hidden;}
+    .progress-fill{height:100%;background:var(--sage);border-radius:100px;transition:width .4s ease;}
+    .progress-label{font-size:.75rem;color:var(--light);margin-bottom:.5rem;}
+    .question-block{display:none;}.question-block.active{display:block;}
+    .question-block h2{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.5rem;line-height:1.4;}
+    .options{display:flex;flex-direction:column;gap:.75rem;}
+    .option{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;background:white;border:1.5px solid var(--border);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s;}
+    .option:hover{border-color:var(--sage-light);background:var(--cream);}
+    .option.selected{border-color:var(--sage);background:#f0f6f0;}
+    .option-letter{width:28px;height:28px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:var(--mid);flex-shrink:0;margin-top:.1rem;}
+    .option.selected .option-letter{background:var(--sage);color:white;}
+    .option-text{font-size:.9rem;line-height:1.5;}
+    .option-text strong{display:block;margin-bottom:.15rem;}
+    .option-text span{color:var(--mid);font-size:.82rem;}
+    .nav-btns{display:flex;gap:1rem;margin-top:2rem;}
+    .btn-next{padding:.875rem 2rem;background:var(--sage-dark);color:white;border:none;border-radius:100px;font-size:.9rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;display:none;}
+    .btn-next:hover{background:var(--sage);}
+    .btn-back-q{padding:.875rem 1.5rem;background:none;color:var(--mid);border:1.5px solid var(--border);border-radius:100px;font-size:.9rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:none;}
+    .btn-back-q:hover{border-color:var(--sage-light);}
+    .result-block{display:none;}.result-block.show{display:block;}
+    .result-hero{background:var(--cream);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:2rem;}
+    .result-label{font-size:.75rem;font-weight:600;color:var(--sage-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .result-title{font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--charcoal);margin-bottom:.5rem;}
+    .result-subtitle{color:var(--mid);font-size:.9rem;}
+    .result-body h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.5rem 0 .75rem;}
+    .result-body p{color:var(--mid);font-size:.9rem;line-height:1.7;margin-bottom:.75rem;}
+    .result-body ul{color:var(--mid);font-size:.9rem;line-height:1.7;padding-left:1.25rem;margin-bottom:.75rem;}
+    .cta-box{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-top:2rem;}
+    .cta-box h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;margin-bottom:1rem;}
+    .cta-links{display:flex;flex-direction:column;gap:.5rem;}
+    .cta-link{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:var(--cream);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:background .2s;}
+    .cta-link:hover{background:#e8e2da;}
+    .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
+    .retry-btn:hover{border-color:var(--sage-light);}
+    .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="quiz-wrap">
+  <a href="../quiz/" class="quiz-back">← All quizzes</a>
+  <div class="quiz-header">
+    <div class="quiz-tag">Nutrition</div>
+    <h1>Are You Eating the Right Macros?</h1>
+    <p>Find out whether your protein, carb, and fat balance fits your current fitness goal — based on established nutritional principles.</p>
+  </div>
+  <div class="progress-label" id="progressLabel">Question 1 of 5</div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:20%"></div></div>
+
+  <div class="question-block active" id="q1">
+    <h2>What's your primary goal?</h2>
+    <div class="options">
+      <div class="option" data-q="1" data-v="fat_loss"><div class="option-letter">A</div><div class="option-text"><strong>Lose body fat</strong><span>I want to reduce weight and body fat percentage</span></div></div>
+      <div class="option" data-q="1" data-v="muscle"><div class="option-letter">B</div><div class="option-text"><strong>Build muscle</strong><span>I want to gain lean mass</span></div></div>
+      <div class="option" data-q="1" data-v="recomp"><div class="option-letter">C</div><div class="option-text"><strong>Recomposition</strong><span>Lose fat and build muscle at the same time</span></div></div>
+      <div class="option" data-q="1" data-v="maintain"><div class="option-letter">D</div><div class="option-text"><strong>Maintain and perform</strong><span>I want to fuel training without gaining or losing</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-next" id="next1" onclick="nextQ(1)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q2">
+    <h2>Which macronutrient do you currently eat the most of?</h2>
+    <div class="options">
+      <div class="option" data-q="2" data-v="carbs"><div class="option-letter">A</div><div class="option-text"><strong>Carbohydrates</strong><span>Bread, pasta, rice, oats, fruit make up most of my meals</span></div></div>
+      <div class="option" data-q="2" data-v="fat"><div class="option-letter">B</div><div class="option-text"><strong>Fat</strong><span>I eat a lot of meat, dairy, nuts, oils</span></div></div>
+      <div class="option" data-q="2" data-v="protein"><div class="option-letter">C</div><div class="option-text"><strong>Protein</strong><span>I prioritise protein at most meals</span></div></div>
+      <div class="option" data-q="2" data-v="unsure"><div class="option-letter">D</div><div class="option-text"><strong>Not sure</strong><span>I don't really track or think about this</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(2)">← Back</button><button class="btn-next" id="next2" onclick="nextQ(2)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q3">
+    <h2>How active are you in terms of exercise?</h2>
+    <div class="options">
+      <div class="option" data-q="3" data-v="sedentary"><div class="option-letter">A</div><div class="option-text"><strong>Sedentary</strong><span>Little to no structured exercise</span></div></div>
+      <div class="option" data-q="3" data-v="light"><div class="option-letter">B</div><div class="option-text"><strong>Lightly active</strong><span>1–3 days of exercise per week</span></div></div>
+      <div class="option" data-q="3" data-v="moderate"><div class="option-letter">C</div><div class="option-text"><strong>Moderately active</strong><span>3–5 days per week</span></div></div>
+      <div class="option" data-q="3" data-v="very"><div class="option-letter">D</div><div class="option-text"><strong>Very active</strong><span>6–7 days per week or physical job</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(3)">← Back</button><button class="btn-next" id="next3" onclick="nextQ(3)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q4">
+    <h2>Do you feel energised during your workouts?</h2>
+    <div class="options">
+      <div class="option" data-q="4" data-v="yes"><div class="option-letter">A</div><div class="option-text"><strong>Yes, usually</strong><span>I have good energy for training</span></div></div>
+      <div class="option" data-q="4" data-v="sometimes"><div class="option-letter">B</div><div class="option-text"><strong>Sometimes</strong><span>Energy is inconsistent</span></div></div>
+      <div class="option" data-q="4" data-v="no"><div class="option-letter">C</div><div class="option-text"><strong>No</strong><span>I often feel flat or tired during exercise</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(4)">← Back</button><button class="btn-next" id="next4" onclick="nextQ(4)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q5">
+    <h2>Do you track your food intake?</h2>
+    <div class="options">
+      <div class="option" data-q="5" data-v="yes"><div class="option-letter">A</div><div class="option-text"><strong>Yes, closely</strong><span>I use an app or log calories and macros</span></div></div>
+      <div class="option" data-q="5" data-v="loose"><div class="option-letter">B</div><div class="option-text"><strong>Loosely</strong><span>I have a rough idea but don't track precisely</span></div></div>
+      <div class="option" data-q="5" data-v="no"><div class="option-letter">C</div><div class="option-text"><strong>No</strong><span>I eat intuitively without tracking</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(5)">← Back</button><button class="btn-next" id="next5" onclick="showResult()">Next →</button></div>
+  </div>
+
+  <div class="result-block" id="result">
+    <div class="result-hero">
+      <div class="result-label" id="resultLabel">Your result</div>
+      <div class="result-title" id="resultTitle">—</div>
+      <div class="result-subtitle" id="resultSubtitle"></div>
+    </div>
+    <div class="result-body" id="resultBody"></div>
+    <div class="cta-box"><h3>Next steps</h3><div class="cta-links" id="ctaLinks"></div></div>
+    <p class="disclaimer" id="resultDisclaimer"></p>
+    <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
+  </div>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+const answers={};
+const TOTAL=5;
+document.querySelectorAll('.option').forEach(opt=>{
+  opt.addEventListener('click',function(){
+    const q=this.dataset.q,v=this.dataset.v;
+    document.querySelectorAll(`.option[data-q="${q}"]`).forEach(o=>o.classList.remove('selected'));
+    this.classList.add('selected');answers[q]=v;
+    const nb=document.getElementById('next'+q);if(nb)nb.style.display='inline-block';
+    const bb=document.querySelector(`#q${q} .btn-back-q`);if(bb)bb.style.display='inline-block';
+  });
+});
+function nextQ(c){if(!answers[c])return;document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c+1)).classList.add('active');updateProgress(c+1);}
+function prevQ(c){document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c-1)).classList.add('active');updateProgress(c-1);}
+function updateProgress(q){document.getElementById('progressFill').style.width=(q/TOTAL*100)+'%';document.getElementById('progressLabel').textContent='Question '+q+' of '+TOTAL;}
+
+function showResult(){
+  if(!answers[5])return;
+  document.getElementById('q5').classList.remove('active');
+  document.getElementById('progressLabel').textContent='Your result';
+  document.getElementById('progressFill').style.width='100%';
+  const a=answers;
+  let title,subtitle,body,ctas;
+  if(a[1]==='fat_loss'){
+    title='High-protein, moderate-carb setup';subtitle='The most evidence-supported approach for fat loss';
+    body=`<h3>Recommended macro split</h3><ul><li><strong>Protein:</strong> 1.8–2.2g per kg of bodyweight (preserve muscle in a deficit)</li><li><strong>Fat:</strong> 25–35% of calories (hormonal health and satiety)</li><li><strong>Carbs:</strong> Remaining calories (prioritise around workouts)</li></ul><h3>Why this works</h3><p>In a calorie deficit, high protein intake protects muscle mass. Carbs around training maintain performance. Fat provides satiety and supports hormones — particularly important for women.</p><h3>Common mistake</h3><p>Cutting carbs too aggressively often reduces training performance and muscle retention. Keep carbs, reduce overall calories.</p>`;
+    ctas=[{href:'../tools/macro-calculator.html',label:'Calculate your macro targets →'},{href:'../tools/calorie-deficit-calculator.html',label:'Calorie Deficit Calculator'},{href:'../blog/protein-vs-carbs-vs-fat.html',label:'Protein vs Carbs vs Fat'}];
+  } else if(a[1]==='muscle'){
+    title='High-protein, high-carb setup';subtitle='Carbohydrates are your training fuel — don't cut them';
+    body=`<h3>Recommended macro split</h3><ul><li><strong>Protein:</strong> 1.6–2.2g per kg of bodyweight</li><li><strong>Carbs:</strong> 4–7g per kg of bodyweight (training fuel and recovery)</li><li><strong>Fat:</strong> 20–30% of calories</li></ul><h3>Why this works</h3><p>Muscle building requires a calorie surplus. Carbohydrates replenish muscle glycogen and support training intensity. Cutting carbs when trying to build muscle is one of the most common mistakes.</p>`;
+    ctas=[{href:'../tools/macro-calculator.html',label:'Get your muscle-building macros →'},{href:'../tools/protein-calculator.html',label:'Protein Calculator'},{href:'../blog/build-muscle-after-40.html',label:'Build Muscle After 40'}];
+  } else if(a[3]==='no' || a[3]==='sometimes'){
+    title='You may need more carbohydrates';subtitle='Low energy during training often points to under-fuelling';
+    body=`<h3>What low training energy usually means</h3><p>If you feel flat during exercise, the most common cause is insufficient carbohydrate intake — not lack of motivation or fitness. Carbs are the primary fuel source for moderate-to-high intensity work.</p><h3>What to try</h3><ul><li>Eat a small carb-containing meal 1–2 hours before training</li><li>Don't train fasted if energy is already low</li><li>Ensure you're not in too aggressive a calorie deficit</li></ul>`;
+    ctas=[{href:'../tools/macro-calculator.html',label:'Calculate your macro split →'},{href:'../tools/calorie-calculator.html',label:'Find your TDEE'},{href:'../blog/protein-vs-carbs-vs-fat.html',label:'Protein vs Carbs vs Fat'}];
+  } else {
+    title='Your macro balance looks reasonable';subtitle='Fine-tune with a calculator to confirm your specific targets';
+    body=`<h3>General guidance</h3><p>Without more specific data, your macro balance sounds broadly appropriate. The most common area where people fall short is protein — most people need more than they think.</p><h3>What to check</h3><ul><li>Are you hitting 1.6g+ of protein per kg of bodyweight?</li><li>Do your carbs align with your activity level?</li><li>Are you in the right overall calorie range for your goal?</li></ul>`;
+    ctas=[{href:'../tools/macro-calculator.html',label:'Get your personalised macro targets →'},{href:'../tools/calorie-calculator.html',label:'Calorie & TDEE Calculator'},{href:'../blog/protein-vs-carbs-vs-fat.html',label:'Protein vs Carbs vs Fat'}];
+  }
+  setResult('Your macro assessment',title,subtitle,body,ctas,'<strong>Note:</strong> These are general recommendations based on your answers. Individual needs vary by body composition, training volume, and metabolism. Use the Macro Calculator for personalised targets.');
+}
+function resetQuiz(){Object.keys(answers).forEach(k=>delete answers[k]);document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));document.querySelectorAll('.btn-next,.btn-back-q').forEach(b=>b.style.display='none');document.querySelectorAll('.question-block').forEach(q=>q.classList.remove('active'));document.getElementById('q1').classList.add('active');document.getElementById('result').classList.remove('show');updateProgress(1);}
+function setResult(label,title,subtitle,body,ctas,disclaimer){
+  if(label)document.getElementById('resultLabel').textContent=label;
+  document.getElementById('resultTitle').textContent=title;
+  document.getElementById('resultSubtitle').textContent=subtitle;
+  document.getElementById('resultBody').innerHTML=body;
+  document.getElementById('ctaLinks').innerHTML=ctas.map(c=>`<a href="${c.href}" class="cta-link">→ ${c.label}</a>`).join('');
+  if(disclaimer)document.getElementById('resultDisclaimer').innerHTML=disclaimer;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

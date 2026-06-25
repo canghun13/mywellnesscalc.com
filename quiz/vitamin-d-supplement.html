@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Need to Supplement Vitamin D? Quiz | MyWellnessCalc</title>
+  <meta name="description" content="Based on your sun exposure, diet, and lifestyle, find out whether vitamin D supplementation makes sense for you.">
+  <link rel="canonical" href="https://mywellnesscalc.com/quiz/vitamin-d-supplement.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Quizzes","item":"https://mywellnesscalc.com/quiz/"},{"@type":"ListItem","position":3,"name":"Do You Need to Supplement Vitamin D?","item":"https://mywellnesscalc.com/quiz/vitamin-d-supplement.html"}]}</script>
+  <style>
+    .quiz-wrap{max-width:680px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .quiz-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--mid);text-decoration:none;margin-bottom:2rem;transition:color .2s;}
+    .quiz-back:hover{color:var(--sage-dark);}
+    .quiz-header{margin-bottom:2.5rem;}
+    .quiz-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:1rem;}
+    .quiz-header h1{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:300;line-height:1.2;margin-bottom:.75rem;}
+    .quiz-header p{color:var(--mid);font-size:.95rem;}
+    .progress-bar{height:4px;background:var(--border);border-radius:100px;margin-bottom:2.5rem;overflow:hidden;}
+    .progress-fill{height:100%;background:var(--sage);border-radius:100px;transition:width .4s ease;}
+    .progress-label{font-size:.75rem;color:var(--light);margin-bottom:.5rem;}
+    .question-block{display:none;}.question-block.active{display:block;}
+    .question-block h2{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.5rem;line-height:1.4;}
+    .options{display:flex;flex-direction:column;gap:.75rem;}
+    .option{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;background:white;border:1.5px solid var(--border);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s;}
+    .option:hover{border-color:var(--sage-light);background:var(--cream);}
+    .option.selected{border-color:var(--sage);background:#f0f6f0;}
+    .option-letter{width:28px;height:28px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:var(--mid);flex-shrink:0;margin-top:.1rem;}
+    .option.selected .option-letter{background:var(--sage);color:white;}
+    .option-text{font-size:.9rem;line-height:1.5;}
+    .option-text strong{display:block;margin-bottom:.15rem;}
+    .option-text span{color:var(--mid);font-size:.82rem;}
+    .nav-btns{display:flex;gap:1rem;margin-top:2rem;}
+    .btn-next{padding:.875rem 2rem;background:var(--sage-dark);color:white;border:none;border-radius:100px;font-size:.9rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;display:none;}
+    .btn-next:hover{background:var(--sage);}
+    .btn-back-q{padding:.875rem 1.5rem;background:none;color:var(--mid);border:1.5px solid var(--border);border-radius:100px;font-size:.9rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:none;}
+    .btn-back-q:hover{border-color:var(--sage-light);}
+    .result-block{display:none;}.result-block.show{display:block;}
+    .result-hero{background:var(--cream);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:2rem;}
+    .result-label{font-size:.75rem;font-weight:600;color:var(--sage-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .result-title{font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--charcoal);margin-bottom:.5rem;}
+    .result-subtitle{color:var(--mid);font-size:.9rem;}
+    .result-body h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.5rem 0 .75rem;}
+    .result-body p{color:var(--mid);font-size:.9rem;line-height:1.7;margin-bottom:.75rem;}
+    .result-body ul{color:var(--mid);font-size:.9rem;line-height:1.7;padding-left:1.25rem;margin-bottom:.75rem;}
+    .cta-box{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-top:2rem;}
+    .cta-box h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;margin-bottom:1rem;}
+    .cta-links{display:flex;flex-direction:column;gap:.5rem;}
+    .cta-link{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:var(--cream);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:background .2s;}
+    .cta-link:hover{background:#e8e2da;}
+    .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
+    .retry-btn:hover{border-color:var(--sage-light);}
+    .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="quiz-wrap">
+  <a href="../quiz/" class="quiz-back">← All quizzes</a>
+  <div class="quiz-header">
+    <div class="quiz-tag">Nutrition</div>
+    <h1>Do You Need to Supplement Vitamin D?</h1>
+    <p>Based on your sun exposure, diet, and lifestyle, find out whether vitamin D supplementation makes sense for you.</p>
+  </div>
+  <div class="progress-label" id="progressLabel">Question 1 of 5</div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:20%"></div></div>
+
+  <div class="question-block active" id="q1">
+    <h2>Where do you live, roughly?</h2>
+    <div class="options">
+      <div class="option" data-q="1" data-v="north"><div class="option-letter">A</div><div class="option-text"><strong>Northern latitudes (above 50°N)</strong><span>UK, Canada, Northern Europe, Northern US</span></div></div>
+      <div class="option" data-q="1" data-v="mid"><div class="option-letter">B</div><div class="option-text"><strong>Mid latitudes (30°–50°N or S)</strong><span>Most of continental US and Europe</span></div></div>
+      <div class="option" data-q="1" data-v="south"><div class="option-letter">C</div><div class="option-text"><strong>Southern latitudes or tropics</strong><span>Near the equator or southern hemisphere</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-next" id="next1" onclick="nextQ(1)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q2">
+    <h2>How much direct sunlight do you get on average?</h2>
+    <div class="options">
+      <div class="option" data-q="2" data-v="none"><div class="option-letter">A</div><div class="option-text"><strong>Very little</strong><span>I spend most of the day indoors</span></div></div>
+      <div class="option" data-q="2" data-v="some"><div class="option-letter">B</div><div class="option-text"><strong>Some</strong><span>I get outside occasionally, maybe 15–30 mins on some days</span></div></div>
+      <div class="option" data-q="2" data-v="regular"><div class="option-letter">C</div><div class="option-text"><strong>Regular</strong><span>I'm outdoors most days for at least 30 minutes in daylight</span></div></div>
+      <div class="option" data-q="2" data-v="lots"><div class="option-letter">D</div><div class="option-text"><strong>A lot</strong><span>I spend several hours outside daily, often with skin exposed</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(2)">← Back</button><button class="btn-next" id="next2" onclick="nextQ(2)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q3">
+    <h2>What is your skin tone?</h2>
+    <div class="options">
+      <div class="option" data-q="3" data-v="fair"><div class="option-letter">A</div><div class="option-text"><strong>Fair or light</strong><span>I burn easily and tan little</span></div></div>
+      <div class="option" data-q="3" data-v="medium"><div class="option-letter">B</div><div class="option-text"><strong>Medium</strong><span>I tan moderately</span></div></div>
+      <div class="option" data-q="3" data-v="dark"><div class="option-letter">C</div><div class="option-text"><strong>Dark or deep</strong><span>I rarely burn — higher melanin reduces vitamin D synthesis</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(3)">← Back</button><button class="btn-next" id="next3" onclick="nextQ(3)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q4">
+    <h2>How often do you eat vitamin D-rich foods (oily fish, eggs, fortified dairy)?</h2>
+    <div class="options">
+      <div class="option" data-q="4" data-v="often"><div class="option-letter">A</div><div class="option-text"><strong>Often</strong><span>Several times per week</span></div></div>
+      <div class="option" data-q="4" data-v="sometimes"><div class="option-letter">B</div><div class="option-text"><strong>Sometimes</strong><span>Once or twice a week</span></div></div>
+      <div class="option" data-q="4" data-v="rarely"><div class="option-letter">C</div><div class="option-text"><strong>Rarely</strong><span>Infrequently or not at all</span></div></div>
+      <div class="option" data-q="4" data-v="never"><div class="option-letter">D</div><div class="option-text"><strong>Never</strong><span>I avoid all of these foods (vegan, allergies, etc.)</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(4)">← Back</button><button class="btn-next" id="next4" onclick="nextQ(4)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q5">
+    <h2>Are you over 60, pregnant, or immunocompromised?</h2>
+    <div class="options">
+      <div class="option" data-q="5" data-v="yes"><div class="option-letter">A</div><div class="option-text"><strong>Yes</strong><span>One or more of these applies to me</span></div></div>
+      <div class="option" data-q="5" data-v="no"><div class="option-letter">B</div><div class="option-text"><strong>No</strong><span>None of these apply</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(5)">← Back</button><button class="btn-next" id="next5" onclick="showResult()">Next →</button></div>
+  </div>
+
+  <div class="result-block" id="result">
+    <div class="result-hero">
+      <div class="result-label" id="resultLabel">Your result</div>
+      <div class="result-title" id="resultTitle">—</div>
+      <div class="result-subtitle" id="resultSubtitle"></div>
+    </div>
+    <div class="result-body" id="resultBody"></div>
+    <div class="cta-box"><h3>Next steps</h3><div class="cta-links" id="ctaLinks"></div></div>
+    <p class="disclaimer" id="resultDisclaimer"></p>
+    <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
+  </div>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+const answers={};
+const TOTAL=5;
+document.querySelectorAll('.option').forEach(opt=>{
+  opt.addEventListener('click',function(){
+    const q=this.dataset.q,v=this.dataset.v;
+    document.querySelectorAll(`.option[data-q="${q}"]`).forEach(o=>o.classList.remove('selected'));
+    this.classList.add('selected');answers[q]=v;
+    const nb=document.getElementById('next'+q);if(nb)nb.style.display='inline-block';
+    const bb=document.querySelector(`#q${q} .btn-back-q`);if(bb)bb.style.display='inline-block';
+  });
+});
+function nextQ(c){if(!answers[c])return;document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c+1)).classList.add('active');updateProgress(c+1);}
+function prevQ(c){document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c-1)).classList.add('active');updateProgress(c-1);}
+function updateProgress(q){document.getElementById('progressFill').style.width=(q/TOTAL*100)+'%';document.getElementById('progressLabel').textContent='Question '+q+' of '+TOTAL;}
+
+function showResult(){
+  if(!answers[5])return;
+  document.getElementById('q5').classList.remove('active');
+  document.getElementById('progressLabel').textContent='Your result';
+  document.getElementById('progressFill').style.width='100%';
+  const a=answers;
+  let title,subtitle,body,ctas;
+  const highRisk = a[1]==='north' || a[2]==='none' || a[2]==='some' || a[3]==='dark' || a[4]==='never' || a[4]==='rarely' || a[5]==='yes';
+  const lowRisk = a[1]==='south' && a[2]==='lots' && a[3]==='fair' && (a[4]==='often'||a[4]==='sometimes') && a[5]==='no';
+  if(lowRisk){
+    title='Supplementation likely not needed';subtitle='Your sun exposure and diet suggest adequate vitamin D production';
+    body=`<h3>Why you're likely fine</h3><p>People who live in sunny climates, spend significant time outdoors, have fair skin, and eat vitamin D-containing foods regularly are at low risk of deficiency. Sunlight is the most potent source of vitamin D — far more than any food or supplement.</p><h3>Things to monitor</h3><ul><li>This changes in winter — even sunny climates have reduced UV in winter months</li><li>If you start spending more time indoors, reconsider</li><li>A blood test (25-OH vitamin D) is the only way to know for certain</li></ul>`;
+  } else if(highRisk){
+    title='Supplementation is likely worth considering';subtitle='Multiple risk factors suggest your vitamin D may be lower than optimal';
+    body=`<h3>Why supplementation makes sense</h3><p>Vitamin D deficiency is widespread — estimates suggest 40%+ of adults in northern countries are deficient, especially in winter. Risk is higher for people who spend little time outdoors, have darker skin (which requires more sun exposure for the same production), or avoid vitamin D-rich foods.</p><h3>What to consider</h3><ul><li>Most guidelines recommend 1,000–2,000 IU/day for adults at risk</li><li>People over 60 or with absorption issues may need higher amounts</li><li>A blood test is the best way to confirm deficiency and monitor supplementation</li></ul><h3>Food sources</h3><p>Oily fish (salmon, sardines, mackerel), egg yolks, and fortified foods provide some vitamin D but typically not enough to compensate for lack of sun exposure.</p>`;
+  } else {
+    title='Supplementation is worth considering';subtitle='Some risk factors suggest your vitamin D may be suboptimal';
+    body=`<h3>A practical approach</h3><p>You don't have strong deficiency risk factors, but you're not in the lowest-risk group either. A low-dose supplement (1,000 IU/day) during winter months — or year-round if you're mostly indoors — is a low-risk, low-cost way to maintain adequate levels.</p><h3>Best approach</h3><ul><li>Consider a 1,000 IU daily supplement from October to April if you're in the northern hemisphere</li><li>Year-round supplementation if you rarely go outdoors</li><li>A blood test will confirm whether this is needed</li></ul>`;
+  }
+  setResult('Your vitamin D assessment',title,subtitle,body,ctas=[{href:'../tools/vitamin-d-calculator.html',label:'Calculate your vitamin D needs →'},{href:'../blog/vitamin-d-deficiency.html',label:'Vitamin D Deficiency Signs and Symptoms'},{href:'../blog/how-much-vitamin-d-do-you-need-daily.html',label:'How Much Vitamin D Do You Need?'}],'<strong>Note:</strong> This is not medical advice. Only a blood test can confirm vitamin D status. If you're concerned, speak with your GP or healthcare provider.');
+}
+function resetQuiz(){Object.keys(answers).forEach(k=>delete answers[k]);document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));document.querySelectorAll('.btn-next,.btn-back-q').forEach(b=>b.style.display='none');document.querySelectorAll('.question-block').forEach(q=>q.classList.remove('active'));document.getElementById('q1').classList.add('active');document.getElementById('result').classList.remove('show');updateProgress(1);}
+function setResult(label,title,subtitle,body,ctas,disclaimer){
+  if(label)document.getElementById('resultLabel').textContent=label;
+  document.getElementById('resultTitle').textContent=title;
+  document.getElementById('resultSubtitle').textContent=subtitle;
+  document.getElementById('resultBody').innerHTML=body;
+  document.getElementById('ctaLinks').innerHTML=ctas.map(c=>`<a href="${c.href}" class="cta-link">→ ${c.label}</a>`).join('');
+  if(disclaimer)document.getElementById('resultDisclaimer').innerHTML=disclaimer;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

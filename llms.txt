@@ -1,6 +1,38 @@
 # MyWellnessCalc
 
-> MyWellnessCalc is a free wellness calculator and health information site. It provides accurate, research-backed calculators and articles covering fitness, nutrition, body composition, sleep, and lifestyle health.
+> MyWellnessCalc is a free wellness calculator and health information site. It provides accurate, research-backed calculators, articles, and quizzes covering fitness, nutrition, body composition, sleep, and lifestyle health.
+
+## Quiz Index
+- [All Wellness Quizzes](https://mywellnesscalc.com/quiz/): 16 short quizzes that match users to evidence-based protocols across nutrition, fitness, body composition, and lifestyle.
+
+## Quizzes
+
+### Nutrition
+- [What's Your Ideal Fasting Protocol?](https://mywellnesscalc.com/quiz/ideal-fasting-protocol.html): 5-question quiz matching users to the best intermittent fasting schedule based on lifestyle, hunger tolerance, and goals.
+- [Are You Getting Enough Protein?](https://mywellnesscalc.com/quiz/enough-protein.html): Assesses daily protein intake against bodyweight, activity level, and goals.
+- [Are You Eating the Right Macros?](https://mywellnesscalc.com/quiz/right-macros.html): Evaluates whether protein, carb, and fat balance fits the user's current fitness goal.
+- [Do You Need to Supplement Vitamin D?](https://mywellnesscalc.com/quiz/vitamin-d-supplement.html): Based on sun exposure, diet, skin tone, and location — determines if vitamin D supplementation is warranted.
+
+### Fitness
+- [What's Your Training Zone?](https://mywellnesscalc.com/quiz/training-zone.html): Identifies the appropriate heart rate training zone (Zone 2, mixed, or active recovery) based on fitness level and goals.
+- [Should You Try MAF Training?](https://mywellnesscalc.com/quiz/maf-training.html): Evaluates whether the Maffetone low-heart-rate method suits the user's goals and mindset.
+- [What Type of Cardio Suits You?](https://mywellnesscalc.com/quiz/cardio-type.html): Recommends Zone 2, HIIT, or a mixed approach based on goals, time availability, and fitness level.
+- [Is Creatine Right for You?](https://mywellnesscalc.com/quiz/creatine-right-for-you.html): Assesses whether creatine supplementation aligns with training type, diet, and goals.
+
+### Body & Weight
+- [What's Your Body Goal Type?](https://mywellnesscalc.com/quiz/body-goal-type.html): Distinguishes between fat loss, muscle building, and recomposition goals with targeted starting advice.
+- [What's Your Fat Loss Strategy?](https://mywellnesscalc.com/quiz/fat-loss-strategy.html): Recommends a personalised fat loss approach based on body composition, eating habits, and training history.
+- [Are You at a Healthy BMI?](https://mywellnesscalc.com/quiz/healthy-bmi.html): Contextualises BMI and explains when alternative measures (body fat %, waist-to-hip ratio) are more meaningful.
+- [What's Your Ideal Weight Loss Rate?](https://mywellnesscalc.com/quiz/weight-loss-rate.html): Recommends a sustainable weekly loss target based on starting weight, hunger tolerance, and lifestyle.
+- [Are You in a Weight Loss Plateau?](https://mywellnesscalc.com/quiz/weight-loss-plateau.html): Diagnoses whether a stall is a true plateau, metabolic adaptation, or tracking issue — with targeted solutions.
+- [What's Your Metabolism Type?](https://mywellnesscalc.com/quiz/metabolism-type.html): Profiles metabolic rate based on age, muscle mass, and activity to explain calorie burn and what to do about it.
+
+### Lifestyle
+- [What's Your Sleep Type?](https://mywellnesscalc.com/quiz/sleep-type.html): Identifies morning, evening, or intermediate chronotype with personalised sleep timing recommendations.
+- [Are You Drinking Enough Water?](https://mywellnesscalc.com/quiz/enough-water.html): Estimates hydration needs based on bodyweight, activity level, and climate.
+- [What's Your Ideal Body Weight?](https://mywellnesscalc.com/quiz/ideal-body-weight.html): Explains how to set a realistic goal weight accounting for muscle mass, age, and body frame.
+
+
 
 ## Tools Index
 - [All Health & Fitness Calculators](https://mywellnesscalc.com/tools/): Directory of all 23 free health and fitness calculators with search functionality.

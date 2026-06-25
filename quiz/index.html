@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellness Quizzes – Find What Works for You | MyWellnessCalc</title>
+  <meta name="description" content="Free wellness quizzes to find your ideal fasting protocol, training zone, protein needs, sleep type, and more. Evidence-based results with personalised recommendations.">
+  <link rel="canonical" href="https://mywellnesscalc.com/quiz/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},
+      {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://mywellnesscalc.com/quiz/"}
+    ]
+  }
+  </script>
+  <style>
+    .page-hero{padding:4rem 2rem 2rem;max-width:800px;margin:0 auto;text-align:center;}
+    h1{font-family:'Fraunces',serif;font-size:3rem;font-weight:300;letter-spacing:-.03em;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-hero p{color:var(--mid);font-size:1rem;font-weight:300;}
+    .search-wrap{max-width:540px;margin:1.5rem auto 0;position:relative;}
+    .search-input{width:100%;padding:.85rem 1.25rem .85rem 3rem;border:1.5px solid var(--border);border-radius:100px;font-size:.95rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);outline:none;transition:border-color .2s;box-sizing:border-box;}
+    .search-input:focus{border-color:var(--sage);}
+    .search-icon{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--light);font-size:1rem;pointer-events:none;}
+    .search-clear{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--light);font-size:1rem;display:none;padding:0;}
+    .no-results{text-align:center;padding:3rem 1rem;color:var(--mid);display:none;}
+    .quizzes-wrap{max-width:1100px;margin:0 auto;padding:2rem;}
+    .category-label{font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--light);margin:2rem 0 1rem;}
+    .quizzes-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;}
+    .quiz-card{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;display:block;}
+    .quiz-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);}
+    .quiz-card.hidden{display:none;}
+    .quiz-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:.75rem;}
+    .quiz-card h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;line-height:1.3;margin-bottom:.4rem;}
+    .quiz-card p{font-size:.82rem;color:var(--mid);line-height:1.5;}
+    .quiz-meta{font-size:.75rem;color:var(--light);margin-top:.75rem;}
+    .new-badge{display:inline-block;background:var(--sage-dark);color:white;font-size:.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.15rem .5rem;border-radius:100px;margin-left:.5rem;vertical-align:middle;}
+    .ad-banner{background:var(--cream);border:1px dashed var(--border);border-radius:8px;height:90px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin:2rem auto;max-width:728px;}
+    @media(max-width:900px){.quizzes-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.quizzes-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <h1>Wellness <em>Quizzes</em></h1>
+  <p>Answer a few questions and get a personalised recommendation — backed by science, not guesswork.</p>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" class="search-input" id="searchInput" placeholder="Search quizzes..." autocomplete="off">
+    <button class="search-clear" id="searchClear">✕</button>
+  </div>
+</div>
+
+<div class="quizzes-wrap">
+  <div class="no-results" id="noResults">No quizzes found. Try a different search.</div>
+
+  <div class="category-label">Nutrition</div>
+  <div class="quizzes-grid">
+
+    <a href="ideal-fasting-protocol.html" class="quiz-card" data-title="What's Your Ideal Fasting Protocol?" data-tags="intermittent fasting 16:8 18:6 protocol diet">
+      <span class="quiz-tag">Nutrition</span><span class="new-badge">New</span>
+      <h3>What's Your Ideal Fasting Protocol?</h3>
+      <p>Find the intermittent fasting schedule that fits your lifestyle, goals, and eating habits.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="enough-protein.html" class="quiz-card" data-title="Are You Getting Enough Protein?" data-tags="protein intake muscle diet nutrition">
+      <span class="quiz-tag">Nutrition</span><span class="new-badge">New</span>
+      <h3>Are You Getting Enough Protein?</h3>
+      <p>Find out if your daily protein intake matches your body weight, goals, and activity level.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="right-macros.html" class="quiz-card" data-title="Are You Eating the Right Macros?" data-tags="macros protein carbs fat nutrition diet">
+      <span class="quiz-tag">Nutrition</span><span class="new-badge">New</span>
+      <h3>Are You Eating the Right Macros?</h3>
+      <p>Discover whether your protein, carb, and fat balance fits your current fitness goal.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="vitamin-d-supplement.html" class="quiz-card" data-title="Do You Need to Supplement Vitamin D?" data-tags="vitamin d supplement deficiency sun exposure">
+      <span class="quiz-tag">Nutrition</span><span class="new-badge">New</span>
+      <h3>Do You Need to Supplement Vitamin D?</h3>
+      <p>Based on your sun exposure, diet, and lifestyle — find out if supplementing makes sense for you.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+  </div>
+
+  <div class="category-label">Fitness</div>
+  <div class="quizzes-grid">
+
+    <a href="training-zone.html" class="quiz-card" data-title="What's Your Training Zone?" data-tags="heart rate zone 2 MAF cardio training fitness">
+      <span class="quiz-tag">Fitness</span><span class="new-badge">New</span>
+      <h3>What's Your Training Zone?</h3>
+      <p>Find out which heart rate training zone — Zone 2, MAF, or higher — suits your current fitness level and goals.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="maf-training.html" class="quiz-card" data-title="Should You Try MAF Training?" data-tags="MAF maffetone aerobic base heart rate training">
+      <span class="quiz-tag">Fitness</span><span class="new-badge">New</span>
+      <h3>Should You Try MAF Training?</h3>
+      <p>Low-heart-rate training isn't for everyone. Find out if the MAF method is right for where you are now.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="cardio-type.html" class="quiz-card" data-title="What Type of Cardio Suits You?" data-tags="cardio zone 2 HIIT fat loss aerobic fitness">
+      <span class="quiz-tag">Fitness</span><span class="new-badge">New</span>
+      <h3>What Type of Cardio Suits You?</h3>
+      <p>Zone 2, HIIT, or a mix? Find the cardio approach that matches your goals, schedule, and current fitness.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="creatine-right-for-you.html" class="quiz-card" data-title="Is Creatine Right for You?" data-tags="creatine supplement muscle strength training">
+      <span class="quiz-tag">Fitness</span><span class="new-badge">New</span>
+      <h3>Is Creatine Right for You?</h3>
+      <p>Creatine works — but not equally for everyone. Find out whether it makes sense for your goals and training style.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+  </div>
+
+  <div class="category-label">Body & Weight</div>
+  <div class="quizzes-grid">
+
+    <a href="body-goal-type.html" class="quiz-card" data-title="What's Your Body Goal Type?" data-tags="weight loss fat loss muscle body composition goals">
+      <span class="quiz-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>What's Your Body Goal Type?</h3>
+      <p>Clarify whether your priority is fat loss, muscle gain, or body recomposition — and get a targeted starting point.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="fat-loss-strategy.html" class="quiz-card" data-title="What's Your Fat Loss Strategy?" data-tags="fat loss body fat calorie deficit strategy weight">
+      <span class="quiz-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>What's Your Fat Loss Strategy?</h3>
+      <p>Based on your body composition and habits, find the fat loss approach most likely to work for you.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="healthy-bmi.html" class="quiz-card" data-title="Are You at a Healthy BMI?" data-tags="BMI body mass index weight health range">
+      <span class="quiz-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>Are You at a Healthy BMI?</h3>
+      <p>Understand what your BMI means in context — and whether it's actually the right metric for you.</p>
+      <div class="quiz-meta">4 questions · ~2 min</div>
+    </a>
+
+    <a href="weight-loss-rate.html" class="quiz-card" data-title="What's Your Ideal Weight Loss Rate?" data-tags="weight loss rate calorie deficit pace sustainable">
+      <span class="quiz-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>What's Your Ideal Weight Loss Rate?</h3>
+      <p>Find a realistic and sustainable weekly loss target based on your starting point, deficit tolerance, and lifestyle.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="weight-loss-plateau.html" class="quiz-card" data-title="Are You in a Weight Loss Plateau?" data-tags="weight loss plateau stall stuck diet metabolism">
+      <span class="quiz-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>Are You in a Weight Loss Plateau?</h3>
+      <p>Stalled on the scale? Find out if you're in a true plateau — and what's most likely causing it.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="metabolism-type.html" class="quiz-card" data-title="What's Your Metabolism Type?" data-tags="metabolism TDEE BMR calorie burn energy expenditure">
+      <span class="quiz-tag">Body & Weight</span><span class="new-badge">New</span>
+      <h3>What's Your Metabolism Type?</h3>
+      <p>Understand how your age, activity level, and muscle mass affect your calorie burn — and what to do about it.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+  </div>
+
+  <div class="category-label">Lifestyle</div>
+  <div class="quizzes-grid">
+
+    <a href="sleep-type.html" class="quiz-card" data-title="What's Your Sleep Type?" data-tags="sleep chronotype morning evening sleep cycles rest">
+      <span class="quiz-tag">Lifestyle</span><span class="new-badge">New</span>
+      <h3>What's Your Sleep Type?</h3>
+      <p>Find your natural sleep chronotype and get personalised timing recommendations for bed and wake-up.</p>
+      <div class="quiz-meta">5 questions · ~2 min</div>
+    </a>
+
+    <a href="enough-water.html" class="quiz-card" data-title="Are You Drinking Enough Water?" data-tags="hydration water intake dehydration daily fluid">
+      <span class="quiz-tag">Lifestyle</span><span class="new-badge">New</span>
+      <h3>Are You Drinking Enough Water?</h3>
+      <p>Based on your weight, activity, and climate — find out if you're consistently hitting your hydration target.</p>
+      <div class="quiz-meta">4 questions · ~2 min</div>
+    </a>
+
+    <a href="ideal-body-weight.html" class="quiz-card" data-title="What's Your Ideal Body Weight?" data-tags="ideal weight healthy weight range goal body">
+      <span class="quiz-tag">Lifestyle</span><span class="new-badge">New</span>
+      <h3>What's Your Ideal Body Weight?</h3>
+      <p>Go beyond the number on the scale — find a realistic goal weight range that accounts for your build and goals.</p>
+      <div class="quiz-meta">4 questions · ~2 min</div>
+    </a>
+
+  </div>
+
+  <div class="ad-banner">Advertisement · Google AdSense</div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+  const input = document.getElementById('searchInput');
+  const clear = document.getElementById('searchClear');
+  const noResults = document.getElementById('noResults');
+  const cards = document.querySelectorAll('.quiz-card');
+  const labels = document.querySelectorAll('.category-label');
+  const grids = document.querySelectorAll('.quizzes-grid');
+
+  input.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    clear.style.display = q ? 'block' : 'none';
+    let visible = 0;
+    cards.forEach(card => {
+      const match = (card.dataset.title + ' ' + card.dataset.tags).toLowerCase().includes(q);
+      card.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+    const searching = q.length > 0;
+    labels.forEach(l => l.style.display = searching ? 'none' : '');
+    grids.forEach(g => {
+      const hasVisible = [...g.querySelectorAll('.quiz-card')].some(c => !c.classList.contains('hidden'));
+      g.style.display = (searching && !hasVisible) ? 'none' : '';
+    });
+  });
+
+  clear.addEventListener('click', function() {
+    input.value = '';
+    this.style.display = 'none';
+    cards.forEach(c => c.classList.remove('hidden'));
+    labels.forEach(l => l.style.display = '');
+    grids.forEach(g => g.style.display = '');
+    noResults.style.display = 'none';
+  });
+</script>
+</body>
+</html>

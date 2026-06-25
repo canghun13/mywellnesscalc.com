@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Getting Enough Protein? Quiz | MyWellnessCalc</title>
+  <meta name="description" content="Find out if your daily protein intake matches your body weight, goals, and activity level — based on current research.">
+  <link rel="canonical" href="https://mywellnesscalc.com/quiz/enough-protein.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Quizzes","item":"https://mywellnesscalc.com/quiz/"},{"@type":"ListItem","position":3,"name":"Are You Getting Enough Protein?","item":"https://mywellnesscalc.com/quiz/enough-protein.html"}]}</script>
+  <style>
+    .quiz-wrap{max-width:680px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .quiz-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--mid);text-decoration:none;margin-bottom:2rem;transition:color .2s;}
+    .quiz-back:hover{color:var(--sage-dark);}
+    .quiz-header{margin-bottom:2.5rem;}
+    .quiz-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:1rem;}
+    .quiz-header h1{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:300;line-height:1.2;margin-bottom:.75rem;}
+    .quiz-header p{color:var(--mid);font-size:.95rem;}
+    .progress-bar{height:4px;background:var(--border);border-radius:100px;margin-bottom:2.5rem;overflow:hidden;}
+    .progress-fill{height:100%;background:var(--sage);border-radius:100px;transition:width .4s ease;}
+    .progress-label{font-size:.75rem;color:var(--light);margin-bottom:.5rem;}
+    .question-block{display:none;}.question-block.active{display:block;}
+    .question-block h2{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.5rem;line-height:1.4;}
+    .options{display:flex;flex-direction:column;gap:.75rem;}
+    .option{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;background:white;border:1.5px solid var(--border);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s;}
+    .option:hover{border-color:var(--sage-light);background:var(--cream);}
+    .option.selected{border-color:var(--sage);background:#f0f6f0;}
+    .option-letter{width:28px;height:28px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:var(--mid);flex-shrink:0;margin-top:.1rem;}
+    .option.selected .option-letter{background:var(--sage);color:white;}
+    .option-text{font-size:.9rem;line-height:1.5;}
+    .option-text strong{display:block;margin-bottom:.15rem;}
+    .option-text span{color:var(--mid);font-size:.82rem;}
+    .nav-btns{display:flex;gap:1rem;margin-top:2rem;}
+    .btn-next{padding:.875rem 2rem;background:var(--sage-dark);color:white;border:none;border-radius:100px;font-size:.9rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;display:none;}
+    .btn-next:hover{background:var(--sage);}
+    .btn-back-q{padding:.875rem 1.5rem;background:none;color:var(--mid);border:1.5px solid var(--border);border-radius:100px;font-size:.9rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:none;}
+    .btn-back-q:hover{border-color:var(--sage-light);}
+    .result-block{display:none;}.result-block.show{display:block;}
+    .result-hero{background:var(--cream);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:2rem;}
+    .result-label{font-size:.75rem;font-weight:600;color:var(--sage-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .result-title{font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--charcoal);margin-bottom:.5rem;}
+    .result-subtitle{color:var(--mid);font-size:.9rem;}
+    .result-body h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.5rem 0 .75rem;}
+    .result-body p{color:var(--mid);font-size:.9rem;line-height:1.7;margin-bottom:.75rem;}
+    .result-body ul{color:var(--mid);font-size:.9rem;line-height:1.7;padding-left:1.25rem;margin-bottom:.75rem;}
+    .cta-box{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-top:2rem;}
+    .cta-box h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;margin-bottom:1rem;}
+    .cta-links{display:flex;flex-direction:column;gap:.5rem;}
+    .cta-link{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:var(--cream);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:background .2s;}
+    .cta-link:hover{background:#e8e2da;}
+    .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
+    .retry-btn:hover{border-color:var(--sage-light);}
+    .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="quiz-wrap">
+  <a href="../quiz/" class="quiz-back">← All quizzes</a>
+  <div class="quiz-header">
+    <div class="quiz-tag">Nutrition</div>
+    <h1>Are You Getting Enough Protein?</h1>
+    <p>Find out if your daily protein intake matches your body weight, goals, and activity level — based on current research.</p>
+  </div>
+  <div class="progress-label" id="progressLabel">Question 1 of 5</div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:20%"></div></div>
+
+  <div class="question-block active" id="q1">
+    <h2>What is your primary goal right now?</h2>
+    <div class="options">
+      <div class="option" data-q="1" data-v="muscle"><div class="option-letter">A</div><div class="option-text"><strong>Build muscle</strong><span>I want to gain lean mass and strength</span></div></div>
+      <div class="option" data-q="1" data-v="loss"><div class="option-letter">B</div><div class="option-text"><strong>Lose fat while preserving muscle</strong><span>I want to reduce body fat without losing muscle</span></div></div>
+      <div class="option" data-q="1" data-v="maintain"><div class="option-letter">C</div><div class="option-text"><strong>Maintain my current physique</strong><span>I want to stay where I am</span></div></div>
+      <div class="option" data-q="1" data-v="health"><div class="option-letter">D</div><div class="option-text"><strong>General health</strong><span>I want to eat well without a specific fitness goal</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-next" id="next1" onclick="nextQ(1)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q2">
+    <h2>How often do you do resistance training (weights, bodyweight exercises)?</h2>
+    <div class="options">
+      <div class="option" data-q="2" data-v="none"><div class="option-letter">A</div><div class="option-text"><strong>Never or rarely</strong><span>I mostly do cardio or no structured exercise</span></div></div>
+      <div class="option" data-q="2" data-v="light"><div class="option-letter">B</div><div class="option-text"><strong>1–2 times per week</strong><span>Occasional sessions, nothing intense</span></div></div>
+      <div class="option" data-q="2" data-v="moderate"><div class="option-letter">C</div><div class="option-text"><strong>3–4 times per week</strong><span>Regular structured workouts</span></div></div>
+      <div class="option" data-q="2" data-v="heavy"><div class="option-letter">D</div><div class="option-text"><strong>5+ times per week</strong><span>I train hard most days</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(2)">← Back</button><button class="btn-next" id="next2" onclick="nextQ(2)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q3">
+    <h2>How much protein do you think you eat on an average day?</h2>
+    <div class="options">
+      <div class="option" data-q="3" data-v="low"><div class="option-letter">A</div><div class="option-text"><strong>Under 80g</strong><span>I don't eat much meat, eggs, or protein foods</span></div></div>
+      <div class="option" data-q="3" data-v="moderate"><div class="option-letter">B</div><div class="option-text"><strong>80–120g</strong><span>Some protein sources but not prioritised</span></div></div>
+      <div class="option" data-q="3" data-v="good"><div class="option-letter">C</div><div class="option-text"><strong>120–160g</strong><span>I actively try to eat protein at each meal</span></div></div>
+      <div class="option" data-q="3" data-v="high"><div class="option-letter">D</div><div class="option-text"><strong>Over 160g</strong><span>Protein is a key focus of my diet</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(3)">← Back</button><button class="btn-next" id="next3" onclick="nextQ(3)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q4">
+    <h2>How much do you weigh (approximately)?</h2>
+    <div class="options">
+      <div class="option" data-q="4" data-v="light"><div class="option-letter">A</div><div class="option-text"><strong>Under 60 kg (132 lbs)</strong><span></span></div></div>
+      <div class="option" data-q="4" data-v="medium"><div class="option-letter">B</div><div class="option-text"><strong>60–80 kg (132–176 lbs)</strong><span></span></div></div>
+      <div class="option" data-q="4" data-v="heavy"><div class="option-letter">C</div><div class="option-text"><strong>80–100 kg (176–220 lbs)</strong><span></span></div></div>
+      <div class="option" data-q="4" data-v="vheavy"><div class="option-letter">D</div><div class="option-text"><strong>Over 100 kg (220 lbs)</strong><span></span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(4)">← Back</button><button class="btn-next" id="next4" onclick="nextQ(4)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q5">
+    <h2>How old are you?</h2>
+    <div class="options">
+      <div class="option" data-q="5" data-v="young"><div class="option-letter">A</div><div class="option-text"><strong>Under 35</strong><span>Protein synthesis is relatively efficient</span></div></div>
+      <div class="option" data-q="5" data-v="mid"><div class="option-letter">B</div><div class="option-text"><strong>35–50</strong><span>Protein needs begin to increase moderately</span></div></div>
+      <div class="option" data-q="5" data-v="over50"><div class="option-letter">C</div><div class="option-text"><strong>Over 50</strong><span>Higher protein intake is important to counter muscle loss</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(5)">← Back</button><button class="btn-next" id="next5" onclick="showResult()">Next →</button></div>
+  </div>
+
+  <div class="result-block" id="result">
+    <div class="result-hero">
+      <div class="result-label" id="resultLabel">Your result</div>
+      <div class="result-title" id="resultTitle">—</div>
+      <div class="result-subtitle" id="resultSubtitle"></div>
+    </div>
+    <div class="result-body" id="resultBody"></div>
+    <div class="cta-box"><h3>Next steps</h3><div class="cta-links" id="ctaLinks"></div></div>
+    <p class="disclaimer" id="resultDisclaimer"></p>
+    <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
+  </div>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+const answers={};
+const TOTAL=5;
+document.querySelectorAll('.option').forEach(opt=>{
+  opt.addEventListener('click',function(){
+    const q=this.dataset.q,v=this.dataset.v;
+    document.querySelectorAll(`.option[data-q="${q}"]`).forEach(o=>o.classList.remove('selected'));
+    this.classList.add('selected');answers[q]=v;
+    const nb=document.getElementById('next'+q);if(nb)nb.style.display='inline-block';
+    const bb=document.querySelector(`#q${q} .btn-back-q`);if(bb)bb.style.display='inline-block';
+  });
+});
+function nextQ(c){if(!answers[c])return;document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c+1)).classList.add('active');updateProgress(c+1);}
+function prevQ(c){document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c-1)).classList.add('active');updateProgress(c-1);}
+function updateProgress(q){document.getElementById('progressFill').style.width=(q/TOTAL*100)+'%';document.getElementById('progressLabel').textContent='Question '+q+' of '+TOTAL;}
+
+function showResult(){
+  if(!answers[5])return;
+  document.getElementById('q5').classList.remove('active');
+  document.getElementById('progressLabel').textContent='Your result';
+  document.getElementById('progressFill').style.width='100%';
+  const a=answers;
+  let title,subtitle,body,ctas;
+  const needsMore = a[1]==='muscle' || a[2]==='heavy' || a[3]==='low' || a[3]==='moderate' || a[5]==='over50';
+  const onTrack = a[3]==='good' || a[3]==='high';
+  if(a[3]==='high' && a[1]!=='muscle'){
+    title='You may be getting more than enough';subtitle='High protein intake is fine, but it's worth reviewing your total targets';
+    body=`<h3>What the research says</h3><p>For most goals, 1.6–2.2g of protein per kg of bodyweight is the evidence-based range. Going higher isn't harmful for most people, but it offers diminishing returns for muscle building and may crowd out other nutrients.</p><h3>Things to consider</h3><ul><li>If you're not doing heavy resistance training, 1.6g/kg is likely sufficient</li><li>Focus on hitting your target consistently rather than exceeding it</li><li>Protein quality matters — prioritise complete sources (meat, fish, eggs, dairy, or combined plant proteins)</li></ul>`;
+    ctas=[{href:'../tools/protein-calculator.html',label:'Calculate your exact protein target →'},{href:'../blog/protein-vs-carbs-vs-fat.html',label:'Protein vs Carbs vs Fat'}];
+  } else if(onTrack && a[2]!=='none'){
+    title='You're probably on track';subtitle='Your intake seems appropriate — but verify with your actual target';
+    body=`<h3>What the research says</h3><p>For active people trying to build or preserve muscle, 1.6–2.2g per kg of bodyweight is the target range most supported by research. If you're consistently hitting 120–160g per day and training regularly, you're likely in the right area.</p><h3>Fine-tuning</h3><ul><li>Spread protein across 3–4 meals for better muscle protein synthesis</li><li>Post-workout protein within a few hours of training helps recovery</li><li>If you're over 50, aim for the higher end of the range (2.0–2.2g/kg)</li></ul>`;
+    ctas=[{href:'../tools/protein-calculator.html',label:'Get your exact protein target →'},{href:'../blog/high-protein-foods.html',label:'High Protein Foods List'},{href:'../blog/protein-how-much-do-you-need.html',label:'How Much Protein Do You Need?'}];
+  } else {
+    title='You're likely not getting enough';subtitle='Most people underestimate how much protein they need';
+    body=`<h3>What the research says</h3><p>The RDA for protein (0.8g/kg) is a minimum to prevent deficiency — not an optimum for active people. For muscle building or preservation, research supports 1.6–2.2g per kg. For women over 50, this is even more critical due to sarcopenia risk.</p><h3>How to increase protein practically</h3><ul><li>Add a protein source to every meal (eggs, Greek yogurt, chicken, fish, legumes)</li><li>Consider a protein supplement if whole foods aren't meeting your target</li><li>Aim to hit your target most days — consistency beats perfection</li></ul>`;
+    ctas=[{href:'../tools/protein-calculator.html',label:'Calculate your protein target →'},{href:'../blog/high-protein-foods.html',label:'High Protein Foods List'},{href:'../blog/protein-needs-women-over-40.html',label:'Protein for Women Over 40'}];
+  }
+  setResult('Your protein status',title,subtitle,body,ctas,'<strong>Note:</strong> These are general estimates based on your answers. For a precise target based on your exact weight and goals, use the Protein Calculator above.');
+}
+function resetQuiz(){Object.keys(answers).forEach(k=>delete answers[k]);document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));document.querySelectorAll('.btn-next,.btn-back-q').forEach(b=>b.style.display='none');document.querySelectorAll('.question-block').forEach(q=>q.classList.remove('active'));document.getElementById('q1').classList.add('active');document.getElementById('result').classList.remove('show');updateProgress(1);}
+function setResult(label,title,subtitle,body,ctas,disclaimer){
+  if(label)document.getElementById('resultLabel').textContent=label;
+  document.getElementById('resultTitle').textContent=title;
+  document.getElementById('resultSubtitle').textContent=subtitle;
+  document.getElementById('resultBody').innerHTML=body;
+  document.getElementById('ctaLinks').innerHTML=ctas.map(c=>`<a href="${c.href}" class="cta-link">→ ${c.label}</a>`).join('');
+  if(disclaimer)document.getElementById('resultDisclaimer').innerHTML=disclaimer;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>

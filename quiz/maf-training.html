@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should You Try MAF Training? Quiz | MyWellnessCalc</title>
+  <meta name="description" content="Low-heart-rate training isn't for everyone. Find out if the MAF method is right for where you are in your fitness journey.">
+  <link rel="canonical" href="https://mywellnesscalc.com/quiz/maf-training.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Quizzes","item":"https://mywellnesscalc.com/quiz/"},{"@type":"ListItem","position":3,"name":"Should You Try MAF Training?","item":"https://mywellnesscalc.com/quiz/maf-training.html"}]}</script>
+  <style>
+    .quiz-wrap{max-width:680px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .quiz-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--mid);text-decoration:none;margin-bottom:2rem;transition:color .2s;}
+    .quiz-back:hover{color:var(--sage-dark);}
+    .quiz-header{margin-bottom:2.5rem;}
+    .quiz-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:1rem;}
+    .quiz-header h1{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:300;line-height:1.2;margin-bottom:.75rem;}
+    .quiz-header p{color:var(--mid);font-size:.95rem;}
+    .progress-bar{height:4px;background:var(--border);border-radius:100px;margin-bottom:2.5rem;overflow:hidden;}
+    .progress-fill{height:100%;background:var(--sage);border-radius:100px;transition:width .4s ease;}
+    .progress-label{font-size:.75rem;color:var(--light);margin-bottom:.5rem;}
+    .question-block{display:none;}.question-block.active{display:block;}
+    .question-block h2{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.5rem;line-height:1.4;}
+    .options{display:flex;flex-direction:column;gap:.75rem;}
+    .option{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;background:white;border:1.5px solid var(--border);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s;}
+    .option:hover{border-color:var(--sage-light);background:var(--cream);}
+    .option.selected{border-color:var(--sage);background:#f0f6f0;}
+    .option-letter{width:28px;height:28px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:var(--mid);flex-shrink:0;margin-top:.1rem;}
+    .option.selected .option-letter{background:var(--sage);color:white;}
+    .option-text{font-size:.9rem;line-height:1.5;}
+    .option-text strong{display:block;margin-bottom:.15rem;}
+    .option-text span{color:var(--mid);font-size:.82rem;}
+    .nav-btns{display:flex;gap:1rem;margin-top:2rem;}
+    .btn-next{padding:.875rem 2rem;background:var(--sage-dark);color:white;border:none;border-radius:100px;font-size:.9rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;display:none;}
+    .btn-next:hover{background:var(--sage);}
+    .btn-back-q{padding:.875rem 1.5rem;background:none;color:var(--mid);border:1.5px solid var(--border);border-radius:100px;font-size:.9rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:none;}
+    .btn-back-q:hover{border-color:var(--sage-light);}
+    .result-block{display:none;}.result-block.show{display:block;}
+    .result-hero{background:var(--cream);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:2rem;}
+    .result-label{font-size:.75rem;font-weight:600;color:var(--sage-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .result-title{font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--charcoal);margin-bottom:.5rem;}
+    .result-subtitle{color:var(--mid);font-size:.9rem;}
+    .result-body h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.5rem 0 .75rem;}
+    .result-body p{color:var(--mid);font-size:.9rem;line-height:1.7;margin-bottom:.75rem;}
+    .result-body ul{color:var(--mid);font-size:.9rem;line-height:1.7;padding-left:1.25rem;margin-bottom:.75rem;}
+    .cta-box{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-top:2rem;}
+    .cta-box h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;margin-bottom:1rem;}
+    .cta-links{display:flex;flex-direction:column;gap:.5rem;}
+    .cta-link{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:var(--cream);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:background .2s;}
+    .cta-link:hover{background:#e8e2da;}
+    .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
+    .retry-btn:hover{border-color:var(--sage-light);}
+    .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="quiz-wrap">
+  <a href="../quiz/" class="quiz-back">← All quizzes</a>
+  <div class="quiz-header">
+    <div class="quiz-tag">Fitness</div>
+    <h1>Should You Try MAF Training?</h1>
+    <p>Low-heart-rate training isn't for everyone. Find out if the MAF method is right for where you are in your fitness journey.</p>
+  </div>
+  <div class="progress-label" id="progressLabel">Question 1 of 5</div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:20%"></div></div>
+
+  <div class="question-block active" id="q1">
+    <h2>What's your primary training goal?</h2>
+    <div class="options">
+      <div class="option" data-q="1" data-v="endurance"><div class="option-letter">A</div><div class="option-text"><strong>Build endurance or aerobic base</strong><span>I want to run, cycle, or exercise longer without burning out</span></div></div>
+      <div class="option" data-q="1" data-v="fat"><div class="option-letter">B</div><div class="option-text"><strong>Burn fat more efficiently</strong><span>I want to improve my fat-burning metabolism</span></div></div>
+      <div class="option" data-q="1" data-v="health"><div class="option-letter">C</div><div class="option-text"><strong>Long-term health and consistency</strong><span>I want a sustainable approach I can do for years</span></div></div>
+      <div class="option" data-q="1" data-v="performance"><div class="option-letter">D</div><div class="option-text"><strong>Improve performance</strong><span>I want to get faster or stronger</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-next" id="next1" onclick="nextQ(1)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q2">
+    <h2>How would you describe your current cardio experience?</h2>
+    <div class="options">
+      <div class="option" data-q="2" data-v="none"><div class="option-letter">A</div><div class="option-text"><strong>Little or none</strong><span>I'm new to cardio training</span></div></div>
+      <div class="option" data-q="2" data-v="some"><div class="option-letter">B</div><div class="option-text"><strong>Some experience</strong><span>I run, walk, or cycle occasionally</span></div></div>
+      <div class="option" data-q="2" data-v="regular"><div class="option-letter">C</div><div class="option-text"><strong>Regular</strong><span>I do cardio 3–4 times per week</span></div></div>
+      <div class="option" data-q="2" data-v="trained"><div class="option-letter">D</div><div class="option-text"><strong>Well-trained</strong><span>I've been consistently training for a year or more</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(2)">← Back</button><button class="btn-next" id="next2" onclick="nextQ(2)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q3">
+    <h2>When you do cardio, do you often feel very out of breath?</h2>
+    <div class="options">
+      <div class="option" data-q="3" data-v="yes"><div class="option-letter">A</div><div class="option-text"><strong>Yes, almost always</strong><span>I push hard and end up breathing heavily</span></div></div>
+      <div class="option" data-q="3" data-v="sometimes"><div class="option-letter">B</div><div class="option-text"><strong>Sometimes</strong><span>I vary my intensity</span></div></div>
+      <div class="option" data-q="3" data-v="no"><div class="option-letter">C</div><div class="option-text"><strong>No</strong><span>I tend to keep a comfortable, conversational pace</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(3)">← Back</button><button class="btn-next" id="next3" onclick="nextQ(3)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q4">
+    <h2>Do you frequently get sick, feel run-down, or struggle to recover from training?</h2>
+    <div class="options">
+      <div class="option" data-q="4" data-v="yes"><div class="option-letter">A</div><div class="option-text"><strong>Yes</strong><span>I feel overtrained or run-down more than I'd like</span></div></div>
+      <div class="option" data-q="4" data-v="sometimes"><div class="option-letter">B</div><div class="option-text"><strong>Sometimes</strong><span>Occasionally, after harder periods</span></div></div>
+      <div class="option" data-q="4" data-v="no"><div class="option-letter">C</div><div class="option-text"><strong>No</strong><span>I recover well and rarely get sick from training</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(4)">← Back</button><button class="btn-next" id="next4" onclick="nextQ(4)">Next →</button></div>
+  </div>
+
+  <div class="question-block" id="q5">
+    <h2>Are you willing to slow down significantly — even if it feels embarrassingly slow at first?</h2>
+    <div class="options">
+      <div class="option" data-q="5" data-v="yes"><div class="option-letter">A</div><div class="option-text"><strong>Yes</strong><span>I can commit to the process even if progress feels slow</span></div></div>
+      <div class="option" data-q="5" data-v="maybe"><div class="option-letter">B</div><div class="option-text"><strong>Maybe</strong><span>I'd try but I'm not sure I'd stick with it</span></div></div>
+      <div class="option" data-q="5" data-v="no"><div class="option-letter">C</div><div class="option-text"><strong>No</strong><span>I need to feel like I'm working hard</span></div></div>
+    </div>
+    <div class="nav-btns"><button class="btn-back-q" onclick="prevQ(5)">← Back</button><button class="btn-next" id="next5" onclick="showResult()">Next →</button></div>
+  </div>
+
+  <div class="result-block" id="result">
+    <div class="result-hero">
+      <div class="result-label" id="resultLabel">Your result</div>
+      <div class="result-title" id="resultTitle">—</div>
+      <div class="result-subtitle" id="resultSubtitle"></div>
+    </div>
+    <div class="result-body" id="resultBody"></div>
+    <div class="cta-box"><h3>Next steps</h3><div class="cta-links" id="ctaLinks"></div></div>
+    <p class="disclaimer" id="resultDisclaimer"></p>
+    <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
+  </div>
+</div>
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+const answers={};
+const TOTAL=5;
+document.querySelectorAll('.option').forEach(opt=>{
+  opt.addEventListener('click',function(){
+    const q=this.dataset.q,v=this.dataset.v;
+    document.querySelectorAll(`.option[data-q="${q}"]`).forEach(o=>o.classList.remove('selected'));
+    this.classList.add('selected');answers[q]=v;
+    const nb=document.getElementById('next'+q);if(nb)nb.style.display='inline-block';
+    const bb=document.querySelector(`#q${q} .btn-back-q`);if(bb)bb.style.display='inline-block';
+  });
+});
+function nextQ(c){if(!answers[c])return;document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c+1)).classList.add('active');updateProgress(c+1);}
+function prevQ(c){document.getElementById('q'+c).classList.remove('active');document.getElementById('q'+(c-1)).classList.add('active');updateProgress(c-1);}
+function updateProgress(q){document.getElementById('progressFill').style.width=(q/TOTAL*100)+'%';document.getElementById('progressLabel').textContent='Question '+q+' of '+TOTAL;}
+
+function showResult(){
+  if(!answers[5])return;
+  document.getElementById('q5').classList.remove('active');
+  document.getElementById('progressLabel').textContent='Your result';
+  document.getElementById('progressFill').style.width='100%';
+  const a=answers;
+  let title,subtitle,body,ctas;
+  const goodFit = (a[1]==='endurance'||a[1]==='fat'||a[1]==='health') && a[5]==='yes' && (a[4]==='yes'||a[3]==='yes');
+  const notReady = a[5]==='no';
+  const maybeReady = a[5]==='maybe';
+  if(notReady){
+    title='MAF training may not suit you right now';subtitle='The method requires committing to very low intensity — even if it feels too easy';
+    body=`<h3>Why this matters</h3><p>MAF training (Maffetone Method) requires keeping your heart rate below a specific ceiling — typically 180 minus your age. For many people, this means slowing to a walk during runs. If you're not willing to embrace that, the method won't deliver its benefits.</p><h3>What might work instead</h3><p>Zone 2 training offers similar aerobic base benefits with slightly more flexibility. HIIT may suit you better if you prefer to feel the effort.</p>`;
+    ctas=[{href:'../tools/zone-2-calculator.html',label:'Try Zone 2 instead →'},{href:'../blog/zone-2-vs-hiit-fat-loss.html',label:'Zone 2 vs HIIT for Fat Loss'}];
+  } else if(goodFit){
+    title='MAF training is a strong fit for you';subtitle='Your goals and mindset align well with the Maffetone Method';
+    body=`<h3>Why MAF suits you</h3><p>The MAF method is ideal for people who are pushing too hard, struggling with recovery, or want to build a deeper aerobic base. By training below your MAF heart rate consistently, you develop your aerobic system — improving fat oxidation, endurance, and long-term health.</p><h3>How to start</h3><ul><li>Calculate your MAF heart rate: 180 minus your age (with adjustments)</li><li>Every training session should stay below this number</li><li>Expect the first 2–3 months to feel very slow — this is normal</li><li>Run or walk — don't worry about pace</li></ul><h3>When to reassess</h3><p>After 3–6 months of consistent MAF training, your pace at the same heart rate should noticeably improve. That's the sign your aerobic base is building.</p>`;
+    ctas=[{href:'../tools/maf-calculator.html',label:'Calculate your MAF heart rate →'},{href:'../blog/maf-training-for-beginners.html',label:'MAF Training for Beginners'},{href:'../blog/zone-2-heart-rate-training-beginners.html',label:'Zone 2 Training Guide'}];
+  } else {
+    title='MAF training could work for you';subtitle='It's worth trying — but go in with realistic expectations';
+    body=`<h3>What to expect</h3><p>MAF training often feels discouraging at first because the required heart rate forces most people to slow down considerably. The benefits come over months, not weeks. If you can commit to 3 months of consistent low-intensity training, you'll likely see your pace at the same heart rate improve significantly.</p><h3>How to start</h3><ul><li>Calculate your MAF heart rate below</li><li>Keep every session under that number</li><li>Don't judge progress by pace — judge it by how that pace feels</li></ul>`;
+    ctas=[{href:'../tools/maf-calculator.html',label:'Calculate your MAF heart rate →'},{href:'../blog/maf-training-for-beginners.html',label:'MAF Training for Beginners'}];
+  }
+  setResult('Your MAF assessment',title,subtitle,body,ctas,'<strong>Note:</strong> MAF training is a long-term aerobic development method. Results take months. If you have any cardiovascular conditions, consult a doctor before starting.');
+}
+function resetQuiz(){Object.keys(answers).forEach(k=>delete answers[k]);document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));document.querySelectorAll('.btn-next,.btn-back-q').forEach(b=>b.style.display='none');document.querySelectorAll('.question-block').forEach(q=>q.classList.remove('active'));document.getElementById('q1').classList.add('active');document.getElementById('result').classList.remove('show');updateProgress(1);}
+function setResult(label,title,subtitle,body,ctas,disclaimer){
+  if(label)document.getElementById('resultLabel').textContent=label;
+  document.getElementById('resultTitle').textContent=title;
+  document.getElementById('resultSubtitle').textContent=subtitle;
+  document.getElementById('resultBody').innerHTML=body;
+  document.getElementById('ctaLinks').innerHTML=ctas.map(c=>`<a href="${c.href}" class="cta-link">→ ${c.label}</a>`).join('');
+  if(disclaimer)document.getElementById('resultDisclaimer').innerHTML=disclaimer;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>
