@@ -56,6 +56,21 @@
     .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
     .retry-btn:hover{border-color:var(--sage-light);}
     .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+
+    .longform{max-width:680px;margin:4rem auto 0;padding:0 2rem 5rem;}
+    .longform h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;margin:2.5rem 0 1rem;line-height:1.3;}
+    .longform h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.75rem 0 .6rem;}
+    .longform p{color:var(--mid);font-size:.92rem;line-height:1.8;margin-bottom:.9rem;}
+    .longform ul,.longform ol{color:var(--mid);font-size:.92rem;line-height:1.8;padding-left:1.4rem;margin-bottom:.9rem;}
+    .longform li{margin-bottom:.3rem;}
+    .longform .faq-block{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+    .longform .faq-q{font-weight:600;color:var(--charcoal);font-size:.92rem;margin-bottom:.4rem;}
+    .longform .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;}
+    .longform .related-link{display:block;padding:.9rem 1.1rem;background:white;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--charcoal);font-size:.85rem;line-height:1.4;transition:border-color .2s,transform .2s;}
+    .longform .related-link:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+    .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+    @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -135,6 +150,77 @@
     <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
   </div>
 </div>
+<div class="longform">
+  <h2>About this quiz</h2>
+  <p>This quiz assesses whether your current protein, carbohydrate, and fat balance fits your primary fitness goal and activity level. It draws on established macronutrient guidelines from sports nutrition research. The right macro split depends heavily on your goal — fat loss, muscle building, and endurance performance each call for different ratios.</p>
+
+  <h2>What macronutrients actually do</h2>
+  <h3>Protein</h3>
+  <p>Protein provides amino acids — the structural units of muscle tissue. It has the highest thermic effect of any macronutrient (20–30% of calories burned in digestion), supports immune function, and is the most satiating macro. For most fitness goals, protein is the non-negotiable macronutrient to set first.</p>
+
+  <h3>Carbohydrates</h3>
+  <p>Carbohydrates are the primary fuel source for moderate-to-high intensity exercise. They replenish muscle glycogen — the stored form of glucose that powers training. Contrary to popular belief, carbohydrates are not inherently fattening; excess calories from any macronutrient cause fat gain. Cutting carbohydrates aggressively while training hard reliably reduces performance and recovery.</p>
+
+  <h3>Fat</h3>
+  <p>Dietary fat is essential for hormone production (including testosterone and oestrogen), fat-soluble vitamin absorption (A, D, E, K), and satiety. Fat intake should not drop below approximately 20% of total calories — doing so disrupts hormonal health, particularly in women.</p>
+
+  <h2>Evidence-based macro splits by goal</h2>
+  <h3>Fat loss</h3>
+  <ul>
+    <li>Protein: 1.8–2.4g per kg bodyweight (highest priority — preserves muscle in a deficit)</li>
+    <li>Fat: 25–35% of total calories</li>
+    <li>Carbohydrates: remainder (prioritise around training)</li>
+  </ul>
+  <p>The most common fat loss mistake is cutting carbohydrates too aggressively. This reduces training performance and accelerates muscle loss — both of which impair long-term body composition change.</p>
+
+  <h3>Muscle building</h3>
+  <ul>
+    <li>Protein: 1.6–2.2g per kg bodyweight</li>
+    <li>Carbohydrates: 4–7g per kg bodyweight (primary training fuel)</li>
+    <li>Fat: 20–30% of total calories</li>
+  </ul>
+
+  <h3>Maintenance and performance</h3>
+  <ul>
+    <li>Protein: 1.4–1.8g per kg bodyweight</li>
+    <li>Carbohydrates: 3–5g per kg bodyweight</li>
+    <li>Fat: 25–35% of total calories</li>
+  </ul>
+
+  <h2>Why most people get macros wrong</h2>
+  <p>The most common error is focusing on total calorie intake without tracking macros — which leads to wildly different body composition outcomes even at the same calorie level. Two people eating 2,000 calories with 80g protein versus 180g protein will have very different results from the same training programme.</p>
+  <p>The second most common error is following low-carbohydrate eating while doing significant resistance training. Glycogen depletion directly reduces the quality of training — fewer reps, less output — which reduces the stimulus for muscle growth and fitness adaptation.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-block">
+    <p class="faq-q">Do I need to track macros to get results?</p>
+    <p>No — but it helps significantly, especially early on. Most people who don't track dramatically underestimate their calorie and fat intake and overestimate their protein. Even a few weeks of tracking builds accurate intuition that makes eyeballing portions more reliable long-term.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Should I set macros or just calories?</p>
+    <p>Set protein first (in grams per kg bodyweight), then set total calories based on your goal, then fill the remainder with carbohydrates and fat in whatever ratio suits your preferences. Protein and total calories are the two most important variables.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Is a low-carb diet effective for fat loss?</p>
+    <p>Low-carbohydrate diets can be effective for fat loss — primarily because they reduce total calorie intake and improve appetite control for many people. They are not metabolically superior to higher-carb diets at matched calorie and protein levels. For people who do significant resistance training, low-carb typically reduces training performance and muscle retention.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">What happens if I eat too little fat?</p>
+    <p>Fat intake below approximately 20% of total calories can disrupt production of steroid hormones including testosterone and oestrogen. In women, very low fat intake is associated with menstrual irregularities. Fat also enables absorption of fat-soluble vitamins — deficiency in these compounds has wide-ranging health effects.</p>
+  </div>
+
+  <hr>
+  <h2>Related tools and articles</h2>
+  <div class="related-grid">
+    <a href="../tools/macro-calculator.html" class="related-link">Macro Calculator<span>Get your personalised macro targets</span></a>
+    <a href="../tools/calorie-calculator.html" class="related-link">Calorie & TDEE Calculator<span>Find your total daily energy expenditure</span></a>
+    <a href="../blog/protein-vs-carbs-vs-fat.html" class="related-link">Protein vs Carbs vs Fat<span>Which macronutrient to prioritise</span></a>
+    <a href="../tools/protein-calculator.html" class="related-link">Protein Calculator<span>Set your protein target first</span></a>
+    <a href="../quiz/enough-protein.html" class="related-link">Are You Getting Enough Protein?<span>Check protein intake specifically</span></a>
+    <a href="../quiz/body-goal-type.html" class="related-link">What's Your Body Goal Type?<span>Clarify your goal first</span></a>
+  </div>
+</div>
+
 <div id="footer-placeholder"></div>
 <script src="../assets/js/components.js"></script>
 <script>

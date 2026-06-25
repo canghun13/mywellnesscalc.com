@@ -56,6 +56,21 @@
     .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
     .retry-btn:hover{border-color:var(--sage-light);}
     .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+
+    .longform{max-width:680px;margin:4rem auto 0;padding:0 2rem 5rem;}
+    .longform h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;margin:2.5rem 0 1rem;line-height:1.3;}
+    .longform h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.75rem 0 .6rem;}
+    .longform p{color:var(--mid);font-size:.92rem;line-height:1.8;margin-bottom:.9rem;}
+    .longform ul,.longform ol{color:var(--mid);font-size:.92rem;line-height:1.8;padding-left:1.4rem;margin-bottom:.9rem;}
+    .longform li{margin-bottom:.3rem;}
+    .longform .faq-block{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+    .longform .faq-q{font-weight:600;color:var(--charcoal);font-size:.92rem;margin-bottom:.4rem;}
+    .longform .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;}
+    .longform .related-link{display:block;padding:.9rem 1.1rem;background:white;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--charcoal);font-size:.85rem;line-height:1.4;transition:border-color .2s,transform .2s;}
+    .longform .related-link:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+    .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+    @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -133,6 +148,62 @@
     <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
   </div>
 </div>
+<div class="longform">
+  <h2>About this quiz</h2>
+  <p>This quiz assesses your vitamin D deficiency risk based on five key factors: geographic latitude, sun exposure, skin tone, dietary intake, and age or health status. These are the factors most consistently associated with vitamin D status in the research literature. Only a blood test (25-hydroxyvitamin D) can confirm actual levels — but these factors reliably predict who is most at risk.</p>
+
+  <h2>Why vitamin D deficiency is so common</h2>
+  <p>Vitamin D deficiency is one of the most widespread nutritional deficiencies in the world. Estimates suggest 40–50% of adults in northern Europe and North America are deficient or insufficient, with prevalence rising significantly in winter months. Unlike most nutrients, vitamin D is produced primarily by the skin in response to UVB radiation — dietary sources alone are insufficient for most people in temperate climates.</p>
+
+  <h2>Who is most at risk?</h2>
+  <h3>People in northern latitudes</h3>
+  <p>Above approximately 50° North (which includes the UK, Canada, northern Europe, and northern US states), UVB radiation is insufficient for vitamin D synthesis from roughly October to April — regardless of time spent outdoors. Public health bodies including the UK's NHS and Health Canada recommend supplementation during these months for the general population.</p>
+
+  <h3>People with darker skin tones</h3>
+  <p>Melanin acts as a natural UV filter. People with darker skin need significantly more sun exposure to produce the same amount of vitamin D as those with lighter skin. In northern climates, this makes supplementation particularly important for people of African, South Asian, and Middle Eastern heritage.</p>
+
+  <h3>Adults over 60</h3>
+  <p>Skin becomes less efficient at synthesising vitamin D with age. Kidney function — which converts vitamin D into its active form — also declines. Older adults typically need higher supplementation doses to achieve the same serum levels as younger adults.</p>
+
+  <h2>How much to supplement</h2>
+  <ul>
+    <li><strong>General adult maintenance:</strong> 1,000–2,000 IU vitamin D3 daily</li>
+    <li><strong>High deficiency risk:</strong> 2,000–4,000 IU daily</li>
+    <li><strong>Adults over 60:</strong> 2,000–4,000 IU daily</li>
+    <li><strong>Confirmed deficiency via blood test:</strong> A doctor may prescribe 50,000 IU weekly for 8–12 weeks, then a maintenance dose</li>
+  </ul>
+  <p>Vitamin D3 (cholecalciferol) is more effective than D2 at raising serum levels. Taking it with a fat-containing meal significantly improves absorption.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-block">
+    <p class="faq-q">Do I need vitamin K2 with vitamin D3?</p>
+    <p>Vitamin K2 helps direct calcium (which vitamin D increases absorption of) to bones rather than soft tissues. At standard doses (1,000–2,000 IU), K2 co-supplementation is probably unnecessary for most people. At higher doses or if you have cardiovascular concerns, it's a reasonable addition.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Can I get enough vitamin D from sunlight in summer?</p>
+    <p>Yes — in summer months, 15–30 minutes of midday sun on the arms and face is sufficient for most fair-skinned adults in temperate climates. People with darker skin tones may need 3–6 times longer. Sunscreen with SPF 30+ blocks approximately 95% of UVB and significantly reduces synthesis.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">What are the symptoms of vitamin D deficiency?</p>
+    <p>Mild deficiency is often asymptomatic. More significant deficiency can cause fatigue, bone and muscle pain, frequent illness, and low mood. Many symptoms are non-specific — a blood test is the only reliable way to diagnose deficiency.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Is vitamin D supplementation safe long-term?</p>
+    <p>Yes, at standard doses. Toxicity requires sustained very high intake — typically above 10,000 IU daily for months. At 1,000–4,000 IU, toxicity has not been documented in otherwise healthy adults.</p>
+  </div>
+
+  <hr>
+  <h2>Related tools and articles</h2>
+  <div class="related-grid">
+    <a href="../tools/vitamin-d-calculator.html" class="related-link">Vitamin D Calculator<span>Personalised daily needs estimate</span></a>
+    <a href="../blog/vitamin-d-deficiency.html" class="related-link">Vitamin D Deficiency Guide<span>Symptoms, causes, and solutions</span></a>
+    <a href="../blog/how-much-vitamin-d-do-you-need-daily.html" class="related-link">How Much Vitamin D Per Day?<span>Dosage by age and situation</span></a>
+    <a href="../blog/vitamin-d-and-exercise.html" class="related-link">Vitamin D and Exercise<span>How it affects performance and recovery</span></a>
+    <a href="../quiz/enough-protein.html" class="related-link">Are You Getting Enough Protein?<span>Another common nutritional gap</span></a>
+    <a href="../quiz/" class="related-link">All Quizzes<span>More personalised recommendations</span></a>
+  </div>
+</div>
+
 <div id="footer-placeholder"></div>
 <script src="../assets/js/components.js"></script>
 <script>

@@ -74,6 +74,21 @@
     .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
     .retry-btn:hover{border-color:var(--sage-light);}
     .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+
+    .longform{max-width:680px;margin:4rem auto 0;padding:0 2rem 5rem;}
+    .longform h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;margin:2.5rem 0 1rem;line-height:1.3;}
+    .longform h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.75rem 0 .6rem;}
+    .longform p{color:var(--mid);font-size:.92rem;line-height:1.8;margin-bottom:.9rem;}
+    .longform ul,.longform ol{color:var(--mid);font-size:.92rem;line-height:1.8;padding-left:1.4rem;margin-bottom:.9rem;}
+    .longform li{margin-bottom:.3rem;}
+    .longform .faq-block{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+    .longform .faq-q{font-weight:600;color:var(--charcoal);font-size:.92rem;margin-bottom:.4rem;}
+    .longform .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;}
+    .longform .related-link{display:block;padding:.9rem 1.1rem;background:white;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--charcoal);font-size:.85rem;line-height:1.4;transition:border-color .2s,transform .2s;}
+    .longform .related-link:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+    .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+    @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -236,6 +251,71 @@
     </div>
     <p class="disclaimer"><strong>Note:</strong> These recommendations are based on general patterns and are not medical advice. If you have diabetes, a history of disordered eating, or other health conditions, consult a healthcare provider before starting any fasting protocol.</p>
     <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
+  </div>
+</div>
+
+<div class="longform">
+  <h2>About this quiz</h2>
+  <p>This quiz matches you to a fasting protocol based on five factors: your primary goal, morning hunger patterns, evening lifestyle, prior fasting experience, and hunger tolerance. The results reflect patterns from the intermittent fasting research literature — not a one-size-fits-all recommendation.</p>
+  <p>No single protocol works for everyone. The best fasting schedule is the one you can stick to consistently — and that means fitting it around your actual life, not an idealised routine.</p>
+
+  <h2>The main intermittent fasting protocols explained</h2>
+  <h3>12:12 — the starting point</h3>
+  <p>A 12-hour fast is the most accessible entry point. Most of the fast occurs during sleep, making it almost effortless. While the metabolic benefits are more modest than longer protocols, 12:12 builds the habit and reduces late-night eating — which alone delivers meaningful results for many people. After 4–6 weeks, most people find it easy to extend to 14:10 or 16:8.</p>
+
+  <h3>16:8 — the most researched protocol</h3>
+  <p>The 16:8 protocol — fasting for 16 hours and eating within an 8-hour window — is the most studied form of intermittent fasting. The typical approach skips breakfast and eats between noon and 8pm. Research supports it for weight loss, improved insulin sensitivity, and reduced inflammation. A 2022 review in Annual Review of Nutrition found that time-restricted eating produced meaningful reductions in body weight and cardiometabolic risk markers — though compliance was the strongest predictor of outcomes.</p>
+
+  <h3>18:6 and 20:4 — for experienced fasters</h3>
+  <p>Narrowing the eating window to 6 or 4 hours increases time in the fasted state. Benefits include deeper ketone production, more pronounced autophagy, and greater fat oxidation. The trade-off: it's harder to hit protein and micronutrient targets in fewer meals. These protocols suit people who have already adapted to 16:8 and want to go further.</p>
+
+  <h3>5:2 — the flexible alternative</h3>
+  <p>The 5:2 method designates two non-consecutive days per week as low-calorie days (500–600 kcal). The five remaining days are unrestricted. This suits people with variable schedules or active social lives where a daily eating window would be disruptive. Research shows similar weight loss outcomes to daily 16:8 when adherence is comparable.</p>
+
+  <h2>What the research says about fasting and weight loss</h2>
+  <p>A 2020 meta-analysis in Obesity Reviews found that intermittent fasting produced weight loss of 0.8–13% of body weight across studies — broadly comparable to continuous calorie restriction. The key finding: fasting works primarily because it reduces total calorie intake, not through a unique metabolic mechanism. Many people find it easier to adhere to than daily calorie counting.</p>
+  <p>For fat loss, the protocol matters less than protein intake and total calorie balance. High protein within a fasting window preserves muscle mass during the deficit — which determines body composition outcomes.</p>
+
+  <h2>Common mistakes when starting intermittent fasting</h2>
+  <ul>
+    <li><strong>Starting too aggressively.</strong> Beginning at 18:6 before adapting to 16:8 often leads to early abandonment.</li>
+    <li><strong>Undereating protein.</strong> Fewer meals means you must be intentional about hitting protein targets at each one.</li>
+    <li><strong>Breaking the fast with refined carbohydrates.</strong> Starting the eating window with protein and fat produces better appetite control.</li>
+    <li><strong>Assuming fasting compensates for poor food quality.</strong> The eating window still matters — ultra-processed food eaten in 6 hours still produces poor metabolic outcomes.</li>
+    <li><strong>Fasting while already under-eating.</strong> Women especially can experience hormonal disruption when fasting is layered on an already aggressive calorie deficit.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-block">
+    <p class="faq-q">Does coffee break a fast?</p>
+    <p>Black coffee does not meaningfully break a fast. It contains virtually no calories and may enhance fat-burning effects by increasing adrenaline and free fatty acid release. Adding milk, sugar, or cream breaks the fast.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Is intermittent fasting safe for women?</p>
+    <p>For most healthy women, yes. However, extended fasting (18+ hours daily) may affect cortisol and reproductive hormones more in women than men. Women with a history of disordered eating, those who are pregnant or breastfeeding, and those with thyroid conditions should consult a healthcare provider first.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Will fasting cause muscle loss?</p>
+    <p>Short-term fasting (under 24 hours) does not cause significant muscle loss in most people. The primary driver of muscle loss is insufficient protein intake, not the fast itself. High protein within your eating window and continued resistance training are the most important protective factors.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">How long until morning hunger goes away?</p>
+    <p>Most people adapt within 1–2 weeks. Morning hunger is partly driven by ghrelin — a hunger hormone that spikes at times you're accustomed to eating. Once you consistently skip breakfast, ghrelin adapts and the morning spike diminishes.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Can I exercise while fasted?</p>
+    <p>Yes. Fasted exercise is well-tolerated for low-to-moderate intensity work. For high-intensity or strength training, performance may dip initially. If performance suffers significantly, consider timing your first meal closer to your workout.</p>
+  </div>
+
+  <hr>
+  <h2>Related tools and articles</h2>
+  <div class="related-grid">
+    <a href="../tools/if-calculator.html" class="related-link">Intermittent Fasting Calculator<span>Set your exact eating window</span></a>
+    <a href="../tools/fasting-timer.html" class="related-link">Fasting Timer<span>Track your fast in real time</span></a>
+    <a href="../blog/intermittent-fasting-beginners.html" class="related-link">IF for Beginners<span>How to start fasting the right way</span></a>
+    <a href="../blog/intermittent-fasting-for-women-over-40.html" class="related-link">IF for Women Over 40<span>What changes after 40</span></a>
+    <a href="../tools/protein-calculator.html" class="related-link">Protein Calculator<span>Don't undereat protein while fasting</span></a>
+    <a href="../quiz/enough-protein.html" class="related-link">Are You Getting Enough Protein?<span>Quiz: check your protein intake</span></a>
   </div>
 </div>
 

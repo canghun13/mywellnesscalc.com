@@ -15,6 +15,21 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Quizzes","item":"https://mywellnesscalc.com/quiz/"},{"@type":"ListItem","position":3,"name":"What's Your Body Goal Type?","item":"https://mywellnesscalc.com/quiz/body-goal-type.html"}]}</script>
   <style>
     .quiz-wrap{max-width:680px;margin:0 auto;padding:3rem 2rem 5rem;}.quiz-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--mid);text-decoration:none;margin-bottom:2rem;transition:color .2s;}.quiz-back:hover{color:var(--sage-dark);}.quiz-header{margin-bottom:2.5rem;}.quiz-tag{display:inline-block;background:var(--cream);color:var(--mid);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-bottom:1rem;}.quiz-header h1{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:300;line-height:1.2;margin-bottom:.75rem;}.quiz-header p{color:var(--mid);font-size:.95rem;}.progress-bar{height:4px;background:var(--border);border-radius:100px;margin-bottom:2.5rem;overflow:hidden;}.progress-fill{height:100%;background:var(--sage);border-radius:100px;transition:width .4s ease;}.progress-label{font-size:.75rem;color:var(--light);margin-bottom:.5rem;}.question-block{display:none;}.question-block.active{display:block;}.question-block h2{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.5rem;line-height:1.4;}.options{display:flex;flex-direction:column;gap:.75rem;}.option{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;background:white;border:1.5px solid var(--border);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s;}.option:hover{border-color:var(--sage-light);background:var(--cream);}.option.selected{border-color:var(--sage);background:#f0f6f0;}.option-letter{width:28px;height:28px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:var(--mid);flex-shrink:0;margin-top:.1rem;}.option.selected .option-letter{background:var(--sage);color:white;}.option-text{font-size:.9rem;line-height:1.5;}.option-text strong{display:block;margin-bottom:.15rem;}.option-text span{color:var(--mid);font-size:.82rem;}.nav-btns{display:flex;gap:1rem;margin-top:2rem;}.btn-next{padding:.875rem 2rem;background:var(--sage-dark);color:white;border:none;border-radius:100px;font-size:.9rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;display:none;}.btn-next:hover{background:var(--sage);}.btn-back-q{padding:.875rem 1.5rem;background:none;color:var(--mid);border:1.5px solid var(--border);border-radius:100px;font-size:.9rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:none;}.btn-back-q:hover{border-color:var(--sage-light);}.result-block{display:none;}.result-block.show{display:block;}.result-hero{background:var(--cream);border-radius:20px;padding:2.5rem;text-align:center;margin-bottom:2rem;}.result-label{font-size:.75rem;font-weight:600;color:var(--sage-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}.result-title{font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:var(--charcoal);margin-bottom:.5rem;}.result-subtitle{color:var(--mid);font-size:.9rem;}.result-body h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.5rem 0 .75rem;}.result-body p{color:var(--mid);font-size:.9rem;line-height:1.7;margin-bottom:.75rem;}.result-body ul{color:var(--mid);font-size:.9rem;line-height:1.7;padding-left:1.25rem;margin-bottom:.75rem;}.cta-box{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-top:2rem;}.cta-box h3{font-family:'Fraunces',serif;font-size:1rem;font-weight:400;margin-bottom:1rem;}.cta-links{display:flex;flex-direction:column;gap:.5rem;}.cta-link{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:var(--cream);border-radius:10px;text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:background .2s;}.cta-link:hover{background:#e8e2da;}.retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}.retry-btn:hover{border-color:var(--sage-light);}.disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+
+    .longform{max-width:680px;margin:4rem auto 0;padding:0 2rem 5rem;}
+    .longform h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;margin:2.5rem 0 1rem;line-height:1.3;}
+    .longform h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.75rem 0 .6rem;}
+    .longform p{color:var(--mid);font-size:.92rem;line-height:1.8;margin-bottom:.9rem;}
+    .longform ul,.longform ol{color:var(--mid);font-size:.92rem;line-height:1.8;padding-left:1.4rem;margin-bottom:.9rem;}
+    .longform li{margin-bottom:.3rem;}
+    .longform .faq-block{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+    .longform .faq-q{font-weight:600;color:var(--charcoal);font-size:.92rem;margin-bottom:.4rem;}
+    .longform .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;}
+    .longform .related-link{display:block;padding:.9rem 1.1rem;background:white;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--charcoal);font-size:.85rem;line-height:1.4;transition:border-color .2s,transform .2s;}
+    .longform .related-link:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+    .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+    @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -68,6 +83,56 @@
     <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
   </div>
 </div>
+<div class="longform">
+  <h2>About this quiz</h2>
+  <p>This quiz clarifies your primary body composition goal — fat loss, muscle building, or recomposition — based on your current physique, diet, training, and desired outcome. The distinction matters because each goal requires a fundamentally different approach to calories, protein, and training. Conflating them is one of the most common reasons people don't make progress.</p>
+
+  <h2>Fat loss vs muscle building vs recomposition</h2>
+  <h3>Fat loss</h3>
+  <p>Fat loss requires a calorie deficit — consuming less energy than you expend. The body then draws on stored fat (and some muscle, if protein is insufficient) to meet its energy needs. The key variables are: deficit size, protein intake to protect muscle, and resistance training to maintain lean mass. Fat loss as the primary goal is most appropriate for people who are carrying significant excess body fat.</p>
+
+  <h3>Muscle building</h3>
+  <p>Building muscle requires a calorie surplus — consuming slightly more than you expend — along with a sufficient training stimulus (progressive overload in resistance training) and adequate protein. Fat gain during a bulk is minimised by keeping the surplus small (200–300 kcal above TDEE) and maintaining high protein. Muscle building as the primary goal is most appropriate for people who are lean but lack muscle mass and definition.</p>
+
+  <h3>Body recomposition</h3>
+  <p>Recomposition — losing fat and building muscle simultaneously — is possible, but slower than focusing on one goal at a time. It works best for beginners (who have high muscle-building potential regardless of deficit), people returning to training after a break, and overweight individuals who have enough stored energy to fuel muscle building despite eating at or near maintenance. The approach: maintenance calories, very high protein (2.0–2.4g/kg), and consistent resistance training.</p>
+
+  <h2>How to know which goal to prioritise</h2>
+  <p>A simple heuristic: if your body fat is above 25% (men) or 30% (women), fat loss is usually the priority — muscle building is less efficient at high body fat levels, and health risks increase. If your body fat is below these levels and you're lean but not muscular, a building phase makes sense. If you're somewhere in between, recomposition is a valid middle path — just expect slower progress than either dedicated phase.</p>
+
+  <h2>The most common mistake: trying to do everything at once</h2>
+  <p>Many people attempt to cut calories aggressively while trying to build muscle — and end up achieving neither goal effectively. A significant calorie deficit impairs the muscle-building response to training (even with adequate protein), while insufficient deficit slows fat loss. Choosing one goal and executing it for 8–16 weeks produces far better results than trying to split the difference indefinitely.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-block">
+    <p class="faq-q">Can I build muscle in a calorie deficit?</p>
+    <p>Yes, but only under specific conditions: as a beginner, after returning from a training break, or if you're overweight. In these cases, the body can use stored fat to fuel muscle building. Experienced lean individuals cannot meaningfully build muscle in a calorie deficit — the anabolic environment required simply isn't present.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">How long should a fat loss or building phase last?</p>
+    <p>Most practitioners recommend 8–16 weeks for a focused phase before reassessing. Longer fat loss phases risk metabolic adaptation and muscle loss; shorter ones don't allow enough time to see meaningful body composition change. Building phases are typically longer — 16–24 weeks — to allow sufficient muscle accumulation.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Will I gain fat during a building phase?</p>
+    <p>Some fat gain is normal and expected during a calorie surplus. Keeping the surplus small (200–300 kcal) and maintaining high protein minimises this. A reasonable outcome from a 16-week building phase might be 2–4 kg of muscle alongside 1–2 kg of fat — a positive trade-off for most people.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">How do I track body composition rather than just weight?</p>
+    <p>Progress photos at consistent lighting and angles, body measurements (waist, hips, arms, thighs), and strength progression in the gym are all more informative than scale weight alone. The scale fluctuates daily by 1–3 kg due to water, food volume, and hormonal changes — it's a poor short-term progress indicator.</p>
+  </div>
+
+  <hr>
+  <h2>Related tools and articles</h2>
+  <div class="related-grid">
+    <a href="../tools/calorie-deficit-calculator.html" class="related-link">Calorie Deficit Calculator<span>For fat loss goals</span></a>
+    <a href="../tools/calorie-calculator.html" class="related-link">TDEE Calculator<span>Find your maintenance calories</span></a>
+    <a href="../tools/body-fat-calculator.html" class="related-link">Body Fat Calculator<span>Estimate your current body fat %</span></a>
+    <a href="../blog/build-muscle-after-40.html" class="related-link">Build Muscle After 40<span>Training and nutrition for muscle gain</span></a>
+    <a href="../quiz/fat-loss-strategy.html" class="related-link">What's Your Fat Loss Strategy?<span>If fat loss is your goal</span></a>
+    <a href="../quiz/right-macros.html" class="related-link">Are You Eating the Right Macros?<span>Align your macros with your goal</span></a>
+  </div>
+</div>
+
 <div id="footer-placeholder"></div>
 <script src="../assets/js/components.js"></script>
 <script>

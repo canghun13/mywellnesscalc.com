@@ -56,6 +56,21 @@
     .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
     .retry-btn:hover{border-color:var(--sage-light);}
     .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+
+    .longform{max-width:680px;margin:4rem auto 0;padding:0 2rem 5rem;}
+    .longform h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;margin:2.5rem 0 1rem;line-height:1.3;}
+    .longform h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.75rem 0 .6rem;}
+    .longform p{color:var(--mid);font-size:.92rem;line-height:1.8;margin-bottom:.9rem;}
+    .longform ul,.longform ol{color:var(--mid);font-size:.92rem;line-height:1.8;padding-left:1.4rem;margin-bottom:.9rem;}
+    .longform li{margin-bottom:.3rem;}
+    .longform .faq-block{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+    .longform .faq-q{font-weight:600;color:var(--charcoal);font-size:.92rem;margin-bottom:.4rem;}
+    .longform .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;}
+    .longform .related-link{display:block;padding:.9rem 1.1rem;background:white;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--charcoal);font-size:.85rem;line-height:1.4;transition:border-color .2s,transform .2s;}
+    .longform .related-link:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+    .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+    @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -134,6 +149,66 @@
     <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
   </div>
 </div>
+<div class="longform">
+  <h2>About this quiz</h2>
+  <p>This quiz evaluates whether the Maffetone Method — low-heart-rate aerobic training based on the 180 Formula — is an appropriate approach for you right now. The result depends on your goals, experience level, mindset, and willingness to commit to a method that produces results over months rather than weeks.</p>
+
+  <h2>What is MAF training?</h2>
+  <p>MAF training, developed by Dr Phil Maffetone, is an approach to aerobic development that keeps all training below a specific heart rate ceiling. The core formula: <strong>180 minus your age</strong> gives your MAF heart rate. For a 40-year-old, that's 140 bpm. Adjustments are made for health status, training history, and injury frequency.</p>
+  <p>The idea is that training below this ceiling forces your body to rely primarily on fat as fuel — developing the aerobic energy system rather than the glycolytic (carbohydrate-burning) system. Over time, your pace at the same heart rate improves significantly — indicating genuine aerobic improvement.</p>
+
+  <h2>The 180 Formula and adjustments</h2>
+  <p>Start with 180 minus your age, then adjust:</p>
+  <ul>
+    <li><strong>Subtract 10</strong> if you have or are recovering from a major illness, injury, or surgery, or if you get sick more than twice per year</li>
+    <li><strong>Subtract 5</strong> if you've been training inconsistently, or have not been training for up to two years</li>
+    <li><strong>Keep as is</strong> if you've been training consistently (at least four times per week) for up to two years without the above issues</li>
+    <li><strong>Add 5</strong> if you've been training for more than two years without health issues and have been making progress</li>
+  </ul>
+
+  <h2>What to expect when you start MAF training</h2>
+  <p>The initial phase of MAF training is often discouraging. Most people find they have to slow to a walk to keep their heart rate below their MAF ceiling. This is normal — it reflects how little aerobic base most people have developed, even if they feel "fit" by conventional measures.</p>
+  <p>The adaptation is gradual. Most people see their pace at MAF heart rate improve over 3–6 months of consistent training. The benchmark test: once a month, run a fixed distance (e.g. 1 mile) at exactly your MAF heart rate and record your time. If your time improves, your aerobic base is building.</p>
+
+  <h2>Who benefits most from MAF training?</h2>
+  <ul>
+    <li>People who frequently get sick or injured from training — a sign of overtraining and inadequate aerobic base</li>
+    <li>Runners and cyclists who have hit a performance plateau despite increasing training volume</li>
+    <li>People who rely heavily on carbohydrates for energy and want to improve fat-burning capacity</li>
+    <li>Anyone who has been training mostly at moderate intensity ("grey zone") without structured polarisation</li>
+    <li>Beginners who want to build fitness safely and sustainably from the ground up</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-block">
+    <p class="faq-q">How long do you need to do MAF training before seeing results?</p>
+    <p>Most people see measurable improvement in their MAF pace within 3–6 months of consistent training. The first month often shows little or no improvement — this is the adaptation phase. Consistency over this period is what separates those who see results from those who give up too early.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Can you do MAF training alongside strength training?</p>
+    <p>Yes. MAF is an aerobic training protocol and doesn't conflict with resistance training. Many practitioners combine MAF cardio sessions with 2–3 strength training sessions per week. Just ensure recovery is adequate — MAF training is low stress, which makes this combination sustainable.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Is MAF the same as Zone 2?</p>
+    <p>They're related but not identical. MAF uses a specific formula to set a heart rate ceiling. Zone 2 is typically defined as 60–70% of maximum heart rate. For most people, MAF heart rate falls within or just below Zone 2 — but the exact overlap varies by age and fitness level.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Do you need to eat low-carb to do MAF training?</p>
+    <p>No — though Maffetone's programme does recommend reducing refined carbohydrates. The low-heart-rate training itself improves fat oxidation regardless of diet. Many people do MAF training successfully on a standard mixed diet.</p>
+  </div>
+
+  <hr>
+  <h2>Related tools and articles</h2>
+  <div class="related-grid">
+    <a href="../tools/maf-calculator.html" class="related-link">MAF Heart Rate Calculator<span>Calculate your personal MAF ceiling</span></a>
+    <a href="../blog/maf-training-for-beginners.html" class="related-link">MAF Training for Beginners<span>Complete guide to getting started</span></a>
+    <a href="../tools/zone-2-calculator.html" class="related-link">Zone 2 Calculator<span>How MAF and Zone 2 compare</span></a>
+    <a href="../blog/zone-2-heart-rate-training-beginners.html" class="related-link">Zone 2 Training Guide<span>The broader aerobic base approach</span></a>
+    <a href="../quiz/training-zone.html" class="related-link">What's Your Training Zone?<span>Find your ideal intensity zone</span></a>
+    <a href="../quiz/cardio-type.html" class="related-link">What Type of Cardio Suits You?<span>Zone 2 vs HIIT vs mixed</span></a>
+  </div>
+</div>
+
 <div id="footer-placeholder"></div>
 <script src="../assets/js/components.js"></script>
 <script>

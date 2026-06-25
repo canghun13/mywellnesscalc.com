@@ -56,6 +56,21 @@
     .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
     .retry-btn:hover{border-color:var(--sage-light);}
     .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+
+    .longform{max-width:680px;margin:4rem auto 0;padding:0 2rem 5rem;}
+    .longform h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;margin:2.5rem 0 1rem;line-height:1.3;}
+    .longform h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.75rem 0 .6rem;}
+    .longform p{color:var(--mid);font-size:.92rem;line-height:1.8;margin-bottom:.9rem;}
+    .longform ul,.longform ol{color:var(--mid);font-size:.92rem;line-height:1.8;padding-left:1.4rem;margin-bottom:.9rem;}
+    .longform li{margin-bottom:.3rem;}
+    .longform .faq-block{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+    .longform .faq-q{font-weight:600;color:var(--charcoal);font-size:.92rem;margin-bottom:.4rem;}
+    .longform .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;}
+    .longform .related-link{display:block;padding:.9rem 1.1rem;background:white;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--charcoal);font-size:.85rem;line-height:1.4;transition:border-color .2s,transform .2s;}
+    .longform .related-link:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+    .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+    @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -133,6 +148,61 @@
     <div class="cta-box"><h3>Next steps</h3><div class="cta-links" id="ctaLinks"></div></div>
     <p class="disclaimer"><strong>Note:</strong> These recommendations are based on general fitness principles. Individual needs vary. If you have any cardiovascular conditions, consult a healthcare provider before starting a new training programme.</p>
     <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
+  </div>
+</div>
+
+<div class="longform">
+  <h2>About this quiz</h2>
+  <p>This quiz identifies the heart rate training zone most appropriate for your current fitness level, goals, and recovery capacity. It draws on the five-zone heart rate model used in sports science, with particular emphasis on distinguishing between Zone 2 aerobic training, polarised mixed-intensity approaches, and active recovery — the three most practically useful categories for general fitness and fat loss.</p>
+
+  <h2>The heart rate training zones explained</h2>
+  <h3>Zone 1 — Active recovery (below 60% max HR)</h3>
+  <p>Very light movement that promotes circulation without creating training stress. Walking, light cycling, or gentle swimming. Used on rest days to speed recovery and reduce muscle soreness without impeding the repair process.</p>
+
+  <h3>Zone 2 — Aerobic base (60–70% max HR)</h3>
+  <p>The foundation of endurance and fat-burning capacity. At this intensity, you can hold a conversation without difficulty. Zone 2 trains the aerobic energy system, increases mitochondrial density, improves fat oxidation, and is sustainable for long durations. It's the intensity that elite endurance athletes spend approximately 80% of their training time in — and the intensity most recreational exercisers spend too little time at.</p>
+
+  <h3>Zone 3 — Tempo (70–80% max HR)</h3>
+  <p>The "grey zone" — too hard to be truly aerobic, not hard enough to drive high-intensity adaptations. Research on polarised training suggests that recreational and elite athletes alike get fewer benefits from this middle zone than from combining Zone 2 with Zone 4–5 work. Most people naturally drift into Zone 3 on what should be easy days.</p>
+
+  <h3>Zone 4–5 — Threshold and VO2max (80–100% max HR)</h3>
+  <p>High-intensity work that drives cardiovascular capacity improvements, lactate threshold adaptation, and VO2max increases. Unsustainable for more than a few minutes at peak effort. Structured interval sessions (e.g. 4×4 minutes at Zone 4–5 with recovery) are the most time-efficient way to drive these adaptations.</p>
+
+  <h2>Why most people train in the wrong zone</h2>
+  <p>The most common pattern among recreational exercisers is training at moderate intensity (Zone 3) most of the time — hard enough to feel like a workout, too easy to drive meaningful adaptation. This produces a plateau in fitness improvement while also being too stressful for efficient fat oxidation.</p>
+  <p>The polarised model — 80% low intensity (Zone 2) and 20% high intensity (Zone 4–5) — is consistently supported by research as more effective than spending time in the moderate zone. It feels counterintuitive because Zone 2 sessions feel "too easy" — but the aerobic adaptations they produce are the foundation of everything else.</p>
+
+  <h2>How to find your Zone 2 heart rate</h2>
+  <p>The simplest method is the talk test: you should be able to hold a full conversation during Zone 2 without needing to pause for breath. If you can only speak in short phrases, you're in Zone 3 or higher.</p>
+  <p>For a more precise calculation, the Zone 2 calculator below uses your maximum heart rate and resting heart rate (Karvonen formula) to produce a target range.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-block">
+    <p class="faq-q">How do I know my maximum heart rate?</p>
+    <p>The standard estimate is 220 minus your age. This is a population average with significant individual variation — some people's true max is 10–15 bpm higher or lower. The most accurate method is a proper maximal effort test, ideally supervised.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">How long should Zone 2 sessions be?</p>
+    <p>Minimum effective dose is around 30 minutes. Most benefits are seen with sessions of 45–90 minutes. Frequency matters more than session length — 3–4 Zone 2 sessions per week consistently produces more adaptation than 1–2 long sessions.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Does Zone 2 actually burn more fat than higher intensities?</p>
+    <p>Yes — in terms of the proportion of calories from fat during the session. At Zone 2, 60–70% of energy comes from fat oxidation. At Zone 4–5, the proportion from fat drops as the body relies more on glycogen. However, total calorie burn is higher at higher intensities. For improving fat metabolism as an adaptation — not just burning fat during exercise — Zone 2 is superior.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Can I do Zone 2 training by walking?</p>
+    <p>For most beginners and deconditioned individuals, brisk walking elevates heart rate into Zone 2. As fitness improves, you'll need to walk faster or jog to stay in the zone. A heart rate monitor confirms whether you're in the right range.</p>
+  </div>
+
+  <hr>
+  <h2>Related tools and articles</h2>
+  <div class="related-grid">
+    <a href="../tools/zone-2-calculator.html" class="related-link">Zone 2 Calculator<span>Find your exact Zone 2 range</span></a>
+    <a href="../tools/heart-rate-zone.html" class="related-link">Heart Rate Zone Calculator<span>All 5 zones from one calculation</span></a>
+    <a href="../blog/zone-2-heart-rate-training-beginners.html" class="related-link">Zone 2 Training for Beginners<span>How to start and what to expect</span></a>
+    <a href="../blog/zone-2-vs-hiit-fat-loss.html" class="related-link">Zone 2 vs HIIT<span>Which is better for fat loss?</span></a>
+    <a href="../blog/fat-burning-heart-rate-zone.html" class="related-link">Fat Burning Heart Rate Zone<span>How it works and how to use it</span></a>
+    <a href="../quiz/maf-training.html" class="related-link">Should You Try MAF Training?<span>The low-HR method in depth</span></a>
   </div>
 </div>
 

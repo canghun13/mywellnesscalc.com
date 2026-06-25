@@ -56,6 +56,21 @@
     .retry-btn{margin-top:2rem;padding:.75rem 2rem;background:none;border:1.5px solid var(--border);border-radius:100px;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
     .retry-btn:hover{border-color:var(--sage-light);}
     .disclaimer{font-size:.75rem;color:var(--light);margin-top:2rem;line-height:1.6;}
+
+    .longform{max-width:680px;margin:4rem auto 0;padding:0 2rem 5rem;}
+    .longform h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:300;margin:2.5rem 0 1rem;line-height:1.3;}
+    .longform h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;margin:1.75rem 0 .6rem;}
+    .longform p{color:var(--mid);font-size:.92rem;line-height:1.8;margin-bottom:.9rem;}
+    .longform ul,.longform ol{color:var(--mid);font-size:.92rem;line-height:1.8;padding-left:1.4rem;margin-bottom:.9rem;}
+    .longform li{margin-bottom:.3rem;}
+    .longform .faq-block{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+    .longform .faq-q{font-weight:600;color:var(--charcoal);font-size:.92rem;margin-bottom:.4rem;}
+    .longform .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem;}
+    .longform .related-link{display:block;padding:.9rem 1.1rem;background:white;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--charcoal);font-size:.85rem;line-height:1.4;transition:border-color .2s,transform .2s;}
+    .longform .related-link:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+    .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
+    .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+    @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -136,6 +151,81 @@
     <button class="retry-btn" onclick="resetQuiz()">← Retake quiz</button>
   </div>
 </div>
+<div class="longform">
+  <h2>About this quiz</h2>
+  <p>This quiz estimates whether your daily protein intake aligns with your bodyweight, training frequency, goals, and age. It's based on the current evidence-based range of 1.6–2.2g of protein per kilogram of bodyweight for active individuals — a target most people significantly underestimate.</p>
+
+  <h2>Why protein matters more than most people think</h2>
+  <p>Protein is the most important macronutrient for body composition. It's the building block of muscle tissue, supports immune function, regulates appetite hormones, and has the highest thermic effect of any macronutrient — your body burns 20–30% of protein calories during digestion, compared to 5–10% for carbohydrates and 0–3% for fat.</p>
+  <p>The UK and US recommended daily allowances (0.75–0.8g per kg) are set at the level needed to prevent deficiency in sedentary adults — not to support muscle building, fat loss, or performance. For anyone with fitness goals, these figures are too low.</p>
+
+  <h2>How much protein do you actually need?</h2>
+  <h3>For muscle building</h3>
+  <p>Research consistently supports 1.6–2.2g per kg of bodyweight for people engaged in resistance training. A 2017 meta-analysis in the British Journal of Sports Medicine — analysing 49 studies — found that protein supplementation significantly increased muscle mass and strength gains from training, and that gains plateaued at approximately 1.62g/kg/day. Going to 2.2g/kg provides a safety margin and may benefit those with higher training volumes.</p>
+
+  <h3>For fat loss</h3>
+  <p>When in a calorie deficit, protein needs increase — not decrease. Higher protein intake preserves lean muscle mass that would otherwise be lost alongside fat. Most sports nutrition guidelines recommend 1.8–2.4g/kg during active fat loss phases, especially for people doing resistance training while cutting.</p>
+
+  <h3>For people over 50</h3>
+  <p>Anabolic resistance — the reduced muscle-building response to protein and exercise that comes with age — means older adults need more protein to achieve the same stimulus as younger people. Evidence supports 1.8–2.2g/kg for adults over 50, with some research suggesting up to 2.4g/kg in the context of consistent resistance training.</p>
+
+  <h2>Best protein sources and amounts</h2>
+  <h3>Animal sources (complete proteins)</h3>
+  <ul>
+    <li>Chicken breast: ~31g per 100g cooked</li>
+    <li>Canned tuna: ~25g per 100g</li>
+    <li>Salmon: ~25g per 100g cooked</li>
+    <li>Greek yogurt: ~9–10g per 100g</li>
+    <li>Cottage cheese: ~11g per 100g</li>
+    <li>Eggs: ~6g per egg</li>
+  </ul>
+  <h3>Plant sources</h3>
+  <ul>
+    <li>Tempeh: ~19g per 100g</li>
+    <li>Edamame: ~11g per 100g</li>
+    <li>Lentils: ~9g per 100g cooked</li>
+    <li>Tofu (firm): ~8–17g per 100g</li>
+    <li>Seitan: ~25g per 100g</li>
+  </ul>
+
+  <h2>Common reasons people miss their protein target</h2>
+  <ul>
+    <li><strong>Low-protein breakfasts.</strong> Toast, cereal, and fruit are low in protein. Eggs, Greek yogurt, or a protein shake can add 20–30g.</li>
+    <li><strong>Underestimating portions.</strong> A restaurant "serving" of chicken is often 80–100g — not the 150–200g you'd weigh at home.</li>
+    <li><strong>Relying on plant protein without combining sources.</strong> Most plant proteins are incomplete and lower in leucine — the amino acid most responsible for triggering muscle protein synthesis.</li>
+    <li><strong>Fewer meals while fasting.</strong> If you eat in a restricted window, you need larger protein servings per meal to hit daily targets.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq-block">
+    <p class="faq-q">Can you absorb more than 30g of protein per meal?</p>
+    <p>Yes — the "30g per meal limit" is a myth. Your body doesn't have a hard absorption cap. Larger protein servings simply take longer to digest. Spreading protein across 3–4 meals optimises muscle protein synthesis throughout the day, but total daily intake matters most.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Is high protein harmful for kidneys?</p>
+    <p>In healthy adults with no pre-existing kidney disease, high protein intake up to 2.2–3g/kg has not been shown to cause kidney damage. This concern originates from observations in people who already have kidney disease. If you have kidney conditions, consult your doctor.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Do protein supplements count toward my daily target?</p>
+    <p>Yes. Whey, casein, soy, and pea protein supplements count toward your daily total. They're a convenient way to hit targets when whole food intake falls short — not a replacement for a varied diet.</p>
+  </div>
+  <div class="faq-block">
+    <p class="faq-q">Does protein timing matter — especially post-workout?</p>
+    <p>Somewhat. Post-exercise muscle protein synthesis is elevated for several hours after training, and consuming protein within this window is beneficial. However, if you're hitting your daily total, exact timing matters less than consistency. The "anabolic window" is wider than once thought — 3–4 hours post-workout, not 30 minutes.</p>
+  </div>
+
+  <hr>
+  <h2>Related tools and articles</h2>
+  <div class="related-grid">
+    <a href="../tools/protein-calculator.html" class="related-link">Protein Calculator<span>Get your exact daily target</span></a>
+    <a href="../tools/macro-calculator.html" class="related-link">Macro Calculator<span>Set all three macros together</span></a>
+    <a href="../blog/protein-how-much-do-you-need.html" class="related-link">How Much Protein Do You Need?<span>Full evidence-based guide</span></a>
+    <a href="../blog/high-protein-foods.html" class="related-link">High Protein Foods List<span>Best sources with exact amounts</span></a>
+    <a href="../blog/protein-needs-women-over-40.html" class="related-link">Protein for Women Over 40<span>Why needs increase after 40</span></a>
+    <a href="../quiz/right-macros.html" class="related-link">Are You Eating the Right Macros?<span>Check your full macro balance</span></a>
+  </div>
+</div>
+
 <div id="footer-placeholder"></div>
 <script src="../assets/js/components.js"></script>
 <script>
