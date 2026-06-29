@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VO2 Max Calculator – Estimate Your Aerobic Capacity | MyWellnessCalc</title>
+  <meta name="description" content="Estimate your VO2 max from the Cooper 12-minute run, 1.5-mile run, or Rockport walk test. See your fitness category by age and get personalised training guidance.">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/vo2-max-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"VO2 Max Calculator","url":"https://mywellnesscalc.com/tools/vo2-max-calculator.html","description":"Estimate VO2 max from field tests and see your fitness category by age and sex.","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://mywellnesscalc.com/tools/"},{"@type":"ListItem","position":3,"name":"VO2 Max Calculator","item":"https://mywellnesscalc.com/tools/vo2-max-calculator.html"}]}</script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .tab-row{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+    .tab-btn{padding:.5rem 1rem;border:1.5px solid var(--border);border-radius:100px;background:none;font-size:.8rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
+    .tab-btn.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+    .test-panel{display:none;}.test-panel.active{display:block;}
+    .test-desc{background:var(--cream);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem;font-size:.85rem;color:var(--mid);line-height:1.6;}
+    .test-desc strong{color:var(--charcoal);}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group input,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);transition:border-color .2s;box-sizing:border-box;}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .unit-row{display:flex;gap:.5rem;margin-bottom:1.25rem;}
+    .unit-btn{flex:1;padding:.6rem;border:1.5px solid var(--border);border-radius:8px;background:white;font-size:.875rem;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--mid);transition:all .2s;}
+    .unit-btn.active{background:var(--sage-dark);color:white;border-color:var(--sage-dark);}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}.result-box.show{display:block;}
+    .result-hero{border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .result-hero.poor{background:linear-gradient(135deg,#fce4ec,#f8bbd0);border:1px solid #e91e63;}
+    .result-hero.below{background:linear-gradient(135deg,#fff3e0,#ffe0b2);border:1px solid #ff9800;}
+    .result-hero.average{background:linear-gradient(135deg,#fff8e1,#ffecb3);border:1px solid #ffc107;}
+    .result-hero.good{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border:1px solid #4caf50;}
+    .result-hero.excellent{background:linear-gradient(135deg,#e3f2fd,#bbdefb);border:1px solid #2196f3;}
+    .result-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem;}
+    .result-vo2{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;line-height:1;}
+    .result-unit{font-size:.9rem;margin-top:.25rem;}
+    .result-category{font-size:1.2rem;font-weight:600;margin-top:.5rem;}
+    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.25rem;}
+    .stat-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .stat-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--charcoal);}
+    .stat-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .ref-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.8rem;}
+    .ref-table th{background:var(--sage-dark);color:white;padding:.5rem .75rem;text-align:left;font-weight:500;}
+    .ref-table td{padding:.45rem .75rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .ref-table tr:last-child td{border-bottom:none;}
+    .ref-table tr:nth-child(even) td{background:var(--cream);}
+    .ref-table .highlight td{font-weight:600;color:var(--charcoal);}
+    .training-box{background:white;border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-top:1rem;}
+    .training-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.75rem;}
+    .training-box p,.training-box li{font-size:.85rem;color:var(--mid);line-height:1.6;}
+    .training-box ul{padding-left:1.25rem;margin:.5rem 0;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.6rem .875rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.55rem .875rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Tools</a> › VO2 Max Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">Fitness</span>
+      <h1>VO2 Max Calculator</h1>
+      <p>Estimate your VO2 max from a field test, see your fitness category for your age, and get personalised training guidance to improve it.</p>
+    </div>
+
+    <div class="calc-card">
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:.875rem;font-weight:500;color:var(--charcoal);display:block;margin-bottom:.5rem;">Choose your test method</label>
+        <div class="tab-row">
+          <button class="tab-btn active" onclick="switchTab('cooper')">Cooper 12-min run</button>
+          <button class="tab-btn" onclick="switchTab('run15')">1.5-mile run</button>
+          <button class="tab-btn" onclick="switchTab('rockport')">Rockport walk</button>
+          <button class="tab-btn" onclick="switchTab('resting')">Resting HR estimate</button>
+        </div>
+      </div>
+
+      <!-- Cooper 12-min run -->
+      <div class="test-panel active" id="panel-cooper">
+        <div class="test-desc"><strong>Cooper 12-minute run test:</strong> Run as far as possible in 12 minutes on a flat surface. Record the distance in metres or miles. Suitable for moderately fit adults who can run continuously.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="cooper-age" placeholder="e.g. 35" min="16" max="90">
+          </div>
+          <div class="form-group">
+            <label>Sex</label>
+            <select id="cooper-sex"><option value="m">Male</option><option value="f">Female</option></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Distance covered in 12 minutes</label>
+          <div class="unit-row">
+            <button class="unit-btn active" id="c-btn-m" onclick="setCooperUnit('m')">Metres</button>
+            <button class="unit-btn" id="c-btn-mi" onclick="setCooperUnit('mi')">Miles</button>
+          </div>
+          <input type="number" id="cooper-dist" placeholder="e.g. 2200" step="10">
+          <div id="cooper-dist-label" style="font-size:.75rem;color:var(--light);margin-top:.3rem;">Enter distance in metres</div>
+        </div>
+        <button class="calc-btn" onclick="calcCooper()">Calculate VO2 Max →</button>
+      </div>
+
+      <!-- 1.5-mile run -->
+      <div class="test-panel" id="panel-run15">
+        <div class="test-desc"><strong>1.5-mile run test:</strong> Run 1.5 miles (2.4 km) as fast as possible on a flat surface. Record your time in minutes and seconds. Most accurate for people who can run continuously for 10–15 minutes.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="run15-age" placeholder="e.g. 35" min="16" max="90">
+          </div>
+          <div class="form-group">
+            <label>Sex</label>
+            <select id="run15-sex"><option value="m">Male</option><option value="f">Female</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Time — minutes</label>
+            <input type="number" id="run15-min" placeholder="e.g. 12" min="5" max="30">
+          </div>
+          <div class="form-group">
+            <label>Time — seconds</label>
+            <input type="number" id="run15-sec" placeholder="e.g. 30" min="0" max="59">
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcRun15()">Calculate VO2 Max →</button>
+      </div>
+
+      <!-- Rockport walk -->
+      <div class="test-panel" id="panel-rockport">
+        <div class="test-desc"><strong>Rockport 1-mile walk test:</strong> Walk 1 mile (1.6 km) as fast as possible. Immediately after finishing, record your heart rate for 10 seconds and multiply by 6 for bpm. Best for older adults or those new to exercise.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="rp-age" placeholder="e.g. 55" min="16" max="90">
+          </div>
+          <div class="form-group">
+            <label>Sex</label>
+            <select id="rp-sex"><option value="m">Male</option><option value="f">Female</option></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Body weight</label>
+          <div class="unit-row">
+            <button class="unit-btn active" id="rp-btn-kg" onclick="setRpUnit('kg')">kg</button>
+            <button class="unit-btn" id="rp-btn-lbs" onclick="setRpUnit('lbs')">lbs</button>
+          </div>
+          <input type="number" id="rp-weight" placeholder="e.g. 75">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Walk time — minutes</label>
+            <input type="number" id="rp-min" placeholder="e.g. 17" min="10" max="30">
+          </div>
+          <div class="form-group">
+            <label>Walk time — seconds</label>
+            <input type="number" id="rp-sec" placeholder="e.g. 30" min="0" max="59">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Heart rate immediately after (bpm)</label>
+          <input type="number" id="rp-hr" placeholder="e.g. 140" min="60" max="200">
+        </div>
+        <button class="calc-btn" onclick="calcRockport()">Calculate VO2 Max →</button>
+      </div>
+
+      <!-- Resting HR estimate -->
+      <div class="test-panel" id="panel-resting">
+        <div class="test-desc"><strong>Resting heart rate estimate:</strong> A rough estimate based on your resting heart rate, age, and sex. Less accurate than a field test, but useful if you can't perform one. Measure resting HR first thing in the morning before getting up.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="rest-age" placeholder="e.g. 40" min="16" max="90">
+          </div>
+          <div class="form-group">
+            <label>Sex</label>
+            <select id="rest-sex"><option value="m">Male</option><option value="f">Female</option></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Resting heart rate (bpm)</label>
+          <input type="number" id="rest-hr" placeholder="e.g. 62" min="35" max="100">
+          <div style="font-size:.75rem;color:var(--light);margin-top:.3rem;">Measure for 60 seconds on waking, before getting out of bed</div>
+        </div>
+        <button class="calc-btn" onclick="calcResting()">Estimate VO2 Max →</button>
+      </div>
+
+      <!-- Result -->
+      <div class="result-box" id="result">
+        <div class="result-hero" id="result-hero">
+          <div class="result-label">Your estimated VO2 max</div>
+          <div class="result-vo2" id="result-vo2">—</div>
+          <div class="result-unit">ml/kg/min</div>
+          <div class="result-category" id="result-cat">—</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val" id="stat-percentile">—</div>
+            <div class="stat-label">Approx. percentile for your age/sex</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="stat-target">—</div>
+            <div class="stat-label">Target to reach "Good" category</div>
+          </div>
+        </div>
+
+        <h4 style="font-size:.875rem;font-weight:600;color:var(--charcoal);margin-bottom:.75rem;">VO2 max ranges for your age and sex</h4>
+        <table class="ref-table" id="ref-table"></table>
+
+        <div class="training-box" id="training-rec">
+          <h4>Recommended training approach</h4>
+          <div id="training-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>What is VO2 max and why does it matter?</h2>
+      <p>VO2 max is the maximum volume of oxygen your body can use during intense exercise — expressed in millilitres per kilogram of bodyweight per minute (ml/kg/min). It's the gold standard measure of aerobic fitness and cardiovascular health. A higher VO2 max means a more efficient heart, greater endurance capacity, and — critically — better long-term health outcomes.</p>
+      <p>Research from a 2018 study in JAMA Network Open following 122,000 adults found that low cardiorespiratory fitness was associated with higher all-cause mortality than smoking, diabetes, or hypertension. Moving from "low" to "moderate" fitness produced a 50% reduction in mortality risk. These are among the strongest health-outcome relationships observed for any modifiable lifestyle factor.</p>
+
+      <h2>VO2 max reference ranges</h2>
+      <p>VO2 max declines with age and differs by sex, primarily due to differences in cardiac size, haemoglobin levels, and muscle mass. These tables reflect data from the American College of Sports Medicine and similar bodies.</p>
+
+      <h3>Men (ml/kg/min)</h3>
+      <table class="info-table">
+        <thead><tr><th>Age</th><th>Poor</th><th>Below avg</th><th>Average</th><th>Good</th><th>Excellent</th></tr></thead>
+        <tbody>
+          <tr><td>20–29</td><td>&lt;33</td><td>33–36</td><td>37–44</td><td>45–52</td><td>&gt;52</td></tr>
+          <tr><td>30–39</td><td>&lt;31</td><td>31–35</td><td>36–44</td><td>45–52</td><td>&gt;52</td></tr>
+          <tr><td>40–49</td><td>&lt;30</td><td>30–33</td><td>34–42</td><td>43–50</td><td>&gt;50</td></tr>
+          <tr><td>50–59</td><td>&lt;26</td><td>26–30</td><td>31–38</td><td>39–46</td><td>&gt;46</td></tr>
+          <tr><td>60–69</td><td>&lt;22</td><td>22–25</td><td>26–34</td><td>35–42</td><td>&gt;42</td></tr>
+          <tr><td>70+</td><td>&lt;20</td><td>20–22</td><td>23–30</td><td>31–38</td><td>&gt;38</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Women (ml/kg/min)</h3>
+      <table class="info-table">
+        <thead><tr><th>Age</th><th>Poor</th><th>Below avg</th><th>Average</th><th>Good</th><th>Excellent</th></tr></thead>
+        <tbody>
+          <tr><td>20–29</td><td>&lt;28</td><td>28–31</td><td>32–38</td><td>39–46</td><td>&gt;46</td></tr>
+          <tr><td>30–39</td><td>&lt;27</td><td>27–30</td><td>31–37</td><td>38–44</td><td>&gt;44</td></tr>
+          <tr><td>40–49</td><td>&lt;25</td><td>25–28</td><td>29–35</td><td>36–42</td><td>&gt;42</td></tr>
+          <tr><td>50–59</td><td>&lt;21</td><td>21–24</td><td>25–32</td><td>33–39</td><td>&gt;39</td></tr>
+          <tr><td>60–69</td><td>&lt;18</td><td>18–21</td><td>22–29</td><td>30–36</td><td>&gt;36</td></tr>
+          <tr><td>70+</td><td>&lt;16</td><td>16–19</td><td>20–26</td><td>27–33</td><td>&gt;33</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How to improve your VO2 max</h2>
+      <p>The two most evidence-based approaches for improving VO2 max are Zone 2 aerobic training and high-intensity interval training (HIIT). They work through different mechanisms and complement each other.</p>
+
+      <h3>Zone 2 training (60–70% max HR)</h3>
+      <p>The foundation of aerobic fitness. Zone 2 increases mitochondrial density, cardiac output, and fat oxidation capacity. Sessions of 45–90 minutes, 3–4 times per week, drive meaningful aerobic base development over 8–16 weeks. The key: you should be able to hold a full conversation throughout — if you can't, you've gone above Zone 2.</p>
+
+      <h3>HIIT — the 4×4 protocol</h3>
+      <p>Four intervals of 4 minutes at 90–95% max HR, with 3-minute active recovery between each. Warm up for 10 minutes before, cool down for 5–10 minutes after. Limit to 1–2 sessions per week — requires 48 hours of recovery. Research from Norwegian scientists shows this protocol increases VO2 max by 7–10% in 8 weeks in recreationally active adults.</p>
+
+      <h3>The optimal combination</h3>
+      <p>80% of training time in Zone 2, 20% in high-intensity zones (the polarised model). Most people naturally train in Zone 3 — moderate intensity — which is the least effective zone for either Zone 2 adaptations or HIIT adaptations. Avoiding Zone 3 on easy days and making hard days genuinely hard is the key principle.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How accurate are these VO2 max estimates?</div>
+          <div class="faq-a">Field test estimates are typically within ±10–15% of lab-measured values. The Cooper 12-minute run is one of the most validated field tests, accurate to within ±5–8% in motivated individuals who pace correctly. The resting HR estimate is the least accurate (±15–20%) and should be treated as a rough indicator only. Lab testing with expired gas analysis is the gold standard.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How often should I retest my VO2 max?</div>
+          <div class="faq-a">Every 8–12 weeks gives enough time for meaningful adaptation to occur between tests. Testing too frequently produces noisy results because day-to-day variation in performance can exceed actual fitness change. For best comparison, perform the test under the same conditions each time — same time of day, similar nutrition, similar recent training load.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I use my smartwatch VO2 max instead?</div>
+          <div class="faq-a">Yes — wearable estimates are useful for tracking trends over time. They're most accurate for people who run regularly with a chest strap heart rate monitor. The absolute number may differ from a field test or lab result, but the directional trend (improving, declining, stable) is generally reliable for tracking training progress.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is a good VO2 max to aim for?</div>
+          <div class="faq-a">Reaching "Good" category for your age and sex is a meaningful health target associated with significantly reduced cardiovascular risk. For most people, this requires consistent aerobic training but is achievable without elite-level dedication. The largest health gains come from moving out of the "Poor" or "Below average" categories — not from chasing top-percentile scores.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Note:</strong> These are estimates based on field test formulas. Individual variation means actual VO2 max may differ from calculated values. Not medical advice. If you have cardiovascular conditions, consult a doctor before performing maximal effort tests.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="zone-2-calculator.html">💙 Zone 2 Calculator</a></li>
+        <li><a href="heart-rate-zone.html">❤️ Heart Rate Zone Calculator</a></li>
+        <li><a href="maf-calculator.html">❤️ MAF Calculator</a></li>
+        <li><a href="calories-burned-by-heart-rate.html">🔥 Calories Burned by Heart Rate</a></li>
+        <li><a href="running-pace.html">🏃 Running Pace Calculator</a></li>
+      </ul>
+    </div>
+    <div class="related-tools" style="margin-top:1rem;">
+      <h3>Related articles</h3>
+      <ul class="related-list">
+        <li><a href="../blog/what-is-vo2-max.html">What Is VO2 Max?</a></li>
+        <li><a href="../blog/how-to-improve-vo2-max.html">How to Improve VO2 Max</a></li>
+        <li><a href="../blog/zone-2-heart-rate-training-beginners.html">Zone 2 Training Guide</a></li>
+        <li><a href="../blog/zone-2-vs-hiit-fat-loss.html">Zone 2 vs HIIT</a></li>
+        <li><a href="../quiz/training-zone.html">Training Zone Quiz</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script>
+// Reference data
+const REF = {
+  m: {
+    '20-29':{poor:33,below:37,avg:45,good:52},
+    '30-39':{poor:31,below:36,avg:45,good:52},
+    '40-49':{poor:30,below:34,avg:43,good:50},
+    '50-59':{poor:26,below:31,avg:39,good:46},
+    '60-69':{poor:22,below:26,avg:35,good:42},
+    '70+':{poor:20,below:23,avg:31,good:38}
+  },
+  f: {
+    '20-29':{poor:28,below:32,avg:39,good:46},
+    '30-39':{poor:27,below:31,avg:38,good:44},
+    '40-49':{poor:25,below:29,avg:36,good:42},
+    '50-59':{poor:21,below:25,avg:33,good:39},
+    '60-69':{poor:18,below:22,avg:30,good:36},
+    '70+':{poor:16,below:20,avg:27,good:33}
+  }
+};
+
+function getAgeKey(age) {
+  if(age<30)return '20-29';
+  if(age<40)return '30-39';
+  if(age<50)return '40-49';
+  if(age<60)return '50-59';
+  if(age<70)return '60-69';
+  return '70+';
+}
+
+function getCategory(vo2, sex, age) {
+  const k = getAgeKey(age);
+  const r = REF[sex][k];
+  if(vo2 < r.poor) return {cat:'Poor',cls:'poor',pct:'~10th',target:r.below};
+  if(vo2 < r.below) return {cat:'Below Average',cls:'below',pct:'~25th',target:r.avg};
+  if(vo2 < r.avg) return {cat:'Average',cls:'average',pct:'~50th',target:r.good};
+  if(vo2 < r.good) return {cat:'Good',cls:'good',pct:'~75th',target:r.good+5};
+  return {cat:'Excellent',cls:'excellent',pct:'~90th+',target:null};
+}
+
+function getTrainingRec(cat) {
+  const recs = {
+    'Poor': '<p>Start with walking and light aerobic activity. Any movement helps. Aim for 30 minutes of brisk walking daily for the first 4 weeks before progressing to more structured training.</p><ul><li>Walk 30–45 min daily at a comfortable pace</li><li>Add 2 Zone 2 sessions per week (whatever keeps HR at 60–70% max)</li><li>After 4 weeks, assess whether jogging is appropriate</li></ul>',
+    'Below Average': '<p>You have a solid base to build from. Structured Zone 2 training 3–4 times per week will produce clear improvements within 8–12 weeks.</p><ul><li>Zone 2 cardio: 3–4x/week, 40–60 min each</li><li>Keep easy days truly easy — conversational pace</li><li>Add 1 HIIT session per week after 4 weeks of Zone 2 base</li></ul>',
+    'Average': '<p>Good starting point. To move from average to good, you need both aerobic volume and some quality work.</p><ul><li>Zone 2: 3–4x/week, 50–75 min each</li><li>HIIT: 1–2x/week (4×4 protocol at 90–95% max HR)</li><li>Polarised approach: 80% easy, 20% hard</li></ul>',
+    'Good': '<p>Strong aerobic fitness. Further improvement requires progressive overload and higher quality sessions.</p><ul><li>Increase Zone 2 volume gradually (add 10% per week)</li><li>2 HIIT sessions per week with full recovery between</li><li>Add a longer Zone 2 session (75–90 min) on weekends</li></ul>',
+    'Excellent': '<p>Excellent cardiovascular fitness — you\'re in the top tier for health outcomes. Maintain this with consistent training.</p><ul><li>Maintain current training volume and consistency</li><li>Periodise with planned recovery weeks every 4th week</li><li>Focus on training variety to maintain motivation long-term</li></ul>'
+  };
+  return recs[cat] || recs['Average'];
+}
+
+function buildRefTable(sex, age, highlight) {
+  const k = getAgeKey(age);
+  const r = REF[sex][k];
+  const sexLabel = sex === 'm' ? 'men' : 'women';
+  let html = `<thead><tr><th>Category</th><th>VO2 max (${sexLabel} ${k})</th></tr></thead><tbody>`;
+  const cats = [
+    {label:'Poor', range:`< ${r.poor}`},
+    {label:'Below Average', range:`${r.poor}–${r.below-1}`},
+    {label:'Average', range:`${r.below}–${r.avg-1}`},
+    {label:'Good', range:`${r.avg}–${r.good-1}`},
+    {label:'Excellent', range:`≥ ${r.good}`}
+  ];
+  cats.forEach(c => {
+    const hl = c.label === highlight ? ' class="highlight"' : '';
+    html += `<tr${hl}><td>${c.label}${c.label===highlight?' ← you':''}</td><td>${c.range} ml/kg/min</td></tr>`;
+  });
+  html += '</tbody>';
+  return html;
+}
+
+function showResult(vo2raw, sex, age) {
+  const vo2 = Math.round(vo2raw * 10) / 10;
+  const info = getCategory(vo2, sex, age);
+  const hero = document.getElementById('result-hero');
+  hero.className = 'result-hero ' + info.cls;
+  document.getElementById('result-vo2').textContent = vo2;
+  document.getElementById('result-cat').textContent = info.cat;
+  document.getElementById('stat-percentile').textContent = info.pct;
+  document.getElementById('stat-target').textContent = info.target ? info.target + ' ml/kg/min' : 'You\'re there!';
+  document.getElementById('ref-table').innerHTML = buildRefTable(sex, age, info.cat);
+  document.getElementById('training-text').innerHTML = getTrainingRec(info.cat);
+  const res = document.getElementById('result');
+  res.classList.add('show');
+  res.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// Tab switching
+function switchTab(id) {
+  document.querySelectorAll('.tab-btn').forEach((b,i) => {
+    const ids = ['cooper','run15','rockport','resting'];
+    b.classList.toggle('active', ids[i]===id);
+  });
+  document.querySelectorAll('.test-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  document.getElementById('result').classList.remove('show');
+}
+
+// Cooper unit
+let cooperUnit = 'm';
+function setCooperUnit(u) {
+  cooperUnit = u;
+  document.getElementById('c-btn-m').classList.toggle('active',u==='m');
+  document.getElementById('c-btn-mi').classList.toggle('active',u==='mi');
+  document.getElementById('cooper-dist').placeholder = u==='m' ? 'e.g. 2200' : 'e.g. 1.37';
+  document.getElementById('cooper-dist-label').textContent = u==='m' ? 'Enter distance in metres' : 'Enter distance in miles';
+}
+
+// Rockport unit
+let rpUnit = 'kg';
+function setRpUnit(u) {
+  rpUnit = u;
+  document.getElementById('rp-btn-kg').classList.toggle('active',u==='kg');
+  document.getElementById('rp-btn-lbs').classList.toggle('active',u==='lbs');
+}
+
+// Calculators
+function calcCooper() {
+  const age = parseInt(document.getElementById('cooper-age').value);
+  const sex = document.getElementById('cooper-sex').value;
+  let dist = parseFloat(document.getElementById('cooper-dist').value);
+  if(!age||!dist){alert('Please fill in all fields.');return;}
+  if(cooperUnit==='mi') dist = dist * 1609.34;
+  const vo2 = (dist - 504.9) / 44.73;
+  if(vo2 < 10){alert('Distance seems too low. Check your entry.');return;}
+  showResult(vo2, sex, age);
+}
+
+function calcRun15() {
+  const age = parseInt(document.getElementById('run15-age').value);
+  const sex = document.getElementById('run15-sex').value;
+  const mins = parseFloat(document.getElementById('run15-min').value)||0;
+  const secs = parseFloat(document.getElementById('run15-sec').value)||0;
+  if(!age||!mins){alert('Please fill in all fields.');return;}
+  const timeMin = mins + secs/60;
+  const vo2 = 3.5 + (483 / timeMin);
+  showResult(vo2, sex, age);
+}
+
+function calcRockport() {
+  const age = parseInt(document.getElementById('rp-age').value);
+  const sex = document.getElementById('rp-sex').value;
+  let weight = parseFloat(document.getElementById('rp-weight').value);
+  const mins = parseFloat(document.getElementById('rp-min').value)||0;
+  const secs = parseFloat(document.getElementById('rp-sec').value)||0;
+  const hr = parseFloat(document.getElementById('rp-hr').value);
+  if(!age||!weight||!mins||!hr){alert('Please fill in all fields.');return;}
+  if(rpUnit==='kg') weight = weight * 2.20462; // formula uses lbs
+  const timeMin = mins + secs/60;
+  const sexNum = sex==='m' ? 1 : 0;
+  const vo2 = 132.853 - (0.0769*weight) - (0.3877*age) + (6.315*sexNum) - (3.2649*timeMin) - (0.1565*hr);
+  showResult(vo2, sex, age);
+}
+
+function calcResting() {
+  const age = parseInt(document.getElementById('rest-age').value);
+  const sex = document.getElementById('rest-sex').value;
+  const hr = parseFloat(document.getElementById('rest-hr').value);
+  if(!age||!hr){alert('Please fill in all fields.');return;}
+  // Uth-Sørensen-Overgaard-Pedersen formula
+  const hrMax = 208 - (0.7 * age);
+  const vo2 = 15 * (hrMax / hr);
+  showResult(vo2, sex, age);
+}
+
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+</script>
+</body>
+</html>
