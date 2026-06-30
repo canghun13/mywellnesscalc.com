@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350"
@@ -201,6 +202,11 @@
       <button class="calc-btn" onclick="calculate()">Calculate my heart rate zones →</button>
 
       <div class="result-box" id="result">
+        <div class="print-only print-header">
+          <div class="print-logo">My<span>Wellness</span>Calc</div>
+          <div class="print-tool-name">Heart Rate Zone Calculator — Result</div>
+          <div class="print-date"></div>
+        </div>
         <div class="max-hr-bar">
           <div>
             <div class="max-hr-label">Estimated Max Heart Rate</div>
@@ -212,6 +218,11 @@
           </div>
         </div>
         <div class="zones-list" id="zones-list"></div>
+      
+        <button class="pdf-download-btn" onclick="saveAsPDF()">📄 Save result as PDF</button>
+        <div class="print-only print-footer">
+          More free health calculators at <strong>mywellnesscalc.com</strong>
+        </div>
       </div>
     </div>
 
@@ -321,6 +332,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 });
 </script>
 <script src="../assets/js/components.js"></script>
+<script src="../assets/js/print.js"></script>
 <script>
 const ZONES = [
   {num:1, name:'Zone 1 – Recovery',    desc:'Active recovery, warm-up',          color:'#e8f5e9', border:'#81c784', lo:50, hi:60},

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350"
@@ -201,6 +202,11 @@
       </div>
 
       <div class="result-section" id="result">
+        <div class="print-only print-header">
+          <div class="print-logo">My<span>Wellness</span>Calc</div>
+          <div class="print-tool-name">Ideal Body Weight Calculator — Result</div>
+          <div class="print-date"></div>
+        </div>
         <p class="result-headline">Your ideal weight range (average across formulas):</p>
         <div class="range-bar-wrap">
           <div class="range-num" id="range-display">— – — kg</div>
@@ -238,6 +244,11 @@
           </div>
           <span style="margin-left:auto;font-size:.8rem;color:var(--sage-dark);font-weight:500;">Try it →</span>
         </a>
+      
+        <button class="pdf-download-btn" onclick="saveAsPDF()">📄 Save result as PDF</button>
+        <div class="print-only print-footer">
+          More free health calculators at <strong>mywellnesscalc.com</strong>
+        </div>
       </div>
     </div>
 
@@ -353,5 +364,6 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 });
 </script>
 <script src="../assets/js/components.js"></script>
+<script src="../assets/js/print.js"></script>
 </body>
 </html>

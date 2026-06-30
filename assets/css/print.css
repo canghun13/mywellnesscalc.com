@@ -40,6 +40,7 @@
   .breadcrumb, .page-header,
   .unit-toggle, .form-group, .form-row, .calc-btn,
   .info-section, .side-col,
+  .affiliate-card,
   #header-placeholder, #footer-placeholder {
     display: none !important;
   }

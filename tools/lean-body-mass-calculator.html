@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
@@ -159,6 +160,11 @@
       </div>
 
       <div class="result-section" id="resultSection">
+        <div class="print-only print-header">
+          <div class="print-logo">My<span>Wellness</span>Calc</div>
+          <div class="print-tool-name">Lean Body Mass Calculator — Result</div>
+          <div class="print-date"></div>
+        </div>
         <div class="result-grid">
           <div class="result-box">
             <div class="result-num" id="lbmResult">—</div>
@@ -182,6 +188,11 @@
         </div>
 
         <div class="result-tip" id="resultTip"></div>
+      
+        <button class="pdf-download-btn" onclick="saveAsPDF()">📄 Save result as PDF</button>
+        <div class="print-only print-footer">
+          More free health calculators at <strong>mywellnesscalc.com</strong>
+        </div>
       </div>
     </div>
 
@@ -359,5 +370,6 @@
 </script>
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
 <script src="../assets/js/components.js"></script>
+<script src="../assets/js/print.js"></script>
 </body>
 </html>

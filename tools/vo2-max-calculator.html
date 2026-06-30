@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
@@ -230,6 +231,11 @@
 
       <!-- Result -->
       <div class="result-box" id="result">
+        <div class="print-only print-header">
+          <div class="print-logo">My<span>Wellness</span>Calc</div>
+          <div class="print-tool-name">VO2 Max Calculator — Result</div>
+          <div class="print-date"></div>
+        </div>
         <div class="result-hero" id="result-hero">
           <div class="result-label">Your estimated VO2 max</div>
           <div class="result-vo2" id="result-vo2">—</div>
@@ -254,6 +260,11 @@
         <div class="training-box" id="training-rec">
           <h4>Recommended training approach</h4>
           <div id="training-text"></div>
+        </div>
+      
+        <button class="pdf-download-btn" onclick="saveAsPDF()">📄 Save result as PDF</button>
+        <div class="print-only print-footer">
+          More free health calculators at <strong>mywellnesscalc.com</strong>
         </div>
       </div>
     </div>
@@ -355,6 +366,7 @@
 
 <div id="footer-placeholder"></div>
 <script src="../assets/js/components.js"></script>
+<script src="../assets/js/print.js"></script>
 <script>
 // Reference data
 const REF = {
