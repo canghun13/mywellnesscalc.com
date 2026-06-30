@@ -1,0 +1,98 @@
+/* ============================================================
+   MyWellnessCalc — Print / PDF Save Stylesheet
+   assets/css/print.css
+   ============================================================ */
+
+/* PDF 저장 버튼 (화면용) */
+.pdf-download-btn {
+  width: 100%;
+  margin-top: .75rem;
+  padding: .75rem 1rem;
+  background: white;
+  color: var(--sage-dark);
+  border: 1.5px solid var(--sage-dark);
+  border-radius: 12px;
+  font-size: .875rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  transition: background .2s, color .2s;
+}
+.pdf-download-btn:hover {
+  background: var(--sage-dark);
+  color: white;
+}
+
+/* 인쇄 전용 헤더/푸터 — 화면에서는 숨김 */
+.print-only { display: none; }
+
+@media print {
+  /* 기본적으로 전부 숨기고, 결과 영역만 보이게 */
+  body * { visibility: hidden; }
+
+  #result, #result *,
+  #resultSection, #resultSection *,
+  .print-header, .print-header *,
+  .print-footer, .print-footer * {
+    visibility: visible;
+  }
+
+  .print-only { display: block; }
+
+  #result, #resultSection {
+    position: relative;
+    margin: 0 auto;
+    box-shadow: none;
+    border: none;
+  }
+
+  .print-header {
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--sage-dark, #4a6b4e);
+  }
+  .print-header .print-logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--sage-dark, #4a6b4e);
+  }
+  .print-header .print-tool-name {
+    font-size: .95rem;
+    color: var(--mid, #5a5a5a);
+    margin-top: .25rem;
+  }
+  .print-header .print-date {
+    font-size: .8rem;
+    color: var(--light, #9a9a9a);
+    margin-top: .15rem;
+  }
+
+  .print-footer {
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border, #e8e2da);
+    font-size: .8rem;
+    color: var(--mid, #5a5a5a);
+  }
+  .print-footer strong { color: var(--sage-dark, #4a6b4e); }
+
+  /* 화면 전용 요소 인쇄 시 숨김 */
+  nav, footer, .nav-back, .sidebar, .ad-slot,
+  .pdf-download-btn, .calc-btn, .unit-toggle,
+  #header-placeholder, #footer-placeholder,
+  .breadcrumb, .page-header, .calc-card form,
+  .form-group, .form-row {
+    display: none !important;
+  }
+
+  @page {
+    margin: 1.5cm;
+  }
+}
