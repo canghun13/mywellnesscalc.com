@@ -39,7 +39,7 @@
   nav, footer, .ad-box, .pdf-download-btn,
   .breadcrumb, .page-header,
   .unit-toggle, .form-group, .form-row, .calc-btn,
-  .info-section, .side-col,
+  .info-section, .article-section, .side-col,
   .affiliate-card,
   #header-placeholder, #footer-placeholder {
     display: none !important;
