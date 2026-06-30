@@ -36,7 +36,7 @@
   /* visibility:hidden 방식은 레이아웃 높이가 남아 빈 페이지가
      추가로 출력되는 문제가 있어, display:none 방식으로 전환 */
 
-  nav, footer, .ad-box, .pdf-download-btn,
+  nav, footer, aside, .ad-box, .pdf-download-btn,
   .breadcrumb, .page-header,
   .unit-toggle, .form-group, .form-row, .calc-btn,
   .info-section, .article-section, .side-col,
