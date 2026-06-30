@@ -27,27 +27,47 @@
   color: white;
 }
 
-/* 인쇄 전용 헤더/푸터 — 화면에서는 숨김 */
-.print-only { display: none; }
+/* 인쇄 전용 헤더/푸터 — 화면에서는 공간을 차지하지 않도록 완전히 숨김 */
+.print-only {
+  display: none !important;
+}
 
 @media print {
-  /* 기본적으로 전부 숨기고, 결과 영역만 보이게 */
-  body * { visibility: hidden; }
+  /* visibility:hidden 방식은 레이아웃 높이가 남아 빈 페이지가
+     추가로 출력되는 문제가 있어, display:none 방식으로 전환 */
 
-  #result, #result *,
-  #resultSection, #resultSection *,
-  .print-header, .print-header *,
-  .print-footer, .print-footer * {
-    visibility: visible;
+  nav, footer, .ad-box, .pdf-download-btn,
+  .breadcrumb, .page-header,
+  .unit-toggle, .form-group, .form-row, .calc-btn,
+  .info-section, .side-col,
+  #header-placeholder, #footer-placeholder {
+    display: none !important;
   }
 
-  .print-only { display: block; }
+  body, .page-wrap, .main-col {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .calc-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
 
   #result, #resultSection {
-    position: relative;
-    margin: 0 auto;
-    box-shadow: none;
-    border: none;
+    display: block !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .print-only {
+    display: block !important;
   }
 
   .print-header {
@@ -82,15 +102,6 @@
     color: var(--mid, #5a5a5a);
   }
   .print-footer strong { color: var(--sage-dark, #4a6b4e); }
-
-  /* 화면 전용 요소 인쇄 시 숨김 */
-  nav, footer, .nav-back, .sidebar, .ad-slot,
-  .pdf-download-btn, .calc-btn, .unit-toggle,
-  #header-placeholder, #footer-placeholder,
-  .breadcrumb, .page-header, .calc-card form,
-  .form-group, .form-row {
-    display: none !important;
-  }
 
   @page {
     margin: 1.5cm;
