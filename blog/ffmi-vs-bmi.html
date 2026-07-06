@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FFMI vs BMI: Which Should Lifters Actually Trust? – My Wellness Calc</title>
+  <meta name="description" content="BMI and FFMI both use height and weight — but only one of them can tell muscle from fat. Here's when to trust each one.">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/ffmi-vs-bmi.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350"
+       crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .article-main{}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.15rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul,.article-body ol{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.25rem;}
+    .article-body strong{color:var(--charcoal);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:0;}
+    .bmi-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .bmi-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
+    .bmi-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .bmi-table tr:last-child td{border-bottom:none;}
+    .bmi-table tr:nth-child(even) td{background:var(--cream);}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;transition:opacity .2s;}
+    .cta-link:hover{opacity:.9;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .article-sidebar{}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .toc a:hover{color:var(--sage-dark);}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;transition:color .2s;}
+    .tool-link:last-child{border-bottom:none;padding-bottom:0;}
+    .tool-link:hover{color:var(--sage-dark);}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+  </style>
+<!-- SCHEMA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "FFMI vs BMI: Which Should Lifters Actually Trust?",
+  "url": "https://mywellnesscalc.com/blog/ffmi-vs-bmi.html",
+  "description": "BMI and FFMI both use height and weight — but only one of them can tell muscle from fat. Here's when to trust each one.",
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyWellnessCalc",
+    "url": "https://mywellnesscalc.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mywellnesscalc.com/blog/ffmi-vs-bmi.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mywellnesscalc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mywellnesscalc.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "FFMI vs BMI", "item": "https://mywellnesscalc.com/blog/ffmi-vs-bmi.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I use FFMI or BMI to track my progress?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If you strength train regularly, FFMI is more informative because it reflects lean mass changes directly. If you don't lift and just want a quick general health screen, BMI is simpler and requires one less input (body fat percentage)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does BMI misclassify muscular people as overweight?",
+      "acceptedAnswer": { "@type": "Answer", "text": "BMI only uses total weight and height — it has no way to know whether that weight is muscle or fat. Since muscle is denser than fat, muscular people weigh more for their size and often land in BMI's 'overweight' or 'obese' categories despite low body fat." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FFMI replace BMI completely?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. BMI remains useful as a fast, equipment-free population health screen, especially for people without significant muscle mass. FFMI is more useful specifically for tracking muscularity and body recomposition in people who train." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can two people have the same BMI but very different FFMI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, easily. Two people at the same height and weight can have identical BMI while one carries mostly muscle and the other mostly fat — their FFMI scores would be very different, correctly reflecting that difference in body composition." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which metric do doctors typically use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "BMI remains the standard clinical screening tool because it requires no additional measurement and correlates reasonably well with health risk at a population level. FFMI is more common in sports science, strength coaching, and bodybuilding contexts." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it worth calculating both BMI and FFMI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, especially if you train. BMI takes seconds and gives a rough population-level baseline, while FFMI adds the muscularity context BMI is missing. Together they give a fuller picture than either number checked alone." }
+    }
+  ]
+}
+</script>
+<!-- SCHEMA_END -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › FFMI vs BMI</div>
+    <span class="article-tag">Body Composition</span>
+    <h1>FFMI vs BMI: Which Should Lifters Actually Trust?</h1>
+    <div class="article-meta">
+      <span>📖 6 min read</span>
+      <span>July 2026</span>
+      <span>Reviewed for accuracy</span>
+    </div>
+    <p class="article-intro">Both use just height and weight-based math to size you up in seconds. But only one of them can tell the difference between someone who lifts and someone who doesn't. Here's how FFMI and BMI actually compare — and when each one is worth trusting.</p>
+
+    <div class="article-body">
+      <h2 id="quick-answer">The quick answer</h2>
+      <p>If you strength train consistently, <strong>FFMI is the more meaningful number</strong>. It's built from fat-free mass rather than total weight, so it reflects real muscle gain rather than penalizing you for it. If you don't train and just want a fast general health screen, <strong>BMI is simpler</strong> — it needs one less input and is the standard most healthcare providers still use.</p>
+
+      <h2 id="how-they-differ">How the two calculations differ</h2>
+      <table class="bmi-table">
+        <thead><tr><th></th><th>BMI</th><th>FFMI</th></tr></thead>
+        <tbody>
+          <tr><td>Formula</td><td>weight ÷ height²</td><td>fat-free mass ÷ height²</td></tr>
+          <tr><td>Inputs needed</td><td>Weight, height</td><td>Weight, height, body fat %</td></tr>
+          <tr><td>Distinguishes muscle from fat?</td><td>No</td><td>Yes</td></tr>
+          <tr><td>Best for</td><td>General population screening</td><td>Tracking muscularity, lifters &amp; athletes</td></tr>
+          <tr><td>Height adjustment available?</td><td>No</td><td>Yes (normalized FFMI)</td></tr>
+        </tbody>
+      </table>
+      <p>The formulas look almost identical — both divide a mass figure by height squared. The entire difference comes down to which mass they use: BMI uses everything you weigh, FFMI uses only the fat-free portion.</p>
+
+      <h2 id="where-bmi-fails">Where BMI falls apart</h2>
+      <p>BMI's core weakness is well documented: it cannot tell muscle from fat. A bodybuilder at 95kg and 10% body fat, and a sedentary person at 95kg and 35% body fat, can have the exact same height and therefore the exact same BMI — both labeled "overweight" or "obese" by the standard categories. Anyone with substantial muscle mass runs into this problem, which is why BMI has a long-standing reputation among lifters as an unreliable metric for them specifically.</p>
+
+      <div class="highlight-box">
+        <h4>📏 A concrete example</h4>
+        <p>A 180cm man weighing 95kg has a BMI of 29.3 — solidly "overweight" by WHO categories, regardless of whether he's a powerlifter or hasn't exercised in years. His FFMI, by contrast, will look completely different depending on which of those two people he actually is.</p>
+      </div>
+
+      <h2 id="where-ffmi-shines">Where FFMI actually helps</h2>
+      <p>FFMI's advantage is specificity. Because it isolates fat-free mass, it directly tracks the thing lifters actually care about: are you gaining real muscle, or just weight? During body recomposition — losing fat while gaining muscle — total weight might barely move for months, but FFMI can show clear upward progress if you're genuinely building lean mass.</p>
+      <p>It also comes with a built-in reference scale (roughly 18–25 for men, 14–19 for women) that's far more informative for muscularity than BMI's four broad weight categories.</p>
+
+      <h2 id="where-ffmi-falls-short">Where FFMI falls short</h2>
+      <p>FFMI has one major dependency: it needs an accurate body fat percentage, which is genuinely hard to measure precisely without lab equipment. A home scale's bioelectrical impedance reading can be off by 5–8 percentage points, which shifts your FFMI by 2–3 points — enough to move you a full category up or down. BMI, by only needing weight and height, avoids this measurement error entirely.</p>
+      <p>FFMI is also less useful for people who don't lift, since the "muscularity" reference scale isn't especially relevant if building muscle isn't a goal.</p>
+
+      <h2 id="use-both">The case for using both</h2>
+      <p>These two metrics aren't really competing — they answer different questions. BMI asks "is your weight in a generally healthy range for your height?" FFMI asks "how much of that weight is actually muscle?" For most lifters, checking both gives a fuller picture than either number alone: BMI as a rough population-level sanity check, FFMI as the more precise muscularity tracker.</p>
+
+      <div class="cta-box">
+        <p>Want to see both numbers for yourself? Calculate your BMI and your FFMI side by side with our free calculators.</p>
+        <a href="../tools/ffmi-calculator.html" class="cta-link">Calculate my FFMI →</a>
+      </div>
+
+      <h2 id="takeaway">The bottom line</h2>
+      <p>BMI is the faster, simpler check most people encounter first. FFMI is the more honest number for anyone who trains seriously, because it actually accounts for the muscle BMI can't see. Use BMI as a quick baseline, and lean on FFMI when muscle — not just weight — is what you're actually trying to track.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Should I use FFMI or BMI to track my progress?</div>
+          <div class="faq-a">If you strength train regularly, FFMI is more informative because it reflects lean mass changes directly. If you don't lift and just want a quick general health screen, BMI is simpler and requires one less input (body fat percentage).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why does BMI misclassify muscular people as overweight?</div>
+          <div class="faq-a">BMI only uses total weight and height — it has no way to know whether that weight is muscle or fat. Since muscle is denser than fat, muscular people weigh more for their size and often land in BMI's "overweight" or "obese" categories despite low body fat.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does FFMI replace BMI completely?</div>
+          <div class="faq-a">No. BMI remains useful as a fast, equipment-free population health screen, especially for people without significant muscle mass. FFMI is more useful specifically for tracking muscularity and body recomposition in people who train.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can two people have the same BMI but very different FFMI?</div>
+          <div class="faq-a">Yes, easily. Two people at the same height and weight can have identical BMI while one carries mostly muscle and the other mostly fat — their FFMI scores would be very different, correctly reflecting that difference in body composition.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Which metric do doctors typically use?</div>
+          <div class="faq-a">BMI remains the standard clinical screening tool because it requires no additional measurement and correlates reasonably well with health risk at a population level. FFMI is more common in sports science, strength coaching, and bodybuilding contexts.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it worth calculating both BMI and FFMI?</div>
+          <div class="faq-a">Yes, especially if you train. BMI takes seconds and gives a rough population-level baseline, while FFMI adds the muscularity context BMI is missing. Together they give a fuller picture than either number checked alone.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Consult a qualified healthcare professional for personalized health guidance.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#quick-answer">The quick answer</a></li>
+        <li><a href="#how-they-differ">How they differ</a></li>
+        <li><a href="#where-bmi-fails">Where BMI falls apart</a></li>
+        <li><a href="#where-ffmi-shines">Where FFMI shines</a></li>
+        <li><a href="#where-ffmi-falls-short">Where FFMI falls short</a></li>
+        <li><a href="#use-both">The case for using both</a></li>
+        <li><a href="#takeaway">The bottom line</a></li>
+      </ol>
+    </div>
+
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+
+    <div class="related-tools">
+      <h4>Helpful tools</h4>
+      <a href="../tools/ffmi-calculator.html" class="tool-link">💪 FFMI Calculator</a>
+      <a href="../tools/bmi-calculator.html" class="tool-link">⚖️ BMI Calculator</a>
+      <a href="../tools/lean-body-mass-calculator.html" class="tool-link">🏋️ Lean Body Mass Calculator</a>
+      <a href="../tools/body-fat-calculator.html" class="tool-link">📊 Body Fat Calculator</a>
+      <a href="what-is-ffmi.html" class="tool-link">📝 What Is FFMI?</a>
+      <a href="what-is-a-healthy-bmi.html" class="tool-link">📝 What Is a Healthy BMI?</a>
+    </div>
+  </aside>
+</div>
+
+<div id="footer-placeholder"></div>
+  
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.closest('.faq-item').classList.toggle('open');
+  });
+});
+</script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>

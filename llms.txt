@@ -112,6 +112,9 @@
 - [Running Pace Guide](https://mywellnesscalc.com/tools/running-pace.html): How to calculate and use pace targets for 5K, 10K, half marathon, and marathon training.
 
 ### Body & Health
+- [FFMI Calculator](https://mywellnesscalc.com/tools/ffmi-calculator.html): Calculate your Fat-Free Mass Index and normalized FFMI from weight, height, and body fat percentage — a better measure of muscularity than BMI.
+- [What Is FFMI? The Muscle Index BMI Doesn't Show You](https://mywellnesscalc.com/blog/what-is-ffmi.html): What FFMI measures, how it's calculated, what counts as a good score, and how it differs from BMI.
+- [FFMI vs BMI: Which Should Lifters Actually Trust?](https://mywellnesscalc.com/blog/ffmi-vs-bmi.html): A direct comparison of FFMI and BMI — when each metric is useful and where each one falls short.
 - [What Is a Healthy BMI?](https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html): What a healthy BMI range is, what the number tells you, and how to use it wisely.
 - [What Is a Healthy Body Fat Percentage?](https://mywellnesscalc.com/blog/healthy-body-fat-percentage.html): Healthy body fat ranges for men and women, and how to measure accurately.
 - [How to Lose Belly Fat: What the Science Actually Says](https://mywellnesscalc.com/blog/how-to-lose-belly-fat.html): What the research says about losing abdominal fat — what works and what doesn't.

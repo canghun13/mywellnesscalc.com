@@ -107,4 +107,11 @@
   <!-- New tool - June 2026 -->
   <url><loc>https://mywellnesscalc.com/tools/vo2-max-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- New blog posts - July 2026 -->
+  <url><loc>https://mywellnesscalc.com/blog/what-is-ffmi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/ffmi-vs-bmi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- New tool - July 2026 -->
+  <url><loc>https://mywellnesscalc.com/tools/ffmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 </urlset>
