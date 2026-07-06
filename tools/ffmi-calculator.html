@@ -62,9 +62,9 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .article-section ul{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
     .article-section li{margin-bottom:.3rem;}
-    .data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
-    .data-table th{background:var(--cream);padding:.6rem .875rem;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);border-bottom:2px solid var(--border);}
-    .data-table td{padding:.55rem .875rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--cream);padding:.6rem .875rem;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);border-bottom:2px solid var(--border);}
+    .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.55rem .875rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     .faq-section{margin-top:2.5rem;}
@@ -79,7 +79,6 @@
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
   
   
-    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <script type="application/ld+json">
 {
@@ -221,7 +220,7 @@
       <p>Because taller people need proportionally more lean mass to hit the same raw FFMI, this calculator also shows your <strong>normalized FFMI</strong>, which adjusts your score to a 1.80m (5'11") reference height so people of different heights can be compared fairly.</p>
 
       <h2>FFMI categories</h2>
-      <div class="table-scroll"><table class="data-table">
+      <table class="data-table">
         <thead><tr><th>FFMI (men)</th><th>FFMI (women)</th><th>Category</th></tr></thead>
         <tbody>
           <tr><td>Below 18</td><td>Below 14</td><td>Below average</td></tr>
@@ -231,7 +230,7 @@
           <tr><td>24–25</td><td>18–19</td><td>Exceptional</td></tr>
           <tr><td>25+</td><td>19+</td><td>Rare for natural lifters</td></tr>
         </tbody>
-      </table></div>
+      </table>
       <p>These ranges come from research on pre-steroid-era bodybuilders and are widely cited as a rough natural genetic ceiling — but individual genetics vary, and FFMI alone cannot prove or disprove anything about how someone built their physique.</p>
 
       <h2>Why FFMI beats BMI for anyone who lifts</h2>

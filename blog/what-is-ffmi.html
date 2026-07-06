@@ -36,9 +36,9 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
     .highlight-box p{margin-bottom:0;}
-    .bmi-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
-    .bmi-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
-    .bmi-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .bmi-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .bmi-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
+    .bmi-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .bmi-table tr:last-child td{border-bottom:none;}
     .bmi-table tr:nth-child(even) td{background:var(--cream);}
     .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
@@ -74,7 +74,6 @@
     .faq-item.open .faq-a{display:block;}
   
   
-    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -182,7 +181,7 @@
       </div>
 
       <h2 id="ffmi-ranges">What counts as a good FFMI score?</h2>
-      <div class="table-scroll"><table class="bmi-table">
+      <table class="bmi-table">
         <thead><tr><th>FFMI (men)</th><th>FFMI (women)</th><th>Category</th></tr></thead>
         <tbody>
           <tr><td>Below 18</td><td>Below 14</td><td>Below average</td></tr>
@@ -192,7 +191,7 @@
           <tr><td>24–25</td><td>18–19</td><td>Exceptional</td></tr>
           <tr><td>25+</td><td>19+</td><td>Rare for natural lifters</td></tr>
         </tbody>
-      </table></div>
+      </table>
       <p>These ranges are drawn from research on pre-steroid-era bodybuilders and are widely used as a rough benchmark for what's achievable naturally. Individual genetics vary considerably, so a slightly lower or higher score than these ranges suggest isn't unusual.</p>
 
       <h2 id="ffmi-vs-bmi">Why FFMI succeeds where BMI fails</h2>

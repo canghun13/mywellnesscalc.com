@@ -33,9 +33,9 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
     .highlight-box p{margin-bottom:0;font-size:.9rem;}
-    .data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
-    .data-table th{background:var(--sage-dark);color:white;padding:.65rem 1rem;text-align:left;font-weight:500;}
-    .data-table td{padding:.6rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
+    .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.65rem 1rem;text-align:left;font-weight:500;}
+    .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.6rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
     .data-table tr:nth-child(even) td{background:var(--cream);}
     .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
@@ -67,7 +67,6 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
-    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 </head>
 <body>
@@ -101,7 +100,7 @@
       <h3>Deficit size by starting body fat</h3>
       <p>Body fat level is the most important factor in determining how large a deficit you can sustain without losing muscle. When fat stores are abundant, the body preferentially burns fat during a deficit. As you get leaner, it becomes increasingly protective of fat reserves and more willing to sacrifice muscle protein for energy — which is why the appropriate deficit size decreases as you lose weight.</p>
 
-      <div class="table-scroll"><table class="data-table">
+      <table class="data-table">
         <thead><tr><th>Body fat level</th><th>Recommended deficit</th><th>Expected weekly loss</th><th>Notes</th></tr></thead>
         <tbody>
           <tr><td>High (&gt;30% F / &gt;25% M)</td><td>500–750 kcal/day</td><td>0.5–0.75 kg</td><td>Larger deficit sustainable; muscle loss risk lower</td></tr>
@@ -109,7 +108,7 @@
           <tr><td>Lean (&lt;20% F / &lt;15% M)</td><td>200–300 kcal/day</td><td>0.2–0.3 kg</td><td>Small deficit; high protein critical</td></tr>
           <tr><td>Very lean (&lt;15% F / &lt;10% M)</td><td>100–200 kcal/day</td><td>0.1–0.2 kg</td><td>Recomposition territory; very slow progress</td></tr>
         </tbody>
-      </table></div>
+      </table>
 
       <h3>The case for a moderate deficit (300–500 kcal)</h3>
       <p>This is the evidence-based sweet spot for most people. A 2020 systematic review in Obesity Reviews found that moderate deficits (resulting in 0.5–1% of bodyweight loss per week) produced better body composition outcomes than aggressive deficits — losing more fat relative to muscle. The reasons are well-established:</p>

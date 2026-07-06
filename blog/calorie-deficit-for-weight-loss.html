@@ -30,9 +30,9 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
     .highlight-box p{margin-bottom:0;}
-    .data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
-    .data-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
-    .data-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
+    .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
     .data-table tr:nth-child(even) td{background:var(--cream);}
     .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
@@ -66,7 +66,6 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
   
-    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -170,7 +169,7 @@
       <h2 id="how-much">How large should your deficit be?</h2>
       <p>This is where most people get it wrong. Bigger deficit ≠ better results. An aggressive deficit accelerates muscle loss, causes hormonal disruption, and is nearly impossible to sustain.</p>
 
-      <div class="table-scroll"><table class="data-table">
+      <table class="data-table">
         <thead><tr><th>Deficit size</th><th>Weekly loss (est.)</th><th>Best for</th><th>Risk</th></tr></thead>
         <tbody>
           <tr><td>250 kcal/day</td><td>~0.25 kg / 0.5 lb</td><td>Slow, sustainable loss</td><td>Very low</td></tr>
@@ -178,7 +177,7 @@
           <tr><td>750 kcal/day</td><td>~0.75 kg / 1.5 lb</td><td>Higher body fat, with high protein</td><td>Moderate</td></tr>
           <tr><td>1,000 kcal/day</td><td>~1 kg / 2 lb</td><td>Short-term, medically supervised only</td><td>High</td></tr>
         </tbody>
-      </table></div>
+      </table>
 
       <p>For most people, a <strong>400–500 kcal/day deficit</strong> hits the sweet spot: fast enough to see real progress, slow enough to preserve muscle and maintain energy.</p>
 
