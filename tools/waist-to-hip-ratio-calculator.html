@@ -83,6 +83,8 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <script type="application/ld+json">
 {
@@ -196,7 +198,7 @@
       <p>Abdominal fat — particularly visceral fat surrounding internal organs — is associated with elevated risk of type 2 diabetes, cardiovascular disease, and metabolic syndrome. WHR is a more direct measure of this risk than BMI, which only accounts for height and weight without considering fat distribution.</p>
 
       <h2>WHO WHR health risk thresholds</h2>
-      <table class="data-table">
+      <div class="table-scroll"><table class="data-table">
         <thead><tr><th>Risk level</th><th>Men (WHR)</th><th>Women (WHR)</th></tr></thead>
         <tbody>
           <tr><td>Low risk</td><td>Below 0.85</td><td>Below 0.80</td></tr>
@@ -204,7 +206,7 @@
           <tr><td>High risk</td><td>0.90–0.99</td><td>0.85–0.89</td></tr>
           <tr><td>Very high risk</td><td>1.00 and above</td><td>0.90 and above</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p>These thresholds are based on World Health Organization guidelines and represent population-level risk. Individual health assessment should always involve a healthcare professional.</p>
 
       <h2>How to measure correctly</h2>

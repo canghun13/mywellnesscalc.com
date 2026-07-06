@@ -73,6 +73,8 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
   
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -166,7 +168,7 @@
       <p>If you strength train consistently, <strong>FFMI is the more meaningful number</strong>. It's built from fat-free mass rather than total weight, so it reflects real muscle gain rather than penalizing you for it. If you don't train and just want a fast general health screen, <strong>BMI is simpler</strong> — it needs one less input and is the standard most healthcare providers still use.</p>
 
       <h2 id="how-they-differ">How the two calculations differ</h2>
-      <table class="bmi-table">
+      <div class="table-scroll"><table class="bmi-table">
         <thead><tr><th></th><th>BMI</th><th>FFMI</th></tr></thead>
         <tbody>
           <tr><td>Formula</td><td>weight ÷ height²</td><td>fat-free mass ÷ height²</td></tr>
@@ -175,7 +177,7 @@
           <tr><td>Best for</td><td>General population screening</td><td>Tracking muscularity, lifters &amp; athletes</td></tr>
           <tr><td>Height adjustment available?</td><td>No</td><td>Yes (normalized FFMI)</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p>The formulas look almost identical — both divide a mass figure by height squared. The entire difference comes down to which mass they use: BMI uses everything you weigh, FFMI uses only the fat-free portion.</p>
 
       <h2 id="where-bmi-fails">Where BMI falls apart</h2>

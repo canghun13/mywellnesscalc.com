@@ -62,6 +62,8 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Zone 2 Heart Rate by Age: Exact BPM Chart for Every Decade","url":"https://mywellnesscalc.com/blog/zone-2-heart-rate-by-age.html","description":"Find your exact Zone 2 heart rate by age — BPM ranges for your 20s through 70s, the Karvonen formula explained, and a free calculator for your personal number.","datePublished":"2026-06-23","dateModified":"2026-07-06","publisher":{"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mywellnesscalc.com/blog/zone-2-heart-rate-by-age.html"}}
@@ -92,7 +94,7 @@
       <h2>Zone 2 heart rate by age: reference chart</h2>
       <p>Zone 2 is typically defined as 60–70% of your maximum heart rate (max HR). The most common max HR estimate is <strong>220 − your age</strong>. Here's how that translates to Zone 2 targets across age groups:</p>
 
-      <table class="data-table">
+      <div class="table-scroll"><table class="data-table">
         <thead><tr><th>Age</th><th>Est. Max HR</th><th>Zone 2 (60–70%)</th><th>Zone 2 — Karvonen* (avg RHR 65)</th></tr></thead>
         <tbody>
           <tr><td>20</td><td>200 bpm</td><td>120–140 bpm</td><td>143–156 bpm</td></tr>
@@ -107,7 +109,7 @@
           <tr><td>65</td><td>155 bpm</td><td>93–109 bpm</td><td>114–126 bpm</td></tr>
           <tr><td>70</td><td>150 bpm</td><td>90–105 bpm</td><td>110–123 bpm</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p style="font-size:.8rem;color:var(--light);">*Karvonen formula: Zone 2 = Resting HR + (Heart Rate Reserve × 60–70%). HRR = Max HR − Resting HR. Assumes average resting HR of 65 bpm — adjust for your actual resting HR.</p>
 
       <div class="cta-box">

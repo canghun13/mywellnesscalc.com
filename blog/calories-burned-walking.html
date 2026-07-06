@@ -64,6 +64,8 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -190,7 +192,7 @@
       <h2 id="how-many">How many calories does walking burn?</h2>
       <p>Walking burns roughly <strong>0.04–0.08 calories per kilogram of body weight per minute</strong>, depending on pace. The biggest factors are your body weight (heavier people burn more) and how fast you walk.</p>
 
-      <table class="data-table">
+      <div class="table-scroll"><table class="data-table">
         <thead><tr><th>Body weight</th><th>Slow (4 km/h)</th><th>Moderate (5.5 km/h)</th><th>Brisk (6.5 km/h)</th></tr></thead>
         <tbody>
           <tr><td>60 kg (132 lb)</td><td>~160 kcal/hr</td><td>~220 kcal/hr</td><td>~290 kcal/hr</td></tr>
@@ -198,7 +200,7 @@
           <tr><td>90 kg (198 lb)</td><td>~240 kcal/hr</td><td>~335 kcal/hr</td><td>~435 kcal/hr</td></tr>
           <tr><td>105 kg (231 lb)</td><td>~280 kcal/hr</td><td>~390 kcal/hr</td><td>~510 kcal/hr</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="highlight-box">
         <h4>📱 What about 10,000 steps?</h4>

@@ -66,6 +66,8 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <script type="application/ld+json">
 {
@@ -163,7 +165,7 @@
       <h3>Method 1: Percentage of max HR (simple)</h3>
       <p>Zone 2 = 60–70% of your maximum heart rate. Estimate your max HR using: <strong>220 − your age</strong>.</p>
 
-      <table class="data-table">
+      <div class="table-scroll"><table class="data-table">
         <thead><tr><th>Age</th><th>Est. Max HR</th><th>Zone 2 Range (60–70%)</th></tr></thead>
         <tbody>
           <tr><td>25</td><td>195 bpm</td><td>117–137 bpm</td></tr>
@@ -175,7 +177,7 @@
           <tr><td>55</td><td>165 bpm</td><td>99–116 bpm</td></tr>
           <tr><td>60</td><td>160 bpm</td><td>96–112 bpm</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h3>Method 2: Karvonen formula (more accurate)</h3>
       <p>This method accounts for your resting heart rate, making zones more personalised to your fitness level:</p>

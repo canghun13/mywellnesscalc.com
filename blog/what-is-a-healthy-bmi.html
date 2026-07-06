@@ -72,6 +72,8 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -176,7 +178,7 @@
 
       <h2 id="bmi-ranges">BMI ranges: what the numbers mean</h2>
       <p>The World Health Organization defines the following categories for adults:</p>
-      <table class="bmi-table">
+      <div class="table-scroll"><table class="bmi-table">
         <thead>
           <tr><th>BMI Range</th><th>Category</th></tr>
         </thead>
@@ -188,7 +190,7 @@
           <tr><td>35.0 – 39.9</td><td>Obese (Class II)</td></tr>
           <tr><td>40.0 and above</td><td>Obese (Class III)</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p>So a "healthy BMI" is generally considered to be between <strong>18.5 and 24.9</strong>. This range is associated with lower risk of weight-related health conditions like type 2 diabetes, cardiovascular disease, and hypertension.</p>
 
       <div class="highlight-box">

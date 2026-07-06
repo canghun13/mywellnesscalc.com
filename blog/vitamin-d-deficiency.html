@@ -64,6 +64,8 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -183,7 +185,7 @@
       </div>
 
       <h2 id="causes">Who is at risk?</h2>
-      <table class="data-table">
+      <div class="table-scroll"><table class="data-table">
         <thead><tr><th>Risk factor</th><th>Why it increases risk</th></tr></thead>
         <tbody>
           <tr><td>Limited sun exposure</td><td>Indoor work, sunscreen use, climate</td></tr>
@@ -194,7 +196,7 @@
           <tr><td>Malabsorption conditions</td><td>Crohn's, celiac, gastric bypass reduce absorption</td></tr>
           <tr><td>Breastfed infants</td><td>Breast milk is low in Vitamin D</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2 id="how-much">How much Vitamin D do you need?</h2>
       <p>The official RDA is 600 IU/day for adults under 70, and 800 IU/day for those over 70. However, many researchers argue these values are too low to achieve and maintain optimal blood levels — particularly for people with limited sun exposure.</p>

@@ -68,6 +68,8 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  
+    .table-scroll { width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -159,14 +161,14 @@
       <h2 id="what-are">What are macronutrients?</h2>
       <p>Macronutrients — protein, carbohydrates, and fat — are the three categories of nutrients that provide calories. Micronutrients (vitamins and minerals) are also essential but provide no calories. Every food you eat is a combination of these three macronutrients in different proportions, plus water and micronutrients.</p>
 
-      <table class="data-table">
+      <div class="table-scroll"><table class="data-table">
         <thead><tr><th>Macronutrient</th><th>Calories per gram</th><th>Primary roles</th></tr></thead>
         <tbody>
           <tr><td>Protein</td><td>4 kcal/g</td><td>Muscle, enzymes, hormones, immune function</td></tr>
           <tr><td>Carbohydrates</td><td>4 kcal/g</td><td>Primary energy source, brain fuel, glycogen storage</td></tr>
           <tr><td>Fat</td><td>9 kcal/g</td><td>Hormones, fat-soluble vitamins, cell membranes, energy storage</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2 id="protein">Protein: the most important macronutrient for body composition</h2>
 
