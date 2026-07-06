@@ -27,7 +27,7 @@
     .article-body ul{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
     .article-body li{margin-bottom:.25rem;}
     .article-body strong{color:var(--charcoal);}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table{width:100%;min-width:520px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -58,6 +58,10 @@
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -184,7 +188,7 @@
       <h2 id="animal">Animal-based protein sources</h2>
       <p>Animal proteins are "complete" — they contain all essential amino acids in adequate amounts, and tend to have high leucine content, which is key for muscle protein synthesis.</p>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Food</th><th>Serving</th><th>Protein</th><th>Calories</th></tr></thead>
         <tbody>
           <tr><td>Chicken breast (cooked)</td><td>100g</td><td>31g</td><td>165 kcal</td></tr>
@@ -201,12 +205,12 @@
           <tr><td>Skyr (Icelandic yogurt)</td><td>170g</td><td>20g</td><td>110 kcal</td></tr>
           <tr><td>Whey protein powder</td><td>30g scoop</td><td>24g</td><td>120 kcal</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2 id="plant">Plant-based protein sources</h2>
       <p>Most plant proteins are "incomplete" — they lack one or more essential amino acids. Eating a variety of plant protein sources throughout the day addresses this effectively. Leucine content is generally lower, which means plant-based eaters may benefit from slightly higher total protein intakes.</p>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Food</th><th>Serving</th><th>Protein</th><th>Calories</th></tr></thead>
         <tbody>
           <tr><td>Tempeh</td><td>100g</td><td>19g</td><td>193 kcal</td></tr>
@@ -222,7 +226,7 @@
           <tr><td>Seitan</td><td>100g</td><td>25g</td><td>143 kcal</td></tr>
           <tr><td>Pea protein powder</td><td>30g scoop</td><td>21g</td><td>110 kcal</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2 id="practical">Practical high-protein meal ideas</h2>
       <h3>Breakfast (~30–40g protein)</h3>

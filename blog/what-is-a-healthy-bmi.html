@@ -36,7 +36,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
     .highlight-box p{margin-bottom:0;}
-    .bmi-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .bmi-table{width:100%;min-width:320px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .bmi-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .bmi-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .bmi-table tr:last-child td{border-bottom:none;}
@@ -73,6 +73,10 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -177,7 +181,7 @@
 
       <h2 id="bmi-ranges">BMI ranges: what the numbers mean</h2>
       <p>The World Health Organization defines the following categories for adults:</p>
-      <table class="bmi-table">
+      <div class="table-wrapper"><table class="bmi-table">
         <thead>
           <tr><th>BMI Range</th><th>Category</th></tr>
         </thead>
@@ -189,7 +193,7 @@
           <tr><td>35.0 – 39.9</td><td>Obese (Class II)</td></tr>
           <tr><td>40.0 and above</td><td>Obese (Class III)</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p>So a "healthy BMI" is generally considered to be between <strong>18.5 and 24.9</strong>. This range is associated with lower risk of weight-related health conditions like type 2 diabetes, cardiovascular disease, and hypertension.</p>
 
       <div class="highlight-box">

@@ -29,7 +29,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
     .highlight-box p{margin-bottom:0;font-size:.9rem;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.25rem 0;font-size:.875rem;}
+    .data-table{width:100%;min-width:390px;border-collapse:collapse;margin:1.25rem 0;font-size:.875rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.7rem 1rem;text-align:left;font-weight:500;font-size:.82rem;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.6rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -63,6 +63,10 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"How Much Fiber Per Day Do You Actually Need?","url":"https://mywellnesscalc.com/blog/how-much-fiber-per-day.html","description":"Daily fiber targets by age and gender, the difference between soluble and insoluble fiber, best food sources, and signs you're not getting enough.","datePublished":"2026-06-23","dateModified":"2026-06-23","publisher":{"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mywellnesscalc.com/blog/how-much-fiber-per-day.html"}}
@@ -93,7 +97,7 @@
       <h2>Daily fiber recommendations by age and gender</h2>
       <p>Fiber recommendations vary by age and gender. The values below are from the Institute of Medicine's Dietary Reference Intakes:</p>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Age / Gender</th><th>Daily fiber target</th></tr></thead>
         <tbody>
           <tr><td>Children 1–3 years</td><td>19g</td></tr>
@@ -109,7 +113,7 @@
           <tr><td>Pregnant women</td><td>28g</td></tr>
           <tr><td>Breastfeeding women</td><td>29g</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="highlight-box">
         <h4>The fiber gap is significant</h4>
@@ -145,7 +149,7 @@
 
       <h2>Best high-fiber foods</h2>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Food</th><th>Fiber per serving</th><th>Serving size</th></tr></thead>
         <tbody>
           <tr><td>Lentils (cooked)</td><td>15.6g</td><td>1 cup (198g)</td></tr>
@@ -163,7 +167,7 @@
           <tr><td>Quinoa (cooked)</td><td>5.2g</td><td>1 cup (185g)</td></tr>
           <tr><td>Whole wheat bread</td><td>2g</td><td>1 slice (30g)</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2>How to increase fiber intake practically</h2>
       <p>Going from low to high fiber too quickly causes bloating and discomfort. Increase intake gradually over 2–4 weeks, and drink more water as you do — fiber needs fluid to work properly.</p>

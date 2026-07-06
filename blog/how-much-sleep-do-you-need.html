@@ -30,7 +30,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
     .highlight-box p{margin-bottom:0;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table{width:100%;min-width:320px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -61,6 +61,10 @@
     .tool-link:hover{color:var(--sage-dark);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -155,7 +159,7 @@
       <h2 id="recommendations">Recommended sleep by age</h2>
       <p>The National Sleep Foundation and the American Academy of Sleep Medicine publish consensus recommendations based on large-scale research. Sleep needs decrease significantly from infancy through adulthood:</p>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Age group</th><th>Recommended hours</th></tr></thead>
         <tbody>
           <tr><td>Newborns (0–3 months)</td><td>14–17 hours</td></tr>
@@ -167,7 +171,7 @@
           <tr><td>Adults (18–64 years)</td><td>7–9 hours</td></tr>
           <tr><td>Older adults (65+)</td><td>7–8 hours</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="highlight-box">
         <h4>🧬 Genetic short sleepers</h4>

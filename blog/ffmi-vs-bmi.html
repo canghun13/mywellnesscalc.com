@@ -36,7 +36,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
     .highlight-box p{margin-bottom:0;}
-    .bmi-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .bmi-table{width:100%;min-width:390px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .bmi-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .bmi-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .bmi-table tr:last-child td{border-bottom:none;}
@@ -74,6 +74,10 @@
     .faq-item.open .faq-a{display:block;}
   
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -167,7 +171,7 @@
       <p>If you strength train consistently, <strong>FFMI is the more meaningful number</strong>. It's built from fat-free mass rather than total weight, so it reflects real muscle gain rather than penalizing you for it. If you don't train and just want a fast general health screen, <strong>BMI is simpler</strong> — it needs one less input and is the standard most healthcare providers still use.</p>
 
       <h2 id="how-they-differ">How the two calculations differ</h2>
-      <table class="bmi-table">
+      <div class="table-wrapper"><table class="bmi-table">
         <thead><tr><th></th><th>BMI</th><th>FFMI</th></tr></thead>
         <tbody>
           <tr><td>Formula</td><td>weight ÷ height²</td><td>fat-free mass ÷ height²</td></tr>
@@ -176,7 +180,7 @@
           <tr><td>Best for</td><td>General population screening</td><td>Tracking muscularity, lifters &amp; athletes</td></tr>
           <tr><td>Height adjustment available?</td><td>No</td><td>Yes (normalized FFMI)</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p>The formulas look almost identical — both divide a mass figure by height squared. The entire difference comes down to which mass they use: BMI uses everything you weigh, FFMI uses only the fat-free portion.</p>
 
       <h2 id="where-bmi-fails">Where BMI falls apart</h2>

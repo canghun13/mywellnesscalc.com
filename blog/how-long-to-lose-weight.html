@@ -29,7 +29,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
     .highlight-box p{margin-bottom:0;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table{width:100%;min-width:520px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -63,6 +63,10 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -157,7 +161,7 @@
       <p>In practice, actual fat loss is less linear than this formula suggests. Your TDEE decreases as you lose weight. Water retention fluctuates significantly. And the composition of weight lost — how much comes from fat versus muscle — depends on protein intake, training, and the size of the deficit.</p>
 
       <h2 id="timeline">Realistic weight loss timeline by deficit</h2>
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Daily deficit</th><th>Weekly loss (fat)</th><th>Monthly loss</th><th>Assessment</th></tr></thead>
         <tbody>
           <tr><td>250 kcal/day</td><td>~0.25 kg</td><td>~1 kg</td><td>Very gentle, sustainable long-term</td></tr>
@@ -165,7 +169,7 @@
           <tr><td>750 kcal/day</td><td>~0.7 kg</td><td>~3 kg</td><td>Moderate — requires high protein</td></tr>
           <tr><td>1000 kcal/day</td><td>~0.9 kg</td><td>~4 kg</td><td>Aggressive — elevated muscle risk</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="highlight-box">
         <h4>📌 Why the first two weeks look different</h4>
@@ -175,7 +179,7 @@
       <h2 id="goals">Time to reach common weight loss goals</h2>
       <p>These estimates assume a consistent 500 kcal/day deficit producing ~0.5kg/week of fat loss. Actual timelines vary based on starting TDEE, consistency, and metabolic adaptation.</p>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Weight loss goal</th><th>At 0.25 kg/week</th><th>At 0.5 kg/week</th><th>At 0.75 kg/week</th></tr></thead>
         <tbody>
           <tr><td>5 kg (11 lbs)</td><td>20 weeks</td><td>10 weeks</td><td>7 weeks</td></tr>
@@ -183,7 +187,7 @@
           <tr><td>15 kg (33 lbs)</td><td>60 weeks</td><td>30 weeks</td><td>20 weeks</td></tr>
           <tr><td>20 kg (44 lbs)</td><td>80 weeks</td><td>40 weeks</td><td>27 weeks</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="cta-box">
         <p>Get your personal calorie target and estimated timeline based on your TDEE and goal weight.</p>

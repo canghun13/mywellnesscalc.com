@@ -29,7 +29,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
     .highlight-box p{margin-bottom:0;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table{width:100%;min-width:520px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -63,6 +63,10 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -173,7 +177,7 @@
       <p>Body fat norms differ significantly between men and women. Women naturally carry more fat due to hormonal differences, reproductive function, and differences in fat distribution. They also shift upward with age as muscle mass naturally declines.</p>
 
       <h3>Women</h3>
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Category</th><th>Age 20–39</th><th>Age 40–59</th><th>Age 60+</th></tr></thead>
         <tbody>
           <tr><td>Essential fat</td><td>10–13%</td><td>10–13%</td><td>10–13%</td></tr>
@@ -182,10 +186,10 @@
           <tr><td>Acceptable</td><td>25–31%</td><td>26–32%</td><td>27–33%</td></tr>
           <tr><td>Obese</td><td>32%+</td><td>33%+</td><td>34%+</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h3>Men</h3>
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Category</th><th>Age 20–39</th><th>Age 40–59</th><th>Age 60+</th></tr></thead>
         <tbody>
           <tr><td>Essential fat</td><td>2–5%</td><td>2–5%</td><td>2–5%</td></tr>
@@ -194,7 +198,7 @@
           <tr><td>Acceptable</td><td>18–24%</td><td>20–26%</td><td>22–27%</td></tr>
           <tr><td>Obese</td><td>25%+</td><td>27%+</td><td>28%+</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="highlight-box">
         <h4>📌 Why ranges shift with age</h4>

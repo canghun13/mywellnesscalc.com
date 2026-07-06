@@ -62,7 +62,7 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .article-section ul{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
     .article-section li{margin-bottom:.3rem;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .data-table{width:100%;min-width:390px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--cream);padding:.6rem .875rem;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);border-bottom:2px solid var(--border);}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.55rem .875rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -78,6 +78,10 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    main { min-width:0; }
   </style>
 <script type="application/ld+json">
 {
@@ -221,7 +225,7 @@
       <p>Higher LBM — particularly muscle mass — is strongly associated with functional independence, fall prevention, and longevity, especially in adults over 50. Age-related muscle loss (sarcopenia) begins as early as the 30s and accelerates after 60; regular resistance training is the most evidence-backed strategy for maintaining LBM with age.</p>
 
       <h2>Average lean body mass by age and gender</h2>
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Age range</th><th>Avg LBM — Men</th><th>Avg LBM — Women</th></tr></thead>
         <tbody>
           <tr><td>20–29</td><td>61–68 kg (134–150 lb)</td><td>42–48 kg (93–106 lb)</td></tr>
@@ -230,7 +234,7 @@
           <tr><td>50–59</td><td>59–67 kg (130–148 lb)</td><td>41–47 kg (90–104 lb)</td></tr>
           <tr><td>60–69</td><td>57–65 kg (126–143 lb)</td><td>40–46 kg (88–101 lb)</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p>These are estimates based on population averages. Athletic individuals will typically have higher LBM than the averages shown; sedentary individuals may be lower.</p>
 
       <h2>How to increase lean body mass</h2>

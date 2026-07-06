@@ -35,7 +35,7 @@
     .macro-card.fat{background:#fff8e1;border:1px solid #ffe082;}
     .macro-card h3{margin-top:0;font-size:1.1rem;}
     .macro-card p{margin-bottom:0;font-size:.875rem;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table{width:100%;min-width:390px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -69,6 +69,10 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -160,14 +164,14 @@
       <h2 id="what-are">What are macronutrients?</h2>
       <p>Macronutrients — protein, carbohydrates, and fat — are the three categories of nutrients that provide calories. Micronutrients (vitamins and minerals) are also essential but provide no calories. Every food you eat is a combination of these three macronutrients in different proportions, plus water and micronutrients.</p>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Macronutrient</th><th>Calories per gram</th><th>Primary roles</th></tr></thead>
         <tbody>
           <tr><td>Protein</td><td>4 kcal/g</td><td>Muscle, enzymes, hormones, immune function</td></tr>
           <tr><td>Carbohydrates</td><td>4 kcal/g</td><td>Primary energy source, brain fuel, glycogen storage</td></tr>
           <tr><td>Fat</td><td>9 kcal/g</td><td>Hormones, fat-soluble vitamins, cell membranes, energy storage</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2 id="protein">Protein: the most important macronutrient for body composition</h2>
 

@@ -29,7 +29,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
     .highlight-box p{margin-bottom:0;font-size:.9rem;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.25rem 0;font-size:.875rem;}
+    .data-table{width:100%;min-width:520px;border-collapse:collapse;margin:1.25rem 0;font-size:.875rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.7rem 1rem;text-align:left;font-weight:500;font-size:.82rem;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.6rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -63,6 +63,10 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Zone 2 Heart Rate by Age: Exact BPM Chart for Every Decade","url":"https://mywellnesscalc.com/blog/zone-2-heart-rate-by-age.html","description":"Find your exact Zone 2 heart rate by age — BPM ranges for your 20s through 70s, the Karvonen formula explained, and a free calculator for your personal number.","datePublished":"2026-06-23","dateModified":"2026-07-06","publisher":{"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mywellnesscalc.com/blog/zone-2-heart-rate-by-age.html"}}
@@ -93,7 +97,7 @@
       <h2>Zone 2 heart rate by age: reference chart</h2>
       <p>Zone 2 is typically defined as 60–70% of your maximum heart rate (max HR). The most common max HR estimate is <strong>220 − your age</strong>. Here's how that translates to Zone 2 targets across age groups:</p>
 
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Age</th><th>Est. Max HR</th><th>Zone 2 (60–70%)</th><th>Zone 2 — Karvonen* (avg RHR 65)</th></tr></thead>
         <tbody>
           <tr><td>20</td><td>200 bpm</td><td>120–140 bpm</td><td>143–156 bpm</td></tr>
@@ -108,7 +112,7 @@
           <tr><td>65</td><td>155 bpm</td><td>93–109 bpm</td><td>114–126 bpm</td></tr>
           <tr><td>70</td><td>150 bpm</td><td>90–105 bpm</td><td>110–123 bpm</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p style="font-size:.8rem;color:var(--light);">*Karvonen formula: Zone 2 = Resting HR + (Heart Rate Reserve × 60–70%). HRR = Max HR − Resting HR. Assumes average resting HR of 65 bpm — adjust for your actual resting HR.</p>
 
       <div class="cta-box">

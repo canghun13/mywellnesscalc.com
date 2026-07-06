@@ -30,7 +30,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;}
     .highlight-box p{margin-bottom:0;}
-    .data-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .data-table{width:100%;min-width:320px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .data-table th{word-wrap:break-word;overflow-wrap:break-word;background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .data-table td{word-wrap:break-word;overflow-wrap:break-word;padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .data-table tr:last-child td{border-bottom:none;}
@@ -65,6 +65,10 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
   
+  
+    .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
+    .table-wrapper table { margin:0; }
+    .article-main { min-width:0; }
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -184,7 +188,7 @@
       </div>
 
       <h2 id="causes">Who is at risk?</h2>
-      <table class="data-table">
+      <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Risk factor</th><th>Why it increases risk</th></tr></thead>
         <tbody>
           <tr><td>Limited sun exposure</td><td>Indoor work, sunscreen use, climate</td></tr>
@@ -195,7 +199,7 @@
           <tr><td>Malabsorption conditions</td><td>Crohn's, celiac, gastric bypass reduce absorption</td></tr>
           <tr><td>Breastfed infants</td><td>Breast milk is low in Vitamin D</td></tr>
         </tbody>
-      </table>
+      </table></div>
 
       <h2 id="how-much">How much Vitamin D do you need?</h2>
       <p>The official RDA is 600 IU/day for adults under 70, and 800 IU/day for those over 70. However, many researchers argue these values are too low to achieve and maintain optimal blood levels — particularly for people with limited sun exposure.</p>
