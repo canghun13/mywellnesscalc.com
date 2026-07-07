@@ -114,4 +114,9 @@
   <!-- New tool - July 2026 -->
   <url><loc>https://mywellnesscalc.com/tools/ffmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- New quizzes - July 2026 -->
+  <url><loc>https://mywellnesscalc.com/quiz/muscle-building-starting-point.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/zone-2-fitness-level.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/recovery-type.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>
