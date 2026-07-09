@@ -59,11 +59,14 @@
     .info-section h3{font-size:1rem;font-weight:600;margin:1.5rem 0 .5rem;}
     .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
     .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
-    .info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .info-table{width:100%;min-width:390px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
     .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
     .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .info-table tr:last-child td{border-bottom:none;}
     .info-table tr:nth-child(even) td{background:var(--cream);}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .info-table{margin:0;}
+    .main-col{min-width:0;}
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.25rem 1.5rem;margin:1.25rem 0;border-left:3px solid var(--sage);}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.4rem;color:var(--charcoal);}
     .highlight-box p{margin-bottom:0;font-size:.875rem;}
@@ -334,6 +337,7 @@
       <p>The official RDA for protein is 0.8g per kg of body weight — but this represents the <em>minimum to prevent deficiency</em> in a sedentary adult, not an optimal intake. For anyone who exercises, wants to lose fat, or is over 50, the research consistently supports higher intakes.</p>
 
       <h3>Protein targets by goal</h3>
+      <div class="table-wrapper">
       <table class="info-table">
         <thead><tr><th>Goal</th><th>Recommended intake</th><th>Why</th></tr></thead>
         <tbody>
@@ -344,6 +348,7 @@
           <tr><td>Adults 50+</td><td>1.2–1.6 g/kg</td><td>Counters age-related muscle loss (sarcopenia)</td></tr>
         </tbody>
       </table>
+      </div>
 
       <h3>Why protein needs are higher during fat loss</h3>
       <p>When you're in a calorie deficit, your body can use muscle protein as an energy source through gluconeogenesis. Higher protein intake during fat loss (1.8–2.4g/kg) provides abundant amino acids, reducing the body's need to break down muscle tissue. Studies consistently show that high-protein diets during calorie restriction result in greater fat loss and better lean mass retention compared to lower-protein approaches at the same calorie intake.</p>
@@ -364,6 +369,7 @@
       <p>Leucine is the amino acid most responsible for triggering muscle protein synthesis. Animal proteins and soy are naturally high in leucine. Other plant proteins are lower, which is why plant-based eaters benefit from slightly higher total protein targets (10–20% more).</p>
 
       <h3>Best protein sources by category</h3>
+      <div class="table-wrapper">
       <table class="info-table">
         <thead><tr><th>Food</th><th>Protein per 100g</th><th>Notes</th></tr></thead>
         <tbody>
@@ -379,6 +385,7 @@
           <tr><td>Whey protein</td><td>24g/scoop</td><td>Fast-absorbing, high leucine</td></tr>
         </tbody>
       </table>
+      </div>
 
       <h3>Protein and the thermic effect of food</h3>
       <p>Protein has the highest thermic effect of any macronutrient — your body burns 20–30% of protein calories during digestion and metabolism, compared to 5–10% for carbohydrates and 0–3% for fats. This means a diet higher in protein naturally creates a small calorie deficit even without reducing portion sizes, contributing to its effectiveness for fat loss.</p>

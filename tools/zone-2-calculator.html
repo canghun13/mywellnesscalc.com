@@ -77,6 +77,9 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper table{margin:0;}
+    .main-col{min-width:0;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
   </style>
 <!-- SCHEMA_START -->
@@ -312,7 +315,8 @@
       <p>If you are new to structured training, Zone 2 will likely feel embarrassingly slow. This is normal. Within 4–6 weeks of consistent Zone 2 sessions, most beginners notice that the same heart rate corresponds to a faster pace or more comfortable effort. The adaptation is happening even when progress is hard to see — consistency over 8–12 weeks is where the meaningful changes emerge.</p>
 
       <h3>Zone 2 reference table by age</h3>
-      <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
+      <div class="table-wrapper">
+      <table style="width:100%;min-width:520px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
         <thead><tr style="background:var(--sage-dark);color:white;"><th style="padding:.625rem 1rem;text-align:left;">Age</th><th style="padding:.625rem 1rem;text-align:left;">Est. Max HR</th><th style="padding:.625rem 1rem;text-align:left;">Zone 2 (% Max HR)</th><th style="padding:.625rem 1rem;text-align:left;">Zone 2 (Karvonen, RHR 60)</th></tr></thead>
         <tbody>
           <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">25</td><td style="padding:.5rem 1rem;color:var(--mid);">195</td><td style="padding:.5rem 1rem;color:var(--mid);">117–137 bpm</td><td style="padding:.5rem 1rem;color:var(--mid);">141–161 bpm</td></tr>
@@ -325,6 +329,7 @@
           <tr><td style="padding:.5rem 1rem;color:var(--mid);">60</td><td style="padding:.5rem 1rem;color:var(--mid);">160</td><td style="padding:.5rem 1rem;color:var(--mid);">96–112 bpm</td><td style="padding:.5rem 1rem;color:var(--mid);">120–136 bpm</td></tr>
         </tbody>
       </table>
+      </div>
       <p style="font-size:.8rem;color:var(--light);">Karvonen values assume resting heart rate of 60 bpm. Use the calculator above for your personal range.</p>
 
       <div class="faq-section">

@@ -58,11 +58,14 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
-    .hr-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
+    .hr-table{width:100%;min-width:520px;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
     .hr-table th{background:var(--sage-dark);color:white;padding:.6rem .875rem;text-align:left;font-weight:500;}
     .hr-table td{padding:.6rem .875rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .hr-table tr:last-child td{border-bottom:none;}
     .hr-table tr:nth-child(even) td{background:var(--cream);}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+    .table-wrapper .hr-table{margin:0;}
+    .article-main{min-width:0;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
   </style>
 <!-- SCHEMA_START -->
@@ -242,6 +245,7 @@
       <p>Example for a 45-year-old: Max HR = 175 bpm. Fat burning zone = 105–123 bpm.</p>
 
       <h3>Fat burning zone by age (reference table)</h3>
+      <div class="table-wrapper">
       <table class="hr-table">
         <thead>
           <tr><th>Age</th><th>Est. Max HR</th><th>Fat Burning Zone (60–70%)</th></tr>
@@ -258,6 +262,7 @@
           <tr><td>65</td><td>155 bpm</td><td>93–109 bpm</td></tr>
         </tbody>
       </table>
+      </div>
       <p>These figures use the 220 − age formula. Actual max HR can vary by 10–15 bpm from this estimate.</p>
 
       <h3>Method 2: Karvonen method (more accurate)</h3>
@@ -338,6 +343,7 @@
       <p>A 2023 study in the <em>Journal of Physiology</em> found that 8 weeks of consistent Zone 2 training increased markers of mitochondrial biogenesis by 40–60% in previously untrained adults. This means more fat-burning capacity not just during exercise, but at rest and at higher exercise intensities too. The aerobic base you build in Zone 2 makes everything else more efficient.</p>
 
       <h3>Fat oxidation rates across intensities</h3>
+      <div class="table-wrapper">
       <table class="hr-table">
         <thead><tr><th>Exercise intensity</th><th>% HR max</th><th>Primary fuel</th><th>Fat proportion</th></tr></thead>
         <tbody>
@@ -348,6 +354,7 @@
           <tr><td>Maximal (Zone 5)</td><td>90–100%</td><td>Carbohydrates</td><td>&lt;10%</td></tr>
         </tbody>
       </table>
+      </div>
       <p>Note that even though higher zones use less fat proportionally, total calorie burn per minute is higher — which is why both approaches have merit, depending on your goals and available time.</p>
 
       <h2 id="vs-hiit">Fat burning zone vs HIIT: which is better for fat loss?</h2>
@@ -394,6 +401,7 @@
       <h2 id="weekly">Sample weekly training plan using the fat burning zone</h2>
       <p>This template works for most adults looking to improve fat loss, cardiovascular health, and aerobic fitness. Adjust volume based on your current fitness level and available time.</p>
 
+      <div class="table-wrapper">
       <table class="hr-table">
         <thead><tr><th>Day</th><th>Session</th><th>Duration</th><th>Notes</th></tr></thead>
         <tbody>
@@ -406,6 +414,7 @@
           <tr><td>Sunday</td><td>HIIT or rest</td><td>20–25 min</td><td>Optional: 8–10 intervals at 85–90% max HR. Or full rest.</td></tr>
         </tbody>
       </table>
+      </div>
       <p>After 4–6 weeks, increase the Saturday session to 90–120 minutes. After 8–12 weeks, your pace at the same heart rate should be noticeably faster — a clear sign your aerobic base is developing.</p>
 
 

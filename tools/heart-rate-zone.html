@@ -67,6 +67,9 @@
     .related-list li:last-child{border-bottom:none;}
     .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
     .related-list a:hover{color:var(--sage-dark);}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper table{margin:0;}
+    .main-col{min-width:0;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
   
     .faq-section{margin-top:2.5rem;}
@@ -283,7 +286,8 @@
       <p>Zone 5 (90–100% max HR) is reserved for short, maximal bursts — sprints, intervals of 30 seconds to 2–3 minutes. These sessions develop VO2 max, neuromuscular power, and anaerobic capacity. Zone 5 cannot be sustained for more than a few minutes and requires full recovery between efforts. Two Zone 5 sessions per week is typically the maximum for trained athletes; once weekly is more appropriate for recreational fitness.</p>
 
       <h3>Practical training balance by goal</h3>
-      <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
+      <div class="table-wrapper">
+      <table style="width:100%;min-width:520px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
         <thead><tr style="background:var(--sage-dark);color:white;"><th style="padding:.625rem 1rem;text-align:left;">Goal</th><th style="padding:.625rem 1rem;text-align:left;">Zone 1–2</th><th style="padding:.625rem 1rem;text-align:left;">Zone 3–4</th><th style="padding:.625rem 1rem;text-align:left;">Zone 5</th></tr></thead>
         <tbody>
           <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">General health / longevity</td><td style="padding:.5rem 1rem;color:var(--mid);">70–80%</td><td style="padding:.5rem 1rem;color:var(--mid);">15–20%</td><td style="padding:.5rem 1rem;color:var(--mid);">5%</td></tr>
@@ -292,6 +296,7 @@
           <tr><td style="padding:.5rem 1rem;color:var(--mid);">General fitness (mixed)</td><td style="padding:.5rem 1rem;color:var(--mid);">50–60%</td><td style="padding:.5rem 1rem;color:var(--mid);">30–35%</td><td style="padding:.5rem 1rem;color:var(--mid);">10%</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
