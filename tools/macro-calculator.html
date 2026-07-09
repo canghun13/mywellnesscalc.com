@@ -83,6 +83,14 @@
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.macro-cards{grid-template-columns:1fr}}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .info-table{margin:0;}
+    .info-table{width:100%;min-width:480px;border-collapse:collapse;font-size:.875rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
+    .main-col{min-width:0;}
   
     .faq-section{margin-top:2.5rem;}
     .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
@@ -142,8 +150,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -178,10 +185,33 @@
         "@type": "Answer",
         "text": "It provides a research-based starting point. Actual needs vary based on individual metabolism, training intensity, sleep, and stress. Use the output as a starting point, track results over 3–4 weeks, and adjust by 10–15% in either direction if you're not seeing expected progress."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do carbs make you gain fat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — excess total calories cause fat gain, regardless of whether they come from carbs, protein, or fat. Carbohydrates get an undeserved reputation because refined carbs are easy to overeat, but in a calorie-controlled diet, carb intake itself doesn't cause fat gain any more than any other macronutrient consumed in excess."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a low-carb or low-fat diet better for fat loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research consistently shows similar fat loss outcomes between low-carb and low-fat diets when calories and protein are matched. The \"best\" approach is whichever macro split you can sustain consistently — adherence matters more than the specific ratio for most people pursuing fat loss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should macros change on training vs rest days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can help but isn't essential. Some people shift more carbohydrates to training days to fuel performance and recovery, keeping protein consistent and slightly reducing carbs on rest days. This is called macro cycling — it's an optimisation, not a requirement, and a flat daily target works well for most people."
+      }
     }
   ]
-}
-</script>
+}</script>
 <!-- SCHEMA_END -->
 </head>
 <body>
@@ -305,6 +335,21 @@
       <h3>How macro ratios are set</h3>
       <p>This calculator sets protein first based on body weight, then distributes remaining calories between carbohydrates and fat according to your selected goal. Fat loss goals use higher protein to preserve muscle. Muscle-building goals use higher carbs to support training intensity. Ketogenic splits set carbohydrates under 10% to promote fat adaptation. These are evidence-based starting points — individual response varies, so track your results over 4–6 weeks and adjust if needed.</p>
 
+      <h3>Typical macro splits by goal</h3>
+      <div class="table-wrapper">
+      <table class="info-table">
+        <thead><tr><th>Goal</th><th>Protein</th><th>Carbs</th><th>Fat</th></tr></thead>
+        <tbody>
+          <tr><td>Fat loss</td><td>35–40%</td><td>25–35%</td><td>25–30%</td></tr>
+          <tr><td>Maintenance / general health</td><td>25–30%</td><td>40–50%</td><td>25–30%</td></tr>
+          <tr><td>Muscle building</td><td>25–30%</td><td>45–55%</td><td>20–25%</td></tr>
+          <tr><td>Endurance training</td><td>15–20%</td><td>55–65%</td><td>20–25%</td></tr>
+          <tr><td>Ketogenic</td><td>20–25%</td><td>&lt;10%</td><td>65–75%</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>These ranges are starting frameworks rather than rigid rules — protein target and total calories matter far more for outcomes than the exact carb-to-fat ratio within a given goal.</p>
+
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
@@ -323,6 +368,18 @@
           <div class="faq-q">How accurate is this macro calculator?</div>
           <div class="faq-a">It provides a research-based starting point. Actual needs vary based on individual metabolism, training intensity, sleep, and stress. Use the output as a starting point, track results over 3–4 weeks, and adjust by 10–15% in either direction if you're not seeing expected progress.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">Do carbs make you gain fat?</div>
+          <div class="faq-a">No — excess total calories cause fat gain, regardless of whether they come from carbs, protein, or fat. Carbohydrates get an undeserved reputation because refined carbs are easy to overeat, but in a calorie-controlled diet, carb intake itself doesn't cause fat gain any more than any other macronutrient consumed in excess.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is a low-carb or low-fat diet better for fat loss?</div>
+          <div class="faq-a">Research consistently shows similar fat loss outcomes between low-carb and low-fat diets when calories and protein are matched. The "best" approach is whichever macro split you can sustain consistently — adherence matters more than the specific ratio for most people pursuing fat loss.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should macros change on training vs rest days?</div>
+          <div class="faq-a">It can help but isn't essential. Some people shift more carbohydrates to training days to fuel performance and recovery, keeping protein consistent and slightly reducing carbs on rest days. This is called macro cycling — it's an optimisation, not a requirement, and a flat daily target works well for most people.</div>
+        </div>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> Macro recommendations are general estimates for healthy adults. Consult a registered dietitian for personalised guidance, especially if you have diabetes, kidney disease, or other conditions affected by diet.</div>
@@ -338,6 +395,8 @@
         <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
         <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
         <li><a href="if-calculator.html">⏱️ Intermittent Fasting</a></li>
+        <li><a href="protein-calculator.html">🥩 Protein Intake Calculator</a></li>
+        <li><a href="body-fat-calculator.html">📏 Body Fat % Estimator</a></li>
       </ul>
     </div>
   </div>

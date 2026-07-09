@@ -81,6 +81,14 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .info-table{margin:0;}
+    .info-table{width:100%;min-width:390px;border-collapse:collapse;font-size:.875rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
+    .main-col{min-width:0;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -130,8 +138,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -174,10 +181,25 @@
         "@type": "Answer",
         "text": "Yes — higher protein intake supports fat loss during menopause through several mechanisms: it increases satiety (keeping you fuller longer), preserves muscle mass during a calorie deficit (muscle burns more calories at rest), and has a higher thermic effect than carbs or fat (meaning more calories are burned digesting it). Combined with resistance training, adequate protein is the most evidence-based approach to managing body composition changes during menopause."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I take a protein supplement, or is food enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whole foods are sufficient for most women who plan their meals with protein in mind. A supplement (like whey or plant protein powder) is a convenient way to close the gap on busy days or hit higher targets without excess calories — it's not required, but it's a practical tool if you're consistently falling short through food alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need more protein if I'm doing strength training after 40?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Resistance training increases the demand for protein to repair and build muscle tissue, and combined with anabolic resistance, women over 40 who lift weights generally benefit from the higher end of the recommended range (1.6–2.0g/kg). Protein without resistance training will slow muscle loss; protein with resistance training can actively build and maintain muscle."
+      }
     }
   ]
-}
-</script>
+}</script>
 <!-- SCHEMA_END -->
 </head>
 <body>
@@ -308,6 +330,22 @@
       <h3>Spreading protein across the day</h3>
       <p>Due to anabolic resistance, women over 40 benefit from distributing protein evenly across 3–4 meals rather than eating most of it in one sitting. Aim for at least 30g per meal to maximise muscle protein synthesis at each eating occasion.</p>
 
+      <h3>Daily protein targets by body weight</h3>
+      <p>Using the 1.2–1.6g/kg range recommended for active women over 40 as a starting point:</p>
+      <div class="table-wrapper">
+      <table class="info-table">
+        <thead><tr><th>Body weight</th><th>1.2 g/kg (min)</th><th>1.6 g/kg (higher end)</th></tr></thead>
+        <tbody>
+          <tr><td>55 kg (121 lb)</td><td>66 g</td><td>88 g</td></tr>
+          <tr><td>65 kg (143 lb)</td><td>78 g</td><td>104 g</td></tr>
+          <tr><td>75 kg (165 lb)</td><td>90 g</td><td>120 g</td></tr>
+          <tr><td>85 kg (187 lb)</td><td>102 g</td><td>136 g</td></tr>
+          <tr><td>95 kg (209 lb)</td><td>114 g</td><td>152 g</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Post-menopausal women or those doing regular resistance training often benefit from pushing toward the higher end, or even up to 2.0g/kg — use the calculator above for a number tailored to your exact weight and activity level.</p>
+
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
@@ -330,6 +368,14 @@
           <div class="faq-q">Does protein help with menopause weight gain?</div>
           <div class="faq-a">Yes — higher protein intake supports fat loss during menopause through several mechanisms: it increases satiety (keeping you fuller longer), preserves muscle mass during a calorie deficit (muscle burns more calories at rest), and has a higher thermic effect than carbs or fat (meaning more calories are burned digesting it). Combined with resistance training, adequate protein is the most evidence-based approach to managing body composition changes during menopause.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I take a protein supplement, or is food enough?</div>
+          <div class="faq-a">Whole foods are sufficient for most women who plan their meals with protein in mind. A supplement (like whey or plant protein powder) is a convenient way to close the gap on busy days or hit higher targets without excess calories — it's not required, but it's a practical tool if you're consistently falling short through food alone.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need more protein if I'm doing strength training after 40?</div>
+          <div class="faq-a">Yes. Resistance training increases the demand for protein to repair and build muscle tissue, and combined with anabolic resistance, women over 40 who lift weights generally benefit from the higher end of the recommended range (1.6–2.0g/kg). Protein without resistance training will slow muscle loss; protein with resistance training can actively build and maintain muscle.</div>
+        </div>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> Protein recommendations are based on population-level research. Individual needs vary. If you have kidney disease, liver conditions, or other medical concerns, consult a healthcare professional before significantly changing your protein intake.</div>
@@ -346,6 +392,7 @@
         <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
         <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
         <li><a href="body-fat-calculator.html">📏 Body Fat % Estimator</a></li>
+        <li><a href="one-rep-max.html">🏋️ One Rep Max Calculator</a></li>
       </ul>
     </div>
     <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
