@@ -49,7 +49,8 @@
     .result-unit{font-size:1rem;color:rgba(255,255,255,.7);margin-top:.25rem;}
     .result-label{font-size:.85rem;color:rgba(255,255,255,.6);margin-top:.35rem;}
     .pct-table-wrap{background:white;border:1px solid var(--border);border-radius:16px;overflow:hidden;}
-    .pct-table{width:100%;border-collapse:collapse;font-size:.875rem;}
+    .pct-table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .pct-table{width:100%;min-width:420px;border-collapse:collapse;font-size:.875rem;}
     .pct-table th{background:var(--cream);padding:.625rem 1rem;text-align:left;font-weight:600;color:var(--mid);font-size:.8rem;letter-spacing:.03em;text-transform:uppercase;}
     .pct-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .pct-table tr:last-child td{border-bottom:none;}
@@ -278,10 +279,12 @@
           <div class="result-label">Estimated One Rep Max</div>
         </div>
         <div class="pct-table-wrap">
+          <div class="pct-table-scroll">
           <table class="pct-table">
             <thead><tr><th>% of 1RM</th><th>Weight</th><th>Purpose</th></tr></thead>
             <tbody id="pct-body"></tbody>
           </table>
+          </div>
         </div>
       
         <button class="pdf-download-btn" onclick="saveAsPDF()">📄 Save result as PDF</button>

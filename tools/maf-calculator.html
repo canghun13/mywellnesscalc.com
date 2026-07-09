@@ -63,7 +63,10 @@
     .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
     .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
     .info-section li{margin-bottom:.4rem;}
-    .compare-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;}
+    .compare-table{width:100%;min-width:390px;border-collapse:collapse;margin:1rem 0 1.5rem;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0 1.5rem;}
+    .table-wrapper .compare-table{margin:0;}
+    .main-col{min-width:0;}
     .compare-table th{background:var(--sage-light);color:var(--sage-dark);font-size:.8rem;font-weight:600;padding:.75rem 1rem;text-align:left;}
     .compare-table td{font-size:.85rem;color:var(--mid);padding:.75rem 1rem;border-bottom:1px solid var(--border);line-height:1.5;}
     .compare-table tr:last-child td{border-bottom:none;}
@@ -294,6 +297,7 @@
       <h2>MAF vs Zone 2: what's the difference?</h2>
       <p>Both MAF training and Zone 2 training target the aerobic energy system, but they arrive at the target heart rate differently. Here's how they compare:</p>
 
+      <div class="table-wrapper">
       <table class="compare-table">
         <tr>
           <th>Feature</th>
@@ -331,6 +335,7 @@
           <td>General aerobic fitness guidance</td>
         </tr>
       </table>
+      </div>
 
       <p>For many people, especially those with injury history, inconsistent training, or health conditions, the MAF formula gives a more conservative and therefore safer training ceiling than a standard Zone 2 calculation. If you find MAF and Zone 2 give you very different numbers, it's worth reflecting on which adjustment category applies to you honestly.</p>
 

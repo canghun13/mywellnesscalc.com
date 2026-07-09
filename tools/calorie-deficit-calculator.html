@@ -67,7 +67,10 @@
     .info-section h3{font-size:1rem;font-weight:600;margin:1.5rem 0 .5rem;}
     .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
     .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
-    .info-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .info-table{width:100%;min-width:390px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .info-table{margin:0;}
+    .main-col{min-width:0;}
     .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
     .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .info-table tr:last-child td{border-bottom:none;}
@@ -320,6 +323,7 @@
       <p>A commonly cited figure is that 1 pound (0.45kg) of fat contains approximately 3,500 calories. A daily deficit of 500 kcal creates a weekly deficit of 3,500 kcal — roughly 0.45kg of fat loss per week. While useful as a rough guide, actual fat loss is more variable due to metabolic adaptation, water retention, and individual differences.</p>
 
       <h3>How big should your deficit be?</h3>
+      <div class="table-wrapper">
       <table class="info-table">
         <thead><tr><th>Deficit size</th><th>Weekly loss</th><th>Assessment</th></tr></thead>
         <tbody>
@@ -329,6 +333,7 @@
           <tr><td>~1000 kcal/day</td><td>~1.0 kg</td><td>Aggressive — elevated muscle loss risk, harder to sustain</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="highlight-box">
         <h4>📌 Why bigger deficits aren't always better</h4>

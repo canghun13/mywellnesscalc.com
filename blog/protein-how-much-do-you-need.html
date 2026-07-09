@@ -35,7 +35,7 @@
     .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
     .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
     .highlight-box p{margin-bottom:0;}
-    .protein-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .protein-table{width:100%;min-width:650px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .protein-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .protein-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .protein-table tr:last-child td{border-bottom:none;}
@@ -70,6 +70,9 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+      .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .protein-table{margin:0;}
+      .article-main{min-width:0;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -190,6 +193,7 @@
       <p>Age-related muscle loss (sarcopenia) begins in your 30s and accelerates after 60. Older adults also experience "anabolic resistance" — the body responds less efficiently to protein, meaning you need more of it to achieve the same muscle protein synthesis as a younger person. Most sports nutrition researchers recommend <strong>1.2–1.6 g/kg</strong> for older adults, with some going as high as 2.0 g/kg for those over 70.</p>
 
       <h2 id="reference-table">Protein targets by body weight</h2>
+      <div class="table-wrapper">
       <table class="protein-table">
         <thead>
           <tr><th>Body Weight</th><th>Sedentary (0.8 g/kg)</th><th>Active (1.4 g/kg)</th><th>Muscle Building (2.0 g/kg)</th></tr>
@@ -202,6 +206,7 @@
           <tr><td>100 kg (220 lb)</td><td>80 g</td><td>140 g</td><td>200 g</td></tr>
         </tbody>
       </table>
+      </div>
 
       <h2 id="distribution">Does meal timing and distribution matter?</h2>
       <p>Yes — to a degree. The body can only use roughly <strong>20–40 g of protein per meal</strong> for muscle protein synthesis (the upper limit varies by body size and training status). Consuming 150 g of protein in a single meal doesn't provide 3× the benefit of 50 g.</p>

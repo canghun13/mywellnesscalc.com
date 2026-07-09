@@ -39,7 +39,7 @@
     .compare-card{background:white;border:1px solid var(--border);border-radius:12px;padding:1.25rem;}
     .compare-card h4{font-size:1rem;font-weight:600;color:var(--sage-dark);margin-bottom:.5rem;}
     .compare-card p{font-size:.875rem;color:var(--mid);margin:0;}
-    .activity-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
+    .activity-table{width:100%;min-width:520px;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;}
     .activity-table th{background:var(--sage-dark);color:white;padding:.75rem 1rem;text-align:left;font-weight:500;}
     .activity-table td{padding:.625rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .activity-table tr:last-child td{border-bottom:none;}
@@ -74,6 +74,9 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+      .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .activity-table{margin:0;}
+      .article-main{min-width:0;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -207,6 +210,7 @@
       <h2 id="activity-multipliers">Activity multipliers</h2>
       <p>TDEE calculators estimate your total calorie needs by multiplying your BMR by an activity factor. The commonly used Mifflin-St Jeor equation uses these multipliers:</p>
 
+      <div class="table-wrapper">
       <table class="activity-table">
         <thead>
           <tr><th>Activity Level</th><th>Description</th><th>Multiplier</th></tr>
@@ -219,6 +223,7 @@
           <tr><td>Extra active</td><td>Very hard exercise, physical job</td><td>× 1.9</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="highlight-box">
         <h4>⚠️ Most people overestimate their activity level</h4>

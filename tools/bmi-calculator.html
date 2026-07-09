@@ -326,6 +326,8 @@
       .page-wrap { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
     }
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .main-col{min-width:0;}
   
     .faq-section{margin-top:2.5rem;}
     .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
@@ -538,6 +540,7 @@
         </div>
 
         <!-- Ranges table -->
+        <div class="table-wrapper">
         <table class="ranges-table" id="ranges-table">
           <tr id="row-underweight">
             <td class="range-name"><span class="range-dot" style="background:#6aadcf"></span>Underweight</td>
@@ -560,6 +563,7 @@
             <td class="range-val">35.0 and above</td>
           </tr>
         </table>
+        </div>
 
         <!-- Tip -->
         <div class="result-tip" id="result-tip"></div>

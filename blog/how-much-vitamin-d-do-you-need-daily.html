@@ -58,12 +58,15 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
-    .vd-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
+    .vd-table{width:100%;min-width:650px;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
     .vd-table th{background:var(--sage-dark);color:white;padding:.6rem .875rem;text-align:left;font-weight:500;}
     .vd-table td{padding:.6rem .875rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .vd-table tr:last-child td{border-bottom:none;}
     .vd-table tr:nth-child(even) td{background:var(--cream);}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+      .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .vd-table{margin:0;}
+      .article-main{min-width:0;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -171,6 +174,7 @@
       <h2 id="rda">How much vitamin D do you need per day?</h2>
       <p>The official recommended daily intake varies by age and authority. The figures below are based on guidelines from the National Institutes of Health (NIH) and the Endocrine Society.</p>
 
+      <div class="table-wrapper">
       <table class="vd-table">
         <thead>
           <tr><th>Age Group</th><th>RDA (IU)</th><th>RDA (mcg)</th><th>Upper Limit (IU)</th></tr>
@@ -184,6 +188,7 @@
           <tr><td>Pregnant / breastfeeding</td><td>600 IU</td><td>15 mcg</td><td>4,000 IU</td></tr>
         </tbody>
       </table>
+      </div>
 
       <p>These RDA figures represent the minimum to prevent deficiency in most healthy people. Many researchers and clinicians argue that <strong>1,000–2,000 IU per day</strong> is a more realistic target for adults with limited sun exposure — a view reflected in the Endocrine Society's guidelines, which suggest 1,500–2,000 IU daily for adults at risk of deficiency.</p>
 

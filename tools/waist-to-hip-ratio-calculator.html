@@ -54,6 +54,8 @@
     .ranges-table td{padding:.5rem .75rem;border-bottom:1px solid var(--border);font-size:.83rem;color:var(--mid);}
     .ranges-table tr:last-child td{border-bottom:none;}
     .ranges-table .current td{background:var(--cream);font-weight:600;color:var(--charcoal);}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .main-col{min-width:0;}
     .range-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:.4rem;}
     .result-tip{background:var(--cream);border-radius:12px;padding:1.25rem;font-size:.875rem;color:var(--mid);line-height:1.6;margin-top:1rem;}
     .result-tip strong{color:var(--charcoal);}
@@ -231,7 +233,9 @@
           <div><span class="risk-badge" id="riskBadge">—</span></div>
         </div>
 
+        <div class="table-wrapper">
         <table class="ranges-table" id="rangesTable"></table>
+        </div>
 
         <div class="result-tip" id="resultTip"></div>
       

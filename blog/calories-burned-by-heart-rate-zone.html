@@ -33,7 +33,7 @@
     .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
     .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
     .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;}
-    .zone-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
+    .zone-table{width:100%;min-width:780px;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
     .zone-table th{text-align:left;padding:.75rem 1rem;background:var(--cream);font-weight:600;font-size:.8rem;color:var(--mid);letter-spacing:.04em;text-transform:uppercase;border-bottom:2px solid var(--border);}
     .zone-table td{padding:.75rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);vertical-align:middle;}
     .zone-table tr:last-child td{border-bottom:none;}
@@ -62,6 +62,9 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+      .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .zone-table{margin:0;}
+      .article-main{min-width:0;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -169,6 +172,7 @@
       <h2>Calories burned per zone: what the numbers look like</h2>
       <p>The table below shows estimated calorie burn per 45-minute session for a 35-year-old, 70 kg (154 lb) person using the Keytel formula — one of the most validated heart-rate-based calorie estimation methods available.</p>
 
+      <div class="table-wrapper">
       <table class="zone-table">
         <thead>
           <tr>
@@ -217,6 +221,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
       <p>These are estimates for one specific profile. Your numbers will be different based on your age, weight, sex, and fitness level. Use the calculator below for a personalised result.</p>
 
