@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Body Fat Percentage Calculator – My Wellness Calc</title>
-  <meta name="description" content="Free body fat percentage calculator using the U.S. Navy method. Estimate your body fat % with just a tape measure — no calipers needed.">
+  <title>Body Fat Percentage Calculator: Navy Method, No Calipers</title>
+  <meta name="description" content="Estimate your body fat percentage in seconds using the U.S. Navy tape-measure method — no calipers needed. See your result against healthy ranges by age and sex.">
   <link rel="canonical" href="https://mywellnesscalc.com/tools/body-fat-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -79,6 +79,9 @@
     .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .table-wrapper .ranges-table{margin:1rem 0;}
+    .main-col{min-width:0;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
   
     .faq-section{margin-top:2.5rem;}
@@ -96,9 +99,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Body Fat Percentage Calculator",
+  "name": "Body Fat Percentage Calculator: Navy Method, No Calipers",
   "url": "https://mywellnesscalc.com/tools/body-fat-calculator.html",
-  "description": "Free body fat percentage calculator using the U.S. Navy method. Estimate your body fat % with just a tape measure — no calipers needed.",
+  "description": "Estimate your body fat percentage in seconds using the U.S. Navy tape-measure method — no calipers needed. See your result against healthy ranges by age and sex.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "All",
   "offers": {
@@ -241,6 +244,7 @@
           </div>
         </div>
 
+        <div class="table-wrapper">
         <table class="ranges-table" id="ranges-table-m">
           <tr id="rm-ef"><td class="range-name"><span class="range-dot" style="background:#6aadcf"></span>Essential fat</td><td class="range-val">2–5%</td></tr>
           <tr id="rm-ath"><td class="range-name"><span class="range-dot" style="background:#7a9e7e"></span>Athletes</td><td class="range-val">6–13%</td></tr>
@@ -248,6 +252,8 @@
           <tr id="rm-avg"><td class="range-name"><span class="range-dot" style="background:#e8b84b"></span>Average</td><td class="range-val">18–24%</td></tr>
           <tr id="rm-ob"><td class="range-name"><span class="range-dot" style="background:#d4845a"></span>Obese</td><td class="range-val">25%+</td></tr>
         </table>
+        </div>
+        <div class="table-wrapper">
         <table class="ranges-table" id="ranges-table-f" style="display:none">
           <tr id="rf-ef"><td class="range-name"><span class="range-dot" style="background:#6aadcf"></span>Essential fat</td><td class="range-val">10–13%</td></tr>
           <tr id="rf-ath"><td class="range-name"><span class="range-dot" style="background:#7a9e7e"></span>Athletes</td><td class="range-val">14–20%</td></tr>
@@ -255,17 +261,10 @@
           <tr id="rf-avg"><td class="range-name"><span class="range-dot" style="background:#e8b84b"></span>Average</td><td class="range-val">25–31%</td></tr>
           <tr id="rf-ob"><td class="range-name"><span class="range-dot" style="background:#d4845a"></span>Obese</td><td class="range-val">32%+</td></tr>
         </table>
+        </div>
 
         <div class="result-tip" id="result-tip"></div>
-        <a href="https://iherb.com/?rcode=YOUR_CODE" class="affiliate-card" target="_blank" rel="noopener sponsored">
-          <div class="aff-icon">💪</div>
-          <div class="aff-text">
-            <strong>Body composition supplements on iHerb</strong>
-            <span>Protein, CLA, L-carnitine, and more</span>
-          </div>
-          <span class="aff-badge">Partner</span>
-        </a>
-      
+
         <button class="pdf-download-btn" onclick="saveAsPDF()">📄 Save result as PDF</button>
         <div class="print-only print-footer">
           More free health calculators at <strong>mywellnesscalc.com</strong>
