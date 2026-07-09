@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One Rep Max Calculator (1RM) – Bench, Squat, Deadlift | My Wellness Calc</title>
-  <meta name="description" content="Free One Rep Max (1RM) calculator. Estimate your maximum lift for bench press, squat, deadlift and more using proven formulas. Get training percentages instantly.">
-  <meta property="og:title" content="One Rep Max Calculator – My Wellness Calc">
+  <title>One Rep Max (1RM) Calculator: Squat, Bench & Deadlift</title>
+  <meta name="description" content="Estimate your 1RM for squat, bench press, or deadlift from any rep max — plus a full training percentage breakdown and strength standards by experience level.">
+  <meta property="og:title" content="One Rep Max (1RM) Calculator: Squat, Bench & Deadlift – My Wellness Calc">
   <link rel="canonical" href="https://mywellnesscalc.com/tools/one-rep-max.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +63,14 @@
     .formula-box p{font-size:.875rem;color:var(--mid);margin-bottom:.5rem;}
     .formula-box p:last-child{margin-bottom:0;}
     .formula-box strong{color:var(--charcoal);}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .info-table{margin:0;}
+    .info-table{width:100%;min-width:480px;border-collapse:collapse;font-size:.875rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
+    .main-col{min-width:0;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
     .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
@@ -89,9 +97,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "One Rep Max Calculator (1RM) – Bench, Squat, Deadlift",
+  "name": "One Rep Max (1RM) Calculator: Squat, Bench & Deadlift",
   "url": "https://mywellnesscalc.com/tools/one-rep-max.html",
-  "description": "Free One Rep Max (1RM) calculator. Estimate your maximum lift for bench press, squat, deadlift and more using proven formulas. Get training percentages instantly.",
+  "description": "Estimate your 1RM for squat, bench press, or deadlift from any rep max — plus a full training percentage breakdown and strength standards by experience level.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "All",
   "offers": {
@@ -126,14 +134,13 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "One Rep Max Calculator (1RM) – Bench, Squat, Deadlift",
+      "name": "One Rep Max Calculator",
       "item": "https://mywellnesscalc.com/tools/one-rep-max.html"
     }
   ]
 }
 </script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -168,10 +175,41 @@
         "@type": "Answer",
         "text": "Strength increases fastest with beginners, so recalculating every 4–6 weeks is reasonable. Intermediate lifters might reassess every 8–12 weeks. A practical approach is to recalculate whenever a set feels significantly easier than expected at a given weight — this often signals a strength improvement."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What's a good 1RM for squat, bench, and deadlift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends entirely on bodyweight, training age, and sex — there's no single \"good\" number. As a rough guide, an intermediate lifter (1–2 years of consistent training) can typically squat around 1.5× bodyweight, bench 1.0× bodyweight, and deadlift 1.75× bodyweight. Progress relative to your own starting point matters far more than comparing to these general benchmarks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between 1RM and rep max?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1RM (one rep max) specifically means the maximum weight you can lift for exactly one repetition. \"Rep max\" is the broader term — a 5RM is the maximum weight you can lift for 5 reps, a 10RM for 10 reps, and so on. This calculator estimates your 1RM from any rep max you enter, since testing a true 1RM directly carries more injury risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which 1RM formula is most accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No single formula is universally most accurate — each was validated on different populations and rep ranges. Epley tends to work well across a broad range of reps and is the most commonly used. Brzycki is generally more accurate for lower rep sets (under 10). For the most reliable single number, use the \"Average of all\" option, which reduces the impact of any one formula's bias."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can beginners use 1RM percentages for programming?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but with caution. Beginners' strength improves quickly, so a 1RM estimate can become outdated within just a few weeks, causing percentage-based loads to feel too easy or too hard. Beginners often do better focusing on adding small amounts of weight or reps each session (progressive overload) rather than strictly following percentages calculated from an early 1RM estimate."
+      }
     }
   ]
-}
-</script>
+}</script>
 <!-- SCHEMA_END -->
 </head>
 <body>
@@ -278,6 +316,21 @@
       </div>
       <p>For best accuracy, use a weight you can lift for 3–8 reps with good form. Estimates become less reliable above 10 reps.</p>
 
+      <h3>1RM strength standards by experience level</h3>
+      <p>These figures are expressed as a multiple of bodyweight and give a rough sense of where your estimated 1RM sits relative to other lifters. They're general benchmarks, not targets — bodyweight, limb length, and training history all affect where you personally fall.</p>
+      <div class="table-wrapper">
+      <table class="info-table">
+        <thead><tr><th>Level</th><th>Squat</th><th>Bench Press</th><th>Deadlift</th></tr></thead>
+        <tbody>
+          <tr><td>Novice (0–6 months)</td><td>1.0× bodyweight</td><td>0.75× bodyweight</td><td>1.25× bodyweight</td></tr>
+          <tr><td>Intermediate (1–2 years)</td><td>1.5× bodyweight</td><td>1.0× bodyweight</td><td>1.75× bodyweight</td></tr>
+          <tr><td>Advanced (3+ years)</td><td>2.0× bodyweight</td><td>1.5× bodyweight</td><td>2.5× bodyweight</td></tr>
+          <tr><td>Elite / competitive</td><td>2.5× bodyweight</td><td>2.0× bodyweight</td><td>3.0× bodyweight</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Deadlift 1RM is typically the highest of the three main lifts because it uses the most muscle mass and has the shortest range of motion relative to load. Bench press is usually the lowest, since it relies more heavily on smaller upper-body muscle groups. If your ratios differ significantly from these patterns, it often points to a specific strength or mobility limitation worth addressing.</p>
+
       
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
@@ -297,6 +350,22 @@
           <div class="faq-q">How often should I test my 1RM?</div>
           <div class="faq-a">Strength increases fastest with beginners, so recalculating every 4–6 weeks is reasonable. Intermediate lifters might reassess every 8–12 weeks. A practical approach is to recalculate whenever a set feels significantly easier than expected at a given weight — this often signals a strength improvement.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">What's a good 1RM for squat, bench, and deadlift?</div>
+          <div class="faq-a">It depends entirely on bodyweight, training age, and sex — there's no single "good" number. As a rough guide, an intermediate lifter (1–2 years of consistent training) can typically squat around 1.5× bodyweight, bench 1.0× bodyweight, and deadlift 1.75× bodyweight. Progress relative to your own starting point matters far more than comparing to these general benchmarks.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What's the difference between 1RM and rep max?</div>
+          <div class="faq-a">1RM (one rep max) specifically means the maximum weight you can lift for exactly one repetition. "Rep max" is the broader term — a 5RM is the maximum weight you can lift for 5 reps, a 10RM for 10 reps, and so on. This calculator estimates your 1RM from any rep max you enter, since testing a true 1RM directly carries more injury risk.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Which 1RM formula is most accurate?</div>
+          <div class="faq-a">No single formula is universally most accurate — each was validated on different populations and rep ranges. Epley tends to work well across a broad range of reps and is the most commonly used. Brzycki is generally more accurate for lower rep sets (under 10). For the most reliable single number, use the "Average of all" option, which reduces the impact of any one formula's bias.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can beginners use 1RM percentages for programming?</div>
+          <div class="faq-a">Yes, but with caution. Beginners' strength improves quickly, so a 1RM estimate can become outdated within just a few weeks, causing percentage-based loads to feel too easy or too hard. Beginners often do better focusing on adding small amounts of weight or reps each session (progressive overload) rather than strictly following percentages calculated from an early 1RM estimate.</div>
+        </div>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> One Rep Max testing and heavy lifting carries injury risk. Always warm up properly, use a spotter for compound lifts, and prioritize form over weight. Consult a fitness professional if you're new to strength training.</div>
@@ -310,6 +379,7 @@
       <ul class="related-list">
         <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
         <li><a href="calorie-calculator.html">🔥 Calorie & TDEE Calculator</a></li>
+        <li><a href="protein-calculator.html">🥩 Protein Intake Calculator</a></li>
         <li><a href="body-fat-calculator.html">📏 Body Fat % Estimator</a></li>
         <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
         <li><a href="heart-rate-zone.html">❤️ Heart Rate Zone Calculator</a></li>
