@@ -79,7 +79,13 @@
     .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
     .article-section h3{font-size:1.1rem;font-weight:500;margin:1.5rem 0 .5rem;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
-    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .info-table{margin:0;}
+    .info-table{width:100%;min-width:390px;border-collapse:collapse;font-size:.875rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
     .table-wrapper .ranges-table{margin:1rem 0;}
     .main-col{min-width:0;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
@@ -142,8 +148,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -178,10 +183,33 @@
         "@type": "Answer",
         "text": "Body fat percentage is generally more informative than BMI because it directly measures fat vs lean mass. BMI can misclassify muscular people as overweight and people who've lost muscle (sarcopenic obesity) as healthy. However, waist circumference — which reflects visceral fat — is often the most clinically useful single measurement."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I measure my body fat percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every 2–4 weeks is generally sufficient to track meaningful change without over-focusing on day-to-day noise. Body fat percentage doesn't change quickly — measuring weekly or more often mostly captures measurement error and normal fluctuation (hydration, food in the gut, time of day) rather than real progress."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a healthy body fat percentage change with age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, slightly. Body fat naturally tends to increase with age even at a stable weight, partly due to gradual muscle loss (sarcopenia) if resistance training isn't maintained. Many classification charts allow for body fat percentages a few points higher in older age brackets to reflect this, though the \"athletic\" and \"fitness\" ranges remain achievable at any age with consistent training."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I lose fat from just one area of my body?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — this is known as \"spot reduction\" and it isn't supported by research. Fat loss happens throughout the body in a pattern largely determined by genetics, not by which muscles you exercise. Doing hundreds of ab exercises won't preferentially burn belly fat; a calorie deficit combined with resistance training reduces fat throughout the body, including, eventually, the areas you're most focused on."
+      }
     }
   ]
-}
-</script>
+}</script>
 <!-- SCHEMA_END -->
 </head>
 <body>
@@ -280,6 +308,33 @@
       <p><strong>Women:</strong> %BF = 495 / (1.29579 − 0.35004 × log10(waist + hip − neck) + 0.22100 × log10(height)) − 450</p>
       <h3>Accuracy</h3>
       <p>The Navy method has a margin of error of approximately ±3–4%. It's a useful tracker for progress over time, but for precise body composition assessment, DEXA scan or hydrostatic weighing are more accurate.</p>
+
+      <h3>Body fat percentage categories</h3>
+      <p>Body composition classification systems typically break body fat percentage into five bands, based on health and performance research:</p>
+      <div class="table-wrapper">
+      <table class="info-table">
+        <thead><tr><th>Category</th><th>Women</th><th>Men</th></tr></thead>
+        <tbody>
+          <tr><td>Essential fat</td><td>10–13%</td><td>2–5%</td></tr>
+          <tr><td>Athletes</td><td>14–20%</td><td>6–13%</td></tr>
+          <tr><td>Fitness</td><td>21–24%</td><td>14–17%</td></tr>
+          <tr><td>Average</td><td>25–31%</td><td>18–24%</td></tr>
+          <tr><td>Obese</td><td>32%+</td><td>25%+</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Essential fat is the minimum needed for basic physiological function — hormone production, organ protection, and cell structure — and should not be pursued as a long-term target. The "athletes" and "fitness" bands are sustainable ranges for people who train seriously, while "average" reflects typical population figures for generally healthy adults.</p>
+
+      <h3>Other ways to measure body fat</h3>
+      <p>The tape-measure method used here is the most accessible option, but several alternatives exist with different tradeoffs between cost, convenience, and accuracy:</p>
+      <ul>
+        <li><strong>Skinfold calipers:</strong> ±3–4% accuracy in trained hands; cheap but technique-dependent and less reliable when self-administered.</li>
+        <li><strong>Bioelectrical impedance (smart scales):</strong> ±4–6% accuracy; convenient but sensitive to hydration status, meaning results can swing several percentage points day to day.</li>
+        <li><strong>DEXA scan:</strong> ±1–2% accuracy, the clinical gold standard; also shows fat distribution and bone density, but requires a specialist facility and costs money per scan.</li>
+        <li><strong>Hydrostatic (underwater) weighing:</strong> ±1–2% accuracy; historically the research standard, now largely replaced by DEXA due to being more accessible.</li>
+        <li><strong>Bod Pod (air displacement):</strong> ±2–3% accuracy; fast and comfortable, available at some sports science labs and gyms.</li>
+      </ul>
+      <p>For most people tracking progress over time, consistency matters more than precision — using the same method, at the same time of day, under similar conditions (e.g. always in the morning before eating) gives a more useful trend than switching between methods.</p>
       
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
@@ -299,6 +354,18 @@
           <div class="faq-q">Is body fat or BMI a better health indicator?</div>
           <div class="faq-a">Body fat percentage is generally more informative than BMI because it directly measures fat vs lean mass. BMI can misclassify muscular people as overweight and people who've lost muscle (sarcopenic obesity) as healthy. However, waist circumference — which reflects visceral fat — is often the most clinically useful single measurement.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">How often should I measure my body fat percentage?</div>
+          <div class="faq-a">Every 2–4 weeks is generally sufficient to track meaningful change without over-focusing on day-to-day noise. Body fat percentage doesn't change quickly — measuring weekly or more often mostly captures measurement error and normal fluctuation (hydration, food in the gut, time of day) rather than real progress.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does a healthy body fat percentage change with age?</div>
+          <div class="faq-a">Yes, slightly. Body fat naturally tends to increase with age even at a stable weight, partly due to gradual muscle loss (sarcopenia) if resistance training isn't maintained. Many classification charts allow for body fat percentages a few points higher in older age brackets to reflect this, though the "athletic" and "fitness" ranges remain achievable at any age with consistent training.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I lose fat from just one area of my body?</div>
+          <div class="faq-a">No — this is known as "spot reduction" and it isn't supported by research. Fat loss happens throughout the body in a pattern largely determined by genetics, not by which muscles you exercise. Doing hundreds of ab exercises won't preferentially burn belly fat; a calorie deficit combined with resistance training reduces fat throughout the body, including, eventually, the areas you're most focused on.</div>
+        </div>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> Body fat estimates are approximations. Consult a healthcare provider for clinical assessment.</div>
@@ -314,6 +381,8 @@
         <li><a href="ideal-weight.html">🎯 Ideal Body Weight</a></li>
         <li><a href="calorie-calculator.html">🔥 Calorie Calculator</a></li>
         <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="protein-calculator.html">🥩 Protein Intake Calculator</a></li>
+        <li><a href="waist-to-hip-ratio-calculator.html">📐 Waist-to-Hip Ratio</a></li>
       </ul>
     </div>
   </div>

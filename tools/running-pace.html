@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Running Pace Calculator – My Wellness Calc</title>
-  <meta name="description" content="Free running pace calculator. Calculate your finish time, required pace, or distance for any race — 5K, 10K, half marathon, or marathon.">
+  <title>Running Pace Calculator: Finish Time, Pace & Distance</title>
+  <meta name="description" content="Calculate your race finish time, required pace, or target distance for 5K, 10K, half marathon, or marathon — plus a min/km to min/mile conversion table.">
   <link rel="canonical" href="https://mywellnesscalc.com/tools/running-pace.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -73,6 +73,14 @@
     .article-section h2{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin-bottom:1rem;}
     .article-section p{color:var(--mid);font-size:.95rem;margin-bottom:1rem;line-height:1.7;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.race-grid{grid-template-columns:repeat(2,1fr)}.input-row{grid-template-columns:1fr 1fr 1fr}}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .info-table{margin:0;}
+    .info-table{width:100%;min-width:390px;border-collapse:collapse;font-size:.875rem;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.625rem 1rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.5rem 1rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .info-table tr:last-child td{border-bottom:none;}
+    .info-table tr:nth-child(even) td{background:var(--cream);}
+    .main-col{min-width:0;}
   
     .faq-section{margin-top:2.5rem;}
     .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
@@ -89,9 +97,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Running Pace Calculator",
+  "name": "Running Pace Calculator: Finish Time, Pace & Distance",
   "url": "https://mywellnesscalc.com/tools/running-pace.html",
-  "description": "Free running pace calculator. Calculate your finish time, required pace, or distance for any race — 5K, 10K, half marathon, or marathon.",
+  "description": "Calculate your race finish time, required pace, or target distance for 5K, 10K, half marathon, or marathon — plus a min/km to min/mile conversion table.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "All",
   "offers": {
@@ -132,8 +140,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -176,10 +183,25 @@
         "@type": "Answer",
         "text": "Yes, but note that treadmill speed is set in km/h, not min/km. Convert your target pace to speed (60 ÷ pace in min/km = km/h). A 6:00 min/km pace = 10 km/h on the treadmill. Treadmill running is also slightly easier than outdoor running at the same speed — setting the incline to 1% better approximates outdoor effort."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my race finish time from pace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply your target pace (min/km) by the race distance in km. For example, a 5:30 min/km pace over a 10K works out to 55 minutes. For a half marathon (21.1km) at the same pace, that's roughly 1 hour 56 minutes. Use the calculator above to skip the maths and get the exact figure for any distance and pace."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does running pace decline with age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On average, yes — but far less than most people expect with consistent training. Studies of masters athletes show performance decline is gradual until the 60s, after which it accelerates. Maintaining training volume, adding strength work, and prioritising recovery all slow age-related pace decline significantly compared to sedentary ageing."
+      }
     }
   ]
-}
-</script>
+}</script>
 <!-- SCHEMA_END -->
 </head>
 <body>
@@ -302,6 +324,24 @@
       <p><strong>Half marathon:</strong> Requires a steady, controlled effort sustained over 90 minutes to 2+ hours. Most runners should aim for negative splits — running the second half slightly faster than the first.</p>
       <p><strong>Marathon:</strong> The most technically demanding distance from a pacing perspective. Even a 5–10 second per km error early on compounds significantly over 42 km. Many experienced runners use a pace band — a printed pacecard worn on the wrist — to stay disciplined in the first half.</p>
 
+      <h3>Common pace conversions</h3>
+      <div class="table-wrapper">
+      <table class="info-table">
+        <thead><tr><th>Min/km</th><th>Min/mile</th><th>Speed (km/h)</th><th>5K time</th></tr></thead>
+        <tbody>
+          <tr><td>4:00</td><td>6:26</td><td>15.0</td><td>20:00</td></tr>
+          <tr><td>5:00</td><td>8:03</td><td>12.0</td><td>25:00</td></tr>
+          <tr><td>5:30</td><td>8:51</td><td>10.9</td><td>27:30</td></tr>
+          <tr><td>6:00</td><td>9:40</td><td>10.0</td><td>30:00</td></tr>
+          <tr><td>6:30</td><td>10:28</td><td>9.2</td><td>32:30</td></tr>
+          <tr><td>7:00</td><td>11:16</td><td>8.6</td><td>35:00</td></tr>
+          <tr><td>7:30</td><td>12:04</td><td>8.0</td><td>37:30</td></tr>
+          <tr><td>8:00</td><td>12:52</td><td>7.5</td><td>40:00</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Use this table for a quick reference, or the calculator above for a precise number at any pace or distance.</p>
+
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
@@ -324,6 +364,14 @@
           <div class="faq-q">Can I use this calculator for treadmill pacing?</div>
           <div class="faq-a">Yes, but note that treadmill speed is set in km/h, not min/km. Convert your target pace to speed (60 ÷ pace in min/km = km/h). A 6:00 min/km pace = 10 km/h on the treadmill. Treadmill running is also slightly easier than outdoor running at the same speed — setting the incline to 1% better approximates outdoor effort.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I calculate my race finish time from pace?</div>
+          <div class="faq-a">Multiply your target pace (min/km) by the race distance in km. For example, a 5:30 min/km pace over a 10K works out to 55 minutes. For a half marathon (21.1km) at the same pace, that's roughly 1 hour 56 minutes. Use the calculator above to skip the maths and get the exact figure for any distance and pace.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does running pace decline with age?</div>
+          <div class="faq-a">On average, yes — but far less than most people expect with consistent training. Studies of masters athletes show performance decline is gradual until the 60s, after which it accelerates. Maintaining training volume, adding strength work, and prioritising recovery all slow age-related pace decline significantly compared to sedentary ageing.</div>
+        </div>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> Running pace calculations are for general fitness planning. If you have cardiovascular conditions or are returning from injury, consult a healthcare provider before starting a running programme.</div>
@@ -339,6 +387,8 @@
         <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
         <li><a href="water-intake.html">💧 Water Intake</a></li>
         <li><a href="macro-calculator.html">🥗 Macro Calculator</a></li>
+        <li><a href="heart-rate-zone.html">❤️ Heart Rate Zone Calculator</a></li>
+        <li><a href="zone-2-calculator.html">💙 Zone 2 Calculator</a></li>
       </ul>
     </div>
   </div>
