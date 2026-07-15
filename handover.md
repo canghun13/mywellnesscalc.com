@@ -1,5 +1,5 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-07-13
+> 최종 업데이트: 2026-07-15
 
 ---
 
@@ -207,9 +207,9 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 
 ---
 
-## 현재 사이트 현황 (2026-07-11 기준)
+## 현재 사이트 현황 (2026-07-15 기준)
 
-- **툴 25개, 블로그 46개**(zone-2-training-plan.html 신규 추가로 +1), **퀴즈 20개**
+- **툴 25개, 블로그 47개**(high-protein-dinner-women-over-40.html 신규 추가로 +1), **퀴즈 20개**
 - 개수 목표 고정 안 함
 
 ### 최근 세션(2026-07-11)에서 한 일 요약
@@ -241,10 +241,11 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 
 ## 다음에 할 만한 것 (우선순위 없이 나열, 데이터 보고 판단)
 
-- [ ] 다음 서치콘솔 체크(1~2주 후 권장, 2026-07-13 기준 다음 체크는 07-20 이후 권장)에서 이번 세션 포함 최근 최적화/보강/버그수정 효과 확인
-- [ ] AdSense 재신청 여부는 트래픽 데이터 보고 판단 (2026-07-13 기준 여전히 이르다고 판단 — 조직 검색 신규 사용자 4주간 8명, 클릭 6건 수준)
-- [ ] **신규 콘텐츠는 당분간 보류 권장** — 2026-07-13 세션에서 검토했으나, 사이트의 병목은 콘텐츠 커버리지가 아니라 도메인 권위/백링크로 판단됨(아래 세션 요약 참고). 노출은 있지만 클릭 전환이 거의 없는 상황이라 신규 페이지보다 기존 페이지의 권위 축적(백링크, 시간 경과)이 우선.
-- [ ] `waist-to-hip-ratio-calculator.html`, `vo2-max-calculator.html`, `active-recovery-calculator.html`, `calorie-deficit-calculator.html` 등 사이트맵엔 있지만 최근 3개월 서치콘솔 노출이 0인 페이지 다수 확인됨 — noindex/canonical 등 기술적 이슈는 없음을 확인함(정상, 페이지가 비교적 최근 것이거나 아직 크롤링/인덱싱 반영 전일 가능성 높음).
+- [ ] 다음 서치콘솔 체크(1~2주 후 권장) 때 이번 세션(07-15)에서 만든 신규 페이지(high-protein-dinner-women-over-40.html)와 내부링크 보강(zone-2/recovery 클러스터 → 퀴즈)이 색인/노출에 반영됐는지 확인
+- [ ] AdSense 재신청 여부는 트래픽 데이터 보고 판단 (2026-07-13 기준 여전히 이르다고 판단됨 — 이번 세션엔 재확인 안 함, 다음 세션에 최신 GA4로 재확인 권장)
+- [ ] **신규 콘텐츠 재개 결정(2026-07-15, 사용자 지시)** — 이전 세션(07-13)엔 "도메인 권위가 병목이라 신규 보류" 판단이었으나, 사용자가 확장 국면이라고 판단하여 이번 세션에 재개함(아래 세션 요약 참고). 앞으로도 신규 페이지는 **①기존에 실제로 트래픽/클릭이 발생하는 클러스터의 자연스러운 확장**이면서 **②웹서치로 확인한 경쟁강도가 낮거나 파편화된(=지배적 대형 도메인이 없는) 키워드**를 우선순위로 판단할 것. 이번 세션에 조사해서 기각한 후보(경쟁 너무 강함): creatine 도구(dosage calculator) — bodybuilding.com/BodySpec/FitnessVolt 등 10개+ 전문 도구 사이트가 이미 선점. calorie surplus/bulk calculator는 중간 강도(전문 계산기 사이트 5~6개, 대형 브랜드는 없음) — 다음 후보로 고려 가능.
+- [ ] 다음 신규 후보로 검토 가능한 것: `high-protein-snacks-women-over-40.html`(breakfast/lunch/dinner 세트를 4종으로 완성, 같은 패턴이라 경쟁조사 재활용 가능), `calorie-surplus-calculator`(기존 calorie-deficit-calculator.html의 반대 축, bulking/근육증가 수요 — 06-XX 조사에서 경쟁 중간강도로 확인됨, 다음에 더 깊이 볼 것)
+- [ ] `waist-to-hip-ratio-calculator.html`, `vo2-max-calculator.html`, `active-recovery-calculator.html`, `calorie-deficit-calculator.html` 등 사이트맵엔 있지만 최근 3개월 서치콘솔 노출이 0인 페이지 다수 확인됨 — noindex/canonical 등 기술적 이슈는 없음을 확인함(정상, 페이지가 비교적 최근 것이거나 아직 크롤링/인덱싱 반영 전일 가능성 높음). **2026-07-15 세션에 추가로 확인**: `ffmi-vs-bmi.html`, `how-to-improve-vo2-max.html`, `calorie-deficit-how-much.html`도 같은 상태(0 노출) — 아래 세션 요약 참고.
 
 ---
 
@@ -290,3 +291,57 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 - **문제**: `tools/*.html` 21개 페이지의 브레드크럼("Home › Calculators › [도구명]")에서 "Calculators"가 `tools/index.html`(실제 허브 페이지)이 아니라 홈페이지의 `#tools` 앵커(인라인 섹션)로 연결되고 있었음. BreadcrumbList 스키마의 URL도 동일하게 `https://mywellnesscalc.com/#tools`로 되어 있어 표시 링크와 스키마가 일관되게 잘못 연결된 상태였음. 결과적으로 `tools/index.html`로 향하는 내부링크가 사이트 전체에 사실상 없었음(nav바는 JS로 주입되는 `assets/partials/header.html`을 통해 `tools/`를 링크하고 있어 완전한 고아 페이지는 아니었지만, breadcrumb을 통한 링크 경로는 없었음).
 - **수정**: 21개 파일 전부에서 표시 href(`../#tools` → `../tools/`)와 BreadcrumbList 스키마 URL(`.../#tools` → `.../tools/`) 둘 다 일괄 수정. JSON-LD 문법 깨짐 없음 확인함.
 - 참고: 이런 종류의 "내부링크 배선 누락"은 앞으로도 체크리스트에 추가해서 볼 만함 — 신규 페이지 만들 때 breadcrumb의 상위 카테고리 링크가 실제 허브 페이지를 가리키는지 확인할 것.
+---
+
+## 2026-07-15 세션 요약
+
+**작업 방식**: 사용자가 새 PAT 제공, 세션 내내 이어서 사용(revoke 신호 없었음). 사용자가 명시적으로 "대시보드/시각화 만들지 말고 텍스트로만 얘기해"라고 지시함 — 이번 세션엔 분석용 아티팩트/시각화 생성 안 함.
+
+**분석한 자료**: 서치콘솔 Coverage + Performance(최근 3개월, 2026-07-15 내보내기).
+
+### Coverage(색인 상태) 분석 — 사용자 지시사항과 실제 데이터의 차이
+
+- 이번 내보내기의 "심각한 문제" CSV: **"크롤링됨-현재 색인이 생성되지 않음" 2건(유효성 검사: 시작됨)** + **"발견됨-현재 색인이 생성되지 않음" 2건(유효성 검사: 통과)** = 총 4건. 사용자는 이 중 "발견됨-미색인" 2건만 신경쓰면 된다고 지시함(보강 대상).
+- **중요한 한계**: GSC 대량 내보내기 CSV(bulk export)는 문제 유형별 **집계 건수만 제공하고 개별 URL 목록은 포함하지 않음**. Search Console UI의 URL 검사 도구나 API 없이는 정확히 어떤 2개 페이지가 "발견됨-미색인"인지 이 데이터만으로 특정할 수 없음. 이 한계를 다음 세션에도 인지할 것 — 가능하면 사용자가 URL 검사 화면을 캡처해서 공유하면 훨씬 정확해짐.
+- **대안으로 사용한 추정 방법**: 사이트맵 URL(98개) vs 서치콘솔 성과 데이터에 노출이 1건이라도 있는 URL을 비교해 "3개월간 노출 0건" 페이지 24개를 추출하고, git 커밋 로그로 최근 게시일을 대조함. "발견됨-미색인"은 보통 신규 도메인에서 크롤링 우선순위 문제로 발생하므로 **가장 최근에 추가됐으면서 노출 0건인 페이지**가 유력 후보로 판단:
+  - 유력 후보: `blog/zone-2-training-plan.html`(07-11 게시, 4일차), `quiz/zone-2-fitness-level.html` / `quiz/recovery-type.html`(둘 다 07-07 게시, 8일차 — 같은 날 만든 3개 퀴즈 중 이 둘만 노출 0건, `quiz/muscle-building-starting-point.html`은 이미 노출 있음)
+  - "크롤링됨-미색인"(품질 판단으로 제외됐을 가능성) 후보: `blog/ffmi-vs-bmi.html`(07-06, 9일차), `tools/vo2-max-calculator.html` / `blog/how-to-improve-vo2-max.html` / `blog/calorie-deficit-how-much.html`(07-29, 16일차) — 단 모두 실측 1700~2800단어로 콘텐츠 자체가 얇아서는 아닌 것으로 보임(내부 링크/크롤 우선순위 문제일 가능성이 더 높음)
+- **결론(확정 아님, 추정)**: 정확한 URL 특정은 못 했지만, 공통적으로 이 후보 페이지들의 실제 문제는 **내부링크 부족**이었음 — 아래 보강 작업 참고.
+
+### 보강(reinforcement) 작업 — 내부링크 배선 누락 발견 및 수정
+
+동일 카테고리 페이지 간 상호링크를 점검하다가, **zone-2 클러스터와 recovery 클러스터의 블로그/툴 페이지들이 대응하는 퀴즈로 전혀 링크하지 않고 있던 것**을 발견함(홈페이지·quiz/index.html에서만 링크되고 있었고, 관련 콘텐츠 페이지 사이드바엔 전무). 아래 5개 파일에 `related-tools`/`related-list` 사이드바에 퀴즈 링크 추가:
+
+| 수정 파일 | 추가한 링크 |
+|---|---|
+| `tools/active-recovery-calculator.html` | → `quiz/recovery-type.html` |
+| `blog/active-recovery-heart-rate.html` | → `quiz/recovery-type.html` |
+| `blog/zone-2-heart-rate-training-beginners.html` | → `quiz/zone-2-fitness-level.html` |
+| `blog/how-to-improve-zone-2-fitness.html` | → `quiz/zone-2-fitness-level.html` |
+
+div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.html`도 동일하게 2개 내부링크(홈+퀴즈허브)만 있었는데 노출이 있는 걸로 보아, 내부링크 개수 자체가 결정적 원인은 아닐 수 있음 — 그래도 관련 콘텐츠에서의 문맥적 내부링크는 항상 도움이 되므로 진행함. 다음 체크 때 이 4개 페이지의 색인/노출 변화를 지켜볼 것.
+
+### 신규 콘텐츠 — 사용자 지시로 재개, 경쟁강도 조사 후 1건 작성
+
+**배경**: 07-13 세션엔 "도메인 권위가 병목이니 신규 보류"로 결론냈으나, 이번 세션엔 사용자가 "확장 국면에 왔다"고 판단하여 신규 작성을 명시적으로 지시함. 지시에 따라 ①기존 파일과 중복 확인 ②웹서치로 키워드 경쟁강도 확인 ③수익화(애드센스 트래픽/클릭) 관점 우선순위로 진행.
+
+**조사한 후보 3개와 결론**:
+1. **Calorie Surplus / Bulk Calculator** (기존 `calorie-deficit-calculator.html`의 반대 축) — 웹서치 결과 traincalc, bitekit, monocalc, kaloria, procalculatorshub 등 5~6개의 전문 계산기 사이트가 이미 있으나 대형 브랜드(Healthline류)는 없어 **중간 강도**. 기각하진 않았지만 이번엔 보류, 다음 후보로 남겨둠.
+2. **Creatine Dosage Calculator** (기존 creatine 블로그/퀴즈의 자연스러운 확장) — 웹서치 결과 Bodybuilding.com, BodySpec, FitnessVolt, ShreddedDad, CreatineInsider 등 **10개 이상의 전문 도구/권위 사이트**가 이미 선점 중. 신생 도메인엔 너무 경쟁이 강하다고 판단해 **기각**.
+3. **High Protein Dinner Ideas for Women Over 40** — 웹서치 결과 경쟁이 소규모 영양 코치/레시피 블로그 위주로 **파편화**되어 있고 지배적인 대형 SEO 권위 사이트가 없음. 결정적으로, 이 클러스터(women-over-40 protein)의 breakfast 페이지가 **사이트 전체에서 실제 클릭이 발생하는 몇 안 되는 페이지 중 하나**(3개월 72노출, 1클릭, CTR 1.39%, 평균 게재순위 31위 — 대부분의 페이지가 50~95위인 것과 대조적으로 이미 실제로 순위권에 있음). breakfast/lunch는 있었지만 dinner가 없어 세트가 미완성이었음. **채택.**
+
+**작업 내용**:
+- `blog/high-protein-dinner-women-over-40.html` 신규 생성 (약 2,113단어, FAQ 5개, Article+BreadcrumbList+FAQPage 스키마, div 밸런스·FAQ-스키마 일치 검증 완료). 저녁 특유의 각도(수면 전 단백질과 야간 근단백질 합성, 취침 전 카세인 vs 일반 단백질, 저녁 탄수화물/혈당, 식욕이 낮을 때의 대안)로 breakfast/lunch와 콘텐츠 중복 없이 차별화함.
+- 체크리스트 순서대로 배선 완료:
+  - `blog/index.html` 최상단에 카드 추가 + New뱃지(`badge-added:2026-07-15`)
+  - 홈 `index.html` 블로그 미리보기 3슬롯 중 가장 오래된 것(`what-is-ffmi.html`, 07-06자) 교체(빼도 blog/index.html·사이트맵엔 그대로 있어 고아 페이지 안 됨)
+  - `sitemap.xml`에 추가(priority 0.7) + XML 유효성 검증 통과
+  - `llms.txt`에 설명 추가
+  - 역링크: `high-protein-breakfast-women-over-40.html`, `high-protein-lunch-women-over-40.html`, `protein-needs-women-over-40.html` 3개 기존 페이지 사이드바에 dinner 링크 추가(고립 방지)
+- 전체 관련 파일 div 밸런스 재검증 완료(전부 OK), 링크 대상 파일 실존 여부 전수 확인 완료.
+
+### 이번 세션에 하지 않은 것
+
+- Coverage 문제의 정확한 URL 특정 — 위 한계 참고, bulk CSV로는 불가능. 다음 세션엔 가능하면 URL 검사 화면 캡처 요청할 것.
+- `high-protein-snacks-women-over-40.html`(4종 세트 완성용) — 후보로 남겨둠, 이번엔 1건만 진행.
+- GA4 데이터는 이번엔 첨부되지 않아 분석 안 함(서치콘솔만 분석). 다음 세션에 GA4도 같이 받으면 AdSense 재신청 판단 갱신 가능.
