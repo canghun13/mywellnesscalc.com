@@ -440,8 +440,21 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 - 체크리스트(허브 페이지 카드+뱃지, 홈 미리보기 교체, sitemap.xml, llms.txt, 역링크) 3건 전부 완료 — 영향받은 파일 총 9개, 전부 재검증 완료(OK), 링크 대상 파일 실존 여부 전수 확인 완료.
 - 커밋 해시: `768a5f1`(MAF plan), `ba0f920`(surplus calculator + lean-bulk-vs-dirty-bulk) — 둘 다 GitHub API로 push 반영 확인 완료.
 
-### 조사 중 얻은 중요한 인사이트 (다음 세션에도 참고할 것)
+### 이번에 조사했지만 기각한 후보 (7건, 07-17 세션 통틀어)
 
-1. **2026년 헬스/피트니스 계산기 분야는 예상보다 훨씬 포화 상태.** 캐주얼하게 떠오르는 니치 아이디어(카페인 컷오프, 안정시 심박수, 걸음수-체중감량 등)를 검색해보면 거의 매번 5개 이상의 전용 계산기 사이트나 앱이 이미 있음 — 2025~2026년 사이 AI로 빠르게 만들어진 계산기형 SEO 사이트가 급증한 것으로 보임. **신규 후보를 볼 때마다 반드시 웹서치로 먼저 확인할 것, "니치처럼 보인다"는 감으로 판단하지 말 것.**
-2. **성공 패턴 재확인**: ①실제 서치콘솔에서 이미 좋은 신호(노출·순위·클릭)가 있는 기존 클러스터를 우선 확장(MAF, women-over-40 protein이 이번에도 통함) ②"개념 설명형" 콘텐츠가 있는 클러스터엔 "구체적 실행 플랜/스케줄" 포맷을 추가하는 게 반복적으로 유효함(zone-2 성공 → MAF에도 동일 적용 성공적으로 재현) ③의료 진단에 가까운 주제(안정시 심박수, 불면증 등)는 대형 의료기관이 지배하고 있어 무명 브랜드 사이트에겐 리스크 대비 효과가 낮음.
-3. **reverse.health를 경쟁사로 명확히 인지할 것** — women-over-40 웰니스 계산기 분야에서 최소 3개 카테고리(menopause protein calculator, bulking calculator for women over 40, steps to lose weight calculator)에서 이미 우리와 겹치는 걸 확인함. 다음에 "women over 40" 앵글의 신규 후보를 볼 때 이 사이트가 이미 있는지 우선 확인.
+| 후보 | 기각 사유 |
+|---|---|
+| Caffeine cutoff calculator | 8개+ 전용 계산기/앱 이미 존재 |
+| Resting heart rate calculator/chart | Cleveland Clinic/Mayo Clinic 등 대형 의료기관 지배 + YMYL 리스크 |
+| 4-Week strength program for women over 40 | PureGym/Women's Health/Muscle&Strength 등 이미 매우 많이 다뤄짐 |
+| Perimenopause insomnia | Midi Health 등 자격있는 의료/헬스테크 기업 지배 |
+| **Grip strength calculator by age** | topendsports/gymcreek/handexer/completecalculators×2/betterlifefitness/getfitcalc 등 **7개+** 전용 계산기 존재 |
+| **Alcohol calories calculator** | missvickie/miniwebtool/fitmetriclab/WCRF(대형 비영리단체)/abvcalculator/quickalcoholmath/basicfreetools 등 **7개+** 존재 |
+| **Cold plunge duration guide** | Plunge/BodyKore/StrengthWarehouse/RenuTherapy/NorthernSaunas/IVLeague 등 **8개+** 존재 — 콜드플런지 욕조 판매업체들이 제품판매 목적으로 SEO 강하게 투자해놓은 상태 |
+
+**결론(중요, 다음 세션에도 참고할 것)**: 사용자 지시로 GSC를 배제하고 순수 웹서치 브레인스토밍만으로 7개 카테고리를 조사했는데 **전부 일관되게 5~8개 이상의 경쟁자가 이미 있었음**. 이 정도로 일관된 결과면 "운이 나빴다"가 아니라 **2026년 현재 웰니스 계산기/가이드 콘텐츠 시장 자체가 구조적으로 포화 상태**라고 봐야 함 — 특정 니치를 잘못 골라서가 아니라, 이 카테고리(수치 계산 + 일반 가이드형 콘텐츠)는 어떤 주제를 고르든 이미 누군가 있을 확률이 매우 높은 시장 환경. **완전히 새로운 카테고리에서 "아무도 안 다룬 것" 찾기보다는, 오늘 실제로 통했던 방식(MAF처럼 자사 사이트가 이미 부분적 강점을 가진 곳을 깊게 파고들거나, women-over-40 protein처럼 두 개 이상의 구체적 조건을 조합한 롱테일)이 훨씬 승산 높음.** 이번엔 억지로 발행하지 않고 여기서 신규 작업 중단.
+
+### 조사 중 얻은 추가 인사이트 (다음 세션에도 참고할 것)
+
+1. **성공 패턴 재확인**: ①실제 서치콘솔에서 이미 좋은 신호(노출·순위·클릭)가 있는 기존 클러스터를 우선 확장(MAF, women-over-40 protein이 이번에도 통함) ②"개념 설명형" 콘텐츠가 있는 클러스터엔 "구체적 실행 플랜/스케줄" 포맷을 추가하는 게 반복적으로 유효함(zone-2 성공 → MAF에도 동일 적용 성공적으로 재현) ③의료 진단에 가까운 주제(안정시 심박수, 불면증 등)는 대형 의료기관이 지배하고 있어 무명 브랜드 사이트에겐 리스크 대비 효과가 낮음.
+2. **reverse.health를 경쟁사로 명확히 인지할 것** — women-over-40 웰니스 계산기 분야에서 최소 3개 카테고리(menopause protein calculator, bulking calculator for women over 40, steps to lose weight calculator)에서 이미 우리와 겹치는 걸 확인함. 다음에 "women over 40" 앵글의 신규 후보를 볼 때 이 사이트가 이미 있는지 우선 확인.
