@@ -1,5 +1,5 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-07-15
+> 최종 업데이트: 2026-07-17
 
 ---
 
@@ -209,7 +209,7 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 
 ## 현재 사이트 현황 (2026-07-15 기준)
 
-- **툴 25개, 블로그 47개**(high-protein-dinner-women-over-40.html 신규 추가로 +1), **퀴즈 20개**
+- **툴 25개, 블로그 48개**(high-protein-snacks-women-over-40.html 신규 추가로 +1, women-over-40 protein 4종 세트 완성), **퀴즈 20개**
 - 개수 목표 고정 안 함
 
 ### 최근 세션(2026-07-11)에서 한 일 요약
@@ -241,10 +241,12 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 
 ## 다음에 할 만한 것 (우선순위 없이 나열, 데이터 보고 판단)
 
-- [ ] 다음 서치콘솔 체크(1~2주 후 권장) 때 이번 세션(07-15)에서 만든 신규 페이지(high-protein-dinner-women-over-40.html)와 내부링크 보강(zone-2/recovery 클러스터 → 퀴즈)이 색인/노출에 반영됐는지 확인
-- [ ] AdSense 재신청 여부는 트래픽 데이터 보고 판단 (2026-07-13 기준 여전히 이르다고 판단됨 — 이번 세션엔 재확인 안 함, 다음 세션에 최신 GA4로 재확인 권장)
-- [ ] **신규 콘텐츠 재개 결정(2026-07-15, 사용자 지시)** — 이전 세션(07-13)엔 "도메인 권위가 병목이라 신규 보류" 판단이었으나, 사용자가 확장 국면이라고 판단하여 이번 세션에 재개함(아래 세션 요약 참고). 앞으로도 신규 페이지는 **①기존에 실제로 트래픽/클릭이 발생하는 클러스터의 자연스러운 확장**이면서 **②웹서치로 확인한 경쟁강도가 낮거나 파편화된(=지배적 대형 도메인이 없는) 키워드**를 우선순위로 판단할 것. 이번 세션에 조사해서 기각한 후보(경쟁 너무 강함): creatine 도구(dosage calculator) — bodybuilding.com/BodySpec/FitnessVolt 등 10개+ 전문 도구 사이트가 이미 선점. calorie surplus/bulk calculator는 중간 강도(전문 계산기 사이트 5~6개, 대형 브랜드는 없음) — 다음 후보로 고려 가능.
-- [ ] 다음 신규 후보로 검토 가능한 것: `high-protein-snacks-women-over-40.html`(breakfast/lunch/dinner 세트를 4종으로 완성, 같은 패턴이라 경쟁조사 재활용 가능), `calorie-surplus-calculator`(기존 calorie-deficit-calculator.html의 반대 축, bulking/근육증가 수요 — 06-XX 조사에서 경쟁 중간강도로 확인됨, 다음에 더 깊이 볼 것)
+- [x] ~~다음 서치콘솔 체크(1~2주 후 권장) 때 이번 세션(07-15)에서 만든 신규 페이지(high-protein-dinner-women-over-40.html)와 내부링크 보강(zone-2/recovery 클러스터 → 퀴즈)이 색인/노출에 반영됐는지 확인~~ → **2026-07-17 중간 확인(아직 2일뿐이라 참고용)**: `zone-2-training-plan.html`은 0→30노출로 신호 생김. `quiz/zone-2-fitness-level.html`/`quiz/recovery-type.html`은 여전히 노출 0. `high-protein-dinner-women-over-40.html` 자체도 아직 노출 데이터 없음(07-15 게시, 데이터 반영 지연 2-3일+ 고려하면 정상). **1~2주 뒤 재확인 필요.**
+- [ ] AdSense 재신청 여부는 트래픽 데이터 보고 판단 (2026-07-13 기준 여전히 이르다고 판단됨 — 이번 세션엔 재확인 안 함, 다음 세션에 최신 GA4로 재확인 권장. 2026-07-17 세션엔 GA4 미첨부라 판단 자료 없음)
+- [ ] **신규 콘텐츠 재개 결정(2026-07-15, 사용자 지시)** — 이전 세션(07-13)엔 "도메인 권위가 병목이라 신규 보류" 판단이었으나, 사용자가 확장 국면이라고 판단하여 이번 세션에 재개함(아래 세션 요약 참고). 앞으로도 신규 페이지는 **①기존에 실제로 트래픽/클릭이 발생하는 클러스터의 자연스러운 확장**이면서 **②웹서치로 확인한 경쟁강도가 낮거나 파편화된(=지배적 대형 도메인이 없는) 키워드**를 우선순위로 판단할 것. 이번 세션에 조사해서 기각한 후보(경쟁 너무 강함): creatine 도구(dosage calculator) — bodybuilding.com/BodySpec/FitnessVolt 등 10개+ 전문 도구 사이트가 이미 선점.
+- [x] ~~다음 신규 후보로 검토 가능한 것: `high-protein-snacks-women-over-40.html`~~ → **2026-07-17 세션에 작성 완료.** women-over-40 protein 4종 세트(breakfast/lunch/dinner/snacks) 전체 완성, 4개 파일 전부 상호링크 배선 완료. 아래 세션 요약 참고.
+- [ ] `calorie-surplus-calculator`(기존 calorie-deficit-calculator.html의 반대 축, bulking/근육증가 수요) — 06월/07-15 조사에서 경쟁 중간강도(전문 계산기 사이트 5~6개, 대형 브랜드 없음)로 확인. **2026-07-17 세션 서치콘솔 쿼리 스캔 결과 surplus/bulk/bulking 관련 검색 신호가 site 전체에 전무**(신규 콘텐츠라 당연히 기존 쿼리엔 안 잡히지만, 참고할 기존 수요 신호가 없다는 뜻) — women-over-40 세트처럼 "이미 관련 페이지가 순위권"인 강한 근거가 없어 다음 후보 중 우선순위 한 단계 내림. 다음 세션에 재검토 시 경쟁강도 재확인 권장.
+- [ ] **GEO(생성형 엔진 최적화) 구조 적용 확대 검토** — 2026-07-17 세션에 사용자 지시로 신규 페이지(snacks)에 처음 도입한 "비교표(스캔 가능한 quick-reference table) + 문제해결형 섹션(라벨 읽는 법 체크리스트)" 포맷을 다음 신규 페이지에도 기본 템플릿으로 유지할 것. 기존 47개 페이지 전체에 소급 적용하는 건 이번 세션 범위 밖(비용 대비 효과 판단 필요) — 아래 세션 요약의 GEO 리서치 참고해서 다음 세션에 우선순위 판단.
 - [ ] `waist-to-hip-ratio-calculator.html`, `vo2-max-calculator.html`, `active-recovery-calculator.html`, `calorie-deficit-calculator.html` 등 사이트맵엔 있지만 최근 3개월 서치콘솔 노출이 0인 페이지 다수 확인됨 — noindex/canonical 등 기술적 이슈는 없음을 확인함(정상, 페이지가 비교적 최근 것이거나 아직 크롤링/인덱싱 반영 전일 가능성 높음). **2026-07-15 세션에 추가로 확인**: `ffmi-vs-bmi.html`, `how-to-improve-vo2-max.html`, `calorie-deficit-how-much.html`도 같은 상태(0 노출) — 아래 세션 요약 참고.
 
 ---
@@ -345,3 +347,48 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 - Coverage 문제의 정확한 URL 특정 — 위 한계 참고, bulk CSV로는 불가능. 다음 세션엔 가능하면 URL 검사 화면 캡처 요청할 것.
 - `high-protein-snacks-women-over-40.html`(4종 세트 완성용) — 후보로 남겨둠, 이번엔 1건만 진행.
 - GA4 데이터는 이번엔 첨부되지 않아 분석 안 함(서치콘솔만 분석). 다음 세션에 GA4도 같이 받으면 AdSense 재신청 판단 갱신 가능.
+
+---
+
+## 2026-07-17 세션 요약
+
+**작업 방식**: 사용자가 새 PAT 제공, 세션 내내 이어서 사용(revoke 신호 없었음). 사용자가 명시적으로 대시보드/시각화 생성 금지, 텍스트 분석만 지시 — 이번 세션도 분석용 아티팩트/시각화 생성 안 함.
+
+**분석한 자료**: 서치콘솔 Coverage + Performance(최근 3개월, 2026-07-17 내보내기). 07-15 내보내기와 2일 차이라 대부분 신호가 노이즈 수준이지만, 07-15 세션에 만든 dinner 페이지와 zone-2/recovery 내부링크 보강 효과를 참고삼아 훑어봄. GA4는 이번에도 미첨부.
+
+### Coverage(색인 상태) — 변화 없음
+"심각한 문제" 4건(크롤링됨-미색인 2건 시작됨 + 발견됨-미색인 2건 통과) — 07-15와 완전히 동일한 수치. 통과 상태인 "발견됨-미색인" 2건은 기존 결정대로 정상 범위로 판단하고 재언급하지 않음. 중요하지 않은 문제 0건.
+
+### Performance 분석 — 새로운 콘텐츠 갭 있는지 재스캔
+
+- 상위 노출 페이지/쿼리 재확인: 여전히 `protein-calculator.html`(2,320노출), `fat-burning-heart-rate-zone.html`(1,452노출) 등 대형 노출 페이지들이 순위 60~90위권에 머물러 있음 — 07-13/07-15 세션과 동일하게 "콘텐츠 부재"가 아니라 "권위/시간" 병목으로 재확인.
+- **CTR 기회 스캔**: 페이지 단위로 노출 대비 순위를 재정렬해서 "이미 페이지 1~2에 가까운데 클릭이 안 나는" 케이스를 찾음. `zone-2-heart-rate-by-age.html`이 596노출/평균순위 10.1인데 CTR 0.17%(1클릭)로 유일하게 눈에 띄었으나, 쿼리 단위로 대조해보니 이 페이지와 직접 매치되는 개별 쿼리들은 전부 순위 50~85위대였음 — 즉 페이지 평균순위 10.1은 노출량이 적은 롱테일 쿼리 다수가 만든 통계적 착시(일부 쿼리는 실제로 페이지1 근접, 노출 큰 쿼리들은 여전히 하위권)로 판단, title/meta 수정으로 해결될 문제가 아니라고 결론 — 조치 안 함.
+- **쿼리 1,000개 전체 스캔(코호트/호르몬/전해질/수면주기/1RM 등 20+ 키워드 그룹으로 매칭)**: 기존 클러스터(단백질, zone2, 비타민D, 체지방, IF, 수면, MAF, 1RM 등)를 벗어나는 새로운 수요 신호 없음. `menopause/perimenopause protein calculator`는 여전히 노출은 있으나(34~52회) 07-13 세션에 이미 경쟁강도/자기잠식 이유로 기각한 결론 유지.
+- `tools/one-rep-max.html`의 "squat 1 rep max calculator" 계열 쿼리 변형(다수 확인됨)은 이미 title/description/FAQ에 squat이 명시적으로 다뤄지고 있어 별도 보강 불필요로 확인.
+
+### 신규 콘텐츠 — women-over-40 protein 4종 세트 완성
+
+**의사결정 근거(수익화 우선순위 기준)**: 사이트 전체에서 실제 클릭이 발생하는 페이지는 극소수인데, `high-protein-breakfast-women-over-40.html`(72노출/1클릭/CTR 1.39%/평균 31위)이 그중 하나로 확인되어 있었음(07-15 세션에 이미 파악). 07-15 세션에 dinner를 추가해 3종을 만들었고, 이번 세션엔 **①기존 파일 중복 확인 ②웹서치 경쟁강도 재확인 ③수익화 관점 우선순위**를 사용자 지시대로 적용해 남은 4번째(snacks)를 완성함.
+
+- **중복 확인**: `high-protein-foods.html`, `protein-needs-women-over-40.html`, breakfast/lunch/dinner 3개 파일의 H2 목차를 전부 grep해서 대조 — snack 타이밍/휴대성/라벨읽기 앵글은 기존 어디에도 없음을 확인 후 진행.
+- **경쟁강도 웹서치**: "high protein snacks women over 40" 계열 검색 결과, AOL 신디케이션 매체(Prevention/EatingWell/Women's Health/TODAY 재게시), 개인 코치 블로그(purposefulhealingdpc, midlifeprotein, oldladygains, tracidmitchell) 위주로 파편화 — 대형 전문 계산기/툴 사이트의 지배 없음. breakfast/lunch/dinner 3개와 동일한 경쟁 패턴 확인, 채택.
+- **GEO(생성형 엔진 최적화) 리서치 반영**: 사용자가 언급한 "AI검색은 도메인 권위보다 콘텐츠 자체가 중요하다"는 주장을 웹서치로 확인 — **정확히는 "권위가 안 중요해진다"가 아니라, 전통 SEO와 마찬가지로 E-E-A-T·권위 신호는 여전히 유효하되, 여기에 더해 구조적 명확성(direct-answer 포맷, 섹션별 독립적 요약, 스캔 가능한 비교/표 형태)과 원본성이 상대적으로 더 크게 반영된다는 것이 2026년 다수 소스의 공통된 결론**임. 이를 반영해 이번 신규 페이지엔 breakfast/lunch/dinner 3개엔 없었던 **①12개 간식 비교표(스캔 가능한 quick-reference 표) ②"단백질 스낵바가 진짜인지 가려내는 법" 문제해결형 체크리스트 섹션**을 처음 도입함 — 콘텐츠 자체의 실용적 문제해결 밀도를 높이는 방향.
+
+**작업 내용**:
+- `blog/high-protein-snacks-women-over-40.html` 신규 생성 (약 1,836단어, FAQ 6개, Article+BreadcrumbList+FAQPage 스키마, div 밸런스·중첩순서·FAQ-스키마 일치·테이블 wrapper 패턴 전부 검증 완료).
+- 체크리스트 순서대로 배선 완료:
+  - `blog/index.html` 최상단에 카드 추가 + New뱃지(`badge-added:2026-07-17`)
+  - 홈 `index.html` 블로그 미리보기 3슬롯 중 가장 오래된 것(`ffmi-vs-bmi.html`, 07-06자) 교체(빼도 blog/index.html·사이트맵엔 그대로 있어 고아 페이지 안 됨)
+  - `sitemap.xml`에 추가(priority 0.7) + XML 유효성 검증 통과
+  - `llms.txt`에 설명 추가
+  - 역링크: `high-protein-breakfast-women-over-40.html`, `high-protein-lunch-women-over-40.html`, `high-protein-dinner-women-over-40.html`, `protein-needs-women-over-40.html` **4개 전부**의 사이드바에 snacks 링크 추가 — 이로써 4종 세트가 완전 상호연결됨(모든 페이지에서 다른 3개로 링크).
+- 영향받은 7개 파일(신규 1개 + 사이드바 수정 4개 + blog/index.html + index.html) 전부 div 밸런스/중첩순서 재검증 완료(전부 OK), 전체 링크 대상 파일 실존 여부 전수 확인 완료.
+- 커밋 해시 `036daab`, GitHub API로 push 반영 확인 완료.
+
+### 이번 세션에 하지 않은 것
+
+- **기존 47개 페이지에 GEO 포맷(비교표/문제해결형 체크리스트) 소급 적용** — 이번엔 신규 페이지 1건에만 시범 적용. 전체 소급은 범위가 크고, 페이지마다 어떤 섹션이 비교/문제해결 형태로 바꿀 가치가 있는지 개별 판단이 필요해 다음 세션 이후 사용자와 우선순위 논의 후 진행 권장.
+- **calorie-surplus-calculator 착수** — 위 "다음에 할 만한 것" 항목 참고, 이번 세션엔 서치콘솔 수요 신호가 약해 순위를 내림. 착수 안 함.
+- **CTR 최적화(title/meta 수정)** — `zone-2-heart-rate-by-age.html` 등 재검토했으나 위 분석대로 통계적 착시로 판단해 조치 안 함.
+- Coverage 미색인 2건의 정확한 URL 특정 — 여전히 bulk CSV 한계로 불가(07-15 세션과 동일한 제약).
+- GA4 데이터 미첨부로 AdSense 재신청 판단 갱신 안 함.
