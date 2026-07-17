@@ -1,5 +1,5 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-07-17
+> 최종 업데이트: 2026-07-17 (같은 날 세션 2회차 — 사용자가 신규 확장 가속 지시)
 
 ---
 
@@ -209,7 +209,7 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 
 ## 현재 사이트 현황 (2026-07-15 기준)
 
-- **툴 25개, 블로그 48개**(high-protein-snacks-women-over-40.html 신규 추가로 +1, women-over-40 protein 4종 세트 완성), **퀴즈 20개**
+- **툴 26개, 블로그 50개**(이번 세션 신규 3건: maf-training-plan.html, calorie-surplus-calculator.html, lean-bulk-vs-dirty-bulk.html), **퀴즈 20개**
 - 개수 목표 고정 안 함
 
 ### 최근 세션(2026-07-11)에서 한 일 요약
@@ -245,8 +245,12 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 - [ ] AdSense 재신청 여부는 트래픽 데이터 보고 판단 (2026-07-13 기준 여전히 이르다고 판단됨 — 이번 세션엔 재확인 안 함, 다음 세션에 최신 GA4로 재확인 권장. 2026-07-17 세션엔 GA4 미첨부라 판단 자료 없음)
 - [ ] **신규 콘텐츠 재개 결정(2026-07-15, 사용자 지시)** — 이전 세션(07-13)엔 "도메인 권위가 병목이라 신규 보류" 판단이었으나, 사용자가 확장 국면이라고 판단하여 이번 세션에 재개함(아래 세션 요약 참고). 앞으로도 신규 페이지는 **①기존에 실제로 트래픽/클릭이 발생하는 클러스터의 자연스러운 확장**이면서 **②웹서치로 확인한 경쟁강도가 낮거나 파편화된(=지배적 대형 도메인이 없는) 키워드**를 우선순위로 판단할 것. 이번 세션에 조사해서 기각한 후보(경쟁 너무 강함): creatine 도구(dosage calculator) — bodybuilding.com/BodySpec/FitnessVolt 등 10개+ 전문 도구 사이트가 이미 선점.
 - [x] ~~다음 신규 후보로 검토 가능한 것: `high-protein-snacks-women-over-40.html`~~ → **2026-07-17 세션에 작성 완료.** women-over-40 protein 4종 세트(breakfast/lunch/dinner/snacks) 전체 완성, 4개 파일 전부 상호링크 배선 완료. 아래 세션 요약 참고.
-- [ ] `calorie-surplus-calculator`(기존 calorie-deficit-calculator.html의 반대 축, bulking/근육증가 수요) — 06월/07-15 조사에서 경쟁 중간강도(전문 계산기 사이트 5~6개, 대형 브랜드 없음)로 확인. **2026-07-17 세션 서치콘솔 쿼리 스캔 결과 surplus/bulk/bulking 관련 검색 신호가 site 전체에 전무**(신규 콘텐츠라 당연히 기존 쿼리엔 안 잡히지만, 참고할 기존 수요 신호가 없다는 뜻) — women-over-40 세트처럼 "이미 관련 페이지가 순위권"인 강한 근거가 없어 다음 후보 중 우선순위 한 단계 내림. 다음 세션에 재검토 시 경쟁강도 재확인 권장.
-- [ ] **GEO(생성형 엔진 최적화) 구조 적용 확대 검토** — 2026-07-17 세션에 사용자 지시로 신규 페이지(snacks)에 처음 도입한 "비교표(스캔 가능한 quick-reference table) + 문제해결형 섹션(라벨 읽는 법 체크리스트)" 포맷을 다음 신규 페이지에도 기본 템플릿으로 유지할 것. 기존 47개 페이지 전체에 소급 적용하는 건 이번 세션 범위 밖(비용 대비 효과 판단 필요) — 아래 세션 요약의 GEO 리서치 참고해서 다음 세션에 우선순위 판단.
+- [x] ~~`calorie-surplus-calculator`(기존 calorie-deficit-calculator.html의 반대 축, bulking/근육증가 수요) — 06월/07-15 조사에서 경쟁 중간강도로 확인~~ → **2026-07-17 세션 2회차에 사용자 지시(신규 확장 가속)로 작성 완료.** 상세는 하단 세션 요약 참고. 범용(성별/연령 비특정) 버전으로 진행, "women over 40" 특정 앵글은 reverse.health가 이미 선점하고 있어 회피함.
+- [x] ~~**GEO(생성형 엔진 최적화) 구조 적용 확대 검토**~~ → 2026-07-17 세션 2회차에 신규 콘텐츠(lean-bulk-vs-dirty-bulk.html) 1건 더 비교표 중심 포맷으로 작성. **기존 페이지 전체 소급 적용은 여전히 미착수** — 다음 세션 이후 사용자와 우선순위 논의 필요(아래 새 항목 참고).
+- [ ] **기존 페이지 GEO 포맷 소급 적용 우선순위 선정** — 지금까지 신규 페이지 2건(snacks, lean-bulk-vs-dirty-bulk)에만 비교표/체크리스트 포맷을 시범 적용함. 기존 96개 콘텐츠 페이지 전체를 손대는 건 비용이 크므로, 다음 세션엔 ①노출은 있지만 클릭이 없는 페이지 ②이미 순위가 붙어있어 개선 시 효과가 큰 페이지(MAF 클러스터, zone-2-heart-rate-by-age 등) 위주로 좁혀서 후보 추리는 작업부터 시작할 것.
+- [ ] **이번 세션(07-17 2회차) 신규 3건의 노출/색인 반영 확인** — maf-training-plan.html, calorie-surplus-calculator.html, lean-bulk-vs-dirty-bulk.html 전부 당일 게시라 이번 서치콘솔 데이터엔 전혀 안 잡혀있음. 최소 1~2주 후 재확인.
+- [ ] **MAF 클러스터 지속 투자 검토** — 이번 세션에 MAF 관련 쿼리들이 사이트 전체에서 가장 좋은 순위(12~40위대)를 보이는 걸 확인함. 다음 콘텐츠 확장 시 이 클러스터를 계속 우선 후보로 볼 것(예: "MAF vs 일반 조깅" 비교, "MAF 테스트 기록 해석법" 심화 등 — 단, 신규 페이지 만들기 전 중복확인 필수).
+- [ ] **reverse.health 경쟁사 노트** — 이번 세션 조사 중 이 사이트가 "bulking calculator for women over 40", "steps to lose weight calculator", (07-13 세션에 발견) "menopause protein calculator"까지 최소 3개 카테고리에서 우리와 겹치는 걸 확인함. 여성 40+ 웰니스 계산기 분야의 잘 갖춰진 경쟁사로 인지하고, 향후 신규 후보 조사 시 이 사이트가 이미 선점했는지 우선 확인할 것.
 - [ ] `waist-to-hip-ratio-calculator.html`, `vo2-max-calculator.html`, `active-recovery-calculator.html`, `calorie-deficit-calculator.html` 등 사이트맵엔 있지만 최근 3개월 서치콘솔 노출이 0인 페이지 다수 확인됨 — noindex/canonical 등 기술적 이슈는 없음을 확인함(정상, 페이지가 비교적 최근 것이거나 아직 크롤링/인덱싱 반영 전일 가능성 높음). **2026-07-15 세션에 추가로 확인**: `ffmi-vs-bmi.html`, `how-to-improve-vo2-max.html`, `calorie-deficit-how-much.html`도 같은 상태(0 노출) — 아래 세션 요약 참고.
 
 ---
@@ -392,3 +396,40 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 - **CTR 최적화(title/meta 수정)** — `zone-2-heart-rate-by-age.html` 등 재검토했으나 위 분석대로 통계적 착시로 판단해 조치 안 함.
 - Coverage 미색인 2건의 정확한 URL 특정 — 여전히 bulk CSV 한계로 불가(07-15 세션과 동일한 제약).
 - GA4 데이터 미첨부로 AdSense 재신청 판단 갱신 안 함.
+
+---
+
+## 2026-07-17 세션 2회차 요약 (같은 날 대화 연장 — 사용자가 신규 확장 가속 지시)
+
+**배경**: 1회차 세션(위 요약)에서 신규 1건(snacks) 작성 후, 사용자가 "신규가 너무 적다, 최대한 빠르게 확장해라, 카테고리를 넓혀도 된다, 경쟁 센 키워드는 좋은 롱테일로 선점하고 중간 경쟁도는 그냥 좋은 키워드로 진행해도 된다"고 명시적으로 지시함. 이에 따라 리서치 강도를 낮추고 실행 속도를 높여 신규 3건(블로그 2 + 툴 1)을 추가로 작성.
+
+### 후보 리서치 — 여러 후보 기각 후 확정한 3건
+
+사용자 지시대로 카테고리를 넓혀서 다수의 후보를 웹서치로 조사함. **2026년 현재 건강/피트니스 계산기 분야가 예상보다 훨씬 포화 상태**라는 걸 이번에 재확인함 — 아래는 조사했지만 기각한 후보와 사유:
+
+| 후보 | 기각 사유 |
+|---|---|
+| Caffeine cutoff calculator (카페인 컷오프 계산기) | 웹서치 결과 fatcalc/thinksera/calculory/sleep.report/jitterliss/nightowlsleepcalc/lastsip 등 **8개 이상의 전용 계산기/앱**이 이미 존재 — 니치처럼 보이지만 실제로 2026년 AI 생성 계산기 사이트들이 이미 많이 선점한 분야로 확인 |
+| Resting heart rate calculator/chart (안정시 심박수) | Cleveland Clinic, Mayo Clinic(피인용), Forbes Health, MedicineNet 등 **대형 의료기관/매체가 지배** — 의학적(서맥/빈맥) 판단과 가까워 YMYL 리스크도 있어 기각 |
+| 4-Week strength training program for women over 40 | PureGym, Women's Health(전담 트레이너 프로그램), Muscle & Strength, 심지어 Gumroad 유료 PDF까지 **이미 매우 많이 다뤄진 포맷** — zone-2-training-plan 성공 포맷을 그대로 재현하려 했으나 이 특정 조합은 이미 포화 확인 |
+| Perimenopause insomnia / "can't sleep women 40s" | Midi Health(여성건강 전문 원격의료 기업), Stanford Lifestyle Medicine, oova.life 등 **자격을 갖춘 의료/헬스테크 기업이 지배** — 의학적 조언 영역과 가까워 무명 브랜드 사이트가 다루기엔 리스크 대비 효과가 낮다고 판단해 기각 |
+| Bulking calculator "for women over 40" (인구통계 특정 앵글) | reverse.health가 정확히 이 키워드로 이미 전용 계산기 보유(웹서치로 확인) — 정면충돌 대신 성별/연령 비특정 일반 버전으로 방향 전환 |
+
+**확정한 3건과 근거**:
+1. **`blog/maf-training-plan.html`** — 이번 세션 서치콘솔 재분석 중 MAF 관련 쿼리들이 사이트 전체에서 가장 좋은 순위를 보이는 걸 발견함(예: "maf 180 calculator" 순위 12.75, "maf training plan" 순위 29.2, "maf training" 순위 33.43 — 대부분 페이지가 50~95위인 것과 뚜렷하게 대조적). 이미 검증된 성공 포맷(zone-2-training-plan.html: 개념 가이드에 "구체적 주차별 실행 스케줄"을 추가해 성공)을 MAF 클러스터에 동일 적용. 경쟁강도 웹서치 결과 "MAF training plan" 자체는 포럼/개인블로그/러닝매거진 수준으로 파편화되어 있어 확실한 저경쟁으로 확인.
+2. **`tools/calorie-surplus-calculator.html`** — 기존 calorie-deficit-calculator.html의 반대축으로 자사 계산기 세트를 완성하는 실사용 가치가 있음. 경쟁강도는 예상보다 셈(전문 계산기 사이트 6~7개+)을 재확인했지만, 사용자가 이번에 "중간 경쟁도는 좋은 키워드로 그냥 진행해도 된다"고 명시적으로 승인한 기준에 부합해 진행. 차별화 요소로 "트레이닝 경력"(초보/중급/고급)에 따른 권장 서플러스 크기 제시 기능을 추가함(경쟁사 리서치에서 확인한 실제 유효 패턴 반영).
+3. **`blog/lean-bulk-vs-dirty-bulk.html`** — surplus 계산기의 컴패니언 콘텐츠. 사용자 지시(AI검색엔 비교분석형 콘텐츠가 유리) 반영해 처음부터 비교표 중심으로 설계, 툴 페이지의 "계산 방법" 콘텐츠와 겹치지 않게 "어느 쪽이 실제로 나은가" 의사결정 앵글로 차별화.
+
+### 작업 내용 요약
+
+- 3건 모두 기존 파일과 H2 목차 대조로 중복 확인 완료(특히 build-muscle-after-40.html/zone-2 클러스터/maf-training-for-beginners.html과 겹치는 섹션 없음 확인).
+- `tools/calorie-surplus-calculator.html`은 검증된 `calorie-deficit-calculator.html` 아키텍처를 그대로 재사용(Mifflin-St Jeor BMR + 7700kcal/kg 공식) — 새 계산 로직을 처음부터 짜지 않고 기존 패턴을 재사용해 버그 리스크를 최소화함. JS 계산 결과를 수동으로 트레이스해서(예: 여성 65kg/165cm/30세/중간활동/0.35kg주간증가 → TDEE 2124, 목표 2509kcal, 26주 — 상식적으로 타당) 정합성 확인.
+- 3건 전부 div 밸런스·중첩순서(특히 side-col/article-sidebar가 형제 관계인지)·FAQ-스키마 일치 검증 완료.
+- 체크리스트(허브 페이지 카드+뱃지, 홈 미리보기 교체, sitemap.xml, llms.txt, 역링크) 3건 전부 완료 — 영향받은 파일 총 9개, 전부 재검증 완료(OK), 링크 대상 파일 실존 여부 전수 확인 완료.
+- 커밋 해시: `768a5f1`(MAF plan), `ba0f920`(surplus calculator + lean-bulk-vs-dirty-bulk) — 둘 다 GitHub API로 push 반영 확인 완료.
+
+### 조사 중 얻은 중요한 인사이트 (다음 세션에도 참고할 것)
+
+1. **2026년 헬스/피트니스 계산기 분야는 예상보다 훨씬 포화 상태.** 캐주얼하게 떠오르는 니치 아이디어(카페인 컷오프, 안정시 심박수, 걸음수-체중감량 등)를 검색해보면 거의 매번 5개 이상의 전용 계산기 사이트나 앱이 이미 있음 — 2025~2026년 사이 AI로 빠르게 만들어진 계산기형 SEO 사이트가 급증한 것으로 보임. **신규 후보를 볼 때마다 반드시 웹서치로 먼저 확인할 것, "니치처럼 보인다"는 감으로 판단하지 말 것.**
+2. **성공 패턴 재확인**: ①실제 서치콘솔에서 이미 좋은 신호(노출·순위·클릭)가 있는 기존 클러스터를 우선 확장(MAF, women-over-40 protein이 이번에도 통함) ②"개념 설명형" 콘텐츠가 있는 클러스터엔 "구체적 실행 플랜/스케줄" 포맷을 추가하는 게 반복적으로 유효함(zone-2 성공 → MAF에도 동일 적용 성공적으로 재현) ③의료 진단에 가까운 주제(안정시 심박수, 불면증 등)는 대형 의료기관이 지배하고 있어 무명 브랜드 사이트에겐 리스크 대비 효과가 낮음.
+3. **reverse.health를 경쟁사로 명확히 인지할 것** — women-over-40 웰니스 계산기 분야에서 최소 3개 카테고리(menopause protein calculator, bulking calculator for women over 40, steps to lose weight calculator)에서 이미 우리와 겹치는 걸 확인함. 다음에 "women over 40" 앵글의 신규 후보를 볼 때 이 사이트가 이미 있는지 우선 확인.
