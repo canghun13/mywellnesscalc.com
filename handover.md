@@ -1,5 +1,5 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-07-17 (같은 날 세션 2회차 — 사용자가 신규 확장 가속 지시)
+> 최종 업데이트: 2026-07-19
 
 ---
 
@@ -260,8 +260,8 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 - [x] ~~`calorie-surplus-calculator`(기존 calorie-deficit-calculator.html의 반대 축, bulking/근육증가 수요) — 06월/07-15 조사에서 경쟁 중간강도로 확인~~ → **2026-07-17 세션 2회차에 사용자 지시(신규 확장 가속)로 작성 완료.** 상세는 하단 세션 요약 참고. 범용(성별/연령 비특정) 버전으로 진행, "women over 40" 특정 앵글은 reverse.health가 이미 선점하고 있어 회피함.
 - [x] ~~**GEO(생성형 엔진 최적화) 구조 적용 확대 검토**~~ → 2026-07-17 세션 2회차에 신규 콘텐츠(lean-bulk-vs-dirty-bulk.html) 1건 더 비교표 중심 포맷으로 작성. **기존 페이지 전체 소급 적용은 여전히 미착수** — 다음 세션 이후 사용자와 우선순위 논의 필요(아래 새 항목 참고).
 - [ ] **기존 페이지 GEO 포맷 소급 적용 우선순위 선정** — 지금까지 신규 페이지 2건(snacks, lean-bulk-vs-dirty-bulk)에만 비교표/체크리스트 포맷을 시범 적용함. 기존 96개 콘텐츠 페이지 전체를 손대는 건 비용이 크므로, 다음 세션엔 ①노출은 있지만 클릭이 없는 페이지 ②이미 순위가 붙어있어 개선 시 효과가 큰 페이지(MAF 클러스터, zone-2-heart-rate-by-age 등) 위주로 좁혀서 후보 추리는 작업부터 시작할 것.
-- [ ] **이번 세션(07-17 2회차) 신규 3건의 노출/색인 반영 확인** — maf-training-plan.html, calorie-surplus-calculator.html, lean-bulk-vs-dirty-bulk.html 전부 당일 게시라 이번 서치콘솔 데이터엔 전혀 안 잡혀있음. 최소 1~2주 후 재확인.
-- [ ] **MAF 클러스터 지속 투자 검토** — 이번 세션에 MAF 관련 쿼리들이 사이트 전체에서 가장 좋은 순위(12~40위대)를 보이는 걸 확인함. 다음 콘텐츠 확장 시 이 클러스터를 계속 우선 후보로 볼 것(예: "MAF vs 일반 조깅" 비교, "MAF 테스트 기록 해석법" 심화 등 — 단, 신규 페이지 만들기 전 중복확인 필수).
+- [x] ~~**이번 세션(07-17 2회차) 신규 3건의 노출/색인 반영 확인**~~ → **2026-07-19 세션 확인**: 4건(snacks 포함) 전부 아직 노출 데이터 없음(07-17 게시, 2일 경과 — 데이터 반영 지연 감안하면 정상, 아직 이름). 1~2주 뒤 재확인 필요.
+- [x] ~~**MAF 클러스터 지속 투자 검토**~~ → **2026-07-19 세션에 "MAF 테스트 심화" 후보를 실제로 조사함**: philmaffetone.com(원저자 사이트), Coached, AerobAce, Marathon Handbook, RunnersBlueprint, extramilest.com 등 **6개+ 전용 가이드가 이미 존재** — 이 특정 서브토픽은 생각보다 포화 상태로 확인, 기각. MAF 클러스터 자체는 계속 지켜볼 가치 있지만 "테스트 방법 심화" 앵글은 다시 시도하지 말 것.
 - [ ] **reverse.health 경쟁사 노트** — 이번 세션 조사 중 이 사이트가 "bulking calculator for women over 40", "steps to lose weight calculator", (07-13 세션에 발견) "menopause protein calculator"까지 최소 3개 카테고리에서 우리와 겹치는 걸 확인함. 여성 40+ 웰니스 계산기 분야의 잘 갖춰진 경쟁사로 인지하고, 향후 신규 후보 조사 시 이 사이트가 이미 선점했는지 우선 확인할 것.
 - [ ] `waist-to-hip-ratio-calculator.html`, `vo2-max-calculator.html`, `active-recovery-calculator.html`, `calorie-deficit-calculator.html` 등 사이트맵엔 있지만 최근 3개월 서치콘솔 노출이 0인 페이지 다수 확인됨 — noindex/canonical 등 기술적 이슈는 없음을 확인함(정상, 페이지가 비교적 최근 것이거나 아직 크롤링/인덱싱 반영 전일 가능성 높음). **2026-07-15 세션에 추가로 확인**: `ffmi-vs-bmi.html`, `how-to-improve-vo2-max.html`, `calorie-deficit-how-much.html`도 같은 상태(0 노출) — 아래 세션 요약 참고.
 
@@ -464,3 +464,50 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 
 1. **성공 패턴 재확인**: ①실제 서치콘솔에서 이미 좋은 신호(노출·순위·클릭)가 있는 기존 클러스터를 우선 확장(MAF, women-over-40 protein이 이번에도 통함) ②"개념 설명형" 콘텐츠가 있는 클러스터엔 "구체적 실행 플랜/스케줄" 포맷을 추가하는 게 반복적으로 유효함(zone-2 성공 → MAF에도 동일 적용 성공적으로 재현) ③의료 진단에 가까운 주제(안정시 심박수, 불면증 등)는 대형 의료기관이 지배하고 있어 무명 브랜드 사이트에겐 리스크 대비 효과가 낮음.
 2. **reverse.health를 경쟁사로 명확히 인지할 것** — women-over-40 웰니스 계산기 분야에서 최소 3개 카테고리(menopause protein calculator, bulking calculator for women over 40, steps to lose weight calculator)에서 이미 우리와 겹치는 걸 확인함. 다음에 "women over 40" 앵글의 신규 후보를 볼 때 이 사이트가 이미 있는지 우선 확인.
+
+---
+
+## 2026-07-19 세션 요약
+
+**분석한 자료**: 서치콘솔 Coverage + Performance(2026-07-19 내보내기, 07-17과 2일 차이). GA4 미첨부.
+
+### Coverage — 변화 없음
+심각한 문제 4건(크롤링됨-미색인 2건 시작됨 + 발견됨-미색인 2건 통과) — 07-17과 완전 동일. 중요하지 않은 문제 0건. 조치 불필요, 기존 판단 유지.
+
+### Performance — 07-17 신규 4건 전부 아직 노출 데이터 없음
+`high-protein-snacks-women-over-40.html`, `maf-training-plan.html`, `calorie-surplus-calculator.html`, `lean-bulk-vs-dirty-bulk.html` 전부 이번 데이터에도 미등장(게시 후 2일뿐이라 정상, 구글 반영 지연 고려하면 예상된 결과). 1~2주 뒤 재확인 필요.
+
+기존 클러스터 순위 분포는 07-17과 거의 동일(2일 차이라 노이즈 수준) — `zone-2-heart-rate-by-age.html`이 여전히 사이트 최고 순위(10.07위, 661노출), MAF 클러스터도 안정적 유지. 쿼리 1,000개를 주요 키워드군(호르몬/전해질/그립/알코올/콜드플런지/포스처 등)으로 재스캔했으나 여전히 새로운 수요 신호 없음 — **확립된 방법론(GSC는 확인용, 신규발굴은 웹서치)대로 이번에도 GSC 마이닝은 새 카테고리를 못 찾음, 예상된 결과.**
+
+### 신규 카테고리 웹서치 브레인스토밍 — 4건 조사, 전부 기각
+
+지난 세션 방법론(매 세션 웹서치로 인접 카테고리 조금씩 조사, 처음부터 롱테일 조합으로 검색)을 그대로 적용:
+
+| 후보 | 조합 | 기각 사유 |
+|---|---|---|
+| MAF 테스트 심화 | "how to do a MAF test properly" | philmaffetone.com(원저자), Coached, AerobAce, Marathon Handbook, RunnersBlueprint, extramilest.com 등 **6개+** 이미 존재 |
+| 고단백 콘텐츠 신규 인구통계 | "high protein breakfast/meals men over 50" | EatingWell(대형 매체)이 정확히 이 제목으로 이미 발행, Colorado State University, Ultimate Performance 등 **6개+** |
+| 수면-체중감량 연결 | "sleep quality calorie deficit weight loss ghrelin leptin" | Northside Hospital, Ubie Doctor's Note 등 대형 병원/헬스테크 포함 **9개+** — 그렐린/렙틴 얘기는 인터넷에서 가장 흔한 건강 콘텐츠 축에 속함, 극도로 포화 |
+| 허리엉덩이비율 vs BMI | "waist to hip ratio vs BMI which more accurate" | **Harvard Health, GoodRx, MedicalNewsToday** 등 최상위 의료매체가 지배 — JAMA 연구 인용하는 임상적 콘텐츠라 YMYL 리스크도 있음 |
+
+**결론**: 이번에도 4건 전부 기각. 07-17 세션에 이미 10개 카테고리를 조사해 전부 막혀있었는데, 이번에 4개를 추가로 조사해도 동일한 패턴 — **누적 18개 카테고리 중 통과한 게 하나도 없음**. 이 정도면 "새 카테고리를 찾는 시도" 자체의 기대수익이 세션마다 낮아지고 있다고 봐야 함. 완전히 새로운 토픽 브레인스토밍은 앞으로 세션마다 무조건 1순위로 반복하기보다, **①정말 참신한 각도가 떠오를 때만 가볍게 1~2개 확인** 하는 정도로 비중을 낮추고, **②기존 페이지 보강(GEO 리트로핏) 비중을 높이는** 쪽으로 전환하는 게 합리적.
+
+### 보강 작업 — GEO 리트로핏 1건 실행 + 3건 점검(불필요 확인)
+
+사용자 지시(콘텐츠 자체의 문제해결/비교분석 밀도가 웹+AI검색 둘 다에 유리)를 신규 페이지가 아닌 **기존 최고 성과 페이지**에 적용:
+
+- **`blog/zone-2-heart-rate-by-age.html`** (사이트 전체 최고 순위 10.07위, 661노출) — "왜 당신의 zone 2 심박수가 차트와 다를 수 있는가" 트러블슈팅 섹션 신규 추가(베타차단제/트레이닝경력/손목형심박계 정확도/카페인·더위·탈수·스트레스 4개 원인 비교표). 기존 6개 FAQ와 안 겹치는 새 FAQ 1개(손목형 심박계) 추가. 단어수 1,405→1,708(+22%). div밸런스·중첩순서·FAQ-스키마 일치 검증 완료. dateModified 스키마 갱신(2026-07-19).
+- **점검했지만 보강 불필요로 판단한 3건** (이미 비교/문제해결 포맷이 충분히 갖춰져 있음 — 다음 세션에 같은 페이지 재검토하는 시간 낭비 방지 위해 기록):
+  - `blog/fat-burning-heart-rate-zone.html`(1,452노출) — 이미 3,116단어, FAQ 12개, "fat burning zone vs HIIT" 비교 섹션과 "흔한 실수 4가지" 문제해결 섹션 보유.
+  - `blog/healthy-body-fat-percentage.html`(940노출) — 이미 2,859단어, FAQ 11개, 5가지 측정법(DEXA/수중계측/캘리퍼/BIA/네이비) 비교 섹션 보유.
+  - `tools/protein-calculator.html`(2,399노출, 사이트 최고 노출 페이지) — 이미 1,767단어(정보섹션만), FAQ 12개, "complete vs incomplete protein" 비교 섹션 보유.
+
+### 커밋
+
+- `d8cb04c` — zone-2-heart-rate-by-age.html GEO 보강, GitHub API로 push 반영 확인 완료.
+
+### 이번 세션에 하지 않은 것
+
+- 신규 페이지 발행 — 4건 후보 전부 기각(위 표 참고), 무리하게 발행하지 않음.
+- 나머지 96개 페이지 전체에 대한 GEO 리트로핏 후보 선정 — 이번엔 최상위 노출 4개만 점검(1건 보강+3건 불필요 확인). 다음 세션에 중간 노출 구간(100~500회) 페이지들 위주로 추가 점검 권장.
+- GA4 데이터 미첨부로 AdSense 재신청 판단 갱신 안 함.
