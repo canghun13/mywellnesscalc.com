@@ -546,3 +546,22 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 - **(Claude의 추론, 참고용) 계산기보다 블로그/비교/내러티브 콘텐츠가 상대적으로 진입장벽이 낮았음** — 계산기는 프로그래매틱 팩토리들이 이미 전 종목 커버하는 경향을 이번 세션에 반복 확인(alcohol 사례는 블로그 쪽이 성공). 다만 이건 사용자 지시가 아니라 증거 기반 가설이므로, 다음 세션에 계산기 아이디어가 떠오르면 시도 자체를 배제하지 말고 여전히 웹서치로 개별 확인할 것.
 - **(Claude의 추론, 참고용) "women over 40" 수식어 단독으로는 더 이상 쉬운 길이 아닐 가능성** — 이 인구통계가 2025~2026년 핫한 버티컬이 되면서 경쟁이 심해진 것으로 보임(Midi Health, Superpower, reverse.health, 1stphorm, agewell-health 등 다수 확인). 마찬가지로 사용자 지시가 아닌 참고 관찰.
 - **AerobAce를 MAF 클러스터의 주요 경쟁사로 인지** — 계산기, MAF 테스트 가이드, 사이클링 가이드까지 이미 다 있음. (이건 단순 사실 기록)
+
+### 2026-07-19 세션 3차 추가 조사 — 사용자가 "계속 파라"고 재차 요청, 5건 더 조사(전부 기각)
+
+사용자가 "서치콘솔/애널리틱스만 봐서는 우리가 이미 올린 콘텐츠 주변만 맴돌 것 — 카테고리를 넓혀서 데이터가 어떻게 나오는지 봐야 전략을 세우기 편하다"는 취지로 계속 파라고 지시함. 완전히 새로운 카테고리 5개를 추가로 웹서치 조사:
+
+| 후보 | 조합 | 기각 사유 |
+|---|---|---|
+| 마그네슘 + 수면 | "magnesium sleep quality supplement" | GoodRx, CNN, Cleveland Clinic, Mayo Clinic Press, Sleep Foundation, Life Extension 등 **9개+** — 대형 의료매체가 지배 |
+| "기아모드(starvation mode)" 신화 | "starvation mode myth metabolic adaptation" | Ro.co, Levels(헬스테크기업), bodybuilding-wizard, biologyinsights, trifectanutrition, aworkoutroutine, FitChef 등 **9개+** — 10년 넘게 다뤄진 전형적 피트니스 신화타파 소재 |
+| 운동 습관 형성 | "how to build exercise habit that sticks" | Zing Coach, NBC News, Live Science, Tonal, FirstHabbit, Trainiac 등 **10개+** — James Clear 원자적습관류 자기계발 장르 자체가 극도로 성숙 |
+| 웨어러블 심박수 정확도 비교 | "fitness tracker heart rate accuracy chest strap" | American College of Cardiology, ScienceDaily, BikeRadar, 다수 PMC 학술논문 등 **7개+** — 정식 임상연구기관이 지배 |
+| 유연성 테스트(sit-and-reach) 연령별 기준표 | "sit and reach test norms by age calculator" | topendsports, BodySpec, **GymCreek(악력 계산기에서도 등장했던 팩토리)**, FitnessNorms, TrainerMetrics 등 **6개+** |
+
+**최종 집계**: 이번 세션(07-19) 하루 동안 신규 카테고리를 총 **14건** 조사(1차 4건 + 2차 5건 + 3차 5건) — 전부 기각, 실제 발행은 alcohol 1건뿐. 07-17 세션의 10건까지 합치면 두 세션 누적 **24건 조사, 통과 2건(protein snacks, alcohol)** — 성공률 약 8%. 이 정도 표본이면 "우연히 어려운 것만 골랐다"고 보기 어렵고, 2026년 하반기 기준 이 니치가 전반적으로 매우 어렵다는 게 통계적으로도 뒷받침됨.
+
+**다음 세션 실행 방향(사용자 지시 반영, 계속 유지)**:
+1. 매 세션 신규 카테고리 탐색을 반드시 계속할 것(성공률이 낮아도 시도 자체를 줄이지 말 것 — 이번에도 14번 중 1번 건졌음).
+2. 이미 발행한 신규 콘텐츠들(특히 07-17/07-19에 만든 것들)이 **1~2주 뒤 서치콘솔에 어떤 반응을 보이는지가 중요한 데이터** — 이 데이터로 "어떤 종류의 신규가 통했는지" 패턴을 축적해나가면 다음 카테고리 선택에 참고가 됨(사용자가 강조한 포인트).
+3. 계산기 팩토리 반복 등장 도메인 리스트 계속 업데이트: fatcalc.com, basicfreetools.com, calcbe.com, betterlifefitness.net, activecalculator.com, completecalculators, **GymCreek**(신규 확인) — 신규 계산기 아이디어 검토 시 이 도메인들부터 검색해서 이미 있는지 빠르게 확인하면 리서치 시간 단축 가능.
