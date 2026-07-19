@@ -209,7 +209,7 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 
 ## 현재 사이트 현황 (2026-07-15 기준)
 
-- **툴 26개, 블로그 50개**(이번 세션 신규 3건: maf-training-plan.html, calorie-surplus-calculator.html, lean-bulk-vs-dirty-bulk.html), **퀴즈 20개**
+- **툴 26개, 블로그 51개**(2026-07-19 세션 신규: alcohol-and-calorie-deficit.html), **퀴즈 20개**
 - 개수 목표 고정 안 함
 
 ### 최근 세션(2026-07-11)에서 한 일 요약
@@ -490,7 +490,7 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 | 수면-체중감량 연결 | "sleep quality calorie deficit weight loss ghrelin leptin" | Northside Hospital, Ubie Doctor's Note 등 대형 병원/헬스테크 포함 **9개+** — 그렐린/렙틴 얘기는 인터넷에서 가장 흔한 건강 콘텐츠 축에 속함, 극도로 포화 |
 | 허리엉덩이비율 vs BMI | "waist to hip ratio vs BMI which more accurate" | **Harvard Health, GoodRx, MedicalNewsToday** 등 최상위 의료매체가 지배 — JAMA 연구 인용하는 임상적 콘텐츠라 YMYL 리스크도 있음 |
 
-**결론**: 이번에도 4건 전부 기각. 07-17 세션에 이미 10개 카테고리를 조사해 전부 막혀있었는데, 이번에 4개를 추가로 조사해도 동일한 패턴 — **누적 18개 카테고리 중 통과한 게 하나도 없음**. 이 정도면 "새 카테고리를 찾는 시도" 자체의 기대수익이 세션마다 낮아지고 있다고 봐야 함. 완전히 새로운 토픽 브레인스토밍은 앞으로 세션마다 무조건 1순위로 반복하기보다, **①정말 참신한 각도가 떠오를 때만 가볍게 1~2개 확인** 하는 정도로 비중을 낮추고, **②기존 페이지 보강(GEO 리트로핏) 비중을 높이는** 쪽으로 전환하는 게 합리적.
+**결론**: 이번에도 4건 전부 기각. 07-17 세션에 이미 10개 카테고리를 조사해 전부 막혀있었는데, 이번에 4개를 추가로 조사해도 동일한 패턴 — **누적 18개 카테고리 중 통과한 게 하나도 없음**. ~~이 정도면 "새 카테고리를 찾는 시도" 자체의 기대수익이 세션마다 낮아지고 있다고 봐야 함. 완전히 새로운 토픽 브레인스토밍은 앞으로 세션마다 무조건 1순위로 반복하기보다, ①정말 참신한 각도가 떠오를 때만 가볍게 1~2개 확인 하는 정도로 비중을 낮추고, ②기존 페이지 보강(GEO 리트로핏) 비중을 높이는 쪽으로 전환하는 게 합리적.~~ **→ 이 결론은 같은 세션 후반에 사용자가 명시적으로 반박함(하단 "사용자가 신규 탐색 중단 판단에 반박" 참고). 신규 탐색은 계속 세션마다 기본으로 시도할 것 — 다만 계산기보다 블로그 콘텐츠 위주로, "women over 40" 단독보다 3중 조합으로 접근할 것.**
 
 ### 보강 작업 — GEO 리트로핏 1건 실행 + 3건 점검(불필요 확인)
 
@@ -508,6 +508,39 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 
 ### 이번 세션에 하지 않은 것
 
-- 신규 페이지 발행 — 4건 후보 전부 기각(위 표 참고), 무리하게 발행하지 않음.
 - 나머지 96개 페이지 전체에 대한 GEO 리트로핏 후보 선정 — 이번엔 최상위 노출 4개만 점검(1건 보강+3건 불필요 확인). 다음 세션에 중간 노출 구간(100~500회) 페이지들 위주로 추가 점검 권장.
 - GA4 데이터 미첨부로 AdSense 재신청 판단 갱신 안 함.
+
+---
+
+## 2026-07-19 세션 후반 — 사용자가 "신규 탐색 중단" 판단에 반박, 공격적 확장 재개
+
+**사용자 피드백**: 위 결론("신규탐색 비중 낮추고 보강 위주로")에 대해 사용자가 명확히 반박함 — "롱테일 키워드에서 밀리면 답이 없다, 카테고리 확장도 계속해야 하고, 경쟁 센 건 롱테일로 극복해야 하고, 중간 경쟁도는 좋은 키워드면 당연히 진행해야 한다, 공격적으로 밀고 나가자." **이 피드백을 받아들여 신규 탐색을 재개함. 다음 세션에도 "이제 그만 찾아도 된다"고 스스로 판단하지 말고, 매 세션 신규 탐색을 기본으로 계속할 것.**
+
+### 추가로 조사한 5건 — 전부 기각 (트리플 조합/트렌디 앵글도 시도했으나 실패)
+
+| 후보 | 조합 | 기각 사유 |
+|---|---|---|
+| 크레아틴 + 여성40+ | "creatine for women over 40 menopause bone density" | joinmidi.com(Midi Health), 1stphorm, Ubie Health, thehouseofrose.com, agewell-health.com 등 **7개+** — "여성 40+ 건강" 자체가 2025~2026년 가장 핫한 웰니스 콘텐츠 버티컬이 되면서, 이 인구통계 수식어를 붙이는 모든 조합이 이미 경쟁 심함으로 확인.
+| 바디 리컴포지션 계산기 | "body recomposition calculator lose fat gain muscle" | fitnessvolt, builtwithscience, fatcalc.com, healthyeater.com, athletepath.com, myproteincalc.com, fitcommit.ai, fatlosscalc.com, leanffmi.com 등 **9개+** — 지금까지 발견한 것 중 가장 포화된 계산기 니치.
+| 이상체중 공식 비교 | "ideal body weight Devine Robinson Hamwi vs BMI" | bmi-calculator.net, activecalculator.com, basicfreetools.com, betterlifefitness.net, mymedicineadvisor.com, calcbe.com 등 **8개+**.
+| IF 16:8 초보자 스케줄 | "16:8 intermittent fasting beginner schedule week by week" | simple.life, eurekahealth, starttofit, TrackMyFast, OgamicX, BetterSelfLabs, PlanEat AI, Calo Blog 등 **9개+** — IF는 10년 넘게 다뤄진 극도로 성숙한 블로그 니치.
+| MAF + 사이클링 | "MAF training for cycling heart rate" | **AerobAce가 정확히 "MAF Training for Cyclists: Complete Guide" 발행**, TheTallCyclist.com도 존재 — AerobAce는 MAF 관련 전 종목(계산기/테스트가이드/사이클링가이드)을 이미 종합적으로 커버한 전문 경쟁사로 확인됨, 향후 MAF 관련 신규 후보 조사 시 이 사이트부터 확인할 것.
+
+**중요 발견**: 계산기 검색 중 **fatcalc.com, basicfreetools.com, calcbe.com, betterlifefitness.net, activecalculator.com** 등 소수의 도메인이 서로 다른 검색에서 반복적으로 등장함 — 이는 우연이 아니라 **대규모 프로그래매틱(자동화) 계산기 사이트 운영 주체들이 건강/피트니스 계산기 전 종목을 이미 시스템적으로 커버**하고 있다는 뜻. **따라서 "새로운 계산기 아이디어"로 접근하는 전략은 구조적으로 거의 항상 실패함 — 계산기 형태의 신규 콘텐츠는 앞으로 더더욱 후순위로 두고, 블로그/내러티브 콘텐츠 위주로 신규를 시도할 것.**
+
+### 신규 콘텐츠 실행 — alcohol-and-calorie-deficit.html
+
+사용자 지시("중간 경쟁도는 좋은 키워드로 그냥 진행")를 실제로 적용: 07-17 세션에 이미 "경쟁 셋 중 진입장벽 가장 낮음"으로 평가해뒀던 **alcohol + calorie-deficit** 조합을 재확인 후 그대로 진행.
+- **경쟁 재확인**: 대형 의료기관이나 계산기 팩토리가 아니라 소형 피트니스 블로그(RippedBody, OverHaul Fitness, Bolt Pharmacy 등) 위주 8개+ — 여전히 경쟁은 있지만 이번 세션에 조사한 9건 중 가장 낮은 진입장벽.
+- **차별화**: 경쟁사 전부 "왜 술이 지방연소를 늦추는가" 설명 위주 콘텐츠인 반면, 우리는 ①10개 음료 종류 칼로리 비교표(스캔 가능한 GEO 포맷, 경쟁사 중 이 정도로 실용적인 표를 제공한 곳 없음) ②우리 자체 calorie-deficit-calculator.html/calorie-surplus-calculator.html 결과와 직접 연결되는 실전 적용 섹션("당신의 목표 칼로리에 술이 몇 잔 들어가는지")으로 차별화 — 경쟁사들의 이론 설명 위주 접근과 명확히 다름.
+- **안전장치**: 과음을 부추기지 않도록 절제된 음주 가이드라인(미국 식단지침 기준 여성 1잔/남성 2잔) 명시, SAMHSA 전국 헬프라인(1-800-662-4357) 안내 문구를 disclaimer에 포함 — 술 관련 콘텐츠라 이 부분 특히 신경씀.
+- 약 1,226단어, FAQ 6개, div밸런스·중첩순서·FAQ-스키마 일치 검증 완료. 체크리스트(허브카드+뱃지, 홈미리보기, sitemap, llms.txt, 역링크 4개) 전부 완료.
+- 커밋 `638585c`, GitHub API로 push 반영 확인 완료.
+
+### 다음 세션 참고사항 (중요)
+
+- **신규 탐색을 세션마다 계속할 것** — "이제 안 나온다"고 스스로 판단해서 탐색을 축소하지 말 것. 이번 세션에도 9건 중 8건이 막혔지만 끝까지 시도해서 1건은 찾아냈음.
+- **계산기 형태보다 블로그/비교/내러티브 콘텐츠 위주로 시도할 것** — 계산기는 프로그래매틱 팩토리들이 이미 전 종목 커버, 블로그는 상대적으로 진입장벽이 낮은 경우가 종종 있음(alcohol 사례).
+- **"women over 40" 수식어 단독으로는 더 이상 쉬운 길이 아님** — 이 인구통계가 2025~2026년 핫한 버티컬이 되면서 경쟁이 심해짐(Midi Health, Superpower, reverse.health, 1stphorm, agewell-health 등 다수 확인). 이 수식어를 쓰려면 최소 3번째 구체적 조건(메뉴/포맷/상황)을 추가로 조합할 것.
+- **AerobAce를 MAF 클러스터의 주요 경쟁사로 인지** — 계산기, MAF 테스트 가이드, 사이클링 가이드까지 이미 다 있음.
