@@ -203,7 +203,7 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 | tools/bmi-calculator.html | → | myinsurancecalc.com/tools/life-insurance.html |
 | tools/body-fat-calculator.html | → | myinsurancecalc.com/tools/long-term-care-insurance.html |
 
-**미완료 (다른 사이트 → mywellnesscalc.com, inbound)**: 토큰 권한 문제로 이번 세션에선 못함. 사용자에게 각 프로젝트 채팅에서 진행할 수 있게 프롬프트 2개(cookingcalcs-용, myinsurancecalc-용) 전달 완료 — 진행됐는지 다음 세션에 확인할 것. 프롬프트 내용은 위 표와 동일한 4개 링크의 반대 방향.
+**미완료 (다른 사이트 → mywellnesscalc.com, inbound)**: 토큰 권한 문제로 이번 세션에선 못함. 사용자에게 각 프로젝트 채팅에서 진행할 수 있게 프롬프트 2개(cookingcalcs-용, myinsurancecalc-용) 전달 완료 — 진행됐는지 다음 세션에 확인할 것. 프롬프트 내용은 위 표와 동일한 4개 링크의 반대 방향. **2026-07-19 세션에 재확인**: `/user/repos` API는 여전히 두 repo 모두 `permissions.push: true`로 표시하지만, 실제로 clone 후 커밋+push 시도하면 **둘 다 403 에러(권한 거부)** — 이 fine-grained PAT는 여전히 mywellnesscalc.com에만 write 스코프이고 나머지는 read-only로 재확인됨. **매 세션 이 부분을 다시 테스트할 필요 없음 — 사용자가 새 토큰을 발급할 때 다른 repo에도 스코프를 추가하지 않는 한 구조적으로 계속 막혀있을 것.** 이 작업은 계속 각 사이트 프로젝트 채팅에서 진행해야 함.
 
 ---
 
