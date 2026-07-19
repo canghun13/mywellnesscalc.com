@@ -565,3 +565,27 @@ div 밸런스 검증 완료(전부 OK). 참고: `muscle-building-starting-point.
 1. 매 세션 신규 카테고리 탐색을 반드시 계속할 것(성공률이 낮아도 시도 자체를 줄이지 말 것 — 이번에도 14번 중 1번 건졌음).
 2. 이미 발행한 신규 콘텐츠들(특히 07-17/07-19에 만든 것들)이 **1~2주 뒤 서치콘솔에 어떤 반응을 보이는지가 중요한 데이터** — 이 데이터로 "어떤 종류의 신규가 통했는지" 패턴을 축적해나가면 다음 카테고리 선택에 참고가 됨(사용자가 강조한 포인트).
 3. 계산기 팩토리 반복 등장 도메인 리스트 계속 업데이트: fatcalc.com, basicfreetools.com, calcbe.com, betterlifefitness.net, activecalculator.com, completecalculators, **GymCreek**(신규 확인) — 신규 계산기 아이디어 검토 시 이 도메인들부터 검색해서 이미 있는지 빠르게 확인하면 리서치 시간 단축 가능.
+
+### 2026-07-19 세션 4차 추가 — 사용자가 "바로 할 수 있는 거 있으면 하라"고 지시, 신규 3건 + 보강 후보 8건 + 사이트 전체 기술감사 실행
+
+**신규 후보 3건 추가 조사 (전부 기각)**:
+
+| 후보 | 조합 | 기각 사유 |
+|---|---|---|
+| 고단백+신장손상 신화 | "does high protein diet damage kidneys" | McMaster University(원 연구), Healthline, Oxford Academic 저널, Apollo247 등 **6개+** — 신장 관련 임상 주제라 YMYL 리스크도 있음 |
+| 공복 유산소 vs 식후 유산소 | "fasted cardio vs fed cardio fat loss" | GoodRx, BodySpec, Levels, Colorado State University 영양센터 등 **8개+** — 10년 넘은 전형적 피트니스 논쟁 주제 |
+| 저예산 고단백 식품 | "cheap high protein foods budget grocery" | **GoodRx**, Men's Fitness, Fitness and Power, seannal.com, predatornutrition.com 등 **7개+** |
+
+**GoodRx를 새로운 유형의 반복 경쟁자로 인지**: 계산기 팩토리(fatcalc 등)와는 다른 유형 — 이번 세션에 마그네슘+수면, 신장신화, 저예산단백질 검색에서 전부 등장함. **대형 건강매체가 거의 모든 일반 건강/영양 주제를 이미 포괄적으로 다뤄놓은 상태**라는 뜻. Cleveland Clinic, Mayo Clinic, Healthline과 함께 "일반 건강 정보" 카테고리의 대형 경쟁자로 묶어서 인지할 것.
+
+**보강 후보 8건 추가 점검 (전부 이미 충분, 손대지 않음)**: `tools/if-calculator.html`(1,578단어, 프로토콜비교+타임라인+실수 섹션 이미 보유), `blog/high-protein-foods.html`(1,250단어, 표2개+FAQ7개), `tools/heart-rate-zone.html`(1,951단어, Karvonen vs %MaxHR 비교 이미 보유), `blog/how-to-improve-vo2-max.html`(1,920단어), `blog/what-is-vo2-max.html`(2,011단어, 측정법 3종 비교 이미 보유) — **이걸로 지금까지 총 8개 최상위/중위 노출 페이지를 점검했는데 GEO 보강이 필요했던 건 zone-2-heart-rate-by-age.html 단 1건뿐이었음. 사이트 콘텐츠 품질 자체는 이미 상당히 성숙한 상태로 판단, 다음 세션에 같은 페이지들 재점검할 필요 없음.**
+
+**사이트 전체 기술 감사 실행 (101개 파일 전수 검사, 전부 정상)**:
+- FAQ 본문-스키마 일치: 0건 불일치
+- 내부링크 깨짐: 0건
+- div 밸런스: 0건 이슈
+- **결론: 사이트 기술 상태는 현재 완전히 깨끗함. 다음 세션에 전체 재감사 우선순위 낮음 (문제가 새로 생기지 않는 한).**
+
+**배지 만료 예정 알림**: `blog/index.html`/`tools/index.html`/`quiz/index.html`의 2026-07-06 날짜 배지 6개가 **14일 규정상 2026-07-20에 만료** — 다음 세션 시작 시 바로 제거할 것 (이번 세션 기준 13일차라 아직 하루 남아 제거 안 함).
+
+**이번 라운드 결론**: 신규 탐색(3건)과 보강(8건 점검) 양쪽 다 이번엔 소득 없음 — 신규는 22건 연속 기각(이번 세션 누적 17건 조사), 보강은 이미 대부분 완료된 상태. **오늘 세션에서 실제로 진전이 있었던 건 이미 완료함(alcohol 발행 1건, zone-2 보강 1건, 기술감사로 사이트 전체 클린 확인). 지금 시점에서 추가로 무리하게 파는 것보다, 이미 발행한 신규 콘텐츠들의 서치콘솔 반응을 기다리는 게 다음 실질적 진전 포인트.**
