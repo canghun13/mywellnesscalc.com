@@ -1,5 +1,4 @@
-<!DOCTYP
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does coffee break a fast?", "acceptedAnswer": {"@type": "Answer", "text": "Black coffee does not meaningfully break a fast. It contains virtually no calories and may enhance fat-burning effects by increasing adrenaline and free fatty acid release. Adding milk, sugar, or cream breaks the fast."}}, {"@type": "Question", "name": "Is intermittent fasting safe for women?", "acceptedAnswer": {"@type": "Answer", "text": "For most healthy women, yes. However, extended fasting (18+ hours daily) may affect cortisol and reproductive hormones more in women than men. Women with a history of disordered eating, those who are pregnant or breastfeeding, and those with thyroid conditions should consult a healthcare provider first."}}, {"@type": "Question", "name": "Will fasting cause muscle loss?", "acceptedAnswer": {"@type": "Answer", "text": "Short-term fasting (under 24 hours) does not cause significant muscle loss in most people. The primary driver of muscle loss is insufficient protein intake, not the fast itself. High protein within your eating window and continued resistance training are the most important protective factors."}}, {"@type": "Question", "name": "How long until morning hunger goes away?", "acceptedAnswer": {"@type": "Answer", "text": "Most people adapt within 1–2 weeks. Morning hunger is partly driven by ghrelin — a hunger hormone that spikes at times you're accustomed to eating. Once you consistently skip breakfast, ghrelin adapts and the morning spike diminishes."}}, {"@type": "Question", "name": "Can I exercise while fasted?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Fasted exercise is well-tolerated for low-to-moderate intensity work. For high-intensity or strength training, performance may dip initially. If performance suffers significantly, consider timing your first meal closer to your workout."}}]}</script>E html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +25,19 @@
       {"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},
       {"@type":"ListItem","position":2,"name":"Quizzes","item":"https://mywellnesscalc.com/quiz/"},
       {"@type":"ListItem","position":3,"name":"What's Your Ideal Fasting Protocol?","item":"https://mywellnesscalc.com/quiz/ideal-fasting-protocol.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Does coffee break a fast?","acceptedAnswer":{"@type":"Answer","text":"Black coffee does not meaningfully break a fast. It contains virtually no calories and may enhance fat-burning effects by increasing adrenaline and free fatty acid release. Adding milk, sugar, or cream breaks the fast."}},
+      {"@type":"Question","name":"Is intermittent fasting safe for women?","acceptedAnswer":{"@type":"Answer","text":"For most healthy women, yes. However, extended fasting (18+ hours daily) may affect cortisol and reproductive hormones more in women than men. Women with a history of disordered eating, those who are pregnant or breastfeeding, and those with thyroid conditions should consult a healthcare provider first."}},
+      {"@type":"Question","name":"Will fasting cause muscle loss?","acceptedAnswer":{"@type":"Answer","text":"Short-term fasting (under 24 hours) does not cause significant muscle loss in most people. The primary driver of muscle loss is insufficient protein intake, not the fast itself. High protein within your eating window and continued resistance training are the most important protective factors."}},
+      {"@type":"Question","name":"How long until morning hunger goes away?","acceptedAnswer":{"@type":"Answer","text":"Most people adapt within 1–2 weeks. Morning hunger is partly driven by ghrelin — a hunger hormone that spikes at times you're accustomed to eating. Once you consistently skip breakfast, ghrelin adapts and the morning spike diminishes."}},
+      {"@type":"Question","name":"Can I exercise while fasted?","acceptedAnswer":{"@type":"Answer","text":"Yes. Fasted exercise is well-tolerated for low-to-moderate intensity work. For high-intensity or strength training, performance may dip initially. If performance suffers significantly, consider timing your first meal closer to your workout."}}
     ]
   }
   </script>
@@ -378,7 +390,7 @@ function showResult() {
   if (hungerLow || (newToFasting && earlyHungry)) {
     protocol = '12:12 to start';
     subtitle = 'A gentle entry point that still delivers real benefits';
-    body = `<h3>Why this suits you</h3><p>A 12-hour fast — for example, 8pm to 8am — is the most sustainable starting point when morning hunger is strong or fasting is new. It builds the habit without the friction of skipping breakfast entirely.</p><h3>How it works in practice</h3><ul><li>Finish dinner by 8pm</li><li>Eat breakfast no earlier than 8am</li><li>After 2–4 weeks, consider extending to 14:10 or 16:8</li></ul><h3>What to expect</h3><p>Most people notice improved morning appetite regulation within 1–2 weeks. The goal isn't to stay at 12:12 forever — it's to adapt your body before going longer.</p>`;
+    body = `<h3>Why this suits you</h3><p>A 12-hour fast — for example, 8pm to 8am — is the most sustainable starting point when morning hunger is strong or fasting is new. It builds the habit without the friction of skipping breakfast entirely.</p><h3>How it works in practice</h3><ul><li>Finish dinner by 8pm</li><li>Eat breakfast no earlier than 8am</li><li>After 2–4 weeks, consider extending to 14:10 or 16:8</li></ul><h3>What to expect</h3><p>Most people notice improved morning appetite regulation within 1–2 weeks. The goal isn\'t to stay at 12:12 forever — it\'s to adapt your body before going longer.</p>`;
     ctas = [
       {href:'../tools/if-calculator.html', label:'Set your fasting window →'},
       {href:'../blog/intermittent-fasting-beginners.html', label:'Intermittent Fasting for Beginners'},
@@ -387,7 +399,7 @@ function showResult() {
   } else if (socialEvenings && !highTolerance) {
     protocol = '5:2 Protocol';
     subtitle = 'Two low-calorie days per week — eat normally the rest';
-    body = `<h3>Why this suits you</h3><p>If your evenings are often social or variable, a daily eating window is hard to stick to. The 5:2 method lets you eat normally on 5 days and restrict calories (500–600 kcal) on 2 non-consecutive days — without cutting off evening meals.</p><h3>How it works in practice</h3><ul><li>Choose 2 days per week (e.g. Monday and Thursday)</li><li>On those days, eat 500–600 kcal in 1–2 small meals</li><li>Eat normally on the other 5 days</li></ul><h3>What to expect</h3><p>Most people lose 0.5–1 lb per week on 5:2. It's more flexible than daily fasting, but the fasting days require discipline.</p>`;
+    body = `<h3>Why this suits you</h3><p>If your evenings are often social or variable, a daily eating window is hard to stick to. The 5:2 method lets you eat normally on 5 days and restrict calories (500–600 kcal) on 2 non-consecutive days — without cutting off evening meals.</p><h3>How it works in practice</h3><ul><li>Choose 2 days per week (e.g. Monday and Thursday)</li><li>On those days, eat 500–600 kcal in 1–2 small meals</li><li>Eat normally on the other 5 days</li></ul><h3>What to expect</h3><p>Most people lose 0.5–1 lb per week on 5:2. It\'s more flexible than daily fasting, but the fasting days require discipline.</p>`;
     ctas = [
       {href:'../tools/if-calculator.html', label:'Plan your 5:2 schedule →'},
       {href:'../tools/calorie-deficit-calculator.html', label:'Calculate your calorie target'},
@@ -396,7 +408,7 @@ function showResult() {
   } else if (regularFaster || highTolerance) {
     protocol = '18:6 or 20:4';
     subtitle = 'A tighter eating window for experienced fasters';
-    body = `<h3>Why this suits you</h3><p>If you've already adapted to 16:8 and hunger isn't an issue, narrowing your eating window can deepen the metabolic benefits — more time in a fasted state, lower insulin, and better fat oxidation.</p><h3>How it works in practice</h3><ul><li><strong>18:6:</strong> Fast for 18 hours, eat within a 6-hour window (e.g. 12pm–6pm)</li><li><strong>20:4:</strong> Fast for 20 hours, eat within 4 hours (e.g. 2pm–6pm)</li><li>Prioritise protein and nutrient density in your eating window</li></ul><h3>What to watch for</h3><p>Longer fasting windows increase the risk of undereating — especially protein. Make sure you're hitting your daily protein target even with fewer meals.</p>`;
+    body = `<h3>Why this suits you</h3><p>If you\'ve already adapted to 16:8 and hunger isn\'t an issue, narrowing your eating window can deepen the metabolic benefits — more time in a fasted state, lower insulin, and better fat oxidation.</p><h3>How it works in practice</h3><ul><li><strong>18:6:</strong> Fast for 18 hours, eat within a 6-hour window (e.g. 12pm–6pm)</li><li><strong>20:4:</strong> Fast for 20 hours, eat within 4 hours (e.g. 2pm–6pm)</li><li>Prioritise protein and nutrient density in your eating window</li></ul><h3>What to watch for</h3><p>Longer fasting windows increase the risk of undereating — especially protein. Make sure you\'re hitting your daily protein target even with fewer meals.</p>`;
     ctas = [
       {href:'../tools/if-calculator.html', label:'Set your 18:6 eating window →'},
       {href:'../tools/protein-calculator.html', label:'Check your protein target'},
