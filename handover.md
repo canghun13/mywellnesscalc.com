@@ -1,6 +1,25 @@
 # MyWellnessCalc 작업 인수인계
 > 최종 업데이트: 2026-07-21
 
+## 2026-07-21 추가 세션 — 퀴즈 21개 전체 긴급 버그 수정 (사용자가 화면 깨짐 스크린샷 2장 제보)
+
+**증상**: (1) `quiz/ideal-fasting-protocol.html` — 페이지 최상단(헤더보다 위)에 FAQ 스키마의 raw JSON 텍스트가 그대로 노출됨. (2) `quiz/vitamin-d-supplement.html` — 콘솔에 `Uncaught SyntaxError: missing ) after argument list`.
+
+**원인 진단**:
+1. `ideal-fasting-protocol.html`: `<!DOCTYPE html>`이 `<!DOCTYP` + (FAQ 스키마 script 삽입) + `E html>`로 쪼개져 있었음 — 과거 어느 시점에 FAQ 스키마를 삽입하는 편집이 문자 위치 기준으로 잘못 들어가 DOCTYPE 선언 중간에 꽂힌 것. DOCTYPE이 깨지면서 브라우저가 첫 `>` 문자까지를 통째로 하나의(잘못된) 선언으로 소비하고, 그 뒤 JSON 텍스트를 body 텍스트로 렌더링해버림.
+2. `vitamin-d-supplement.html` 등 **19개 퀴즈 파일**: 결과창 텍스트(`title=`, `subtitle=`, `body=` 등)에 들어간 영어 축약형(you're, it's, don't, doesn't, isn't, wasn't 등)의 아포스트로피가 이스케이프 없이 JS 작은따옴표 문자열 안에 그대로 들어가 있어 문자열이 조기 종료되고 `SyntaxError`가 발생 — 퀴즈 결과 로직 자체가 실행 안 되는 상태였음(21개 중 19개, `body-goal-type.html`과 `ideal-fasting-protocol.html`만 이 버그는 없었음).
+
+**조치**:
+- `ideal-fasting-protocol.html`: DOCTYPE 복구, FAQPage 스키마를 head 내 BreadcrumbList 스키마 뒤에 정상 위치로 재배치.
+- 19개 퀴즈 파일: 영문자+아포스트로피+영문자 패턴(축약형)을 `\'`로 이스케이프 처리하는 스크립트를 인라인 `<script>` 블록에만(JSON-LD·외부 src 스크립트는 제외) 일괄 적용.
+- **검증**: Node.js `--check`로 사이트 전체(quiz/tools/blog/index, 108개 html) 인라인 스크립트 문법 오류 0건 확인. quiz 21개 파일 전수로 DOCTYPE/div밸런스/JSON-LD 유효성/html·head·body 태그 개수 재검사 — 전부 통과.
+- 수정 후 diff 샘플 확인 결과 백틱 템플릿 리터럴(`` ` ``) 안의 아포스트로피도 함께 이스케이프됐는데, JS에서는 템플릿 리터럴 안에서도 `\'`가 유효한 이스케이프(그냥 `'`로 평가됨)라 기능적으로는 문제없음 — 다만 소스가 다소 장황해 보일 수 있음(추후 원한다면 정리 가능, 우선순위 낮음).
+
+**결론**: 사용자가 지적한 "퀴즈 전체가 이상하다"는 게 사실이었음 — 21개 중 19개가 콘솔 에러로 결과 표시 로직이 아예 죽어있는 상태였고, 이번에 전수 수정 완료. 커밋 `f62ac4d`로 push 완료.
+
+**다음 세션 참고**: 이 버그의 근본 원인(과거 세션에서 퀴즈 결과문에 축약형 영어 표현을 자유롭게 쓰면서 이스케이프를 안 한 것으로 추정)이 재발하지 않도록, 앞으로 퀴즈 파일의 JS 문자열에 축약형(it's, don't, you're 등)을 넣을 땐 반드시 `\'`로 이스케이프하거나 아예 축약형을 풀어쓰는(it is, do not) 방식을 권장. 신규/수정 퀴즈 파일 작업 후에는 `node --check`로 인라인 스크립트 문법 검증하는 걸 체크리스트에 추가하는 게 좋을 듯.
+
+
 ---
 
 ## 기본 정보
