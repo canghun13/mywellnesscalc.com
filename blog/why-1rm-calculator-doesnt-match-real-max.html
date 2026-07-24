@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Your Calculated 1RM Doesn't Match Your Real Max – My Wellness Calc</title>
+  <meta name="description" content="Tested a true one-rep max and got a different number than the calculator predicted? Here's why that happens, broken down by cause, plus how to test a real 1RM safely.">
+  <meta property="og:title" content="Why Your Calculated 1RM Doesn't Match Your Real Max – My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/blog/why-1rm-calculator-doesnt-match-real-max.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
+  <style>
+    .article-wrap{max-width:1060px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .article-tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:1rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:1rem;}
+    .article-meta{font-size:.85rem;color:var(--light);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-intro{font-size:1.1rem;color:var(--mid);font-weight:300;line-height:1.7;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+    .article-body h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;letter-spacing:-.02em;margin:2rem 0 .875rem;}
+    .article-body h3{font-size:1.15rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    .article-body p{color:var(--mid);font-size:.95rem;line-height:1.8;margin-bottom:1rem;}
+    .article-body ul,.article-body ol{color:var(--mid);font-size:.95rem;line-height:1.8;margin:0 0 1rem 1.5rem;}
+    .article-body li{margin-bottom:.3rem;}
+    .article-body strong{color:var(--charcoal);}
+    .highlight-box{background:var(--cream);border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+    .highlight-box h4{font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--charcoal);}
+    .highlight-box p{margin-bottom:.5rem;}
+    .highlight-box p:last-child{margin-bottom:0;}
+    .cta-box{background:var(--sage-dark);color:white;border-radius:16px;padding:1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    @media(max-width:480px){.cta-box{flex-direction:column;align-items:stretch}.cta-box .cta-link{align-self:flex-start}}
+    .cta-box p{color:rgba(255,255,255,.8);font-size:.875rem;margin:0;flex:1;}
+    .cta-link{display:inline-block;background:white;color:var(--sage-dark);padding:.625rem 1.25rem;border-radius:100px;font-size:.875rem;font-weight:500;text-decoration:none;flex-shrink:0;}
+    .cta-link:hover{opacity:.9;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .toc{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;}
+    .toc h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .toc ol{list-style:none;padding:0;counter-reset:toc;}
+    .toc li{counter-increment:toc;padding:.35rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+    .toc li:last-child{border-bottom:none;}
+    .toc a{color:var(--mid);text-decoration:none;display:flex;gap:.5rem;align-items:baseline;}
+    .toc a::before{content:counter(toc);font-family:'Fraunces',serif;color:var(--sage-dark);font-size:.8rem;flex-shrink:0;}
+    .toc a:hover{color:var(--sage-dark);}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h4{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .tool-link{display:flex;align-items:center;gap:.6rem;padding:.625rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--charcoal);font-size:.875rem;}
+    .tool-link:last-child{border-bottom:none;}
+    .tool-link:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper .compare-table{margin:0;}
+    .compare-table{width:100%;min-width:520px;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem;}
+    .compare-table th{background:var(--sage-dark);color:white;padding:.7rem .85rem;text-align:left;font-weight:500;}
+    .compare-table td{padding:.6rem .85rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .compare-table tr:last-child td{border-bottom:none;}
+    .compare-table tr:nth-child(even) td{background:var(--cream);}
+    .article-main{min-width:0;}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+  </style>
+<!-- SCHEMA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Your Calculated 1RM Doesn't Match Your Real Max",
+  "url": "https://mywellnesscalc.com/blog/why-1rm-calculator-doesnt-match-real-max.html",
+  "description": "Tested a true one-rep max and got a different number than the calculator predicted? Here's why that happens, broken down by cause, plus how to test a real 1RM safely.",
+  "publisher": {"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"},
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://mywellnesscalc.com/blog/why-1rm-calculator-doesnt-match-real-max.html"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://mywellnesscalc.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"Why Your Calculated 1RM Doesn't Match Reality","item":"https://mywellnesscalc.com/blog/why-1rm-calculator-doesnt-match-real-max.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How accurate are 1RM calculators?","acceptedAnswer":{"@type":"Answer","text":"Generally accurate to within 5-10% when the input set was 3-8 reps taken close to failure with good form. Accuracy drops noticeably above 10 reps, since fatigue and muscular endurance start influencing the result as much as raw strength does."}},
+    {"@type":"Question","name":"Why did I fail a lift at my exact calculated 1RM?","acceptedAnswer":{"@type":"Answer","text":"The most common cause is neural fatigue from the warm-up sets, or a working set that was closer to true failure than it felt at the time. Resting 3-5 minutes between heavy warm-up sets and stopping one rep short of failure on the set you use for estimation both improve the estimate's reliability."}},
+    {"@type":"Question","name":"Why is my actual max lower than the calculator predicted?","acceptedAnswer":{"@type":"Answer","text":"This usually means the set used to estimate had more than about 10 reps. Every 1RM formula loses accuracy as rep count climbs, because fatigue accumulates differently than a simple linear relationship. Re-testing with a 3-6 rep set gives a tighter, more reliable estimate."}},
+    {"@type":"Question","name":"Why is my actual max higher than the calculator predicted?","acceptedAnswer":{"@type":"Answer","text":"Some formulas, particularly Brzycki, systematically underestimate for people with a higher proportion of fast-twitch muscle fibers, especially at higher rep counts. Averaging multiple formulas, or weighting the Lombardi formula more heavily for sets over 8 reps, usually closes this gap."}},
+    {"@type":"Question","name":"How often should I retest my 1RM?","acceptedAnswer":{"@type":"Answer","text":"Every 8-12 weeks is a reasonable default for most lifters following a structured program. Testing more often adds fatigue without much new information, since strength doesn't meaningfully change week to week. Recalculate sooner if you've had a deload, an illness, or a significant change in training frequency."}},
+    {"@type":"Question","name":"Is it safe to test a true 1RM?","acceptedAnswer":{"@type":"Answer","text":"It carries more injury risk than submaximal estimation, particularly for beginners or on technical lifts like the squat and bench press. If you do test a true max, use a spotter or safety bars, warm up thoroughly with several ascending sets, and only attempt it after at least a few months of consistent, technically sound training."}}
+  ]
+}
+</script>
+<!-- SCHEMA_END -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="article-wrap">
+  <article class="article-main">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › Why Your Calculated 1RM Doesn't Match Reality</div>
+    <span class="article-tag">Fitness</span>
+    <h1>Why Your Calculated 1RM Doesn't Match Your Real Max</h1>
+    <div class="article-meta"><span>📅 July 2026</span><span>⏱️ 6 min read</span><span>🏋️ Fitness</span></div>
+    <p class="article-intro">You ran the numbers, tested your actual max, and got a different result than the calculator predicted. That's normal — 1RM formulas are estimates, not measurements — but the size and direction of the gap usually points to one specific, fixable cause. Here's how to read your own mismatch.</p>
+
+    <div class="article-body">
+
+      <h2>Match your symptom to the cause</h2>
+      <div class="table-wrapper">
+      <table class="compare-table">
+        <thead><tr><th>What happened</th><th>Most likely cause</th><th>Fix</th></tr></thead>
+        <tbody>
+          <tr><td>Missed the lift at the exact predicted weight</td><td>Neural fatigue from warm-ups, or the estimation set was closer to failure than it felt</td><td>Rest 3-5 min between heavy warm-up sets; stop 1 rep short of failure on your test set</td></tr>
+          <tr><td>Actual max is well below the estimate</td><td>Estimation set had more than ~10 reps — formula error grows with rep count</td><td>Re-test with a 3-6 rep set for a tighter estimate</td></tr>
+          <tr><td>Actual max is well above the estimate</td><td>Formula bias (Brzycki underestimates high-rep sets) or high fast-twitch fiber ratio</td><td>Average multiple formulas, or weight Lombardi more for sets over 8 reps</td></tr>
+          <tr><td>Right on some lifts, off on others</td><td>Technique-limited lifts don't follow the same fatigue curve as simpler ones</td><td>Trust the estimate less for squat/bench, more for machine or single-joint lifts</td></tr>
+          <tr><td>Was accurate before, feels wrong now</td><td>The estimate is only as fresh as the set it came from — strength shifts with training phase</td><td>Recalculate from a recent set rather than reusing an old number</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="cta-box">
+        <p>Get a fresh estimate from your most recent working set.</p>
+        <a href="../tools/one-rep-max.html" class="cta-link">1RM Calculator →</a>
+      </div>
+
+      <h2>Why the formulas diverge above 10 reps</h2>
+      <p>Every 1RM formula (Epley, Brzycki, Lombardi, and others) is built on the same underlying assumption: that the relationship between reps performed and percentage of your true max follows a predictable curve. That assumption holds up well for sets of 3-8 reps. Past about 10 reps, muscular endurance and cardiovascular fatigue start contributing to when you fail the set, not just raw strength — and different people's endurance varies far more than their raw strength does. This is why a 15-rep set produces a much less reliable estimate than a 5-rep set, even though both are mathematically valid inputs.</p>
+
+      <h2>Why some formulas run higher or lower than others</h2>
+      <p>The most commonly used formulas — Epley and Brzycki — return identical results at exactly 10 reps by design, but diverge below that. Epley tends to estimate slightly higher for low rep counts; Brzycki tends to run more conservative, particularly for sets in the 6-9 rep range. Neither is universally "more correct" — the gap between them is often a reasonable proxy for your own uncertainty range. If your fast-twitch muscle fiber ratio is unusually high (common in explosive, power-oriented lifters), you'll tend to outperform most formulas' predictions, since these formulas are built from average population data.</p>
+
+      <h2>Why technique-heavy lifts are the least predictable</h2>
+      <p>Formulas were originally validated primarily on simpler, more mechanically consistent movements. Lifts with a technical component — squat depth requirements, a paused bench press, a deadlift off a deficit — introduce a variable the formula doesn't account for: how much of your "failure" on a submaximal set was strength-limited versus technique-limited. A leg press or machine chest press estimate will typically track much closer to your true max than a free-weight back squat estimate, simply because there's less technical variance to introduce error.</p>
+
+      <div class="highlight-box">
+        <h4>How to test a true 1RM safely, if you choose to</h4>
+        <p><strong>Only attempt it with a training history:</strong> Several months of consistent, technically sound training first — testing a true max as a beginner adds injury risk for little useful information.</p>
+        <p><strong>Warm up in ascending steps:</strong> Several progressively heavier sets (roughly 50%, 70%, 85%, 95% of your estimated max) with full recovery between them, not a single warm-up set.</p>
+        <p><strong>Use a spotter or safety bars:</strong> Non-negotiable for barbell squat and bench press attempts specifically.</p>
+        <p><strong>Limit true max attempts to your top 1-2 lifts:</strong> Testing every exercise to a true max in one session compounds fatigue and lowers accuracy on the later lifts.</p>
+      </div>
+
+      <h2>How often to retest</h2>
+      <p>Every 8-12 weeks is a reasonable default for most structured training programs — roughly the length of a typical training block. Testing weekly adds cumulative fatigue without producing meaningfully different numbers, since strength doesn't change that quickly. Recalculate sooner than your usual schedule if you've just come off a deload week, returned from an illness or long break, or made a significant change in training frequency — any of these can shift your true number meaningfully outside the normal 8-12 week cycle.</p>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How accurate are 1RM calculators?</div>
+          <div class="faq-a">Generally accurate to within 5-10% when the input set was 3-8 reps taken close to failure with good form. Accuracy drops noticeably above 10 reps, since fatigue and muscular endurance start influencing the result as much as raw strength does.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why did I fail a lift at my exact calculated 1RM?</div>
+          <div class="faq-a">The most common cause is neural fatigue from the warm-up sets, or a working set that was closer to true failure than it felt at the time. Resting 3-5 minutes between heavy warm-up sets and stopping one rep short of failure on the set you use for estimation both improve the estimate's reliability.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why is my actual max lower than the calculator predicted?</div>
+          <div class="faq-a">This usually means the set used to estimate had more than about 10 reps. Every 1RM formula loses accuracy as rep count climbs, because fatigue accumulates differently than a simple linear relationship. Re-testing with a 3-6 rep set gives a tighter, more reliable estimate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why is my actual max higher than the calculator predicted?</div>
+          <div class="faq-a">Some formulas, particularly Brzycki, systematically underestimate for people with a higher proportion of fast-twitch muscle fibers, especially at higher rep counts. Averaging multiple formulas, or weighting the Lombardi formula more heavily for sets over 8 reps, usually closes this gap.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How often should I retest my 1RM?</div>
+          <div class="faq-a">Every 8-12 weeks is a reasonable default for most lifters following a structured program. Testing more often adds fatigue without much new information, since strength doesn't meaningfully change week to week. Recalculate sooner if you've had a deload, an illness, or a significant change in training frequency.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it safe to test a true 1RM?</div>
+          <div class="faq-a">It carries more injury risk than submaximal estimation, particularly for beginners or on technical lifts like the squat and bench press. If you do test a true max, use a spotter or safety bars, warm up thoroughly with several ascending sets, and only attempt it after at least a few months of consistent, technically sound training.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> Maximal-effort lifting carries injury risk. Consult a qualified coach or trainer before attempting a true 1RM test, particularly if you're new to strength training or returning from injury.</div>
+    </div>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="toc">
+      <h4>In this article</h4>
+      <ol>
+        <li><a href="#">Match symptom to cause</a></li>
+        <li><a href="#">Why formulas diverge above 10 reps</a></li>
+        <li><a href="#">Why formulas differ from each other</a></li>
+        <li><a href="#">Why technique-heavy lifts vary most</a></li>
+        <li><a href="#">How to test safely</a></li>
+        <li><a href="#">How often to retest</a></li>
+      </ol>
+    </div>
+    <div class="related-tools">
+      <h4>Related tools</h4>
+      <a href="../tools/one-rep-max.html" class="tool-link">🏋️ One Rep Max Calculator</a>
+      <a href="../quiz/muscle-building-starting-point.html" class="tool-link">📋 Muscle-Building Starting Point Quiz</a>
+      <a href="lean-bulk-vs-dirty-bulk.html" class="tool-link">📝 Lean Bulk vs Dirty Bulk</a>
+      <a href="../tools/macro-calculator.html" class="tool-link">🥗 Macro Calculator</a>
+      <a href="build-muscle-after-40.html" class="tool-link">📝 How to Build Muscle After 40</a>
+    </div>
+  </aside>
+</div>
+<div id="footer-placeholder"></div>
+<script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
+<script src="../assets/js/components.js"></script>
+</body>
+</html>
