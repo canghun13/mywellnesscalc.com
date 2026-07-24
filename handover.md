@@ -1,6 +1,30 @@
 # MyWellnessCalc 작업 인수인계
 > 최종 업데이트: 2026-07-21
 
+## 2026-07-21 세 번째 세션 — "신규 0건은 곤란하다" 재지적 이후, 공격적 확장 지시로 신규 2건 발행
+
+**사용자 지시 변화**: 이전 세션들의 "경쟁 세면 기각" 방식에서 벗어나, 오늘은 "키워드를 다양하게 폭넓게 찾고 → 리스트를 뽑고 → 경쟁강도 체크 → 강하면 롱테일로 뚫어라 → 가장 좋은 클러스터로 뚫는거다 → 핵심 기능은 경쟁이 강해도 결국 해야된다"는 명확한 지시. 즉 이제부터는 **적당히 경쟁 있는 것도 롱테일 각도만 확실하면 발행**하는 쪽으로 기준 조정.
+
+**폭넓게 조사한 후보 4건**(경쟁도 순으로): 
+1. **HRV(심박변이도) + Zone 2 훈련 준비도** — parsleyhealth/optimalhrv/pezcyclingnews/dynamichealthfitness/runbikecalc 등 중소 블로그 다수지만 **대형 의료브랜드(Healthline/Cleveland Clinic 등) 없음**. 특히 runbikecalc.com이 우리와 똑같은 "계산기+가이드" 모델로 HRV 가이드를 이미 발행 중인 게 확인됐는데, 이는 오히려 이 니치가 계산기 사이트 관점에서도 통한다는 검증 신호로 해석 → **채택**
+2. **프로틴 + 포만감/식욕조절(satiety)** — 검색결과가 거의 전부 학술논문(ScienceDirect, PubMed, Cambridge)뿐이고 **소비자용 블로그 콘텐츠가 사실상 없음** — "고수요이지만 쉬운 설명 콘텐츠가 없는" 진짜 갭 → **채택**
+3. 디로드 위크(deload week) — Cleveland Clinic/Legion/Gymshark/Anytime Fitness/BarBend/Peloton/Muscle&Strength 등 **10개+**, 계산기 클러스터와도 연결이 약함 → 기각
+4. (참고용으로만 넓게 훑음, 실제 조사는 위 3개까지만 진행)
+
+**신규 발행 2건**:
+- **`blog/hrv-and-zone-2-training.html`** — 사이트 최고 순위 페이지(`zone-2-heart-rate-by-age.html`, 10위)의 컴패니언. 핵심 차별화: "HRV 낮은 날 Zone 2를 해도 되는가"(대부분의 HRV 가이드가 놓치는 디테일 — Zone 2는 저강도라 고강도 훈련과 달리 예외로 취급됨), HRV 판독값→Zone2 실행지침 비교표, 기기별(체스트스트랩/링/손목시계) 신뢰도 비교표.
+- **`blog/protein-satiety-appetite-control.html`** — 사이트 최고 트래픽 페이지(`protein-calculator.html`)의 컴패니언. 핵심 차별화: 끼니당 25-30g이라는 구체적 포만감 역치(대부분의 콘텐츠가 "단백질 많이 먹으면 배부르다"로 뭉뚱그리는 부분), "단백질 목표 채웠는데도 배고픈 이유" 트러블슈팅(끼니 분산/식이섬유/수면부족/과도한 결손/파우더 위주 섭취), 매크로영양소별 포만감 비교표, 단백질원별 포만감 비교표.
+
+두 글 다 GEO 전략(비교표+문제해결형) 적용, 서로 연결(HRV 글은 zone2 클러스터, satiety 글은 protein 클러스터), 체크리스트(허브카드+뱃지 blog/index.html, 홈 미리보기 3슬롯 중 2슬롯 교체, sitemap.xml, llms.txt, 역링크 5곳: protein-calculator/zone-2-calculator/zone-2-heart-rate-by-age/weight-loss-plateau/protein-vs-carbs-vs-fat) 전부 완료. div밸런스·JSON-LD 유효성·JS문법(node --check, 지난 세션에 발견한 아포스트로피 버그 재발 확인용) 전수 검증 통과.
+
+**홈페이지 미리보기 슬롯 교체**: `alcohol-and-calorie-deficit`, `maf-training-plan`을 내리고 `hrv-and-zone-2-training`, `protein-satiety-appetite-control`로 교체(둘 다 blog/index.html에는 계속 남아있어 유실 아님). 현재 홈 3슬롯: hrv-and-zone-2-training / protein-timing-before-after-workout / protein-satiety-appetite-control — 전부 오늘 발행분이라 다음 세션엔 오래된 것부터 순차 교체 필요.
+
+**다음 세션 참고**: 
+- 오늘 채택 기준(중소 블로그만 있으면 롱테일로 진입, 대형 의료/계산기 팩토리 브랜드가 지배할 때만 기각)을 앞으로도 기본값으로 유지할 것 — 사용자가 명시적으로 확정한 방향.
+- 두 신규 페이지 모두 노출 데이터가 아직 없음(당연히, 발행 당일) — 다음 세션에 반드시 확인.
+- "고수요-저공급"(소비자 콘텐츠 없이 학술자료만 있는 주제) 패턴이 이번에 실제로 통했음 — 다음 신규 발굴 때도 이 각도를 우선 시도해볼 것(예: 다른 영양소의 학술적으로만 다뤄진 소비자 갭 주제가 더 있을 수 있음).
+
+
 ## 2026-07-21 추가 세션 — 퀴즈 21개 전체 긴급 버그 수정 (사용자가 화면 깨짐 스크린샷 2장 제보)
 
 **증상**: (1) `quiz/ideal-fasting-protocol.html` — 페이지 최상단(헤더보다 위)에 FAQ 스키마의 raw JSON 텍스트가 그대로 노출됨. (2) `quiz/vitamin-d-supplement.html` — 콘솔에 `Uncaught SyntaxError: missing ) after argument list`.
