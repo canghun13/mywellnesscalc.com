@@ -124,7 +124,7 @@
   <h2>Related tools and articles</h2>
   <div class="related-grid">
     <a href="../tools/calorie-calculator.html" class="related-link">Recalculate Your TDEE<span>At your current, lower weight</span></a>
-    <a href="../blog/why-weight-loss-plateau-how-to-break-it.html" class="related-link">How to Break a Plateau<span>Full guide to restarting progress</span></a>
+    <a href="../blog/weight-loss-plateau.html#strategies" class="related-link">How to Break a Plateau<span>Full guide to restarting progress</span></a>
     <a href="../blog/weight-loss-plateau.html" class="related-link">Weight Loss Plateau Guide<span>Why plateaus happen</span></a>
     <a href="../blog/what-is-metabolism.html" class="related-link">What Is Metabolism?<span>Understanding metabolic adaptation</span></a>
     <a href="../quiz/weight-loss-rate.html" class="related-link">What's Your Ideal Loss Rate?<span>Set a sustainable pace</span></a>
@@ -166,7 +166,7 @@ function showResult(){
   } else if(a[5]==='long' || a[5]==='vlong'){
     title='Metabolic adaptation — a diet break may help';subtitle='Extended dieting reduces your metabolic rate — a strategic pause can reset this';
     body=`<h3>What\'s happening</h3><p>After 4–6+ months of calorie restriction, your body adapts by reducing its total energy expenditure. This is called metabolic adaptation. Your TDEE has dropped — meaning your original deficit no longer creates the same calorie gap it used to.</p><h3>What to try</h3><ul><li><strong>Diet break:</strong> Eat at maintenance calories for 2–4 weeks. This partially restores metabolic rate without causing fat gain.</li><li>After the break, recalculate your TDEE and set a new deficit based on your current weight</li><li>Add resistance training if you haven\'t — it counteracts metabolic adaptation</li></ul>`;
-    ctas=[{href:'../tools/calorie-calculator.html',label:'Recalculate your TDEE →'},{href:'../blog/why-weight-loss-plateau-how-to-break-it.html',label:'How to Break a Weight Loss Plateau'},{href:'../blog/what-is-metabolism.html',label:'What Is Metabolism?'}];
+    ctas=[{href:'../tools/calorie-calculator.html',label:'Recalculate your TDEE →'},{href:'../blog/weight-loss-plateau.html#strategies',label:'How to Break a Weight Loss Plateau'},{href:'../blog/what-is-metabolism.html',label:'What Is Metabolism?'}];
   } else if(a[3]==='more' || a[2]==='no' || a[2]==='loose'){
     title='Likely a tracking or compliance issue';subtitle='Most plateaus are caused by untracked calorie increases, not metabolism';
     body=`<h3>The most common cause of plateaus</h3><p>Research consistently shows that the most frequent cause of weight loss stalls is not metabolic adaptation — it\'s untracked food intake. Portion sizes creep up, snacks go unlogged, and estimations become less accurate over time.</p><h3>What to do</h3><ul><li>Restart precise tracking for 1–2 weeks — weigh food, not estimate</li><li>Look for hidden calories: cooking oils, sauces, drinks</li><li>If you haven\'t been tracking, start now before assuming the deficit is the issue</li></ul>`;
@@ -174,7 +174,7 @@ function showResult(){
   } else {
     title='True plateau — time to adjust';subtitle='Your body has adapted — small adjustments can restart progress';
     body=`<h3>What to change</h3><p>If you\'ve been consistent and progress has stalled for 3–4 weeks, your body has adapted. The three main levers are: reduce calories further, increase activity, or take a diet break.</p><h3>Most effective approaches</h3><ul><li>Reduce daily calories by 100–200 kcal</li><li>Add 30–60 minutes of low-intensity movement (walking) daily</li><li>Ensure protein is high (1.8–2.2g/kg) — protein has a higher thermic effect than carbs or fat</li><li>Consider a 2-week maintenance break if you\'ve been dieting for months</li></ul>`;
-    ctas=[{href:'../blog/why-weight-loss-plateau-how-to-break-it.html',label:'How to Break a Weight Loss Plateau →'},{href:'../tools/calorie-calculator.html',label:'Recalculate your TDEE'},{href:'../blog/what-is-metabolism.html',label:'Understanding Metabolism'}];
+    ctas=[{href:'../blog/weight-loss-plateau.html#strategies',label:'How to Break a Weight Loss Plateau →'},{href:'../tools/calorie-calculator.html',label:'Recalculate your TDEE'},{href:'../blog/what-is-metabolism.html',label:'Understanding Metabolism'}];
   }
   setResult('Your plateau assessment',title,subtitle,body,ctas,'<strong>Note:</strong> These are general strategies. If you\'ve been in a significant deficit for a long time, consider speaking with a registered dietitian.');
 }

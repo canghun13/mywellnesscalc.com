@@ -1,5 +1,86 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-07-21
+> 최종 업데이트: 2026-07-27
+
+## 2026-07-27 세션 — 일요일 정기점검 (앞당겨 진행), 카니발라이제이션 발견·수정 + 중복 FAQ 버그 2건 발견·수정, 신규 3건 조사 전부 기각
+
+**작업 방식**: 사용자가 새 PAT 제공. 사용자가 명시적으로 대시보드/시각화 생성 금지, 텍스트 분석만 지시(기존 정책과 동일). 신규 콘텐츠는 ①기존 파일 중복확인 ②웹서치 키워드/경쟁강도 조사 ③롱테일 전략 ④수익화(애드센스 트래픽/클릭) 우선순위 재확인. **사용자가 이번에 재강조한 지시**: "2026년 AI검색은 도메인 권위보다 콘텐츠 자체(문제해결/비교분석)가 중요하다" — 신규/보강 판단 시 이 기준 계속 적용.
+
+**분석한 자료**: 서치콘솔 Coverage + Performance(2026-07-27 내보내기, 07-21과 6일 차이), GA4 보고서 개요(2026-06-29~07-26, 4주, 계정: GetSoloTools).
+
+### 배지 정리 (즉시 처리)
+`blog/index.html`의 `zone-2-training-plan.html` 배지(2026-07-11자)가 14일 규정상 만료되어 제거함. 나머지 배지(07-15/07-17/07-19/07-21, `tools/index.html` 07-17 1건, 홈 `index.html` 07-21 3건)는 아직 유효기간 내라 유지.
+
+### 🔴 기술 버그 발견 및 수정 — "FAQ 섹션이 본문 중간에 쪼개져서 2번 존재" 패턴 2건 추가 발견
+
+지난 세션들(특히 07-11)에 `best-time-to-exercise.html`에서 발견했던 것과 **동일한 패턴의 버그가 2개 파일에 더 있었음**을 이번에 발견함: `blog/calories-burned-walking.html`, `blog/10000-steps-a-day.html` 둘 다 `<h2>Frequently asked questions</h2>` 섹션이 본문 중간에 한 번, 글 후반부에 또 한 번, 총 2번 쪼개져서 존재.
+
+**왜 지금까지 못 잡았는가(중요, 다음 세션에도 참고)**: 기존 감사 스크립트는 "본문 FAQ 질문 개수 == 스키마 질문 개수"만 비교하는데, 이 두 파일은 **공교롭게도 두 FAQ 블록의 질문 개수 합이 스키마 전체 개수와 일치**해서(예: 3개+4개=7개=스키마 7개) 개수 기준 검증을 통과해버림. 즉 "일치 여부"가 아니라 **"같은 제목의 h2가 파일 내에 몇 번 나오는지"까지 별도로 체크해야 이 버그를 잡을 수 있음.
+
+**조치**: 두 파일 모두 두 FAQ 블록을 하나로 병합, 사이에 끼어있던 본문 섹션(`calories-burned-walking.html`의 "Using walking for long-term weight management", `10000-steps-a-day.html`의 "How to increase your daily step count practically")을 CTA 박스 직후로 재배치. div 밸런스·FAQ-스키마 일치(7/7 둘 다) 재검증 완료.
+
+**사이트 전체 재스캔 실행 (같은 버그 재발 방지)**: `grep -c "Frequently asked questions"` 방식으로 전체 96개 파일 재검사 → **위 2건 외 추가 발견 없음**. 이 김에 "동일 h2 텍스트가 파일 내 2회 이상 등장"하는 모든 케이스도 전수 검사(Counter 방식) → 0건. div 밸런스 0건, FAQ-스키마 불일치 0건, 인라인 JS 문법 오류(`node --check`) 0건 전부 재확인. **다음 세션 체크리스트에 "동일 h2 중복 여부"를 FAQ-스키마 일치 검증과 별개 항목으로 추가할 것.**
+
+### 🔴 카니발라이제이션 발견 및 수정 — `weight-loss-plateau.html` vs `why-weight-loss-plateau-how-to-break-it.html`
+
+서치콘솔 쿼리 재스캔 중 `why do weight loss plateaus happen`이 포지션 9.5(사이트 전체에서 손꼽히게 좋은 순위)로 확인됐는데, 대조해보니 **이 키워드를 두 개의 거의 동일한 블로그 글이 나눠서 타겟팅하고 있었음**을 발견:
+- `blog/weight-loss-plateau.html`(2026-05-01 게시, 1307단어) — H2: "Why weight loss plateaus happen" / "Evidence-based strategies to break a plateau" / "What not to do"
+- `blog/why-weight-loss-plateau-how-to-break-it.html`(2026-05-13 게시, 1386단어) — H2: **"Why weight loss plateaus happen"(동일 문구!)** / "How to break a weight loss plateau"
+
+두 글의 핵심 섹션 제목까지 겹치는 사실상 동일 주제 중복 콘텐츠 상태였고, 내부링크 자산도 전자가 9곳, 후자가 4곳으로 전자가 더 강함. **이런 카니발라이제이션은 두 페이지 다 순위를 깎아먹을 수 있어(구글이 어느 쪽을 신뢰 신호로 합칠지 확신 못 함), 신규 콘텐츠 찾는 것보다 오히려 ROI 높은 수정일 수 있다고 판단해 이번 세션에 처리함.**
+
+**조치 (콘텐츠 삭제 없이 canonical로 통합)**:
+- `why-weight-loss-plateau-how-to-break-it.html`의 `rel="canonical"`을 자기 자신에서 `weight-loss-plateau.html`로 변경 (검색엔진 신호를 후자로 통합, 파일 자체는 삭제 안 해서 외부 백링크가 있어도 깨지지 않음)
+- `blog/index.html` 허브 리스트에서 후자 카드 제거, `sitemap.xml`/`llms.txt`에서도 후자 URL 제거 (더 이상 별도 색인 대상으로 홍보 안 함)
+- 후자를 가리키던 내부링크 전부(`quiz/weight-loss-plateau.html` 2곳 정적링크+2곳 JS CTA, `quiz/weight-loss-rate.html` JS CTA 1곳, `blog/weight-loss-plateau.html` 사이드바 자기링크 1곳) 전자로 재배선 — 다행히 전자에 이미 `#why`/`#strategies` 앵커 id가 있어서, "왜 정체기가 오는지" 프레이밍은 `weight-loss-plateau.html#why`, "어떻게 극복하는지" 프레이밍은 `weight-loss-plateau.html#strategies`로 앵커까지 살려서 연결함(기존 링크 라벨/문맥 그대로 유지)
+- 전체 영향받은 5개 파일(전자/후자 블로그 2개, 퀴즈 2개, blog/index.html) div 밸런스·JS 문법·sitemap XML 유효성 재검증 완료 (전부 통과)
+
+**다음 세션 참고**: 이 수정 효과(포지션 9.5 신호가 실제로 개선되는지, 또는 최소한 유지되는지)는 반영 지연 고려해 2~3주 뒤에 확인 권장. 비슷한 카니발라이제이션이 다른 곳에도 있을 수 있으니, 다음에 시간 나면 전체 96개 파일의 H2 목차를 서로 대조하는 것도 검토해볼 만함(이번엔 GSC 쿼리 신호로 우연히 발견한 것이라 전수조사는 아니었음).
+
+### Coverage — 변화 없음
+심각한 문제 4건(크롤링됨-미색인 2건 시작됨 + 발견됨-미색인 2건 통과), 색인 페이지 95건 — 07-21과 완전 동일. 조치 불필요. 참고로 Coverage 리포트의 일별 차트 자체는 2026-07-10까지만 나오는데(이 리포트 특성상 원래 지연이 김, 사고 아님), Performance 리포트의 일별 차트는 07-24까지 나오고 07-25/26은 아예 안 보임 — 이는 GSC 성과 리포트의 정상적인 2~3일 반영 지연으로 판단(과거 세션에도 반복 확인된 패턴), 트래픽 급감 신호 아님.
+
+### Performance 분석
+- **`zone-2-heart-rate-by-age.html` 계속 성장**: 노출 687(07-21)→814(07-27), 포지션 10.15 유지. 다만 CTR 여전히 0.25%(2클릭) — "zone 2 heart rate by age" 등 실제 매칭 쿼리들은 포지션 50~67위대인 것으로 재확인(쿼리 데이터 대조), **페이지 평균 포지션 10대는 여전히 통계적 착시로 재확인 — title/meta 수정 불필요, 07-17 세션 결론 그대로 유지**.
+- **07-17/07-19 게시분의 10일차 이상 데이터 확보** — 블로그/내러티브형이 계산기형보다 빠르게 순위 잡는 패턴이 이번에도 재확인됨:
+  - `blog/maf-training-plan.html`: 6노출, **포지션 22.83** (MAF 클러스터 강세 재확인)
+  - `blog/alcohol-and-calorie-deficit.html`: 2노출, 포지션 18
+  - `blog/lean-bulk-vs-dirty-bulk.html`: 2노출, 포지션 27
+  - `tools/calorie-surplus-calculator.html`: 18노출, 포지션 58.33 (계산기형은 역시 느림)
+  - `blog/high-protein-snacks-women-over-40.html`: 4노출, 포지션 72.5 (아직 이름)
+  - **07-21 게시 4건**(why-1rm-calculator/hrv-and-zone-2-training/protein-satiety-appetite-control/protein-timing-before-after-workout)은 이번 데이터에도 전혀 안 잡힘(6일차, 정상 범위) — 다음 세션에 재확인 필요.
+- 쿼리 1,000개 재스캔 — MAF 클러스터가 여전히 사이트 전체에서 가장 좋은 포지션 분포(12~34위대: "maf 180 calculator" 12.75, "maf training for beginners" 27.5, "maf training plan" 28.57, "maf training" 33.43) 유지. 기존 클러스터 밖의 새로운 수요 신호는 이번에도 없음(확립된 방법론대로 예상된 결과).
+
+### GA4 — AdSense 재신청 판단: 지역 이상치가 완화가 아니라 악화됨 (중요)
+- 4주(06-29~07-26) 활성 사용자 229명, 신규 233명, 이벤트 1,844건, 평균 참여시간 20.87초 — 트래픽 절대량은 지난 세션과 비슷한 수준 유지.
+- 세션소스: direct/(none) 207, **ahrefs.com/referral 20**(SEO 크롤러 봇, 실사용자 아님), bing/organic 8, google/organic 7, duckduckgo/organic 4 — 오가닉 서치 합계 19세션, 여전히 미미.
+- **⚠️ 도시 분포 이상치가 이번엔 악화됨**: 활성사용자 중 싱가포르가 **146명/229명(63.8%)** — 07-13 세션 105/180(58.3%)에서 오히려 비중이 커짐. 07-21 세션에 "다음 세션에 정상화되는지 확인" 하기로 했는데, **정상화가 아니라 심화됐음**. 봇/자동화 트래픽 가능성을 계속 배제 못 하는 상태.
+- **애드센스 재신청 판단**: 이 지역 이상치가 완화가 아니라 악화된 게 이번 세션 확인된 새 사실 — **재신청을 더 미루는 쪽으로 판단**. 트래픽 절대량과 콘텐츠 품질(2026-07-13 세션에 확인한 글자수/원본성 기준)은 계속 통과 수준이지만, 실사용자 트래픽 비율에 대한 불확실성이 커진 상태에서 재신청하면 오히려 "가치없는 콘텐츠" 외의 다른 사유(비정상 트래픽 패턴)로 재반려될 리스크가 있다고 봄. 다음 세션에 이 지역 분포가 실제로 어떻게 움직이는지(계속 악화/정체/개선) 추이를 한 번 더 보고 판단 권장.
+
+### 신규 콘텐츠 후보 조사 — 3건, 전부 기각 (모두 기존 강력 클러스터의 인접 확장 시도였으나 이미 포화)
+
+기존 방법론(①기존 파일 중복확인 ②웹서치 경쟁강도 ③롱테일 시도 ④사이트 강점 클러스터 우선 확장) 그대로 적용:
+
+| 후보 | 조합/앵글 | 기각 사유 |
+|---|---|---|
+| Zone 2 계산기 vs 웨어러블(Apple Watch/Garmin) 존 불일치 | "why does my zone 2 heart rate not match my Apple Watch/Garmin" | **Zone2AI(전용 계산기+콘텐츠 직접경쟁사), CenturyAI, Welltory, Livity, VO2Master, McMillan, Harvard Health, AOL/Hearst 신디케이션** 등 **8개+** — 이미 매우 유사한 각도(우리 zone-2-heart-rate-by-age.html에 이미 추가해둔 "왜 심박수가 차트와 다른가" 섹션과 겹치는 프레임)로 포화 |
+| MAF 초보자 트레이닝 플랜 (일반) | "MAF 180 formula training plan beginners" | philmaffetone.com(원저자), AerobAce, RunnersBlueprint, Marathon Handbook, ReshapeApp, runsforcookies 등 **6개+** — 이미 우리 자체 `maf-training-for-beginners.html`+`maf-training-plan.html`이 이 공간을 충분히 커버 중이라 확인, 신규 필요성 없음 |
+| MAF vs Zone 2 비교 (단독 아티클로) | "MAF training vs Zone 2 which is better" | **AerobAce가 이 정확한 비교를 전용 페이지(`/maf-vs-zone-2`, 인터랙티브 비교 툴 포함) + 블로그 글 두 개로 이미 커버**, myPrimalCoach/RunnersBlueprint/ReshapeApp/HeroMovement/Debbie Potts 등 추가 **5개+**. 게다가 **우리 자체 `maf-calculator.html`과 `maf-training-for-beginners.html`에 이미 "MAF vs Zone 2: 차이점" 섹션이 존재**해서 단독 아티클로 만들면 자기잠식(cannibalization) 우려도 있음 — 이중으로 기각 |
+
+**결론**: 이번 세션도 3건 전부 기각. 누적 33건(07-21까지) + 이번 3건 = **누적 36건 조사, 성공 2건(~5.6%)**. 이번에 조사한 3건 모두 "우리가 이미 잘하는 클러스터(zone2, MAF)의 인접 확장"을 시도한 것이었는데도 막혔다는 점이 특기할 만함 — 강점 클러스터 확장 전략 자체는 유효하지만(과거 1RM/여성40대단백질/알코올 성공 사례), **이 두 클러스터(zone2, MAF)는 이미 대형 전문 경쟁사(AerobAce, Zone2AI)가 콘텐츠+계산기+비교툴까지 다 갖추고 있어 더 이상 뻔한 각도로는 신규 진입 여지가 없는 상태**로 판단됨. 다음 세션엔 zone2/MAF 두 클러스터에서 "뻔하지 않은" 각도(예: 특정 스포츠 종목 결합, 특정 건강상태 결합 등)를 찾거나, 아예 다른 클러스터(protein/여성40대, 1RM 등 아직 대형 경쟁사가 없는 곳) 위주로 신규를 찾는 게 나을 듯.
+
+### 이번 세션에 하지 않은 것
+- 신규 콘텐츠 발행 없음 — 3건 조사 전부 기각(위 표 참고). 대신 카니발라이제이션 수정 + 중복 FAQ 버그 2건 수정이 이번 세션의 실질적 진전.
+- 중간 노출 구간 페이지 7건(`calories-burned-walking`, `what-is-a-healthy-bmi`, `body-fat-calculator`, `protein-needs-women-over-40`, `maf-training-for-beginners`, `maf-calculator`, `tdee-vs-bmr`) GEO 밀도 점검 — 전부 이미 1400~3000단어대, FAQ 7~11개, 비교표/비교섹션(TDEE vs BMR, 5가지 체지방 측정법, MAF vs Zone2 등) 충분히 보유 확인. **보강 불필요, 다음 세션에 재점검할 필요 없음** (단, `calories-burned-walking.html`은 이 점검 중 위 FAQ 중복 버그를 발견해서 수정함).
+- AdSense 재신청 실행 — 위 GA4 분석 근거로 이번에도 보류가 낫다고 판단.
+
+### 다음 세션 우선순위 제안
+1. 카니발라이제이션 수정 효과(포지션 9.5 신호 유지/개선 여부) 확인 — 2~3주 뒤 권장.
+2. 07-21 게시 4건의 노출 반영 여부 확인(다음 세션엔 10일차 이상 되어 유의미한 신호 기대).
+3. GA4 지역 이상치(싱가포르) 추이 계속 관찰 — 이번에 악화 확인, 다음 세션에 방향성 재확인.
+4. zone2/MAF 클러스터는 "뻔한 각도"가 막혔으니 더 구체적인 조합(특정 스포츠, 특정 상태)으로 시도하거나 우선순위를 다른 클러스터로 이동.
+5. 전체 96개 파일 H2 목차 상호대조를 통한 카니발라이제이션 전수조사(이번엔 우연히 발견, 체계적 조사는 아직 안 함) — 시간 나면 검토.
+
+---
 
 ## 2026-07-21 네 번째 세션 — 클러스터 갭 분석 + 1RM 클러스터 완성
 
