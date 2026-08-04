@@ -244,7 +244,7 @@
 - **AdSense**: ca-pub-5592663499707350
 - **AdSense 상태**: 심사 반려(가치없는 콘텐츠). 재신청 시점은 아래 수익화 정책에 따라 Opus가 판단.
 
-### FFMI 정리 (2026-08-04, Sonnet 실행 — 커밋 `<이 커밋의 해시로 세션 종료 시 갱신>`)
+### FFMI 정리 (2026-08-04, Sonnet 실행 — 커밋 `5ef4240`)
 
 **판단**: 실제 3개 파일을 읽어보니 사용자가 제시한 "H2 3개 공유"는 **`what-is-ffmi.html` ↔ `ffmi-calculator.html` 사이에서만 문자 그대로 사실**이었음(두 파일 모두 "What is FFMI?" / "How FFMI is calculated" / "How to increase your FFMI" H2를 갖고 있고, 그 아래 본문·불릿리스트가 거의 토씨 하나 안 틀리고 동일). `ffmi-vs-bmi.html`은 이 3개 H2를 **문자 그대로 갖고 있지 않음**(자체 H2는 quick-answer/how-they-differ/where-bmi-fails 등) — 대신 `what-is-ffmi.html` 안에 있는 "Why FFMI succeeds where BMI fails"(`id="ffmi-vs-bmi"`) 섹션과 **주제가 통째로 겹침**(같은 90kg/180cm 예시, 같은 결론).
 
