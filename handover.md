@@ -3,7 +3,11 @@
 
 ## 2026-08-04 세션 — 분석 전용(Opus), 실행은 Sonnet에게 위임. 🔴 07-23~07-28 노출 붕괴 발견(이전 세션 오진 정정) + 수익화 정책 전면 개정
 
-**작업 방식**: 사용자 지시 — Opus는 분석/판단만 하고 실제 파일 수정은 Sonnet이 별도 세션에서 수행. 대시보드/시각화 금지(기존 정책 동일). 이 세션에서 실제로 수정한 파일은 `handover.md` 하나뿐.
+**작업 방식**: 사용자 지시 — Opus는 분석/판단만 하고 실제 파일 수정은 Sonnet이 별도 세션에서 수행. 대시보드/시각화 금지(기존 정책 동일). 이 분석 세션 자체에서 수정한 파일은 `handover.md` 하나였으나, 같은 날 이어진 Sonnet 실행 세션들에서 아래 작업이 모두 완료됨(각 항목 하단에 상세 기록):
+1. 홈 런치 디렉토리 배지 8개 `rel="nofollow sponsored noopener noreferrer"` 적용(커밋 `0533854`)
+2. `how-much-fiber-per-day.html` 내부링크 고아 상태 해소, 인바운드 1→4개(커밋 `6c2439d`)
+3. 제휴 수익화 법적 인프라(`privacy-policy.html` Affiliate disclosure 재작성, `about.html` 편집독립성 문단 추가) — 실제 링크는 미배포(커밋 `3d4a07a`)
+4. FFMI 3중 카니발라이제이션 정리 — 아래 상세 기록
 
 **분석 자료**: 서치콘솔 Coverage + Performance(2026-08-04 내보내기, 07-27과 8일 차이), GA4 보고서 개요(2026-07-07~08-03, 4주).
 
@@ -37,7 +41,7 @@
 퀴즈 10건: `cardio-type`, `enough-protein`, `fat-loss-strategy`, `healthy-bmi`, `maf-training`, `muscle-building-starting-point`, `recovery-type`, `sleep-type`, `weight-loss-plateau`, `zone-2-fitness-level`.
 
 - **`how-much-fiber-per-day.html`이 가장 심각**: 6주 경과인데 노출 0, 게다가 **사이트 전체에서 이 파일로 링크하는 HTML이 단 1개**(`blog/index.html` 허브뿐). 사실상 내부링크 고아 상태. 다른 0노출 블로그 4건은 인바운드 3~5개로 정상 범위라 원인이 다름.
-- **FFMI 3중 카니발라이제이션 확인**: `blog/what-is-ffmi.html`(47노출) / `blog/ffmi-vs-bmi.html`(**0노출**) / `tools/ffmi-calculator.html`(28노출) 세 페이지가 H2 3개(`what is ffmi?`, `how ffmi is calculated`, `how to increase your ffmi`)를 공유. 07-27 세션의 다음 우선순위 #5(H2 전수 대조 카니발라이제이션 조사)를 이번에 실행해서 찾아낸 유일한 실질 케이스. **단, 3개 합쳐도 75노출뿐이라 ROI는 낮음 — 우선순위 중하.**
+- **FFMI 3중 카니발라이제이션 확인 → 2026-08-04 해소 완료(상세 기록은 본 문서 하단 "FFMI 정리" 섹션 참고)**: `blog/what-is-ffmi.html`(47노출) / `blog/ffmi-vs-bmi.html`(**0노출**) / `tools/ffmi-calculator.html`(28노출) 세 페이지가 H2 3개(`what is ffmi?`, `how ffmi is calculated`, `how to increase your ffmi`)를 공유하던 문제. 07-27 세션의 다음 우선순위 #5(H2 전수 대조 카니발라이제이션 조사)를 이번에 실행해서 찾아낸 유일한 실질 케이스.
 - H2 전수 대조 결과 그 외 195쌍이 플래그됐으나 전부 퀴즈 템플릿 상용구(`about this quiz`, `related tools and articles`) 노이즈로 실제 카니발라이제이션 아님. **이 전수조사는 이제 완료된 항목으로 처리 — 다음 세션에 반복하지 말 것.**
 
 ### 🔴 GA4 — 봇 트래픽 비중이 또 악화, 분석 데이터 자체가 신뢰 불가 수준
@@ -63,8 +67,8 @@
 2. **GA4 봇 필터 설정**(사용자 직접) → 이거 없으면 앞으로 모든 트래픽 판단이 무의미.
 3. **`how-much-fiber-per-day.html` 내부링크 보강**(인바운드 1개 → 4~5개) — 유일하게 명확한 원인이 있는 0노출 페이지.
 4. canonical 통합 효과 추적(`weight-loss-plateau` 포지션이 54→10위대로 오는지) — 미전이 시 롤백 검토.
-5. FFMI 3중 중복 정리(우선순위 중하, 총 75노출뿐).
-6. 수익화 실행 — 위 "💰 수익화 정책" 참고.
+5. ~~FFMI 3중 중복 정리~~ → 2026-08-04 완료.
+6. 수익화 실행 — 위 "💰 수익화 정책" 참고. (법적 인프라는 2026-08-04 완료, 실제 링크는 미배포 상태)
 
 ---
 
@@ -239,6 +243,28 @@
 - **GA4**: G-9YL3ZRZBDF
 - **AdSense**: ca-pub-5592663499707350
 - **AdSense 상태**: 심사 반려(가치없는 콘텐츠). 재신청 시점은 아래 수익화 정책에 따라 Opus가 판단.
+
+### FFMI 정리 (2026-08-04, Sonnet 실행 — 커밋 `<이 커밋의 해시로 세션 종료 시 갱신>`)
+
+**판단**: 실제 3개 파일을 읽어보니 사용자가 제시한 "H2 3개 공유"는 **`what-is-ffmi.html` ↔ `ffmi-calculator.html` 사이에서만 문자 그대로 사실**이었음(두 파일 모두 "What is FFMI?" / "How FFMI is calculated" / "How to increase your FFMI" H2를 갖고 있고, 그 아래 본문·불릿리스트가 거의 토씨 하나 안 틀리고 동일). `ffmi-vs-bmi.html`은 이 3개 H2를 **문자 그대로 갖고 있지 않음**(자체 H2는 quick-answer/how-they-differ/where-bmi-fails 등) — 대신 `what-is-ffmi.html` 안에 있는 "Why FFMI succeeds where BMI fails"(`id="ffmi-vs-bmi"`) 섹션과 **주제가 통째로 겹침**(같은 90kg/180cm 예시, 같은 결론).
+
+**조치 1 — 툴 페이지(`ffmi-calculator.html`) vs `what-is-ffmi.html`**: 사용자 지시대로 통합 대상 아님. "What is FFMI?" / "How FFMI is calculated" 두 섹션은 문장을 대폭 축약하고 각각 `../blog/what-is-ffmi.html`(+`#ffmi-ranges`, `#ffmi-vs-bmi` 앵커)로 "더 알아보기" 링크 추가. 블로그와 100% 동일했던 "FFMI categories" 표는 통째로 제거(계산기가 결과를 이미 동적으로 보여주므로 정적 표는 이중 중복 — 블로그 쪽으로 링크만 남김). "How to increase your FFMI" 불릿은 실용적으로 남겨두되(계산 직후 "그래서 뭘 해야 하나" 니즈는 계산기 페이지에 있는 게 자연스러움) 문장을 전부 다른 표현으로 재작성해 단어 중복도를 66/84 → 34/90으로 낮춤. 사이드바에 `../blog/what-is-ffmi.html` 링크 1건 추가(다른 tools/ 페이지들의 기존 관례 — heart-rate-zone/one-rep-max/vo2-max-calculator 등 — 를 따름).
+
+**조치 2 — `ffmi-vs-bmi.html` vs `what-is-ffmi.html`**: 삭제 대신 **canonical 통합**을 선택(단순 차별화 대신). 근거:
+- 웹서치로 "FFMI vs BMI" 앵글을 확인한 결과, **경쟁 사이트 최소 6개**(ffmicalculator.io, ffmicalculator.net, ffmitracker.com, ffmicalc.com, leanffmi.com, nutritionalsupplementshop.com)가 이미 동일 앵글로 존재하며, 심지어 예시 숫자(90kg/180cm/12%↔30% 체지방률 비교)까지 우리 글과 거의 동일한 클리셰 구조 — 이 앵글은 **차별화 여지 없이 포화**된 상태.
+- `ffmi-vs-bmi.html`은 발행(07-06) 이후 3개월간 노출 0건 — 위 경쟁 포화 + `what-is-ffmi.html` 자체가 이미 같은 비교를 다루고 있어 구글이 사실상의 중복으로 판단해 색인에서 밀어냈을 가능성이 높음(07-27 세션 기록에도 "크롤링됨-미색인" 후보로 이미 지목됐던 페이지).
+- 반대로 차별화(H2 안 겹치게 재작성) 안은 실효성이 낮다고 판단: 이미 서로 다른 H2를 쓰고 있는데도 0노출이라는 건 H2 텍스트 문제가 아니라 앵글 자체의 포화·중복성 문제라는 뜻이라 재작성으로 해결될 문제가 아님.
+- **07-27 plateau 케이스와 다르게 잡은 부분**: plateau 때는 canonical target(`weight-loss-plateau.html`, 포지션 54)이 실제로는 순위가 더 안 좋은 쪽이고, 순위가 더 좋은 쪽(`why-...-break-it.html`, 포지션 10.5)의 canonical을 약한 쪽으로 넘기는 **방향이 거꾸로**였던 것으로 보이고, 3주 지나도 신호가 전이 안 되는 이유일 수 있음. 이번엔 반대로 **실측 순위/노출이 있는 쪽(`what-is-ffmi.html`, 47노출)을 canonical target으로 고정**, 노출이 아예 없는 쪽(`ffmi-vs-bmi.html`)이 그쪽을 가리키게 함 — 정방향.
+- 파일 삭제 안 함(외부 백링크 보호), `<script type="application/ld+json">`의 자기참조 URL(`url`/`@id`/`BreadcrumbList item`)은 plateau 케이스 전례를 따라 손대지 않음(canonical 태그만 변경) — 페이지 자체는 여전히 유효한 콘텐츠로 존재하되 검색엔진에는 "중복이니 다른 URL을 정본으로 봐라"는 신호만 보냄.
+
+**동기화**: `blog/index.html` 허브 카드 제거, `sitemap.xml`/`llms.txt`에서 URL 제거, `what-is-ffmi.html` 사이드바의 자기참조 링크(같은 페이지 안에 이미 있는 `#ffmi-vs-bmi` 섹션을 별도 페이지인 것처럼 다시 링크하고 있었음) 제거, `quiz/muscle-building-starting-point.html`의 CTA 링크를 `../blog/ffmi-vs-bmi.html` → `../blog/what-is-ffmi.html#ffmi-vs-bmi`로 재배선(라벨 텍스트 "FFMI vs BMI: Which to trust" 그대로 유지 — plateau 케이스의 `#why`/`#strategies` 앵커 재배선 패턴과 동일).
+
+**검증 완료**: 영향받은 5개 파일(`blog/what-is-ffmi.html`, `blog/ffmi-vs-bmi.html`, `tools/ffmi-calculator.html`, `blog/index.html`, `quiz/muscle-building-starting-point.html`) 전부 — div/p/h2/a/ul/li/table 등 태그 밸런스 OK, `.article-sidebar`/`<aside>`가 부모-자식이 아닌 형제 관계로 정상 유지(07-11 사고 패턴 재확인 완료), FAQ 스키마-본문 일치 3파일 전부 MATCH, 파일 내 H2 중복 0건, `node --check` 인라인 JS 전부 통과, `sitemap.xml` XML 파싱 유효(107→106 URL), 앵커 대상(`#ffmi-vs-bmi`, `#ffmi-ranges`) 실존 확인, `rcode=YOUR_CODE` 등 플레이스홀더 없음.
+
+**화면 확인 필요 페이지** (다음 문단에서 사용자에게 링크 제공):
+- https://mywellnesscalc.com/tools/ffmi-calculator.html — 본문 섹션 5개를 다시 썼고 표 하나를 통째로 지웠으므로 레이아웃/줄바꿈 확인 필요
+- https://mywellnesscalc.com/blog/what-is-ffmi.html — 사이드바 링크 1개만 제거, 가벼운 변경이지만 사이드바 렌더링 확인
+- https://mywellnesscalc.com/blog/ffmi-vs-bmi.html — canonical만 바뀌어 화면상 변화는 없어야 함(확인용)
 
 ---
 
