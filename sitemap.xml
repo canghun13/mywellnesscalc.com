@@ -2,130 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Root pages -->
-  <url><loc>https://mywellnesscalc.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://mywellnesscalc.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://mywellnesscalc.com/privacy-policy.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mywellnesscalc.com/</loc><lastmod>2026-08-06</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mywellnesscalc.com/about.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mywellnesscalc.com/privacy-policy.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
 
   <!-- Tools -->
-  <url><loc>https://mywellnesscalc.com/tools/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/bmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/calorie-calculator.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/water-intake.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/sleep-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/if-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/fasting-timer.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/calorie-deficit-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/calorie-surplus-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/lean-bulk-vs-dirty-bulk.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/alcohol-and-calorie-deficit.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/protein-timing-before-after-workout.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/protein-satiety-appetite-control.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/hrv-and-zone-2-training.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/why-1rm-calculator-doesnt-match-real-max.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/lean-body-mass-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/waist-to-hip-ratio-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/macro-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/body-fat-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/ideal-weight.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/running-pace.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/vitamin-d-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/protein-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/one-rep-max.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/heart-rate-zone.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/</loc><lastmod>2026-07-21</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/bmi-calculator.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/calorie-calculator.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/water-intake.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/sleep-calculator.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/if-calculator.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/fasting-timer.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/calorie-deficit-calculator.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/calorie-surplus-calculator.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/lean-bulk-vs-dirty-bulk.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/alcohol-and-calorie-deficit.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/protein-timing-before-after-workout.html</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/protein-satiety-appetite-control.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/hrv-and-zone-2-training.html</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/why-1rm-calculator-doesnt-match-real-max.html</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/lean-body-mass-calculator.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/waist-to-hip-ratio-calculator.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/macro-calculator.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/body-fat-calculator.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/ideal-weight.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/running-pace.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/vitamin-d-calculator.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/protein-calculator.html</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/one-rep-max.html</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/heart-rate-zone.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog index -->
-  <url><loc>https://mywellnesscalc.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog posts -->
-  <url><loc>https://mywellnesscalc.com/blog/intermittent-fasting-beginners.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-much-water-per-day.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/sleep-cycles-explained.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/protein-how-much-do-you-need.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/tdee-vs-bmr.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/signs-of-dehydration.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/calorie-deficit-for-weight-loss.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/healthy-body-fat-percentage.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/calories-burned-walking.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/vitamin-d-deficiency.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/build-muscle-after-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/10000-steps-a-day.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/weight-loss-plateau.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/creatine-do-you-need-it.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-to-lose-belly-fat.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/best-time-to-exercise.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-much-sleep-do-you-need.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/high-protein-foods.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/what-is-metabolism.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/zone-2-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/protein-calculator-women-over-40.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/zone-2-heart-rate-training-beginners.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/zone-2-training-plan.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/protein-needs-women-over-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/fat-burning-heart-rate-zone.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-long-to-lose-weight.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/protein-vs-carbs-vs-fat.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-much-fiber-per-day.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/intermittent-fasting-for-women-over-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/zone-2-heart-rate-by-age.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/if-calculator-women.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/zone-2-vs-hiit-fat-loss.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/high-protein-breakfast-women-over-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/calories-burned-by-heart-rate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/calories-burned-by-heart-rate-zone.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/maf-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/maf-training-for-beginners.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/maf-training-plan.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-to-improve-zone-2-fitness.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/high-protein-lunch-women-over-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/high-protein-snacks-women-over-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/high-protein-dinner-women-over-40.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/tools/active-recovery-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/active-recovery-heart-rate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/vitamin-d-and-exercise.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/fat-burning-zone-explained.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-much-vitamin-d-do-you-need-daily.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/contact.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/intermittent-fasting-beginners.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/what-is-a-healthy-bmi.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-much-water-per-day.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/sleep-cycles-explained.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/protein-how-much-do-you-need.html</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/tdee-vs-bmr.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/signs-of-dehydration.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/calorie-deficit-for-weight-loss.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/healthy-body-fat-percentage.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/calories-burned-walking.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/vitamin-d-deficiency.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/build-muscle-after-40.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/10000-steps-a-day.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/weight-loss-plateau.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/creatine-do-you-need-it.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-to-lose-belly-fat.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/best-time-to-exercise.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-much-sleep-do-you-need.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/high-protein-foods.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/what-is-metabolism.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/zone-2-calculator.html</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/protein-calculator-women-over-40.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/zone-2-heart-rate-training-beginners.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/zone-2-training-plan.html</loc><lastmod>2026-07-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/protein-needs-women-over-40.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/fat-burning-heart-rate-zone.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-long-to-lose-weight.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/protein-vs-carbs-vs-fat.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-much-fiber-per-day.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/intermittent-fasting-for-women-over-40.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/zone-2-heart-rate-by-age.html</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/if-calculator-women.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/zone-2-vs-hiit-fat-loss.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/high-protein-breakfast-women-over-40.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/calories-burned-by-heart-rate.html</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/calories-burned-by-heart-rate-zone.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/maf-calculator.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/maf-training-for-beginners.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/maf-training-plan.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-to-improve-zone-2-fitness.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/high-protein-lunch-women-over-40.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/high-protein-snacks-women-over-40.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/high-protein-dinner-women-over-40.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/active-recovery-calculator.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/active-recovery-heart-rate.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/vitamin-d-and-exercise.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/fat-burning-zone-explained.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-much-vitamin-d-do-you-need-daily.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/contact.html</loc><lastmod>2026-05-20</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
 
   <!-- Quiz section -->
-  <url><loc>https://mywellnesscalc.com/quiz/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/ideal-fasting-protocol.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/enough-protein.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/right-macros.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/vitamin-d-supplement.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/training-zone.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/maf-training.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/cardio-type.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/creatine-right-for-you.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/body-goal-type.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/fat-loss-strategy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/healthy-bmi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/weight-loss-rate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/weight-loss-plateau.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/metabolism-type.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/sleep-type.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/enough-water.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/ideal-body-weight.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/ideal-fasting-protocol.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/enough-protein.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/right-macros.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/vitamin-d-supplement.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/training-zone.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/maf-training.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/cardio-type.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/creatine-right-for-you.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/body-goal-type.html</loc><lastmod>2026-07-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/fat-loss-strategy.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/healthy-bmi.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/weight-loss-rate.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/weight-loss-plateau.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/metabolism-type.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/sleep-type.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/enough-water.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/ideal-body-weight.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 
   <!-- New blog posts - June 2026 -->
-  <url><loc>https://mywellnesscalc.com/blog/what-is-vo2-max.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/how-to-improve-vo2-max.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mywellnesscalc.com/blog/calorie-deficit-how-much.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/what-is-vo2-max.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/how-to-improve-vo2-max.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/calorie-deficit-how-much.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- New tool - June 2026 -->
-  <url><loc>https://mywellnesscalc.com/tools/vo2-max-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/vo2-max-calculator.html</loc><lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- New blog posts - July 2026 -->
-  <url><loc>https://mywellnesscalc.com/blog/what-is-ffmi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/blog/what-is-ffmi.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- New tool - July 2026 -->
-  <url><loc>https://mywellnesscalc.com/tools/ffmi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mywellnesscalc.com/tools/ffmi-calculator.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- New quizzes - July 2026 -->
-  <url><loc>https://mywellnesscalc.com/quiz/muscle-building-starting-point.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/zone-2-fitness-level.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://mywellnesscalc.com/quiz/recovery-type.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/muscle-building-starting-point.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/zone-2-fitness-level.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mywellnesscalc.com/quiz/recovery-type.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
