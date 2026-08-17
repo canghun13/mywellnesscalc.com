@@ -60,6 +60,8 @@
     .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
     .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
     .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper table{margin:0;}
     .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
     .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
     .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
@@ -128,46 +130,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Which heart rate zone burns the most calories?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Higher heart rate zones burn more calories per minute. Zone 4–5 (80–100% of max HR) burns the most calories in a given time period. However, Zone 2 (60–70%) allows much longer sessions, so total calorie burn over a workout can be comparable or greater. For weight loss, total calories burned across the week matters more than burn rate per minute."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is heart rate the best way to measure calorie burn?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It's one of the best non-laboratory methods available. Chest-strap heart rate monitors paired with a formula like Keytel's are generally more accurate than fitness tracker estimates based on steps or motion alone. Optical wrist monitors are less accurate during high-intensity efforts. Lab-based indirect calorimetry remains the gold standard."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why do I burn fewer calories than my fitness tracker says?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most consumer fitness trackers overestimate calorie burn by 20–50%, according to multiple validation studies. They often use simplified algorithms that don't account for individual variation. This calculator uses a more rigorous formula, so results may be lower than what your watch displays — but likely more accurate."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does a higher heart rate always mean more calories burned?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generally yes, but with caveats. If your heart rate is elevated by stress, caffeine, heat, or dehydration rather than actual muscle work, calorie burn may not match what the formula predicts. The formula is most accurate during genuine aerobic exercise where heart rate reflects true physical effort."
-      }
-    }
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which heart rate zone burns the most calories?", "acceptedAnswer": {"@type": "Answer", "text": "Higher heart rate zones burn more calories per minute. Zone 4–5 (80–100% of max HR) burns the most calories in a given time period. However, Zone 2 (60–70%) allows much longer sessions, so total calorie burn over a workout can be comparable or greater. For weight loss, total calories burned across the week matters more than burn rate per minute."}}, {"@type": "Question", "name": "Is heart rate the best way to measure calorie burn?", "acceptedAnswer": {"@type": "Answer", "text": "It's one of the best non-laboratory methods available. Chest-strap heart rate monitors paired with a formula like Keytel's are generally more accurate than fitness tracker estimates based on steps or motion alone. Optical wrist monitors are less accurate during high-intensity efforts. Lab-based indirect calorimetry remains the gold standard."}}, {"@type": "Question", "name": "Why do I burn fewer calories than my fitness tracker says?", "acceptedAnswer": {"@type": "Answer", "text": "Most consumer fitness trackers overestimate calorie burn by 20–50%, according to multiple validation studies. They often use simplified algorithms that don't account for individual variation. This calculator uses a more rigorous formula, so results may be lower than what your watch displays — but likely more accurate."}}, {"@type": "Question", "name": "Does a higher heart rate always mean more calories burned?", "acceptedAnswer": {"@type": "Answer", "text": "Generally yes, but with caveats. If your heart rate is elevated by stress, caffeine, heat, or dehydration rather than actual muscle work, calorie burn may not match what the formula predicts. The formula is most accurate during genuine aerobic exercise where heart rate reflects true physical effort."}}, {"@type": "Question", "name": "How many calories does one heartbeat burn?", "acceptedAnswer": {"@type": "Answer", "text": "Your heart muscle itself uses roughly 1–2 joules per contraction — a small fraction of a calorie, totalling only about 100–120 kcal across a whole day, or around 7% of your basal metabolic rate. That is separate from the number this calculator gives you. The calories reported here are per minute of exercise and are burned mainly by your working muscles, with heart rate acting as a proxy for how hard those muscles are working."}}, {"@type": "Question", "name": "Does this calculator work at any heart rate?", "acceptedAnswer": {"@type": "Answer", "text": "It is most reliable between roughly 90 and 150 bpm, the range the Keytel equations were fitted to. Below about 90 bpm the formula can return implausibly low or negative values because resting metabolism dominates. Above about 150 bpm heart rate starts to plateau while effort keeps rising, so intense intervals get under-reported. Readings outside that window should be treated as rough indications rather than numbers to plan a deficit around."}}, {"@type": "Question", "name": "Why is the female estimate lower at the same heart rate?", "acceptedAnswer": {"@type": "Answer", "text": "The Keytel research produced separate equations for men and women, and the female equation returns a lower figure at identical heart rate, weight, and age. This reflects average differences in body composition and oxygen consumption rather than an error. It is also the main advantage of a heart-rate formula over generic MET tables, which apply one number to everyone."}}]}</script>
 <!-- SCHEMA_END -->
 </head>
 <body>
@@ -261,6 +224,35 @@
       <h3>Why heart rate predicts calorie burn</h3>
       <p>Heart rate reflects oxygen consumption, which directly correlates with energy expenditure. As your heart rate rises, your muscles demand more oxygen to produce ATP — and that oxygen demand is what burns calories. This is why a 140 bpm workout burns more calories per minute for a deconditioned person than a fit athlete: their hearts are working harder relative to their capacity.</p>
 
+      <h3>What the number actually means: per minute, not per beat</h3>
+      <p>Both formulas above produce <strong>calories per minute</strong>, not calories per heartbeat. That distinction causes a lot of confusion, because it is tempting to divide the result by your heart rate and treat the answer as "the cost of one beat." That division gives you an accounting average, not a physical measurement — and it is not what your heart itself is spending.</p>
+      <p>Your heart muscle uses roughly 1–2 joules per contraction, which works out to a small fraction of a calorie and totals only about 100–120 kcal across an entire day. That is the organ's own running cost, and it is roughly 7% of your basal metabolic rate. The 7 or 13 calories per minute this calculator reports during exercise are overwhelmingly being burned by your <em>legs, glutes, and lungs</em> — not by the heart. Heart rate is being used here as a proxy for how hard the rest of your body is working, which is why the formula also needs your weight, age, and sex to return a sensible number.</p>
+      <p>Practical takeaway: if you want a per-beat figure for curiosity, divide calories per minute by your bpm. If you want to know what your workout cost you, use the per-minute figure and multiply by duration. The second number is the one that matters for a calorie deficit.</p>
+
+      <h3>The validity window: 90–150 bpm</h3>
+      <p>The Keytel equations were derived from steady-state exercise testing, and they are most reliable when heart rate sits roughly between <strong>90 and 150 bpm</strong>. Outside that band the output degrades in two specific ways, and knowing which direction it fails in is more useful than a generic accuracy warning:</p>
+      <ul>
+        <li><strong>Below ~90 bpm:</strong> the regression can return implausibly low or even negative values, because resting metabolism dominates at that intensity and the equation was never fitted to it. Treat any very low reading as "not measurable here" rather than as a real number.</li>
+        <li><strong>Above ~150 bpm:</strong> heart rate begins to plateau while power output keeps climbing, so the formula progressively <em>under</em>-reports intense intervals and sprint work.</li>
+        <li><strong>Non-exercise elevation:</strong> caffeine, heat, illness, dehydration, and stress all raise heart rate without raising oxygen demand proportionally. The formula will read that as work and overestimate.</li>
+      </ul>
+      <p>This is the single biggest reason a hard interval session and an easy steady run can produce estimates that feel backwards. For HIIT, total session calories are better approximated by treating the whole session as an average effort than by trusting a peak-heart-rate reading.</p>
+
+      <h3>Roughly what to expect per minute</h3>
+      <p>The table below shows approximate calories per minute from the formulas above, for a 70 kg (154 lb) 35-year-old, so you can sanity-check your own result before trusting it.</p>
+      <div class="table-wrapper">
+      <table style="width:100%;min-width:520px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
+        <thead><tr style="background:var(--sage-dark);color:white;"><th style="padding:.625rem 1rem;text-align:left;">Heart rate</th><th style="padding:.625rem 1rem;text-align:left;">Typical effort</th><th style="padding:.625rem 1rem;text-align:left;">Male (kcal/min)</th><th style="padding:.625rem 1rem;text-align:left;">Female (kcal/min)</th></tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">100 bpm</td><td style="padding:.5rem 1rem;color:var(--mid);">Brisk walk, easy warm-up</td><td style="padding:.5rem 1rem;color:var(--mid);">~6.9</td><td style="padding:.5rem 1rem;color:var(--mid);">~4.3</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.5rem 1rem;color:var(--mid);">120 bpm</td><td style="padding:.5rem 1rem;color:var(--mid);">Zone 2, conversational</td><td style="padding:.5rem 1rem;color:var(--mid);">~9.9</td><td style="padding:.5rem 1rem;color:var(--mid);">~6.5</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">140 bpm</td><td style="padding:.5rem 1rem;color:var(--mid);">Steady run, tempo effort</td><td style="padding:.5rem 1rem;color:var(--mid);">~13.0</td><td style="padding:.5rem 1rem;color:var(--mid);">~8.6</td></tr>
+          <tr><td style="padding:.5rem 1rem;color:var(--mid);">150 bpm</td><td style="padding:.5rem 1rem;color:var(--mid);">Upper limit of the valid range</td><td style="padding:.5rem 1rem;color:var(--mid);">~14.5</td><td style="padding:.5rem 1rem;color:var(--mid);">~9.7</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Note how much lower the female figures run at identical heart rates. That is the equation reflecting differences in average body composition and oxygen use, not an error — and it is exactly the individual variation that step-counting and generic MET tables miss.</p>
+
       <h3>Limitations to know</h3>
       <ul>
         <li><strong>Accuracy range:</strong> Formula-based estimates typically fall within ±15% of actual calorie burn. Lab testing (indirect calorimetry) is the only truly accurate method.</li>
@@ -285,6 +277,18 @@
         <div class="faq-item">
           <div class="faq-q">Does a higher heart rate always mean more calories burned?</div>
           <div class="faq-a">Generally yes, but with caveats. If your heart rate is elevated by stress, caffeine, heat, or dehydration rather than actual muscle work, calorie burn may not match what the formula predicts. The formula is most accurate during genuine aerobic exercise where heart rate reflects true physical effort.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How many calories does one heartbeat burn?</div>
+          <div class="faq-a">Your heart muscle itself uses roughly 1–2 joules per contraction — a small fraction of a calorie, totalling only about 100–120 kcal across a whole day, or around 7% of your basal metabolic rate. That is separate from the number this calculator gives you. The calories reported here are per minute of exercise and are burned mainly by your working muscles, with heart rate acting as a proxy for how hard those muscles are working.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does this calculator work at any heart rate?</div>
+          <div class="faq-a">It is most reliable between roughly 90 and 150 bpm, the range the Keytel equations were fitted to. Below about 90 bpm the formula can return implausibly low or negative values because resting metabolism dominates. Above about 150 bpm heart rate starts to plateau while effort keeps rising, so intense intervals get under-reported. Readings outside that window should be treated as rough indications rather than numbers to plan a deficit around.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why is the female estimate lower at the same heart rate?</div>
+          <div class="faq-a">The Keytel research produced separate equations for men and women, and the female equation returns a lower figure at identical heart rate, weight, and age. This reflects average differences in body composition and oxygen consumption rather than an error. It is also the main advantage of a heart-rate formula over generic MET tables, which apply one number to everyone.</div>
         </div>
       </div>
 
