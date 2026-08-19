@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detraining Calculator – How Much Fitness You Lose Off Training | My Wellness Calc</title>
+  <meta name="description" content="Estimate how much VO2 max and strength you lose during a training break, and how many weeks it takes to get back. Enter your time off and training background.">
+  <meta property="og:title" content="Detraining Calculator – How Much Fitness You Lose | My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/detraining-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group input,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .loss-hero{background:linear-gradient(135deg,#e3f2fd,#bbdefb);border:1px solid #64b5f6;border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .loss-label{font-size:.8rem;font-weight:600;color:#1565c0;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .loss-val{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:#1565c0;line-height:1;}
+    .loss-unit{font-size:1rem;color:#1976d2;margin-top:.25rem;}
+    .loss-desc{font-size:.85rem;color:#1976d2;margin-top:.75rem;}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .stat-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .stat-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--charcoal);}
+    .stat-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .verdict-box{background:var(--cream);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .verdict-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem;}
+    .verdict-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .phase-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin:1.25rem 0;}
+    .phase-box{border-radius:12px;padding:1rem;text-align:center;}
+    .phase-box.p1{background:#e8f5e9;border:1px solid #81c784;}
+    .phase-box.p2{background:#fff3e0;border:1px solid #ffb74d;}
+    .phase-box.p3{background:#fce4ec;border:1px solid #f06292;}
+    .phase-label{font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;}
+    .phase-box.p1 .phase-label{color:#2e7d32;}
+    .phase-box.p2 .phase-label{color:#e65100;}
+    .phase-box.p3 .phase-label{color:#ad1457;}
+    .phase-val{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:400;}
+    .phase-box.p1 .phase-val{color:#2e7d32;}
+    .phase-box.p2 .phase-val{color:#e65100;}
+    .phase-box.p3 .phase-val{color:#ad1457;}
+    .phase-desc{font-size:.72rem;color:var(--mid);margin-top:.2rem;line-height:1.4;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-section li{margin-bottom:.3rem;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper table{margin:0;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.phase-grid{grid-template-columns:1fr}}
+  </style>
+<!-- SCHEMA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Detraining Calculator",
+  "url": "https://mywellnesscalc.com/tools/detraining-calculator.html",
+  "description": "Estimate how much VO2 max and strength you lose during a training break, and how many weeks of retraining it takes to return to your previous level.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyWellnessCalc",
+    "url": "https://mywellnesscalc.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mywellnesscalc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://mywellnesscalc.com/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Detraining Calculator", "item": "https://mywellnesscalc.com/tools/detraining-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long can I take off before losing fitness?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most trained people, measurable aerobic decline does not begin until somewhere around day 7 to 10, and a single week off typically costs about 2% of VO2 max — often less than the benefit of arriving recovered. Strength holds even longer, with little meaningful loss for three to four weeks. If your break is a week or under, the honest answer is that you have almost nothing to worry about."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does aerobic fitness drop so much faster than strength?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The earliest and largest driver of VO2 max decline is a fall in blood volume, specifically plasma volume, which can begin within days of stopping. Less blood means the heart fills less between beats, stroke volume drops, and less oxygen reaches working muscle. Strength depends on neural drive and muscle structure, both of which persist far longer — which is why you feel breathless before you feel weak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does light activity during a break actually help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Substantially, yes, and this is the single biggest lever you control. Research on reduced training consistently shows that maintaining even a fraction of your normal frequency preserves most aerobic adaptations, in sharp contrast to complete cessation. If you cannot train properly, keeping one or two easy sessions a week — or even staying on your feet and walking daily — changes the outcome far more than any supplement or recovery gadget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will it take to get my fitness back?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For breaks under roughly three months, rebuilding typically takes about half to two-thirds of the time you were off, because you are re-expressing adaptations rather than creating them from scratch. A four-week layoff commonly takes two to four weeks of consistent training to reverse. Longer breaks trend toward a one-to-one ratio, and multi-year layoffs behave closer to starting fresh — though still faster than a true beginner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is muscle memory real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The underlying mechanism is well supported. Muscle fibres acquire additional nuclei during training, and those nuclei appear to be retained long after the muscle shrinks. When training resumes, the fibre can raise protein synthesis faster than an untrained fibre could, which is why previously trained people regain size and strength markedly faster than they built it the first time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I start back at my old training loads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The common guidance is to restart at roughly half your previous working loads or volume for the first week or two, then rebuild. The reason is not your muscles but your connective tissue: tendons, ligaments and bone re-adapt more slowly than your heart and lungs, so the point where you feel capable arrives before the point where you are structurally ready. Most comeback injuries happen in exactly that gap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does age change how fast I detrain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modestly for aerobic fitness and more noticeably for strength. Older adults tend to lose strength and muscle mass faster during layoffs than younger adults do, and regain them somewhat more slowly. This calculator applies a small age adjustment above 50, but the effect of what you do during the break is still larger than the effect of your age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I have not taken a break but I feel slower — is this detraining?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Probably not. If training has been continuous, the more likely explanations are accumulated fatigue or non-functional overreaching, chronic sleep debt, low iron stores, under-fuelling, life stress, or simply heat. Detraining requires an actual absence of stimulus. Feeling flat while still training regularly usually points to recovery debt rather than lost fitness — and the fix is often a planned easy week, not more work."
+      }
+    }
+  ]
+}
+</script>
+<!-- SCHEMA_END -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../tools/">Calculators</a> › Detraining Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">📉 Free Tool</span>
+      <h1>Detraining <em>Calculator</em></h1>
+      <p>Estimate how much aerobic fitness and strength you lose during a break from training — and roughly how many weeks of retraining it takes to get back.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Time off training</label>
+          <input type="number" id="weeksoff" placeholder="e.g. 3" min="0" max="260" step="0.5">
+        </div>
+        <div class="form-group">
+          <label>Unit</label>
+          <select id="unit">
+            <option value="w">Weeks</option>
+            <option value="d">Days</option>
+            <option value="m">Months</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Training background <span>(before the break)</span></label>
+        <select id="level">
+          <option value="rec">Recreational — trained consistently under a year</option>
+          <option value="trained">Well trained — 1–3 years of consistent training</option>
+          <option value="highly">Highly trained — 3+ years, structured programme</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Activity during the break</label>
+        <select id="activity">
+          <option value="none">Complete rest — essentially no exercise</option>
+          <option value="light">Light movement — walking, daily activity only</option>
+          <option value="reduced">Reduced training — 1–2 sessions a week</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Age <span>(optional)</span></label>
+          <input type="number" id="age" placeholder="e.g. 35" min="14" max="100">
+        </div>
+        <div class="form-group">
+          <label>Current VO2 max <span>(optional)</span></label>
+          <input type="number" id="vo2" placeholder="e.g. 45" min="15" max="90" step="0.1">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcDetraining()">Calculate fitness loss</button>
+
+      <div class="result-box" id="result">
+        <div class="loss-hero">
+          <div class="loss-label">Estimated VO2 max loss</div>
+          <div class="loss-val" id="res-loss">—</div>
+          <div class="loss-unit" id="res-lossunit">percent</div>
+          <div class="loss-desc" id="res-vo2line">Enter a VO2 max to see this in ml/kg/min.</div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val" id="res-strength">—</div>
+            <div class="stat-label">Strength retained</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-regain">—</div>
+            <div class="stat-label">Weeks to rebuild</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-phase">—</div>
+            <div class="stat-label">Detraining phase</div>
+          </div>
+        </div>
+        <div class="verdict-box">
+          <h4 id="res-verdict-h">What this means</h4>
+          <p id="res-verdict"></p>
+        </div>
+        <div class="phase-grid">
+          <div class="phase-box p1">
+            <div class="phase-label">Week 1–2</div>
+            <div class="phase-val" id="ph1">—</div>
+            <div class="phase-desc">Blood volume drops first</div>
+          </div>
+          <div class="phase-box p2">
+            <div class="phase-label">Week 3–8</div>
+            <div class="phase-val" id="ph2">—</div>
+            <div class="phase-desc">Stroke volume, mitochondria decline</div>
+          </div>
+          <div class="phase-box p3">
+            <div class="phase-label">Week 9+</div>
+            <div class="phase-val" id="ph3">—</div>
+            <div class="phase-desc">Losses flatten near untrained baseline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>How this detraining estimate is calculated</h2>
+      <p>Detraining — the loss of training adaptations when the training stimulus stops — is one of the better-studied areas of exercise physiology, but almost all of it is published as ranges rather than formulas. This calculator turns the two most-cited data sets into a continuous estimate so you can put a number on your own break instead of guessing from a chart.</p>
+
+      <h3>The underlying curve</h3>
+      <p>The anchor points come from Coyle's classic training-cessation work and the Mujika &amp; Padilla detraining reviews: VO2 max falls roughly 7% over the first three weeks, reaches about 15–16% down by twelve weeks, and then flattens as it approaches an untrained baseline. The decline is <strong>not linear</strong> — it is steep early and progressively slower, so this tool models it as a decaying curve rather than a straight line. That is why two weeks off costs you far more than the second two weeks do.</p>
+      <p>Three modifiers are then applied:</p>
+      <ul>
+        <li><strong>Training background.</strong> Highly trained athletes lose a larger <em>percentage</em> early on, because a bigger share of their VO2 max sits in trainable adaptations like plasma volume. Recreational trainees start closer to baseline and have less to give back.</li>
+        <li><strong>Activity during the break.</strong> This matters more than most people expect. Maintaining even one or two sessions a week preserves the large majority of aerobic fitness — the research consistently shows that reduced training is dramatically different from full cessation. Daily walking sits in between.</li>
+        <li><strong>Age.</strong> Losses accelerate modestly after about 50, and strength in particular declines faster in older adults than in younger ones during layoffs.</li>
+      </ul>
+
+      <h3>Strength is estimated separately, and it behaves differently</h3>
+      <p>Aerobic fitness and strength do not detrain on the same clock, which is the single most useful thing to understand about a break. Maximal strength holds remarkably well: most people show little measurable loss for the first three to four weeks, and a meta-analysis of training cessation found younger adults can take roughly a month away before performance suffers much. Muscle fibres retain the extra nuclei they gained during training, so the machinery for rebuilding stays in place long after the size and strength have faded.</p>
+      <p>The practical consequence: after a layoff you will usually feel <em>aerobically</em> worse than you are strong. Your first sessions back feel breathless rather than weak.</p>
+
+      <h3>Rebuild time, and why it is shorter than the break</h3>
+      <p>If you want the practical version of this — whether to resume, rebuild, or restart — the <a href="../quiz/return-to-training-after-break.html">return-to-training quiz</a> sorts your situation into one of four comeback approaches.</p>
+      <p>The rebuild figure uses the commonly observed pattern that regaining lost aerobic fitness takes roughly half to two-thirds as long as the layoff for breaks under about three months, because you are re-expressing adaptations rather than building them from nothing. Longer layoffs converge on something closer to a one-to-one ratio, and very long breaks behave more like starting over. The number here is an estimate of returning to your <em>previous</em> level, not of reaching a new one.</p>
+
+      <h3>Typical VO2 max loss by break length</h3>
+      <p>The table below shows the mid-range estimate for a well-trained person on complete rest, so you can sanity-check your own result.</p>
+      <div class="table-wrapper">
+      <table style="width:100%;min-width:520px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
+        <thead><tr style="background:var(--sage-dark);color:white;"><th style="padding:.625rem 1rem;text-align:left;">Time off</th><th style="padding:.625rem 1rem;text-align:left;">VO2 max loss</th><th style="padding:.625rem 1rem;text-align:left;">Strength retained</th><th style="padding:.625rem 1rem;text-align:left;">What you notice</th></tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">1 week</td><td style="padding:.5rem 1rem;color:var(--mid);">~2%</td><td style="padding:.5rem 1rem;color:var(--mid);">~100%</td><td style="padding:.5rem 1rem;color:var(--mid);">Nothing — often you feel fresher</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.5rem 1rem;color:var(--mid);">2 weeks</td><td style="padding:.5rem 1rem;color:var(--mid);">~4%</td><td style="padding:.5rem 1rem;color:var(--mid);">~100%</td><td style="padding:.5rem 1rem;color:var(--mid);">Easy pace costs a few more beats</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">4 weeks</td><td style="padding:.5rem 1rem;color:var(--mid);">~8%</td><td style="padding:.5rem 1rem;color:var(--mid);">~99%</td><td style="padding:.5rem 1rem;color:var(--mid);">Clearly breathless at old paces</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.5rem 1rem;color:var(--mid);">8 weeks</td><td style="padding:.5rem 1rem;color:var(--mid);">~13%</td><td style="padding:.5rem 1rem;color:var(--mid);">~95%</td><td style="padding:.5rem 1rem;color:var(--mid);">Sessions need genuine rescaling</td></tr>
+          <tr><td style="padding:.5rem 1rem;color:var(--mid);">12 weeks</td><td style="padding:.5rem 1rem;color:var(--mid);">~16%</td><td style="padding:.5rem 1rem;color:var(--mid);">~90%</td><td style="padding:.5rem 1rem;color:var(--mid);">Effectively a rebuild block</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>What this tool cannot tell you</h3>
+      <ul>
+        <li><strong>Why you feel slow.</strong> If you have <em>not</em> taken a break and still feel slower, detraining is rarely the explanation. Accumulated fatigue, poor sleep, low iron, under-fuelling, heat and illness explain far more of these cases.</li>
+        <li><strong>Your structural readiness.</strong> Tendons, ligaments and bone re-adapt more slowly than your cardiovascular system. Feeling aerobically ready is exactly when comeback injuries happen.</li>
+        <li><strong>Illness and injury layoffs.</strong> A break caused by illness or injury usually costs more than the same length of holiday, because the body is also spending resources on recovery.</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How long can I take off before losing fitness?</div>
+          <div class="faq-a">For most trained people, measurable aerobic decline does not begin until somewhere around day 7 to 10, and a single week off typically costs about 2% of VO2 max — often less than the benefit of arriving recovered. Strength holds even longer, with little meaningful loss for three to four weeks. If your break is a week or under, the honest answer is that you have almost nothing to worry about.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why does aerobic fitness drop so much faster than strength?</div>
+          <div class="faq-a">The earliest and largest driver of VO2 max decline is a fall in blood volume, specifically plasma volume, which can begin within days of stopping. Less blood means the heart fills less between beats, stroke volume drops, and less oxygen reaches working muscle. Strength depends on neural drive and muscle structure, both of which persist far longer — which is why you feel breathless before you feel weak.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does light activity during a break actually help?</div>
+          <div class="faq-a">Substantially, yes, and this is the single biggest lever you control. Research on reduced training consistently shows that maintaining even a fraction of your normal frequency preserves most aerobic adaptations, in sharp contrast to complete cessation. If you cannot train properly, keeping one or two easy sessions a week — or even staying on your feet and walking daily — changes the outcome far more than any supplement or recovery gadget.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long will it take to get my fitness back?</div>
+          <div class="faq-a">For breaks under roughly three months, rebuilding typically takes about half to two-thirds of the time you were off, because you are re-expressing adaptations rather than creating them from scratch. A four-week layoff commonly takes two to four weeks of consistent training to reverse. Longer breaks trend toward a one-to-one ratio, and multi-year layoffs behave closer to starting fresh — though still faster than a true beginner.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is muscle memory real?</div>
+          <div class="faq-a">The underlying mechanism is well supported. Muscle fibres acquire additional nuclei during training, and those nuclei appear to be retained long after the muscle shrinks. When training resumes, the fibre can raise protein synthesis faster than an untrained fibre could, which is why previously trained people regain size and strength markedly faster than they built it the first time.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Should I start back at my old training loads?</div>
+          <div class="faq-a">No. The common guidance is to restart at roughly half your previous working loads or volume for the first week or two, then rebuild. The reason is not your muscles but your connective tissue: tendons, ligaments and bone re-adapt more slowly than your heart and lungs, so the point where you feel capable arrives before the point where you are structurally ready. Most comeback injuries happen in exactly that gap.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does age change how fast I detrain?</div>
+          <div class="faq-a">Modestly for aerobic fitness and more noticeably for strength. Older adults tend to lose strength and muscle mass faster during layoffs than younger adults do, and regain them somewhat more slowly. This calculator applies a small age adjustment above 50, but the effect of what you do during the break is still larger than the effect of your age.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">I have not taken a break but I feel slower — is this detraining?</div>
+          <div class="faq-a">Probably not. If training has been continuous, the more likely explanations are accumulated fatigue or non-functional overreaching, chronic sleep debt, low iron stores, under-fuelling, life stress, or simply heat. Detraining requires an actual absence of stimulus. Feeling flat while still training regularly usually points to recovery debt rather than lost fitness — and the fix is often a planned easy week, not more work.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> These estimates are modelled from published group averages and individual responses vary widely. If your break was caused by illness, injury, or a medical procedure, follow the return-to-activity guidance from your healthcare provider rather than this calculator.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="vo2-max-calculator.html">🫁 VO2 Max Calculator</a></li>
+        <li><a href="zone-2-calculator.html">💙 Zone 2 Heart Rate Calculator</a></li>
+        <li><a href="active-recovery-calculator.html">💜 Active Recovery Calculator</a></li>
+        <li><a href="maf-calculator.html">🧡 MAF 180 Calculator</a></li>
+        <li><a href="one-rep-max.html">🏋️ One Rep Max Calculator</a></li>
+        <li><a href="../blog/how-to-improve-vo2-max.html">📖 How to Improve VO2 Max</a></li>
+        <li><a href="../quiz/return-to-training-after-break.html">🧩 Quiz: How Should You Return After a Break?</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/include.js"></script>
+<script>
+document.addEventListener('click', function(e){
+  var q = e.target.closest('.faq-q');
+  if (q) { q.parentElement.classList.toggle('open'); }
+});
+
+function calcDetraining(){
+  var raw = parseFloat(document.getElementById('weeksoff').value);
+  if (isNaN(raw) || raw < 0) { alert('Please enter how long you have been off training.'); return; }
+
+  var unit = document.getElementById('unit').value;
+  var weeks = raw;
+  if (unit === 'd') weeks = raw / 7;
+  if (unit === 'm') weeks = raw * 4.345;
+  if (weeks > 260) weeks = 260;
+
+  var level = document.getElementById('level').value;
+  var activity = document.getElementById('activity').value;
+  var age = parseFloat(document.getElementById('age').value);
+  var vo2 = parseFloat(document.getElementById('vo2').value);
+
+  // Decaying curve fitted to published anchors for a well-trained person on
+  // complete rest: ~5% at 2wk, ~7-8% at 3-4wk, ~13% at 8wk, ~16% at 12wk,
+  // flattening toward an untrained plateau. plateau*(1-exp(-k*weeks)).
+  var plateau = 22, k = 0.105;
+  var loss = plateau * (1 - Math.exp(-k * weeks));
+
+  // Training background: highly trained lose a larger share early.
+  if (level === 'highly') loss *= 1.18;
+  else if (level === 'rec') loss *= 0.82;
+
+  // Activity during the break is the biggest controllable modifier.
+  if (activity === 'light') loss *= 0.72;
+  else if (activity === 'reduced') loss *= 0.32;
+
+  // Modest age adjustment above 50.
+  if (!isNaN(age) && age > 50) loss *= (1 + Math.min((age - 50) * 0.005, 0.15));
+
+  if (loss > 30) loss = 30;
+
+  // Strength retention: flat for ~3 weeks, then a slow decline.
+  var strengthLoss = 0;
+  if (weeks > 3) strengthLoss = (weeks - 3) * 1.1;
+  if (activity === 'light') strengthLoss *= 0.85;
+  else if (activity === 'reduced') strengthLoss *= 0.35;
+  if (!isNaN(age) && age > 50) strengthLoss *= 1.25;
+  if (strengthLoss > 40) strengthLoss = 40;
+  var strengthKept = 100 - strengthLoss;
+
+  // Rebuild: ~0.55x of the layoff under 12wk, trending to ~1x for long breaks.
+  var ratio = weeks <= 12 ? 0.55 : Math.min(0.55 + (weeks - 12) * 0.012, 1.0);
+  var regain = weeks * ratio;
+  if (activity === 'reduced') regain *= 0.45;
+  else if (activity === 'light') regain *= 0.8;
+  if (regain < 0.5 && loss > 0.5) regain = 0.5;
+
+  var phase, verdictH, verdict;
+  if (weeks < 1.5) {
+    phase = 'Minimal';
+    verdictH = 'This is a rest week, not detraining';
+    verdict = 'At this length there is essentially nothing to recover. Measurable aerobic decline generally does not start until around day 7 to 10, and short breaks often surface adaptations that accumulated fatigue was hiding. Resume your normal training — there is no need to rebuild anything.';
+  } else if (weeks < 4) {
+    phase = 'Early';
+    verdictH = 'Early phase — mostly blood volume';
+    verdict = 'Most of what you have lost so far is plasma volume rather than deep aerobic machinery, and that returns quickly once you train again. Expect your usual easy pace to cost a few extra beats per minute for the first week back. Resume at roughly your previous volume but hold off on hard intervals for a session or two.';
+  } else if (weeks < 9) {
+    phase = 'Established';
+    verdictH = 'Established detraining — rebuild deliberately';
+    verdict = 'You are past the point where you can simply pick up where you left off. Stroke volume and mitochondrial adaptations have started to decline, so plan two to three weeks of easy aerobic volume before reintroducing intensity. Your strength will feel closer to normal than your breathing does — that mismatch is expected, not a sign something is wrong.';
+  } else {
+    phase = 'Extended';
+    verdictH = 'Extended break — treat this as a training block';
+    verdict = 'Losses at this length are substantial but they flatten rather than continuing indefinitely, and muscle memory means the rebuild is still far faster than your original build was. Start at roughly half your old loads, prioritise consistent easy aerobic work for the first month, and give tendons and bone time to catch up with your cardiovascular system.';
+  }
+
+  document.getElementById('res-loss').textContent = '−' + loss.toFixed(1) + '%';
+  document.getElementById('res-strength').textContent = Math.round(strengthKept) + '%';
+  document.getElementById('res-regain').textContent = regain < 1 ? '<1' : Math.round(regain);
+  document.getElementById('res-phase').textContent = phase;
+  document.getElementById('res-verdict-h').textContent = verdictH;
+  document.getElementById('res-verdict').textContent = verdict;
+
+  if (!isNaN(vo2) && vo2 > 0) {
+    var newVo2 = vo2 * (1 - loss / 100);
+    document.getElementById('res-vo2line').textContent =
+      'Estimated VO2 max now: ' + newVo2.toFixed(1) + ' ml/kg/min (from ' + vo2.toFixed(1) + ').';
+  } else {
+    document.getElementById('res-vo2line').textContent =
+      'Add your VO2 max above to see this converted into ml/kg/min.';
+  }
+
+  function at(w){
+    var l = plateau * (1 - Math.exp(-k * w));
+    if (level === 'highly') l *= 1.18; else if (level === 'rec') l *= 0.82;
+    if (activity === 'light') l *= 0.72; else if (activity === 'reduced') l *= 0.32;
+    return Math.min(l, 30);
+  }
+  document.getElementById('ph1').textContent = '−' + at(2).toFixed(1) + '%';
+  document.getElementById('ph2').textContent = '−' + at(8).toFixed(1) + '%';
+  document.getElementById('ph3').textContent = '−' + at(16).toFixed(1) + '%';
+
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
