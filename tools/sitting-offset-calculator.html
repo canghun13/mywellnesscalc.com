@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitting Offset Calculator – How Much Exercise Offsets Your Sitting | My Wellness Calc</title>
+  <meta name="description" content="Enter how long you sit each day and how much you move. Get your daily moderate-activity target, the gap you need to close, and a sitting-break plan.">
+  <meta property="og:title" content="Sitting Offset Calculator – How Much Exercise Offsets Sitting | My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/sitting-offset-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .main-col{min-width:0;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group input,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .target-hero{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border:1px solid #81c784;border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .target-label{font-size:.8rem;font-weight:600;color:#2e7d32;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .target-val{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:#2e7d32;line-height:1;}
+    .target-unit{font-size:1rem;color:#388e3c;margin-top:.25rem;}
+    .target-desc{font-size:.85rem;color:#388e3c;margin-top:.75rem;}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .stat-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .stat-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--charcoal);}
+    .stat-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .verdict-box{background:var(--cream);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .verdict-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem;}
+    .verdict-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .break-box{background:#fff8e1;border:1px solid #ffd54f;border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .break-box h4{font-size:.9rem;font-weight:600;color:#e65100;margin-bottom:.5rem;}
+    .break-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-section li{margin-bottom:.3rem;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper table{margin:0;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sitting Offset Calculator",
+  "url": "https://mywellnesscalc.com/tools/sitting-offset-calculator.html",
+  "description": "Estimate the daily moderate-to-vigorous activity target that matches your sitting load, the gap between that target and your current activity, and how often to break up sitting.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "publisher": {"@type": "Organization", "name": "MyWellnessCalc", "url": "https://mywellnesscalc.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mywellnesscalc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://mywellnesscalc.com/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Sitting Offset Calculator", "item": "https://mywellnesscalc.com/tools/sitting-offset-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you really offset sitting all day with exercise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly, and less completely than the phrase suggests. Device-based research indicates that at around 30–40 minutes a day of moderate-to-vigorous activity, the mortality association attached to high sedentary time largely disappears. But other markers behave differently: glucose control and cholesterol still look worse in people who exercise and then sit for ten hours than in people who move little and often. The honest answer is that exercise offsets a lot of it, not all of it, and the remainder is addressed by breaking up the sitting rather than by training harder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as moderate-intensity activity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anything that noticeably raises your breathing and heart rate while still allowing conversation. Brisk walking at around 3.5 mph, cycling under 10 mph, gardening, and vigorous housework all qualify. Vigorous activity counts double, so 20 minutes of running covers roughly the same target as 40 minutes of brisk walking. Casual strolling and standing do not count toward this figure, though they do help with the sitting-break side."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does standing at a desk count?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It counts as breaking up sedentary time, but not toward your moderate-activity minutes. Standing burns only fractionally more energy than sitting, so a standing desk will not close the activity gap. What it does do is interrupt the uninterrupted-sitting pattern that appears to carry independent cost, which is a real benefit — just a different one from the minutes target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it better to move a little often or exercise once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They address different things, so the useful answer is both rather than either. A single session builds cardiorespiratory fitness in a way that scattered movement does not. Frequent short breaks improve how your body handles glucose across the day in a way a single session does not. Research comparing the two found that a group taking a couple of minutes of light movement every half hour showed better blood sugar control than a group doing one 30-minute workout inside an otherwise seated day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many hours of sitting is too much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no clean threshold, but the risk associations in the literature start becoming pronounced somewhere around eight hours a day of waking sedentary time, and more so above ten. What matters alongside the total is how it accumulates: several hours broken into short stretches appears less problematic than the same total sat in one unbroken block. For context, adults in Western countries average roughly 8.5 hours a day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my target higher than the WHO guideline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The WHO figure of 150 minutes a week is a general minimum for all adults and is not adjusted for how much you sit. This calculator raises that floor as sitting hours climb, following research suggesting that people with high sedentary time need more activity than the minimum to reach the same position as people with low sedentary time. If you sit very little, your target here will match the guideline exactly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does sleep count as sitting time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Sedentary behaviour refers to waking time spent sitting or reclining at very low energy expenditure. Sleep is measured and studied separately and should not be included in the number you enter. Count desk time, commuting, meals, and evening screen time."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../tools/">Calculators</a> › Sitting Offset Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">🪑 Free Tool</span>
+      <h1>Sitting Offset <em>Calculator</em></h1>
+      <p>Work out how much moderate activity your sitting load calls for, how big the gap is right now, and how often to interrupt the sitting itself.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-group">
+        <label>Hours you spend sitting on a typical day <span>(work, commute, meals, evening)</span></label>
+        <input type="number" id="sit" placeholder="e.g. 9" min="0" max="18" step="0.5">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Moderate-to-vigorous activity</label>
+          <input type="number" id="mvpa" placeholder="e.g. 150" min="0" max="1500">
+        </div>
+        <div class="form-group">
+          <label>Per</label>
+          <select id="mvpaunit">
+            <option value="w">Week</option>
+            <option value="d">Day</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Light movement outside that <span>(pottering, chores, short walks)</span></label>
+        <select id="light">
+          <option value="low">Very little — I sit until I get up to exercise</option>
+          <option value="some">Some — on my feet here and there</option>
+          <option value="lots">A lot — rarely still for long</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>How often do you currently break up sitting?</label>
+        <select id="breaks">
+          <option value="rare">Rarely — I sit for hours at a stretch</option>
+          <option value="hourly">Roughly once an hour</option>
+          <option value="often">Every 30 minutes or so</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calcSitting()">Calculate my target</button>
+
+      <div class="result-box" id="result">
+        <div class="target-hero">
+          <div class="target-label">Daily moderate activity target</div>
+          <div class="target-val" id="res-target">—</div>
+          <div class="target-unit">minutes per day</div>
+          <div class="target-desc" id="res-weekly"></div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val" id="res-current">—</div>
+            <div class="stat-label">Your current daily minutes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-gap">—</div>
+            <div class="stat-label">Gap to close</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-profile">—</div>
+            <div class="stat-label">Your pattern</div>
+          </div>
+        </div>
+        <div class="verdict-box">
+          <h4 id="res-verdict-h">What this means</h4>
+          <p id="res-verdict"></p>
+        </div>
+        <div class="break-box">
+          <h4>Your sitting-break plan</h4>
+          <p id="res-breaks"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>How the target is calculated</h2>
+      <p>Most activity advice gives everyone the same number regardless of how much they sit. The research does not work that way: the amount of activity associated with offsetting a sedentary day scales with how sedentary the day actually is. This calculator starts from the World Health Organization floor and moves it upward with your sitting load.</p>
+
+      <h3>The baseline</h3>
+      <p>The WHO 2020 guidelines recommend <strong>150–300 minutes of moderate-intensity activity per week</strong>, or 75–150 minutes of vigorous activity, for all adults. That lower bound works out to roughly 22 minutes a day, and it is the floor this tool starts from for someone who barely sits.</p>
+
+      <h3>The sitting adjustment</h3>
+      <p>From there the target rises with sitting hours. The anchor is a 2020 meta-analysis of nine studies covering 44,370 people wearing activity trackers, which found that at around <strong>30–40 minutes a day of moderate-to-vigorous activity</strong>, the association between high sedentary time and mortality risk was no longer meaningfully different from that of people with low sedentary time. A separate analysis of occupational sitting published in 2024 pointed the same direction from another angle: people who predominantly sit at work needed roughly <strong>15–30 extra minutes of daily activity</strong> to match the risk profile of those who do not.</p>
+      <p>So the tool scales from about 22 minutes a day at four hours of sitting up to roughly 40 minutes at ten hours, then flattens. It is deliberately a target range rather than a precise prescription, because the underlying studies disagree on the exact number for a reason worth understanding.</p>
+
+      <h3>Why you will see 30–40 minutes in one study and 60–75 in another</h3>
+      <p>An earlier and widely quoted 2016 analysis of over a million people concluded that <strong>60–75 minutes a day</strong> was needed to eliminate the excess risk associated with sitting more than eight hours. That looks like it contradicts the 30–40 figure, but the gap is largely a measurement artefact: the 2016 work relied on self-reported activity, while the 2020 meta-analysis used device-measured activity. People consistently over-report how much they move, so a self-reported hour and a device-measured half hour can describe the same person.</p>
+      <p>This calculator uses the device-measured basis, which means the number it gives you is the one to compare against a watch or phone rather than against your own estimate. If you are estimating by memory, assume your real figure is lower than it feels.</p>
+
+      <h3>Why the break plan matters separately</h3>
+      <p>The most counter-intuitive finding in this area is that <em>sedentary behaviour and physical inactivity are not the same problem</em>. You can hit your activity target and still spend eleven hours sitting, and the sitting appears to carry its own cost. Research on interrupting sitting has found that standing or moving for as little as <strong>two to five minutes every 30 to 60 minutes</strong> improves glucose handling — a benefit a single workout does not deliver.</p>
+      <p>That is why the tool returns two separate outputs. The minutes target addresses inactivity. The break plan addresses sedentary time. Closing one does not close the other.</p>
+
+      <h3>Targets by sitting load</h3>
+      <p>The table shows the daily target this tool produces, so you can sanity-check your own result.</p>
+      <div class="table-wrapper">
+      <table style="width:100%;min-width:520px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
+        <thead><tr style="background:var(--sage-dark);color:white;"><th style="padding:.625rem 1rem;text-align:left;">Sitting per day</th><th style="padding:.625rem 1rem;text-align:left;">Daily target</th><th style="padding:.625rem 1rem;text-align:left;">Weekly equivalent</th><th style="padding:.625rem 1rem;text-align:left;">Typical pattern</th></tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">4 hours or less</td><td style="padding:.5rem 1rem;color:var(--mid);">22 min</td><td style="padding:.5rem 1rem;color:var(--mid);">~150 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Active job, on your feet</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.5rem 1rem;color:var(--mid);">6 hours</td><td style="padding:.5rem 1rem;color:var(--mid);">27 min</td><td style="padding:.5rem 1rem;color:var(--mid);">~190 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Mixed desk and moving</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">8 hours</td><td style="padding:.5rem 1rem;color:var(--mid);">32 min</td><td style="padding:.5rem 1rem;color:var(--mid);">~225 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Standard desk job</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.5rem 1rem;color:var(--mid);">10 hours</td><td style="padding:.5rem 1rem;color:var(--mid);">38 min</td><td style="padding:.5rem 1rem;color:var(--mid);">~265 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Desk job plus commute and evening</td></tr>
+          <tr><td style="padding:.5rem 1rem;color:var(--mid);">12 hours or more</td><td style="padding:.5rem 1rem;color:var(--mid);">43 min</td><td style="padding:.5rem 1rem;color:var(--mid);">~300 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Very sedentary day</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>What this tool does not do</h3>
+      <ul>
+        <li><strong>It does not predict your personal risk.</strong> The studies behind it describe population averages across large groups, not individual outcomes.</li>
+        <li><strong>It does not replace reducing sitting.</strong> Hitting the minutes target is not permission to sit longer — the two effects are separate, which is the whole point of the break plan.</li>
+        <li><strong>It does not account for sleep.</strong> Sleeping is not sedentary time in this sense; count only waking hours spent seated or reclining.</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">Can you really offset sitting all day with exercise?</div>
+          <div class="faq-a">Partly, and less completely than the phrase suggests. Device-based research indicates that at around 30–40 minutes a day of moderate-to-vigorous activity, the mortality association attached to high sedentary time largely disappears. But other markers behave differently: glucose control and cholesterol still look worse in people who exercise and then sit for ten hours than in people who move little and often. The honest answer is that exercise offsets a lot of it, not all of it, and the remainder is addressed by breaking up the sitting rather than by training harder.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What counts as moderate-intensity activity?</div>
+          <div class="faq-a">Anything that noticeably raises your breathing and heart rate while still allowing conversation. Brisk walking at around 3.5 mph, cycling under 10 mph, gardening, and vigorous housework all qualify. Vigorous activity counts double, so 20 minutes of running covers roughly the same target as 40 minutes of brisk walking. Casual strolling and standing do not count toward this figure, though they do help with the sitting-break side.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does standing at a desk count?</div>
+          <div class="faq-a">It counts as breaking up sedentary time, but not toward your moderate-activity minutes. Standing burns only fractionally more energy than sitting, so a standing desk will not close the activity gap. What it does do is interrupt the uninterrupted-sitting pattern that appears to carry independent cost, which is a real benefit — just a different one from the minutes target.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is it better to move a little often or exercise once?</div>
+          <div class="faq-a">They address different things, so the useful answer is both rather than either. A single session builds cardiorespiratory fitness in a way that scattered movement does not. Frequent short breaks improve how your body handles glucose across the day in a way a single session does not. Research comparing the two found that a group taking a couple of minutes of light movement every half hour showed better blood sugar control than a group doing one 30-minute workout inside an otherwise seated day.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How many hours of sitting is too much?</div>
+          <div class="faq-a">There is no clean threshold, but the risk associations in the literature start becoming pronounced somewhere around eight hours a day of waking sedentary time, and more so above ten. What matters alongside the total is how it accumulates: several hours broken into short stretches appears less problematic than the same total sat in one unbroken block. For context, adults in Western countries average roughly 8.5 hours a day.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why is my target higher than the WHO guideline?</div>
+          <div class="faq-a">The WHO figure of 150 minutes a week is a general minimum for all adults and is not adjusted for how much you sit. This calculator raises that floor as sitting hours climb, following research suggesting that people with high sedentary time need more activity than the minimum to reach the same position as people with low sedentary time. If you sit very little, your target here will match the guideline exactly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does sleep count as sitting time?</div>
+          <div class="faq-a">No. Sedentary behaviour refers to waking time spent sitting or reclining at very low energy expenditure. Sleep is measured and studied separately and should not be included in the number you enter. Count desk time, commuting, meals, and evening screen time.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> These targets are drawn from population-level research and describe averages across large groups rather than individual risk. If you have a cardiovascular or metabolic condition, or you are starting exercise after a long period of inactivity, speak with a healthcare provider about what is appropriate for you.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="../quiz/active-couch-potato.html">🧩 Quiz: Are You an Active Couch Potato?</a></li>
+        <li><a href="calories-burned-by-heart-rate.html">🔥 Calories Burned by Heart Rate</a></li>
+        <li><a href="active-recovery-calculator.html">💜 Active Recovery Calculator</a></li>
+        <li><a href="calorie-calculator.html">📊 Calorie &amp; TDEE Calculator</a></li>
+        <li><a href="../blog/10000-steps-a-day.html">📖 Is 10,000 Steps a Day Necessary?</a></li>
+        <li><a href="../blog/calories-burned-walking.html">📖 Calories Burned Walking</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/include.js"></script>
+<script>
+document.addEventListener('click', function(e){
+  var q = e.target.closest('.faq-q');
+  if (q) { q.parentElement.classList.toggle('open'); }
+});
+
+function calcSitting(){
+  var sit = parseFloat(document.getElementById('sit').value);
+  if (isNaN(sit) || sit < 0) { alert('Please enter how many hours you sit on a typical day.'); return; }
+  if (sit > 18) sit = 18;
+
+  var raw = parseFloat(document.getElementById('mvpa').value);
+  if (isNaN(raw) || raw < 0) raw = 0;
+  var unit = document.getElementById('mvpaunit').value;
+  var perDay = unit === 'w' ? raw / 7 : raw;
+
+  var light = document.getElementById('light').value;
+  var brk = document.getElementById('breaks').value;
+
+  // Target: WHO floor (~22 min/day = 150/wk) rising with sitting load toward
+  // the ~30-40 min/day device-measured band at 10+ hours. Flattens at 45.
+  var target = 22 + Math.max(0, sit - 4) * 2.6;
+  if (target > 45) target = 45;
+  target = Math.round(target);
+
+  var gap = Math.round(target - perDay);
+  var weekly = Math.round(target * 7);
+
+  // Pattern classification, following the four-group split used in the
+  // Finnish accelerometer research.
+  var meetsTarget = perDay >= target;
+  var highSit = sit >= 8;
+  var profile, vh, verdict;
+
+  if (meetsTarget && highSit && light === 'low') {
+    profile = 'Active couch potato';
+    vh = 'You are hitting the target — and still sitting a lot';
+    verdict = 'You are meeting the activity target for your sitting load, which is the harder half. The pattern to watch is what happens either side of the workout: a solid session followed by an otherwise seated day is the profile researchers labelled the "active couch potato", and it tends to show worse glucose and cholesterol markers than a day with the same total activity spread out. The fix is not more training. It is adding light movement into the sitting hours, which is what the break plan below is for.';
+  } else if (meetsTarget && highSit) {
+    profile = 'Sedentary exerciser';
+    vh = 'Target met, sitting still high — but you are moving between times';
+    verdict = 'You are clearing the activity target and you already accumulate light movement outside it, which is the combination that separates this pattern from the "active couch potato" profile in the research. Sitting time is still on the high side, so the remaining gain is in how that sitting accumulates rather than in doing more exercise. Keep the sessions, and work on not sitting in long unbroken blocks.';
+  } else if (meetsTarget) {
+    profile = 'Mover';
+    vh = 'You are in good shape on both counts';
+    verdict = 'You are meeting the activity target and your sitting load is moderate, which is the pattern with the most favourable markers in the accelerometer studies — and also the smallest group in them. There is no gap to close here. The useful thing is protecting it: sitting time tends to creep up with job changes and winter, and this is the profile people fall out of without noticing.';
+  } else if (highSit) {
+    profile = 'Sedentary, under target';
+    vh = 'The gap is real, but smaller than it looks';
+    verdict = 'You are short of the target for your sitting load. Worth knowing before that feels discouraging: the steepest health returns in this research come from the first increments of activity, not the last. Moving from almost nothing to twenty minutes a day buys more than moving from forty to sixty does. Build the daily minutes first, and use the break plan below in parallel — the two work on different problems and progress on one does not wait for the other.';
+  } else {
+    profile = 'Under target';
+    vh = 'Sitting is not your main issue — total activity is';
+    verdict = 'Your sitting load is moderate, so the offset question matters less for you than the basic activity one. Closing the gap to the guideline minimum is the single highest-value change available, and at your sitting level the target stays close to the standard 150 minutes a week rather than rising much above it.';
+  }
+
+  // Break plan
+  var sittingMinutes = sit * 60;
+  var breaksNeeded = Math.round(sittingMinutes / 30);
+  var lightMinutes = breaksNeeded * 3;
+  var brkText;
+  if (brk === 'often') {
+    brkText = 'You are already breaking up sitting roughly every 30 minutes, which is the interval the research points to — this side of it is handled. Across ' + sit + ' hours that is about ' + breaksNeeded + ' interruptions a day. Keep them genuinely on your feet rather than shifting position in the chair.';
+  } else if (brk === 'hourly') {
+    brkText = 'Moving hourly is a reasonable base. Tightening it to every 30 minutes would mean about ' + breaksNeeded + ' short breaks across your ' + sit + ' sitting hours — roughly ' + lightMinutes + ' minutes of light movement in total, at two to five minutes each. That is the interval where the glucose-handling benefits show up most consistently.';
+  } else {
+    brkText = 'This is the biggest single lever available to you, and it is separate from the minutes target. Aim for a two to five minute break every 30 minutes: across ' + sit + ' hours of sitting that is about ' + breaksNeeded + ' breaks, or roughly ' + lightMinutes + ' minutes of light movement spread through the day. Standing up and walking to another room counts.';
+  }
+
+  document.getElementById('res-target').textContent = target;
+  document.getElementById('res-weekly').textContent = 'About ' + weekly + ' minutes a week (WHO guideline: 150–300)';
+  document.getElementById('res-current').textContent = Math.round(perDay);
+  document.getElementById('res-gap').textContent = gap > 0 ? '+' + gap : 'None';
+  document.getElementById('res-profile').textContent = profile;
+  document.getElementById('res-verdict-h').textContent = vh;
+  document.getElementById('res-verdict').textContent = verdict;
+  document.getElementById('res-breaks').textContent = brkText;
+
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
