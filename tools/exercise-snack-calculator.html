@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise Snack Calculator – How Many Short Bursts You Need a Day | My Wellness Calc</title>
+  <meta name="description" content="Work out how many short vigorous bursts a day you need, where your dose sits against the VILPA research bands, and how it compares to the weekly guideline.">
+  <meta property="og:title" content="Exercise Snack Calculator – Short Bursts of Activity | My Wellness Calc">
+  <link rel="canonical" href="https://mywellnesscalc.com/tools/exercise-snack-calculator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YL3ZRZBDF');
+  </script>
+  <style>
+    .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
+    .main-col{min-width:0;}
+    .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;align-items:center;}
+    .breadcrumb a{color:var(--light);text-decoration:none;}
+    .page-header{margin-bottom:2rem;}
+    .tool-label{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;margin-bottom:.75rem;}
+    h1{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:300;letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem;}
+    h1 em{font-style:italic;color:var(--sage-dark);}
+    .page-header p{color:var(--mid);font-size:1rem;line-height:1.6;}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;}
+    .form-group{margin-bottom:1.25rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.5rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group input,.form-group select{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:1rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .result-box{display:none;margin-top:1.5rem;}
+    .result-box.show{display:block;}
+    .dose-hero{background:linear-gradient(135deg,#fff3e0,#ffe0b2);border:1px solid #ffb74d;border-radius:20px;padding:2rem;text-align:center;margin-bottom:1.25rem;}
+    .dose-label{font-size:.8rem;font-weight:600;color:#e65100;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+    .dose-val{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:#e65100;line-height:1;}
+    .dose-unit{font-size:1rem;color:#ef6c00;margin-top:.25rem;}
+    .dose-desc{font-size:.85rem;color:#ef6c00;margin-top:.75rem;}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;}
+    .stat-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;}
+    .stat-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:300;color:var(--charcoal);}
+    .stat-val.is-text{font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:500;line-height:1.35;}
+    .stat-label{font-size:.72rem;color:var(--light);margin-top:.2rem;line-height:1.3;}
+    .verdict-box{background:var(--cream);border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .verdict-box h4{font-size:.9rem;font-weight:600;color:var(--charcoal);margin-bottom:.5rem;}
+    .verdict-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .plan-box{background:#e8f5e9;border:1px solid #81c784;border-radius:14px;padding:1.25rem;margin-bottom:1rem;}
+    .plan-box h4{font-size:.9rem;font-weight:600;color:#2e7d32;margin-bottom:.5rem;}
+    .plan-box p{font-size:.85rem;color:var(--mid);margin:0;line-height:1.6;}
+    .info-section{margin-top:2rem;}
+    .info-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;}
+    .info-section h3{font-size:1rem;font-weight:600;margin:1.25rem 0 .5rem;}
+    .info-section p{color:var(--mid);font-size:.9rem;line-height:1.8;margin-bottom:.75rem;}
+    .info-section ul{color:var(--mid);font-size:.9rem;line-height:1.8;margin:0 0 .75rem 1.5rem;}
+    .info-section li{margin-bottom:.3rem;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .table-wrapper table{margin:0;}
+    .disclaimer{background:var(--cream);border-left:3px solid var(--sage-light);padding:1rem 1.25rem;border-radius:0 8px 8px 0;font-size:.8rem;color:var(--mid);margin-top:2rem;}
+    .ad-box{background:var(--cream);border:1px dashed var(--border);border-radius:12px;height:250px;display:flex;align-items:center;justify-content:center;color:var(--light);font-size:.75rem;text-align:center;margin-bottom:1.5rem;}
+    .related-tools{background:white;border:1px solid var(--border);border-radius:16px;padding:1.5rem;}
+    .related-tools h3{font-size:.85rem;font-weight:600;color:var(--mid);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.875rem;}
+    .related-list{list-style:none;padding:0;}
+    .related-list li{padding:.5rem 0;border-bottom:1px solid var(--border);}
+    .related-list li:last-child{border-bottom:none;}
+    .related-list a{color:var(--charcoal);text-decoration:none;font-size:.875rem;transition:color .2s;}
+    .related-list a:hover{color:var(--sage-dark);}
+    .faq-section{margin-top:2.5rem;}
+    .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
+    .faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-weight:600;font-size:.95rem;color:var(--charcoal);margin-bottom:.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .faq-q::after{content:'+';font-size:1.2rem;color:var(--sage-dark);flex-shrink:0;}
+    .faq-item.open .faq-q::after{content:'−';}
+    .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
+    .faq-item.open .faq-a{display:block;}
+    @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.stats-grid .stat-card:last-child{grid-column:1/-1;}.stats-grid .stat-card:last-child .stat-val{font-size:1.05rem;}}
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Exercise Snack Calculator",
+  "url": "https://mywellnesscalc.com/tools/exercise-snack-calculator.html",
+  "description": "Calculates your daily dose of short vigorous activity bursts, places it against the VILPA research bands, and compares the weekly total to physical activity guidelines.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "publisher": {"@type": "Organization", "name": "MyWellnessCalc", "url": "https://mywellnesscalc.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mywellnesscalc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://mywellnesscalc.com/tools/"},
+    {"@type": "ListItem", "position": 3, "name": "Exercise Snack Calculator", "item": "https://mywellnesscalc.com/tools/exercise-snack-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many exercise snacks a day do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most-cited figure is three bursts of one to two minutes a day, which is where the largest observational associations appeared in non-exercising adults. Expressed in minutes, the studied range clusters at roughly three to four and a half minutes of vigorous activity accumulated per day. If you are starting from nothing, two bursts of thirty seconds is a reasonable first week — the research on deliberate snacking used progressive build-ups rather than starting at the target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do exercise snacks replace a proper workout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not as a like-for-like swap. The strongest evidence for bursts comes from people doing no structured exercise at all, where the comparison is against zero rather than against a training programme. If you already train, bursts are an addition rather than a substitute. What they do reliably offer is a route in for anyone who cannot or will not do longer sessions — and adherence in the trials was notably high, which is where most exercise plans fail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from HIIT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HIIT packs several hard intervals into a single session with short recoveries between them. Exercise snacks deliberately spread single bursts across the day, typically separated by one to four hours of ordinary activity. The separation is the defining feature, not the intensity. Practically, that means no kit, no changing, and no block of time set aside — which is the whole point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does climbing the stairs really count?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the most studied option, and yes — provided the pace is high enough that you are breathing hard at the top. Stair climbing appeared as the dominant activity in trials with adults under 65, while leg-focused strength work and tai chi were more common among older participants. A single vigorous three-flight ascent, repeated a few times a day with hours in between, is close to the protocol used in the published work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is one minute really long enough to do anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the outcomes these studies measured, apparently yes. Physical activity guidelines used to require bouts of at least ten minutes to count, and that requirement was removed once evidence accumulated that shorter bouts carried benefit. Wearable data showed that the large majority of naturally occurring vigorous activity happens in bouts of under a minute, which is exactly the activity the older guidance was discarding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long between bursts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roughly one to four hours is the spacing described in the literature, and it is what separates snacking from an interval session. There is no evidence that precise timing matters, so anchoring bursts to things you already do — a bathroom break, refilling a water bottle, the start of a meeting — is more practical than setting timers, and it is how adherence stayed high in the trials."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I do this if my joints are a problem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often, with the right movement. Vigorous means high effort relative to your own capacity, not high impact. Seated or supported options — fast sit-to-stands from a chair, brisk arm work, a hard push on a stationary bike — can reach the required intensity without loading the joints. In the published trials with older adults, leg-focused strength work and tai chi were the common formats rather than stair sprints. If you have a diagnosed joint or cardiac condition, get the specific movement cleared first."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<div class="page-wrap">
+  <div class="main-col">
+    <div class="breadcrumb"><a href="../">Home</a> › <a href="../tools/">Calculators</a> › Exercise Snack Calculator</div>
+    <div class="page-header">
+      <span class="tool-label">⚡ Free Tool</span>
+      <h1>Exercise Snack <em>Calculator</em></h1>
+      <p>Short vigorous bursts have their own dose-response evidence, separate from the weekly guideline. Work out where your dose lands and what to build toward.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Bursts per day</label>
+          <select id="perday">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Length of each burst</label>
+          <select id="length">
+            <option value="0.5">About 30 seconds</option>
+            <option value="1" selected>About 1 minute</option>
+            <option value="1.5">About 90 seconds</option>
+            <option value="2">About 2 minutes</option>
+            <option value="3">About 3 minutes</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Days per week you can realistically do this</label>
+        <select id="days">
+          <option value="3">3 days</option>
+          <option value="4">4 days</option>
+          <option value="5" selected>5 days</option>
+          <option value="6">6 days</option>
+          <option value="7">7 days</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Structured vigorous exercise <span>(min/week)</span></label>
+          <input type="number" id="vig" placeholder="e.g. 0" min="0" max="1000">
+        </div>
+        <div class="form-group">
+          <label>Structured moderate exercise <span>(min/week)</span></label>
+          <input type="number" id="mod" placeholder="e.g. 0" min="0" max="2000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>What is easiest to reach during your day?</label>
+        <select id="opp">
+          <option value="stairs">Stairs — at home, work, or nearby</option>
+          <option value="outdoor">Outdoor space — I can walk or jog briskly</option>
+          <option value="indoor">Indoor only — no stairs, limited space</option>
+          <option value="limited">Joint or mobility limits — impact is a problem</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="calcSnacks()">Calculate my dose</button>
+
+      <div class="result-box" id="result">
+        <div class="dose-hero">
+          <div class="dose-label">Vigorous minutes on the days you do it</div>
+          <div class="dose-val" id="res-daily">—</div>
+          <div class="dose-unit">minutes per day</div>
+          <div class="dose-desc" id="res-weekavg"></div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-val" id="res-weekly">—</div>
+            <div class="stat-label">Weekly minutes from bursts</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="res-guideline">—</div>
+            <div class="stat-label">Of the 75-min vigorous guideline</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val is-text" id="res-band">—</div>
+            <div class="stat-label">Research band</div>
+          </div>
+        </div>
+        <div class="verdict-box">
+          <h4 id="res-verdict-h">What this means</h4>
+          <p id="res-verdict"></p>
+        </div>
+        <div class="plan-box">
+          <h4>What to actually do</h4>
+          <p id="res-plan"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h2>How this is calculated, and why it is not measured against 150 minutes</h2>
+      <p>Almost every activity tool compares you to the weekly guideline — 150 to 300 minutes of moderate activity, or 75 to 150 vigorous. That comparison makes short bursts look pointless: three one-minute bursts a day comes to about 21 minutes a week, which is under a third of the vigorous minimum.</p>
+      <p>The reason that framing is misleading is that the research on brief bursts did not measure them against the guideline. It measured them against <em>doing none</em>, in people who were not exercising at all — and found associations at doses far below the guideline. So this calculator reports your dose in the units that research actually used: <strong>vigorous minutes accumulated per day</strong>.</p>
+
+      <h3>Where the bands come from</h3>
+      <p>Two large wearable-based studies anchor the numbers:</p>
+      <ul>
+        <li>In a 2022 analysis of roughly 25,000 adults who reported no structured exercise, those recording about <strong>three bursts of one to two minutes a day</strong> showed roughly 38–40% lower all-cause and cancer mortality over the follow-up period than those recording none, and 48–49% lower cardiovascular mortality.</li>
+        <li>At around <strong>4.4 minutes a day</strong>, the same body of work reported 26–30% lower all-cause and cancer mortality and 32–34% lower cardiovascular mortality.</li>
+        <li>A 2023 cancer-specific analysis found associations beginning at roughly <strong>3.4 to 3.6 minutes a day</strong>, with more at 4.5 minutes.</li>
+      </ul>
+      <p>These are observational associations in large cohorts, not proof that bursts cause the outcome. But the pattern is consistent, the doses are strikingly small, and they cluster in a narrow range — which is what the bands in this calculator reflect.</p>
+
+      <h3>Bursts are also being tested as training</h3>
+      <p>Separately from the mortality work, deliberate short bouts have been trialled as a way to improve fitness. A synthesis published in the British Journal of Sports Medicine defined an exercise snack as a burst of moderate-to-vigorous activity lasting <strong>five minutes or less, done at least twice a day, on three to seven days a week, for four to twelve weeks</strong> — and found improvements in cardiorespiratory fitness among physically inactive adults, with high adherence. In one frequently cited trial, women who built up to five vigorous stair ascents a day improved measured fitness by about 17% over eight weeks.</p>
+      <p>That is why this tool asks for days per week as well as bursts per day. The mortality research describes a daily accumulation; the fitness research describes a training frequency. They are different questions and the tool answers both.</p>
+
+      <h3>Dose by protocol</h3>
+      <p>The table shows what common protocols produce, so you can sanity-check your own result.</p>
+      <div class="table-wrapper">
+      <table style="width:100%;min-width:560px;border-collapse:collapse;margin:1rem 0;font-size:.875rem;">
+        <thead><tr style="background:var(--sage-dark);color:white;"><th style="padding:.625rem 1rem;text-align:left;">Protocol</th><th style="padding:.625rem 1rem;text-align:left;">Per active day</th><th style="padding:.625rem 1rem;text-align:left;">Per week (5 days)</th><th style="padding:.625rem 1rem;text-align:left;">Band</th></tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">2 × 30 seconds</td><td style="padding:.5rem 1rem;color:var(--mid);">1.0 min</td><td style="padding:.5rem 1rem;color:var(--mid);">5 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Below studied range</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.5rem 1rem;color:var(--mid);">3 × 1 minute</td><td style="padding:.5rem 1rem;color:var(--mid);">3.0 min</td><td style="padding:.5rem 1rem;color:var(--mid);">15 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Core studied band</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:.5rem 1rem;color:var(--mid);">3 × 90 seconds</td><td style="padding:.5rem 1rem;color:var(--mid);">4.5 min</td><td style="padding:.5rem 1rem;color:var(--mid);">22.5 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Core studied band</td></tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--cream);"><td style="padding:.5rem 1rem;color:var(--mid);">4 × 2 minutes</td><td style="padding:.5rem 1rem;color:var(--mid);">8.0 min</td><td style="padding:.5rem 1rem;color:var(--mid);">40 min</td><td style="padding:.5rem 1rem;color:var(--mid);">Above studied range</td></tr>
+          <tr><td style="padding:.5rem 1rem;color:var(--mid);">5 × 3 minutes</td><td style="padding:.5rem 1rem;color:var(--mid);">15.0 min</td><td style="padding:.5rem 1rem;color:var(--mid);">75 min</td><td style="padding:.5rem 1rem;color:var(--mid);">This is training, not snacking</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Note how quickly the top rows stop being "snacks". Once you are doing 4 × 2 minutes you have effectively built a distributed workout, which is fine — it just means the burst-specific research is no longer the right reference and the ordinary guideline is.</p>
+
+      <h3>What counts as vigorous</h3>
+      <p>The threshold is not subtle: breathing hard enough that holding a conversation becomes difficult. Stair climbing is the most-studied option and the easiest to make genuinely vigorous. Brisk uphill walking, carrying heavy shopping, fast bodyweight work, and energetic play all qualify if the pace is high enough.</p>
+      <p>The common failure is doing the movement at a comfortable pace. A leisurely flight of stairs is not an exercise snack — it is light activity, which is useful for a different reason. If you can chat normally throughout, the burst did not count toward this figure.</p>
+
+      <h3>What this tool does not do</h3>
+      <ul>
+        <li><strong>It does not predict your personal risk.</strong> The underlying studies report associations across large populations, not individual outcomes.</li>
+        <li><strong>It does not replace the guideline.</strong> If you can do structured exercise, the guideline still applies — bursts are strongest as evidence for people who currently do none.</li>
+        <li><strong>It does not address sitting time.</strong> Breaking up long sitting is a separate problem with its own separate evidence.</li>
+      </ul>
+
+      <div class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-item">
+          <div class="faq-q">How many exercise snacks a day do I need?</div>
+          <div class="faq-a">The most-cited figure is three bursts of one to two minutes a day, which is where the largest observational associations appeared in non-exercising adults. Expressed in minutes, the studied range clusters at roughly three to four and a half minutes of vigorous activity accumulated per day. If you are starting from nothing, two bursts of thirty seconds is a reasonable first week — the research on deliberate snacking used progressive build-ups rather than starting at the target.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do exercise snacks replace a proper workout?</div>
+          <div class="faq-a">Not as a like-for-like swap. The strongest evidence for bursts comes from people doing no structured exercise at all, where the comparison is against zero rather than against a training programme. If you already train, bursts are an addition rather than a substitute. What they do reliably offer is a route in for anyone who cannot or will not do longer sessions — and adherence in the trials was notably high, which is where most exercise plans fail.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How is this different from HIIT?</div>
+          <div class="faq-a">HIIT packs several hard intervals into a single session with short recoveries between them. Exercise snacks deliberately spread single bursts across the day, typically separated by one to four hours of ordinary activity. The separation is the defining feature, not the intensity. Practically, that means no kit, no changing, and no block of time set aside — which is the whole point.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does climbing the stairs really count?</div>
+          <div class="faq-a">It is the most studied option, and yes — provided the pace is high enough that you are breathing hard at the top. Stair climbing appeared as the dominant activity in trials with adults under 65, while leg-focused strength work and tai chi were more common among older participants. A single vigorous three-flight ascent, repeated a few times a day with hours in between, is close to the protocol used in the published work.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is one minute really long enough to do anything?</div>
+          <div class="faq-a">For the outcomes these studies measured, apparently yes. Physical activity guidelines used to require bouts of at least ten minutes to count, and that requirement was removed once evidence accumulated that shorter bouts carried benefit. Wearable data showed that the large majority of naturally occurring vigorous activity happens in bouts of under a minute, which is exactly the activity the older guidance was discarding.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long between bursts?</div>
+          <div class="faq-a">Roughly one to four hours is the spacing described in the literature, and it is what separates snacking from an interval session. There is no evidence that precise timing matters, so anchoring bursts to things you already do — a bathroom break, refilling a water bottle, the start of a meeting — is more practical than setting timers, and it is how adherence stayed high in the trials.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I do this if my joints are a problem?</div>
+          <div class="faq-a">Often, with the right movement. Vigorous means high effort relative to your own capacity, not high impact. Seated or supported options — fast sit-to-stands from a chair, brisk arm work, a hard push on a stationary bike — can reach the required intensity without loading the joints. In the published trials with older adults, leg-focused strength work and tai chi were the common formats rather than stair sprints. If you have a diagnosed joint or cardiac condition, get the specific movement cleared first.</div>
+        </div>
+      </div>
+
+      <div class="disclaimer"><strong>Not medical advice.</strong> The figures here come from population-level observational research and small training trials, and describe averages rather than individual outcomes. Vigorous activity raises cardiovascular demand quickly — if you have a heart condition, uncontrolled blood pressure, or have been inactive for a long period, check with a healthcare provider before adding vigorous bursts.</div>
+    </div>
+  </div>
+
+  <div class="side-col">
+    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
+    <div class="related-tools">
+      <h3>Related tools</h3>
+      <ul class="related-list">
+        <li><a href="../quiz/which-exercise-snack.html">🧩 Quiz: Which Exercise Snack Fits You?</a></li>
+        <li><a href="sitting-offset-calculator.html">🪑 Sitting Offset Calculator</a></li>
+        <li><a href="heart-rate-zone.html">❤️ Heart Rate Zone Calculator</a></li>
+        <li><a href="vo2-max-calculator.html">🫁 VO2 Max Calculator</a></li>
+        <li><a href="../blog/zone-2-vs-hiit-fat-loss.html">📖 Zone 2 vs HIIT for Fat Loss</a></li>
+        <li><a href="../blog/10000-steps-a-day.html">📖 Is 10,000 Steps a Day Necessary?</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/include.js"></script>
+<script>
+document.addEventListener('click', function(e){
+  var q = e.target.closest('.faq-q');
+  if (q) { q.parentElement.classList.toggle('open'); }
+});
+
+function calcSnacks(){
+  var perDay = parseFloat(document.getElementById('perday').value);
+  var len = parseFloat(document.getElementById('length').value);
+  var days = parseFloat(document.getElementById('days').value);
+  var vig = parseFloat(document.getElementById('vig').value);
+  var mod = parseFloat(document.getElementById('mod').value);
+  if (isNaN(vig) || vig < 0) vig = 0;
+  if (isNaN(mod) || mod < 0) mod = 0;
+  var opp = document.getElementById('opp').value;
+
+  var daily = perDay * len;                 // minutes on days you do it
+  var weekly = daily * days;                // minutes per week from bursts
+  var weekAvg = weekly / 7;                 // averaged across all 7 days
+
+  // Vigorous-equivalent total: moderate counts half, per the conventional
+  // 1 vigorous minute = 2 moderate minutes exchange used in guidelines.
+  var totalVig = weekly + vig + (mod / 2);
+  var pct = Math.round(totalVig / 75 * 100);
+
+  var band, vh, verdict;
+  if (daily < 1.5) {
+    band = 'Below studied range';
+    vh = 'A real start, but under the doses these studies measured';
+    verdict = 'Your current protocol produces less vigorous activity per day than the lowest doses in the burst research, which clustered around three minutes. That is not a reason to stop — the deliberate snacking trials built up progressively rather than starting at target, and consistency at a small dose is what makes the next step possible. The most useful change is usually one more burst per day rather than longer bursts.';
+  } else if (daily < 3) {
+    band = 'Approaching entry band';
+    vh = 'Close to the lower edge of the studied range';
+    verdict = 'You are just below the most-cited protocol of three bursts of one to two minutes a day. Adding a single burst, or extending each one by about thirty seconds, would put you inside the band where the large cohort studies reported their associations. At this point frequency matters more than effort — one more burst is worth more than making the existing ones harder.';
+  } else if (daily <= 5) {
+    band = 'Core studied band';
+    vh = 'This is the dose the research is built on';
+    verdict = 'Your protocol sits in the range the wearable studies actually measured — roughly three to four and a half vigorous minutes accumulated per day, where associations with lower all-cause, cardiovascular, and cancer mortality were reported in adults doing no structured exercise. There is no evidence that pushing further buys proportionally more, so the useful goal from here is consistency rather than escalation. Protect the habit; do not inflate it.';
+  } else if (daily <= 10) {
+    band = 'Above studied range';
+    vh = 'Beyond the burst research — you are approaching a distributed workout';
+    verdict = 'This is more vigorous activity per day than the burst studies examined. That is unlikely to be a problem, but it does mean the burst-specific evidence no longer describes what you are doing. At this volume the ordinary weekly guideline is the better reference point, and the figure to watch is your weekly total rather than the per-day dose. Make sure recovery keeps pace, since vigorous work accumulates fatigue faster than moderate work.';
+  } else {
+    band = 'This is training, not snacking';
+    vh = 'You have built a distributed training programme';
+    verdict = 'At this volume you are no longer doing exercise snacks in the sense the research uses — you are training, spread across the day. Nothing wrong with that, but judge it by the weekly guideline and by how you recover, not by the burst literature. Spreading vigorous work this densely without structured easy days is a common route to accumulated fatigue.';
+  }
+
+  var plan;
+  if (opp === 'stairs') {
+    plan = 'Stairs are the most-studied option and the easiest to make genuinely vigorous. Aim for ' + perDay + ' ascent' + (perDay > 1 ? 's' : '') + ' a day of about ' + (len < 1 ? '30 seconds' : len + ' minute' + (len > 1 ? 's' : '')) + ' each, climbed fast enough that you are breathing hard at the top, with one to four hours between them. Anchoring each one to something you already do — arriving, a break, leaving — works better than setting reminders.';
+  } else if (opp === 'outdoor') {
+    plan = 'Brisk uphill walking or a short jog is the simplest format outdoors. Aim for ' + perDay + ' burst' + (perDay > 1 ? 's' : '') + ' a day of about ' + (len < 1 ? '30 seconds' : len + ' minute' + (len > 1 ? 's' : '')) + ' each, spaced one to four hours apart. The pace test matters more than the distance: if you can still hold a conversation comfortably, it is not counting toward the figure above.';
+  } else if (opp === 'indoor') {
+    plan = 'No stairs is not a barrier. Fast sit-to-stands from a chair, marching or jogging on the spot, and quick bodyweight sets all reach vigorous intensity in a small space. Aim for ' + perDay + ' burst' + (perDay > 1 ? 's' : '') + ' a day of about ' + (len < 1 ? '30 seconds' : len + ' minute' + (len > 1 ? 's' : '')) + ' each, separated by an hour or more. Keeping the format identical every time removes the decision, which is what keeps it going.';
+  } else {
+    plan = 'Vigorous means high effort relative to your own capacity, not high impact — so low-impact options work. Fast sit-to-stands, seated or standing arm work, and a hard push on a stationary bike can all reach the required intensity without loading the joints. In trials with older adults, leg-focused strength work and tai chi were the common formats rather than stair sprints. Aim for ' + perDay + ' burst' + (perDay > 1 ? 's' : '') + ' a day of about ' + (len < 1 ? '30 seconds' : len + ' minute' + (len > 1 ? 's' : '')) + ' each, and get the specific movement cleared if you have a diagnosed joint or cardiac condition.';
+  }
+
+  document.getElementById('res-daily').textContent = (Math.round(daily * 10) / 10);
+  document.getElementById('res-weekavg').textContent = 'Averaged across all seven days: ' + (Math.round(weekAvg * 10) / 10) + ' min/day';
+  document.getElementById('res-weekly').textContent = (Math.round(weekly * 10) / 10);
+  document.getElementById('res-guideline').textContent = pct + '%';
+  document.getElementById('res-band').textContent = band;
+  document.getElementById('res-verdict-h').textContent = vh;
+  document.getElementById('res-verdict').textContent = verdict;
+  document.getElementById('res-plan').textContent = plan;
+
+  var box = document.getElementById('result');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>

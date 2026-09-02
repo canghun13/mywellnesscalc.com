@@ -21,6 +21,7 @@
 - [Is Creatine Right for You?](https://mywellnesscalc.com/quiz/creatine-right-for-you.html): Assesses whether creatine supplementation aligns with training type, diet, and goals.
 - [How Should You Return to Training After a Break?](https://mywellnesscalc.com/quiz/return-to-training-after-break.html): Sorts a comeback into resume, rebuild, or restart based on break length, cause, activity during the break, and training history.
 - [Are You an Active Couch Potato?](https://mywellnesscalc.com/quiz/active-couch-potato.html): Sorts your movement pattern into one of four research-based profiles based on sitting hours, exercise volume, light movement, and sitting-break frequency.
+- [Which Exercise Snack Fits You?](https://mywellnesscalc.com/quiz/which-exercise-snack.html): Recommends a burst format (stairs, sit-to-stands, bike sprints, walking bursts, bodyweight) based on space, physical limits, available equipment, and habit triggers.
 
 ### Body & Weight
 - [What's Your Muscle-Building Starting Point?](https://mywellnesscalc.com/quiz/muscle-building-starting-point.html): Identifies beginner, intermediate, or advanced muscle-building stage from training history, muscle definition, and body fat — links to FFMI tracking.
@@ -73,6 +74,7 @@
 - [Active Recovery Heart Rate Calculator](https://mywellnesscalc.com/tools/active-recovery-calculator.html): Calculates Zone 1 active recovery heart rate range — the low-intensity ceiling for rest-day movement that promotes circulation without adding training stress.
 - [Detraining Calculator](https://mywellnesscalc.com/tools/detraining-calculator.html): Estimates VO2 max and strength loss during a break from training, plus the weeks of retraining needed to return to the previous level.
 - [Sitting Offset Calculator](https://mywellnesscalc.com/tools/sitting-offset-calculator.html): Estimates the daily moderate-activity target matching your sitting hours, the gap to your current activity, and how often to break up sitting.
+- [Exercise Snack Calculator](https://mywellnesscalc.com/tools/exercise-snack-calculator.html): Calculates the daily dose of short vigorous bursts, places it against the VILPA research bands, and compares the weekly total to activity guidelines.
 - [Calories Burned by Heart Rate Calculator](https://mywellnesscalc.com/tools/calories-burned-by-heart-rate.html): Calculates calories burned based on heart rate, age, weight, and workout duration.
 - [One Rep Max Calculator](https://mywellnesscalc.com/tools/one-rep-max.html): Estimates maximum lift (1RM) for bench press, squat, deadlift and more using proven formulas with training percentages.
 - [Running Pace Calculator](https://mywellnesscalc.com/tools/running-pace.html): Calculates finish time, required pace, or distance for any race — 5K, 10K, half marathon, or marathon.
