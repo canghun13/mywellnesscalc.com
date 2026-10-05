@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fat Burning Heart Rate Zone by Age: BPM Chart + Calculator</title>
-  <meta name="description" content="Find your fat burning heart rate zone by age in seconds — BPM ranges for your 20s to 60s, the Karvonen method explained, whether it actually works, and a free calculator.">
+  <title>Fat Burning Heart Rate Zone by Age (20–80): BPM Chart + Calculator</title>
+  <meta name="description" content="Check your fat burning heart rate zone by age and sex — a BPM chart from 20 to 80, a calculator that tells you whether your current heart rate is in the zone, and the Karvonen method.">
   <link rel="canonical" href="https://mywellnesscalc.com/blog/fat-burning-heart-rate-zone.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -67,7 +67,28 @@
     .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
     .table-wrapper .hr-table{margin:0;}
     .article-main{min-width:0;}
-    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+    .calc-card{background:white;border:1px solid var(--border);border-radius:20px;padding:1.75rem;margin:1.5rem 0 2rem;}
+    .form-group{margin-bottom:1.1rem;}
+    .form-group label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.45rem;color:var(--charcoal);}
+    .form-group label span{font-weight:400;color:var(--light);font-size:.8rem;}
+    .form-group select,.form-group input{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;background:white;color:var(--charcoal);appearance:none;transition:border-color .2s;}
+    .form-group select:focus,.form-group input:focus{outline:none;border-color:var(--sage);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .calc-btn{width:100%;padding:.95rem;background:var(--sage-dark);color:white;border:none;border-radius:12px;font-size:1rem;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;}
+    .calc-btn:hover{background:var(--sage);}
+    .fb-result{display:none;margin-top:1.25rem;}
+    .fb-result.show{display:block;}
+    .fb-main{background:var(--sage-dark);color:white;border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.75rem;}
+    .fb-main-label{font-size:.8rem;color:rgba(255,255,255,.75);}
+    .fb-main-val{font-family:'Fraunces',serif;font-size:2rem;font-weight:300;line-height:1.2;}
+    .fb-main-note{font-size:.8rem;color:rgba(255,255,255,.75);margin-top:.2rem;}
+    .fb-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.875rem;color:var(--mid);}
+    .fb-row:last-child{border-bottom:none;}
+    .fb-row strong{white-space:nowrap;}
+    .fb-verdict{background:var(--cream);border-radius:12px;padding:.9rem 1.1rem;margin-top:.75rem;font-size:.9rem;color:var(--charcoal);line-height:1.6;display:none;}
+    .fb-verdict.show{display:block;}
+    .fb-error{color:#b3452f;font-size:.85rem;margin-top:.6rem;display:none;}
+    @media(max-width:768px){.article-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -76,8 +97,8 @@
   "@type": "Article",
   "headline": "Fat Burning Heart Rate Zone: What It Is, How to Calculate It, and How to Use It",
   "url": "https://mywellnesscalc.com/blog/fat-burning-heart-rate-zone.html",
-  "description": "Find your fat burning heart rate zone by age in seconds — BPM ranges for your 20s to 60s, the Karvonen method explained, whether it actually works, and a free calculator.",
-  "dateModified": "2026-06-28",
+  "description": "Check your fat burning heart rate zone by age and sex — a BPM chart from 20 to 80, a calculator that tells you whether your current heart rate is in the zone, and the Karvonen method.",
+  "dateModified": "2026-10-05",
   "publisher": {
     "@type": "Organization",
     "name": "MyWellnessCalc",
@@ -110,7 +131,7 @@
       "name": "What is the fat burning heart rate zone by age?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The fat burning zone is 60–70% of your estimated max heart rate (220 minus your age). At age 30: roughly 114–133 bpm. At age 40: 108–126 bpm. At age 50: 102–119 bpm. At age 60: 96–112 bpm. These are estimates — use the Karvonen method with your resting heart rate for a more accurate personal range."
+        "text": "The fat burning zone is 60–70% of estimated max HR (220 minus age). At 30: roughly 114–133 bpm. At 40: 108–126 bpm. At 50: 102–119 bpm. At 60: 96–112 bpm. At 70: 90–105 bpm. Women using the Gulati formula land about 3–8 bpm lower. These are estimates — the Karvonen method with your resting HR gives a more personal range."
       }
     },
     {
@@ -118,7 +139,7 @@
       "name": "Is the fat burning zone the same as Zone 2?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. In a standard 5-zone training model, Zone 2 (60–70% of max HR) is the same intensity range called the fat burning zone. The terms are used interchangeably, though Zone 2 is more common in endurance training contexts."
+        "text": "Yes. In a 5-zone training model, Zone 2 (60–70% of max HR) is the same intensity range called the fat burning zone. The terms are interchangeable — Zone 2 is the endurance sports terminology, fat burning zone is the consumer label."
       }
     },
     {
@@ -126,7 +147,7 @@
       "name": "How long should I train in the fat burning zone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sessions of 45–90 minutes are typical. Unlike high-intensity training, the fat burning zone can be sustained for extended periods. For meaningful aerobic adaptation, aim for at least 45 minutes per session. Even 30-minute sessions are beneficial if that's what fits your schedule."
+        "text": "Sessions of 45–90 minutes are typical. Unlike high-intensity training, Zone 2 can be sustained for extended periods. For meaningful aerobic adaptation, aim for at least 45 minutes. Even 30-minute sessions are beneficial — start where you are and build duration gradually."
       }
     },
     {
@@ -134,15 +155,7 @@
       "name": "Does training in the fat burning zone reduce belly fat?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Spot reduction is not possible — fat is lost from throughout the body, not just one area. However, regular fat burning zone training combined with a calorie deficit is effective for overall fat loss, including visceral (belly) fat, which responds well to consistent aerobic exercise."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between the fat burning zone and HIIT?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The fat burning zone burns a higher proportion of calories from fat, while HIIT burns more total calories in less time. For weight loss, total calorie deficit matters most — both approaches work when combined with appropriate nutrition. The fat burning zone allows longer sessions with less recovery needed, while HIIT is more time-efficient. Most experts recommend combining both."
+        "text": "Spot reduction isn't possible — fat is lost from throughout the body in response to a calorie deficit. However, regular Zone 2 training combined with a modest calorie deficit is effective for overall fat loss, including visceral (belly) fat, which responds well to consistent aerobic exercise."
       }
     },
     {
@@ -150,7 +163,7 @@
       "name": "What happens if my heart rate is too high during fat burning zone training?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If your heart rate exceeds 70% of max, you shift from Zone 2 into Zone 3 or higher. The fuel mix shifts toward carbohydrates, and you accumulate fatigue faster. This isn't dangerous, but it changes the training stimulus — you get less aerobic base development and can't sustain the effort as long."
+        "text": "If your HR exceeds 70% of max, you shift into Zone 3 or higher. The fuel mix shifts toward carbohydrates, and fatigue accumulates faster. You won't get the same mitochondrial and fat oxidation adaptations as true Zone 2. Slow down until you're back in range."
       }
     },
     {
@@ -166,7 +179,7 @@
       "name": "How do I know if I'm actually in the fat burning zone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The most reliable method is a heart rate monitor showing 60-70% of your max HR. The talk test is a good secondary check: you should be able to speak in full sentences without gasping. If you're breathing too hard to hold a conversation, you've gone above Zone 2. Perceived exertion should feel \"easy\" to \"moderate\" — if it feels like a real effort, slow down."
+        "text": "The most reliable method is a heart rate monitor showing 60–70% of your max HR. The talk test is a good secondary check: you should be able to speak in full sentences without gasping. If you're breathing too hard to hold a conversation, you've gone above Zone 2. Perceived exertion should feel \"easy\" to \"moderate\" — if it feels like a real effort, slow down."
       }
     },
     {
@@ -174,7 +187,15 @@
       "name": "Is the fat burning zone the same for running, cycling, and walking?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The heart rate target is the same regardless of activity. However, the pace or effort required to hit that HR differs significantly by activity and fitness level. Running typically produces a higher HR at any given effort compared to cycling. Swimming runs 10-15 bpm lower than land activities. The key is always the heart rate number, not the pace or activity type."
+        "text": "The heart rate target is the same regardless of activity. However, the pace or effort required to hit that HR differs significantly by activity and fitness level. Running typically produces a higher HR at any given effort compared to cycling. Swimming runs 10–15 bpm lower than land activities. The key is always the heart rate number, not the pace or activity type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the fat burning zone and HIIT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The fat burning zone (Zone 2, 60–70% max HR) burns a higher proportion of calories from fat and is sustainable for long durations. HIIT burns more total calories per minute and creates a larger post-exercise calorie burn. For fat loss, total calorie deficit determines the outcome — both approaches work. The most effective programmes combine primarily Zone 2 with occasional HIIT sessions."
       }
     },
     {
@@ -182,7 +203,7 @@
       "name": "Does the fat burning zone change for women?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The heart rate targets are the same, but women oxidise a higher proportion of fat at moderate intensities than men. Heart rate may also be slightly elevated in the luteal phase of the menstrual cycle — expect the same effort to produce a slightly higher HR in the second half of the cycle. This is normal and not a sign of reduced fitness."
+        "text": "On the standard 220 − age chart the targets are the same, but the Gulati formula — developed from 5,437 women — predicts a lower max heart rate, which puts a woman's fat burning zone about 3–8 bpm lower (for example 102–120 bpm instead of 108–126 bpm at 40). Women also oxidise a higher proportion of fat at moderate intensities, and heart rate runs slightly higher in the luteal phase of the menstrual cycle — normal, and not a sign of reduced fitness."
       }
     },
     {
@@ -190,7 +211,31 @@
       "name": "How long until I see results from fat burning zone training?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Measurable aerobic improvements (improved pace at the same heart rate) typically appear after 6-10 weeks of consistent training. Fat loss results depend on overall calorie balance, not training intensity alone. Most people notice improved energy, reduced resting heart rate, and better recovery within 3-4 weeks of consistent Zone 2 training."
+        "text": "Measurable aerobic improvements (improved pace at the same heart rate) typically appear after 6–10 weeks of consistent training. Fat loss results depend on overall calorie balance, not training intensity alone. Most people notice improved energy, reduced resting heart rate, and better recovery within 3–4 weeks of consistent Zone 2 training."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the fat burning zone for a 70-year-old?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By the standard 220 − age chart it's 90–105 bpm; for women the Gulati formula gives 87–101 bpm, and the Tanaka formula gives 95–111 bpm. The standard formula tends to underestimate max heart rate in older adults, so Tanaka is often closer. If you take beta-blockers or other heart-rate-lowering medication, age-based numbers don't apply — use the talk test and ask your doctor for a target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 130 bpm in the fat burning zone for a 55-year-old?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by percentage of max: a 55-year-old's standard zone is 99–116 bpm, so 130 bpm is about 79% of estimated max — moderate, Zone 3. With the Karvonen method and a resting heart rate of 60, the zone becomes 123–134 bpm and 130 bpm is inside it. Pick one method and use it consistently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 99 bpm a fat burning heart rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on age and sex. For a 48-year-old the standard zone is 103–120 bpm, so 99 bpm is just below it (very light). For a 48-year-old woman using the Gulati formula the zone is 98–115 bpm, so 99 bpm counts. On the standard chart, 99 bpm falls inside the zone from about age 55 to 79."
       }
     },
     {
@@ -198,7 +243,7 @@
       "name": "What should I eat before training in the fat burning zone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For sessions up to 60 minutes, many people train fasted or with a light snack. For longer sessions (75-90 minutes), a small carbohydrate-containing meal 1-2 hours before is helpful. Zone 2 is sustainable enough to run without aggressive fuelling, unlike high-intensity work. Stay hydrated — dehydration raises heart rate and can push you out of Zone 2 without feeling harder."
+        "text": "For sessions up to 60 minutes, many people train fasted or with a light snack. For longer sessions (75–90 minutes), a small carbohydrate-containing meal 1–2 hours before is helpful. Zone 2 is sustainable enough to run without aggressive fuelling, unlike high-intensity work. Stay hydrated — dehydration raises heart rate and can push you out of Zone 2 without feeling harder."
       }
     }
   ]
@@ -214,13 +259,53 @@
     <span class="article-tag">Fitness</span>
     <h1>Fat Burning Heart Rate Zone: What It Is, How to Calculate It, and How to Use It</h1>
     <div class="article-meta">
-      <span>📅 June 2026 · Updated</span>
+      <span>📅 June 2026 · Updated October 2026</span>
       <span>⏱️ 15 min read</span>
       <span>🔥 Fitness</span>
     </div>
     <p class="article-intro">You've seen the "fat burning zone" on a treadmill screen. It's real — but also one of the most misunderstood concepts in fitness. This guide covers what the fat burning heart rate zone actually is, how to calculate yours by age, whether it works for weight loss, and how to train in it effectively.</p>
 
     <div class="article-body">
+
+      <h2 id="checker">Fat burning zone calculator</h2>
+      <p>Enter your age to get your fat burning zone in BPM. Add your sex for a sex-specific estimate, your resting heart rate for the Karvonen version, and the heart rate your watch is showing to check whether you're actually in the zone.</p>
+      <div class="calc-card">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fb-age">Age</label>
+            <input type="number" id="fb-age" placeholder="e.g. 48" min="15" max="90" inputmode="numeric">
+          </div>
+          <div class="form-group">
+            <label for="fb-sex">Sex</label>
+            <select id="fb-sex">
+              <option value="m">Male</option>
+              <option value="f">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fb-rhr">Resting heart rate <span>(optional)</span></label>
+            <input type="number" id="fb-rhr" placeholder="e.g. 62 bpm" min="35" max="110" inputmode="numeric">
+          </div>
+          <div class="form-group">
+            <label for="fb-cur">Heart rate during exercise <span>(optional)</span></label>
+            <input type="number" id="fb-cur" placeholder="e.g. 115 bpm" min="50" max="220" inputmode="numeric">
+          </div>
+        </div>
+        <button class="calc-btn" type="button" id="fb-btn">Show my fat burning zone</button>
+        <div class="fb-error" id="fb-error">Enter an age between 15 and 90.</div>
+        <div class="fb-result" id="fb-result">
+          <div class="fb-main">
+            <div class="fb-main-label">Your fat burning zone (60–70% of max, 220 − age)</div>
+            <div class="fb-main-val" id="fb-std">—</div>
+            <div class="fb-main-note" id="fb-std-note">—</div>
+          </div>
+          <div class="fb-row"><span id="fb-alt-label">Sex-specific estimate</span><strong id="fb-alt">—</strong></div>
+          <div class="fb-row" id="fb-karv-row" style="display:none;"><span>Karvonen (60–70% of heart rate reserve)</span><strong id="fb-karv">—</strong></div>
+          <div class="fb-verdict" id="fb-verdict"></div>
+        </div>
+      </div>
 
       <h2 id="what">What is the fat burning heart rate zone?</h2>
       <p>The fat burning zone is the exercise intensity at which your body uses fat as its primary fuel source. It's generally defined as <strong>60–70% of your maximum heart rate</strong>, which corresponds to Zone 2 in a standard 5-zone training model.</p>
@@ -233,7 +318,7 @@
       </div>
 
       <div class="cta-box">
-        <p>Calculate your personal fat burning heart rate zone in seconds — including all 5 zones.</p>
+        <p>Want all five training zones, not just the fat burning band? Use the full calculator.</p>
         <a href="../tools/heart-rate-zone.html" class="cta-link">Heart Rate Zone Calculator →</a>
       </div>
 
@@ -245,26 +330,35 @@
       <p><strong>Step 2:</strong> Multiply by 0.60 and 0.70 to get your fat burning zone range.</p>
       <p>Example for a 45-year-old: Max HR = 175 bpm. Fat burning zone = 105–123 bpm.</p>
 
-      <h3>Fat burning zone by age (reference table)</h3>
+      <h3>Fat burning zone by age and sex (20 to 80)</h3>
+      <p>The treadmill number comes from 220 − age, a rough rule of thumb drawn through a handful of older datasets that is known to drift at both ends of the age range. Two better-studied alternatives give a useful second opinion. The table shows the 60–70% fat burning band under all three.</p>
       <div class="table-wrapper">
       <table class="hr-table">
         <thead>
-          <tr><th>Age</th><th>Est. Max HR</th><th>Fat Burning Zone (60–70%)</th></tr>
+          <tr><th>Age</th><th>Standard (220 − age)</th><th>Women (Gulati)</th><th>Any adult (Tanaka)</th></tr>
         </thead>
         <tbody>
-          <tr><td>25</td><td>195 bpm</td><td>117–137 bpm</td></tr>
-          <tr><td>30</td><td>190 bpm</td><td>114–133 bpm</td></tr>
-          <tr><td>35</td><td>185 bpm</td><td>111–130 bpm</td></tr>
-          <tr><td>40</td><td>180 bpm</td><td>108–126 bpm</td></tr>
-          <tr><td>45</td><td>175 bpm</td><td>105–123 bpm</td></tr>
-          <tr><td>50</td><td>170 bpm</td><td>102–119 bpm</td></tr>
-          <tr><td>55</td><td>165 bpm</td><td>99–116 bpm</td></tr>
-          <tr><td>60</td><td>160 bpm</td><td>96–112 bpm</td></tr>
-          <tr><td>65</td><td>155 bpm</td><td>93–109 bpm</td></tr>
+          <tr><td>20</td><td>120–140 bpm</td><td>113–132 bpm</td><td>116–136 bpm</td></tr>
+          <tr><td>25</td><td>117–137 bpm</td><td>110–129 bpm</td><td>114–133 bpm</td></tr>
+          <tr><td>30</td><td>114–133 bpm</td><td>108–126 bpm</td><td>112–131 bpm</td></tr>
+          <tr><td>35</td><td>111–130 bpm</td><td>105–123 bpm</td><td>110–128 bpm</td></tr>
+          <tr><td>40</td><td>108–126 bpm</td><td>102–120 bpm</td><td>108–126 bpm</td></tr>
+          <tr><td>45</td><td>105–123 bpm</td><td>100–116 bpm</td><td>106–124 bpm</td></tr>
+          <tr><td>50</td><td>102–119 bpm</td><td>97–113 bpm</td><td>104–121 bpm</td></tr>
+          <tr><td>55</td><td>99–116 bpm</td><td>95–110 bpm</td><td>102–119 bpm</td></tr>
+          <tr><td>60</td><td>96–112 bpm</td><td>92–107 bpm</td><td>100–116 bpm</td></tr>
+          <tr><td>65</td><td>93–109 bpm</td><td>89–104 bpm</td><td>98–114 bpm</td></tr>
+          <tr><td>70</td><td>90–105 bpm</td><td>87–101 bpm</td><td>95–111 bpm</td></tr>
+          <tr><td>75</td><td>87–102 bpm</td><td>84–98 bpm</td><td>93–109 bpm</td></tr>
+          <tr><td>80</td><td>84–98 bpm</td><td>81–95 bpm</td><td>91–106 bpm</td></tr>
         </tbody>
       </table>
       </div>
-      <p>These figures use the 220 − age formula. Actual max HR can vary by 10–15 bpm from this estimate.</p>
+      <ul>
+        <li><strong>Gulati (206 − 0.88 × age)</strong> was built from treadmill tests of 5,437 women in the St. James Women Take Heart Project (Circulation, 2010). It predicts a lower max for women than 220 − age, so a woman's fat burning zone sits roughly 3–8 bpm lower (the gap is largest in your 20s and shrinks with age).</li>
+        <li><strong>Tanaka (208 − 0.7 × age)</strong> comes from a 2001 meta-analysis of 351 studies plus a laboratory validation. It agrees with 220 − age around 40, reads lower in your 20s, and reads noticeably higher after 60 — which is why older adults often find the standard chart feels too easy.</li>
+      </ul>
+      <p>All three are population averages. Any one person's true max can sit 10–15 bpm away from every formula, so treat the band as a starting point and confirm it with the talk test below.</p>
 
       <h3>Method 2: Karvonen method (more accurate)</h3>
       <p>The Karvonen formula accounts for your resting heart rate, which makes the resulting zones more individual.</p>
@@ -282,6 +376,18 @@
         <p>In the fat burning zone, you should be able to hold a full conversation without gasping. Complete sentences, not fragments.</p>
         <p>If you can only manage a word or two between breaths, you've gone too hard. If you could comfortably sing, you may be below Zone 2. Full sentences, slightly laboured — that's the target.</p>
       </div>
+
+      <h2 id="examples">Is my heart rate in the fat burning zone? Three real questions</h2>
+      <p>Most people don't want a formula — they want to know whether the number on their watch counts. These three questions come up again and again, and each one shows a different reason the answer isn't as simple as the treadmill chart suggests.</p>
+
+      <h3>"Is 99 bpm fat burning at 48?"</h3>
+      <p>On the standard chart, a 48-year-old's zone is <strong>103–120 bpm</strong>, so 99 bpm is just under it — very light, upper Zone 1. Tanaka gives 105–122 bpm, the same verdict. But for a woman, the Gulati formula puts the zone at <strong>98–115 bpm</strong>, and 99 bpm is inside it. When you're within a few beats of the edge, the formula you pick decides the answer. If 99 bpm feels like brisk walking where you can still talk in full sentences, it's doing the job either way.</p>
+
+      <h3>"Is 130 bpm fat burning for a 55-year-old man?"</h3>
+      <p>By percentage of max, no: the standard zone is <strong>99–116 bpm</strong> and Tanaka's is 102–119 bpm, so 130 bpm is roughly 79% of estimated max — moderate, Zone 3. Now add a resting heart rate of 60. The Karvonen zone becomes <strong>123–134 bpm</strong>, and 130 bpm sits comfortably inside it. The two methods aren't contradicting each other so much as measuring different things: Karvonen works on the range above your resting rate, so its numbers always run higher. If you use Karvonen, stick with Karvonen — don't mix a Karvonen target with a percentage-of-max chart.</p>
+
+      <h3>"What's the fat burning zone for a 70-year-old?"</h3>
+      <p>The standard chart says <strong>90–105 bpm</strong>, Gulati says 87–101 bpm for women, and Tanaka says <strong>95–111 bpm</strong>. That spread of over 20 bpm is the widest of any age on the chart, because 220 − age tends to underestimate max heart rate in older adults. Two practical points matter more than the formula at this age: blood-pressure medications such as beta-blockers blunt heart rate, which makes any age-based target read too high, and the talk test becomes the more reliable guide. If you take heart-rate-lowering medication, ask your doctor what range is appropriate for you.</p>
 
       <h2 id="works">Does the fat burning zone actually work for weight loss?</h2>
       <p>This is where the nuance matters — and where the treadmill label is a little misleading.</p>
@@ -337,11 +443,12 @@
       <p>The fat burning zone is particularly well-suited to people over 40. High-intensity training carries higher injury risk as recovery capacity declines with age, and the hormonal response to intense exercise changes. Zone 2 provides meaningful cardiovascular and metabolic benefit with minimal injury risk.</p>
       <p>For fat loss over 40, research consistently supports the combination of Zone 2 cardio with resistance training. Zone 2 improves fat oxidation and cardiovascular health; resistance training preserves (or builds) muscle mass, which maintains metabolic rate. Together, they're more effective than either alone.</p>
       <p>One practical note: max heart rate declines with age (roughly 1 bpm per year after 20), so your fat burning zone range shifts downward. A 55-year-old's fat burning zone is around 99–116 bpm — which may correspond to a moderate walking pace rather than a jog. That's completely fine — the physiological stimulus is the same.</p>
+      <p>In your 70s and beyond, the standard chart becomes the least reliable of the three formulas: at 75 it gives 87–102 bpm while Tanaka gives 93–109 bpm. If the standard range feels almost too easy to register as exercise, the Tanaka column is likely closer to your real zone — and the talk test is the tiebreaker.</p>
 
       <h2 id="science">The science behind fat oxidation in Zone 2</h2>
       <p>Understanding why the fat burning zone works requires a brief look at cellular metabolism. Your muscle cells have two primary ways to produce ATP (the energy currency your body runs on): aerobic metabolism (using oxygen) and anaerobic glycolysis (without oxygen). At low to moderate intensities, aerobic metabolism dominates — and fat is the primary substrate.</p>
-      <p>The key cellular structures are <strong>mitochondria</strong> — the organelles responsible for aerobic energy production. Zone 2 training is uniquely effective at increasing mitochondrial density and improving their function. Research from Dr. Iñigo San Millán at the University of Colorado shows that lactate — the primary substrate mitochondria use for energy — is processed most efficiently in Zone 2. Higher intensities overwhelm this system and shift metabolism toward glycolytic pathways.</p>
-      <p>A 2023 study in the <em>Journal of Physiology</em> found that 8 weeks of consistent Zone 2 training increased markers of mitochondrial biogenesis by 40–60% in previously untrained adults. This means more fat-burning capacity not just during exercise, but at rest and at higher exercise intensities too. The aerobic base you build in Zone 2 makes everything else more efficient.</p>
+      <p>The key cellular structures are <strong>mitochondria</strong> — the organelles responsible for aerobic energy production. Regular moderate-intensity training increases mitochondrial content and fat-oxidation capacity in previously untrained people within weeks. Much of the popular enthusiasm for Zone 2 traces back to work by Dr. Iñigo San Millán, who argues that this intensity best matches lactate clearance and fat use in the muscle.</p>
+      <p>The evidence doesn't support the stronger claim that Zone 2 is <em>uniquely</em> effective, though. A 2025 narrative review in <em>Sports Medicine</em> (Storoschuk, Gibala and colleagues, "Much Ado About Zone 2") concluded that current evidence doesn't show Zone 2 to be the optimal intensity for mitochondrial or fat-oxidation adaptations, and that harder efforts drive these signals at least as strongly. Zone 2's real advantage is practical: it's easy enough to do for long durations, several times a week, without piling up fatigue — so you can accumulate far more total training at it.</p>
 
       <h3>Fat oxidation rates across intensities</h3>
       <div class="table-wrapper">
@@ -390,6 +497,9 @@
       <h2 id="women">Fat burning zone training: women-specific considerations</h2>
       <p>Women's physiology interacts with Zone 2 training in some important ways that are underrepresented in generic fitness advice.</p>
 
+      <h3>A max heart rate formula built from women</h3>
+      <p>The 220 − age rule was drawn largely from data on men. The Gulati formula (206 − 0.88 × age), developed from 5,437 women, predicts a lower max heart rate for women at every age — so the fat burning band it produces runs about 3–8 bpm below the standard chart. It's shown in its own column in the <a href="#calculate">age chart above</a>, and the calculator at the top of this page uses it when you select Female.</p>
+
       <h3>Hormonal cycle and training zones</h3>
       <p>Heart rate responses vary across the menstrual cycle. In the luteal phase (days 14–28), resting heart rate is typically 2–5 bpm higher and perceived effort at the same intensity is elevated. Women tracking their zones should expect their fat burning zone to feel slightly harder in the second half of the cycle — this is normal and not a sign of declining fitness.</p>
 
@@ -423,7 +533,7 @@
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
           <div class="faq-q">What is the fat burning heart rate zone by age?</div>
-          <div class="faq-a">The fat burning zone is 60–70% of estimated max HR (220 minus age). At 30: roughly 114–133 bpm. At 40: 108–126 bpm. At 50: 102–119 bpm. At 60: 96–112 bpm. These are estimates — the Karvonen method with your resting HR gives a more accurate personal range.</div>
+          <div class="faq-a">The fat burning zone is 60–70% of estimated max HR (220 minus age). At 30: roughly 114–133 bpm. At 40: 108–126 bpm. At 50: 102–119 bpm. At 60: 96–112 bpm. At 70: 90–105 bpm. Women using the Gulati formula land about 3–8 bpm lower. These are estimates — the Karvonen method with your resting HR gives a more personal range.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Is the fat burning zone the same as Zone 2?</div>
@@ -459,11 +569,23 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">Does the fat burning zone change for women?</div>
-          <div class="faq-a">The heart rate targets are the same, but women oxidise a higher proportion of fat at moderate intensities than men. Heart rate may also be slightly elevated in the luteal phase of the menstrual cycle — expect the same effort to produce a slightly higher HR in the second half of the cycle. This is normal and not a sign of reduced fitness.</div>
+          <div class="faq-a">On the standard 220 − age chart the targets are the same, but the Gulati formula — developed from 5,437 women — predicts a lower max heart rate, which puts a woman's fat burning zone about 3–8 bpm lower (for example 102–120 bpm instead of 108–126 bpm at 40). Women also oxidise a higher proportion of fat at moderate intensities, and heart rate runs slightly higher in the luteal phase of the menstrual cycle — normal, and not a sign of reduced fitness.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">How long until I see results from fat burning zone training?</div>
           <div class="faq-a">Measurable aerobic improvements (improved pace at the same heart rate) typically appear after 6–10 weeks of consistent training. Fat loss results depend on overall calorie balance, not training intensity alone. Most people notice improved energy, reduced resting heart rate, and better recovery within 3–4 weeks of consistent Zone 2 training.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the fat burning zone for a 70-year-old?</div>
+          <div class="faq-a">By the standard 220 − age chart it's 90–105 bpm; for women the Gulati formula gives 87–101 bpm, and the Tanaka formula gives 95–111 bpm. The standard formula tends to underestimate max heart rate in older adults, so Tanaka is often closer. If you take beta-blockers or other heart-rate-lowering medication, age-based numbers don't apply — use the talk test and ask your doctor for a target.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is 130 bpm in the fat burning zone for a 55-year-old?</div>
+          <div class="faq-a">Not by percentage of max: a 55-year-old's standard zone is 99–116 bpm, so 130 bpm is about 79% of estimated max — moderate, Zone 3. With the Karvonen method and a resting heart rate of 60, the zone becomes 123–134 bpm and 130 bpm is inside it. Pick one method and use it consistently.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is 99 bpm a fat burning heart rate?</div>
+          <div class="faq-a">It depends on age and sex. For a 48-year-old the standard zone is 103–120 bpm, so 99 bpm is just below it (very light). For a 48-year-old woman using the Gulati formula the zone is 98–115 bpm, so 99 bpm counts. On the standard chart, 99 bpm falls inside the zone from about age 55 to 79.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">What should I eat before training in the fat burning zone?</div>
@@ -479,8 +601,10 @@
     <div class="toc">
       <h4>In this article</h4>
       <ol>
+        <li><a href="#checker">Fat burning zone calculator</a></li>
         <li><a href="#what">What is the fat burning zone?</a></li>
-        <li><a href="#calculate">How to calculate yours</a></li>
+        <li><a href="#calculate">Chart by age and sex (20–80)</a></li>
+        <li><a href="#examples">Is my heart rate in the zone?</a></li>
         <li><a href="#works">Does it actually work?</a></li>
         <li><a href="#mistakes">Common mistakes</a></li>
         <li><a href="#howto">How to structure training</a></li>
@@ -506,6 +630,50 @@
 </div>
 <div id="footer-placeholder"></div>
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
+<script>
+(function(){
+  function rnd(x){return Math.floor(x+0.5+1e-9);}
+  function band(max){return [rnd(max*0.6),rnd(max*0.7)];}
+  function fmt(b){return b[0]+'–'+b[1]+' bpm';}
+  function where(hr,max,b){
+    if(hr<b[0]){return hr>=rnd(max*0.5)?'below the zone — very light (Zone 1)':'well below the zone — warm-up effort';}
+    if(hr<=b[1]){return 'inside the fat burning zone';}
+    if(hr<=rnd(max*0.8)){return 'above the zone — moderate (Zone 3)';}
+    if(hr<=rnd(max*0.9)){return 'above the zone — hard (Zone 4)';}
+    return 'well above the zone — near maximal (Zone 5)';
+  }
+  document.getElementById('fb-btn').addEventListener('click',function(){
+    var age=parseFloat(document.getElementById('fb-age').value);
+    var sex=document.getElementById('fb-sex').value;
+    var rhr=parseFloat(document.getElementById('fb-rhr').value);
+    var cur=parseFloat(document.getElementById('fb-cur').value);
+    var err=document.getElementById('fb-error'),res=document.getElementById('fb-result');
+    if(isNaN(age)||age<15||age>90){err.style.display='block';res.classList.remove('show');return;}
+    err.style.display='none';
+    var stdMax=220-age,stdB=band(stdMax);
+    var altMax=sex==='f'?206-0.88*age:208-0.7*age,altB=band(altMax);
+    document.getElementById('fb-std').textContent=fmt(stdB);
+    document.getElementById('fb-std-note').textContent='Estimated max heart rate: '+rnd(stdMax)+' bpm';
+    document.getElementById('fb-alt-label').textContent=sex==='f'?'Women-specific (Gulati: 206 − 0.88 × age)':'Age-adjusted (Tanaka: 208 − 0.7 × age)';
+    document.getElementById('fb-alt').textContent=fmt(altB);
+    var karvRow=document.getElementById('fb-karv-row'),karvB=null;
+    if(!isNaN(rhr)&&rhr>=35&&rhr<110&&rhr<stdMax){
+      var hrr=stdMax-rhr;karvB=[rnd(rhr+hrr*0.6),rnd(rhr+hrr*0.7)];
+      document.getElementById('fb-karv').textContent=fmt(karvB);karvRow.style.display='flex';
+    }else{karvRow.style.display='none';}
+    var v=document.getElementById('fb-verdict');
+    if(!isNaN(cur)&&cur>=40&&cur<=230){
+      var pct=Math.round(cur/stdMax*100);
+      var msg='<strong>'+cur+' bpm</strong> is about '+pct+'% of your estimated max. On the standard chart it is '+where(cur,stdMax,stdB)+'. ';
+      msg+=(sex==='f'?'On the women-specific formula':'On the Tanaka formula')+' it is '+where(cur,altMax,altB)+'.';
+      if(karvB){msg+=' On the Karvonen range ('+fmt(karvB)+') it is '+(cur<karvB[0]?'below the zone':(cur<=karvB[1]?'inside the zone':'above the zone'))+'.';}
+      msg+=' Near a boundary, let the talk test decide: full sentences, slightly laboured breathing.';
+      v.innerHTML=msg;v.classList.add('show');
+    }else{v.classList.remove('show');v.innerHTML='';}
+    res.classList.add('show');
+  });
+})();
+</script>
 <script src="../assets/js/components.js"></script>
 </body>
 </html>

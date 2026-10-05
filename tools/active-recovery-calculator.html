@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Active Recovery Heart Rate Calculator – Zone 1 Training Range | My Wellness Calc</title>
-  <meta name="description" content="Calculate your Zone 1 active recovery heart rate range. Find the exact bpm ceiling for low-intensity recovery sessions that reduce soreness without adding training stress.">
+  <title>Active Recovery Heart Rate Calculator: Your Zone 1 BPM Ceiling | My Wellness Calc</title>
+  <meta name="description" content="Find the heart rate ceiling for recovery days (50–60% of max or of heart rate reserve), see why NASM's 65–75% Zone 1 is a different thing, and how long a recovery session should last.">
   <meta property="og:title" content="Active Recovery Heart Rate Calculator – My Wellness Calc">
   <link rel="canonical" href="https://mywellnesscalc.com/tools/active-recovery-calculator.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,6 +91,12 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+    .main-col{min-width:0;}
+    .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
+    .cmp-table{width:100%;min-width:390px;border-collapse:collapse;font-size:.85rem;}
+    .cmp-table th{background:var(--sage-dark);color:white;padding:.6rem .8rem;text-align:left;font-weight:500;}
+    .cmp-table td{padding:.6rem .8rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .cmp-table tr:last-child td{border-bottom:none;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.zone-compare{grid-template-columns:1fr}}
   </style>
 <!-- SCHEMA_START -->
@@ -100,7 +106,7 @@
   "@type": "WebApplication",
   "name": "Active Recovery Heart Rate Calculator",
   "url": "https://mywellnesscalc.com/tools/active-recovery-calculator.html",
-  "description": "Calculate your Zone 1 active recovery heart rate range. Find the exact bpm ceiling for low-intensity recovery sessions that reduce soreness without adding training stress.",
+  "description": "Find the heart rate ceiling for recovery days (50–60% of max or of heart rate reserve), see why NASM's 65–75% Zone 1 is a different thing, and how long a recovery session should last.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "All",
   "offers": {
@@ -177,6 +183,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Active recovery can help reduce the severity and duration of DOMS (delayed onset muscle soreness), primarily by increasing blood flow to the affected muscles. It won't eliminate DOMS entirely, but light movement in Zone 1 is consistently more effective than lying still. Combining active recovery with adequate protein intake, hydration, and sleep provides the most complete recovery environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does NASM say Zone 1 is 65–75% of max heart rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NASM's CPT textbook uses a three-zone model in which Zone 1 is 65–75% of max heart rate, Zone 2 is 76–85% and Zone 3 is 86–95%. The five-zone model used by this calculator and most watches puts Zone 1 at 50–60%. They are different scales with the same name: NASM's Zone 1 is easy base training, while 5-zone Zone 1 is the recovery band. For a max heart rate of 186 bpm, that's 121–140 bpm versus 93–112 bpm."
       }
     }
   ]
@@ -309,6 +323,22 @@
       <p>Most training programmes include one or two dedicated active recovery days per week. For athletes training five or more days per week, one active recovery day between hard sessions helps maintain training quality across the week. For those training three or four days per week, complete rest on off-days is often equally appropriate — there's no rule that says rest days must involve movement.</p>
       <p>Signs that you may benefit from more active recovery include: persistent muscle soreness that doesn't resolve within 48 hours, noticeably elevated resting heart rate, reduced motivation or performance in training sessions, and disrupted sleep. These signals often indicate accumulated fatigue that can be addressed partly through more deliberate Zone 1 recovery work.</p>
 
+      <h2 id="nasm">NASM's Zone 1 vs the 5-zone Zone 1: why your numbers don't match</h2>
+      <p>If you studied for the NASM personal trainer exam, your "Zone 1" may look nothing like the range this calculator gives you. That's because two different zone systems use the same name.</p>
+      <p>The three-zone model taught in NASM's CPT textbook defines <strong>Zone 1 as 65–75% of max heart rate</strong> (walking, light jogging, yoga), Zone 2 as 76–85% and Zone 3 as 86–95%. The five-zone model used by this calculator, most sports watches and most endurance coaching puts <strong>Zone 1 at 50–60% of max</strong> — the recovery band. NASM's own newer articles describe a five-zone scale too, with Zone 1 as the lightest intensity used for warm-ups, cool-downs and recovery days.</p>
+      <div class="table-wrapper">
+        <table class="cmp-table">
+          <thead><tr><th>Zone label</th><th>% of max heart rate</th><th>At a max HR of 186 bpm</th></tr></thead>
+          <tbody>
+            <tr><td>5-zone Zone 1 (recovery — this calculator)</td><td>50–60%</td><td>93–112 bpm</td></tr>
+            <tr><td>5-zone Zone 2 (aerobic base)</td><td>60–70%</td><td>112–130 bpm</td></tr>
+            <tr><td>NASM CPT three-zone Zone 1</td><td>65–75%</td><td>121–140 bpm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Worked example:</strong> if your NASM Zone 1 is 121–140 bpm, your estimated max is about 186 bpm (age 34 on the 220 − age formula). A true active recovery session for you sits around <strong>93–112 bpm</strong> — below the bottom of your NASM Zone 1. Spending a recovery day at 121–140 bpm isn't wrong, but it's an easy aerobic workout, not recovery: it overlaps the top of 5-zone Zone 2 and the bottom of Zone 3.</p>
+      <p>The practical rule: when a plan says "active recovery," aim for the 50–60% band and use this calculator's ceiling. When a NASM-style plan says "Zone 1," it means easy base training, which is one step harder.</p>
+
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
@@ -334,6 +364,10 @@
         <div class="faq-item">
           <div class="faq-q">Does active recovery help with DOMS?</div>
           <div class="faq-a">Active recovery can help reduce the severity and duration of DOMS (delayed onset muscle soreness), primarily by increasing blood flow to the affected muscles. It won't eliminate DOMS entirely, but light movement in Zone 1 is consistently more effective than lying still. Combining active recovery with adequate protein intake, hydration, and sleep provides the most complete recovery environment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why does NASM say Zone 1 is 65–75% of max heart rate?</div>
+          <div class="faq-a">NASM's CPT textbook uses a three-zone model in which Zone 1 is 65–75% of max heart rate, Zone 2 is 76–85% and Zone 3 is 86–95%. The five-zone model used by this calculator and most watches puts Zone 1 at 50–60%. They are different scales with the same name: NASM's Zone 1 is easy base training, while 5-zone Zone 1 is the recovery band. For a max heart rate of 186 bpm, that's 121–140 bpm versus 93–112 bpm.</div>
         </div>
       </div>
 
