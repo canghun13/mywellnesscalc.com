@@ -1,5 +1,118 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-09-22
+> 최종 업데이트: 2026-10-05
+
+## 2026-10-05 세션 — 주간 점검(앞당겨 진행). 🟡 **구글 노출이 09-27부터 6일 연속 회복세(일 200+ / 평균 23위), 클릭 12건** — 원인 미상·지속 여부 미확인 / 🔴 **`fat-burning-heart-rate-zone`도 구글 "크롤링됨-미색인" 합류(09-19)** → 중복 해소 + 계산기 탑재로 보강 / Bing 8주 연속 성장(둔화)
+
+**작업 방식**: 이번엔 PAT 대신 **세션 GitHub 연결(add_repo push)로 clone·push** 함(사용자가 토큰을 붙여넣지 않았음). 자료: GSC Performance + Coverage("발견됨-미색인"만, 차트 09-21까지), Bing Page/Keyword(10-05), GA4(09-07~10-04). **09-29 업로드분(GSC Performance·Coverage 2종)도 남아 있어 주간 대조에 사용.** 대시보드/시각화 금지.
+
+> **09-29 세션 기록 보충**: 09-29는 사용자 지시로 "텍스트 전용(도구 호출 금지)" 보고만 했고 repo 작업·handover 기록이 없었음. 그때 "`fat burn heart rate by age` 21노출/5위/0클릭이 지속됐다"고 보고했는데, **이번에 보니 이 쿼리 수치는 09-22·09-29·10-05 세 번 모두 완전히 동일함 → Bing 키워드 리포트가 누적 창이라 신규 노출 없이 옛 수치가 남아 있는 것.** "지속"이 아니라 "정체된 과거 수치"였음. (작업 근거는 아래처럼 페이지 단위 데이터와 페이지 결함으로 따로 확인했으니 결론은 유효.)
+> **⚠️ 교훈**: Bing 키워드 리포트에서 **같은 쿼리의 노출·순위가 여러 주 동일하면 "지속"으로 읽지 말 것** — 신규 노출이 없다는 뜻. 추세 판단은 주간 diff(신규/변동 쿼리)로 할 것.
+
+### 🟡 구글 — 09-27부터 일별 노출 회복세 (원인 미상, 단정 금지)
+
+| 일자 | 09-26 | 09-27 | 09-28 | 09-29 | 09-30 | 10-01 | 10-02 |
+|---|---|---|---|---|---|---|---|
+| 노출 | 3 | 73 | 195 | 224 | 236 | 234 | 213 |
+| 클릭 | 0 | 1 | 3 | 1 | 0 | 4 | 3 |
+| 평균순위 | 19.7 | 44.6 | 23.1 | 24.5 | 20.0 | 23.4 | 23.2 |
+
+- **6일간 클릭 12건 = 직전 3개월 전체(8건)보다 많음.** 평균순위 20~24위는 붕괴 이전(40~50위대)보다도 좋음. GA4 google/organic도 **3 → 13세션**으로 같은 방향.
+- 이전 스파이크(08-22~24, 09-14~16)는 **3일**이었고 이번은 **6일 + 데이터 끝(10-02)까지 진행 중**. 길이는 다르지만 **"회복"이라 부르기엔 이르다 — 다음 주에 지속 여부를 볼 것.** 원인 가설 세우지 말 것(방침 유지).
+- **09-15 규칙 적용 — 개별 페이지 순위 대조(09-29 → 10-05, 3개월 창)**:
+
+| 페이지 | 노출 | 순위 | 클릭 |
+|---|---|---|---|
+| **tools/calories-burned-by-heart-rate** | 427 → **1,018** | 25.6 → **15.6** | 0 → **4** |
+| **quiz/creatine-right-for-you** | 13 → 22 | 17.2 → **12.2** | 4 → **9** (CTR 41%) |
+| tools/ffmi-calculator | 39 → 78 | 67.7 → 47.6 | 0 |
+| blog/calories-burned-by-heart-rate-zone | 101 → 139 | 19.6 → 16.3 | 0 |
+| blog/how-long-to-lose-weight | 12 → 25 | 26.8 → 19.4 | 0 |
+| blog/alcohol-and-calorie-deficit | 26 → 39 | 30.5 → 24.2 | 0 |
+| protein-calculator / zone-2-by-age / one-rep-max | 제자리 | 77.0→77.9 / 12.1→12.3 / 83.3→84.4 | 0 / 2 / 0 |
+
+- **이번엔 비율이 아니라 개별 페이지 순위가 실제로 올라갔음**(09-08 착시와 다름). 특히 `calories-burned-by-heart-rate`가 신규 노출의 큰 몫(+591)을 받으며 2페이지 상단(15.6위)까지 옴 — **08-17 보강(688→1,459단어) 대상 페이지**. 인과는 단정 금지, 사실만 기록.
+- **creatine 퀴즈가 사이트 구글 클릭 1위(3개월 9클릭)**. 퀴즈 포맷 해자(08-11 실측: 퀴즈 중앙 순위 14위)와 정합. **잘 되는 페이지라 이번엔 손대지 않음.**
+
+### 🔴 Coverage — "크롤링됨-미색인"에 `fat-burning-heart-rate-zone` 추가(09-29 업로드분, 차트 09-21까지)
+
+| URL | 최종 크롤 | 비고 |
+|---|---|---|
+| blog/healthy-body-fat-percentage.html | 2026-07-18 | Bing 1위 페이지. **최종크롤 그대로 → 09-21 시점까지 재크롤 안 됨** |
+| blog/vitamin-d-and-exercise.html | 2026-07-09 | |
+| **blog/fat-burning-heart-rate-zone.html** | 2026-07-09 | **09-19 신규 합류.** Bing 124노출(6위급) / GA4 조회 2위 |
+| favicon.ico | 2026-07-09 | 무해 |
+
+- 이번 주(10-05) 업로드엔 "크롤링됨-미색인" 파일이 없었음 → **10-05 기준 상태는 미확인.**
+- "발견됨-미색인" 4건(sitting-offset, active-couch-potato, exercise-snack, which-exercise-snack) **09-21까지 그대로, 08-29 등장 후 약 5주** — 09-08에 기록한 이 사이트 평균 대기(2~3주)를 넘었음. 단 Bing에선 sitting-offset이 이미 클릭을 받고 있어 페이지 자체 문제로 보긴 어려움(판단 보류).
+
+### 이번 세션에 한 작업 (커밋 `6c64e5a`)
+
+**1. `blog/fat-burning-heart-rate-zone.html` 3,309 → 4,409단어 — 이번 주 핵심**
+- **선정 근거**: 구글 "크롤링됨-미색인" 신규 합류 + Bing 124노출/1클릭(CTR 0.81%) + GA4 조회 2위인데 이탈률 0.95.
+- **점검에서 확인된 사실 2가지(원인 단정 아님)**:
+  1. **타이틀이 "BPM Chart + Calculator"인데 페이지에 계산기가 없었음**(`<input>` 0개). 클릭해 들어온 사용자가 약속된 걸 못 찾는 구조.
+  2. **핵심 표(나이별 60–70%)가 형제 페이지 `zone-2-heart-rate-by-age`의 표와 행 단위로 동일**했음(25~65세 9행, 같은 수치). 본문도 "fat burning zone = Zone 2, 같은 것"이라고 명시.
+- **수정**:
+  - 페이지 상단에 **인라인 계산기 신설**(나이·성별·안정심박·운동 중 심박 → 표준/성별 공식/Karvonen 3개 범위 + "지금 심박이 존 안인가" 판정). Bing 쿼리 다수가 "is 99 bpm for 48 years old fat burning", "fat burning zone for 60/70/74 year old"처럼 **자기 숫자 판정**을 묻고 있었음.
+  - 표를 **20~80세 13행 × 3개 공식(220−age / 여성 Gulati 206−0.88×age / Tanaka 208−0.7×age)**으로 교체 → zone-2-by-age(220−age + Karvonen)와 **축이 다른 표**가 됨. 70~80세 행 추가(쿼리에 70·74세 반복 등장).
+  - H2 "Is my heart rate in the fat burning zone? Three real questions" 신설 — 실제 쿼리 3개(48세 99bpm / 55세 남성 130bpm / 70세)를 공식별로 계산해 답함.
+  - **🔴 정확성 교정**: "2023 Journal of Physiology, 8주 Zone 2로 미토콘드리아 생합성 40–60% 증가" 문단은 **웹서치로 확인 불가 → 삭제.** 대신 확인된 출처(Storoschuk·Gibala 외, *Sports Medicine* 2025 "Much Ado About Zone 2" — "Zone 2가 미토콘드리아 적응에 최적 강도라는 근거는 없다")로 균형 있게 재작성. 여성 FAQ의 "심박 목표는 같다"는 문장도 Gulati 내용과 모순되므로 수정.
+  - FAQ 12→15. **기존 FAQ가 본문↔JSON-LD 불일치 상태였음**(순서·문구) → 본문 기준으로 스키마 재생성, MATCH 확인.
+  - 타이틀 "…by Age (20–80): BPM Chart + Calculator", 디스크립션, dateModified(06-28→10-05), sitemap lastmod, llms.txt, TOC. 역링크 3곳 신설(zone-2-by-age, fat-burning-zone-explained, tools/heart-rate-zone — 기존 인바운드가 4곳뿐이었음).
+- **검증**: 표 13행 × 3공식을 **페이지 JS로 재계산해 전부 일치**, 본문 예시 수치(103–120 / 98–115 / 123–134 / 90–105 등) 일치, 입력 4,560조합 시뮬레이션 NaN·undefined 0건. 반올림은 `floor(x+0.5+1e-9)` — **JS `Math.round(175*0.7)`가 122가 되는 부동소수 함정**(실제 122.5)을 피하기 위함. 기존 페이지의 "105–123 / 99–116"과 일치시킴.
+
+**2. `tools/active-recovery-calculator.html` 1,607 → 1,972단어**
+- **선정 근거**: Bing 29노출 / **평균 3.6위 / 클릭 0.** 관련 쿼리 다수가 **NASM** 기준을 묻고 있었음(`what does an active recovery day look like according to nasm ... if my zone 1 is 121 140`(2.5위)×2, `nasm zone 1 cardio training recovery zone heart rate and rpe range chart` 등). 페이지는 Zone 1=50–60%로만 설명하고 NASM은 0회 언급.
+- **확인한 사실**: NASM CPT 교재의 3존 모델은 **Zone 1 = 65–75% HRmax**, Zone 2 76–85%, Zone 3 86–95%(fitnessmentors 학습가이드). NASM 공식 블로그의 최신 글은 5존 체계(Zone 1 = 워밍업·쿨다운·회복일)로 설명. → **같은 "Zone 1"이 두 체계에서 다른 강도**.
+- **추가**: H2 "NASM's Zone 1 vs the 5-zone Zone 1" + 비교표(HRmax 186 기준 93–112 / 112–130 / 121–140 — 페이지 `Math.round` 로직으로 재계산 일치) + 쿼리 그대로의 풀이(NASM Zone 1이 121–140이면 회복 세션은 93–112). FAQ 6→7. 타이틀·디스크립션 교체.
+- **⚠️ 반응형**: 이 페이지엔 `.main-col{min-width:0}`과 table CSS가 **둘 다 없었음** → 표 넣기 전에 세트로 추가(08-24 사고 조건과 동일).
+
+**3. 메타 디스크립션만 교체(CTR 목적, 본문 무변경)**: `calories-burned-by-heart-rate`(구글 상승 중이라 **타이틀은 의도적으로 유지**), `healthy-body-fat-percentage`(+ schema dateModified가 06-17로 남아 있던 것 09-08로 정정), `how-much-vitamin-d-do-you-need-daily`(IU·mcg 병기 — 자기 표와 대조 완료).
+
+**🟢 실물 렌더 검증이 이제 가능함**: 컨테이너에 Chromium + Playwright가 **사전 설치**돼 있음(`/opt/pw-browsers`, python `playwright` import 가능). 로컬 `python3 -m http.server`로 띄우고 375px/1280px에서 `document.documentElement.scrollWidth` 측정 + 스크린샷 확인함 → 두 페이지 모두 375/1280 그대로(가로 넘침 없음), 계산기 결과카드 모바일 정상. **"puppeteer 실물 렌더 검증(컨테이너 불가)" 금지 항목은 해제** — 표·카드 추가 시 이 방법으로 확인할 것. (※ 서버 종료 시 `pkill -f "http.server"`를 같은 bash 명령 안에서 쓰면 **자기 셸까지 죽음**(exit 144) — 커밋이 날아갈 뻔했음. 서버는 별도 명령으로 종료할 것.)
+
+### Bing — 8주 연속 성장, 다만 처음으로 둔화
+
+| 주차 | 노출 | 클릭 |
+|---|---|---|
+| 09-22 | 1,302 | 31 |
+| 09-29 | 1,525 | 34 |
+| **10-05** | **1,719** | **36** |
+
+- 증가율 +17% → **+13%**, 클릭은 +2. 상위 페이지 대부분 노출은 늘고 클릭은 그대로 → **병목이 순위가 아니라 CTR**임이 더 분명해짐(이번 메타 작업의 근거).
+- **포맷 공백 클러스터 계속 성장**: `detraining-calculator` 23 → **37**노출(4.2위). 이번 주 신규 디트레이닝 롱테일 쿼리 8건+(`muscle loss percentage after 2 weeks detraining` 1위, `acsm detraining strength after two weeks break` 1위 등). 계산기가 이미 회복(regain) 기간까지 출력하므로 신규 페이지 불필요.
+- `zone-2-heart-rate-by-age`가 Bing에 처음 등장(22노출/1클릭/6.0위).
+
+### GA4 (09-07~10-04)
+- 활성 453, 평균 참여 10.6초. **싱가포르 362/453 = 79.9%로 사상 최악**(70.9 → 74.6 → 79.9). **봇 필터 11세션 연속 미처리.**
+- **google/organic 13세션(11명)** — 직전 3. GSC 일별 회복과 같은 방향. bing 10 / ddg 12 / yahoo 6.
+- 이탈률: Body Fat Calculator 0.33, alcohol 0.33, VO2 0.33, creatine 퀴즈 0.5, Exercise Snack 0.5. `fat-burning-heart-rate-zone`은 조회 2위(20)인데 0.95 → 이번 계산기 추가 효과를 다음 주에 볼 것.
+
+### 신규 콘텐츠 후보 — 2건 조사, 전부 기각 (누적 60건)
+
+| 후보 | 근거 | 판정 |
+|---|---|---|
+| 크레아틴 용량/포화/수분체중 계산기 | 구글 클릭 1위가 creatine 퀴즈 → 같은 주제 계산기 포맷 공백 확인 | **기각 — 계산기 포맷 포화.** 용량 계산기 9개+(coachway, fitliferegime, shreddeddad, getswoly, myproteincalc, megacalconline, freecreatinecalculator, gethealthycalculators, numbervibe), 포화 기간·월 비용까지 출력. 수분 섭취 계산기도 3개(fitliferegime, creatinedosagecalculator, gymcreek). "수분체중(체중계 증가) 계산기"는 전용 툴 0이지만 **개인화할 근거(체중별 공식)가 없어 거짓 정밀도**가 됨 + 아티클은 보충제 판매사 소유(Bubs, Cymbiotika, Naked) |
+| NASM 존(1~3) 계산기 | Bing NASM 쿼리 5건+(1~4위, 0클릭) | **신규 페이지 기각 → 기존 페이지 보강으로 흡수.** 전용 툴은 없지만 수요가 시험 준비생 소수이고, 브랜드명 타이틀 페이지는 부적절. `active-recovery-calculator`에 비교 섹션으로 넣음 |
+
+### 💰 수익화 관점 우선순위
+- **구글이 다시 트래픽을 주기 시작했다면 그게 최대 변수**(미국 비중·AdSense 단가). 그래서 이번엔 **구글이 밀어주는 페이지(`calories-burned-by-heart-rate`, creatine 퀴즈)는 건드리지 않고**(타이틀 유지·본문 무변경), 구글이 **뺀** 페이지 중 수요가 확인된 것(`fat-burning-heart-rate-zone`)을 실질적으로 바꿨음 — 재크롤 시 판정 근거가 달라지도록.
+- **🔵 사용자 조치(코드로 불가, 구글 쪽)**: **GSC → URL 검사 → 아래 2건 "색인 생성 요청"**
+  1. `blog/fat-burning-heart-rate-zone.html` — 이번에 계산기·표·예시가 바뀌어 07-09 크롤본과 실질적으로 다른 페이지가 됨.
+  2. `blog/healthy-body-fat-percentage.html` — 09-22에 요청을 권했으나 09-21 데이터까지 최종크롤 07-18 그대로(요청 여부는 모름).
+- **제휴 보류 유지**(트래픽 절대량). 구글 회복이 2주 이상 이어지면 재검토 시점.
+
+### 다음 세션 우선순위
+1. **구글 일별 회복 지속 여부** — 10-03 이후에도 일 200+/20위대가 유지되는지. 개별 페이지 순위로 대조(특히 calories-burned-by-heart-rate 15.6위, creatine 퀴즈 12.2위).
+2. **Coverage 2종 모두 요청**(이번엔 "크롤링됨-미색인"이 빠져 있었음). fat-burning·healthy-body-fat의 최종크롤 날짜 갱신 여부. (※ **구글 서치콘솔** 자료)
+3. `fat-burning-heart-rate-zone` Bing CTR(124노출/1클릭)과 GA4 이탈률(0.95) 변화 — 계산기 탑재 효과 확인.
+4. `active-recovery-calculator` Bing NASM 쿼리 클릭 발생 여부.
+5. "발견됨-미색인" 4건 — 5주째. 다음에도 그대로면 기록만(가설 금지).
+6. GA4 봇 필터(사용자 직접, 11세션 연속 미처리, 싱가포르 79.9%).
+7. **⛔ 하지 말 것**(누적): Bing 등록·IndexNow 등 제출 개입, 여성 연령별 체지방 신규 페이지(보강은 가능), 비타민D 식품 계산기·독성 단독 페이지, HRR 계산기, 러킹, 스웨트레이트, 디로드, 수면부채, 식품별 단백질 계산기, 지구력 탄수화물 계산기, 심박존별 칼로리 비교 도구, 사우나 계산기, 식후 걷기 계산기, **크레아틴 계산기류(이번 기각)**, **NASM 존 전용 페이지(이번 기각)**, 퀴즈 0노출 내부링크 재조사, H2 전수대조, DNS·Pages 빌드 가설, boostdomainrating 재론, 색인 탈락·구글 회복 원인 단정, **구글 상승 중인 페이지(calories-burned-by-heart-rate, creatine 퀴즈) 타이틀·본문 변경**. ~~puppeteer 실물 렌더 검증~~ → **이제 가능(Playwright), 금지 해제.**
+
+---
+
 
 ## 2026-09-22 세션 — 주간 점검. 🔴 **구글이 Bing 1위 페이지(`healthy-body-fat-percentage`)를 "크롤링됨-미색인"으로 분류** / 🔴 **비타민D 클러스터 연령별 상한 오류 교정(09-01 누락분 포함)** / Bing 6주 연속 성장
 
@@ -1419,6 +1532,9 @@ print('일치:', set(htmlqs)==set(names), len(htmlqs), len(names) if names else 
 - **⚠️ 2026-09-01 추가 — 계산기의 "안전 상한/한계치" 표시값은 하드코딩하지 말 것.** `vitamin-d-calculator`의 Safe upper limit이 4,000 IU로 고정돼 있어 **1~8세를 입력해도 성인 상한이 표시되는 버그**가 있었음(실제 UL은 1~3세 2,500 / 4~8세 3,000). 입력값(나이 등)에 따라 달라지는 안전 기준을 상수로 박아두면 **잘못된 안전 정보를 주는 결과**가 되므로, 신규 계산기 작성·기존 계산기 점검 시 "상한/한계/권장 범위" 류 출력이 입력에 반응하는지 반드시 확인할 것.
 - **⚠️ 2026-08-24(2차) 추가 — 반응형 감사는 클래스명이 디렉토리별로 다르다는 점을 반드시 반영할 것.** 툴은 `.page-wrap{1fr 340px}` + `.main-col`, 블로그는 `.article-wrap{1fr 300px}` + `.article-main`. `grep "main-col{min-width:0"`만 쓰면 **블로그·퀴즈를 통째로 놓침**(실제로 08-24 1차 감사가 tools/만 커버했음). 감사 시 `grid-template-columns:1fr \d+px`로 컨테이너를 먼저 찾고 자식 후보(`main-col|article-main|content-col|quiz-main`)를 함께 볼 것.
 - **⚠️ 2026-08-24 추가 — 표 반응형은 `.table-wrapper{overflow-x:auto}` + `.main-col{min-width:0;}` 두 줄이 반드시 세트.** 그리드 아이템은 기본 `min-width:auto`라서 후자가 없으면 표의 `min-width`가 그리드 컬럼을 밀어내 **페이지 전체가 가로로 터짐**(wrapper만 넣으면 오히려 더 나빠짐). 표를 새로 추가할 때 `grep -c "main-col{min-width:0" 파일`로 확인할 것.
+- **⚠️ 2026-10-05 추가 — 표·결과카드를 추가하면 실물 렌더로 확인할 것(이제 가능).** 컨테이너에 Chromium+Playwright 사전 설치됨. `python3 -m http.server`(별도 명령으로 띄우고 별도 명령으로 종료) → 375/1280px에서 `document.documentElement.scrollWidth`가 뷰포트와 같은지 + 스크린샷. 08-24 메모(브라우저 다운로드 차단)는 당시 환경 기준이었음.
+- **⚠️ 2026-10-05 추가 — 계산기 반올림은 부동소수 함정을 피할 것.** JS `Math.round(175*0.7)`은 122(실제 값 122.5)라서 본문 표(123)와 어긋남. 표와 계산기가 같은 값을 내게 하려면 `Math.floor(x+0.5+1e-9)` 같은 보정 반올림을 쓰고, 표는 같은 함수로 생성할 것.
+- **⚠️ 2026-10-05 추가 — 타이틀이 약속한 기능이 페이지에 실제로 있는지 확인할 것.** `fat-burning-heart-rate-zone`은 타이틀에 "+ Calculator"가 있었지만 계산기가 없었음(이탈률 0.95). 타이틀·디스크립션에 "calculator/chart/checker"를 쓰면 그 요소의 존재를 grep으로 확인.
 - **⚠️ 2026-09-22 추가 — 수치를 교정할 땐 "같은 페이지의 다른 표"와 "같은 클러스터의 형제 페이지"까지 전수 grep할 것.** 09-01에 `vitamin-d-calculator`의 계산 로직과 신규 표는 고쳤지만 **같은 페이지의 원래 표를 놓쳐** 3주간 한 페이지 안에서 상한값이 충돌했고, 형제 페이지 `how-much-vitamin-d-do-you-need-daily`에도 같은 오류가 있었음. 교정 후엔 `grep -rn "틀린값"`으로 사이트 전체 잔여 0건을 확인하고 마칠 것.
 - **⚠️ 2026-09-15 추가 — GSC 포지션 분포 비율을 단독으로 읽고 개선/악화를 판단하지 말 것.** GSC는 3개월 롤링 창이라 노출이 빠지는 국면에서는 **순위가 전혀 안 움직여도 비율이 저절로 변함**(고노출 구간 페이지가 노출을 더 빨리 잃으면 그 구간 비중이 내려감). 09-08 세션이 이걸 "실질 개선"으로 오판하고 수익화 판단 근거로까지 썼음. **반드시 주요 페이지의 평균 순위를 전주와 1:1 대조해 실제로 내려갔는지 확인한 뒤 판단할 것.**
 - **⚠️ 2026-09-08 보강 — 기존 페이지를 보강할 땐 "인용하려는 기존 수치"도 그 페이지 표와 대조할 것.** 지금까지 검증은 *이번 세션에 새로 넣은 수치*만 대상으로 했는데, `healthy-body-fat-percentage`는 **원래부터 FAQ가 자기 본문 표와 어긋나 있었고**(40–59세를 23–33%로 안내, 표는 22–32%), 보강하면서 그 오류값을 그대로 인용해 **확대할 뻔했음.** 특히 해당 쿼리가 그 페이지 클릭의 주력일 때 치명적. **보강 착수 시 그 페이지의 표와 본문·FAQ 수치를 먼저 한 번 대조하고 시작할 것.**
