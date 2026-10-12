@@ -1,5 +1,95 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-10-05
+> 최종 업데이트: 2026-10-12
+
+## 2026-10-12 세션 — 주간 점검(앞당겨 진행). 🟡 **구글 일별 노출 13일째 유지(일 ~215), 단 평균순위 23 → 31~35위로 후퇴** / 🔴 **"크롤링됨-미색인" 4 → 9건** / 🟢 **구글 클릭의 58%가 퀴즈 → 신규 퀴즈 1건 발행(`best-workout-time`)** / Bing 2,052노출(+19%, 재가속)
+
+**작업 방식**: 세션 GitHub 연결로 clone·push(토큰 없음). 자료: GSC Performance + Coverage 2종(차트 10-09까지), Bing Page/Keyword(10-12), GA4(09-14~10-11). 대시보드/시각화 금지.
+
+### 🟡 구글 — 노출은 유지, 순위는 후퇴
+- 일별: 09-27 이후 **13일 연속 200~236노출.** 다만 평균순위가 10-05까지 23~25위 → **10-06부터 31~35위.** 클릭은 10-03~10-09 7건.
+- 3개월 누적 클릭 20 → **26**. 개별 페이지(10-05 → 10-12):
+
+| 페이지 | 노출 | 순위 | 클릭 |
+|---|---|---|---|
+| tools/calories-burned-by-heart-rate | 1,018 → **1,663** | 15.6 → **13.3** | 4 → 6 |
+| quiz/creatine-right-for-you | 22 → 35 | 12.2 → **10.6** | 9 → **10** |
+| **quiz/ideal-body-weight** | 8 → 12 | **6.4** | 0 → **3** |
+| tools/ffmi-calculator | 78 → 101 | 47.6 → 32.8 | 0 |
+| blog/how-long-to-lose-weight | 25 → 61 | 19.4 → 14.9 | 0 |
+| blog/alcohol-and-calorie-deficit | 39 → 60 | 24.2 → 19.3 | 0 |
+| blog/zone-2-heart-rate-by-age | 1,024 → 934 | 12.3 → **15.0**(후퇴) | 2 → 1 |
+
+- **🟢 구글 3개월 클릭 26건 중 15건(58%)이 퀴즈**(creatine 10 + ideal-body-weight 3 + ideal-fasting 1 + body-goal 1). 08-11의 "퀴즈가 유일한 상위노출 자산" 발견이 클릭으로 확인된 셈. **이번 신규 작업의 포맷 선택 근거.**
+- 원인 가설 금지 방침 유지.
+
+### 🔴 Coverage — "크롤링됨-미색인" 4 → 9건
+
+| URL | 최종 크롤 | 합류 시점(차트) |
+|---|---|---|
+| blog/best-time-to-exercise.html | **2026-09-28** | 10-05 |
+| blog/how-much-fiber-per-day.html | 2026-09-16 | 10-05 |
+| blog/zone-2-heart-rate-training-beginners.html | 2026-07-04 | 09-22 |
+| quiz/sleep-type.html | 2026-07-24 | 09-22 |
+| quiz/fat-loss-strategy.html | 2026-06-25 | 09-22 |
+| blog/fat-burning-heart-rate-zone.html | 2026-07-09 | 09-19 |
+| blog/healthy-body-fat-percentage.html | 2026-07-18 | 09-15 |
+| blog/vitamin-d-and-exercise.html | 2026-07-09 | 09-05 |
+| favicon.ico | 2026-07-09 | — |
+
+- **확인된 사실 3가지(원인 단정 아님)**:
+  1. 09-22 합류 3건은 **재크롤 없이**(최종크롤 6~7월) 분류가 바뀜.
+  2. **`best-time-to-exercise`는 09-15 보강 후 09-28에 재크롤되고도 제외됨** → "보강 → 재크롤 → 색인"이 보장되지 않는다는 실측. 이 페이지는 **Bing 3위 페이지(239노출, 주간 +56%)**.
+  3. `fat-burning`·`healthy-body-fat`은 10-09 데이터까지 **최종크롤 날짜 그대로** → 10-05 보강분을 구글이 아직 안 봤음. 사용자 색인 요청이 아직 처리되지 않았거나 요청 전.
+- **🔵 텍스트 중복 가설은 측정으로 기각**: 6단어 shingle로 사이트 전 페이지 대비 최대 중복률을 쟀더니, 제외된 8건은 **0.2~3.4%로 사이트 중앙값(2.1%) 근처이거나 그 이하**. 중복률 상위(vo2-max-calculator 16.8%, ffmi-calculator 12.6%, calorie-deficit-calculator 11.2%)는 오히려 색인 유지 중. **본문 중복은 공통점이 아님 — 다시 조사하지 말 것.**
+- "발견됨-미색인" 4건(sitting-offset 등) 10-09까지 그대로, 약 6주.
+
+### Bing — 재가속
+| 주차 | 노출 | 클릭 |
+|---|---|---|
+| 10-05 | 1,719 | 36 |
+| **10-12** | **2,052** | **41** |
+- +19%(지난주 +13%에서 반등). `best-time-to-exercise` 153 → **239**, `zone-2-heart-rate-by-age` 22 → 75, `protein-vs-carbs-vs-fat` 12 → 49, `alcohol-and-calorie-deficit` 3클릭(3.1위).
+- 10-05 보강 페이지: `fat-burning-heart-rate-zone` 124 → 141노출, 클릭 1 그대로. `active-recovery-calculator` 29 → 35, 클릭 0. **1주로는 판단 불가 — 다음 주 재확인.** 새로 붙은 쿼리 `active recovery heart rate percent maximum ... 50 60 percent hrmax guidelines`(4.5위)는 이번에 넣은 50–60% 설명과 정확히 맞물림.
+
+### GA4 (09-14~10-11)
+- 활성 484, 참여 11.2초. **싱가포르 387/484 = 80.0%**(계속 악화, 봇 필터 12세션 미처리).
+- **google/organic 23세션(19명)** — 3 → 13 → 23으로 3주 연속 증가. bing 12 / ddg 9.
+- `fat-burning` 새 타이틀 페이지뷰 3(이탈 0.67) vs 옛 타이틀 9(0.89) — 표본 너무 작음.
+
+### 이번 세션에 한 작업 (커밋 `f5ba544`)
+
+**1. 신규 퀴즈 `quiz/best-workout-time.html` (1,181단어) — "What’s Your Best Time to Work Out?"**
+- **포맷 공백**: "morning vs evening workout" 아티클은 포화(CBS, Today, Technogym, Fortune, Tom's Guide, odin.fitness 등 9개+ = 수요 증거), **"나에게 맞는 운동 시간" 퀴즈·툴은 2회 검색에서 0건**(크로노타입 퀴즈는 수면용만 존재).
+- **수요 근거**: Bing에서 `best-time-to-exercise`가 주간 +56% 성장 중, 신규 쿼리가 개인화 질문(`best time to exercise for teens`, `for muscle strength`, `is it better to work out in my garage at 3pm or 7pm`, `how to exercise in daily evening morning`(클릭)). 구글은 같은 블로그를 제외했지만 **구글 클릭 58%가 퀴즈** → 같은 수요를 구글이 밀어주는 포맷으로 받음.
+- **중복 확인**: `quiz/sleep-type`(수면 크로노타입)과 겹치지 않게 **결과를 운동 시간대로** 설계, 상호 링크. 블로그 `best-time-to-exercise`와는 질문(“연구 결과가 뭔가” vs “나는 언제 하나”)이 다름.
+- **설계**: 5문항(목표·크로노타입·일정 신뢰도·수면·운동 유형) → 아침 / 점심 / 늦은 오후 / **앵커 슬롯**(교대·불규칙 일정). **일정 신뢰도에 가장 큰 가중치(4점)** — 연구상 타이밍 효과(일중 8~11%)보다 결석 비용이 크다는 페이지 논지와 일치. 일정과 다른 결과가 나오면 "그 시간이 빠지면 원래 슬롯으로" 경고 문단 자동 추가. 목표별·수면별 노트.
+- **사용한 근거(전부 출처 확인)**: Wingate 일중 진폭 7.6/11.3%, 24주 42명 시험(근력·근육 차이 없음), 2021 과체중 남성 RCT(저녁만 혈당·지질 개선), Arciero 2022 *Frontiers in Physiology*(12주 56명), Stutz 2019 *Sports Medicine*(23개 연구 — 저녁 운동이 수면을 해치지 않음, 취침 1시간 내 고강도는 예외 가능), Leota 2025 *Nature Communications*(14,689명 — 취침 4시간+ 전 종료 시 연관 없음, 2시간 전 최대강도는 입면 36분 지연).
+- **검증**: 1,024조합 전수 시뮬 — 결과 분포 아침 182 / 점심 192 / 오후 202 / 앵커 448(앵커는 2개 문항의 1개 선택지씩으로 진입해 조합상 많아 보일 뿐), undefined·NaN 0. 일정과 다른 결과 14조합(예: 아침 일정 + 올빼미형 + 수면부족) 전부 경고 문단 출력 확인. FAQ 본문=스키마. Chromium 375/1280 클릭스루 — 가로 넘침 0, JS 에러 0.
+- **배선**: quiz/index 맨 위 카드 + New 배지(badge-added:2026-10-12), 홈 퀴즈 미리보기 맨 앞(대신 `weight-loss-plateau` 카드 제외), sitemap(113 URL), llms.txt, `best-time-to-exercise`에 CTA, `sleep-type` 관련링크.
+- **배지 정리**: quiz/·tools/ 인덱스의 08-24·09-01 배지(14일 경과) 6개 제거. 각 파일 `new-badge`는 CSS 정의 + 신규 1건만 남음.
+
+**2. 🔴 `blog/best-time-to-exercise.html` 정확성 교정**
+- 하이라이트 박스와 FAQ(+스키마)가 "2022 *Frontiers in Physiology* 연구에서 **저녁 운동이 남성의 근육량·근력을 더 늘렸다**"고 적고 있었는데, **실제 연구(Arciero 2022)는 그런 결과가 없음** — 남성은 저녁 운동이 혈압·콜레스테롤 비율·피로를 낮춘 것이 결과. 같은 페이지 하단 "Where timing does seem to matter" 섹션은 맞게 서술돼 있어 **한 페이지 안에서 자기모순** 상태였음(09-15 보강 때 상단 박스를 대조하지 못함 — 09-08 규칙 "기존 수치도 대조" 위반 사례).
+- 박스는 실제 결과로, FAQ "Does workout timing affect muscle growth?"는 페이지 본문의 24주 시험·메타분석과 일치하게 재작성. 본문·스키마 2곳 반영 확인.
+
+### 신규 후보 — 1건 조사, 채택 (누적 61건)
+- 채택: 운동 시간대 퀴즈(위). **"아티클 포화 / 퀴즈 0" 포맷 공백 4번째 적용.**
+
+### 💰 수익화 관점 우선순위
+- 구글 오가닉이 GA4 기준 3주 연속 증가(3 → 13 → 23세션)했고, 그 클릭의 과반이 퀴즈 → **이번 주는 구글이 실제로 클릭을 주는 포맷(퀴즈)으로 신규를 냈음.** 동시에 Bing 3위 페이지의 수요를 받는 구조.
+- 제휴 보류 유지. 구글 오가닉이 한 번 더 늘면(4주 연속) 재검토 시점.
+- **🔵 사용자 조치(구글 서치콘솔 → URL 검사 → 색인 생성 요청)**: `blog/fat-burning-heart-rate-zone.html`, `blog/healthy-body-fat-percentage.html`, **`blog/best-time-to-exercise.html`(오늘 교정)**, `quiz/best-workout-time.html`(신규).
+
+### 다음 세션 우선순위
+1. 구글 일별 — 노출 유지 여부 + **10-06 이후 순위 후퇴(31~35위)가 계속되는지.** 개별 페이지 순위로 대조.
+2. `quiz/best-workout-time` 발견·색인 여부(Coverage), Bing 등장 여부.
+3. 크롤링됨-미색인 9건의 최종크롤 날짜 변화(사용자 색인 요청 효과).
+4. 10-05 보강 2건(fat-burning, active-recovery) Bing 클릭 변화.
+5. GA4 봇 필터(사용자, 12세션 미처리).
+6. **⛔ 하지 말 것**(누적): 10-05 목록 전부 + **본문 텍스트 중복도 재조사(이번에 측정·기각)**, **크롤링됨-미색인 원인 단정**.
+
+---
+
 
 ## 2026-10-05 세션 — 주간 점검(앞당겨 진행). 🟡 **구글 노출이 09-27부터 6일 연속 회복세(일 200+ / 평균 23위), 클릭 12건** — 원인 미상·지속 여부 미확인 / 🔴 **`fat-burning-heart-rate-zone`도 구글 "크롤링됨-미색인" 합류(09-19)** → 중복 해소 + 계산기 탑재로 보강 / Bing 8주 연속 성장(둔화)
 
