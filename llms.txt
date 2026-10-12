@@ -21,6 +21,7 @@
 - [Is Creatine Right for You?](https://mywellnesscalc.com/quiz/creatine-right-for-you.html): Assesses whether creatine supplementation aligns with training type, diet, and goals.
 - [How Should You Return to Training After a Break?](https://mywellnesscalc.com/quiz/return-to-training-after-break.html): Sorts a comeback into resume, rebuild, or restart based on break length, cause, activity during the break, and training history.
 - [Are You an Active Couch Potato?](https://mywellnesscalc.com/quiz/active-couch-potato.html): Sorts your movement pattern into one of four research-based profiles based on sitting hours, exercise volume, light movement, and sitting-break frequency.
+- [What’s Your Best Time to Work Out?](https://mywellnesscalc.com/quiz/best-workout-time.html): Recommends a training window (early morning, midday, late afternoon, or an anchor slot for irregular schedules) from goal, chronotype, schedule reliability, sleep and training type, with the research on exercise timing, strength, fat loss, blood sugar and sleep.
 - [Which Exercise Snack Fits You?](https://mywellnesscalc.com/quiz/which-exercise-snack.html): Recommends a burst format (stairs, sit-to-stands, bike sprints, walking bursts, bodyweight) based on space, physical limits, available equipment, and habit triggers.
 
 ### Body & Weight
