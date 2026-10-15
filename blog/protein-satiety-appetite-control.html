@@ -98,19 +98,81 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"How much protein per meal actually reduces hunger?","acceptedAnswer":{"@type":"Answer","text":"Most research finds the appetite-suppressing effect kicks in meaningfully around 25-30g of protein per meal, with diminishing extra benefit above roughly 40g in a single sitting. Spreading protein across 3-4 meals of this size controls hunger far better than eating most of your daily total in one meal."}},
-    {"@type":"Question","name":"Why does protein make you feel full?","acceptedAnswer":{"@type":"Answer","text":"Protein lowers ghrelin (the hormone that signals hunger) more than carbs or fat do, while also triggering a larger release of GLP-1, PYY, and CCK — hormones that signal fullness to your brain. It's also the most metabolically 'expensive' macronutrient to digest, which adds a small additional satiety effect."}},
-    {"@type":"Question","name":"Can you eat too much protein and still be hungry?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your protein is concentrated in one meal instead of spread out, if you're not getting enough fiber or fluid volume alongside it, or if you're sleep-deprived (which raises ghrelin independent of diet), you can hit your daily protein target and still feel hungry."}},
-    {"@type":"Question","name":"Is protein powder as filling as whole food protein?","acceptedAnswer":{"@type":"Answer","text":"Less so, generally. Liquid calories are digested faster and provide less mechanical fullness than solid food, so a protein shake tends to be less satiating gram-for-gram than the same amount of protein from chicken, eggs, or Greek yogurt. It's still useful for hitting a daily target, just not the strongest tool specifically for appetite control."}},
-    {"@type":"Question","name":"Does high-protein breakfast reduce hunger later in the day?","acceptedAnswer":{"@type":"Answer","text":"Several studies show a high-protein breakfast (about 30-35g) reduces hunger ratings and evening snacking more effectively than a lower-protein breakfast with equal calories, likely because it front-loads the ghrelin-suppressing effect earlier when appetite regulation for the rest of the day is being set."}},
-    {"@type":"Question","name":"Why am I still hungry in a calorie deficit despite hitting my protein target?","acceptedAnswer":{"@type":"Answer","text":"Protein helps, but it doesn't fully override a large calorie deficit. If your deficit is aggressive (more than about 500-750 calories under maintenance), some hunger is expected regardless of protein intake. Check fiber and food volume too — low-fiber, low-volume meals leave you hungry even at the same calorie and protein totals."}}
+    {
+      "@type": "Question",
+      "name": "How much protein per meal actually reduces hunger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most research finds the appetite-suppressing effect kicks in meaningfully around 25-30g of protein per meal, with diminishing extra benefit above roughly 40g in a single sitting. Spreading protein across 3-4 meals of this size controls hunger far better than eating most of your daily total in one meal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does protein make you feel full?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protein lowers ghrelin (the hormone that signals hunger) more than carbs or fat do, while also triggering a larger release of GLP-1, PYY, and CCK — hormones that signal fullness to your brain. It's also the most metabolically \"expensive\" macronutrient to digest, which adds a small additional satiety effect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you eat too much protein and still be hungry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your protein is concentrated in one meal instead of spread out, if you're not getting enough fiber or fluid volume alongside it, or if you're sleep-deprived (which raises ghrelin independent of diet), you can hit your daily protein target and still feel hungry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is protein powder as filling as whole food protein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Less so, generally. Liquid calories are digested faster and provide less mechanical fullness than solid food, so a protein shake tends to be less satiating gram-for-gram than the same amount of protein from chicken, eggs, or Greek yogurt. It's still useful for hitting a daily target, just not the strongest tool specifically for appetite control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does high-protein breakfast reduce hunger later in the day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several studies show a high-protein breakfast (about 30-35g) reduces hunger ratings and evening snacking more effectively than a lower-protein breakfast with equal calories, likely because it front-loads the ghrelin-suppressing effect earlier when appetite regulation for the rest of the day is being set."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why am I still hungry in a calorie deficit despite hitting my protein target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protein helps, but it doesn't fully override a large calorie deficit. If your deficit is aggressive (more than about 500-750 calories under maintenance), some hunger is expected regardless of protein intake. Check fiber and food volume too — low-fiber, low-volume meals leave you hungry even at the same calorie and protein totals."
+      }
+    }
   ]
 }
 </script>
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 <div class="article-wrap">
   <article class="article-main">
     <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › Protein and Appetite Control</div>
@@ -206,7 +268,6 @@
   </article>
 
   <aside class="article-sidebar">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="toc">
       <h4>In this article</h4>
       <ol>
@@ -229,7 +290,19 @@
     </div>
   </aside>
 </div>
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
 <script src="../assets/js/components.js"></script>
 </body>

@@ -98,6 +98,11 @@
     .cmp-table td{padding:.6rem .8rem;border-bottom:1px solid var(--border);color:var(--mid);}
     .cmp-table tr:last-child td{border-bottom:none;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.zone-compare{grid-template-columns:1fr}}
+    .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+    .sources h2{font-size:1.1rem!important;}
+    .sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}
+    .sources li{margin-bottom:.35rem;}
+    .sources a{color:var(--sage-dark);word-break:break-word;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -199,7 +204,27 @@
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
 <div class="page-wrap">
   <div class="main-col">
@@ -371,12 +396,18 @@
         </div>
       </div>
 
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>National Academy of Sports Medicine. <a href="https://www.nasm.org/resource-center/blog/heart-rate-training-zones-explained" target="_blank" rel="noopener">Heart rate training zones explained for certified personal trainers</a>.</li>
+        </ol>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Heart rate zones are estimates based on population averages. Individual responses vary. If you have a cardiovascular condition, are recovering from injury, or are new to exercise, consult a healthcare professional before starting any training programme. Stop exercise and seek medical advice if you experience chest pain, dizziness, or shortness of breath.</div>
     </div>
   </div>
 
   <div class="side-col">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="related-tools">
       <h3>Related tools</h3>
       <ul class="related-list">
@@ -391,11 +422,22 @@
         <li><a href="sitting-offset-calculator.html">🪑 Sitting Offset Calculator</a></li>
       </ul>
     </div>
-    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
   </div>
 </div>
 
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 
 <script>
 document.querySelectorAll('.faq-q').forEach(function(q){

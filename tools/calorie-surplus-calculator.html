@@ -123,7 +123,8 @@
   ]
 }
 </script>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -140,7 +141,7 @@
       "name": "Will I gain fat in a calorie surplus?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Some fat gain alongside muscle is normal and expected in any surplus — it's not possible to build new muscle tissue with zero fat gain for most people. The size of your surplus controls the ratio: a smaller, controlled surplus (a 'lean bulk') produces a better muscle-to-fat ratio than a large surplus, even though the large surplus adds total weight faster."
+        "text": "Some fat gain alongside muscle is normal and expected in any surplus — it's not possible to build new muscle tissue with zero fat gain for most people. The size of your surplus controls the ratio: a smaller, controlled surplus (a \"lean bulk\") produces a better muscle-to-fat ratio than a large surplus, even though the large surplus adds total weight faster."
       }
     },
     {
@@ -184,11 +185,32 @@
       }
     }
   ]
-}</script>
+}
+</script>
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
 <div class="page-wrap">
   <div class="main-col">
@@ -395,7 +417,6 @@
   </div>
 
   <div class="side-col">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="related-tools">
       <h3>Related tools</h3>
       <ul class="related-list">
@@ -409,11 +430,22 @@
         <li><a href="../blog/alcohol-and-calorie-deficit.html">📝 Alcohol and Your Calorie Deficit</a></li>
       </ul>
     </div>
-    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
   </div>
 </div>
 
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 
 <script>
 document.querySelectorAll('.faq-q').forEach(function(q){

@@ -150,7 +150,7 @@
       "name": "What is intermittent fasting?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't specify which foods to eat — only when to eat them. Common protocols include 16:8 (16-hour fast, 8-hour eating window), 18:6, and 5:2 (eating normally 5 days, restricting calories 2 days)."
+        "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't specify which foods to eat — only when to eat them. Common protocols include 16:8 (16-hour fast, 8-hour eating window), 18:6, 20:4, and 5:2 (eating normally 5 days, restricting calories on 2 days)."
       }
     },
     {
@@ -158,7 +158,7 @@
       "name": "Does intermittent fasting actually work for weight loss?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, primarily because it reduces total calorie intake by limiting eating hours. Research shows it produces similar weight loss to continuous calorie restriction when calories are matched. Some people find it easier to maintain than traditional dieting. It does not have unique metabolic benefits beyond calorie reduction."
+        "text": "Yes, primarily because it reduces total calorie intake by limiting eating hours. Research shows it produces similar weight loss to continuous calorie restriction when calories are matched. Some people find it easier to maintain than traditional dieting. The structure it provides makes adherence easier for many people."
       }
     },
     {
@@ -166,7 +166,7 @@
       "name": "Can I drink anything during the fasting window?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Water, black coffee, and plain tea contain essentially no calories and do not break a fast. Anything with calories — including milk in coffee, bulletproof coffee with butter, or bone broth — technically breaks the fast, though the practical impact depends on quantity."
+        "text": "Water, black coffee, and plain tea contain essentially no calories and do not break a fast. Anything with calories — including milk in coffee, bulletproof coffee with butter, or bone broth — technically breaks the fast, though the practical impact depends on quantity. If strict fasting is your goal, stick to plain water, black coffee, or unsweetened tea."
       }
     },
     {
@@ -175,14 +175,6 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Intermittent fasting is not recommended for pregnant or breastfeeding women, people with a history of eating disorders, those who are underweight, or people with certain medical conditions including type 1 diabetes. Always consult a healthcare provider before starting if you have any health concerns."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between 16:8 and 5:2?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "16:8 restricts the hours you eat each day — you have an 8-hour eating window every day. The 5:2 protocol is different: you eat normally five days per week and consume only 500–600 calories on two non-consecutive days. Both approaches reduce overall calorie intake, but through different mechanisms. 16:8 is generally easier to sustain long-term."
       }
     },
     {
@@ -200,6 +192,14 @@
         "@type": "Answer",
         "text": "Most people notice changes in hunger patterns and energy levels within 1–2 weeks. Meaningful changes in body composition typically take 6–12 weeks. Improvements in fasting blood glucose and insulin sensitivity may be visible in bloodwork within 8–12 weeks for people with metabolic concerns."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 16:8 and 5:2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "16:8 restricts the hours you eat each day — you have an 8-hour eating window every day. The 5:2 protocol is different: you eat normally five days per week and consume only 500–600 calories on two non-consecutive days. Both approaches reduce overall calorie intake, but through different mechanisms. 16:8 is generally easier to sustain long-term."
+      }
     }
   ]
 }
@@ -207,7 +207,27 @@
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
 <div class="page-wrap">
   <div class="main-col">
@@ -377,7 +397,6 @@
   </div>
 
   <div class="side-col">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="related-tools">
       <h3>Related tools</h3>
       <ul class="related-list">
@@ -390,7 +409,19 @@
   </div>
 </div>
 
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 
 <script>
   let fastHours=16,eatHours=8;

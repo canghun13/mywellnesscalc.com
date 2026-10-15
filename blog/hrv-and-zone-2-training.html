@@ -98,19 +98,81 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"What is a good HRV score for Zone 2 training?","acceptedAnswer":{"@type":"Answer","text":"There's no universal 'good' number — HRV is highly individual and ranges from under 20ms to over 100ms depending on age, fitness, and the device's measurement method. What matters is your own trend over 2-4 weeks, not comparing your raw number to someone else's."}},
-    {"@type":"Question","name":"Does Zone 2 training improve HRV?","acceptedAnswer":{"@type":"Answer","text":"Yes, consistently across the research. Zone 2 work primarily engages the parasympathetic nervous system, and regular aerobic training in this range is one of the most reliable ways to raise baseline HRV over 8-12 weeks, alongside better sleep and stress management."}},
-    {"@type":"Question","name":"Should I skip Zone 2 training if my HRV is low?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily — this is actually the opposite of high-intensity training. Zone 2 is low enough intensity that it's usually fine, and sometimes beneficial, on a low-HRV day, since it supports parasympathetic recovery rather than adding more stress. It's high-intensity or heavy strength sessions you should reconsider on a low-HRV morning, not easy aerobic work."}},
-    {"@type":"Question","name":"Is my wrist-based HRV reading accurate?","acceptedAnswer":{"@type":"Answer","text":"Wrist-based devices (Apple Watch, most Garmin watches) are reasonably accurate for spotting trends over time but less precise than a chest strap for any single reading. Ring-based devices (Oura, Whoop) that measure overnight are generally considered more reliable than daytime wrist spot-checks, since HRV recorded during sleep has less motion interference."}},
-    {"@type":"Question","name":"How long does it take to see HRV improvements from Zone 2 training?","acceptedAnswer":{"@type":"Answer","text":"Most people see initial trend improvements within 8-12 weeks of consistent Zone 2 training, assuming sleep and stress are also reasonably managed. Day-to-day HRV fluctuates for many unrelated reasons (alcohol, illness, poor sleep, travel), so short-term swings shouldn't be read as a verdict on your training."}},
-    {"@type":"Question","name":"What causes a sudden drop in HRV?","acceptedAnswer":{"@type":"Answer","text":"Common causes include poor or shortened sleep, alcohol the night before, illness (even before symptoms appear), unusually high stress, dehydration, or a hard training session the previous day that hasn't fully been recovered from. A single low reading usually reflects one of these rather than a lasting problem."}}
+    {
+      "@type": "Question",
+      "name": "What is a good HRV score for Zone 2 training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no universal \"good\" number — HRV is highly individual and ranges from under 20ms to over 100ms depending on age, fitness, and the device's measurement method. What matters is your own trend over 2-4 weeks, not comparing your raw number to someone else's."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Zone 2 training improve HRV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, consistently across the research. Zone 2 work primarily engages the parasympathetic nervous system, and regular aerobic training in this range is one of the most reliable ways to raise baseline HRV over 8-12 weeks, alongside better sleep and stress management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I skip Zone 2 training if my HRV is low?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily — this is actually the opposite of high-intensity training. Zone 2 is low enough intensity that it's usually fine, and sometimes beneficial, on a low-HRV day, since it supports parasympathetic recovery rather than adding more stress. It's high-intensity or heavy strength sessions you should reconsider on a low-HRV morning, not easy aerobic work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my wrist-based HRV reading accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wrist-based devices (Apple Watch, most Garmin watches) are reasonably accurate for spotting trends over time but less precise than a chest strap for any single reading. Ring-based devices (Oura, Whoop) that measure overnight are generally considered more reliable than daytime wrist spot-checks, since HRV recorded during sleep has less motion interference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see HRV improvements from Zone 2 training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most people see initial trend improvements within 8-12 weeks of consistent Zone 2 training, assuming sleep and stress are also reasonably managed. Day-to-day HRV fluctuates for many unrelated reasons (alcohol, illness, poor sleep, travel), so short-term swings shouldn't be read as a verdict on your training."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What causes a sudden drop in HRV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common causes include poor or shortened sleep, alcohol the night before, illness (even before symptoms appear), unusually high stress, dehydration, or a hard training session the previous day that hasn't fully been recovered from. A single low reading usually reflects one of these rather than a lasting problem."
+      }
+    }
   ]
 }
 </script>
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 <div class="article-wrap">
   <article class="article-main">
     <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › HRV and Zone 2 Training</div>
@@ -193,7 +255,6 @@
   </article>
 
   <aside class="article-sidebar">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="toc">
       <h4>In this article</h4>
       <ol>
@@ -214,7 +275,19 @@
     </div>
   </aside>
 </div>
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
 <script src="../assets/js/components.js"></script>
 </body>

@@ -95,6 +95,16 @@
     .faq-item.open .faq-q::after{content:'−';}
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
+    .main-col{min-width:0;}
+    .info-table{width:100%;min-width:420px;border-collapse:collapse;font-size:.85rem;margin:0;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.55rem .75rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.55rem .75rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .table-wrap2{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0 1.25rem;}
+    .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+    .sources h2{font-size:1.1rem!important;}
+    .sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}
+    .sources li{margin-bottom:.35rem;}
+    .sources a{color:var(--sage-dark);word-break:break-word;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -180,6 +190,22 @@
         "@type": "Answer",
         "text": "Calorie calculators provide estimates based on population averages — they're typically accurate to within 10–15%. Use the result as a starting point, then adjust based on real-world results after 2–3 weeks of tracking."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Which activity level should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose based on your whole day, not just your workouts. Someone who trains three times a week but sits most of the day is usually \"lightly active\" (× 1.375) rather than \"moderately active\" (× 1.55). If you're unsure, pick the lower level and adjust after two to three weeks of tracking your weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my calculated TDEE different from my fitness tracker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trackers estimate activity from movement and heart rate, while this calculator uses a formula and a fixed activity multiplier. Both are estimates. The most reliable figure is your own: if your weight stays stable over several weeks at a given intake, that intake is your real maintenance level."
+      }
     }
   ]
 }
@@ -187,7 +213,27 @@
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
 <div class="page-wrap">
   <div class="main-col">
@@ -301,6 +347,42 @@
       <h3>What about macros?</h3>
       <p>Macro targets are estimated using common evidence-based ratios: roughly 30% of calories from protein, 40% from carbohydrates, and 30% from fat. Individual needs vary — a registered dietitian can provide a personalized plan.</p>
       
+      <h2>Activity levels: which one is you?</h2>
+      <p>The activity setting is the biggest lever in the result — and the one people most often overestimate. The multipliers below are the ones this calculator applies to your BMR. The right-hand column shows what each does for the same person: a 35-year-old woman, 165 cm and 65 kg, whose BMR works out at about 1,345 kcal.</p>
+      <div class="table-wrap2">
+        <table class="info-table">
+          <thead><tr><th>Activity level</th><th>Multiplier</th><th>Example TDEE</th></tr></thead>
+          <tbody>
+            <tr><td>Sedentary — desk job, little exercise</td><td>× 1.2</td><td>1,614 kcal</td></tr>
+            <tr><td>Lightly active — exercise 1–3 days a week</td><td>× 1.375</td><td>1,850 kcal</td></tr>
+            <tr><td>Moderately active — 3–5 days a week</td><td>× 1.55</td><td>2,085 kcal</td></tr>
+            <tr><td>Very active — 6–7 days a week</td><td>× 1.725</td><td>2,321 kcal</td></tr>
+            <tr><td>Extra active — physical job plus training</td><td>× 1.9</td><td>2,556 kcal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The gap between "sedentary" and "very active" is over 700 kcal a day for the same body. If you train three times a week but sit for the rest of the day, "lightly active" is usually closer to the truth than "moderately active".</p>
+
+      <h2>Worked example</h2>
+      <p>Take a 40-year-old man, 180 cm and 85 kg, who trains twice a week:</p>
+      <ul>
+        <li><strong>BMR</strong> = (10 × 85) + (6.25 × 180) − (5 × 40) + 5 = <strong>1,780 kcal</strong></li>
+        <li><strong>TDEE</strong> = 1,780 × 1.375 (lightly active) = <strong>2,448 kcal</strong> to maintain</li>
+        <li><strong>Weight loss</strong> target = 2,448 − 500 = <strong>1,948 kcal</strong></li>
+        <li><strong>Muscle gain</strong> target = 2,448 + 300 = <strong>2,748 kcal</strong></li>
+      </ul>
+      <p>Enter the same numbers above and you'll get the same figures.</p>
+
+      <h2>How accurate is this, and how to fine-tune it</h2>
+      <p>A 2005 systematic review in the <em>Journal of the American Dietetic Association</em> compared the common resting-metabolism equations against measured values and found Mifflin-St Jeor the most reliable: it predicted resting metabolic rate within 10% of the measured value in more people — both with and without obesity — than any other equation. That still leaves some people outside the 10% band, and the activity multiplier adds its own uncertainty on top.</p>
+      <p>So treat the number as a starting estimate and let your own data correct it:</p>
+      <ol>
+        <li>Eat close to the target consistently for two to three weeks.</li>
+        <li>Weigh yourself under the same conditions several mornings a week and compare weekly averages, not single days.</li>
+        <li>If your average is moving faster or slower than intended, adjust by 100–200 kcal a day and give it another two weeks.</li>
+      </ol>
+      <p>For weight loss, a steady rate of roughly 0.5–1% of body weight a week is a common target that preserves muscle better than faster cuts.</p>
+
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
@@ -319,6 +401,22 @@
           <div class="faq-q">How accurate are calorie calculators?</div>
           <div class="faq-a">Calorie calculators provide estimates based on population averages — they're typically accurate to within 10–15%. Use the result as a starting point, then adjust based on real-world results after 2–3 weeks of tracking.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">Which activity level should I choose?</div>
+          <div class="faq-a">Choose based on your whole day, not just your workouts. Someone who trains three times a week but sits most of the day is usually "lightly active" (× 1.375) rather than "moderately active" (× 1.55). If you're unsure, pick the lower level and adjust after two to three weeks of tracking your weight.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Why is my calculated TDEE different from my fitness tracker?</div>
+          <div class="faq-a">Trackers estimate activity from movement and heart rate, while this calculator uses a formula and a fixed activity multiplier. Both are estimates. The most reliable figure is your own: if your weight stays stable over several weeks at a given intake, that intake is your real maintenance level.</div>
+        </div>
+      </div>
+
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>American Journal of Clinical Nutrition</em> 1990;51(2):241–247. <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed</a></li>
+          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>Journal of the American Dietetic Association</em> 2005;105(5):775–789. <a href="https://www.jandonline.org/article/S0002-8223(05)00149-5/abstract" target="_blank" rel="noopener">jandonline.org</a></li>
+        </ol>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> Consult a healthcare provider before making significant dietary changes.</div>
@@ -326,7 +424,6 @@
   </div>
 
   <div class="side-col">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="related-tools">
       <h3>Related tools</h3>
       <ul class="related-list">
@@ -340,11 +437,22 @@
         <li><a href="if-calculator.html">⏱️ Intermittent Fasting</a></li>
       </ul>
     </div>
-    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
   </div>
 </div>
 
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 
 <script>
   let gender = 'male';

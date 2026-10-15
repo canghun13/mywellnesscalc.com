@@ -98,19 +98,81 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Is the 30-minute anabolic window real?","acceptedAnswer":{"@type":"Answer","text":"No, not as originally described. The idea that you must eat protein within 30 minutes of training or lose out on muscle growth comes from early studies that didn't match total daily protein between groups. Later research (including a widely cited 2013 meta-analysis by Schoenfeld, Aragon, and Krieger) found the practical window during which post-workout protein still meaningfully helps is closer to 3-4 hours, not 30 minutes."}},
-    {"@type":"Question","name":"Should I eat protein before or after a workout?","acceptedAnswer":{"@type":"Answer","text":"For most people training in a normal, fed state, it doesn't meaningfully matter which side of the workout the protein falls on — what matters far more is hitting your total daily protein target. If you have to pick one, post-workout is a fine default, since it's an easy time to remember and the food digests during a period your body is primed to use it."}},
-    {"@type":"Question","name":"Does protein timing matter more for beginners?","acceptedAnswer":{"@type":"Answer","text":"Not particularly — timing matters least for beginners, since almost any consistent training and adequate total protein produces strong results early on ('newbie gains'). Timing becomes marginally more relevant for advanced lifters trying to optimize the last few percent of progress, and for older adults, whose muscles respond more slowly to protein and may benefit from a slightly larger, well-timed dose."}},
-    {"@type":"Question","name":"What if I train fasted?","acceptedAnswer":{"@type":"Answer","text":"This is the clearest case where timing does matter. After an overnight or extended fast, your body is in a more catabolic state, so eating protein reasonably soon after a fasted workout (within roughly 1-2 hours) helps stop muscle breakdown sooner and is more defensible than for someone who ate a normal meal a few hours before training."}},
-    {"@type":"Question","name":"Is protein before bed actually useful?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is the one timing strategy with fairly consistent supporting evidence. Roughly 30-40g of a slow-digesting protein (casein, cottage cheese, or Greek yogurt) before sleep increases muscle protein synthesis overnight, which is a longer stretch without food than most people go during the day."}},
-    {"@type":"Question","name":"How do I split my daily protein target around training?","acceptedAnswer":{"@type":"Answer","text":"A simple approach: divide your daily target from a protein calculator across 3-4 meals of roughly 20-40g each, and place one of those meals within a few hours of training on either side. You don't need a separate 'workout protein' on top of your daily total — the same grams count whether they come from a shake or a meal."}}
+    {
+      "@type": "Question",
+      "name": "Is the 30-minute anabolic window real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, not as originally described. The idea that you must eat protein within 30 minutes of training or lose out on muscle growth comes from early studies that didn't match total daily protein between groups. Later research (including a widely cited 2013 meta-analysis by Schoenfeld, Aragon, and Krieger) found the practical window during which post-workout protein still meaningfully helps is closer to 3-4 hours, not 30 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I eat protein before or after a workout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most people training in a normal, fed state, it doesn't meaningfully matter which side of the workout the protein falls on — what matters far more is hitting your total daily protein target. If you have to pick one, post-workout is a fine default, since it's an easy time to remember and the food digests during a period your body is primed to use it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does protein timing matter more for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not particularly — timing matters least for beginners, since almost any consistent training and adequate total protein produces strong results early on (\"newbie gains\"). Timing becomes marginally more relevant for advanced lifters trying to optimize the last few percent of progress, and for older adults, whose muscles respond more slowly to protein and may benefit from a slightly larger, well-timed dose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I train fasted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is the clearest case where timing does matter. After an overnight or extended fast, your body is in a more catabolic state, so eating protein reasonably soon after a fasted workout (within roughly 1-2 hours) helps stop muscle breakdown sooner and is more defensible than for someone who ate a normal meal a few hours before training."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is protein before bed actually useful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — this is the one timing strategy with fairly consistent supporting evidence. Roughly 30-40g of a slow-digesting protein (casein, cottage cheese, or Greek yogurt) before sleep increases muscle protein synthesis overnight, which is a longer stretch without food than most people go during the day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split my daily protein target around training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A simple approach: divide your daily target from a protein calculator across 3-4 meals of roughly 20-40g each, and place one of those meals within a few hours of training on either side. You don't need a separate \"workout protein\" on top of your daily total — the same grams count whether they come from a shake or a meal."
+      }
+    }
   ]
 }
 </script>
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 <div class="article-wrap">
   <article class="article-main">
     <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › Protein Timing Before or After Workout</div>
@@ -198,7 +260,6 @@
   </article>
 
   <aside class="article-sidebar">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="toc">
       <h4>In this article</h4>
       <ol>
@@ -220,7 +281,19 @@
     </div>
   </aside>
 </div>
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
 <script src="../assets/js/components.js"></script>
 </body>

@@ -77,7 +77,14 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    loadPartial('header-placeholder', 'header.html', initNav);
+    // Header and footer are now written into each page's HTML (so navigation
+    // is visible without JavaScript). Fall back to fetching the partials only
+    // on a page that still has the old placeholders.
+    if (document.getElementById('header-placeholder')) {
+      loadPartial('header-placeholder', 'header.html', initNav);
+    } else {
+      initNav();
+    }
     loadPartial('footer-placeholder', 'footer.html');
   });
 })();

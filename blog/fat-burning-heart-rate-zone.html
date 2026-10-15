@@ -89,6 +89,11 @@
     .fb-verdict.show{display:block;}
     .fb-error{color:#b3452f;font-size:.85rem;margin-top:.6rem;display:none;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+    .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+    .sources h2{font-size:1.1rem!important;}
+    .sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}
+    .sources li{margin-bottom:.35rem;}
+    .sources a{color:var(--sage-dark);word-break:break-word;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -252,7 +257,27 @@
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 <div class="article-wrap">
   <article class="article-main">
     <div class="breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › Fat Burning Heart Rate Zone</div>
@@ -592,12 +617,20 @@
           <div class="faq-a">For sessions up to 60 minutes, many people train fasted or with a light snack. For longer sessions (75–90 minutes), a small carbohydrate-containing meal 1–2 hours before is helpful. Zone 2 is sustainable enough to run without aggressive fuelling, unlike high-intensity work. Stay hydrated — dehydration raises heart rate and can push you out of Zone 2 without feeling harder.</div>
         </div>
       </div>
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>Gulati M, Shaw LJ, et al. Heart rate response to exercise stress testing in asymptomatic women: the St. James Women Take Heart Project. <em>Circulation</em> 2010. <a href="https://pubmed.ncbi.nlm.nih.gov/20585008/" target="_blank" rel="noopener">PubMed</a></li>
+          <li>Tanaka H, Monahan KD, Seals DR. Age-predicted maximal heart rate revisited. <em>Journal of the American College of Cardiology</em> 2001;37(1):153–156. <a href="https://www.jacc.org/doi/abs/10.1016/s0735-1097(00)01054-8" target="_blank" rel="noopener">jacc.org</a></li>
+          <li>Storoschuk KL, Moran-MacDonald A, Gibala MJ, Gurd BJ. Much ado about Zone 2: a narrative review assessing the efficacy of Zone 2 training for improving mitochondrial capacity and cardiorespiratory fitness in the general population. <em>Sports Medicine</em> 2025. <a href="https://doi.org/10.1007/s40279-025-02261-y" target="_blank" rel="noopener">doi.org</a></li>
+        </ol>
+      </div>
+
       <div class="disclaimer"><strong>Not medical advice.</strong> Heart rate calculations are estimates. Individual responses vary. If you have cardiovascular concerns, consult a doctor before beginning an exercise programme. Stop immediately if you experience chest pain, dizziness, or difficulty breathing.</div>
     </div>
   </article>
 
   <aside class="article-sidebar">
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
     <div class="toc">
       <h4>In this article</h4>
       <ol>
@@ -628,7 +661,19 @@
     </div>
   </aside>
 </div>
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 <script>document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});</script>
 <script>
 (function(){

@@ -328,6 +328,15 @@
     }
     .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;}
     .main-col{min-width:0;}
+    .info-table{width:100%;min-width:420px;border-collapse:collapse;font-size:.85rem;margin:0;}
+    .info-table th{background:var(--sage-dark);color:white;padding:.55rem .75rem;text-align:left;font-weight:500;}
+    .info-table td{padding:.55rem .75rem;border-bottom:1px solid var(--border);color:var(--mid);}
+    .table-wrap2{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0 1.25rem;}
+    .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+    .sources h2{font-size:1.1rem!important;}
+    .sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}
+    .sources li{margin-bottom:.35rem;}
+    .sources a{color:var(--sage-dark);word-break:break-word;}
   
     .faq-section{margin-top:2.5rem;}
     .faq-section h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem;}
@@ -423,6 +432,22 @@
         "@type": "Answer",
         "text": "Yes. People of Asian descent may face increased health risks at lower BMI thresholds. Some health organisations recommend that a BMI of 23 or above (rather than 25) may indicate increased risk for people of Asian heritage."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What weight is healthy for my height?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a BMI of 18.5–24.9, it's roughly 54–72 kg (120–158 lb) at 170 cm (5′7″), 60–80 kg (133–176 lb) at 180 cm (5′11″) and 48–63 kg (106–138 lb) at 160 cm (5′3″). The table on this page lists heights from 150 to 190 cm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is waist size more important than BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It adds information BMI can't provide, because it reflects fat stored around the organs. NICE recommends keeping your waist to less than half your height (a waist-to-height ratio under 0.5) alongside checking BMI. Using both together gives a better picture than either alone."
+      }
     }
   ]
 }
@@ -431,7 +456,27 @@
 </head>
 <body>
 
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
 <div class="page-wrap">
   <!-- MAIN COLUMN -->
@@ -589,6 +634,35 @@
       <p>Use your BMI as a starting point for a conversation with your healthcare provider, not as a definitive diagnosis. If your BMI falls outside the normal range, consider also tracking waist circumference, reviewing your eating patterns, and consulting a registered dietitian or doctor for personalized guidance.</p>
 
       
+      <h2>Healthy weight range by height</h2>
+      <p>Working backwards from the formula gives the weight range that keeps an adult inside the 18.5–24.9 band at each height. These are the same cut-offs the calculator above uses.</p>
+      <div class="table-wrap2">
+        <table class="info-table">
+          <thead><tr><th>Height</th><th>Healthy BMI weight (kg)</th><th>Healthy BMI weight (lb)</th></tr></thead>
+          <tbody>
+            <tr><td>150 cm (4′11″)</td><td>42–56 kg</td><td>93–123 lb</td></tr>
+            <tr><td>155 cm (5′1″)</td><td>45–60 kg</td><td>100–132 lb</td></tr>
+            <tr><td>160 cm (5′3″)</td><td>48–63 kg</td><td>106–138 lb</td></tr>
+            <tr><td>165 cm (5′5″)</td><td>51–68 kg</td><td>113–149 lb</td></tr>
+            <tr><td>170 cm (5′7″)</td><td>54–72 kg</td><td>120–158 lb</td></tr>
+            <tr><td>175 cm (5′9″)</td><td>57–76 kg</td><td>126–167 lb</td></tr>
+            <tr><td>180 cm (5′11″)</td><td>60–80 kg</td><td>133–176 lb</td></tr>
+            <tr><td>185 cm (6′1″)</td><td>64–85 kg</td><td>142–187 lb</td></tr>
+            <tr><td>190 cm (6′3″)</td><td>67–90 kg</td><td>148–198 lb</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The range is wide on purpose — at 170 cm it spans 18 kg. A number anywhere inside it says little on its own about health; where you sit within the band matters less than your waist size, fitness and blood markers.</p>
+
+      <h2>BMI cut-offs for Asian adults</h2>
+      <p>A 2004 World Health Organization expert consultation published in <em>The Lancet</em> found that in many Asian populations the BMI at which diabetes and cardiovascular risk rise is lower than in European populations — the observed risk threshold ranged from 22 to 25 depending on the population. Rather than redefining the categories, it kept the international cut-offs and added extra public health action points at <strong>23, 27.5, 32.5 and 37.5</strong>. In practice, many Asian health services treat a BMI of 23 or above as a signal to look more closely at waist size, blood pressure and blood sugar.</p>
+
+      <h2>A quick second check: waist-to-height ratio</h2>
+      <p>BMI can't see where fat is carried. Since 2022, the UK's National Institute for Health and Care Excellence (NICE) has recommended that adults also measure their waist and aim to keep it to <strong>less than half their height</strong> — a waist-to-height ratio below 0.5. Measure halfway between the bottom of your ribs and the top of your hips, after breathing out normally. If your BMI is in the healthy range but your waist is more than half your height, that's worth raising with a doctor; if your BMI is high but your waist ratio is under 0.5, muscle may be part of the reason.</p>
+
+      <h3>Children and teenagers</h3>
+      <p>The adult categories don't apply under 18. For children and teens, BMI is compared against growth charts for the same age and sex and reported as a percentile, because healthy body fat changes as children grow.</p>
+
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
@@ -607,6 +681,23 @@
           <div class="faq-q">Does BMI differ for different ethnicities?</div>
           <div class="faq-a">Yes. People of Asian descent may face increased health risks at lower BMI thresholds. Some health organisations recommend that a BMI of 23 or above (rather than 25) may indicate increased risk for people of Asian heritage.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">What weight is healthy for my height?</div>
+          <div class="faq-a">For a BMI of 18.5–24.9, it's roughly 54–72 kg (120–158 lb) at 170 cm (5′7″), 60–80 kg (133–176 lb) at 180 cm (5′11″) and 48–63 kg (106–138 lb) at 160 cm (5′3″). The table on this page lists heights from 150 to 190 cm.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is waist size more important than BMI?</div>
+          <div class="faq-a">It adds information BMI can't provide, because it reflects fat stored around the organs. NICE recommends keeping your waist to less than half your height (a waist-to-height ratio under 0.5) alongside checking BMI. Using both together gives a better picture than either alone.</div>
+        </div>
+      </div>
+
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>World Health Organization. <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener">Obesity and overweight — fact sheet</a>.</li>
+          <li>WHO Expert Consultation. Appropriate body-mass index for Asian populations and its implications for policy and intervention strategies. <em>The Lancet</em> 2004;363:157–163. <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(03)15268-3/abstract" target="_blank" rel="noopener">thelancet.com</a></li>
+          <li>National Institute for Health and Care Excellence. <a href="https://www.nice.org.uk/news/articles/keep-the-size-of-your-waist-to-less-than-half-of-your-height-nice--recommends" target="_blank" rel="noopener">Keep the size of your waist to less than half of your height, NICE recommends</a> (2022).</li>
+        </ol>
       </div>
 
       <div class="disclaimer">
@@ -618,7 +709,6 @@
   <!-- SIDEBAR -->
   <div class="side-col">
     <!-- Ad unit 300x250 -->
-    <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
 
     <div class="related-tools">
       <h3>Related tools</h3>
@@ -638,11 +728,22 @@
     </div>
 
     <!-- Ad unit 300x250 -->
-    <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
   </div>
 </div>
 
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 
 <script>
   let unit = 'metric';

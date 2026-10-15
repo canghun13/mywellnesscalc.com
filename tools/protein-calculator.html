@@ -133,7 +133,7 @@
       "name": "How much protein do I need per day?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on your goal and body weight. For general health, 1.0–1.2g per kg of body weight is sufficient. For fat loss, 1.8–2.4g/kg helps preserve muscle. For muscle building, 1.6–2.2g/kg is recommended. For adults over 50, 1.2–1.6g/kg counters age-related muscle loss. The RDA of 0.8g/kg represents a minimum, not an optimal intake."
+        "text": "It depends on your goal. For general health: 1.0–1.2g/kg. For fat loss: 1.8–2.4g/kg. For muscle building: 1.6–2.2g/kg. For adults 50+: 1.2–1.6g/kg. The RDA of 0.8g/kg is a minimum to prevent deficiency — not an optimal target for anyone who exercises."
       }
     },
     {
@@ -141,7 +141,7 @@
       "name": "Can you eat too much protein?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For healthy adults with normal kidney function, research does not support the idea that high protein intakes (up to 3g/kg) cause kidney damage. The concern about protein and kidneys applies to people who already have kidney disease. Very high protein diets can cause digestive discomfort, but are not dangerous for most healthy people."
+        "text": "For healthy adults with normal kidney function, research does not support the idea that high protein intakes (up to 3g/kg) cause kidney damage. The concern applies to people who already have kidney disease. Very high protein diets can cause digestive discomfort and are more expensive, but are not dangerous for most healthy people."
       }
     },
     {
@@ -149,7 +149,7 @@
       "name": "Is protein powder necessary?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Protein powder is a convenient supplement, not a necessity. Whole food sources provide the same amino acids plus additional nutrients. Powder is useful when hitting a high protein target through food alone becomes impractical. The most cost-effective option is whey protein concentrate."
+        "text": "No. Protein powder is a convenient supplement, not a necessity. Whole food sources provide the same amino acids plus additional nutrients. Powder is useful when hitting a high protein target through food alone becomes impractical — for very active individuals or those with low appetite. The most cost-effective option is whey protein concentrate."
       }
     },
     {
@@ -157,7 +157,31 @@
       "name": "Does protein timing matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Less than once believed. The anabolic window post-workout is real but wider than the 30-minute window often cited — muscle protein synthesis is elevated for several hours after training. Total daily protein intake matters far more than precise timing. Having a protein-rich meal within 2 hours of training is a sensible practice."
+        "text": "Less than once believed. The anabolic window post-workout is real but wider than the 30-minute window often cited — muscle protein synthesis is elevated for several hours after training. Total daily protein intake matters far more than precise timing. Having a protein-rich meal within 2 hours of training is a sensible practice, but not critical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much protein per meal for muscle building?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research suggests 25–40g per meal to reliably stimulate muscle protein synthesis. Younger adults respond to 20–25g; older adults (50+) benefit from 30–40g per meal due to anabolic resistance. Spreading your total intake across 3–4 meals is more effective for muscle building than eating the same total in 1–2 large meals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does protein help with weight loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in several ways. Protein has a high thermic effect — about 25% of protein calories are burned during digestion. It's the most satiating macronutrient, reducing hunger and overall calorie intake. And high protein intake during a calorie deficit preserves muscle mass, keeping your metabolic rate from dropping as you lose weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do plant-based eaters need more protein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally yes, by 10–20%. Plant proteins are typically lower in leucine and some are less completely absorbed than animal proteins. This is accounted for in this calculator's plant-based results. Combining sources throughout the day (legumes, grains, soy) and eating slightly more total protein compensates effectively."
       }
     },
     {
@@ -166,30 +190,6 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Whey protein has the highest leucine content of any common protein source, making it particularly effective at stimulating muscle protein synthesis. Among whole foods, chicken breast, eggs, Greek yogurt, and cottage cheese are excellent choices. For plant-based eaters, tempeh, edamame, and pea or soy protein powder are most effective."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much protein per meal for muscle building?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Research suggests 25–40g of protein per meal to reliably stimulate muscle protein synthesis in adults. Older adults (50+) need closer to 30–40g per meal due to anabolic resistance — muscles become less sensitive to protein with age. Spreading total intake across 3–4 meals is more effective than consuming the same total in 1–2 large meals."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does protein help with weight loss?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, in several ways. Protein has the highest thermic effect of food — your body burns 20–30% of protein calories during digestion, compared to 5–10% for carbohydrates. Protein increases satiety more than fats or carbohydrates, helping with adherence to a calorie deficit. High protein intake (1.8–2.4g/kg) during fat loss preserves lean muscle mass, maintaining metabolic rate."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do plant-based eaters need more protein?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generally yes, by about 10–20%. Plant proteins are typically lower in leucine — the amino acid most responsible for triggering muscle protein synthesis — and some plant proteins are less completely absorbed. Combining protein sources (e.g. legumes with grains) and eating more total protein compensates for this. Soy, edamame, and tempeh are the most complete plant protein sources."
       }
     },
     {
@@ -230,7 +230,27 @@
 <!-- SCHEMA_END -->
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
 <div class="page-wrap">
   <div class="main-col">
@@ -471,7 +491,6 @@
     </div>
   </div>
     <div class="side-col">
-      <div class="ad-box">Advertisement<br><small>Google AdSense 300×250</small></div>
       <div class="related-tools">
         <h3>Related tools</h3>
         <ul class="related-list">
@@ -493,10 +512,21 @@
           <li><a href="https://cookingcalcs.com/tools/meal-cost-calculator.html" target="_blank" rel="noopener">🍽️ Meal Cost Calculator (CookingCalcs)</a></li>
         </ul>
       </div>
-      <div class="ad-box" style="margin-top:1.5rem;">Advertisement<br><small>Google AdSense 300×250</small></div>
     </div>
   </div>
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 
 <script>
 document.querySelectorAll('.faq-q').forEach(function(q){

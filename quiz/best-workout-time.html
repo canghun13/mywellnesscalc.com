@@ -29,10 +29,35 @@
     .longform .related-link span{display:block;font-size:.75rem;color:var(--light);margin-top:.2rem;}
     .longform hr{border:none;border-top:1px solid var(--border);margin:2rem 0;}
     @media(max-width:600px){.longform .related-grid{grid-template-columns:1fr;}}
+    .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+    .sources h2{font-size:1.1rem!important;}
+    .sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}
+    .sources li{margin-bottom:.35rem;}
+    .sources a{color:var(--sage-dark);word-break:break-word;}
   </style>
 </head>
 <body>
-<div id="header-placeholder"></div>
+<nav>
+  <a href="../" class="logo">My<span>Wellness</span>Calc</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-tools-link">
+      <a href="../tools/">Tools</a>
+    </li>
+    <li>
+      <a href="../quiz/">Quiz</a>
+    </li>
+    <li>
+      <a href="../blog/">Blog</a>
+    </li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 <div class="quiz-wrap">
   <a href="../quiz/" class="quiz-back">← All quizzes</a>
   <div class="quiz-header"><div class="quiz-tag">Fitness</div><h1>What’s Your Best Time to Work Out?</h1><p>Morning, lunchtime or after work? The research says timing matters less than you’ve been told — but it does matter, and in different ways for different people. Answer 5 questions about your goal, body clock, schedule and sleep to find the window that fits you.</p></div>
@@ -106,6 +131,15 @@
     <p>Partly. Research on training time shows the body adapts to when you train — people who train in the morning gradually lose most of their usual morning performance dip. Your chronotype (whether you are naturally a morning or evening person) is harder to move, which is why the quiz weighs your schedule and sleep alongside it.</p>
   </div>
 
+  <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>Arciero PJ, et al. Morning exercise reduces abdominal fat and blood pressure in women; evening exercise increases muscular performance in women and lowers blood pressure in men. <em>Frontiers in Physiology</em> 2022;13:893783. <a href="https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.893783/full" target="_blank" rel="noopener">frontiersin.org</a></li>
+          <li>Stutz J, Eiholzer R, Spengler CM. Effects of evening exercise on sleep in healthy participants: a systematic review and meta-analysis. <em>Sports Medicine</em> 2019;49(2):269–287. <a href="https://pubmed.ncbi.nlm.nih.gov/30374942/" target="_blank" rel="noopener">PubMed</a></li>
+          <li>Leota J, et al. Dose-response relationship between evening exercise and sleep. <em>Nature Communications</em> 2025;16:3297. <a href="https://www.nature.com/articles/s41467-025-58271-x" target="_blank" rel="noopener">nature.com</a></li>
+        </ol>
+      </div>
+
   <hr>
   <h2>Related</h2>
   <div class="related-grid">
@@ -118,7 +152,19 @@
   </div>
 </div>
 
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <a href="../" class="footer-logo">MyWellnessCalc</a>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms.html">Terms &amp; Disclaimer</a>
+      <a href="../blog/">Blog</a>
+    </div>
+    <p class="footer-copy">© 2026 mywellnesscalc.com · Not medical advice</p>
+  </div>
+</footer>
 <script src="../assets/js/components.js"></script>
 <script>
 const TOTAL=5;
