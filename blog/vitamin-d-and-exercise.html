@@ -60,6 +60,11 @@
     .faq-a{font-size:.9rem;color:var(--mid);line-height:1.7;display:none;padding-top:.5rem;}
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.article-wrap{grid-template-columns:1fr}}
+    .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+    .sources h2{font-size:1.1rem!important;}
+    .sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}
+    .sources li{margin-bottom:.35rem;}
+    .sources a{color:var(--sage-dark);word-break:break-word;}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -92,27 +97,42 @@
     {
       "@type": "Question",
       "name": "How much vitamin D do active people need?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Most guidelines suggest 600–800 IU per day as the general population minimum, but many sports medicine researchers recommend 1,500–2,000 IU per day for active adults — particularly those who train indoors, live at higher latitudes, or have darker skin tones. The best approach is to get a 25(OH)D blood test and aim for a serum level between 40–60 ng/mL (100–150 nmol/L), adjusting supplementation as needed to reach that target."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Being active doesn’t change the official intake: the RDA is 600 IU a day for adults up to 70 and 800 IU over 70, with an upper limit of 4,000 IU. Athletes who train indoors, live at higher latitudes or have darker skin are more likely to run low, so a 25(OH)D blood test is the sensible first step — supplement to correct a measured shortfall rather than guessing. The Endocrine Society’s 2024 guideline does not recommend routine testing or above-RDA supplementation for healthy adults under 75."
+      }
     },
     {
       "@type": "Question",
       "name": "Can vitamin D deficiency cause muscle weakness?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes — vitamin D deficiency is directly linked to muscle weakness, particularly in the proximal muscles (those closest to the centre of the body: hips, thighs, shoulders). Vitamin D receptors are present in muscle tissue, and adequate vitamin D is needed for normal muscle protein synthesis and calcium availability within muscle cells. Severe deficiency can cause myopathy — a genuine muscle disease characterised by weakness, pain, and fatigue that improves with supplementation."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — vitamin D deficiency is directly linked to muscle weakness, particularly in the proximal muscles (those closest to the centre of the body: hips, thighs, shoulders). Vitamin D receptors are present in muscle tissue, and adequate vitamin D is needed for normal muscle protein synthesis and calcium availability within muscle cells. Severe deficiency can cause myopathy — a genuine muscle disease characterised by weakness, pain, and fatigue that improves with supplementation."
+      }
     },
     {
       "@type": "Question",
       "name": "Does vitamin D help with exercise recovery?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Evidence suggests yes — vitamin D influences the inflammatory response to exercise, and adequate levels are associated with faster recovery of muscle function after eccentric exercise (the type that causes significant DOMS). The mechanism involves vitamin D's role in regulating immune function and modulating the acute inflammatory response. Athletes with optimal vitamin D levels consistently report faster recovery and reduced muscle soreness compared to those with deficient levels."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evidence suggests yes — vitamin D influences the inflammatory response to exercise, and adequate levels are associated with faster recovery of muscle function after eccentric exercise (the type that causes significant DOMS). The mechanism involves vitamin D's role in regulating immune function and modulating the acute inflammatory response. Athletes with optimal vitamin D levels consistently report faster recovery and reduced muscle soreness compared to those with deficient levels."
+      }
     },
     {
       "@type": "Question",
       "name": "Should athletes take vitamin D supplements?",
-      "acceptedAnswer": {"@type": "Answer", "text": "For many athletes, particularly those who train indoors, live at higher latitudes, or train and compete in covered facilities, supplementation is a reasonable evidence-based choice. Vitamin D3 (cholecalciferol) is the preferred form, as it raises serum levels more effectively than D2. Doses of 1,000–2,000 IU per day are safe for most people. Blood testing before supplementing is ideal, as it allows you to set a dose appropriate for your actual deficiency level rather than guessing."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For many athletes, particularly those who train indoors, live at higher latitudes, or train and compete in covered facilities, supplementation is a reasonable evidence-based choice. Vitamin D3 (cholecalciferol) is the preferred form, as it raises serum levels more effectively than D2. Doses of 1,000–2,000 IU per day are safe for most people. Blood testing before supplementing is ideal, as it allows you to set a dose appropriate for your actual deficiency level rather than guessing."
+      }
     },
     {
       "@type": "Question",
       "name": "What vitamin D level should athletes aim for?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Most sports medicine guidelines suggest aiming for a serum 25(OH)D level of 40–60 ng/mL (100–150 nmol/L). Levels below 20 ng/mL are considered deficient and are associated with impaired muscle function, higher injury risk, and compromised immune function. Levels between 20–29 ng/mL are insufficient. Some researchers suggest athletes may benefit from levels at the higher end of the 40–60 ng/mL range, though evidence for benefit above 60 ng/mL is limited."}
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The NIH Office of Dietary Supplements treats 20 ng/mL (50 nmol/L) or more as adequate for most healthy people, 12–20 ng/mL as generally inadequate, and below 12 ng/mL as associated with deficiency. Some sports scientists propose that athletes aim above 30 ng/mL, but there is no agreed athlete-specific target, and levels above 50 ng/mL (125 nmol/L) have been linked to potential adverse effects."
+      }
     }
   ]
 }
@@ -208,13 +228,13 @@
       <h2>How to optimise vitamin D status for exercise</h2>
 
       <h3>Get tested first</h3>
-      <p>The most important step is a 25(OH)D blood test to establish your actual baseline. Serum levels below 20 ng/mL (50 nmol/L) are considered deficient. Levels between 20–29 ng/mL are insufficient. Most sports medicine guidelines suggest athletes aim for 40–60 ng/mL (100–150 nmol/L) for optimal function. Without a baseline, supplementation is guesswork.</p>
+      <p>The most important step is a 25(OH)D blood test to establish your actual baseline. The NIH Office of Dietary Supplements uses these bands: below 12 ng/mL (30 nmol/L) is associated with deficiency, 12–20 ng/mL is generally considered inadequate for bone and overall health, and 20 ng/mL (50 nmol/L) or more is adequate for most healthy people. Some sports scientists argue athletes should sit higher — above 30 ng/mL is a commonly proposed target — but there is no agreed athlete-specific threshold. Testing makes sense if you have risk factors: little sun exposure, darker skin, training mostly indoors, or recurring stress fractures. Without a baseline, supplementation is guesswork.</p>
 
       <h3>Sun exposure</h3>
       <p>At latitudes above 35° north or south, UVB radiation is insufficient for vitamin D synthesis for much of the year — typically October through March in northern climates. During summer months at lower latitudes, 10–30 minutes of midday sun on arms and legs without sunscreen is sufficient for most people with lighter skin tones. Darker skin requires longer exposure to produce the same amount of vitamin D.</p>
 
       <h3>Supplementation</h3>
-      <p>Vitamin D3 (cholecalciferol) is the preferred supplemental form, as it raises serum levels more effectively than D2 (ergocalciferol). For general maintenance during low-sun periods, 1,000–2,000 IU per day is safe and appropriate for most adults. Those with confirmed deficiency may require higher doses under medical guidance to restore levels efficiently. Taking vitamin D with a meal containing fat improves absorption, as it's a fat-soluble vitamin.</p>
+      <p>Vitamin D3 (cholecalciferol) is the preferred supplemental form, as it raises serum levels more effectively than D2 (ergocalciferol). The RDA is 600 IU a day for adults up to 70 and 800 IU over 70, and the tolerable upper limit for adults is 4,000 IU. Daily doses of 1,000–2,000 IU stay well inside that limit and are commonly used during low-sun months, although the Endocrine Society’s 2024 guideline does not recommend routine supplementation above the RDA for healthy adults under 75. Those with confirmed deficiency may require higher doses under medical guidance to restore levels efficiently. Taking vitamin D with a meal containing fat improves absorption, as it's a fat-soluble vitamin.</p>
 
       <div class="cta-box">
         <p>Calculate your recommended daily vitamin D intake based on your age, sun exposure, and lifestyle.</p>
@@ -234,7 +254,7 @@
         <h2>Frequently asked questions</h2>
         <div class="faq-item">
           <div class="faq-q">How much vitamin D do active people need?</div>
-          <div class="faq-a">Most guidelines suggest 600–800 IU per day as the general population minimum, but many sports medicine researchers recommend 1,500–2,000 IU per day for active adults — particularly those who train indoors, live at higher latitudes, or have darker skin tones. The best approach is to get a 25(OH)D blood test and aim for a serum level between 40–60 ng/mL (100–150 nmol/L), adjusting supplementation as needed to reach that target.</div>
+          <div class="faq-a">Being active doesn’t change the official intake: the RDA is 600 IU a day for adults up to 70 and 800 IU over 70, with an upper limit of 4,000 IU. Athletes who train indoors, live at higher latitudes or have darker skin are more likely to run low, so a 25(OH)D blood test is the sensible first step — supplement to correct a measured shortfall rather than guessing. The Endocrine Society’s 2024 guideline does not recommend routine testing or above-RDA supplementation for healthy adults under 75.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Can vitamin D deficiency cause muscle weakness?</div>
@@ -250,8 +270,16 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">What vitamin D level should athletes aim for?</div>
-          <div class="faq-a">Most sports medicine guidelines suggest aiming for a serum 25(OH)D level of 40–60 ng/mL (100–150 nmol/L). Levels below 20 ng/mL are considered deficient and are associated with impaired muscle function, higher injury risk, and compromised immune function. Levels between 20–29 ng/mL are insufficient. Some researchers suggest athletes may benefit from levels at the higher end of the 40–60 ng/mL range, though evidence for benefit above 60 ng/mL is limited.</div>
+          <div class="faq-a">The NIH Office of Dietary Supplements treats 20 ng/mL (50 nmol/L) or more as adequate for most healthy people, 12–20 ng/mL as generally inadequate, and below 12 ng/mL as associated with deficiency. Some sports scientists propose that athletes aim above 30 ng/mL, but there is no agreed athlete-specific target, and levels above 50 ng/mL (125 nmol/L) have been linked to potential adverse effects.</div>
         </div>
+      </div>
+
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>NIH Office of Dietary Supplements. <a href="https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/" target="_blank" rel="noopener">Vitamin D — Fact Sheet for Health Professionals</a> (intakes, upper limits and serum 25(OH)D bands).</li>
+          <li>Demay MB, et al. Vitamin D for the prevention of disease: an Endocrine Society clinical practice guideline. <em>Journal of Clinical Endocrinology &amp; Metabolism</em> 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38828931/" target="_blank" rel="noopener">PubMed</a></li>
+        </ol>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> This article is for informational purposes only. Vitamin D supplementation and blood testing should be discussed with a healthcare professional, particularly if you have kidney disease, hypercalcaemia, or are taking medications that affect vitamin D metabolism. Do not self-prescribe high-dose vitamin D without medical supervision.</div>

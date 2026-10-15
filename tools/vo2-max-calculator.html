@@ -15,7 +15,46 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YL3ZRZBDF');</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"VO2 Max Calculator","url":"https://mywellnesscalc.com/tools/vo2-max-calculator.html","description":"Estimate VO2 max from field tests and see your fitness category by age and sex.","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://mywellnesscalc.com/tools/"},{"@type":"ListItem","position":3,"name":"VO2 Max Calculator","item":"https://mywellnesscalc.com/tools/vo2-max-calculator.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate are these VO2 max estimates?","acceptedAnswer":{"@type":"Answer","text":"Field test estimates are typically within \u00b110\u201315% of lab-measured values. The Cooper 12-minute run is one of the most validated field tests, accurate to within \u00b15\u20138% in motivated individuals who pace correctly. The resting HR estimate is the least accurate (\u00b115\u201320%) and should be treated as a rough indicator only. Lab testing with expired gas analysis is the gold standard."}},{"@type":"Question","name":"How often should I retest my VO2 max?","acceptedAnswer":{"@type":"Answer","text":"Every 8\u201312 weeks gives enough time for meaningful adaptation to occur between tests. Testing too frequently produces noisy results because day-to-day variation in performance can exceed actual fitness change. For best comparison, perform the test under the same conditions each time \u2014 same time of day, similar nutrition, similar recent training load."}},{"@type":"Question","name":"Can I use my smartwatch VO2 max instead?","acceptedAnswer":{"@type":"Answer","text":"Yes \u2014 wearable estimates are useful for tracking trends over time. They're most accurate for people who run regularly with a chest strap heart rate monitor. The absolute number may differ from a field test or lab result, but the directional trend (improving, declining, stable) is generally reliable for tracking training progress."}},{"@type":"Question","name":"What is a good VO2 max to aim for?","acceptedAnswer":{"@type":"Answer","text":"Reaching \"Good\" category for your age and sex is a meaningful health target associated with significantly reduced cardiovascular risk. For most people, this requires consistent aerobic training but is achievable without elite-level dedication. The largest health gains come from moving out of the \"Poor\" or \"Below average\" categories \u2014 not from chasing top-percentile scores."}}]}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate are these VO2 max estimates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Field test estimates are typically within ±10–15% of lab-measured values. The Cooper 12-minute run is one of the most validated field tests, accurate to within ±5–8% in motivated individuals who pace correctly. The resting HR estimate is the least accurate (±15–20%) and should be treated as a rough indicator only. Lab testing with expired gas analysis is the gold standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I retest my VO2 max?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every 8–12 weeks gives enough time for meaningful adaptation to occur between tests. Testing too frequently produces noisy results because day-to-day variation in performance can exceed actual fitness change. For best comparison, perform the test under the same conditions each time — same time of day, similar nutrition, similar recent training load."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my smartwatch VO2 max instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — wearable estimates are useful for tracking trends over time. They're most accurate for people who run regularly with a chest strap heart rate monitor. The absolute number may differ from a field test or lab result, but the directional trend (improving, declining, stable) is generally reliable for tracking training progress."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good VO2 max to aim for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reaching \"Good\" category for your age and sex is a meaningful health target associated with significantly reduced cardiovascular risk. For most people, this requires consistent aerobic training but is achievable without elite-level dedication. The largest health gains come from moving out of the \"Poor\" or \"Below average\" categories — not from chasing top-percentile scores."
+      }
+    }
+  ]
+}
+</script>
   <style>
     .page-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;}
     .breadcrumb{font-size:.8rem;color:var(--light);margin-bottom:1.5rem;display:flex;gap:.5rem;}
@@ -99,6 +138,11 @@
     .faq-item.open .faq-a{display:block;}
     @media(max-width:768px){.page-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:480px){.stats-grid{grid-template-columns:1fr}}
+    .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}
+    .sources h2{font-size:1.1rem!important;}
+    .sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}
+    .sources li{margin-bottom:.35rem;}
+    .sources a{color:var(--sage-dark);word-break:break-word;}
   </style>
 </head>
 <body>
@@ -299,7 +343,7 @@
     <div class="info-section">
       <h2>What is VO2 max and why does it matter?</h2>
       <p>VO2 max is the maximum volume of oxygen your body can use during intense exercise — expressed in millilitres per kilogram of bodyweight per minute (ml/kg/min). It's the gold standard measure of aerobic fitness and cardiovascular health. A higher VO2 max means a more efficient heart, greater endurance capacity, and — critically — better long-term health outcomes.</p>
-      <p>Research from a 2018 study in JAMA Network Open following 122,000 adults found that low cardiorespiratory fitness was associated with higher all-cause mortality than smoking, diabetes, or hypertension. Moving from "low" to "moderate" fitness produced a 50% reduction in mortality risk. These are among the strongest health-outcome relationships observed for any modifiable lifestyle factor.</p>
+      <p>In a 2018 study of 122,007 adults who had treadmill tests at the Cleveland Clinic (Mandsager and colleagues, <em>JAMA Network Open</em>), the mortality risk associated with low cardiorespiratory fitness was comparable to or greater than that of smoking, diabetes and cardiovascular disease, and the fittest group had about 80% lower mortality risk than the least fit. These are among the strongest health-outcome relationships observed for any modifiable lifestyle factor.</p>
 
       <h2>VO2 max reference ranges</h2>
       <p>VO2 max declines with age and differs by sex, primarily due to differences in cardiac size, haemoglobin levels, and muscle mass. These tables reflect data from the American College of Sports Medicine and similar bodies.</p>
@@ -364,6 +408,13 @@
           <div class="faq-q">What is a good VO2 max to aim for?</div>
           <div class="faq-a">Reaching "Good" category for your age and sex is a meaningful health target associated with significantly reduced cardiovascular risk. For most people, this requires consistent aerobic training but is achievable without elite-level dedication. The largest health gains come from moving out of the "Poor" or "Below average" categories — not from chasing top-percentile scores.</div>
         </div>
+      </div>
+
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>Mandsager K, Harb S, Cremer P, et al. Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing. <em>JAMA Network Open</em> 2018;1(6):e183605. <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2707428" target="_blank" rel="noopener">jamanetwork.com</a></li>
+        </ol>
       </div>
 
       <div class="disclaimer"><strong>Note:</strong> These are estimates based on field test formulas. Individual variation means actual VO2 max may differ from calculated values. Not medical advice. If you have cardiovascular conditions, consult a doctor before performing maximal effort tests.</div>
