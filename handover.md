@@ -50,7 +50,7 @@
 - **신규 페이지/보강 시 인용 규칙**: ①본문에 연구를 언급하면 **같은 페이지 Sources에 링크 포함 서지**를 남긴다 ②숫자(%, kg, n)는 초록/원문에서 확인한 것만 ③확인 못 한 서지 세부(권·호·쪽)는 쓰지 않는다(이번에도 확신 없는 건 생략함).
 
 ### 남은 것 (다음 세션 이후)
-1. **Sources 섹션 미적용 페이지 69개**(10-15 후속 기준, 39/108 적용). 남은 페이지는 대부분 명시적 연구 인용이 없는 일반 서술 — 다음 세션부터 고트래픽 순으로 확대하되, **연도+저널만 있는 인용 문장은 먼저 원문 대조**. 남은 우선순위: calories-burned-by-heart-rate-zone(구글 14.8위), alcohol-and-calorie-deficit, high-protein-foods, protein-vs-carbs-vs-fat, protein-needs-women-over-40, protein-calculator-women-over-40, creatine 블로그·퀴즈(퀴즈는 구글 클릭 1위라 본문 무변경, Sources만), detraining-calculator, zone-2 계열.
+1. **Sources 섹션 미적용 페이지 67개**(10-15 후속 기준, 39개 적용 — 리다이렉트 스텁 2개 제외). 남은 페이지는 대부분 명시적 연구 인용이 없는 일반 서술 — 다음 세션부터 고트래픽 순으로 확대하되, **연도+저널만 있는 인용 문장은 먼저 원문 대조**. 남은 우선순위: calories-burned-by-heart-rate-zone(구글 14.8위), alcohol-and-calorie-deficit, high-protein-foods, protein-vs-carbs-vs-fat, protein-needs-women-over-40, protein-calculator-women-over-40, creatine 블로그·퀴즈(퀴즈는 구글 클릭 1위라 본문 무변경, Sources만), detraining-calculator, zone-2 계열.
 2. 홈 하단 **외부 디렉터리 배지 9개**(boostdomainrating "Domain Rating" 배지 포함)는 **사용자 판단 사항으로 손대지 않음.** 원인이라는 근거 없음 — 단정 금지(08-17 철회 전례).
 3. 600단어대 이하 남은 페이지: contact(172)·privacy(361)·tools/index(612) — 유틸리티/허브라 정상 범위.
 4. 사용자: 애드센스 화면에서 "문제를 수정했음을 확인" 체크 후 검토 요청(배포 완료 상태).
