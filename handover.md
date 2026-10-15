@@ -26,8 +26,31 @@
 
 **🔵 텍스트 중복 측정(10-12)과 마찬가지로, 이번 반려의 원인을 하나로 단정하지 않음.** 위 항목은 "심사자가 보는 화면에서 확인된 결함"이고, 반려 사유 중 **"실제적인 사용자 관심"은 코드로 해결 불가**(GA4 활성 484명 중 싱가포르 80% — 봇 추정, 실유입은 구글 23·Bing계열 ~25세션/4주).
 
+### 같은 날 후속 — 인용 감사(citation audit) 3라운드 (커밋 `cae660f`, `cf9dbe7`, `99bf744`)
+
+사용자 "검토요청은 나중에, 계속 이어가자" → Sources 확대를 하면서 **본문에 인용된 연구를 전부 웹서치로 대조**함. 결과: **잘못 인용·출처 불명 주장이 다수 발견됨.** 이 사이트의 가장 큰 품질 리스크는 분량이 아니라 **인용 정확성**이었음.
+
+| 페이지 | 발견 | 수정 |
+|---|---|---|
+| healthy-body-fat-percentage (Bing 1위) | 연령별 범주표의 **연령 보정치가 출처 없음**(ACE 표에 임의로 +1~3%p), **남성 FAQ(8–19%)가 남성 표(14–24%)와 모순** | Gallagher 2000(AJCN) 연령별 건강범위 표 + ACE 범주표(비연령)로 교체. FAQ·폐경 FAQ 정렬. body-fat-calculator FAQ("남성 18–24%가 건강")도 같은 출처로 정렬 |
+| protein-calculator | "2011 Int J Sport Nutr 리뷰" 확인 불가 / "**Antonio 2016, 칼로리 적자에서 3.4g/kg**" — 원 연구는 적자 설계 아님(HP군이 오히려 더 많이 먹음) | ISSN 2017 입장문, **Longland 2016 AJCN**(40% 적자·2.4 g/kg → 제지방 +1.2kg, 지방 −4.8kg)로 교체 |
+| vitamin-d-and-exercise | "**대부분의 스포츠의학 가이드라인이 40–60 ng/mL 권장**" — 그런 합의 없음 | NIH ODS 혈중농도 구간(<12 결핍 / 12–20 부족 / ≥20 적정 / >50 부작용 가능) + **Endocrine Society 2024**(75세 미만 건강 성인 RDA 초과 보충·정기검사 비권장) 반영. how-much-vitamin-d·비타민D 퀴즈 용량 문구도 균형 맞춤 |
+| how-long-to-lose-weight / calorie-deficit-how-much | MATADOR "근육 덜 잃음"(실제: 제지방 손실 유사), 연도 2017/2020(실제 2018), "47% 더 많은 지방 감소"(실제 12.3 vs 8.0kg). "2020 Obesity Reviews", "2021 Br J Nutr" 확인 불가 | 실제 수치로 교정, Garthe 2011(IJSNEM) 느린/빠른 감량 비교로 대체 |
+| how-to-improve-vo2-max / what-is-vo2-max / vo2-max-calculator | "**Seiler 2013** 극성훈련 연구"(실제 Stöggl & Sperlich 2014), Mandsager 2018 "**low→below average 50% 감소**" 수치 근거 없음, "금연보다 효과 큼" 과장 | 정확한 저자·결과로 교체(극성 +11.7% VO2peak), Mandsager는 검증된 내용만(12.2만 명, 흡연·당뇨와 비슷하거나 그 이상, 최상위 80% 낮음) |
+| if-calculator / ideal-fasting-protocol 퀴즈 | "2022 NEJM 리뷰"(실제 2019 de Cabo & Mattson), "2022 Annual Review of Nutrition" 확인 불가, "2020 Obesity Reviews"(실제 Canadian Family Physician) | 교정 + **Liu 2022 NEJM RCT**(같은 칼로리면 시간제한 식사 추가 이득 없음) 추가 |
+| weight-loss-plateau 퀴즈 | "AJCN, 30–50% 과소보고" | Lichtman 1992 NEJM(다이어트 저항군 섭취 47% 과소·운동 51% 과대 보고) |
+| 10000-steps-a-day | Paluch 2021 "7–8천 보에서 정체" 부정확 | ≥7,000보 사망위험 50–70% 낮음, 10,000 초과 추가 이득 없음 |
+| water-intake | "35 ml/kg은 EFSA 권고와 일치" — EFSA는 ml/kg 권고 없음 | 실제 비교(70kg → 2.45L vs EFSA AI 여 2.0 / 남 2.5L)로 서술 |
+
+- **Sources 섹션: 0 → 39개 페이지.** 모든 링크·서지 정보는 이번 세션에 웹서치/원문으로 확인한 것만 사용. 공식 기반 계산기는 실제 사용 공식의 원 논문(Karvonen 1957, Tanaka 2001, Boer 1984, Devine 1974 외, Kouri 1995, Maffetone 180 Formula, EFSA 2010, IOM 2005)을 명시. MAF 계산기 로직은 공식 180 Formula와 대조 일치.
+- **검증**: 매 라운드 FAQ 본문=스키마(퀴즈 p-포맷 포함), 태그 중첩, `node --check`, Chromium 114페이지 전수 렌더(넘침 0·내비/푸터 존재·JS 에러 0).
+
+### ⚠️ 교훈(품질기준에 등재) — 인용은 "그럴듯한 연도+저널" 형태로 지어지기 쉬움
+- 이번에 고친 오류는 거의 전부 **"A 20XX study in [유명 저널] found ..."** 형태였음. 저자명 없이 연도+저널만 있는 문장은 **우선 의심**하고 원문을 찾을 것. 찾지 못하면 삭제하거나 확인된 연구로 교체.
+- **신규 페이지/보강 시 인용 규칙**: ①본문에 연구를 언급하면 **같은 페이지 Sources에 링크 포함 서지**를 남긴다 ②숫자(%, kg, n)는 초록/원문에서 확인한 것만 ③확인 못 한 서지 세부(권·호·쪽)는 쓰지 않는다(이번에도 확신 없는 건 생략함).
+
 ### 남은 것 (다음 세션 이후)
-1. **Sources 섹션 미적용 페이지 ~105개** — 고트래픽 순으로 확대(검증된 출처만, 1세션 5~10개 권장). 신규 페이지는 처음부터 Sources 포함을 체크리스트에 추가.
+1. **Sources 섹션 미적용 페이지 69개**(10-15 후속 기준, 39/108 적용). 남은 페이지는 대부분 명시적 연구 인용이 없는 일반 서술 — 다음 세션부터 고트래픽 순으로 확대하되, **연도+저널만 있는 인용 문장은 먼저 원문 대조**. 남은 우선순위: calories-burned-by-heart-rate-zone(구글 14.8위), alcohol-and-calorie-deficit, high-protein-foods, protein-vs-carbs-vs-fat, protein-needs-women-over-40, protein-calculator-women-over-40, creatine 블로그·퀴즈(퀴즈는 구글 클릭 1위라 본문 무변경, Sources만), detraining-calculator, zone-2 계열.
 2. 홈 하단 **외부 디렉터리 배지 9개**(boostdomainrating "Domain Rating" 배지 포함)는 **사용자 판단 사항으로 손대지 않음.** 원인이라는 근거 없음 — 단정 금지(08-17 철회 전례).
 3. 600단어대 이하 남은 페이지: contact(172)·privacy(361)·tools/index(612) — 유틸리티/허브라 정상 범위.
 4. 사용자: 애드센스 화면에서 "문제를 수정했음을 확인" 체크 후 검토 요청(배포 완료 상태).
