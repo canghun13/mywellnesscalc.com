@@ -1,5 +1,57 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-10-15
+> 최종 업데이트: 2026-10-20
+
+## 2026-10-20 세션 — 주간 점검(앞당겨 진행). 🟢 **구글 `calories-burned-by-heart-rate` 10.7위(1페이지 경계)·클릭 9** / 🔴 **Zone 2 표 2곳이 자기 공식과 불일치 — 교정** / 크롤링됨-미색인 9 → 11 / Bing 2,367(+15%)
+
+**작업 방식**: 세션 GitHub 연결로 clone·push. 자료: GSC Performance + Coverage 2종(차트 10-12까지), Bing(10-20), GA4(09-22~10-19). 대시보드 금지.
+
+### 구글
+- 3개월 클릭 26 → **32**. 일별 노출 213 → **292**(10-17)로 계속 증가, 평균순위 26~34위대.
+- **`tools/calories-burned-by-heart-rate` 1,663 → 2,517노출, 13.3 → 10.7위, 클릭 6 → 9** — 1페이지 진입 직전. **이번에도 손대지 않음**(상승 중 페이지 무변경 원칙).
+- 그 외 개선: `how-long-to-lose-weight` 14.9 → 11.5위, `alcohol-and-calorie-deficit` 19.3 → 15.9위, `detraining-calculator` 24.4 → 15.7위, `calories-burned-by-heart-rate-zone` 14.8 → 12.6위. 후퇴: `zone-2-heart-rate-by-age` 15.0 → 18.3위.
+- 퀴즈: creatine 12클릭(11.1위), ideal-body-weight 3클릭(6.8위). **구글 클릭 32건 중 퀴즈 17건(53%)** — 퀴즈 우위 유지.
+- GA4 google/organic **30세션**(3 → 13 → 23 → 30, 4주 연속 증가).
+
+### Coverage (차트 10-12까지)
+- **크롤링됨-미색인 9 → 11**: 10-10에 `how-to-improve-vo2-max`(최종크롤 07-30), `what-is-vo2-max`(07-21) 추가 — **재크롤 없이 재분류**(09-22 사례와 같은 패턴). 10-15 인용 교정분은 아직 구글이 안 봄.
+- `fat-burning`·`healthy-body-fat` 최종크롤 여전히 07월 → **10-05·10-15 수정본 미반영**. 사용자 색인 요청 여부 불명.
+- 발견됨-미색인 4 → 5: **`quiz/best-workout-time`(10-12 발행) 10-10 발견**. 나머지 4건은 7주째.
+
+### Bing — 2,052 → 2,367노출, 41 → 49클릭
+- **`zone-2-heart-rate-by-age` 75 → 164노출, 클릭 2 → 5** — 이번 주 최대 성장. 쿼리가 고령 연령별(65·68·70세)·"155 bpm이 65세 여성 Zone 2냐"(1위, 클릭) 형태.
+- `how-long-to-lose-weight` 45 → 84, `protein-vs-carbs-vs-fat` 49 → 82, `high-protein-foods` 44 → 68, `alcohol` 37 → 56(클릭 4).
+
+### GA4 (09-22~10-19)
+- 활성 503, **평균 참여 5.97초**(11.2 → 6.0, 다시 악화), 싱가포르 382/503 = 76%. 봇 필터 13세션 미처리.
+
+### 이번 세션에 한 작업 (커밋 `076d6fd`)
+1. **🔴 `blog/zone-2-heart-rate-by-age` — 표가 자기 공식과 불일치**: Karvonen 열이 **한 행씩 밀려** 있었음(예: 40세 130–144로 표기, 각주 공식대로 계산하면 134–146). FAQ도 같은 오류값. 전 행 재계산 + 75·80세 행 추가. **"Is this heart rate Zone 2?" 섹션 신설** — Bing 실제 쿼리 3개(65세 여성 155bpm → 추정 최대심박이라 Zone 2 아님 / 68세 / 17세)를 페이지 공식으로 계산해 답함. FAQ에 65세 추가. **TOC 링크가 전부 `#`였던 것** 앵커 연결. 68세 문단에서 fat-burning 페이지(3공식 비교)로 내부링크 — 같은 주제 두 페이지가 **같은 표를 반복하지 않도록** 역할 분리(zone-2 = 220−age + Karvonen, fat-burning = 성별·Tanaka).
+2. **🔴 `tools/zone-2-calculator`** — 본문 Karvonen 표가 **60–75%**로 계산돼 있었는데 계산기는 60–70% → 표 재계산. 계산기·active-recovery의 반올림도 정수 연산으로 교정(`Math.round(175*0.7)`=122 → 123, 45·55세에서 표와 1bpm 어긋나던 문제).
+3. **`blog/protein-vs-carbs-vs-fat`** — 지방 최소량이 한 페이지 안에서 "0.5–0.8 g/kg"과 "0.8–1 g/kg"으로 엇갈림 → IOM AMDR(지방 20–35% 칼로리)로 통일. 일반 건강 단백질 1.2–1.6 → **1.0–1.2 g/kg(RDA 0.8)**로 protein-calculator와 정렬. 지구력 탄수화물은 ACSM/AND/DC 2016 구간(가벼운 훈련 3–5, 하루 1시간 5–7 g/kg).
+4. **`blog/how-much-fiber-per-day`** — 귀리 ½컵(40g) 식이섬유 **8g → 4g** 교정(본문·FAQ·표). 나머지 식품값·IOM 연령별 권장량은 대조 일치.
+5. Sources 5개 페이지 추가(alcohol·protein-vs-carbs·fiber·high-protein-foods·calories-burned-by-HR-zone) → **누적 44개**.
+- 검증: FAQ 본문=스키마, 태그 중첩, 계산기 결과=본문 표(전 연령), Chromium 114페이지 전수 렌더 이상 없음.
+
+### 신규 후보 — 1건 조사, 기각 (누적 62건)
+| 후보 | 판정 |
+|---|---|
+| 음주가 감량을 얼마나 늦추나 계산기 | **기각 — 포화.** "stop drinking weight loss calculator" 류 6개+(loseweightcalculator, savvycalculator, calculator.academy, calculatorcorp, yescalculator, reframe) + 술 칼로리 계산기 다수 |
+- 그 외 데이터 기반 후보(체지방 나이별 퀴즈 = 3회 기각 항목과 중복, 감량 기간 계산기 = 포화)는 조사 단계에서 제외. **이번 주는 성장 중 페이지의 정확성 교정이 신규보다 우선**이라고 판단(전략 변경 아님).
+
+### 💰 수익화 관점
+- 구글 오가닉 4주 연속 증가, 클릭의 절반 이상이 퀴즈 + 1개 툴(calories-burned-by-HR). **두 자산은 계속 무변경 유지.**
+- Bing 성장 페이지(zone-2-by-age)에서 **표가 틀려 있던 걸 고친 것이 이번 주 핵심** — 쿼리가 "내 숫자가 맞냐"를 묻는 페이지에서 수치 오류는 클릭이 늘수록 손해.
+- **🔵 사용자 조치(구글 서치콘솔 → URL 검사 → 색인 생성 요청)**: `blog/zone-2-heart-rate-by-age.html`(오늘 교정), `blog/fat-burning-heart-rate-zone.html`, `blog/healthy-body-fat-percentage.html`, `quiz/best-workout-time.html`. 애드센스 검토 요청은 사용자가 보류 중.
+
+### 다음 세션 우선순위
+1. `calories-burned-by-heart-rate` 10위권 진입 여부(무변경 관찰).
+2. 크롤링됨-미색인 11건 최종크롤 날짜 변화 — 10월 수정분 재크롤 여부.
+3. `zone-2-heart-rate-by-age` Bing 클릭 추이(교정 후).
+4. Sources 미적용 62개 — 같은 방식(인용 대조 먼저)으로 계속. **이번에도 숫자 오류가 나온 건 "표"였음 → 표가 있는 페이지는 페이지 공식·원자료로 전 행 재계산할 것.**
+5. GA4 봇 필터(사용자).
+
+---
+
 
 ## 2026-10-15 세션 — 🔴 **애드센스 "가치가 별로 없는 콘텐츠" 재반려 → 사이트 전체 점검·수정** (커밋 `0800917`)
 
