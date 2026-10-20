@@ -462,19 +462,19 @@ function calculate() {
 
   var z1lo, z1hi, z2lo, z2hi, z3lo, z3hi;
   if (method === 'karvonen') {
-    z1lo = Math.round(rhr + hrr * 0.50);
-    z1hi = Math.round(rhr + hrr * 0.60);
-    z2lo = Math.round(rhr + hrr * 0.60);
-    z2hi = Math.round(rhr + hrr * 0.70);
-    z3lo = Math.round(rhr + hrr * 0.70);
-    z3hi = Math.round(rhr + hrr * 0.80);
+    z1lo = Math.round(rhr + hrr * 50 / 100);
+    z1hi = Math.round(rhr + hrr * 60 / 100);
+    z2lo = Math.round(rhr + hrr * 60 / 100);
+    z2hi = Math.round(rhr + hrr * 70 / 100);
+    z3lo = Math.round(rhr + hrr * 70 / 100);
+    z3hi = Math.round(rhr + hrr * 80 / 100);
   } else {
-    z1lo = Math.round(maxHR * 0.50);
-    z1hi = Math.round(maxHR * 0.60);
-    z2lo = Math.round(maxHR * 0.60);
-    z2hi = Math.round(maxHR * 0.70);
-    z3lo = Math.round(maxHR * 0.70);
-    z3hi = Math.round(maxHR * 0.80);
+    z1lo = Math.round(maxHR * 50 / 100);
+    z1hi = Math.round(maxHR * 60 / 100);
+    z2lo = Math.round(maxHR * 60 / 100);
+    z2hi = Math.round(maxHR * 70 / 100);
+    z3lo = Math.round(maxHR * 70 / 100);
+    z3hi = Math.round(maxHR * 80 / 100);
   }
 
   document.getElementById('res-range').textContent = z1lo + ' – ' + z1hi;
