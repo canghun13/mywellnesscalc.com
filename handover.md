@@ -1,5 +1,63 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-10-20
+> 최종 업데이트: 2026-10-26
+
+## 2026-10-26 세션 — 주간 점검(앞당겨 진행). 🟢 **`calories-burned-by-heart-rate` 구글 평균 9.7위(첫 10위권)** / 🔴 **크롤링됨-미색인 11 → 17** / 신규 퀴즈 1건(`alcohol-calorie-deficit`) / Bing 2,635(+11%)
+
+**작업 방식**: 세션 GitHub 연결로 clone·push. 자료: GSC Performance + Coverage 2종(차트 10-19까지), Bing(10-26), GA4(09-28~10-25).
+
+### 구글
+- 3개월 클릭 32 → 34. 일별 노출 10-17 292 정점 후 **10-24 160까지 하락**, 10-21~24 클릭 0. 한 주 움직임이라 추세 판단 보류.
+- **`tools/calories-burned-by-heart-rate` 3,122노출, 10.7 → 9.7위, 클릭 10** — 처음으로 평균 10위 안. **계속 무변경.**
+- 후퇴: `zone-2-heart-rate-by-age` 18.3 → 20.8위(Bing은 반대로 급성장). 개선: `calories-burned-by-heart-rate-zone` 11.4, `how-long-to-lose-weight` 11.2, `alcohol` 14.8, `why-1rm` 11.4.
+- GA4 google/organic **35세션** — 5주 연속 증가(3 → 13 → 23 → 30 → 35). bing 29.
+
+### 🔴 Coverage — 크롤링됨-미색인 11 → 17 (차트 10-19까지)
+- 10-13·10-17에 6건 추가: `quiz/weight-loss-rate`(최종크롤 08-30), `blog/calorie-deficit-how-much`(08-22), `blog/calories-burned-by-heart-rate-zone`(07-10), `blog/tdee-vs-bmr`(07-04), `blog/what-is-metabolism`(07-02), `quiz/training-zone`(06-25), `blog/high-protein-breakfast-women-over-40`(06-12). **전부 재크롤 없이 재분류**(09-22, 10-10과 같은 패턴).
+- **`healthy-body-fat-percentage`는 목록에서 빠짐** — 다만 다른 상태로 옮겨진 건지 색인된 건지 이 자료로는 알 수 없음(구글 Performance엔 12노출/57.8위로 변화 없음). **색인됐다고 단정하지 말 것.**
+- 발견됨-미색인 5 → 6(`terms.html` 추가, 10-17).
+- 7월 1건 → 10월 17건(사이트 115페이지의 약 15%). **원인 단정 금지 방침 유지.** 다만 확인된 사실로, 새로 빠진 페이지 다수가 **같은 질문을 다루는 형제 페이지가 있는 주제**에 속함(아래 "사용자 판단 필요" 참고). 10-12에 측정한 *문자 그대로의* 중복률은 낮았으므로, 이건 "같은 의도(intent)의 페이지가 여러 개"라는 관찰이지 원인 판정이 아님.
+
+### Bing — 2,367 → 2,635노출, 49 → 55클릭
+- `zone-2-heart-rate-by-age` 164 → **258**노출, 클릭 5 → 7(10-20 표 교정 후). `what heart rate is zone 2 for a 70 year old`(1위, 클릭), `zone 2 79 yo` 등 고령 쿼리 계속 증가.
+- `protein-vs-carbs-vs-fat` 82 → 113, `alcohol` 56 → 69(**클릭 5, CTR 7.3%, 2.9위**), `how-to-improve-vo2-max` 55 → 72.
+
+### GA4 (09-28~10-25)
+- 활성 536, 참여 8.7초, 싱가포르 394/536 = 73.5%. 봇 필터 14세션 미처리.
+
+### 이번 세션에 한 작업 (커밋 `5afaf99`)
+**신규 퀴즈 `quiz/alcohol-calorie-deficit.html` (1,142단어) — "Can You Drink and Still Lose Weight?"**
+- **포맷 공백**: 음주·감량 아티클은 포화(Healthline, Medical News Today, Ria Health, forhers, Spire 등 9개+), **이 질문을 다루는 퀴즈 0건**(2회 검색). 계산기 쪽("stop drinking weight loss calculator")은 10-20에 포화 확인·기각했으므로 **퀴즈 포맷으로 진입** — 구글 클릭의 절반 이상이 퀴즈라는 실측과도 맞음.
+- **수요 근거**: Bing에서 `alcohol-and-calorie-deficit`가 CTR 7.3%·2.9위로 사이트 최고 CTR, 구글 14.8위로 상승 중. 쿼리 다수가 개인화 질문(`if you drink but are in a big deficit can u lose weight`(클릭), `calorie deficit 5 days no alcohol 2 days drinking beer`, `22 oz beer fits in my calorie deficit`).
+- **설계**: 주당 음주량·패턴·주종·음주에 따른 식사 변화·목표 적자 → **주간 적자 중 술(+부수 식사)이 차지하는 비율**로 4단계 결과(<15% / 15–40% / 40–100% / >100%).
+  - 술 칼로리: 스피릿+제로 믹서 100, 와인 5oz 125, 일반 맥주 12oz 150, 칵테일 200 kcal(블로그 표와 일치, DGA "표준잔 에탄올 약 100kcal" + USDA).
+  - 부수 식사: **Kwok 2019(*Br J Nutr*) 메타분석 평균 +343 kJ(약 82 kcal)/음주 기회**를 음주 횟수만큼 가산(초안에서 "한 단계 올리기"로 했다가 근거 없는 가중이라 판단해 출처 있는 수치 가산으로 교체). 다음날 식사는 미포함이라고 명시.
+  - 주 8잔+(여)/15잔+(남) 과음, 4/5잔 이상 2시간 내 폭음 → NIAAA 정의로 건강 노트 자동 추가. 결과 하단에 "음주 권장 아님, 임신·약물·연령" 고지.
+- **검증**: 1,024조합 전수 — 결과 분포 196/349/355/124, undefined·NaN 0. FAQ 본문=스키마. Chromium 375/1280 클릭스루 정상, 115페이지 전수 렌더 이상 없음, 내부 링크 깨짐 0.
+- **배선**: quiz/index 맨 위(New, 10-12 배지 만료 제거), 홈 퀴즈 미리보기 맨 앞(대신 `enough-protein` 카드 제외), sitemap 115, llms.txt, 블로그 `alcohol-and-calorie-deficit`에 CTA, `weight-loss-plateau` 퀴즈 관련링크(같은 가이드로 가는 중복 링크 1개를 교체).
+
+### 신규 후보 — 1건 조사, 채택 (누적 63건). "아티클 포화 / 퀴즈 0" 패턴 5번째 적용.
+
+### 💰 수익화 관점
+- 구글 클릭원은 여전히 퀴즈 + `calories-burned-by-heart-rate` 하나. 이번 신규도 **구글이 실제로 클릭을 주는 퀴즈 포맷**으로 냈고, Bing에서 CTR 최고인 주제를 골랐음.
+- **🔵 사용자 조치(구글 서치콘솔 → URL 검사 → 색인 생성 요청)**: `quiz/alcohol-calorie-deficit.html`(신규), `blog/zone-2-heart-rate-by-age.html`, `blog/fat-burning-heart-rate-zone.html`.
+
+### 🔵 사용자 판단 필요 — 같은 의도의 페이지 정리(통합) 여부 (실행하지 않음)
+크롤링됨-미색인 17건 중 여러 건이 **같은 질문에 답하는 형제 페이지가 있는 주제**임. 통합(내용을 한 페이지로 합치고 나머지는 리다이렉트)은 되돌리기 번거롭고 "공격적 확장" 방침과 충돌할 수 있어 **사용자 결정 전엔 하지 않음.** 후보 목록(사실만):
+- 칼로리 적자 글 3개: `calorie-deficit-how-much`(제외됨), `how-to-calculate-calorie-deficit`, `calorie-deficit-for-weight-loss` + 계산기 1개
+- 40대 여성 고단백 식단 4개: breakfast(제외됨)·lunch·dinner·snacks
+- 대사 관련: `tdee-vs-bmr`(제외됨) ↔ calorie-calculator, `what-is-metabolism`(제외됨) ↔ metabolism-type 퀴즈
+- 퀴즈 간: `training-zone`(제외됨) ↔ `zone-2-fitness-level`, `weight-loss-rate`(제외됨) ↔ `how-long-to-lose-weight`
+- Zone 2 계열 글 6개+ 중 `zone-2-heart-rate-training-beginners`(제외됨)
+
+### 다음 세션 우선순위
+1. 구글 일별 노출 하락(10-17 292 → 10-24 160)이 이어지는지. `calories-burned-by-heart-rate` 10위권 유지 여부(무변경).
+2. Coverage — 17건 추이, `healthy-body-fat` 상태, 신규 퀴즈 발견 여부.
+3. 위 통합 여부 사용자 답 받기.
+4. Sources 미적용 62개 계속(인용 대조 먼저, 표는 전 행 재계산).
+5. GA4 봇 필터(사용자).
+
+---
+
 
 ## 2026-10-20 세션 — 주간 점검(앞당겨 진행). 🟢 **구글 `calories-burned-by-heart-rate` 10.7위(1페이지 경계)·클릭 9** / 🔴 **Zone 2 표 2곳이 자기 공식과 불일치 — 교정** / 크롤링됨-미색인 9 → 11 / Bing 2,367(+15%)
 
