@@ -129,26 +129,50 @@
       text-decoration: none; font-size: 0.93rem; font-weight: 600;
       padding: 0.55rem 1rem; border-radius: 999px; border: 1px solid var(--rule); background: #fff;
     }
-    .h-jump a:hover { border-color: var(--ink); background: var(--wash); }
+    .h-jump a { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .h-jump a::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--g-ink, var(--ink)); flex-shrink: 0; }
+    .h-jump a:hover { border-color: var(--g-ink, var(--ink)); background: var(--g-tint, var(--wash)); }
 
-    .h-goals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 3.5rem; align-items: start; }
-    .h-col { display: grid; gap: 3rem; }
-    .h-goal { border-top: 4px solid var(--ink); padding-top: 1.25rem; scroll-margin-top: 84px; }
-    .h-goal h3 { font-size: 1.45rem; margin-bottom: 0.35rem; }
-    .h-goal > p { color: var(--muted); margin-bottom: 0.9rem; font-size: 0.98rem; }
-    .h-list { list-style: none; }
-    .h-list a {
-      display: block; text-decoration: none;
-      padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--rule);
+    /* Goal panels: one full-width panel per category, each with its own colour */
+    .g-lose-weight  { --g-ink: #845400; --g-soft: #ffe7a3; --g-tint: #fff8e5; --g-line: #f1d48a; }
+    .g-heart-rate   { --g-ink: #b0242c; --g-soft: #ffd6d3; --g-tint: #fff3f2; --g-line: #f3b9b5; }
+    .g-build-muscle { --g-ink: #1f47b0; --g-soft: #d4e0fa; --g-tint: #f2f6fe; --g-line: #b4c8f2; }
+    .g-body         { --g-ink: #0a6e64; --g-soft: #c9ede6; --g-tint: #effaf7; --g-line: #a4dccf; }
+    .g-habits       { --g-ink: #5641b0; --g-soft: #e1dbfa; --g-tint: #f6f4fe; --g-line: #c7bdf2; }
+    .h-goals { display: grid; gap: 1.75rem; }
+    .h-goal {
+      display: grid; grid-template-columns: 290px minmax(0, 1fr);
+      background: var(--g-tint); border: 1px solid var(--g-line); border-radius: 20px; overflow: hidden;
+      box-shadow: 0 3px 0 var(--g-line), 0 26px 44px -34px rgba(19, 41, 61, 0.5);
+      scroll-margin-top: 84px;
     }
-    .h-list a:hover { background: var(--wash); }
-    .h-list a:hover .h-t { color: var(--signal); }
+    .h-gside { background: var(--g-soft); padding: 1.75rem 1.6rem; display: flex; flex-direction: column; }
+    .h-gicon {
+      box-sizing: content-box; padding: 13px; border-radius: 16px;
+      background: #fff; color: var(--g-ink); margin-bottom: 1.1rem;
+      box-shadow: 0 2px 0 var(--g-line);
+    }
+    .h-gside h3 { font-size: 1.5rem; margin-bottom: 0.45rem; }
+    .h-gside > p { color: var(--ink-2); font-size: 0.97rem; margin-bottom: 1.25rem; }
+    .h-gmeta { margin-top: auto; border-top: 1px solid var(--g-line); padding-top: 0.9rem; }
+    .h-list {
+      list-style: none; padding: 1.5rem;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; align-content: start;
+    }
+    .h-list li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .h-list a {
+      display: block; height: 100%; text-decoration: none;
+      background: #fff; border: 1px solid var(--g-line); border-radius: 12px;
+      padding: 0.85rem 1rem;
+    }
+    .h-list a:hover { border-color: var(--g-ink); box-shadow: inset 0 0 0 1px var(--g-ink); }
+    .h-list a:hover .h-t { color: var(--g-ink); }
     .h-t { display: block; font-weight: 650; font-size: 1.02rem; line-height: 1.35; }
-    .h-o { display: block; color: var(--muted); font-size: 0.9rem; line-height: 1.45; margin-top: 0.1rem; }
-    .h-more { display: grid; grid-template-columns: 3.6rem 1fr; gap: 0.75rem; font-size: 0.95rem; margin-top: 0.55rem; }
-    .h-list + .h-more { margin-top: 1rem; }
-    .h-more a { color: var(--signal); font-weight: 600; text-underline-offset: 3px; }
-    .h-more span { color: var(--muted); }
+    .h-o { display: block; color: var(--muted); font-size: 0.9rem; line-height: 1.45; margin-top: 0.15rem; }
+    .h-more { display: grid; grid-template-columns: 3.4rem 1fr; gap: 0.5rem; font-size: 0.93rem; line-height: 1.4; }
+    .h-more + .h-more { margin-top: 0.5rem; }
+    .h-more a { color: var(--g-ink); font-weight: 650; text-underline-offset: 3px; }
+    .h-more span { color: var(--ink-2); }
 
     /* QUIZ BAND */
     .h-quiz { background: var(--ink); color: #fff; }
@@ -189,12 +213,23 @@
     @media (max-width: 900px) {
       .h-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 3rem; padding-bottom: 3rem; }
       .h-hero h1 { max-width: 16ch; }
-      .h-goals, .h-qlist, .h-guides { grid-template-columns: 1fr; }
+      .h-qlist, .h-guides { grid-template-columns: 1fr; }
+      .h-goal { grid-template-columns: 1fr; }
+      .h-gside { display: grid; grid-template-columns: auto 1fr; column-gap: 1rem; align-items: center; padding: 1.25rem; }
+      .h-gicon { margin-bottom: 0; grid-row: span 2; padding: 11px; }
+      .h-gside h3 { margin-bottom: 0.1rem; }
+      .h-gside > p { margin-bottom: 0; }
+      .h-gmeta { grid-column: 1 / -1; margin-top: 1rem; }
       .h-mgrid { grid-template-columns: 1fr; gap: 1.5rem; }
     }
     @media (max-width: 560px) {
       .h-wrap { padding-left: 1rem; padding-right: 1rem; }
-      .h-jump a { font-size: 0.88rem; padding: 0.45rem 0.8rem; }
+      .h-jump { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; }
+      .h-jump a { font-size: 0.84rem; padding: 0.5rem 0.7rem; border-radius: 12px; line-height: 1.3; }
+      .h-jump a:last-child { grid-column: 1 / -1; }
+      .h-list li:last-child:nth-child(odd) { grid-column: auto; }
+      .h-list { grid-template-columns: 1fr; padding: 1rem; gap: 0.6rem; }
+      .h-goal { border-radius: 16px; }
       .h-sec { padding: 3.5rem 0; }
       .h-readout { padding: 1.25rem 1.1rem 1.1rem; border-radius: 14px; }
       .h-max-val { font-size: 3.8rem; }
@@ -304,90 +339,108 @@
       <p>Every calculator on the site, grouped by the question it answers.</p>
     </div>
     <div class="h-jump" role="navigation" aria-label="Jump to a goal">
-      <a href="#lose-weight">Weight and fat loss</a>
-      <a href="#heart-rate">Heart rate and cardio</a>
-      <a href="#build-muscle">Muscle and strength</a>
-      <a href="#body">Body measurements</a>
-      <a href="#habits">Sleep, water and daily habits</a>
+      <a href="#lose-weight" class="g-lose-weight">Weight and fat loss</a>
+      <a href="#heart-rate" class="g-heart-rate">Heart rate and cardio</a>
+      <a href="#build-muscle" class="g-build-muscle">Muscle and strength</a>
+      <a href="#body" class="g-body">Body measurements</a>
+      <a href="#habits" class="g-habits">Sleep, water and daily habits</a>
     </div>
 
     <div class="h-goals">
-      <div class="h-col">
-        <div class="h-goal" id="lose-weight">
-          <h3 class="h-display">Weight and fat loss</h3>
+      <section class="h-goal g-lose-weight" id="lose-weight" aria-labelledby="lose-weight-h">
+        <div class="h-gside">
+          <svg class="h-gicon" viewBox="0 0 28 28" width="34" height="34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="20" height="18" rx="4"/><path d="M9.5 11.5a4.5 4.5 0 0 1 9 0"/><path d="M14 11.5l2-2.5"/></svg>
+          <h3 class="h-display" id="lose-weight-h">Weight and fat loss</h3>
           <p>How much to eat, how fast to lose, and when to eat it.</p>
-          <ul class="h-list">
-            <li><a href="tools/calorie-calculator.html"><span class="h-t">Calorie &amp; TDEE Calculator</span><span class="h-o">Daily calories to maintain, lose or gain weight</span></a></li>
-            <li><a href="tools/calorie-deficit-calculator.html"><span class="h-t">Calorie Deficit Calculator</span><span class="h-o">A daily target for fat loss and a timeline to your goal weight</span></a></li>
-            <li><a href="tools/macro-calculator.html"><span class="h-t">Macro Calculator</span><span class="h-o">Protein, carbs and fat in grams per day</span></a></li>
-            <li><a href="tools/if-calculator.html"><span class="h-t">Intermittent Fasting Planner</span><span class="h-o">Eating and fasting times for 16:8, 18:6 or 5:2</span></a></li>
-            <li><a href="tools/if-calculator-women.html"><span class="h-t">IF Calculator for Women</span><span class="h-o">A fasting window matched to life stage and cycle</span></a></li>
-            <li><a href="tools/fasting-timer.html"><span class="h-t">Fasting Timer</span><span class="h-o">Live elapsed time, fasting stages and when your window opens</span></a></li>
-          </ul>
-          <p class="h-more"><span>Quiz</span><a href="quiz/fat-loss-strategy.html">What’s your fat loss strategy?</a></p>
-          <p class="h-more"><span>Guide</span><a href="blog/calorie-deficit-how-much.html">How big a deficit should you have?</a></p>
+          <div class="h-gmeta">
+            <p class="h-more"><span>Quiz</span><a href="quiz/fat-loss-strategy.html">What’s your fat loss strategy?</a></p>
+            <p class="h-more"><span>Guide</span><a href="blog/calorie-deficit-how-much.html">How big a deficit should you have?</a></p>
+          </div>
         </div>
-
-        <div class="h-goal" id="heart-rate">
-          <h3 class="h-display">Heart rate and cardio</h3>
+        <ul class="h-list">
+          <li><a href="tools/calorie-calculator.html"><span class="h-t">Calorie &amp; TDEE Calculator</span><span class="h-o">Daily calories to maintain, lose or gain weight</span></a></li>
+          <li><a href="tools/calorie-deficit-calculator.html"><span class="h-t">Calorie Deficit Calculator</span><span class="h-o">A daily target for fat loss and a timeline to your goal weight</span></a></li>
+          <li><a href="tools/macro-calculator.html"><span class="h-t">Macro Calculator</span><span class="h-o">Protein, carbs and fat in grams per day</span></a></li>
+          <li><a href="tools/if-calculator.html"><span class="h-t">Intermittent Fasting Planner</span><span class="h-o">Eating and fasting times for 16:8, 18:6 or 5:2</span></a></li>
+          <li><a href="tools/if-calculator-women.html"><span class="h-t">IF Calculator for Women</span><span class="h-o">A fasting window matched to life stage and cycle</span></a></li>
+          <li><a href="tools/fasting-timer.html"><span class="h-t">Fasting Timer</span><span class="h-o">Live elapsed time, fasting stages and when your window opens</span></a></li>
+        </ul>
+      </section>
+      <section class="h-goal g-heart-rate" id="heart-rate" aria-labelledby="heart-rate-h">
+        <div class="h-gside">
+          <svg class="h-gicon" viewBox="0 0 28 28" width="34" height="34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 23s-8.5-5-8.5-11.2A4.6 4.6 0 0 1 14 9a4.6 4.6 0 0 1 8.5 2.8C22.5 18 14 23 14 23z"/><path d="M7 14.5h3.5l1.5-3 2.5 6 1.5-3H21"/></svg>
+          <h3 class="h-display" id="heart-rate-h">Heart rate and cardio</h3>
           <p>Training zones, calories from heart rate, and aerobic fitness.</p>
-          <ul class="h-list">
-            <li><a href="tools/heart-rate-zone.html"><span class="h-t">Heart Rate Zone Calculator</span><span class="h-o">All five training zones in bpm</span></a></li>
-            <li><a href="tools/zone-2-calculator.html"><span class="h-t">Zone 2 Heart Rate Calculator</span><span class="h-o">Your Zone 2 range, with or without resting heart rate</span></a></li>
-            <li><a href="tools/calories-burned-by-heart-rate.html"><span class="h-t">Calories Burned by Heart Rate</span><span class="h-o">Calories from average heart rate, age, weight and time</span></a></li>
-            <li><a href="tools/maf-calculator.html"><span class="h-t">MAF Heart Rate Calculator</span><span class="h-o">Your aerobic ceiling from the Maffetone 180 formula</span></a></li>
-            <li><a href="tools/active-recovery-calculator.html"><span class="h-t">Active Recovery Heart Rate Calculator</span><span class="h-o">The Zone 1 ceiling for rest-day movement</span></a></li>
-            <li><a href="tools/vo2-max-calculator.html"><span class="h-t">VO2 Max Calculator</span><span class="h-o">VO2 max from a field test and your category by age</span></a></li>
-            <li><a href="tools/detraining-calculator.html"><span class="h-t">Detraining Calculator</span><span class="h-o">Fitness lost during a break and the weeks to get it back</span></a></li>
-            <li><a href="tools/running-pace.html"><span class="h-t">Running Pace Calculator</span><span class="h-o">Pace, finish time or distance for any run</span></a></li>
-          </ul>
-          <p class="h-more"><span>Quiz</span><a href="quiz/training-zone.html">What’s your training zone?</a></p>
-          <p class="h-more"><span>Guide</span><a href="blog/zone-2-heart-rate-by-age.html">Zone 2 heart rate by age</a></p>
+          <div class="h-gmeta">
+            <p class="h-more"><span>Quiz</span><a href="quiz/training-zone.html">What’s your training zone?</a></p>
+            <p class="h-more"><span>Guide</span><a href="blog/zone-2-heart-rate-by-age.html">Zone 2 heart rate by age</a></p>
+          </div>
         </div>
-      </div>
-      <div class="h-col">
-        <div class="h-goal" id="build-muscle">
-          <h3 class="h-display">Muscle and strength</h3>
+        <ul class="h-list">
+          <li><a href="tools/heart-rate-zone.html"><span class="h-t">Heart Rate Zone Calculator</span><span class="h-o">All five training zones in bpm</span></a></li>
+          <li><a href="tools/zone-2-calculator.html"><span class="h-t">Zone 2 Heart Rate Calculator</span><span class="h-o">Your Zone 2 range, with or without resting heart rate</span></a></li>
+          <li><a href="tools/calories-burned-by-heart-rate.html"><span class="h-t">Calories Burned by Heart Rate</span><span class="h-o">Calories from average heart rate, age, weight and time</span></a></li>
+          <li><a href="tools/maf-calculator.html"><span class="h-t">MAF Heart Rate Calculator</span><span class="h-o">Your aerobic ceiling from the Maffetone 180 formula</span></a></li>
+          <li><a href="tools/active-recovery-calculator.html"><span class="h-t">Active Recovery Heart Rate Calculator</span><span class="h-o">The Zone 1 ceiling for rest-day movement</span></a></li>
+          <li><a href="tools/vo2-max-calculator.html"><span class="h-t">VO2 Max Calculator</span><span class="h-o">VO2 max from a field test and your category by age</span></a></li>
+          <li><a href="tools/detraining-calculator.html"><span class="h-t">Detraining Calculator</span><span class="h-o">Fitness lost during a break and the weeks to get it back</span></a></li>
+          <li><a href="tools/running-pace.html"><span class="h-t">Running Pace Calculator</span><span class="h-o">Pace, finish time or distance for any run</span></a></li>
+        </ul>
+      </section>
+      <section class="h-goal g-build-muscle" id="build-muscle" aria-labelledby="build-muscle-h">
+        <div class="h-gside">
+          <svg class="h-gicon" viewBox="0 0 28 28" width="34" height="34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14h10"/><rect x="5" y="8.5" width="4" height="11" rx="1.2"/><rect x="19" y="8.5" width="4" height="11" rx="1.2"/><path d="M3 11.5v5M25 11.5v5"/></svg>
+          <h3 class="h-display" id="build-muscle-h">Muscle and strength</h3>
           <p>Protein, a lean surplus, and how strong you are now.</p>
-          <ul class="h-list">
-            <li><a href="tools/protein-calculator.html"><span class="h-t">Protein Intake Calculator</span><span class="h-o">Grams of protein a day for your weight and goal</span></a></li>
-            <li><a href="tools/protein-calculator-women-over-40.html"><span class="h-t">Protein Calculator for Women Over 40</span><span class="h-o">A daily target adjusted for the changes after 40</span></a></li>
-            <li><a href="tools/calorie-surplus-calculator.html"><span class="h-t">Calorie Surplus Calculator</span><span class="h-o">A controlled surplus for building muscle with less fat gain</span></a></li>
-            <li><a href="tools/one-rep-max.html"><span class="h-t">One Rep Max Calculator</span><span class="h-o">Estimated 1RM from any set, plus training percentages</span></a></li>
-            <li><a href="tools/ffmi-calculator.html"><span class="h-t">FFMI Calculator</span><span class="h-o">Fat-free mass index, normalised for height</span></a></li>
-          </ul>
-          <p class="h-more"><span>Quiz</span><a href="quiz/muscle-building-starting-point.html">Your muscle-building starting point</a></p>
-          <p class="h-more"><span>Guide</span><a href="blog/what-is-ffmi.html">What is FFMI?</a></p>
+          <div class="h-gmeta">
+            <p class="h-more"><span>Quiz</span><a href="quiz/muscle-building-starting-point.html">Your muscle-building starting point</a></p>
+            <p class="h-more"><span>Guide</span><a href="blog/what-is-ffmi.html">What is FFMI?</a></p>
+          </div>
         </div>
-
-        <div class="h-goal" id="body">
-          <h3 class="h-display">Body measurements</h3>
+        <ul class="h-list">
+          <li><a href="tools/protein-calculator.html"><span class="h-t">Protein Intake Calculator</span><span class="h-o">Grams of protein a day for your weight and goal</span></a></li>
+          <li><a href="tools/protein-calculator-women-over-40.html"><span class="h-t">Protein Calculator for Women Over 40</span><span class="h-o">A daily target adjusted for the changes after 40</span></a></li>
+          <li><a href="tools/calorie-surplus-calculator.html"><span class="h-t">Calorie Surplus Calculator</span><span class="h-o">A controlled surplus for building muscle with less fat gain</span></a></li>
+          <li><a href="tools/one-rep-max.html"><span class="h-t">One Rep Max Calculator</span><span class="h-o">Estimated 1RM from any set, plus training percentages</span></a></li>
+          <li><a href="tools/ffmi-calculator.html"><span class="h-t">FFMI Calculator</span><span class="h-o">Fat-free mass index, normalised for height</span></a></li>
+        </ul>
+      </section>
+      <section class="h-goal g-body" id="body" aria-labelledby="body-h">
+        <div class="h-gside">
+          <svg class="h-gicon" viewBox="0 0 28 28" width="34" height="34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="13" r="7"/><circle cx="11" cy="13" r="2"/><path d="M11 20h13v-4.5"/><path d="M15 20v-2.2M19 20v-2.2"/></svg>
+          <h3 class="h-display" id="body-h">Body measurements</h3>
           <p>What your weight, waist and body fat say about your health.</p>
-          <ul class="h-list">
-            <li><a href="tools/bmi-calculator.html"><span class="h-t">BMI Calculator</span><span class="h-o">Body mass index and weight category, metric or imperial</span></a></li>
-            <li><a href="tools/body-fat-calculator.html"><span class="h-t">Body Fat % Estimator</span><span class="h-o">Body fat from tape measurements with the U.S. Navy method</span></a></li>
-            <li><a href="tools/lean-body-mass-calculator.html"><span class="h-t">Lean Body Mass Calculator</span><span class="h-o">How much of your weight is fat-free mass</span></a></li>
-            <li><a href="tools/ideal-weight.html"><span class="h-t">Ideal Body Weight Calculator</span><span class="h-o">A healthy weight range from four medical formulas</span></a></li>
-            <li><a href="tools/waist-to-hip-ratio-calculator.html"><span class="h-t">Waist-to-Hip Ratio Calculator</span><span class="h-o">Your ratio and its risk level under WHO cut-offs</span></a></li>
-          </ul>
-          <p class="h-more"><span>Quiz</span><a href="quiz/healthy-bmi.html">Are you at a healthy BMI?</a></p>
-          <p class="h-more"><span>Guide</span><a href="blog/healthy-body-fat-percentage.html">Healthy body fat percentage</a></p>
+          <div class="h-gmeta">
+            <p class="h-more"><span>Quiz</span><a href="quiz/healthy-bmi.html">Are you at a healthy BMI?</a></p>
+            <p class="h-more"><span>Guide</span><a href="blog/healthy-body-fat-percentage.html">Healthy body fat percentage</a></p>
+          </div>
         </div>
-
-        <div class="h-goal" id="habits">
-          <h3 class="h-display">Sleep, water and daily habits</h3>
+        <ul class="h-list">
+          <li><a href="tools/bmi-calculator.html"><span class="h-t">BMI Calculator</span><span class="h-o">Body mass index and weight category, metric or imperial</span></a></li>
+          <li><a href="tools/body-fat-calculator.html"><span class="h-t">Body Fat % Estimator</span><span class="h-o">Body fat from tape measurements with the U.S. Navy method</span></a></li>
+          <li><a href="tools/lean-body-mass-calculator.html"><span class="h-t">Lean Body Mass Calculator</span><span class="h-o">How much of your weight is fat-free mass</span></a></li>
+          <li><a href="tools/ideal-weight.html"><span class="h-t">Ideal Body Weight Calculator</span><span class="h-o">A healthy weight range from four medical formulas</span></a></li>
+          <li><a href="tools/waist-to-hip-ratio-calculator.html"><span class="h-t">Waist-to-Hip Ratio Calculator</span><span class="h-o">Your ratio and its risk level under WHO cut-offs</span></a></li>
+        </ul>
+      </section>
+      <section class="h-goal g-habits" id="habits" aria-labelledby="habits-h">
+        <div class="h-gside">
+          <svg class="h-gicon" viewBox="0 0 28 28" width="34" height="34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 6.5A7.5 7.5 0 1 0 20 17a6 6 0 0 1-7.5-10.5z"/><path d="M21 4.5s-2.6 2.9-2.6 4.7a2.6 2.6 0 0 0 5.2 0c0-1.8-2.6-4.7-2.6-4.7z"/></svg>
+          <h3 class="h-display" id="habits-h">Sleep, water and daily habits</h3>
           <p>The small daily numbers that add up.</p>
-          <ul class="h-list">
-            <li><a href="tools/water-intake.html"><span class="h-t">Water Intake Calculator</span><span class="h-o">Daily water for your weight, activity and climate</span></a></li>
-            <li><a href="tools/sleep-calculator.html"><span class="h-t">Sleep Cycle Calculator</span><span class="h-o">Bedtimes and wake-up times in 90-minute cycles</span></a></li>
-            <li><a href="tools/vitamin-d-calculator.html"><span class="h-t">Vitamin D Calculator</span><span class="h-o">A daily target in IU for your age, skin tone and sun exposure</span></a></li>
-            <li><a href="tools/sitting-offset-calculator.html"><span class="h-t">Sitting Offset Calculator</span><span class="h-o">The activity your sitting time calls for, and a break plan</span></a></li>
-            <li><a href="tools/exercise-snack-calculator.html"><span class="h-t">Exercise Snack Calculator</span><span class="h-o">How many short vigorous bursts a day you need</span></a></li>
-          </ul>
-          <p class="h-more"><span>Quiz</span><a href="quiz/sleep-type.html">What’s your sleep type?</a></p>
-          <p class="h-more"><span>Guide</span><a href="blog/how-much-water-per-day.html">How much water per day?</a></p>
+          <div class="h-gmeta">
+            <p class="h-more"><span>Quiz</span><a href="quiz/sleep-type.html">What’s your sleep type?</a></p>
+            <p class="h-more"><span>Guide</span><a href="blog/how-much-water-per-day.html">How much water per day?</a></p>
+          </div>
         </div>
-      </div>
+        <ul class="h-list">
+          <li><a href="tools/water-intake.html"><span class="h-t">Water Intake Calculator</span><span class="h-o">Daily water for your weight, activity and climate</span></a></li>
+          <li><a href="tools/sleep-calculator.html"><span class="h-t">Sleep Cycle Calculator</span><span class="h-o">Bedtimes and wake-up times in 90-minute cycles</span></a></li>
+          <li><a href="tools/vitamin-d-calculator.html"><span class="h-t">Vitamin D Calculator</span><span class="h-o">A daily target in IU for your age, skin tone and sun exposure</span></a></li>
+          <li><a href="tools/sitting-offset-calculator.html"><span class="h-t">Sitting Offset Calculator</span><span class="h-o">The activity your sitting time calls for, and a break plan</span></a></li>
+          <li><a href="tools/exercise-snack-calculator.html"><span class="h-t">Exercise Snack Calculator</span><span class="h-o">How many short vigorous bursts a day you need</span></a></li>
+        </ul>
+      </section>
     </div>
   </div>
 </section>
