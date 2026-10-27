@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Fraunces:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YL3ZRZBDF"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5592663499707350"
        crossorigin="anonymous"></script>
@@ -24,278 +24,185 @@
     gtag('config', 'G-9YL3ZRZBDF');
   </script>
   <style>
+    /* Homepage only. Header/nav and footer keep the site-wide styles. */
+    .home {
+      --ink: #13293d;
+      --ink-2: #3c5368;
+      --muted: #5f7184;
+      --rule: #cfd9e2;
+      --wash: #edf2f6;
+      --signal: #2457d6;
+      --mark: #ffd93d;
+      --z1: #dbe5f4; --z3: #9db4df; --z4: #5f80cc; --z5: #2c4a99;
+      font-family: 'Archivo', 'DM Sans', sans-serif;
+      font-variation-settings: 'wdth' 100;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+    }
+    .home a { color: inherit; }
+    .home :focus-visible { outline: 3px solid var(--signal); outline-offset: 2px; border-radius: 4px; }
+    .h-wrap { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
+    .h-display {
+      font-family: 'Archivo', sans-serif;
+      font-stretch: 118%;
+      font-variation-settings: 'wdth' 118;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.04;
+      text-wrap: balance;
+    }
+    .h-num { font-variant-numeric: tabular-nums; }
 
     /* HERO */
-    .hero {
-      padding: 6rem 2rem 4rem;
-      max-width: 900px; margin: 0 auto;
-      text-align: center;
+    .h-hero { background: var(--wash); border-bottom: 1px solid var(--rule); }
+    .h-hero-grid {
+      display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 3.5rem; align-items: center;
+      padding-top: 4.5rem; padding-bottom: 4.5rem;
     }
-    .hero-tag {
-      display: inline-block;
-      background: var(--sage-light);
-      color: var(--sage-dark);
-      font-size: 0.75rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.35rem 1rem; border-radius: 100px;
-      margin-bottom: 1.5rem;
+    .h-hero h1 { font-size: clamp(2.4rem, 5.2vw, 4.1rem); margin-bottom: 1.4rem; max-width: 12ch; }
+    .h-lede { font-size: 1.12rem; color: var(--ink-2); max-width: 34rem; margin-bottom: 2rem; }
+    .h-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .h-btn {
+      display: inline-flex; align-items: center; min-height: 48px;
+      padding: 0 1.4rem; border-radius: 10px;
+      font-weight: 600; font-size: 0.98rem; text-decoration: none;
+      border: 2px solid var(--ink);
     }
-    h1 {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--charcoal);
-      margin-bottom: 1.25rem;
-    }
-    h1 em { font-style: italic; color: var(--sage-dark); }
-    .hero-sub {
-      font-size: 1.1rem; color: var(--mid);
-      max-width: 540px; margin: 0 auto 2.5rem;
-      font-weight: 300;
-    }
-    .hero-cta {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--sage-dark);
-      color: white;
-      padding: 0.875rem 2rem;
-      border-radius: 100px;
-      text-decoration: none;
-      font-size: 0.9rem; font-weight: 500;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .hero-cta:hover { background: var(--sage); transform: translateY(-1px); }
+    .home .h-btn-solid { background: var(--ink); color: #fff; }
+    .home .h-btn-solid:hover { background: var(--signal); border-color: var(--signal); }
+    .home .h-btn-line { background: transparent; color: var(--ink); }
+    .home .h-btn-line:hover { background: #fff; }
 
-    /* STATS BAR */
-    .stats-bar {
-      background: var(--cream);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1.5rem 2rem;
-      display: flex; justify-content: center; gap: 4rem;
-      flex-wrap: wrap;
+    /* Heart-rate readout */
+    .h-readout {
+      background: #fff; border: 1px solid var(--rule); border-radius: 18px;
+      padding: 1.75rem 1.75rem 1.5rem;
+      box-shadow: 0 1px 0 var(--rule), 0 18px 40px -24px rgba(19, 41, 61, 0.35);
     }
-    .stat { text-align: center; }
-    .stat-num {
-      font-family: 'Fraunces', serif;
-      font-size: 1.75rem; font-weight: 600;
-      color: var(--sage-dark);
+    .h-readout h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 1.1rem; }
+    .h-age { display: grid; grid-template-columns: auto 1fr auto; gap: 0.9rem; align-items: center; margin-bottom: 1.4rem; }
+    .h-age label { font-size: 0.92rem; color: var(--muted); grid-column: 1 / -1; margin-bottom: -0.4rem; }
+    .h-age input[type=range] { width: 100%; accent-color: var(--ink); height: 32px; }
+    .h-step {
+      width: 44px; height: 44px; border-radius: 10px;
+      border: 1px solid var(--rule); background: var(--wash); color: var(--ink);
+      font: 600 1.35rem/1 'Archivo', sans-serif; cursor: pointer;
     }
-    .stat-label { font-size: 0.8rem; color: var(--light); margin-top: 0.1rem; }
+    .h-step:hover { border-color: var(--ink); }
+    .h-max { display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+    .h-max-val {
+      font-stretch: 75%; font-variation-settings: 'wdth' 75;
+      font-weight: 800; font-size: 4.6rem; line-height: 0.9; letter-spacing: -0.03em;
+    }
+    .h-max-txt { color: var(--muted); font-size: 0.95rem; line-height: 1.35; }
+    .h-max-txt strong { color: var(--ink); display: block; font-size: 1rem; }
+    .h-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; height: 14px; margin-bottom: 1rem; border-radius: 7px; overflow: hidden; }
+    .h-bar span:nth-child(1) { background: var(--z1); }
+    .h-bar span:nth-child(2) { background: var(--mark); }
+    .h-bar span:nth-child(3) { background: var(--z3); }
+    .h-bar span:nth-child(4) { background: var(--z4); }
+    .h-bar span:nth-child(5) { background: var(--z5); }
+    .h-zones { list-style: none; margin-bottom: 1.1rem; }
+    .h-zones li {
+      display: grid; grid-template-columns: 1fr auto; gap: 1rem;
+      padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--wash); font-size: 0.95rem;
+    }
+    .h-zones li span { color: var(--muted); }
+    .h-zones li b { font-weight: 600; }
+    .h-zones li.is-z2 { background: #fff6cf; border-radius: 8px; border-bottom-color: transparent; }
+    .h-zones li.is-z2 span { color: var(--ink); font-weight: 600; }
+    .h-zones li.is-z2 b { font-weight: 800; }
+    .h-note { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+    .h-note a { color: var(--signal); font-weight: 600; text-underline-offset: 3px; }
 
-    /* TOOLS GRID */
-    .section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
-    .section-header { margin-bottom: 3rem; }
-    .section-header h2 {
-      font-family: 'Fraunces', serif;
-      font-size: 2rem; font-weight: 400;
-      letter-spacing: -0.02em;
-      color: var(--charcoal);
-    }
-    .section-header p { color: var(--mid); margin-top: 0.5rem; }
+    /* SECTIONS */
+    .h-sec { padding: 5rem 0; scroll-margin-top: 64px; }
+    .h-sec-head { max-width: 40rem; margin-bottom: 2.25rem; }
+    .h-sec-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom: 0.6rem; }
+    .h-sec-head p { color: var(--ink-2); font-size: 1.05rem; }
 
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.25rem;
+    /* Goal jump links */
+    .h-jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.75rem; }
+    .h-jump a {
+      text-decoration: none; font-size: 0.93rem; font-weight: 600;
+      padding: 0.55rem 1rem; border-radius: 999px; border: 1px solid var(--rule); background: #fff;
     }
-    .tool-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-    .tool-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--sage), var(--sage-light));
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    .tool-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); border-color: var(--sage-light); }
-    .tool-card:hover::before { opacity: 1; }
-    .tool-card.featured { border-color: var(--sage-light); }
-    .tool-card.featured::before { opacity: 1; }
+    .h-jump a:hover { border-color: var(--ink); background: var(--wash); }
 
-    .tool-icon {
-      width: 48px; height: 48px;
-      background: var(--cream);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+    .h-goals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 3.5rem; align-items: start; }
+    .h-col { display: grid; gap: 3rem; }
+    .h-goal { border-top: 4px solid var(--ink); padding-top: 1.25rem; scroll-margin-top: 84px; }
+    .h-goal h3 { font-size: 1.45rem; margin-bottom: 0.35rem; }
+    .h-goal > p { color: var(--muted); margin-bottom: 0.9rem; font-size: 0.98rem; }
+    .h-list { list-style: none; }
+    .h-list a {
+      display: block; text-decoration: none;
+      padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--rule);
     }
-    .tool-badge {
-      display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.05em; text-transform: uppercase;
-      padding: 0.2rem 0.6rem; border-radius: 100px;
-      margin-bottom: 0.75rem;
-    }
-    .tool-card h3 {
-      font-size: 1.05rem; font-weight: 500;
-      margin-bottom: 0.4rem;
-      color: var(--charcoal);
-    }
-    .tool-card p {
-      font-size: 0.875rem; color: var(--mid);
-      line-height: 1.5;
-    }
-    .tool-arrow {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      margin-top: 1rem;
-      font-size: 0.8rem; font-weight: 500;
-      color: var(--sage-dark);
-    }
+    .h-list a:hover { background: var(--wash); }
+    .h-list a:hover .h-t { color: var(--signal); }
+    .h-t { display: block; font-weight: 650; font-size: 1.02rem; line-height: 1.35; }
+    .h-o { display: block; color: var(--muted); font-size: 0.9rem; line-height: 1.45; margin-top: 0.1rem; }
+    .h-more { display: grid; grid-template-columns: 3.6rem 1fr; gap: 0.75rem; font-size: 0.95rem; margin-top: 0.55rem; }
+    .h-list + .h-more { margin-top: 1rem; }
+    .h-more a { color: var(--signal); font-weight: 600; text-underline-offset: 3px; }
+    .h-more span { color: var(--muted); }
 
-    /* WHY SECTION */
-    .why-section {
-      background: var(--cream);
-      padding: 5rem 2rem;
+    /* QUIZ BAND */
+    .h-quiz { background: var(--ink); color: #fff; }
+    .h-quiz .h-sec-head p { color: #c3d0dc; }
+    .h-qlist { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3.5rem; margin-bottom: 2.25rem; }
+    .h-qlist a {
+      display: block; text-decoration: none; color: #fff;
+      padding: 1.1rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.16);
     }
-    .why-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-      align-items: center;
+    .h-qlist a:hover .h-q { color: var(--mark); }
+    .h-q { display: block; font-size: 1.22rem; font-weight: 700; line-height: 1.3; font-stretch: 108%; font-variation-settings: 'wdth' 108; }
+    .h-qm { display: block; color: #a9b9c8; font-size: 0.88rem; margin-top: 0.25rem; }
+    .h-new {
+      display: inline-block; background: var(--mark); color: var(--ink);
+      font-size: 0.75rem; font-weight: 700; padding: 0.1rem 0.5rem; border-radius: 6px;
+      margin-left: 0.45rem; vertical-align: 0.15em; font-stretch: 100%; font-variation-settings: 'wdth' 100;
     }
-    .why-text h2 {
-      font-family: 'Fraunces', serif;
-      font-size: 2.25rem; font-weight: 300;
-      line-height: 1.2; letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-    }
-    .why-text h2 em { font-style: italic; color: var(--sage-dark); }
-    .why-text p { color: var(--mid); margin-bottom: 1rem; font-size: 0.95rem; }
-    .why-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-    .why-list li {
-      display: flex; gap: 0.75rem; align-items: flex-start;
-      font-size: 0.9rem; color: var(--mid);
-    }
-    .why-list li::before {
-      content: '✓';
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      background: var(--sage-light);
-      color: var(--sage-dark);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.7rem; font-weight: 700;
-      margin-top: 1px;
-    }
-    .why-visual {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-    }
-    .why-card {
-      background: white;
-      border-radius: 16px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .why-card:first-child { grid-column: 1 / -1; background: var(--sage-dark); color: white; }
-    .why-card-num {
-      font-family: 'Fraunces', serif;
-      font-size: 2.5rem; font-weight: 600;
-    }
-    .why-card:first-child .why-card-num { color: var(--sage-light); }
-    .why-card-label { font-size: 0.8rem; color: var(--light); margin-top: 0.25rem; }
-    .why-card:first-child .why-card-label { color: rgba(255,255,255,0.6); }
+    .home .h-btn-mark { background: var(--mark); color: var(--ink); border-color: var(--mark); }
+    .home .h-btn-mark:hover { background: #fff; border-color: #fff; }
 
-    /* QUIZ PREVIEW */
-    .quiz-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-    .quiz-card-home {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .quiz-card-home:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .quiz-tag-home {
-      display: inline-block;
-      background: var(--cream);
-      color: var(--mid);
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.05em; text-transform: uppercase;
-      padding: 0.2rem 0.6rem; border-radius: 100px;
-      margin-bottom: 0.75rem;
-    }
-    .quiz-card-home h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1rem; font-weight: 400;
-      line-height: 1.3; margin-bottom: 0.4rem;
-    }
-    .quiz-card-home p { font-size: 0.82rem; color: var(--mid); line-height: 1.5; }
-    .quiz-meta-home { font-size: 0.72rem; color: var(--light); margin-top: 0.6rem; }
+    /* GUIDES */
+    .h-guides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3.5rem; margin-bottom: 2rem; }
+    .h-guides a { display: block; text-decoration: none; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
+    .h-guides a:hover .h-gt { color: var(--signal); }
+    .h-gd { display: block; font-size: 0.86rem; color: var(--muted); margin-bottom: 0.3rem; }
+    .h-gt { display: block; font-size: 1.15rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.35rem; }
+    .h-gp { display: block; color: var(--ink-2); font-size: 0.95rem; }
+    .h-link { color: var(--signal); font-weight: 600; text-underline-offset: 3px; }
 
-    /* BLOG PREVIEW */
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .blog-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .blog-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .new-badge{display:inline-block;background:var(--sage-dark);color:white;font-size:.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.15rem .5rem;border-radius:100px;margin-left:.5rem;vertical-align:middle;}
-    .blog-tag {
-      display: inline-block;
-      background: var(--cream);
-      color: var(--mid);
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.05em; text-transform: uppercase;
-      padding: 0.2rem 0.6rem; border-radius: 100px;
-      margin-bottom: 0.75rem;
-    }
-    .blog-card h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.1rem; font-weight: 400;
-      line-height: 1.3; margin-bottom: 0.5rem;
-    }
-    .blog-card p { font-size: 0.85rem; color: var(--mid); }
-    .blog-meta { font-size: 0.75rem; color: var(--light); margin-top: 1rem; }
+    /* METHOD */
+    .h-method { background: var(--wash); border-top: 1px solid var(--rule); }
+    .h-mgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; margin-bottom: 2rem; }
+    .h-mgrid h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.45rem; }
+    .h-mgrid p { color: var(--ink-2); font-size: 0.97rem; }
 
-    /* FOOTER */
+    .home + footer { margin-top: 0; }
 
-    /* AD PLACEHOLDER */
-    .ad-banner {
-      background: var(--cream);
-      border: 1px dashed var(--border);
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      color: var(--light);
-      font-size: 0.75rem;
-      margin: 2rem auto;
-      max-width: 728px;
-      height: 90px;
-      display: flex; align-items: center; justify-content: center;
+    @media (max-width: 900px) {
+      .h-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 3rem; padding-bottom: 3rem; }
+      .h-hero h1 { max-width: 16ch; }
+      .h-goals, .h-qlist, .h-guides { grid-template-columns: 1fr; }
+      .h-mgrid { grid-template-columns: 1fr; gap: 1.5rem; }
     }
-
-    @media (max-width: 768px) {
-      .why-inner { grid-template-columns: 1fr; }
-      .stats-bar { gap: 2rem; }
+    @media (max-width: 560px) {
+      .h-wrap { padding-left: 1rem; padding-right: 1rem; }
+      .h-jump a { font-size: 0.88rem; padding: 0.45rem 0.8rem; }
+      .h-sec { padding: 3.5rem 0; }
+      .h-readout { padding: 1.25rem 1.1rem 1.1rem; border-radius: 14px; }
+      .h-max-val { font-size: 3.8rem; }
+      .h-actions .h-btn { flex: 1 1 100%; justify-content: center; }
+      .h-q { font-size: 1.1rem; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .h-zones b, .h-max-val { transition: color 0.2s; }
     }
   </style>
 <!-- SCHEMA_START -->
@@ -352,340 +259,228 @@
   </button>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <span class="hero-tag">Free · Science-backed · No signup</span>
-  <h1>Your body,<br><em>understood</em></h1>
-  <p class="hero-sub">Free health calculators for BMI, calories, hydration, sleep, fasting, and more — built to give you real answers, fast.</p>
-  <a href="#tools" class="hero-cta">Explore all tools ↓</a>
-</section>
+<main class="home">
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Free tools</div></div>
-  <div class="stat"><div class="stat-num">100%</div><div class="stat-label">No signup needed</div></div>
-  <div class="stat"><div class="stat-num">0</div><div class="stat-label">Hidden fees</div></div>
-</div>
+<section class="h-hero">
+  <div class="h-wrap h-hero-grid">
+    <div>
+      <h1 class="h-display">Health calculators that show their working</h1>
+      <p class="h-lede">29 free calculators and 25 short quizzes for weight loss, muscle, heart rate, body measurements and everyday habits. Calculators tell you which formula they use, and every result comes with what it means. No sign-up.</p>
+      <div class="h-actions">
+        <a href="#goals" class="h-btn h-btn-solid">Find a calculator by goal</a>
+        <a href="#quizzes" class="h-btn h-btn-line">Take a 2-minute quiz</a>
+      </div>
+    </div>
 
-<!-- AD UNIT TOP -->
-<div class="ad-banner">Advertisement · Google AdSense</div>
-
-<!-- TOOLS GRID -->
-<section class="section" id="tools">
-  <div class="section-header">
-    <h2>Wellness Calculators</h2>
-    <p>Pick a tool and get your personalized result in seconds.</p>
-  </div>
-
-  <div class="tools-grid">
-    <a href="tools/bmi-calculator.html" class="tool-card featured">
-      <div class="tool-icon">⚖️</div>
-      <span class="tool-badge">Most Popular</span>
-      <h3>BMI Calculator</h3>
-      <p>Calculate your Body Mass Index with metric or imperial units. Understand your weight category with context.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/calorie-calculator.html" class="tool-card">
-      <div class="tool-icon">🔥</div>
-      <h3>Calorie & TDEE Calculator</h3>
-      <p>Find your Total Daily Energy Expenditure and ideal calorie intake based on your goal.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/water-intake.html" class="tool-card">
-      <div class="tool-icon">💧</div>
-      <h3>Water Intake Calculator</h3>
-      <p>How much water should you drink per day? Get a personalized recommendation based on weight and activity.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/sleep-calculator.html" class="tool-card">
-      <div class="tool-icon">😴</div>
-      <h3>Sleep Cycle Calculator</h3>
-      <p>Find the best bedtime or wake-up time to align with your natural 90-minute sleep cycles.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/if-calculator.html" class="tool-card">
-      <div class="tool-icon">⏱️</div>
-      <h3>Intermittent Fasting Planner</h3>
-      <p>Plan your fasting window for 16:8, 18:6, or 5:2. Get your eat/fast schedule at a glance.</p>
-      <div class="tool-arrow">Plan now →</div>
-    </a>
-
-    <a href="tools/macro-calculator.html" class="tool-card">
-      <div class="tool-icon">🥗</div>
-      <h3>Macro Calculator</h3>
-      <p>Calculate your ideal daily protein, carbohydrate, and fat targets based on your body and goals.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/body-fat-calculator.html" class="tool-card">
-      <div class="tool-icon">📏</div>
-      <h3>Body Fat % Estimator</h3>
-      <p>Estimate your body fat percentage using the U.S. Navy method — no calipers needed.</p>
-      <div class="tool-arrow">Estimate now →</div>
-    </a>
-
-    <a href="tools/ideal-weight.html" class="tool-card">
-      <div class="tool-icon">🎯</div>
-      <h3>Ideal Body Weight</h3>
-      <p>Find your healthy weight range based on height, frame size, and multiple established formulas.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/running-pace.html" class="tool-card">
-      <div class="tool-icon">🏃</div>
-      <h3>Running Pace Calculator</h3>
-      <p>Calculate your finish time, required pace, or distance for any running goal.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/vitamin-d-calculator.html" class="tool-card">
-      <div class="tool-icon">☀️</div>
-      <h3>Vitamin D Calculator</h3>
-      <p>Find out how much Vitamin D you need daily based on your age, sun exposure, skin tone, and location.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/protein-calculator.html" class="tool-card">
-      <div class="tool-icon">🥩</div>
-      <h3>Protein Intake Calculator</h3>
-      <p>Find your optimal daily protein target based on your weight, activity level, and fitness goals.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/one-rep-max.html" class="tool-card">
-      <div class="tool-icon">🏋️</div>
-      <h3>One Rep Max Calculator</h3>
-      <p>Estimate your 1RM for any lift and get your full training percentage breakdown instantly.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/heart-rate-zone.html" class="tool-card">
-      <div class="tool-icon">❤️</div>
-      <h3>Heart Rate Zone Calculator</h3>
-      <p>Find your 5 personalised training zones for fat burn, cardio endurance, and peak performance.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/zone-2-calculator.html" class="tool-card">
-      <div class="tool-icon">💙</div>
-      <h3>Zone 2 Heart Rate Calculator</h3>
-      <p>Find your exact Zone 2 training range — the fat-burning, aerobic base-building sweet spot.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-
-    <a href="tools/vo2-max-calculator.html" class="tool-card">
-      <div class="tool-icon">🫁</div>
-      <h3>VO2 Max Calculator</h3>
-      <p>Estimate your VO2 max from a field test and see your fitness category by age — the most powerful predictor of cardiovascular health.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/calories-burned-by-heart-rate.html" class="tool-card">
-      <div class="tool-icon">🔥</div>
-      <h3>Calories Burned by Heart Rate</h3>
-      <p>See exactly how many calories you burned based on your heart rate, age, weight, and workout duration.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/maf-calculator.html" class="tool-card">
-      <div class="tool-icon">❤️</div>
-      <h3>MAF Heart Rate Calculator</h3>
-      <p>Calculate your Maximum Aerobic Function heart rate using the Maffetone 180 Formula — personalised for your health and training status.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/active-recovery-calculator.html" class="tool-card">
-      <div class="tool-icon">💜</div>
-      <h3>Active Recovery Heart Rate Calculator</h3>
-      <p>Find your Zone 1 active recovery range — the low-intensity ceiling for rest-day movement that reduces soreness without adding training stress.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/detraining-calculator.html" class="tool-card">
-      <div class="tool-icon">📉</div>
-      <h3>Detraining Calculator</h3>
-      <p>Estimate how much VO2 max and strength you lose during a break from training — and how many weeks of retraining it takes to get back.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/sitting-offset-calculator.html" class="tool-card">
-      <div class="tool-icon">🪑</div>
-      <h3>Sitting Offset Calculator</h3>
-      <p>Find how much moderate activity your sitting load calls for, how big the gap is, and how often to break up sitting.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/exercise-snack-calculator.html" class="tool-card">
-      <div class="tool-icon">⚡</div>
-      <h3>Exercise Snack Calculator</h3>
-      <p>Work out how many short vigorous bursts a day you need, and where your dose sits against the burst research bands.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/protein-calculator-women-over-40.html" class="tool-card">
-      <div class="tool-icon">🥩</div>
-      <h3>Protein Calculator — Women Over 40</h3>
-      <p>Personalised daily protein target adjusted for hormonal and metabolic changes after 40.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-
-    <a href="tools/if-calculator-women.html" class="tool-card">
-      <div class="tool-icon">⏱️</div>
-      <h3>IF Calculator for Women</h3>
-      <p>Find your ideal fasting window based on your life stage, hormonal phase, and goals.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/fasting-timer.html" class="tool-card">
-      <div class="tool-icon">⏲️</div>
-      <h3>Fasting Timer</h3>
-      <p>Track your active fast in real time. See elapsed time, fasting stages, and when your eating window opens.</p>
-      <div class="tool-arrow">Start timer →</div>
-    </a>
-    <a href="tools/calorie-deficit-calculator.html" class="tool-card">
-      <div class="tool-icon">📉</div>
-      <h3>Calorie Deficit Calculator</h3>
-      <p>Find your daily calorie target for fat loss — with a safe deficit, TDEE estimate, and timeline to your goal weight.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/calorie-surplus-calculator.html" class="tool-card">
-      <div class="tool-icon">💪</div>
-      <span class="tool-badge">New</span>
-      <h3>Calorie Surplus Calculator</h3>
-      <p>Find your daily calorie target for building muscle — with a controlled surplus, TDEE estimate, and fat-gain assessment.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/lean-body-mass-calculator.html" class="tool-card">
-      <div class="tool-icon">💪</div>
-      <h3>Lean Body Mass Calculator</h3>
-      <p>Find out how much of your weight is lean tissue versus fat — a smarter measure of body composition than the scale alone.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/waist-to-hip-ratio-calculator.html" class="tool-card">
-      <div class="tool-icon">📏</div>
-      <h3>Waist-to-Hip Ratio Calculator</h3>
-      <p>Calculate your WHR and understand your health risk level based on WHO guidelines — in seconds.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-    <a href="tools/ffmi-calculator.html" class="tool-card">
-      <div class="tool-icon">💪</div>
-      <h3>FFMI Calculator</h3>
-      <p>Find your Fat-Free Mass Index and normalized FFMI — a far better measure of muscularity than BMI.</p>
-      <div class="tool-arrow">Calculate now →</div>
-    </a>
-  </div>
-</section>
-
-<!-- WHY SECTION -->
-<div class="why-section">
-  <div class="why-inner">
-    <div class="why-text">
-      <h2>Simple tools for a <em>healthier</em> everyday</h2>
-      <p>We built My Wellness Calc because health information should be accessible, clear, and free — without ads that block your screen or paywalls that hide your results.</p>
-      <ul class="why-list">
-        <li>All formulas are based on established, peer-reviewed research</li>
-        <li>No account creation. No email required. Just answers.</li>
-        <li>Works on any device — desktop, tablet, or phone</li>
-        <li>New tools added regularly based on reader requests</li>
+    <div class="h-readout" aria-labelledby="hr-title">
+      <h2 id="hr-title">Try one: your heart rate zones</h2>
+      <div class="h-age">
+        <label for="hrAge">Your age: <strong class="h-num" id="hrAgeOut">35</strong></label>
+        <button type="button" class="h-step" id="hrMinus" aria-label="Decrease age">−</button>
+        <input type="range" id="hrAge" min="18" max="80" step="1" value="35">
+        <button type="button" class="h-step" id="hrPlus" aria-label="Increase age">+</button>
+      </div>
+      <div class="h-max" aria-live="polite">
+        <span class="h-max-val h-num" id="hrMax">185</span>
+        <span class="h-max-txt"><strong>bpm estimated maximum</strong>220 minus your age</span>
+      </div>
+      <div class="h-bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <ul class="h-zones" id="hrZones">
+        <li><span>Zone 1, recovery</span><b class="h-num">93–111 bpm</b></li>
+        <li class="is-z2"><span>Zone 2, aerobic base</span><b class="h-num">111–130 bpm</b></li>
+        <li><span>Zone 3, aerobic</span><b class="h-num">130–148 bpm</b></li>
+        <li><span>Zone 4, threshold</span><b class="h-num">148–167 bpm</b></li>
+        <li><span>Zone 5, maximum effort</span><b class="h-num">167–185 bpm</b></li>
       </ul>
+      <p class="h-note">Zones are 50–100% of your estimated maximum. For a range that also uses your resting heart rate, open the <a href="tools/zone-2-calculator.html">Zone 2 calculator</a> or the <a href="tools/heart-rate-zone.html">heart rate zone calculator</a>.</p>
     </div>
-    <div class="why-visual">
-      <div class="why-card">
-        <div class="why-card-num">50K+</div>
-        <div class="why-card-label">Calculations made</div>
-      </div>
-      <div class="why-card">
-        <div class="why-card-num">4.9★</div>
-        <div class="why-card-label">Average rating</div>
-      </div>
-      <div class="why-card">
-        <div class="why-card-num">16</div>
-        <div class="why-card-label">Tools available</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- QUIZ PREVIEW -->
-<section class="section">
-  <div class="section-header">
-    <h2>Find what works for you</h2>
-    <p>Short quizzes that match you to a protocol — backed by evidence, not guesswork.</p>
-  </div>
-  <div class="quiz-grid">
-    <a href="quiz/alcohol-calorie-deficit.html" class="quiz-card-home">
-      <span class="quiz-tag-home">Nutrition</span>
-      <h3>Can You Drink and Still Lose Weight?</h3>
-      <p>How much of your calorie deficit are your drinks using up?</p>
-      <div class="quiz-meta-home">5 questions · ~2 min</div>
-    </a>
-    <a href="quiz/best-workout-time.html" class="quiz-card-home">
-      <span class="quiz-tag-home">Fitness</span>
-      <h3>What’s Your Best Time to Work Out?</h3>
-      <p>Morning, lunchtime or evening? Find the window you’ll actually stick to.</p>
-      <div class="quiz-meta-home">5 questions · ~2 min</div>
-    </a>
-    <a href="quiz/which-exercise-snack.html" class="quiz-card-home">
-      <span class="quiz-tag-home">Fitness</span>
-      <h3>Which Exercise Snack Fits You?</h3>
-      <p>Stairs, sit-to-stands or walking bursts? Find the format that fits your day.</p>
-      <div class="quiz-meta-home">5 questions · ~2 min</div>
-    </a>
-    <a href="quiz/active-couch-potato.html" class="quiz-card-home">
-      <span class="quiz-tag-home">Lifestyle</span>
-      <h3>Are You an Active Couch Potato?</h3>
-      <p>You exercise — but what about the other ten hours? Find your movement profile.</p>
-      <div class="quiz-meta-home">5 questions · ~2 min</div>
-    </a>
-    <a href="quiz/return-to-training-after-break.html" class="quiz-card-home">
-      <span class="quiz-tag-home">Fitness</span>
-      <h3>How Should You Return to Training After a Break?</h3>
-      <p>Resume, rebuild, or restart? Find your comeback approach.</p>
-      <div class="quiz-meta-home">5 questions · ~2 min</div>
-    </a>
-    <a href="quiz/ideal-fasting-protocol.html" class="quiz-card-home">
-      <span class="quiz-tag-home">Nutrition</span>
-      <h3>What's Your Ideal Fasting Protocol?</h3>
-      <p>Find the intermittent fasting schedule that fits your lifestyle and goals.</p>
-      <div class="quiz-meta-home">5 questions · ~2 min</div>
-    </a>
-  </div>
-  <div style="text-align:center;margin-top:2rem;">
-    <a href="quiz/" style="display:inline-block;padding:.75rem 2rem;background:var(--sage-dark);color:white;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:500;">View all 19 quizzes →</a>
   </div>
 </section>
 
-<!-- BLOG PREVIEW -->
-<section class="section">
-  <div class="section-header">
-    <h2>From the blog</h2>
-    <p>Evidence-based wellness guides to help you make better decisions.</p>
-  </div>
-  <div class="blog-grid">
-    <a href="blog/hrv-and-zone-2-training.html" class="blog-card">
-      <span class="blog-tag">Fitness</span>
-      <h3>HRV and Zone 2 Training: Using Heart Rate Variability to Guide Your Cardio</h3>
-      <p>What your morning HRV reading should mean for today's Zone 2 session — and how Zone 2 improves HRV over time.</p>
-      <div class="blog-meta">7 min read · July 2026</div>
-    </a>
-    <a href="blog/why-1rm-calculator-doesnt-match-real-max.html" class="blog-card">
-      <span class="blog-tag">Fitness</span>
-      <h3>Why Your Calculated 1RM Doesn't Match Your Real Max</h3>
-      <p>Match your specific mismatch to its cause — from warm-up fatigue to rep-range error — plus how to test a true max safely.</p>
-      <div class="blog-meta">6 min read · July 2026</div>
-    </a>
-    <a href="blog/protein-satiety-appetite-control.html" class="blog-card">
-      <span class="blog-tag">Nutrition</span>
-      <h3>How Protein Controls Hunger: Using Protein to Stay Full on a Diet</h3>
-      <p>The per-meal protein threshold that reduces hunger, the best sources for it, and why you might still be hungry despite hitting your target.</p>
-      <div class="blog-meta">7 min read · July 2026</div>
-    </a>
-  </div>
-  <div style="text-align:center;margin-top:2rem;">
-    <a href="blog/" style="display:inline-block;padding:.75rem 2rem;background:var(--sage-dark);color:white;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:500;">View all articles →</a>
+<section class="h-sec" id="goals">
+  <div class="h-wrap">
+    <div class="h-sec-head">
+      <h2 class="h-display">What are you trying to work out?</h2>
+      <p>Every calculator on the site, grouped by the question it answers.</p>
+    </div>
+    <div class="h-jump" role="navigation" aria-label="Jump to a goal">
+      <a href="#lose-weight">Weight and fat loss</a>
+      <a href="#heart-rate">Heart rate and cardio</a>
+      <a href="#build-muscle">Muscle and strength</a>
+      <a href="#body">Body measurements</a>
+      <a href="#habits">Sleep, water and daily habits</a>
+    </div>
+
+    <div class="h-goals">
+      <div class="h-col">
+        <div class="h-goal" id="lose-weight">
+          <h3 class="h-display">Weight and fat loss</h3>
+          <p>How much to eat, how fast to lose, and when to eat it.</p>
+          <ul class="h-list">
+            <li><a href="tools/calorie-calculator.html"><span class="h-t">Calorie &amp; TDEE Calculator</span><span class="h-o">Daily calories to maintain, lose or gain weight</span></a></li>
+            <li><a href="tools/calorie-deficit-calculator.html"><span class="h-t">Calorie Deficit Calculator</span><span class="h-o">A daily target for fat loss and a timeline to your goal weight</span></a></li>
+            <li><a href="tools/macro-calculator.html"><span class="h-t">Macro Calculator</span><span class="h-o">Protein, carbs and fat in grams per day</span></a></li>
+            <li><a href="tools/if-calculator.html"><span class="h-t">Intermittent Fasting Planner</span><span class="h-o">Eating and fasting times for 16:8, 18:6 or 5:2</span></a></li>
+            <li><a href="tools/if-calculator-women.html"><span class="h-t">IF Calculator for Women</span><span class="h-o">A fasting window matched to life stage and cycle</span></a></li>
+            <li><a href="tools/fasting-timer.html"><span class="h-t">Fasting Timer</span><span class="h-o">Live elapsed time, fasting stages and when your window opens</span></a></li>
+          </ul>
+          <p class="h-more"><span>Quiz</span><a href="quiz/fat-loss-strategy.html">What’s your fat loss strategy?</a></p>
+          <p class="h-more"><span>Guide</span><a href="blog/calorie-deficit-how-much.html">How big a deficit should you have?</a></p>
+        </div>
+
+        <div class="h-goal" id="heart-rate">
+          <h3 class="h-display">Heart rate and cardio</h3>
+          <p>Training zones, calories from heart rate, and aerobic fitness.</p>
+          <ul class="h-list">
+            <li><a href="tools/heart-rate-zone.html"><span class="h-t">Heart Rate Zone Calculator</span><span class="h-o">All five training zones in bpm</span></a></li>
+            <li><a href="tools/zone-2-calculator.html"><span class="h-t">Zone 2 Heart Rate Calculator</span><span class="h-o">Your Zone 2 range, with or without resting heart rate</span></a></li>
+            <li><a href="tools/calories-burned-by-heart-rate.html"><span class="h-t">Calories Burned by Heart Rate</span><span class="h-o">Calories from average heart rate, age, weight and time</span></a></li>
+            <li><a href="tools/maf-calculator.html"><span class="h-t">MAF Heart Rate Calculator</span><span class="h-o">Your aerobic ceiling from the Maffetone 180 formula</span></a></li>
+            <li><a href="tools/active-recovery-calculator.html"><span class="h-t">Active Recovery Heart Rate Calculator</span><span class="h-o">The Zone 1 ceiling for rest-day movement</span></a></li>
+            <li><a href="tools/vo2-max-calculator.html"><span class="h-t">VO2 Max Calculator</span><span class="h-o">VO2 max from a field test and your category by age</span></a></li>
+            <li><a href="tools/detraining-calculator.html"><span class="h-t">Detraining Calculator</span><span class="h-o">Fitness lost during a break and the weeks to get it back</span></a></li>
+            <li><a href="tools/running-pace.html"><span class="h-t">Running Pace Calculator</span><span class="h-o">Pace, finish time or distance for any run</span></a></li>
+          </ul>
+          <p class="h-more"><span>Quiz</span><a href="quiz/training-zone.html">What’s your training zone?</a></p>
+          <p class="h-more"><span>Guide</span><a href="blog/zone-2-heart-rate-by-age.html">Zone 2 heart rate by age</a></p>
+        </div>
+      </div>
+      <div class="h-col">
+        <div class="h-goal" id="build-muscle">
+          <h3 class="h-display">Muscle and strength</h3>
+          <p>Protein, a lean surplus, and how strong you are now.</p>
+          <ul class="h-list">
+            <li><a href="tools/protein-calculator.html"><span class="h-t">Protein Intake Calculator</span><span class="h-o">Grams of protein a day for your weight and goal</span></a></li>
+            <li><a href="tools/protein-calculator-women-over-40.html"><span class="h-t">Protein Calculator for Women Over 40</span><span class="h-o">A daily target adjusted for the changes after 40</span></a></li>
+            <li><a href="tools/calorie-surplus-calculator.html"><span class="h-t">Calorie Surplus Calculator</span><span class="h-o">A controlled surplus for building muscle with less fat gain</span></a></li>
+            <li><a href="tools/one-rep-max.html"><span class="h-t">One Rep Max Calculator</span><span class="h-o">Estimated 1RM from any set, plus training percentages</span></a></li>
+            <li><a href="tools/ffmi-calculator.html"><span class="h-t">FFMI Calculator</span><span class="h-o">Fat-free mass index, normalised for height</span></a></li>
+          </ul>
+          <p class="h-more"><span>Quiz</span><a href="quiz/muscle-building-starting-point.html">Your muscle-building starting point</a></p>
+          <p class="h-more"><span>Guide</span><a href="blog/what-is-ffmi.html">What is FFMI?</a></p>
+        </div>
+
+        <div class="h-goal" id="body">
+          <h3 class="h-display">Body measurements</h3>
+          <p>What your weight, waist and body fat say about your health.</p>
+          <ul class="h-list">
+            <li><a href="tools/bmi-calculator.html"><span class="h-t">BMI Calculator</span><span class="h-o">Body mass index and weight category, metric or imperial</span></a></li>
+            <li><a href="tools/body-fat-calculator.html"><span class="h-t">Body Fat % Estimator</span><span class="h-o">Body fat from tape measurements with the U.S. Navy method</span></a></li>
+            <li><a href="tools/lean-body-mass-calculator.html"><span class="h-t">Lean Body Mass Calculator</span><span class="h-o">How much of your weight is fat-free mass</span></a></li>
+            <li><a href="tools/ideal-weight.html"><span class="h-t">Ideal Body Weight Calculator</span><span class="h-o">A healthy weight range from four medical formulas</span></a></li>
+            <li><a href="tools/waist-to-hip-ratio-calculator.html"><span class="h-t">Waist-to-Hip Ratio Calculator</span><span class="h-o">Your ratio and its risk level under WHO cut-offs</span></a></li>
+          </ul>
+          <p class="h-more"><span>Quiz</span><a href="quiz/healthy-bmi.html">Are you at a healthy BMI?</a></p>
+          <p class="h-more"><span>Guide</span><a href="blog/healthy-body-fat-percentage.html">Healthy body fat percentage</a></p>
+        </div>
+
+        <div class="h-goal" id="habits">
+          <h3 class="h-display">Sleep, water and daily habits</h3>
+          <p>The small daily numbers that add up.</p>
+          <ul class="h-list">
+            <li><a href="tools/water-intake.html"><span class="h-t">Water Intake Calculator</span><span class="h-o">Daily water for your weight, activity and climate</span></a></li>
+            <li><a href="tools/sleep-calculator.html"><span class="h-t">Sleep Cycle Calculator</span><span class="h-o">Bedtimes and wake-up times in 90-minute cycles</span></a></li>
+            <li><a href="tools/vitamin-d-calculator.html"><span class="h-t">Vitamin D Calculator</span><span class="h-o">A daily target in IU for your age, skin tone and sun exposure</span></a></li>
+            <li><a href="tools/sitting-offset-calculator.html"><span class="h-t">Sitting Offset Calculator</span><span class="h-o">The activity your sitting time calls for, and a break plan</span></a></li>
+            <li><a href="tools/exercise-snack-calculator.html"><span class="h-t">Exercise Snack Calculator</span><span class="h-o">How many short vigorous bursts a day you need</span></a></li>
+          </ul>
+          <p class="h-more"><span>Quiz</span><a href="quiz/sleep-type.html">What’s your sleep type?</a></p>
+          <p class="h-more"><span>Guide</span><a href="blog/how-much-water-per-day.html">How much water per day?</a></p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- AFFILIATE NOTE + AD -->
-<div class="ad-banner">Advertisement · Google AdSense</div>
+<section class="h-sec h-quiz" id="quizzes">
+  <div class="h-wrap">
+    <div class="h-sec-head">
+      <h2 class="h-display">Not sure which number matters?</h2>
+      <p>Answer five questions and get a result that explains itself and points you to the right calculator.</p>
+    </div>
+    <ul class="h-qlist">
+      <li><a href="quiz/alcohol-calorie-deficit.html"><span class="h-q">Can you drink and still lose weight?<span class="h-new">New</span></span><span class="h-qm">How much of your deficit your drinks use up</span></a></li>
+      <li><a href="quiz/best-workout-time.html"><span class="h-q">What’s your best time to work out?</span><span class="h-qm">Morning, midday or evening, based on the window you’ll keep</span></a></li>
+      <li><a href="quiz/creatine-right-for-you.html"><span class="h-q">Is creatine right for you?</span><span class="h-qm">Whether it makes sense for your goals and training</span></a></li>
+      <li><a href="quiz/enough-protein.html"><span class="h-q">Are you getting enough protein?</span><span class="h-qm">Your intake against the target for your goal</span></a></li>
+      <li><a href="quiz/zone-2-fitness-level.html"><span class="h-q">What’s your Zone 2 fitness level?</span><span class="h-qm">Where your aerobic base is now and how to build it</span></a></li>
+      <li><a href="quiz/weight-loss-plateau.html"><span class="h-q">Are you in a weight loss plateau?</span><span class="h-qm">A true plateau or not, and what’s most likely causing it</span></a></li>
+      <li><a href="quiz/ideal-fasting-protocol.html"><span class="h-q">What’s your ideal fasting protocol?</span><span class="h-qm">The fasting schedule that fits your day and goal</span></a></li>
+      <li><a href="quiz/which-exercise-snack.html"><span class="h-q">Which exercise snack fits you?</span><span class="h-qm">Stairs, sit-to-stands or walking bursts for a busy day</span></a></li>
+    </ul>
+    <a href="quiz/" class="h-btn h-btn-mark">See all 25 quizzes</a>
+  </div>
+</section>
+
+<section class="h-sec">
+  <div class="h-wrap">
+    <div class="h-sec-head">
+      <h2 class="h-display">Recently updated guides</h2>
+      <p>Longer reads that explain the numbers, with the research behind them.</p>
+    </div>
+    <div class="h-guides">
+      <a href="blog/zone-2-heart-rate-by-age.html"><span class="h-gd">Updated October 2026</span><span class="h-gt">Zone 2 heart rate by age: complete reference chart</span><span class="h-gp">Zone 2 in bpm for every age from 20 to 80, by percentage of maximum and by the Karvonen method.</span></a>
+      <a href="blog/fat-burning-heart-rate-zone.html"><span class="h-gd">Updated October 2026</span><span class="h-gt">Fat burning heart rate zone: how to calculate and use it</span><span class="h-gp">A chart by age and sex, and a check for whether your current heart rate is in the zone.</span></a>
+      <a href="blog/alcohol-and-calorie-deficit.html"><span class="h-gd">Updated October 2026</span><span class="h-gt">How alcohol fits into your calorie deficit</span><span class="h-gp">Ten common drinks compared by calories, and how many fit into a deficit without stalling progress.</span></a>
+      <a href="blog/best-time-to-exercise.html"><span class="h-gd">Updated October 2026</span><span class="h-gt">Best time to exercise: morning vs evening</span><span class="h-gp">What the trials actually found on timing, fat loss, performance and sleep.</span></a>
+    </div>
+    <a href="blog/" class="h-link">Browse all 53 guides</a>
+  </div>
+</section>
+
+<section class="h-sec h-method">
+  <div class="h-wrap">
+    <div class="h-sec-head">
+      <h2 class="h-display">How the numbers are worked out</h2>
+    </div>
+    <div class="h-mgrid">
+      <div>
+        <h3>Named formulas</h3>
+        <p>Calculators say which equation they use, such as Mifflin-St Jeor for calories, the U.S. Navy method for body fat and Epley for one-rep max, so you can look it up yourself.</p>
+      </div>
+      <div>
+        <h3>Charts match the tools</h3>
+        <p>Reference tables in our guides are recomputed with the same formula the calculator runs, so the chart and the tool give you the same answer.</p>
+      </div>
+      <div>
+        <h3>Corrections are logged</h3>
+        <p>When we get something wrong we fix it and record the change. Results are estimates, not medical advice.</p>
+      </div>
+    </div>
+    <a href="terms.html" class="h-link">Read how our content is made</a>
+  </div>
+</section>
+
+<script>
+(function () {
+  var range = document.getElementById('hrAge');
+  if (!range) return;
+  var ageOut = document.getElementById('hrAgeOut');
+  var maxOut = document.getElementById('hrMax');
+  var rows = document.querySelectorAll('#hrZones b');
+  var Z = [[50, 60], [60, 70], [70, 80], [80, 90], [90, 100]];
+  function draw() {
+    var age = parseInt(range.value, 10);
+    var max = 220 - age;
+    ageOut.textContent = age;
+    maxOut.textContent = max;
+    Z.forEach(function (z, i) {
+      rows[i].textContent = Math.round(max * z[0] / 100) + '–' + Math.round(max * z[1] / 100) + ' bpm';
+    });
+  }
+  function step(d) {
+    var v = Math.min(80, Math.max(18, parseInt(range.value, 10) + d));
+    range.value = v;
+    draw();
+  }
+  range.addEventListener('input', draw);
+  document.getElementById('hrMinus').addEventListener('click', function () { step(-1); });
+  document.getElementById('hrPlus').addEventListener('click', function () { step(1); });
+  draw();
+})();
+</script>
+</main>
+
 
 <footer>
   <div class="footer-inner">

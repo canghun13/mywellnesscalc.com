@@ -1,5 +1,14 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-10-26
+> 최종 업데이트: 2026-10-27
+
+## 2026-10-27 세션 — 홈(index.html) 본문 전면 개편 (사용자 요청: "헤드·메뉴는 그대로, 쭉 나열 말고 다르게, 다른 프로젝트와 디자인이 너무 같음")
+- **바꾼 것(index.html만)**: `<nav>`·footer·배지줄·head(메타/GA/애드센스/스키마)는 그대로 두고 본문만 교체. 스타일은 index.html 인라인 `<style>`에 `.home`/`.h-*` 접두로 격리. style.css는 건드리지 않았음.
+  - 디자인 토큰: 잉크 네이비 `#13293d`, 워시 `#edf2f6`, 링크 블루 `#2457d6`, 하이라이터 옐로 `#ffd93d`. 폰트 **Archivo**(가변 폭: 제목은 wdth 118 확장형, 큰 숫자는 wdth 75 압축형). 기존 sage/cream + Fraunces/DM Sans 느낌에서 벗어남(Fraunces/DM Sans는 nav용으로만 로드).
+  - 구성: ① 히어로 = 헤드라인 + **나이 슬라이더로 바로 돌아가는 심박존 계산기**(220−나이, 50~100% 5존, Zone 2 하이라이트; heart-rate-zone/zone-2 도구와 같은 공식·반올림, 35세 = 111–130으로 블로그 표와 일치) ② **목표별 그룹 5개**(체중·지방 감량 / 심박·유산소 / 근육·근력 / 신체 측정 / 수면·수분·생활습관)에 계산기 29개 전부 + 그룹별 퀴즈 1·가이드 1 ③ 퀴즈 밴드(네이비 배경, 8개, 신규 퀴즈 New 배지) ④ 최근 업데이트 가이드 4개 ⑤ "숫자를 어떻게 계산하나"(공식 명시·표=도구 일치·정정 기록 → terms.html).
+  - **삭제**: 근거 없는 수치("50K+ calculations", "4.9★ average rating", "16 tools", "10+ tools"), 남아 있던 광고 자리표시자 2개(`Advertisement · Google AdSense`), 오래된 "View all 19 quizzes".
+- **유지보수 규칙(신규 콘텐츠 추가 시)**: 히어로 문구의 개수 "29 free calculators and 25 short quizzes", 퀴즈 버튼 "See all 25 quizzes", "Browse all 53 guides"는 **하드코딩** → 도구/퀴즈/글 추가 시 같이 올릴 것. 신규 퀴즈는 `.h-qlist` 맨 위에 넣고 `<span class="h-new">New</span>`을 옮김(이전 방식의 quiz-card-home 미리보기는 없어짐). 신규 계산기는 맞는 목표 그룹 `.h-list`에 `<li><a><span class="h-t">이름</span><span class="h-o">무엇을 알려주는지</span></a></li>`로 추가.
+- 검증: 375/1280 렌더(가로 스크롤 없음, JS 에러 0), verify.py 통과, audit.py 115페이지 문제 0, 내부 링크 전부 실존, 슬라이더 값 검산(61세 → 159 / 80–95 / 95–111 / 111–127 / 127–143 / 143–159).
+- 사이트 다른 페이지(도구/블로그/퀴즈)는 아직 기존 sage/cream 디자인. 전체 톤 통일 여부는 사용자 결정.
 
 ## 2026-10-26 세션 — 주간 점검(앞당겨 진행). 🟢 **`calories-burned-by-heart-rate` 구글 평균 9.7위(첫 10위권)** / 🔴 **크롤링됨-미색인 11 → 17** / 신규 퀴즈 1건(`alcohol-calorie-deficit`) / Bing 2,635(+11%)
 
