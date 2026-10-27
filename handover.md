@@ -10,7 +10,8 @@
 - 검증: 375/1280 렌더(가로 스크롤 없음, JS 에러 0), verify.py 통과, audit.py 115페이지 문제 0, 내부 링크 전부 실존, 슬라이더 값 검산(61세 → 159 / 80–95 / 95–111 / 111–127 / 127–143 / 143–159).
 - 사이트 다른 페이지(도구/블로그/퀴즈)는 아직 기존 sage/cream 디자인. 전체 톤 통일 여부는 사용자 결정.
 - **(같은 날 2차 수정, 사용자 피드백 "2단이 엇갈려 카테고리 구분이 안 됨")**: 목표 섹션을 **카테고리별 전폭 패널**로 교체. PC = 왼쪽 컬러 사이드(아이콘 SVG·제목·설명·퀴즈/가이드) + 오른쪽 흰 타일 2열, 홀수 마지막 타일은 2칸 차지. 모바일 = 사이드가 상단 헤더로, 타일 1열, 점프 칩 2열. 카테고리 색은 `.g-<id>` 클래스의 `--g-ink/--g-soft/--g-tint/--g-line` 변수(감량=앰버, 심박=레드, 근육=블루, 신체측정=틸, 생활습관=바이올렛). 순서: 감량 → 심박 → 근육 → 신체측정 → 생활습관.
-- **(3차) 푸터 전면 교체 — 사이트 전체 115페이지 + `assets/partials/footer.html`**: `<footer class="site-footer">` 네이비 4단(브랜드 소개 / Calculators 7+All / Quizzes 5+All / About the site 5) + 하단줄(©, "not medical advice"). 스타일은 style.css `/* ── FOOTER ── */` 블록. audit.py의 footer 5링크 검사는 `ul.footer-links`(About the site 열)로 그대로 통과. 홈 전용 등록 배지 줄은 `.footer-badges`로 네이비 배경에 맞춤. **푸터 퀴즈/계산기 링크는 하드코딩**이라 대표 퀴즈를 바꿀 땐 115페이지 일괄 치환 필요(구조 동일하므로 python 치환 1회).
+- **(3차) 푸터 교체 — 사이트 전체 115페이지 + `assets/partials/footer.html`**: 사용자 요청 "툴은 계속 늘어나니 개별 링크 넣지 말고 메뉴 + 애드센스용 페이지만 깔끔하게". `<footer class="site-footer">` 네이비: 왼쪽 로고+한 줄 소개(의료 조언 아님 포함), 오른쪽 위 메뉴(Tools/Quiz/Blog), 아래 줄 About·Contact·Privacy Policy·Terms & Disclaimer(밑줄로 잘 보이게), 맨 아래 ©. **고정 구조라 콘텐츠가 늘어도 수정 불필요.** 스타일은 style.css `/* ── FOOTER ── */`. audit.py 푸터 검사 = `footer .footer-links a` 4개로 변경. 홈 전용 등록 배지 줄은 `.footer-badges`.
+- **용어 규칙(사용자 지시)**: UI 문구에서 "Calculators/calculator" 대신 **"tools/tool"** 사용. 홈 본문 문구 교체 완료(h1 "Health tools that show their working" 등). 개별 도구 이름(예: "BMI Calculator")과 홈 `<title>`/meta(검색어 "health calculators")는 SEO 때문에 그대로 둠.
 
 ## 2026-10-26 세션 — 주간 점검(앞당겨 진행). 🟢 **`calories-burned-by-heart-rate` 구글 평균 9.7위(첫 10위권)** / 🔴 **크롤링됨-미색인 11 → 17** / 신규 퀴즈 1건(`alcohol-calorie-deficit`) / Bing 2,635(+11%)
 

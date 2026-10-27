@@ -143,40 +143,36 @@ nav {
 /* ── FOOTER ── */
 .site-footer {
   background: #13293d; color: #b9c7d4;
-  margin-top: 4rem; padding: 3.5rem 2rem 0;
-  font-family: 'DM Sans', sans-serif; font-size: 0.9rem; line-height: 1.55;
+  margin-top: 4rem; padding: 3rem 2rem 0;
+  font-family: 'DM Sans', sans-serif; font-size: 0.92rem; line-height: 1.55;
 }
 .footer-inner {
   max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, 1fr));
-  gap: 2.5rem;
+  display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem 3rem;
 }
 .footer-logo {
   font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600;
-  color: #fff; text-decoration: none; display: inline-block; margin-bottom: 0.75rem;
+  color: #fff; text-decoration: none; display: inline-block; margin-bottom: 0.6rem;
 }
-.footer-brand p { max-width: 24rem; color: #b9c7d4; }
-.footer-h { color: #fff; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.85rem; }
-.footer-col ul { list-style: none; display: grid; gap: 0.55rem; }
-.footer-col a { color: #b9c7d4; text-decoration: none; }
-.footer-col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-.footer-col a.footer-all { color: #ffd93d; font-weight: 500; }
+.footer-brand p { max-width: 26rem; }
+.footer-nav { display: grid; gap: 0.9rem; justify-items: end; }
+.footer-nav ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.4rem 1.6rem; }
+.footer-menu a { color: #fff; font-weight: 500; font-size: 1rem; text-decoration: none; }
+.footer-links a { color: #b9c7d4; text-decoration: underline; text-decoration-color: rgba(185, 199, 212, 0.4); text-underline-offset: 4px; }
+.site-footer a:hover { color: #fff; text-decoration: underline; text-decoration-color: currentColor; }
 .site-footer a:focus-visible { outline: 2px solid #ffd93d; outline-offset: 2px; border-radius: 3px; }
 .footer-bottom {
-  max-width: 1100px; margin: 2.75rem auto 0; padding: 1.25rem 0 1.5rem;
+  max-width: 1100px; margin: 2.25rem auto 0; padding: 1.1rem 0 1.4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem 2rem;
   font-size: 0.82rem; color: #8fa2b4;
 }
 .footer-badges { background: #13293d; padding: 0 2rem 2rem; }
-.footer-badges > div { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-start; opacity: 0.85; }
-@media (max-width: 860px) {
-  .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
-  .footer-brand { grid-column: 1 / -1; }
-}
-@media (max-width: 480px) {
-  .site-footer { padding: 2.75rem 1rem 0; }
+.footer-badges > div { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.5rem; opacity: 0.85; }
+@media (max-width: 700px) {
+  .site-footer { padding: 2.5rem 1rem 0; }
   .footer-badges { padding: 0 1rem 1.5rem; }
+  .footer-nav { justify-items: start; }
+  .footer-nav ul { justify-content: flex-start; gap: 0.5rem 1.4rem; }
 }
 
 /* ── HAMBURGER ── */
