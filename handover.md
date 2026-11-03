@@ -1,5 +1,55 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-10-27
+> 최종 업데이트: 2026-11-03
+
+## 2026-11-03 세션 — 주간 점검(앞당겨 진행). 🟢 **구글 일별 노출 반등·최고치(10-28 370)** / 🟢 **`calories-burned-by-heart-rate` 4,167노출·8.8위·클릭 13** / Coverage 변화 없음(17·6) / 신규 퀴즈 1건(`cardio-before-or-after-weights`) / Bing 2,876(+9%)
+
+**작업 방식**: 세션 GitHub 연결로 clone·push(컨테이너 교체로 scratchpad 도구 재작성: `verify.py`·`audit.py`는 같은 기능으로 다시 만듦 — 이전 세션의 다른 스크립트는 없음). 자료: GSC Performance(10-31까지) + Coverage 2종(차트 10-23까지), Bing(11-03), GA4(10-06~11-02).
+
+### 구글
+- 3개월 클릭 34 → **41**. 일별 노출 10-24 160 → **10-27 300, 10-28 370, 10-29 361, 10-31 362**(지금까지 최고). 평균순위 18~25위대. 지난주 하락은 한 주로 끝남.
+- 증가분의 대부분이 **`tools/calories-burned-by-heart-rate`: 3,122 → 4,167노출(+1,045), 9.7 → 8.8위, 클릭 10 → 13.** 쿼리 `heart rate calorie calculator` 9.9위 신규 등장. **계속 무변경.**
+- 클릭원: `creatine` 퀴즈 14, 위 툴 13, `ideal-body-weight` 퀴즈 4. **퀴즈+심박 칼로리 툴 구도 그대로.**
+- 기기별 평균순위: 모바일 12.5 / 데스크톱 54.6(노출은 비슷). 참고용 사실.
+- `protein-calculator` 1,472노출이지만 76위(`protein calculator` 732노출/78.7위) — 8페이지라 클릭 기대 없음.
+
+### Coverage (차트 10-23까지 — 지난주와 같은 시점까지 4일만 늘어남)
+- 크롤링됨-미색인 **17 그대로**, 목록 동일. 발견됨-미색인 **6 그대로**(`active-couch-potato`, `best-workout-time`, `which-exercise-snack` 퀴즈, `terms`, `exercise-snack-calculator`, `sitting-offset-calculator`). `alcohol-calorie-deficit` 퀴즈는 아직 어느 목록에도 없음.
+- 원인 단정 금지 유지. 통합(같은 의도 페이지 정리) 여부는 **여전히 사용자 답 대기**(10-26 목록 참고).
+
+### Bing — 2,635 → 2,876노출, 55 → 61클릭
+- `zone-2-heart-rate-by-age` 258 → **363**, 클릭 7 → 10(5.0위). 고령 쿼리 계속(`67 female in zone 2 hr`, `zone 2 52 year old male`, `best zone 2 hert beat for 57 yo man`(클릭)).
+- `best-time-to-exercise` 296 → 342. `alcohol` CTR 7.7%(6클릭).
+
+### GA4 (10-06~11-02)
+- 활성 476, 싱가포르 300(63%). google/organic 28세션, bing 32(창이 지난주와 다르므로 직접 비교 금지). 봇 필터 미처리(사용자).
+
+### 이번 세션에 한 작업
+**신규 퀴즈 `quiz/cardio-before-or-after-weights.html` (약 1,300단어) — "Should You Do Cardio Before or After Weights?"**
+- **포맷 공백(표준 절차 적용)**: 아티클은 대형 포화(Gymshark, ACE, GoodRx, Marathon Handbook, Fit&Well, SELF/Women's Health 인용, Legion, BetterMe, Hydrow, Sweat 등 20개+, 브랜드·의료 쪽 다수) / **이 질문의 퀴즈·인터랙티브 0건**(일반·확장 검색 2회). 퀴즈가 구글 클릭을 받는 실측과 맞음.
+- **자기잠식 확인**: 이 주제를 다루는 페이지는 없음. `quiz/cardio-type.html`에 FAQ 1문항("Should I do cardio before or after weights?")만 있고 결론이 신규 퀴즈와 일치(지방감량은 순서 무관, 근력 우선이면 웨이트 먼저). 그 퀴즈 Related에 링크 추가(fat-burning 링크 1개 교체).
+- **롱테일 장치**: 결과가 4+1종(웨이트 먼저 / 유산소 먼저 / 분리 / 순서 무관 / "10분 이하 쉬운 유산소는 워밍업")으로 목표·유산소 종류·하체일·일정·길이에 따라 갈리고, 본문 H2로 `for fat loss` / `for muscle` / `for endurance` / `how long between` / `running vs cycling` / `does cardio kill gains` 롱테일을 받음. 기사들이 못 주는 "내 일정 기준 답"이 해자.
+- **근거(전부 원문 초록 대조함)**: Eddens 2018 *Sports Med* 48:177–188(10연구, 웨이트 먼저 시 하체 동적 근력 +6.91%, 근비대·정적근력·VO2max·체지방 차이 없음), Murlasits 2018 *J Sports Sci* 36:1212–1219(하체 1RM +3.96 kg, VO2max 차이 없음), Robineau 2016 *JSCR* 30:672–683(럭비 58명 7주, 0h 간격이 6h·24h보다 근력 증가 작음, 24h가 VO2peak 최대, "6시간 미만 피하라"), Schumann 2022 *Sports Med* 52:601–612(43연구, 근비대·최대근력 저해 없음, 폭발력만 저해·같은 세션에서 더 큼), Wilson 2012 *JSCR* 26:2293–2307(러닝은 근비대·근력 저해, 사이클은 아님, 빈도·시간 길수록 저해).
+- **로직**: 부하 = 유산소 종류(쉬움0/사이클·로잉1/러닝2/인터벌2) + 길이(≤10분0/15–30 1/30–60 2/60+ 3) + 하체일(1). ≤10분이고 쉬운·중간 강도면 "워밍업". 근력 목표 → 분리 가능하고 부하≥4면 분리, 아니면 웨이트 먼저. 지구력 → 분리 가능·하체일·부하≥4면 분리, 아니면 유산소 먼저. 감량/건강 → 러닝·인터벌 + 하체일이면 웨이트 먼저, 아니면 순서 무관. 러닝 노트(Wilson), 하루 2회 가능 시 6시간 노트(Robineau) 자동 추가.
+- **검증**: 1,024조합 전수 — 워밍업 128 / 웨이트 먼저 268 / 분리 138 / 유산소 먼저 170 / 순서 무관 320, undefined·NaN 0. FAQ 본문=스키마(5문항). Chromium 375/1280에서 4경로 클릭스루(진행바 100%, 가로 스크롤 없음, JS 에러 0). 116페이지 전수 렌더 이상 없음.
+- **배선**: quiz/index 맨 위(New `badge-added:2026-11-03`, 10-26 배지 제거), 홈 퀴즈 밴드 맨 위(New 이동, 8개 유지 위해 `weight-loss-plateau` 제외 — 블로그 12곳에서 링크됨; `which-exercise-snack`은 아직 미크롤이라 홈 링크 유지), 홈 개수 25 → **26 quizzes**, sitemap 116, llms.txt, `cardio-type` Related.
+
+### 신규 후보 — 2건 조사, 1건 채택 (누적 65건). "아티클 포화 / 퀴즈 0" 패턴 6번째 적용.
+| 후보 | 판정 |
+|---|---|
+| 웨이트 전후 유산소 순서 퀴즈 | **채택**(위) |
+| 공복 vs 식후 운동(fasted training) 퀴즈 | **보류 — 자기잠식.** 아티클 포화·퀴즈 0은 같지만, 우리 `best-workout-time` 퀴즈·`ideal-fasting-protocol` 퀴즈·`protein-timing` 글·`best-time-to-exercise` 글이 이미 FAQ로 같은 질문에 답하고 있어 같은 의도 페이지를 하나 더 만드는 셈(현재 크롤링됨-미색인 관찰과 같은 구조) |
+
+### 💰 수익화 관점
+- 구글이 클릭을 주는 퀴즈 포맷, 헬스장 이용자(운동 루틴 질문) 수요가 큰 주제로 냄. 심박 칼로리 툴은 상승 중이라 손대지 않는 것이 가장 수익에 맞음.
+- **🔵 사용자 조치(구글 서치콘솔 → URL 검사 → 색인 생성 요청)**: `quiz/cardio-before-or-after-weights.html`(신규), `quiz/alcohol-calorie-deficit.html`(지난주 신규, 아직 미발견).
+
+### 다음 세션 우선순위
+1. `calories-burned-by-heart-rate` 8위대 유지·클릭 추이(무변경). 구글 일별 노출 300대 유지 여부.
+2. Coverage 갱신 확인(이번엔 차트가 10-23에서 멈춰 사실상 새 정보 없음) — 신규 퀴즈 2개 발견 여부.
+3. 통합 여부 사용자 답(10-26 목록).
+4. Sources 미적용 페이지 계속(인용 대조 먼저).
+5. ⛔ 누적 금지 목록 유지 + **공복 운동 퀴즈(이번 보류, 자기잠식)**.
+
 
 ## 2026-10-27 세션 — 홈(index.html) 본문 전면 개편 (사용자 요청: "헤드·메뉴는 그대로, 쭉 나열 말고 다르게, 다른 프로젝트와 디자인이 너무 같음")
 - **바꾼 것(index.html만)**: `<nav>`·footer·배지줄·head(메타/GA/애드센스/스키마)는 그대로 두고 본문만 교체. 스타일은 index.html 인라인 `<style>`에 `.home`/`.h-*` 접두로 격리. style.css는 건드리지 않았음.
