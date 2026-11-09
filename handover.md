@@ -1,5 +1,52 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-11-03
+> 최종 업데이트: 2026-11-09
+
+## 2026-11-09 세션 — 주간 점검(앞당겨 진행). 🟢 **구글 일별 노출 400~534(최고치 경신), 3개월 클릭 41 → 54** / 🟢 **툴 페이지 전반 순위 상승, MAF 계산기 1페이지 진입 직전** / Coverage 차트 3주째 10-23에서 멈춤 / 신규 0건(2건 조사·기각) + 보강 1건 / Bing 3,155(+10%)
+
+**작업 방식**: 세션 GitHub 연결로 pull·push. 자료: GSC Performance(11-07까지) + Coverage 2종(차트 10-23까지), Bing(11-09), GA4(10-12~11-08).
+
+### 구글
+- 일별 노출 11-01 382 → 11-03 453 → **11-05 534**, 평균순위 17~23위. 3개월 클릭 41 → **54**.
+- **`tools/calories-burned-by-heart-rate` 4,167 → 5,629노출, 8.8 → 8.3위, 클릭 13 → 17.** 계속 무변경.
+- **`quiz/creatine-right-for-you` 클릭 14 → 17, 10.9 → 9.5위.** 계속 무변경.
+- **🆕 상승 중(무변경 목록에 추가)**: **`tools/maf-calculator`** — `maf heart rate calculator` 9.45위, `maf hr calculator` 9.2위, `maf formula calculator` 9.1위(클릭 1), `maf calculator` 21.7 → 14.3위. 페이지 184 → 258노출, 35.3 → 27.7위, 클릭 2. **`tools/ffmi-calculator`** — 112 → 215노출, 35.2 → 30.3위(`ffmi calculator` 47 → 33위, `how to calculate ffmi`·`ffmi meaning`·`ffmi calculator female/male` 25~29위).
+- 툴 페이지 대부분이 같은 방향(running-pace 63 → 51, vo2-max 65 → 57, one-rep-max 76 → 66, calorie-deficit 75 → 67, heart-rate-zone 72 → 66). 사실만 기록, 원인 단정 안 함.
+
+### Coverage — 새 정보 없음
+- 두 보고서 모두 차트가 **10-23에서 멈춘 상태로 3주째**(크롤링됨-미색인 17, 발견됨-미색인 6, 목록 동일). 이 자료로는 신규 퀴즈 2개(`alcohol-calorie-deficit`, `cardio-before-or-after-weights`)의 상태를 알 수 없음. GA4에는 `cardio-before-or-after-weights` 조회 2건이 잡힘.
+
+### Bing — 2,876 → 3,155노출, 61 → 64클릭
+- `zone-2-heart-rate-by-age` 363 → **493**, 클릭 12(4.8위). `best-time-to-exercise` 375, `how-long-to-lose-weight` 102 → 123.
+- 신규 롱테일: `what time frame is considered realistic for losing 10% of one's body weight?`(7노출, 7위) + 오타 변형 2노출 → 아래 보강의 근거.
+
+### GA4 (10-12~11-08)
+- 활성 515, 싱가포르 232(45%, 지난 창 63%). google/organic 32세션, bing 38. 봇 필터 미처리(사용자).
+
+### 이번 세션에 한 작업 — 보강 1건: `blog/how-long-to-lose-weight.html`
+- **선정 근거(수익화)**: 구글 199노출·**10.9위(2페이지 맨 위, 3주째 10.9~11.2로 정체 — 상승 중 아님)**, Bing 123노출. 1페이지로 올리면 바로 클릭이 생길 수 있는 자리. 쿼리 `realistic time frame for losing 10% of body weight`(Bing), `weight loss timeline first 3 months`(구글 39위)가 기존 본문에 없는 각도였음.
+- **추가**: H2 `How long does it take to lose 10% of your body weight?`(id `ten-percent`, TOC 추가) — NHLBI 가이드라인 "초기 목표 체중의 약 10%, 6개월이 합리적" 인용(원문 대조), 시작 체중 60~130 kg별 10% 무게·0.25/0.5/0.75 kg/주 소요 주수·6개월 달성 페이스 표 + H3 "첫 3개월"(12주 × 0.25/0.5/0.75 = 3/6/9 kg + 초기 수분 1~3 kg). FAQ 1문항 추가(7개, 본문=스키마 확인), Sources에 NHLBI 추가, dateModified 2026-11-09.
+- **표 계산 규칙**: 주수는 기존 "Time to reach common goals" 표와 같은 **올림**(예: 10 kg ÷ 0.75 = 13.3 → 14). 6개월 = 26주. 130 kg의 6개월 페이스가 정확히 0.50 kg/주라 문구를 "0.5 kg 이하"로 맞춤.
+- 검증: verify.py 이상 없음, 375/1280 렌더 확인(표는 기존처럼 래퍼 안 가로 스크롤), 116페이지 전수 렌더 문제 0.
+
+### 신규 후보 — 2건 조사, 전부 기각 (누적 67건)
+| 후보 | 판정 |
+|---|---|
+| 근육별 주간 세트 수(훈련 볼륨) 퀴즈/계산기 | **기각 — 전용 계산기 포화.** planfit Weekly Volume Calculator, coachway, aifithub, hacecuentas 등 4개+ 전용 툴 + 아티클 15개+(Legion, Jeff Nippard, StrengthLog, Built With Science, Garage Gym Reviews). 퀴즈는 0이지만 같은 질문에 답하는 계산기가 이미 있어 포맷 공백 아님 |
+| 노르웨이 4x4 인터벌 심박 계산기 | **기각 — 전용 계산기 포화.** rundida Norwegian 4x4 Calculator, norwegian4x4 전용 사이트, archlinelabs 타이머·가이드 + 앱 다수 |
+| (참고) 벌크 vs 컷 퀴즈 | 조사 전 제외 — 우리 `body-goal-type` 퀴즈가 같은 질문(감량/근육/리컴프)에 답함(자기잠식) |
+
+### 💰 수익화 관점
+- 구글 클릭은 여전히 심박 칼로리 툴 + 크레아틴 퀴즈 두 축(54건 중 34건). **새로 MAF 계산기가 같은 패턴(툴 페이지, 핵심 쿼리 9위대)으로 올라오는 중 → 손대지 않는 게 최선.**
+- 이번 주 신규는 공백이 있는 자리가 없어 내지 않았고, **2페이지 맨 위에서 정체된 글을 1페이지로 올리는 보강**에 썼음(전략 변경 아님).
+- **🔵 사용자 조치(서치콘솔 → URL 검사 → 색인 생성 요청)**: `blog/how-long-to-lose-weight.html`(보강). 아직 안 했다면 `quiz/cardio-before-or-after-weights.html`, `quiz/alcohol-calorie-deficit.html`.
+
+### 다음 세션 우선순위
+1. 심박 칼로리 툴·크레아틴 퀴즈·**MAF 계산기·FFMI 계산기** 추이(전부 무변경).
+2. `how-long-to-lose-weight` 10.9위 → 변화 확인(이번 보강 효과는 재크롤 이후에나 보임).
+3. Coverage 차트가 10-23 이후로 갱신되는지 — 신규 퀴즈 2개 상태.
+4. 통합 여부 사용자 답(10-26 목록), Sources 미적용 페이지 계속.
+5. ⛔ 누적 금지 + **훈련 볼륨 계산기/퀴즈, 노르웨이 4x4 계산기(이번 기각)**, **상승 중 페이지 변경 금지 대상에 maf-calculator·ffmi-calculator 추가**.
+
 
 ## 2026-11-03 세션 — 주간 점검(앞당겨 진행). 🟢 **구글 일별 노출 반등·최고치(10-28 370)** / 🟢 **`calories-burned-by-heart-rate` 4,167노출·8.8위·클릭 13** / Coverage 변화 없음(17·6) / 신규 퀴즈 1건(`cardio-before-or-after-weights`) / Bing 2,876(+9%)
 
