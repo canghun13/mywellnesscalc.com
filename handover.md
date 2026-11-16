@@ -1,5 +1,59 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-11-09
+> 최종 업데이트: 2026-11-16
+
+## 2026-11-16 세션 — 주간 점검(앞당겨 진행). 🔴 **크롤링됨-미색인 17 → 40(11-10에 +14)** / 🔴 **구글 일별 노출 11-11부터 89~165로 급감(직전 400~500)** / 🟢 심박 칼로리 툴 클릭 19 / 보강 1건(`zone-2-heart-rate-by-age` 전 연령표) / 신규 0건 / Bing 3,467(+10%)·클릭 72
+
+**작업 방식**: 세션 GitHub 연결로 pull·push. 자료: GSC Performance(11-13까지) + Coverage 2종(차트 11-13까지 — **이번에 처음으로 10-23 이후 갱신됨**), Bing(11-16), GA4(10-19~11-15).
+
+### 🔴 Coverage — 크롤링됨-미색인 17 → 24(10-24) → 26(11-07) → **40(11-10)**
+- 사이트 116페이지 중 40건(약 34%). 새로 들어간 23건 중 **19건은 재크롤 없이 재분류**(최종크롤 06-25~10-14), **4건은 11-14~15에 크롤된 직후 미색인**: `quiz/alcohol-calorie-deficit`(지난 10-26 신규), `quiz/which-exercise-snack`, `quiz/recovery-type`(구글 클릭 2·4위였던 퀴즈), `tools/sitting-offset-calculator`.
+- 새로 들어간 목록: `blog/alcohol-and-calorie-deficit`, `protein-vs-carbs-vs-fat`, `how-much-vitamin-d-do-you-need-daily`, `high-protein-foods`, `creatine-do-you-need-it`, `calories-burned-walking`, `maf-training-for-beginners`, `active-recovery-heart-rate`, `fat-burning-zone-explained`, `how-to-calculate-calorie-deficit`, `sleep-cycles-explained`, `10000-steps-a-day`, `signs-of-dehydration`, `ffmi-vs-bmi`(리다이렉트 스텁 — 정상), 퀴즈 `cardio-type`, `vitamin-d-supplement`, `return-to-training-after-break`, `maf-training`, `metabolism-type` + 위 4건.
+- 발견됨-미색인 6 → 5: `cardio-before-or-after-weights`(11-03 신규, 아직 미크롤) 추가, `which-exercise-snack`·`sitting-offset`은 크롤 후 위 목록으로 이동.
+- **확인된 사실(원인 판정 아님)**: 새로 빠진 블로그 다수가 **같은 주제의 색인된 툴 페이지가 있는 글**(maf-training-for-beginners ↔ maf-calculator, active-recovery-heart-rate ↔ active-recovery-calculator, how-to-calculate-calorie-deficit ↔ calorie-deficit-calculator, fat-burning 글 3개 ↔ calories-burned-by-heart-rate, vitamin D 글 3개 ↔ vitamin-d-calculator). 10-26에 정리한 "같은 의도 페이지" 관찰과 같은 방향. **원인 단정 금지 유지.**
+
+### 🔴 구글 — 일별 노출 급감 (3일치)
+- 11-09 503, 11-10 458 → **11-11 89, 11-12 165, 11-13 155**. 평균순위 16~19 → **55~60**. 11-08(201)처럼 하루 튀는 날은 있었지만 3일 연속은 처음. **Coverage +14와 날짜가 겹침(11-10). 상관만 기록, 인과 단정 안 함.** 데이터가 11-13에서 끝나므로 다음 주에 지속 여부 확인.
+- 3개월 누적: 클릭 54 → 60, 노출 14,128. **심박 칼로리 툴 6,274노출·8.3위·클릭 19**, 크레아틴 퀴즈 17클릭·9.3위, ideal-body-weight 퀴즈 6클릭, MAF 계산기 3클릭(26.3위, `maf heart rate calculator` 9.6위). 무변경 유지.
+
+### Bing — 3,155 → 3,467노출, 64 → 72클릭
+- **`zone-2-heart-rate-by-age` 493 → 691, 클릭 12 → 19(4.5위) — 사이트 전체(구글+Bing) 최다 클릭 페이지.** 단일 나이 쿼리 다수(`what is my zone 2 heart rate at age 28`(클릭), `zone 2 heart rate for 71 year old man`, `60 yr old man zone 2`, `zone 2 heart rate for. 63 year old male`, `what is the zone 2 heart rate range for a 66 year old`).
+- `how-long-to-lose-weight` 123 → 158 — 지난주 넣은 10% 섹션 쿼리 `the most realistic time frame for losing 10% of initial body weight`(2위) 등장.
+
+### GA4 (10-19~11-15)
+- 활성 544, 싱가포르 154(28%, 계속 감소). google/organic 32세션, bing 40. 봇 필터 미처리(사용자).
+
+### 이번 세션에 한 작업 — 보강 1건: `blog/zone-2-heart-rate-by-age.html`
+- **선정 근거(수익화)**: 사이트 최다 클릭 페이지(Bing 19 + 구글 1), 구글 1,275노출·19.7위(정체, 상승 중 아님). 들어오는 쿼리 다수가 **5년 단위 표에 없는 나이**(28, 46, 57, 63, 66, 71 등).
+- **추가**: 메인 표 바로 아래 `<details id="every-age">` **"Zone 2 heart rate for every age from 18 to 80"** — 63행 × (최대심박, 60–70%, Karvonen RHR 65). 접힌 상태로 두어 본문 흐름은 그대로. TOC 2번째 항목, dateModified·표시 날짜 2026-11 갱신. 타이틀·기존 본문 무변경.
+- **계산 규칙**: 정수 반올림(half-up) `(2n+d)//(2d)` — 최대심박 × 60/100, ×70/100, Karvonen 65 + (HRR × 60/100, 70/100). **기존 5년 단위 13행과 전부 일치 확인**(zone-2 계산기 `Math.round(maxHR*60/100)`와 같은 결과).
+- 검증: verify.py 이상 없음, 375/1280 접힘·펼침 렌더(가로 스크롤 없음, JS 에러 0), 116페이지 전수 렌더 문제 0.
+
+### 신규 후보 — 1건 조사, 기각 (누적 68건) + 신규 발행 보류 판단
+| 후보 | 판정 |
+|---|---|
+| 최대심박 나이별 차트(여러 공식 비교) | **기각 — 포화.** McMillan, Livestrong, runbikecalc, getfitcraft(도구+리서치), runbundle, hacecuentas, rundida, sensai 등 전용 계산기·차트 8개+ |
+- **신규 발행 보류 이유(전략 변경 아님)**: 최근 신규 2개가 모두 구글에 안 들어감 — `alcohol-calorie-deficit`는 크롤 직후 미색인, `cardio-before-or-after-weights`는 2주째 미크롤. 이번 주는 공백 자리도 못 찾았음.
+
+### 🔵 사용자 판단 필요 — 같은 의도 페이지 통합 (3주째 대기, 이번에 규모 커짐)
+10-26 목록 + 이번 신규 제외분. 크롤링됨-미색인 40건 중 상당수가 **색인된 툴/글과 같은 질문에 답하는 페이지**. 통합(내용 합치고 나머지 301 대신 meta refresh + canonical, GitHub Pages라 서버 리다이렉트 불가)은 되돌리기 번거롭고 확장 방침과 부딪힐 수 있어 **사용자 결정 전 실행 안 함.** 결정 시 후보 묶음:
+- 칼로리 적자: `calorie-deficit-how-much` + `how-to-calculate-calorie-deficit` + `calorie-deficit-for-weight-loss` (+ 계산기)
+- 지방연소/심박 칼로리: `fat-burning-zone-explained` + `fat-burning-heart-rate-zone` + `calories-burned-by-heart-rate-zone` (+ 심박 칼로리 툴 — **이 툴은 절대 손대지 않음**)
+- 비타민D: `how-much-vitamin-d-do-you-need-daily` + `vitamin-d-and-exercise` + `vitamin-d-deficiency` (+ 계산기)
+- VO2: `what-is-vo2-max` + `how-to-improve-vo2-max`
+- MAF: `maf-training-for-beginners` + `maf-training-plan` + 퀴즈 `maf-training` (+ **MAF 계산기는 상승 중이라 손대지 않음**)
+- 대사: `tdee-vs-bmr`, `what-is-metabolism` ↔ 계산기·퀴즈 / 40대 여성 식단 4개 / 퀴즈 쌍(`training-zone`↔`zone-2-fitness-level`, `weight-loss-rate`↔`how-long-to-lose-weight`)
+
+### 💰 수익화 관점
+- 구글 클릭 축(심박 칼로리 툴, 크레아틴 퀴즈)은 전부 색인 유지 중. **구글 노출 급감이 지속되면 이번 달 가장 큰 리스크.** Bing은 계속 성장(72클릭)하고 Bing 최다 클릭 페이지를 이번에 보강함.
+- **🔵 사용자 조치(서치콘솔 → URL 검사 → 색인 생성 요청)**: `blog/zone-2-heart-rate-by-age.html`(보강), `quiz/cardio-before-or-after-weights.html`(2주째 미크롤).
+
+### 다음 세션 우선순위
+1. **구글 일별 노출 89~165가 이어지는지**(11-14 이후 데이터). 심박 칼로리 툴·크레아틴 퀴즈 노출/순위 개별 확인.
+2. Coverage 40건 추이, 신규 퀴즈 2개 상태.
+3. **통합 여부 사용자 답** — 이번 주 최우선 질문으로 다시 올림.
+4. Sources 미적용 페이지 계속.
+5. ⛔ 누적 금지 + **최대심박 나이별 차트(이번 기각)**. 상승 중 무변경: calories-burned-by-heart-rate, creatine 퀴즈, maf-calculator, ffmi-calculator.
+
 
 ## 2026-11-09 세션 — 주간 점검(앞당겨 진행). 🟢 **구글 일별 노출 400~534(최고치 경신), 3개월 클릭 41 → 54** / 🟢 **툴 페이지 전반 순위 상승, MAF 계산기 1페이지 진입 직전** / Coverage 차트 3주째 10-23에서 멈춤 / 신규 0건(2건 조사·기각) + 보강 1건 / Bing 3,155(+10%)
 
