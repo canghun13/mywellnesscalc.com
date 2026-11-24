@@ -76,14 +76,17 @@
     .table-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1rem 0; }
     .table-wrapper table { margin:0; }
     .article-main { min-width:0; }
+  .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}.sources h2{font-size:1.1rem!important;}.sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}.sources li{margin-bottom:.35rem;}.sources a{color:var(--sage-dark);word-break:break-word;}
+  .article-body p a,.article-body li a{color:var(--sage-dark);}
   </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate a Calorie Deficit for Weight Loss","url":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html","description":"Step-by-step guide to calculating a calorie deficit: find your TDEE, set a safe deficit size, and calculate your daily calorie target.","datePublished":"2026-06-23","dateModified":"2026-06-23","publisher":{"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html"}}
+{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate a Calorie Deficit for Weight Loss","url":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html","description":"Step-by-step guide to calculating a calorie deficit: find your TDEE, set a safe deficit size, and calculate your daily calorie target.","datePublished":"2026-06-23","dateModified":"2026-11-23","publisher":{"@type":"Organization","name":"MyWellnessCalc","url":"https://mywellnesscalc.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mywellnesscalc.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://mywellnesscalc.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Calculate a Calorie Deficit","item":"https://mywellnesscalc.com/blog/how-to-calculate-calorie-deficit.html"}]}
 </script>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -142,9 +145,50 @@
         "@type": "Answer",
         "text": "Yes — many people successfully lose fat by focusing on food quality and satiety (high protein, high fibre, minimally processed foods) without tracking numbers. This works because these strategies naturally reduce calorie intake. However, if fat loss stalls, calorie tracking is the most reliable diagnostic tool for finding where the problem is. You don't have to track forever — but tracking for a few weeks builds intuition about portion sizes and calorie density."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of a calorie deficit to lose 1 kg per week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Losing 1 kg of fat per week requires a deficit of approximately 7,700 kcal per week — about 1,100 kcal per day. This is an aggressive deficit suited only to people with high starting body fat, and usually only for a short phase. For most people, targeting 0.5 kg per week (500 kcal/day deficit) produces better body composition outcomes and is more sustainable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a 500 calorie deficit safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a 500 kcal daily deficit is evidence-based and safe for most healthy adults. It produces approximately 0.5 kg of fat loss per week. The critical addition is adequate protein (1.6–2.4g/kg) and resistance training to preserve muscle mass during the deficit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if your calorie deficit is too large?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A deficit that's too large causes disproportionate muscle loss, accelerated metabolic adaptation (reducing how much energy you burn), hormonal disruption (lower leptin, higher ghrelin, reduced sex hormones), impaired training performance, and worse sleep quality. The result is faster scale weight loss but worse body composition — and a higher probability of regaining weight when the diet ends."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a calorie deficit cause muscle loss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A moderate deficit alone causes minimal muscle loss when protein intake is high (1.8–2.4g/kg) and resistance training continues. Muscle loss increases substantially with: very large deficits, low protein intake, and no resistance training. The combination of high protein + lifting + moderate deficit is the most effective approach for losing fat without losing muscle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum number of calories I should eat per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eating below 1,200 kcal/day for women or 1,500 kcal/day for men is generally not recommended without medical supervision, as it becomes difficult to meet nutritional needs and is strongly associated with muscle loss and metabolic adaptation. A moderate deficit from your TDEE is safer and more effective long-term."
+      }
     }
   ]
-}</script>
+}
+</script>
 </head>
 <body>
 <nav>
@@ -174,7 +218,7 @@
     <span class="article-tag">Nutrition</span>
     <h1>How to Calculate a Calorie Deficit for Weight Loss</h1>
     <div class="article-meta">
-      <span>📅 June 2026</span>
+      <span>📅 June 2026 · Updated November 2026</span>
       <span>⏱️ 10 min read</span>
       <span>🍽️ Nutrition</span>
     </div>
@@ -182,11 +226,11 @@
 
     <div class="article-body">
 
-      <h2>What is a calorie deficit?</h2>
+      <h2 id="what-is-a-calorie-deficit">What is a calorie deficit?</h2>
       <p>A calorie deficit occurs when you consume fewer calories than your body burns in a given period. When this happens, your body meets its energy needs by drawing on stored energy — primarily body fat, but also some muscle mass if protein intake and resistance training are insufficient.</p>
       <p>The commonly cited estimate is that 1 kg of body fat stores approximately 7,700 calories (3,500 kcal per pound). So a deficit of 500 calories per day would theoretically produce approximately 0.5 kg of fat loss per week. In practice, the relationship is less linear — the body adapts metabolically to sustained deficits — but it's a useful working model for planning.</p>
 
-      <h2>How to calculate your calorie deficit: step by step</h2>
+      <h2 id="how-to-calculate-your-calorie-deficit-step-by-st">How to calculate your calorie deficit: step by step</h2>
 
       <div class="step-box">
         <div class="step-num">1</div>
@@ -229,7 +273,7 @@
         <a href="../tools/calorie-deficit-calculator.html" class="cta-link">Calorie Deficit Calculator →</a>
       </div>
 
-      <h2>Worked example</h2>
+      <h2 id="worked-example">Worked example</h2>
 
       <div class="example-box">
         <h4>Example: Sarah, 35F, 70kg, 165cm, moderately active</h4>
@@ -240,7 +284,7 @@
         <p><strong>Protein target:</strong> 70 kg × 1.8g = <strong>126g protein per day</strong> to preserve muscle</p>
       </div>
 
-      <h2>How big should your calorie deficit be?</h2>
+      <h2 id="how-big-should-your-calorie-deficit-be">How big should your calorie deficit be?</h2>
 
       <div class="table-wrapper"><table class="data-table">
         <thead><tr><th>Deficit size</th><th>Expected fat loss</th><th>Best for</th></tr></thead>
@@ -252,7 +296,52 @@
         </tbody>
       </table></div>
 
-      <h2>Protein: the most important variable in a deficit</h2>
+      <h2 id="choose">Choosing your deficit: body fat, speed and the 1% rule</h2>
+      <p>The right deficit depends on four factors: your current body fat level, your hunger tolerance, your training history, and how long you plan to diet.</p>
+
+      <h3>Deficit size by starting body fat</h3>
+      <p>Body fat level is the most important factor in determining how large a deficit you can sustain without losing muscle. When fat stores are abundant, the body preferentially burns fat during a deficit. As you get leaner, it becomes increasingly protective of fat reserves and more willing to sacrifice muscle protein for energy — which is why the appropriate deficit size decreases as you lose weight.</p>
+
+      <div class="table-wrapper"><table class="data-table">
+        <thead><tr><th>Body fat level</th><th>Recommended deficit</th><th>Expected weekly loss</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>High (&gt;30% F / &gt;25% M)</td><td>500–750 kcal/day</td><td>0.5–0.75 kg</td><td>Larger deficit sustainable; muscle loss risk lower</td></tr>
+          <tr><td>Moderate (20–30% F / 15–25% M)</td><td>300–500 kcal/day</td><td>0.3–0.5 kg</td><td>Standard range; most people here</td></tr>
+          <tr><td>Lean (&lt;20% F / &lt;15% M)</td><td>200–300 kcal/day</td><td>0.2–0.3 kg</td><td>Small deficit; high protein critical</td></tr>
+          <tr><td>Very lean (&lt;15% F / &lt;10% M)</td><td>100–200 kcal/day</td><td>0.1–0.2 kg</td><td>Recomposition territory; very slow progress</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>The case for a moderate deficit (300–500 kcal)</h3>
+      <p>This is the evidence-based sweet spot for most people. A 2011 trial in elite athletes (Garthe and colleagues, <em>International Journal of Sport Nutrition and Exercise Metabolism</em>) compared a slow rate of loss (about 0.7% of body weight a week) with a faster one (about 1% a week achieved) while all participants strength-trained: the slower group increased lean mass by 2.1% and lost more fat, while the faster group gained no lean mass. The reasons are well-established:</p>
+      <ul>
+        <li>Sufficient calories to support training performance and muscle protein synthesis</li>
+        <li>Less cortisol elevation, which at high levels promotes muscle breakdown and fat storage</li>
+        <li>Less severe hunger, making adherence more likely</li>
+        <li>Less metabolic adaptation (the reduction in TDEE that occurs with aggressive restriction)</li>
+      </ul>
+
+      <h3>When a larger deficit (500–750 kcal) is appropriate</h3>
+      <p>A larger deficit is appropriate when starting body fat is high, when there's significant weight to lose, and when the psychological urgency of faster progress supports adherence. The key safeguard at larger deficits is protein intake — maintaining 1.8–2.4g/kg of bodyweight protects muscle mass even in significant deficits for people with adequate fat stores.</p>
+
+      <div class="highlight-box">
+        <h4>The 1% rule</h4>
+        <p>A useful rule of thumb: aim to lose no more than 1% of bodyweight per week. For a 90 kg person, that's 0.9 kg per week, requiring a deficit of approximately 700 kcal/day. For an 70 kg person, 0.7 kg per week needs around 500 kcal/day. Going faster than 1% per week significantly increases the proportion of weight lost as muscle rather than fat.</p>
+      </div>
+
+      <h2 id="too-large">When a deficit is too large</h2>
+      <p>Very large calorie deficits (above 1,000 kcal/day, or very low calorie diets below 800 kcal/day) produce faster weight loss in the short term but cause problems that worsen long-term outcomes.</p>
+
+      <h3>Muscle loss</h3>
+      <p>In aggressive deficits, the proportion of weight lost as lean mass increases substantially. The 2011 athlete trial described above showed the pattern even at modest speeds — the faster-losing group gained no lean mass while the slower group gained some — and high protein intake plus resistance training is what protects muscle as the deficit grows. Lean mass loss reduces metabolic rate and makes weight regain more likely after the diet ends.</p>
+
+      <h3>Metabolic adaptation</h3>
+      <p>The body responds to large deficits by reducing energy expenditure through multiple mechanisms: decreased non-exercise activity thermogenesis (NEAT — fidgeting, spontaneous movement), reduced thyroid output, lower reproductive hormone levels, and improved metabolic efficiency. This adaptation can lower daily energy expenditure by more than the weight lost alone would predict — progressively shrinking the actual deficit even as food intake stays the same.</p>
+
+      <h3>Hormonal disruption</h3>
+      <p>Very low calorie intake suppresses leptin (the satiety hormone), elevates ghrelin (the hunger hormone), and reduces testosterone and oestrogen. These changes increase hunger, reduce recovery from training, impair sleep quality, and in women can cause menstrual disruption. These effects are more severe the leaner you already are and the larger the deficit.</p>
+
+      <h2 id="protein-the-most-important-variable-in-a-deficit">Protein: the most important variable in a deficit</h2>
       <p>During a calorie deficit, the body needs adequate protein to preserve lean muscle mass. Without sufficient protein, a significant proportion of weight lost comes from muscle rather than fat — worsening body composition even if the scale moves.</p>
       <p>Target <strong>1.6–2.2g of protein per kg of bodyweight</strong> while in a deficit. For someone weighing 70kg, this means 112–154g of protein per day. This is higher than standard dietary recommendations (0.8g/kg) precisely because of the muscle-protective role of protein during calorie restriction.</p>
 
@@ -261,7 +350,7 @@
         <p>Protein has a higher thermic effect than fat or carbohydrates (your body burns more calories digesting it), and it is the most satiating macronutrient. High-protein eating in a deficit is associated with greater fat loss, less muscle loss, and better adherence than lower-protein approaches.</p>
       </div>
 
-      <h2>Common calorie deficit mistakes</p>
+      <h2 id="common-calorie-deficit-mistakes">Common calorie deficit mistakes</h2>
       <ul>
         <li><strong>Underestimating calorie intake:</strong> Research consistently shows people underestimate how much they eat by 20–40%. Weighing food with a kitchen scale — rather than estimating portions — typically reveals the source of a stall.</li>
         <li><strong>Overestimating exercise calories burned:</strong> Fitness trackers and cardio machines notoriously overestimate calorie burn. "Eating back" exercise calories based on these estimates often eliminates the deficit entirely.</li>
@@ -271,9 +360,21 @@
         <li><strong>Ignoring sleep and stress:</strong> Poor sleep and chronic stress elevate cortisol, which promotes muscle breakdown and fat storage — working against the deficit. Fat loss is a whole-body process.</li>
       </ul>
 
-      <h2>How long to stay in a calorie deficit</h2>
+      <h2 id="how-long-to-stay-in-a-calorie-deficit">How long to stay in a calorie deficit</h2>
       <p>Extended continuous calorie restriction leads to metabolic adaptation — the body lowers TDEE in response to sustained undereating, making the same deficit produce less fat loss over time. This is why results often slow after the initial weeks.</p>
       <p>Most people do best with structured deficit periods of <strong>8–12 weeks</strong>, followed by a maintenance phase of 4–6 weeks at TDEE. This allows metabolic rate to partially recover before the next deficit phase. The total fat loss across alternating deficit and maintenance phases often exceeds what continuous dieting achieves.</p>
+
+      <h2 id="adjust">How to adjust your deficit over time</h2>
+      <p>Calorie needs change as you lose weight. Your TDEE decreases as your body becomes lighter, and metabolic adaptation further reduces it. A deficit that was accurate at the start of a diet typically produces less fat loss after 8–12 weeks — not because something has gone wrong, but because the maths have changed.</p>
+
+      <h3>Recalculate TDEE every 4–6 weeks</h3>
+      <p>Recalculate your TDEE at your current (lower) bodyweight every 4–6 weeks and adjust your calorie target accordingly. This keeps your actual deficit in the intended range as you lose weight.</p>
+
+      <h3>Diet breaks for extended diets</h3>
+      <p>For dieting phases longer than 12–16 weeks, incorporating planned diet breaks (2–4 weeks eating at maintenance calories) reduces the depth of metabolic adaptation and can improve total fat loss compared to continuous restriction over the same period. In the MATADOR trial (<em>International Journal of Obesity</em>, 2018), men with obesity who dieted in two-week blocks separated by two weeks at maintenance lost 12.3 kg of fat versus 8.0 kg with 16 weeks of continuous dieting, with similar fat-free mass loss.</p>
+
+      <h3>Refeed days</h3>
+      <p>Shorter than a full diet break, a refeed day raises calories to maintenance (or above) for 1–2 days. Evidence on refeed days is limited; they mainly offer a planned break from restriction, which some people find makes a long diet easier to stick to.</p>
 
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
@@ -305,6 +406,34 @@
           <div class="faq-q">Can I lose fat without counting calories?</div>
           <div class="faq-a">Yes — many people successfully lose fat by focusing on food quality and satiety (high protein, high fibre, minimally processed foods) without tracking numbers. This works because these strategies naturally reduce calorie intake. However, if fat loss stalls, calorie tracking is the most reliable diagnostic tool for finding where the problem is. You don't have to track forever — but tracking for a few weeks builds intuition about portion sizes and calorie density.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">How much of a calorie deficit to lose 1 kg per week?</div>
+          <div class="faq-a">Losing 1 kg of fat per week requires a deficit of approximately 7,700 kcal per week — about 1,100 kcal per day. This is an aggressive deficit suited only to people with high starting body fat, and usually only for a short phase. For most people, targeting 0.5 kg per week (500 kcal/day deficit) produces better body composition outcomes and is more sustainable.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is a 500 calorie deficit safe?</div>
+          <div class="faq-a">Yes, a 500 kcal daily deficit is evidence-based and safe for most healthy adults. It produces approximately 0.5 kg of fat loss per week. The critical addition is adequate protein (1.6–2.4g/kg) and resistance training to preserve muscle mass during the deficit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens if your calorie deficit is too large?</div>
+          <div class="faq-a">A deficit that's too large causes disproportionate muscle loss, accelerated metabolic adaptation (reducing how much energy you burn), hormonal disruption (lower leptin, higher ghrelin, reduced sex hormones), impaired training performance, and worse sleep quality. The result is faster scale weight loss but worse body composition — and a higher probability of regaining weight when the diet ends.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does a calorie deficit cause muscle loss?</div>
+          <div class="faq-a">A moderate deficit alone causes minimal muscle loss when protein intake is high (1.8–2.4g/kg) and resistance training continues. Muscle loss increases substantially with: very large deficits, low protein intake, and no resistance training. The combination of high protein + lifting + moderate deficit is the most effective approach for losing fat without losing muscle.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the minimum number of calories I should eat per day?</div>
+          <div class="faq-a">Eating below 1,200 kcal/day for women or 1,500 kcal/day for men is generally not recommended without medical supervision, as it becomes difficult to meet nutritional needs and is strongly associated with muscle loss and metabolic adaptation. A moderate deficit from your TDEE is safer and more effective long-term.</div>
+        </div>
+      </div>
+
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>Garthe I, Raastad T, Refsnes PE, Koivisto A, Sundgot-Borgen J. Effect of two different weight-loss rates on body composition and strength and power-related performance in elite athletes. <em>International Journal of Sport Nutrition and Exercise Metabolism</em> 2011;21(2):97–104. <a href="https://journals.humankinetics.com/view/journals/ijsnem/21/2/article-p97.xml" target="_blank" rel="noopener">humankinetics.com</a></li>
+          <li>Byrne NM, Sainsbury A, King NA, Hills AP, Wood RE. Intermittent energy restriction improves weight loss efficiency in obese men: the MATADOR study. <em>International Journal of Obesity</em> 2018. <a href="https://research-repository.uwa.edu.au/en/publications/intermittent-energy-restriction-improves-weight-loss-efficiency-i/" target="_blank" rel="noopener">UWA research repository</a></li>
+        </ol>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> Calorie targets are estimates based on population formulas and vary between individuals. If you have health conditions, are pregnant, or have a history of disordered eating, consult a healthcare provider before starting any calorie restriction.</div>
@@ -315,13 +444,16 @@
     <div class="toc">
       <h4>In this article</h4>
       <ol>
-        <li><a href="#">What is a calorie deficit?</a></li>
-        <li><a href="#">Step-by-step calculation</a></li>
-        <li><a href="#">Worked example</a></li>
-        <li><a href="#">How big should it be?</a></li>
-        <li><a href="#">Protein in a deficit</a></li>
-        <li><a href="#">Common mistakes</a></li>
-        <li><a href="#">How long to diet</a></li>
+        <li><a href="#what-is-a-calorie-deficit">What is a calorie deficit?</a></li>
+        <li><a href="#how-to-calculate-your-calorie-deficit-step-by-st">Step-by-step calculation</a></li>
+        <li><a href="#worked-example">Worked example</a></li>
+        <li><a href="#how-big-should-your-calorie-deficit-be">How big should it be?</a></li>
+        <li><a href="#choose">Choosing your deficit</a></li>
+        <li><a href="#too-large">When it's too large</a></li>
+        <li><a href="#protein-the-most-important-variable-in-a-deficit">Protein in a deficit</a></li>
+        <li><a href="#common-calorie-deficit-mistakes">Common mistakes</a></li>
+        <li><a href="#how-long-to-stay-in-a-calorie-deficit">How long to diet</a></li>
+        <li><a href="#adjust">Adjusting over time</a></li>
       </ol>
     </div>
     <div class="related-tools">

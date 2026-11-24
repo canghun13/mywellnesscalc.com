@@ -217,7 +217,7 @@
   <h2>Related tools and articles</h2>
   <div class="related-grid">
     <a href="../tools/vitamin-d-calculator.html" class="related-link">Vitamin D Calculator<span>Personalised daily needs estimate</span></a>
-    <a href="../blog/vitamin-d-deficiency.html" class="related-link">Vitamin D Deficiency Guide<span>Symptoms, causes, and solutions</span></a>
+    <a href="../blog/how-much-vitamin-d-do-you-need-daily.html#deficiency" class="related-link">Vitamin D Deficiency Guide<span>Symptoms, causes, and solutions</span></a>
     <a href="../blog/how-much-vitamin-d-do-you-need-daily.html" class="related-link">How Much Vitamin D Per Day?<span>Dosage by age and situation</span></a>
     <a href="../blog/vitamin-d-and-exercise.html" class="related-link">Vitamin D and Exercise<span>How it affects performance and recovery</span></a>
     <a href="../quiz/enough-protein.html" class="related-link">Are You Getting Enough Protein?<span>Another common nutritional gap</span></a>
@@ -285,7 +285,7 @@ function showResult(){
     title='Supplementation is worth considering';subtitle='Some risk factors suggest your vitamin D may be suboptimal';
     body=`<h3>A practical approach</h3><p>You don\'t have strong deficiency risk factors, but you\'re not in the lowest-risk group either. A low-dose supplement (1,000 IU/day) during winter months — or year-round if you\'re mostly indoors — is a low-risk, low-cost way to maintain adequate levels.</p><h3>Best approach</h3><ul><li>Consider a 1,000 IU daily supplement from October to April if you\'re in the northern hemisphere</li><li>Year-round supplementation if you rarely go outdoors</li><li>A blood test will confirm whether this is needed</li></ul>`;
   }
-  setResult('Your vitamin D assessment',title,subtitle,body,ctas=[{href:'../tools/vitamin-d-calculator.html',label:'Calculate your vitamin D needs →'},{href:'../blog/vitamin-d-deficiency.html',label:'Vitamin D Deficiency Signs and Symptoms'},{href:'../blog/how-much-vitamin-d-do-you-need-daily.html',label:'How Much Vitamin D Do You Need?'}],'<strong>Note:</strong> This is not medical advice. Only a blood test can confirm vitamin D status. If you\'re concerned, speak with your GP or healthcare provider.');
+  setResult('Your vitamin D assessment',title,subtitle,body,ctas=[{href:'../tools/vitamin-d-calculator.html',label:'Calculate your vitamin D needs →'},{href:'../blog/how-much-vitamin-d-do-you-need-daily.html#deficiency',label:'Vitamin D Deficiency Signs and Symptoms'},{href:'../blog/how-much-vitamin-d-do-you-need-daily.html',label:'How Much Vitamin D Do You Need?'}],'<strong>Note:</strong> This is not medical advice. Only a blood test can confirm vitamin D status. If you\'re concerned, speak with your GP or healthcare provider.');
 }
 function resetQuiz(){Object.keys(answers).forEach(k=>delete answers[k]);document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));document.querySelectorAll('.btn-next,.btn-back-q').forEach(b=>b.style.display='none');document.querySelectorAll('.question-block').forEach(q=>q.classList.remove('active'));document.getElementById('q1').classList.add('active');document.getElementById('result').classList.remove('show');updateProgress(1);}
 function setResult(label,title,subtitle,body,ctas,disclaimer){

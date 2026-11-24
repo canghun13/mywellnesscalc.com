@@ -67,6 +67,9 @@
     .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;}
     .table-wrapper .data-table{margin:0;}
     .article-main{min-width:0;}
+  .sources{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--border);}.sources h2{font-size:1.1rem!important;}.sources ol{color:var(--mid);font-size:.82rem;line-height:1.7;padding-left:1.2rem;}.sources li{margin-bottom:.35rem;}.sources a{color:var(--sage-dark);word-break:break-word;}
+  .maf-example{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:14px;padding:1.5rem;margin:1.5rem 0;}.maf-example h4{font-size:.9rem;font-weight:600;color:#2e7d32;margin-bottom:.75rem;}.maf-example p{font-size:.875rem;color:#388e3c;margin-bottom:.4rem;line-height:1.6;}.maf-example p:last-child{margin-bottom:0;}
+  .article-body p a,.article-body li a{color:var(--sage-dark);}
   </style>
 <!-- SCHEMA_START -->
 <script type="application/ld+json">
@@ -96,13 +99,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"How many days a week should I do MAF training?","acceptedAnswer":{"@type":"Answer","text":"3-4 sessions per week is the typical range for beginners building an aerobic base. Because MAF sessions are capped by heart rate rather than intensity, most people can train more frequently than they could with harder workouts — 5-6 sessions per week is common for experienced MAF athletes, but 3-4 is a realistic and effective starting point."}},
-    {"@type":"Question","name":"What is a MAF test and how often should I do one?","acceptedAnswer":{"@type":"Answer","text":"A MAF test is a fixed course or distance completed at your MAF heart rate cap, with your time or pace recorded. It's the primary way to track progress in MAF training, since the whole point is to get faster at the same heart rate over time. Testing every 2 weeks on the same course, under similar conditions (weather, time of day, terrain), gives the clearest signal."}},
-    {"@type":"Question","name":"My pace is really slow at my MAF heart rate — is that normal?","acceptedAnswer":{"@type":"Answer","text":"Yes, and it's one of the most common reasons people quit MAF training too early. If your aerobic base is underdeveloped, your pace at your MAF cap can be surprisingly slow at first — sometimes requiring walk breaks even for regular runners. This is normal and temporary. Resist the urge to run faster than your heart rate allows; the slow pace is what's building the adaptation."}},
-    {"@type":"Question","name":"What if I miss a week of the plan?","acceptedAnswer":{"@type":"Answer","text":"Continue from where you left off rather than trying to make up missed sessions. If you missed a single week, resume at the same phase. If you missed 3 or more weeks, drop back to the start of the previous phase before continuing, since aerobic adaptations fade without consistent stimulus."}},
-    {"@type":"Question","name":"Can I do MAF training for cycling instead of running?","acceptedAnswer":{"@type":"Answer","text":"Yes — MAF training works for any steady-state aerobic activity, including cycling, rowing, swimming, and incline walking. The heart rate cap and progression structure stay the same; only the activity and, for the MAF test, the specific course or protocol you use to measure progress changes."}},
-    {"@type":"Question","name":"Do I need to test on the same course every time?","acceptedAnswer":{"@type":"Answer","text":"Ideally, yes. Comparing a flat, cool-weather test to a hilly, hot-weather test will make your data noisy and can make genuine progress look like a plateau or regression. Pick a course you can return to repeatedly — a track, a flat park loop, or a treadmill at a fixed incline all work well specifically because conditions stay constant."}},
-    {"@type":"Question","name":"What happens after week 8?","acceptedAnswer":{"@type":"Answer","text":"Most people continue MAF training for 3-4 months total before reintroducing higher-intensity work, since aerobic base development is a slow, cumulative process that doesn't fully plateau in 8 weeks. Week 8 is a reasonable checkpoint to assess your MAF test trend and decide whether to keep building base or start layering in some faster sessions."}}
+    {
+      "@type": "Question",
+      "name": "How many days a week should I do MAF training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "3-4 sessions per week is the typical range for beginners building an aerobic base. Because MAF sessions are capped by heart rate rather than intensity, most people can train more frequently than they could with harder workouts — 5-6 sessions per week is common for experienced MAF athletes, but 3-4 is a realistic and effective starting point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a MAF test and how often should I do one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A MAF test is a fixed course or distance completed at your MAF heart rate cap, with your time or pace recorded. It's the primary way to track progress in MAF training, since the whole point is to get faster at the same heart rate over time. Testing every 2 weeks on the same course, under similar conditions (weather, time of day, terrain), gives the clearest signal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My pace is really slow at my MAF heart rate — is that normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it's one of the most common reasons people quit MAF training too early. If your aerobic base is underdeveloped, your pace at your MAF cap can be surprisingly slow at first — sometimes requiring walk breaks even for regular runners. This is normal and temporary. Resist the urge to run faster than your heart rate allows; the slow pace is what's building the adaptation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I miss a week of the plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Continue from where you left off rather than trying to make up missed sessions. If you missed a single week, resume at the same phase. If you missed 3 or more weeks, drop back to the start of the previous phase before continuing, since aerobic adaptations fade without consistent stimulus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I do MAF training for cycling instead of running?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — MAF training works for any steady-state aerobic activity, including cycling, rowing, swimming, and incline walking. The heart rate cap and progression structure stay the same; only the activity and, for the MAF test, the specific course or protocol you use to measure progress changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to test on the same course every time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ideally, yes. Comparing a flat, cool-weather test to a hilly, hot-weather test will make your data noisy and can make genuine progress look like a plateau or regression. Pick a course you can return to repeatedly — a track, a flat park loop, or a treadmill at a fixed incline all work well specifically because conditions stay constant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after week 8?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most people continue MAF training for 3-4 months total before reintroducing higher-intensity work, since aerobic base development is a slow, cumulative process that doesn't fully plateau in 8 weeks. Week 8 is a reasonable checkpoint to assess your MAF test trend and decide whether to keep building base or start layering in some faster sessions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a heart rate monitor for MAF training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — you genuinely can't do MAF training reliably without one. The entire method depends on accurate, real-time heart rate data. A wrist-based optical monitor (as found in most modern smartwatches) is sufficient for steady-state activities like cycling or flat running. A chest strap is more accurate, particularly during running where wrist monitors can lag. If you're serious about MAF training, a chest strap is worth the investment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should I do MAF-only training before adding intensity back in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maffetone recommends a minimum of three months of aerobic base building before reintroducing high-intensity work. Some athletes extend this to six months, particularly if they're returning from injury or haven't had a structured aerobic base before. The clearest signal that your base is ready is consistent MAF test improvement and the ability to run comfortably for 45–60 minutes at MAF heart rate without walk breaks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is MAF training suitable for complete beginners to running?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — arguably more so than for experienced runners. Beginners often don't have ingrained habits around pace or intensity, which makes it easier to commit to the low heart rate requirement. The main challenge for beginners is accepting that walk-run intervals are entirely valid and productive. Starting with MAF rather than high-intensity interval training also significantly reduces the risk of early overuse injuries."
+      }
+    }
   ]
 }
 </script>
@@ -144,7 +220,37 @@
 
     <div class="article-body">
 
-      <h2>Before you start</h2>
+      <h2 id="what-is-maf">What is MAF training?</h2>
+      <p>MAF stands for Maximum Aerobic Function. The term describes both a philosophy and a practical method for aerobic base training developed by Dr. Phil Maffetone, a sports coach and author who worked with elite endurance athletes — including triathletes, marathon runners, and cyclists — from the late 1970s onwards.</p>
+      <p>The core idea is straightforward: most people train too hard, too often. By consistently exceeding the aerobic threshold — the point beyond which the body begins relying significantly on anaerobic energy systems — athletes accumulate unnecessary fatigue, slow their aerobic development, and increase injury risk. MAF training addresses this by defining a precise heart rate ceiling and keeping all aerobic work strictly below it.</p>
+      <p>What sets MAF apart from other low-intensity training approaches is the formula used to set that ceiling. Rather than using a percentage of estimated maximum heart rate (which can be inaccurate for many individuals), the MAF 180 Formula factors in age and current health and training status to produce a personalised number.</p>
+
+      <h2 id="formula">The MAF 180 Formula</h2>
+      <p>The foundation of MAF training is the 180 Formula: <strong>180 minus your age</strong>, then adjusted based on one of four health and training categories. The result is your MAF heart rate — the maximum heart rate at which your aerobic system is working optimally without crossing into anaerobic territory.</p>
+
+      <div class="maf-example">
+        <h4>🧮 Example calculation</h4>
+        <p>Age: 38. Base: 180 − 38 = 142 bpm.</p>
+        <p>Training status: Consistent training for 3 years, no injuries → no adjustment (0).</p>
+        <p>MAF heart rate: 142 bpm. Training zone: 132–142 bpm.</p>
+      </div>
+
+      <p>The four adjustment categories are:</p>
+      <ul>
+        <li><strong>−10 bpm:</strong> Recovering from major illness, surgery, injury, or overtraining. Also applies if you get sick frequently (more than twice per year) or are taking regular medication for a chronic condition.</li>
+        <li><strong>−5 bpm:</strong> Inconsistent training history — haven't exercised regularly for more than two years, or have noticed regression in fitness recently.</li>
+        <li><strong>0 (no adjustment):</strong> Training consistently for at least two years with no major health setbacks.</li>
+        <li><strong>+5 bpm:</strong> Two or more years of consistent training with clear, measurable improvements in fitness — not just training regularly, but genuinely getting fitter.</li>
+      </ul>
+
+      <p>Be honest when selecting your category. Many people overestimate their training consistency or underestimate the impact of recent illness or injury. If you're uncertain between two categories, the more conservative option is always the safer starting point.</p>
+
+      <div class="cta-box">
+        <p>Calculate your personalised MAF heart rate in seconds.</p>
+        <a href="../tools/maf-calculator.html" class="cta-link">MAF Heart Rate Calculator →</a>
+      </div>
+
+      <h2 id="before-you-start">Before you start</h2>
       <p>You'll need your MAF heart rate cap and a way to track it during exercise — a chest strap or wrist-based monitor both work. If you haven't calculated it yet, do that first: everything in this plan is built around staying at or below that specific number, not a pace or distance target.</p>
 
       <div class="cta-box">
@@ -154,7 +260,7 @@
 
       <p>You'll also want a baseline MAF test before week 1 — a simple time trial (see below) at your MAF heart rate, on a course you can repeat. Without this starting number, you won't have anything to compare your week 4 and week 8 results against.</p>
 
-      <h2>The 8-week plan at a glance</h2>
+      <h2 id="the-8-week-plan-at-a-glance">The 8-week plan at a glance</h2>
       <div class="table-wrapper">
       <table class="data-table">
         <thead><tr><th>Weeks</th><th>Sessions/week</th><th>Duration/session</th><th>MAF test</th></tr></thead>
@@ -168,7 +274,7 @@
       </div>
       <p>Unlike a generic cardio plan, the structure here is built around the testing schedule as much as the training volume — every 2 weeks gives enough time for a genuine adaptation to show up in your numbers, without testing so often that normal day-to-day variation (sleep, stress, weather) muddies the signal.</p>
 
-      <h2>Weeks 1–2: finding your pace</h2>
+      <h2 id="weeks-1-2-finding-your-pace">Weeks 1–2: finding your pace</h2>
       <p>The goal isn't fitness yet — it's discovering how slow "MAF-slow" actually is for you, and getting comfortable staying there even when it feels too easy or, for a deconditioned aerobic base, surprisingly hard.</p>
       <div class="highlight-box">
         <h4>Sample week</h4>
@@ -179,7 +285,7 @@
       </div>
       <p>Many people are genuinely shocked by how much walking their MAF cap requires in week 1, especially if they've been training primarily by pace or feel rather than heart rate up to this point. This is exactly what an underdeveloped aerobic base looks like — it's the reason the method exists, not a sign it's the wrong approach for you.</p>
 
-      <h2>Weeks 3–4: extending duration, first real test</h2>
+      <h2 id="weeks-3-4-extending-duration-first-real-test">Weeks 3–4: extending duration, first real test</h2>
       <p>Session length increases while frequency holds or ticks up slightly. At the end of week 4, run your second MAF test — the same course, same protocol as your baseline — and compare the time directly.</p>
       <div class="highlight-box">
         <h4>Sample week</h4>
@@ -191,7 +297,7 @@
       </div>
       <p>A faster time at the same heart rate here — even a modest one — is the clearest early confirmation that the plan is working. A flat or slightly slower result at week 4 isn't a failure; four weeks is often too early to see the full effect, particularly for anyone starting from a low aerobic base.</p>
 
-      <h2>Weeks 5–6: consistency, second checkpoint</h2>
+      <h2 id="weeks-5-6-consistency-second-checkpoint">Weeks 5–6: consistency, second checkpoint</h2>
       <p>By this stage the goal shifts from "getting used to the pace" to simply accumulating consistent volume at your MAF cap. Test again at the end of week 6.</p>
       <div class="highlight-box">
         <h4>Sample week</h4>
@@ -202,7 +308,7 @@
         <strong>Other days:</strong> rest or strength training</p>
       </div>
 
-      <h2>Weeks 7–8: consolidating the base, final checkpoint</h2>
+      <h2 id="weeks-7-8-consolidating-the-base-final-checkpoin">Weeks 7–8: consolidating the base, final checkpoint</h2>
       <p>Sessions extend to 45-60 minutes and 4 sessions per week becomes the standard. Run your third MAF test at the end of week 8 and compare it against both your baseline and your week 4 result — a consistent downward trend in time (or upward trend in pace) across all three checkpoints is the strongest evidence the plan is working.</p>
       <div class="highlight-box">
         <h4>Sample week</h4>
@@ -218,7 +324,7 @@
         <a href="zone-2-heart-rate-training-beginners.html" class="cta-link">Zone 2 vs MAF Training →</a>
       </div>
 
-      <h2>Reading your MAF test results</h2>
+      <h2 id="reading-your-maf-test-results">Reading your MAF test results</h2>
       <p>Three checkpoints (baseline, week 4, week 8) give you a trend line, which matters more than any single number. A single flat or slightly slower test can simply reflect a bad night's sleep, heat, or an off day — it's the direction across multiple tests that tells you whether the aerobic base is actually developing.</p>
       <ul>
         <li><strong>Consistent improvement each test:</strong> the plan is working as intended — continue building volume or extend to a second 8-week block.</li>
@@ -226,10 +332,15 @@
         <li><strong>No improvement across any test:</strong> double-check you're genuinely staying at or below your MAF cap during sessions (a monitor reading a few beats high consistently can hide real progress) and that sessions are actually happening 3-4 times a week, not less.</li>
       </ul>
 
-      <h2>If you fall behind</h2>
+      <h2 id="maf-vs-zone2">MAF vs Zone 2 training</h2>
+      <p>Both MAF and Zone 2 training target the aerobic energy system, and both involve training at relatively low intensities compared to most people's default pace. But they differ in how the training heart rate is set.</p>
+      <p>Zone 2 is typically defined as 60–70% of your estimated maximum heart rate (usually calculated as 220 − age). MAF uses 180 − age plus an individual health adjustment. For most people, MAF gives a more conservative number — particularly those with any injury history, inconsistent training background, or health factors that the Zone 2 formula ignores entirely.</p>
+      <p>Neither is definitively "correct" — they're both approximations of your aerobic threshold. The advantage of MAF for beginners is that it forces genuine conservatism and provides a clear, personalised number rather than a range. For someone who tends to push too hard, having a firm upper limit is practically useful.</p>
+
+      <h2 id="if-you-fall-behind">If you fall behind</h2>
       <p>Missing a single session isn't a problem — continue the week's schedule as planned. If you miss a full week, pick back up at the same phase rather than repeating it. If you miss 3 or more consecutive weeks, drop back to the start of the previous phase, since aerobic adaptations fade measurably after a month without stimulus.</p>
 
-      <h2>Common mistakes in a MAF plan</p>
+      <h2 id="common-mistakes-in-a-maf-plan">Common mistakes in a MAF plan</h2>
       <ul>
         <li><strong>Drifting above the heart rate cap to "feel like you're training."</strong> This is the single most common way people accidentally turn MAF training into regular easy running, which defeats the purpose.</li>
         <li><strong>Testing on different courses each time.</strong> Makes your data noisy enough that real progress can be invisible — pick one course and stick with it for all three checkpoints.</li>
@@ -267,6 +378,25 @@
           <div class="faq-q">What happens after week 8?</div>
           <div class="faq-a">Most people continue MAF training for 3-4 months total before reintroducing higher-intensity work, since aerobic base development is a slow, cumulative process that doesn't fully plateau in 8 weeks. Week 8 is a reasonable checkpoint to assess your MAF test trend and decide whether to keep building base or start layering in some faster sessions.</div>
         </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need a heart rate monitor for MAF training?</div>
+          <div class="faq-a">Yes — you genuinely can't do MAF training reliably without one. The entire method depends on accurate, real-time heart rate data. A wrist-based optical monitor (as found in most modern smartwatches) is sufficient for steady-state activities like cycling or flat running. A chest strap is more accurate, particularly during running where wrist monitors can lag. If you're serious about MAF training, a chest strap is worth the investment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long should I do MAF-only training before adding intensity back in?</div>
+          <div class="faq-a">Maffetone recommends a minimum of three months of aerobic base building before reintroducing high-intensity work. Some athletes extend this to six months, particularly if they're returning from injury or haven't had a structured aerobic base before. The clearest signal that your base is ready is consistent MAF test improvement and the ability to run comfortably for 45–60 minutes at MAF heart rate without walk breaks.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is MAF training suitable for complete beginners to running?</div>
+          <div class="faq-a">Yes — arguably more so than for experienced runners. Beginners often don't have ingrained habits around pace or intensity, which makes it easier to commit to the low heart rate requirement. The main challenge for beginners is accepting that walk-run intervals are entirely valid and productive. Starting with MAF rather than high-intensity interval training also significantly reduces the risk of early overuse injuries.</div>
+        </div>
+      </div>
+
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li>Maffetone P. <a href="https://philmaffetone.com/180-formula/" target="_blank" rel="noopener">The 180 Formula: heart-rate monitoring for real aerobic training</a>. philmaffetone.com.</li>
+        </ol>
       </div>
 
       <div class="disclaimer"><strong>Not medical advice.</strong> Consult a doctor before starting a new exercise programme, especially if you have cardiovascular concerns, are significantly deconditioned, or have a history of heart disease. Stop exercise and seek medical attention if you experience chest pain, dizziness, or severe shortness of breath.</div>
@@ -277,15 +407,18 @@
     <div class="toc">
       <h4>In this article</h4>
       <ol>
-        <li><a href="#">Before you start</a></li>
-        <li><a href="#">The plan at a glance</a></li>
-        <li><a href="#">Weeks 1–2</a></li>
-        <li><a href="#">Weeks 3–4</a></li>
-        <li><a href="#">Weeks 5–6</a></li>
-        <li><a href="#">Weeks 7–8</a></li>
-        <li><a href="#">Reading your test results</a></li>
-        <li><a href="#">If you fall behind</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="#what-is-maf">What is MAF training?</a></li>
+        <li><a href="#formula">The 180 Formula</a></li>
+        <li><a href="#before-you-start">Before you start</a></li>
+        <li><a href="#the-8-week-plan-at-a-glance">The plan at a glance</a></li>
+        <li><a href="#weeks-1-2-finding-your-pace">Weeks 1–2</a></li>
+        <li><a href="#weeks-3-4-extending-duration-first-real-test">Weeks 3–4</a></li>
+        <li><a href="#weeks-5-6-consistency-second-checkpoint">Weeks 5–6</a></li>
+        <li><a href="#weeks-7-8-consolidating-the-base-final-checkpoin">Weeks 7–8</a></li>
+        <li><a href="#reading-your-maf-test-results">Reading your test results</a></li>
+        <li><a href="#maf-vs-zone2">MAF vs Zone 2</a></li>
+        <li><a href="#if-you-fall-behind">If you fall behind</a></li>
+        <li><a href="#common-mistakes-in-a-maf-plan">Common mistakes</a></li>
       </ol>
     </div>
     <div class="related-tools">
@@ -293,7 +426,6 @@
       <a href="../tools/maf-calculator.html" class="tool-link">💚 MAF Calculator</a>
       <a href="../tools/zone-2-calculator.html" class="tool-link">💙 Zone 2 Calculator</a>
       <a href="../tools/heart-rate-zone.html" class="tool-link">❤️ Full Heart Rate Zones</a>
-      <a href="maf-training-for-beginners.html" class="tool-link">📘 MAF Training for Beginners</a>
       <a href="zone-2-heart-rate-training-beginners.html" class="tool-link">📘 Zone 2 for Beginners</a>
       <a href="../tools/running-pace.html" class="tool-link">🏃 Running Pace Calculator</a>
     </div>

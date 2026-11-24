@@ -1,5 +1,49 @@
 # MyWellnessCalc 작업 인수인계
-> 최종 업데이트: 2026-11-16
+> 최종 업데이트: 2026-11-24
+
+## 2026-11-23~24 세션 — 주간 점검 + 🔵 **같은 의도 페이지 통합 실행(사용자 승인: "후보 6묶음 전부 진행")** / 🔴 크롤링됨-미색인 40 → 45 / 🔴 구글 일별 노출 저점 11일째 / Bing 3,605·클릭 81 / 사이트 116 → **109페이지**
+
+**작업 방식**: 세션 GitHub 연결로 pull·push. 자료: GSC Performance(11-21까지) + Coverage 2종(차트 11-16까지), Bing(11-23), GA4(10-26~11-22).
+
+### 🔴 구글
+- 일별 노출 11-11 이후 **89~198**(직전 400~500), 평균순위 37~61위. 11-21 198/22.6위로 소폭 회복 조짐 — 하루치라 판단 보류. 일별 클릭 11-11 이후 사실상 0.
+- 3개월 누적 클릭 60 → 61. 심박 칼로리 툴 노출 증가 +645(전주) → **+67**(이번 주), 순위 8.3 → 8.6. 핵심 쿼리 순위는 거의 그대로(`heart rate calorie calculator` 10.2, `calories burned heart rate calculator` 9.6). 크레아틴 퀴즈 클릭 18.
+- **원인 단정 안 함.** Coverage +14(11-10)와 날짜가 겹친다는 사실만 기록.
+
+### Coverage (차트 11-16까지)
+- 크롤링됨-미색인 40 → **45**(11-14). 빠진 8건: `sitting-offset-calculator`, 퀴즈 `recovery-type`·`alcohol-calorie-deficit`·`which-exercise-snack`, 블로그 `protein-vs-carbs-vs-fat`·`active-recovery-heart-rate`·`calories-burned-by-heart-rate-zone`·`tdee-vs-bmr`(색인됐는지는 이 자료로 모름). 새로 들어간 13건: `healthy-body-fat-percentage`, `how-long-to-lose-weight`(11-09 보강 전 크롤본 09-28 기준 재분류), `zone-2-training-plan`(11-16 크롤 직후), `intermittent-fasting-beginners`, `build-muscle-after-40`, `protein-how-much-do-you-need`, `how-to-lose-belly-fat`, `weight-loss-plateau`, `calorie-deficit-for-weight-loss`, `vitamin-d-deficiency`, `how-much-sleep-do-you-need`, `what-is-a-healthy-bmi`, `how-much-water-per-day`.
+- 발견됨-미색인 5 → 2(`best-workout-time`, `cardio-before-or-after-weights`).
+
+### Bing — 3,467 → 3,605노출, 72 → 81클릭
+- **`zone-2-heart-rate-by-age` 691 → 882, 클릭 19 → 27**(4.3위). 11-16에 넣은 전 연령표 이후 단일 나이 쿼리가 1~2위(`zone 2 heartrate age 51`, `zone 2 heartbeat for 63 year old man`, `zone 2 range for a 41 year old`(클릭)). Copilot 답변에 우리 수치가 인용된 쿼리도 등장(클릭 1).
+- GA4: 활성 627, bing 40세션 > google 27세션, **chatgpt.com 첫 유입 1**.
+
+### 이번 세션 작업 1 — `zone-2-heart-rate-by-age` 보강 (커밋 `3c79605`)
+- 쿼리 `...apple watch says 130-140`(Copilot 경유) 등 **워치 존과 차트가 다른 이유** 수요 → `#mismatch` 섹션 끝에 H3 `#watch` "Why your watch shows a different Zone 2" 추가. Apple(자동 계산·최대심박 % 표현·공식 비공개·수동 설정 경로)과 Garmin(기본 최대심박 %, HRR/LTHR 전환 가능)은 **각 사 공식 매뉴얼 원문 대조**. FAQ 1개(9개), Sources에 Apple·Garmin 매뉴얼, TOC 항목.
+
+### 이번 세션 작업 2 — 같은 의도 페이지 6묶음 통합 (사용자 승인)
+**7개 글을 6개 대상 글로 합침. 삭제된 URL은 리다이렉트 스텁**(`noindex, follow` + `canonical` → 대상 + `meta refresh` → 대상의 해당 섹션 앵커; GitHub Pages라 서버 301 불가, 기존 `ffmi-vs-bmi` 스텁과 같은 방식).
+| 없어진 URL | → 합쳐진 곳 | 가져온 내용 |
+|---|---|---|
+| `calorie-deficit-how-much` | `how-to-calculate-calorie-deficit#choose` | 체지방별 적자 표·1% 규칙·Garthe 2011, "적자가 너무 클 때", "시간에 따라 조정"(MATADOR). 근거 약한 문장 2개 완화(리피드 렙틴/코르티솔, 적응 200–500kcal) |
+| `calorie-deficit-for-weight-loss` | `how-to-calculate-calorie-deficit` | 최소 섭취 칼로리 FAQ |
+| `fat-burning-zone-explained` | `fat-burning-heart-rate-zone#works` | "체중 외 효과"·"누가 우선해야 하나" 새로 씀, FAQ 2 |
+| `vitamin-d-deficiency` | `how-much-vitamin-d-do-you-need-daily#deficiency` | **식품 표 새로 작성(DGA 2020–2025 food sources 원문 대조)** — 기존 결핍 글 FAQ의 식품 수치는 "100g당"으로 잘못 적혀 있어 버림 |
+| `what-is-vo2-max` | `how-to-improve-vo2-max#what-good` | "좋은 VO2 max" 표(**VO2 계산기와 같은 값, 전 행 대조**)·측정 방법(Cooper 공식), FAQ 3. 근거 없는 정확도 %·NTNU 주장 제외 |
+| `maf-training-for-beginners` | `maf-training-plan#what-is-maf` | MAF 정의·180 공식·MAF vs Zone 2, FAQ 3, Sources(Maffetone) |
+| `what-is-metabolism` | `tdee-vs-bmr#what-changes` | **나이 부분을 Pontzer 2021 *Science*(6,600명+, 20–60세 안정, 60세 이후 연 0.7% 감소)로 교정** — 기존 글의 "20세 이후 10년마다 2–3%"는 이 연구와 어긋나 버림. FAQ 4 |
+- **유지(통합 안 함)**: `calories-burned-by-heart-rate-zone`(이번에 미색인 목록에서 빠짐, 구글 151노출/9.7위), `vitamin-d-and-exercise`(의도 다름, Bing CTR 7%), `maf-training` 퀴즈(포맷 다름). **상승 중 무변경 대상(심박 칼로리 툴, 크레아틴 퀴즈, MAF·FFMI 계산기)은 링크 포함 한 글자도 안 건드림** → `tools/maf-calculator.html`은 여전히 `maf-training-for-beginners.html`(스텁)로 링크함. 리다이렉트로 이어지지만, 상승세가 끝나면 링크를 `maf-training-plan.html#what-is-maf`로 바꿀 것.
+- **배선**: 사이트 전체 내부 링크 16개 파일 + 퀴즈 JS CTA 6개 파일을 대상 URL(+앵커)로 교체, blog/index 카드 7개 제거(46개), 홈 "Browse all 46 guides", sitemap 7개 제거(**109 URL**)·대상 6개 lastmod 2026-11-23, llms.txt 7줄 제거·대상 설명 보강.
+- **같이 고친 사이트 전역 버그**: **`<h2>…</p>`로 잘못 닫힌 제목 26곳(22개 파일)** — 브라우저가 h2를 닫지 않아 뒤 문단이 제목 안으로 들어가던 구조 오류. 전부 `</h2>`로 교정. **`tools/ffmi-calculator.html` 1곳만 무변경 원칙 때문에 남겨둠**(상승세 끝나면 고칠 것). `how-to-calculate-calorie-deficit`·`maf-training-plan`의 TOC가 전부 `href="#"`였던 것도 h2 id 부여 후 실제 앵커로 교정.
+- **검증**: 6개 대상 FAQ 본문=스키마(12/17/8/10/10/10), 전 페이지 태그 중첩 검사(ffmi 외 0), 내부 링크 깨짐 0, 375px 렌더 109페이지 문제 0(스텁 제외), 새 표 2개는 모바일에서 잘리지 않게 열 축소(`min-width:0`). 스텁 이동 확인(`what-is-vo2-max` → `how-to-improve-vo2-max#what-good`).
+
+### 💰 수익화 관점 / 다음 세션
+1. **구글 일별 노출 회복 여부**(11-21 198 이후). 심박 칼로리 툴 노출 증가가 멈춘 것이 가장 큰 손실.
+2. **통합 효과 관찰**: 대상 6개 URL과 스텁 7개의 Coverage 상태(2~4주 걸림). 효과가 보이면 남은 후보(40대 여성 식단 4개, 퀴즈 쌍 `training-zone`↔`zone-2-fitness-level`, `weight-loss-rate`↔`how-long-to-lose-weight`) 진행 여부를 사용자에게 물을 것.
+3. Bing 최다 클릭 페이지 `zone-2-heart-rate-by-age` 추이.
+4. **🔵 사용자 조치(서치콘솔 → URL 검사 → 색인 생성 요청)**: 대상 6개 — `blog/how-to-calculate-calorie-deficit.html`, `blog/fat-burning-heart-rate-zone.html`, `blog/how-much-vitamin-d-do-you-need-daily.html`, `blog/how-to-improve-vo2-max.html`, `blog/maf-training-plan.html`, `blog/tdee-vs-bmr.html` + `blog/zone-2-heart-rate-by-age.html`. (하루 요청 한도가 있으면 앞 3개 먼저.)
+5. ⛔ 누적 금지 유지. 신규는 이번 주 없음(통합 작업에 집중).
+
 
 ## 2026-11-16 세션 — 주간 점검(앞당겨 진행). 🔴 **크롤링됨-미색인 17 → 40(11-10에 +14)** / 🔴 **구글 일별 노출 11-11부터 89~165로 급감(직전 400~500)** / 🟢 심박 칼로리 툴 클릭 19 / 보강 1건(`zone-2-heart-rate-by-age` 전 연령표) / 신규 0건 / Bing 3,467(+10%)·클릭 72
 
